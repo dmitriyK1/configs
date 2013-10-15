@@ -1,0 +1,5 @@
+Configs list:
+-.vimrc.local
+-.tmux.conf
+-.zshrc
+-sublime config

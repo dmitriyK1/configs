@@ -1,0 +1,13 @@
+startup_message off
+defmonitor on
+defscrollback 10240
+autodetach on
+vbell off
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+escape `e
+altscreen on
+autodetach on
+caption always "%{= 45}%{+b w}Screen: %n | %h %=%t %c"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus alwayslastline
+hardstatus string '%{= kG}%{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}'

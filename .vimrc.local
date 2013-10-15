@@ -1,0 +1,70 @@
+map <space> :
+colorscheme molokai
+let NERDTreeShowHidden=0
+Bundle 'Chiel92/vim-autoformat'
+Bundle 'mattn/emmet-vim'
+"Bundle 'tpope/vim-unimpaired'
+noremap <F3> :Autoformat<CR><CR>
+
+"Vertical bubbling(all modes)
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+"Horizontal bubbling
+vnoremap < <gv
+vnoremap > >gv"
+nmap <C-h> <<
+nmap <C-l> >>
+
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-misc'
+let g:session_autosave = 'no'
+let g:session_autoload = 'yes'
+
+" Bundle 'mhinz/vim-startify'
+
+Bundle 'xolox/vim-notes'
+Bundle 'xolox/vim-colorscheme-switcher'
+Bundle 'xolox/vim-shell'
+map <S-F11> :Maximize<CR>
+
+augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc.local source ~/.vimrc.local
+augroup END
+
+" 'vim-scripts/mru.vim'   (manual install needed)
+
+let g:syntastic_javascript_checkers = ['jshint']
+
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'sjl/gundo.vim'
+
+nnoremap <F5> :GundoToggle<CR>
+
+set wrap
+
+" Jump 5 lines when running out of the screen
+set scrolljump=5
+" Indicate jump out of the screen when 3 lines before end of the screen
+set scrolloff=3
+
+set ttimeoutlen=50
+
+set rtp+=/home/dima/powerline/powerline/powerline/bindings/vim/
+
+set guifont=Liberation\ Mono\ for\ Powerline\ 15
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
+
+Bundle 'bling/vim-bufferline'
+set nospell

@@ -242,3 +242,8 @@ bind pager 0 next-page
 bind generic 0 next-page
 bind index <Esc>N search-opposite
 bind attach i exit
+
+macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+macro pager \cw <pipe-entry>'w3m'<enter> 'Follow links in w3m'
+
+source  ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc

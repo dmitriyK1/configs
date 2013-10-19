@@ -1,6 +1,7 @@
 Docs
 ====
-* Configs for:
+Configs for:
+------------
 - w3m
 - tmux
 - vim

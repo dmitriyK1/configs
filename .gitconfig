@@ -1,0 +1,22 @@
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 493
+	main-window-view = HistoryView
+[core]
+	autocrlf = input
+	safecrlf = true
+[user]
+	name = Dmitriy
+	email = dimaroxx@gmail.com
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+[color]
+	ui = true

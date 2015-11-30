@@ -11,6 +11,8 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set ttyfast
 
+set background=dark
+
 runtime macros/matchit.vim
 filetype plugin indent on
 syntax on
@@ -50,21 +52,25 @@ set hidden
 set title
 set scrolloff=3
 
-nmap <leader>, :nohl<CR>
+nmap <leader><space> :nohl<CR>
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 " Strip all trailing whitespace from a file, using ,W
 nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 
 noremap <leader>w :update<CR>
+noremap <leader>, :update<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map gn :bn<CR>
 map gp :bp<CR>
 map gd :bd<CR>
-colorscheme ron
+
 " set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set ruler
+
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 nnoremap / /\v
 vnoremap / /\v
@@ -89,6 +95,7 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>m :mksession<CR>
 nnoremap <leader>p :set paste!<CR>
 set shiftwidth=4
+set shiftround
 set tabstop=4
 set expandtab
 set history=1000
@@ -193,7 +200,7 @@ map <C-l> <C-w>l
 nnoremap <leader>- :split<cr><C-w>j
 nnoremap <leader>\ :vsplit<cr><C-w>l
 
-set fileformats="unix,dos,mac"
+" set fileformats="unix,dos,mac"
 set nrformats=
 
 set colorcolumn=85
@@ -222,6 +229,20 @@ vnoremap <leader>' <esc>a'<esc>gvo<esc>i'<esc>gvo<esc>ll
 nnoremap <tab> %
 vnoremap <tab> %
 
+" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.html :call DeleteTrailingWS()
+autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufWrite *.js :call DeleteTrailingWS()
+autocmd BufWrite *.css :call DeleteTrailingWS()
+
+" Quickly open a buffer for scripbble
+map <leader>q :e ~/buffer<cr>
+
 "-----------------------------------------------------------------------------
 " Set up the window colors and size
 "-----------------------------------------------------------------------------
@@ -229,7 +250,24 @@ if has("gui_running")
   set guifont=Consolas:h10
   " colorscheme molokai
   " colorscheme onedark
+  set t_Co=256
   colorscheme monokai2
+
+  nmap <M-,> :bp<cr>
+  nmap <M-.> :bn<cr>
+
+" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+  nmap <M-j> mz:m+<cr>`z
+  nmap <M-k> mz:m-2<cr>`z
+  vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+  vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+  if has("mac") || has("macunix")
+    nmap <D-j> <M-j>
+    nmap <D-k> <M-k>
+    vmap <D-j> <M-j>
+    vmap <D-k> <M-k>
+  endif
 
   set guioptions-=T
   set guioptions-=l
@@ -237,6 +275,76 @@ if has("gui_running")
   set guioptions-=r
   set guioptions-=R
 endif
+
+" When you press gv you vimgrep after the selected text
+vnoremap <silent> gv :call VisualSelection('gv')<CR>
+
+""""""""""""""""""""""""""""""
+" => Visual mode related
+""""""""""""""""""""""""""""""
+" Visual mode pressing * or # searches for the current selection
+" Super useful! From an idea by Michael Naumann
+vnoremap <silent> * :call VisualSelection('f')<CR>
+vnoremap <silent> # :call VisualSelection('b')<CR>
+
+ """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Helper functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
+endfunction
+
+" Don't close window, when deleting a buffer
+command! Bclose call <SID>BufcloseCloseIt()
+function! <SID>BufcloseCloseIt()
+   let l:currentBufNum = bufnr("%")
+   let l:alternateBufNum = bufnr("#")
+
+   if buflisted(l:alternateBufNum)
+     buffer #
+   else
+     bnext
+   endif
+
+   if bufnr("%") == l:currentBufNum
+     new
+   endif
+
+   if buflisted(l:currentBufNum)
+     execute("bdelete! ".l:currentBufNum)
+   endif
+endfunction
+
+" Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    en
+    return ''
+endfunction
+
+function! VisualSelection(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+    elseif a:direction == 'replace'
+        call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
 
 "-----------------------------------------------------------------------------
 " Local system overrides

@@ -188,7 +188,7 @@ set synmaxcol=2048
 
 set pastetoggle=<F2>
 
-set mouse=a
+" set mouse=a
 
 " Easy window navigation
 map <C-h> <C-w>h

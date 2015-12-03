@@ -131,19 +131,67 @@ nnoremap gV `[v`]
 
 
 cnoremap <C-a>  <Home>
-cnoremap <C-b>  <Left>
 cnoremap <C-e>  <End>
-cnoremap <C-f>  <Right>
-cnoremap <C-d>  <Delete>
-cnoremap <C-n>  <End>
+cnoremap <C-b>  <Left>
 cnoremap <C-p>  <Up>
-cnoremap <M-b>  <S-Left>
-cnoremap <M-f>  <S-Right>
-cnoremap <M-d>  <S-right><Delete>
+cnoremap <C-n>  <Down>
+cnoremap <C-f>  <Right>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
-cnoremap <Esc>d <S-right><Delete>
-cnoremap <C-g>  <C-c>
+cnoremap <C-g>  <Delete>
+" cnoremap <C-g>  <C-c>
+
+
+let s:oldcmdline = [ ]
+function! <SID>saveUndoHistory(cmdline, cmdpos)
+    if len(s:oldcmdline) == 0 || a:cmdline != s:oldcmdline[0][0]
+        call insert(s:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
+    else
+        let s:oldcmdline[0][1] = a:cmdpos
+    endif
+    if len(s:oldcmdline) > 100
+        call remove(s:oldcmdline, 100)
+    endif
+endfunction
+
+cnoremap <C-K> <C-\>e<SID>KillLine()<CR>
+
+function! <SID>KillLine()
+    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
+    let l:cmd = getcmdline()
+    let l:rem = strpart(l:cmd, getcmdpos() - 1)
+    if ('' != l:rem)
+        let @c = l:rem
+    endif
+    let l:ret = strpart(l:cmd, 0, getcmdpos() - 1)
+    call <SID>saveUndoHistory(l:ret, getcmdpos())
+    return l:ret
+endfunction
+
+
+cnoremap <Esc>d <C-\>e<SID>KillWord()<CR>
+cmap <M-D> <Esc>d
+function! <SID>KillWord()
+    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
+    let l:loc = strpart(getcmdline(), 0, getcmdpos() - 1)
+    let l:roc = strpart(getcmdline(), getcmdpos() - 1)
+    if (l:roc =~ '\v^\s*\w')
+        let l:rem = matchstr(l:roc, '\v^\s*\w+')
+    elseif (l:roc =~ '\v^\s*[^[:alnum:]_[:blank:]]')
+        let l:rem = matchstr(l:roc, '\v^\s*[^[:alnum:]_[:blank:]]+')
+    elseif (l:roc =~ '\v^\s+$')
+        let @c = l:roc
+        return l:loc
+    else
+        return getcmdline()
+    endif
+    let @c = l:rem
+    let l:ret = l:loc . strpart(l:roc, strlen(l:rem))
+    call <SID>saveUndoHistory(l:ret, getcmdpos())
+    return l:ret
+endfunction
+
+
 
 set autoindent
 set copyindent    " copy the previous indentation on autoindenting
@@ -191,10 +239,10 @@ set pastetoggle=<F2>
 " set mouse=a
 
 " Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Split previously opened file in a split window
 nnoremap <leader>- :split<cr><C-w>j

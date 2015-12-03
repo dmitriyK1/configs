@@ -129,8 +129,6 @@ inoremap jj <ESC>
 " highlight last inserted text
 nnoremap gV `[v`]
 
-set swapfile
-set writebackup
 
 cnoremap <C-a>  <Home>
 cnoremap <C-b>  <Left>
@@ -549,6 +547,8 @@ set backupdir-=~/
 set backupdir^=~/.vim/backup/
 set backupdir^=./.vim-backup/
 set backup
+set swapfile
+set writebackup
 
 " Save your swp files to a less annoying place than the current directory.
 " If you have .vim-swap in the current directory, it'll use that.

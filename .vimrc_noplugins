@@ -11,8 +11,8 @@ set modelines=0
 set whichwrap+=[,],<,>                      " Allow arrow keys to wrap lines
 
 let mapleader=","
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set ttyfast
 
@@ -68,7 +68,8 @@ noremap <leader>, :update<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map gn :bn<CR>
 map gp :bp<CR>
-map gd :bd<CR>
+" map gd :bd<CR>
+map <leader>d :bd<CR>
 
 " set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
@@ -368,4 +369,48 @@ endif
 
 au filetype help set nonumber
 set splitbelow " Split windows, ie Help, make more sense to me below
+
+
+
+
+" Toggle Vexplore with Ctrl-E
+function! ToggleVExplorer()
+  if exists("t:expl_buf_num")
+      let expl_win_num = bufwinnr(t:expl_buf_num)
+      if expl_win_num != -1
+          let cur_win_nr = winnr()
+          exec expl_win_num . 'wincmd w'
+          close
+          exec cur_win_nr . 'wincmd w'
+          unlet t:expl_buf_num
+      else
+          unlet t:expl_buf_num
+      endif
+  else
+      exec '1wincmd w'
+      Vexplore
+      let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+map <silent> <C-_> :call ToggleVExplorer()<CR>
+
+" Hit enter in the file browser to open the selected
+" file with :vsplit to the right of the browser.
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+
+" Change directory to the current buffer when opening files.
+set autochdir
+
+" absolute width of netrw window
+let g:netrw_winsize = -28
+
+" do not display info on the top of window
+let g:netrw_banner = 0
+
+" tree-view
+let g:netrw_liststyle = 3
+
+" sort is affecting only: directories on the top, files below
+let g:netrw_sort_sequence = '[\/]$,*'
 

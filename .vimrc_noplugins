@@ -257,7 +257,7 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-au FocusLost * :wa
+au FocusLost * silent! wa
 
 set termencoding=utf-8
 set encoding=utf-8 nobomb                   " set default encoding
@@ -266,6 +266,7 @@ set t_ut=                                   " http://sunaku.github.io/vim-256col
 set textwidth=0
 set wrapmargin=0
 set autowriteall
+
 
 set switchbuf=useopen           " reveal already opened files from the
                                 " quickfix window instead of opening new
@@ -613,7 +614,7 @@ set directory+=.
 set viminfo+=n~/.vim/viminfo
 
 if has('persistent_undo')
-    set undofile                " So is persistent undo ...
+    " set undofile                " So is persistent undo ...
     set undolevels=1000         " Maximum number of changes that can be undone
     set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
 
@@ -622,7 +623,6 @@ if has('persistent_undo')
     endif
     set undodir=./.vim-undo//
     set undodir+=~/.vim/undo//
-    set undofile
 endif
 
 set backupskip=/tmp/*,/private/tmp/*

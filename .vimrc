@@ -97,7 +97,10 @@ nnoremap <leader>v V`]
 
 noremap <leader>r :set relativenumber!<CR>
 nmap <silent> <leader>se :e $MYVIMRC<CR>
-noremap <leader>sv :source $MYVIMRC<CR>
+noremap <leader>ss :source $MYVIMRC<CR>
+"
+" Source current file
+noremap <leader>so :so%<CR>        
 nnoremap <leader>m :mksession<CR>
 nnoremap <leader>p :set paste!<CR>
 set shiftwidth=4
@@ -197,7 +200,7 @@ set autoindent
 set copyindent    " copy the previous indentation on autoindenting
 set smartindent
 
-set timeoutlen=500 ttimeoutlen=0
+" set timeoutlen=500 ttimeoutlen=0
 
 set wrapscan
 set ch=2
@@ -531,6 +534,7 @@ cmap cd. lcd %:p:h
 
 " repeat last colon command
 nmap :: @:
+"nmap \\ @:
 
 " Allow using the repeat operator with a visual selection (!)
 " http://stackoverflow.com/a/8064607/127816

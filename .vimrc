@@ -11,8 +11,6 @@ set modelines=0
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 
 let mapleader=","
-" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set ttyfast
 
@@ -201,6 +199,8 @@ set copyindent    " copy the previous indentation on autoindenting
 set smartindent
 
 set timeoutlen=500 ttimeoutlen=0
+set notimeout
+set ttimeout
 
 set wrapscan
 set ch=2
@@ -228,11 +228,6 @@ set clipboard+=unnamed
 
 " Automatically read a file that has changed on disk
 set autoread
-
-" Various characters are "wider" than normal fixed width characters, but the
-" default setting of ambiwidth (single) squeezes them into "normal" width, which
-" sucks.  Setting it to double makes it awesome.
-set ambiwidth=double
 
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048

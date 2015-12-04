@@ -96,8 +96,8 @@ nnoremap Y y$
 nnoremap <leader>v V`]
 
 noremap <leader>r :set relativenumber!<CR>
+nmap <silent> <leader>se :e $MYVIMRC<CR>
 noremap <leader>sv :source $MYVIMRC<CR>
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>m :mksession<CR>
 nnoremap <leader>p :set paste!<CR>
 set shiftwidth=4
@@ -628,3 +628,6 @@ endif
 set backupskip=/tmp/*,/private/tmp/*
 "set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 "set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>

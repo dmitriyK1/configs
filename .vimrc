@@ -528,8 +528,8 @@ cmap cwd lcd %:p:h
 cmap cd. lcd %:p:h
 
 " repeat last colon command
-nmap :: @:
-"nmap \\ @:
+" nmap :: @:
+nmap \\ @:
 
 " Allow using the repeat operator with a visual selection (!)
 " http://stackoverflow.com/a/8064607/127816

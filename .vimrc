@@ -200,7 +200,7 @@ set autoindent
 set copyindent    " copy the previous indentation on autoindenting
 set smartindent
 
-" set timeoutlen=500 ttimeoutlen=0
+set timeoutlen=500 ttimeoutlen=0
 
 set wrapscan
 set ch=2

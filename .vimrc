@@ -48,6 +48,8 @@ set number
 set relativenumber
 set wildmenu
 set hlsearch
+" When sourcing this file, do not immediately turn on highlighting.
+nohlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -198,7 +200,7 @@ set autoindent
 set copyindent    " copy the previous indentation on autoindenting
 set smartindent
 
-set timeoutlen=500 ttimeoutlen=0
+set timeoutlen=500 ttimeoutlen=10
 set notimeout
 set ttimeout
 
@@ -306,21 +308,6 @@ if has("gui_running")
   colorscheme monokai2
   set lines=40                " 40 lines of text instead of 24
 
-  nmap <M-,> :bp<cr>
-  nmap <M-.> :bn<cr>
-
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-  nmap <M-j> mz:m+<cr>`z
-  nmap <M-k> mz:m-2<cr>`z
-  vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-  vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-  if has("mac") || has("macunix")
-    nmap <D-j> <M-j>
-    nmap <D-k> <M-k>
-    vmap <D-j> <M-j>
-    vmap <D-k> <M-k>
-  endif
 
   set guioptions-=T
   set guioptions-=l
@@ -454,9 +441,11 @@ let g:netrw_sort_sequence = '[\/]$,*'
 
 set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
-set virtualedit=onemore             " Allow for cursor beyond last character
 
 set spell                           " Spell checking on
+" Disable capitalization check in spellcheck.
+set spellcapcheck=""
+
 
 set iskeyword-=.                    " '.' is an end of word designator
 set iskeyword-=#                    " '#' is an end of word designator
@@ -556,6 +545,8 @@ map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
+" Get to home dir easier
+nmap <leader>h :cd ~/ <CR>
 
 
 " Map <Leader>ff to display all lines with keyword under cursor
@@ -630,3 +621,21 @@ set backupskip=/tmp/*,/private/tmp/*
 
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
+nmap <M-,> :bp<cr>
+nmap <M-.> :bn<cr>
+
+" set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
+set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize,globals,localoptions,tabpages
+
+
+"Bubble single lines
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+nmap <M-j> ddp
+nmap <M-k> ddkP
+
+"Bubble multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
+vmap <M-j> xp`[V`]
+vmap <M-k> xkP`[V`]

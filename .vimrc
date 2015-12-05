@@ -96,11 +96,12 @@ nnoremap Y y$
 nnoremap <leader>v V`]
 
 noremap <leader>r :set relativenumber!<CR>
+nnoremap <leader>n :setlocal number!<CR>
 nmap <silent> <leader>se :e $MYVIMRC<CR>
 noremap <leader>ss :source $MYVIMRC<CR>
 "
 " Source current file
-noremap <leader>so :so%<CR>        
+noremap <leader>so :so%<CR>
 nnoremap <leader>m :mksession<CR>
 nnoremap <leader>p :set paste!<CR>
 set shiftwidth=4
@@ -118,7 +119,7 @@ set backspace=indent,eol,start
 set shortmess=atI
 
 " prevent flashing
-set visualbell t_vb=
+set novisualbell t_vb=
 set cursorline
 set lazyredraw
 
@@ -205,9 +206,29 @@ set autoindent
 set copyindent    " copy the previous indentation on autoindenting
 set smartindent
 
-set timeoutlen=500 ttimeoutlen=10
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
 set notimeout
 set ttimeout
+set ttimeoutlen=10
+
+" Better Completion
+set completeopt=longest,menuone,preview
+
+" Resize splits when the window is resized
+au VimResized * :wincmd =
+
+" Cursorline {{{
+" Only show cursorline in the current window and in normal mode.
+augroup cline
+    au!
+    "au WinLeave * set nocursorline
+    "au WinEnter * set cursorline
+    au InsertEnter * set nocursorline
+    au InsertLeave * set cursorline
+augroup END
+" }}}
+
 
 set wrapscan
 set ch=2
@@ -455,7 +476,7 @@ set spellcapcheck=""
 set iskeyword-=.                    " '.' is an end of word designator
 set iskeyword-=#                    " '#' is an end of word designator
 set iskeyword-=-                    " '-' is an end of word designator
- 
+
 " highlight clear SignColumn      " SignColumn should match background
 " highlight clear LineNr          " Current line number row will have same background color in relative mode
 
@@ -648,9 +669,132 @@ vmap <M-k> xkP`[V`]
 " Prevent cursor jumps while joining lines
 nnoremap J mzJ`z
 
-" center the window automatically around the cursor after jumping to a location 
-nnoremap n nzz
+" center the window automatically around the cursor after jumping to a location
+" nnoremap n nzz
 nnoremap } }zz
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Same when jumping around
+nnoremap g; g;zz
+nnoremap g, g,zz
+nnoremap <c-o> <c-o>zz
+
 
 " set wrap
 " set linebreak
+
+
+" Wildmenu completion {{{
+
+set wildignore+=.hg,.git,.svn                    " Version control
+set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+set wildignore+=*.spl                            " compiled spelling word lists
+set wildignore+=*.sw?                            " Vim swap files
+set wildignore+=*.DS_Store                       " OSX bullshit
+
+set wildignore+=*.luac                           " Lua byte code
+
+set wildignore+=migrations                       " Django migrations
+set wildignore+=*.pyc                            " Python byte code
+
+set wildignore+=*.orig                           " Merge resolution files
+
+" Clojure/Leiningen
+set wildignore+=classes
+set wildignore+=lib
+
+" }}}
+
+
+" Line Return {{{
+
+" Make sure Vim returns to the same line when you reopen a file.
+" Thanks, Amit
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
+" }}}
+
+" System clipboard interaction.
+noremap <leader>y "*y
+vnoremap <leader>y "*ygv
+
+" Clean trailing whitespace
+nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
+
+" Insert the directory of the current buffer in command line mode
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" Formatting, TextMate-style
+nnoremap Q gqip
+vnoremap Q gq
+
+" Cmdheight switching
+nnoremap <leader>1 :set cmdheight=1<cr>
+nnoremap <leader>2 :set cmdheight=2<cr>
+
+"nnoremap / /\v
+"vnoremap / /\v
+
+
+
+" Fix linewise visual selection of various text objects
+nnoremap Vit vitVkoj
+nnoremap Vat vatV
+nnoremap Vab vabV
+nnoremap VaB vaBV
+
+
+" Toggle 'keep current line in the center of the screen' mode
+nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
+
+" List navigation {{{
+nnoremap <left>  :cprev<cr>zvzz
+nnoremap <right> :cnext<cr>zvzz
+nnoremap <up>    :lprev<cr>zvzz
+nnoremap <down>  :lnext<cr>zvzz
+" }}}
+
+
+" Numbers {{{
+
+" Motion for numbers.  Great for CSS.  Lets you do things like this:
+"
+" margin-top: 200px; -> daN -> margin-top: px;
+"              ^                          ^
+" TODO: Handle floats.
+
+onoremap N :<c-u>call <SID>NumberTextObject(0)<cr>
+xnoremap N :<c-u>call <SID>NumberTextObject(0)<cr>
+onoremap aN :<c-u>call <SID>NumberTextObject(1)<cr>
+xnoremap aN :<c-u>call <SID>NumberTextObject(1)<cr>
+onoremap iN :<c-u>call <SID>NumberTextObject(1)<cr>
+xnoremap iN :<c-u>call <SID>NumberTextObject(1)<cr>
+
+function! s:NumberTextObject(whole)
+    normal! v
+
+    while getline('.')[col('.')] =~# '\v[0-9]'
+        normal! l
+    endwhile
+
+    if a:whole
+        normal! o
+
+        while col('.') > 1 && getline('.')[col('.') - 2] =~# '\v[0-9]'
+            normal! h
+        endwhile
+    endif
+endfunction
+
+" }}}

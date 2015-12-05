@@ -116,7 +116,9 @@ vnoremap <C-y> 3<C-y>
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
 set shortmess=atI
-" set visualbell
+
+" prevent flashing
+set visualbell t_vb=
 set cursorline
 set lazyredraw
 
@@ -127,6 +129,9 @@ set foldmethod=indent
 
 nnoremap j gj
 nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
 inoremap jj <ESC>
 
 " highlight last inserted text
@@ -639,3 +644,13 @@ vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
 vmap <M-j> xp`[V`]
 vmap <M-k> xkP`[V`]
+
+" Prevent cursor jumps while joining lines
+nnoremap J mzJ`z
+
+" center the window automatically around the cursor after jumping to a location 
+nnoremap n nzz
+nnoremap } }zz
+
+" set wrap
+" set linebreak

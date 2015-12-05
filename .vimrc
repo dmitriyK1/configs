@@ -758,14 +758,6 @@ nnoremap VaB vaBV
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
 
-" List navigation {{{
-nnoremap <left>  :cprev<cr>zvzz
-nnoremap <right> :cnext<cr>zvzz
-nnoremap <up>    :lprev<cr>zvzz
-nnoremap <down>  :lnext<cr>zvzz
-" }}}
-
-
 " Numbers {{{
 
 " Motion for numbers.  Great for CSS.  Lets you do things like this:
@@ -834,5 +826,7 @@ vmap ,{ c{<C-R>"}<ESC>
 
 "Go to last edit location with ,.
 nnoremap ,. '.
+
+:nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
 " study later: https://github.com/skwp/dotfiles/tree/master/vim/settings

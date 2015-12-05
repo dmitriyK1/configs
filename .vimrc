@@ -830,3 +830,5 @@ nnoremap ,. '.
 :nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
 " study later: https://github.com/skwp/dotfiles/tree/master/vim/settings
+
+" TODO: split to files ( leader-commands etc. ) and source from here

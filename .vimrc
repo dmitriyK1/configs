@@ -247,7 +247,7 @@ set autoread
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
 
-set pastetoggle=<F2>
+" set pastetoggle=<F2>
 
 " set mouse=a
 
@@ -353,8 +353,7 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 
 
 
-map <silent> <C-_> :call ToggleVExplorer()<CR>
-map <silent> <C-/> :call ToggleVExplorer()<CR>
+map <silent> <F2> :call ToggleVExplorer()<CR>
 
 
 " Change directory to the current buffer when opening files.

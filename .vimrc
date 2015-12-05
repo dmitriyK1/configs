@@ -2,6 +2,36 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+runtime macros/matchit.vim
+
+" ==============================================================================
+" LET VARIABLES START
+" ==============================================================================
+let s:oldcmdline = [ ]
+let mapleader=","
+" Hit enter in the file browser to open the selected
+" file with :vsplit to the right of the browser.
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+" absolute width of netrw window
+let g:netrw_winsize = -28
+
+" do not display info on the top of window
+let g:netrw_banner = 0
+
+" tree-view
+let g:netrw_liststyle = 3
+
+" sort is affecting only: directories on the top, files below
+let g:netrw_sort_sequence = '[\/]$,*'
+
+" ==============================================================================
+" LET VARIABLES END
+" ==============================================================================
+
+
+
+
 set grepprg=grep\ -nH\ $*                   " Make grep always print the file name.
 set fileformats=unix,mac,dos                " Allows automatic line-end detection.
 
@@ -10,13 +40,11 @@ set modelines=0
 
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 
-let mapleader=","
 
 set ttyfast
 
 set background=dark
 
-runtime macros/matchit.vim
 filetype plugin indent on
 syntax on
 nmap <Space> :
@@ -151,54 +179,13 @@ cnoremap <C-g>  <Delete>
 " cnoremap <C-g>  <C-c>
 
 
-let s:oldcmdline = [ ]
-function! <SID>saveUndoHistory(cmdline, cmdpos)
-    if len(s:oldcmdline) == 0 || a:cmdline != s:oldcmdline[0][0]
-        call insert(s:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
-    else
-        let s:oldcmdline[0][1] = a:cmdpos
-    endif
-    if len(s:oldcmdline) > 100
-        call remove(s:oldcmdline, 100)
-    endif
-endfunction
 
 cnoremap <C-K> <C-\>e<SID>KillLine()<CR>
 
-function! <SID>KillLine()
-    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
-    let l:cmd = getcmdline()
-    let l:rem = strpart(l:cmd, getcmdpos() - 1)
-    if ('' != l:rem)
-        let @c = l:rem
-    endif
-    let l:ret = strpart(l:cmd, 0, getcmdpos() - 1)
-    call <SID>saveUndoHistory(l:ret, getcmdpos())
-    return l:ret
-endfunction
 
 
 cnoremap <Esc>d <C-\>e<SID>KillWord()<CR>
 cmap <M-D> <Esc>d
-function! <SID>KillWord()
-    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
-    let l:loc = strpart(getcmdline(), 0, getcmdpos() - 1)
-    let l:roc = strpart(getcmdline(), getcmdpos() - 1)
-    if (l:roc =~ '\v^\s*\w')
-        let l:rem = matchstr(l:roc, '\v^\s*\w+')
-    elseif (l:roc =~ '\v^\s*[^[:alnum:]_[:blank:]]')
-        let l:rem = matchstr(l:roc, '\v^\s*[^[:alnum:]_[:blank:]]+')
-    elseif (l:roc =~ '\v^\s+$')
-        let @c = l:roc
-        return l:loc
-    else
-        return getcmdline()
-    endif
-    let @c = l:rem
-    let l:ret = l:loc . strpart(l:roc, strlen(l:rem))
-    call <SID>saveUndoHistory(l:ret, getcmdpos())
-    return l:ret
-endfunction
 
 
 
@@ -345,72 +332,15 @@ endif
 " When you press gv you vimgrep after the selected text
 vnoremap <silent> gv :call VisualSelection('gv')<CR>
 
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
 
 " Don't close window, when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-   let l:currentBufNum = bufnr("%")
-   let l:alternateBufNum = bufnr("#")
 
-   if buflisted(l:alternateBufNum)
-     buffer #
-   else
-     bnext
-   endif
-
-   if bufnr("%") == l:currentBufNum
-     new
-   endif
-
-   if buflisted(l:currentBufNum)
-     execute("bdelete! ".l:currentBufNum)
-   endif
-endfunction
-
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
-endfunction
-
-function! VisualSelection(direction) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", '\\/.*$^~[]')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
 
 
 
@@ -423,47 +353,13 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 
 
 
-" Toggle Vexplore with Ctrl-E
-function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      exec '1wincmd w'
-      Vexplore
-      let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
 map <silent> <C-_> :call ToggleVExplorer()<CR>
 map <silent> <C-/> :call ToggleVExplorer()<CR>
 
-" Hit enter in the file browser to open the selected
-" file with :vsplit to the right of the browser.
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
 
 " Change directory to the current buffer when opening files.
 set autochdir
 
-" absolute width of netrw window
-let g:netrw_winsize = -28
-
-" do not display info on the top of window
-let g:netrw_banner = 0
-
-" tree-view
-let g:netrw_liststyle = 3
-
-" sort is affecting only: directories on the top, files below
-let g:netrw_sort_sequence = '[\/]$,*'
 
 set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
@@ -506,19 +402,6 @@ set foldenable                  " Auto fold code
 " Remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
 
-" Strip whitespace {
-function! StripTrailingWhitespace()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " do the business:
-    %s/\s\+$//e
-    " clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
-" }
 
 
 " Code folding options
@@ -773,23 +656,6 @@ xnoremap aN :<c-u>call <SID>NumberTextObject(1)<cr>
 onoremap iN :<c-u>call <SID>NumberTextObject(1)<cr>
 xnoremap iN :<c-u>call <SID>NumberTextObject(1)<cr>
 
-function! s:NumberTextObject(whole)
-    normal! v
-
-    while getline('.')[col('.')] =~# '\v[0-9]'
-        normal! l
-    endwhile
-
-    if a:whole
-        normal! o
-
-        while col('.') > 1 && getline('.')[col('.') - 2] =~# '\v[0-9]'
-            normal! h
-        endwhile
-    endif
-endfunction
-
-" }}}
 
 
 " ,# Surround a word with #{ruby interpolation}
@@ -832,3 +698,156 @@ nnoremap ,. '.
 " study later: https://github.com/skwp/dotfiles/tree/master/vim/settings
 
 " TODO: split to files ( leader-commands etc. ) and source from here
+
+
+" ===============================================================================
+" FUNCTIONS
+" ===============================================================================
+
+
+function! <SID>saveUndoHistory(cmdline, cmdpos)
+    if len(s:oldcmdline) == 0 || a:cmdline != s:oldcmdline[0][0]
+        call insert(s:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
+    else
+        let s:oldcmdline[0][1] = a:cmdpos
+    endif
+    if len(s:oldcmdline) > 100
+        call remove(s:oldcmdline, 100)
+    endif
+endfunction
+
+
+function! <SID>KillLine()
+    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
+    let l:cmd = getcmdline()
+    let l:rem = strpart(l:cmd, getcmdpos() - 1)
+    if ('' != l:rem)
+        let @c = l:rem
+    endif
+    let l:ret = strpart(l:cmd, 0, getcmdpos() - 1)
+    call <SID>saveUndoHistory(l:ret, getcmdpos())
+    return l:ret
+endfunction
+
+
+function! <SID>KillWord()
+    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
+    let l:loc = strpart(getcmdline(), 0, getcmdpos() - 1)
+    let l:roc = strpart(getcmdline(), getcmdpos() - 1)
+    if (l:roc =~ '\v^\s*\w')
+        let l:rem = matchstr(l:roc, '\v^\s*\w+')
+    elseif (l:roc =~ '\v^\s*[^[:alnum:]_[:blank:]]')
+        let l:rem = matchstr(l:roc, '\v^\s*[^[:alnum:]_[:blank:]]+')
+    elseif (l:roc =~ '\v^\s+$')
+        let @c = l:roc
+        return l:loc
+    else
+        return getcmdline()
+    endif
+    let @c = l:rem
+    let l:ret = l:loc . strpart(l:roc, strlen(l:rem))
+    call <SID>saveUndoHistory(l:ret, getcmdpos())
+    return l:ret
+endfunction
+
+
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
+endfunction
+
+
+function! <SID>BufcloseCloseIt()
+   let l:currentBufNum = bufnr("%")
+   let l:alternateBufNum = bufnr("#")
+
+   if buflisted(l:alternateBufNum)
+     buffer #
+   else
+     bnext
+   endif
+
+   if bufnr("%") == l:currentBufNum
+     new
+   endif
+
+   if buflisted(l:currentBufNum)
+     execute("bdelete! ".l:currentBufNum)
+   endif
+endfunction
+
+
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    en
+    return ''
+endfunction
+
+function! VisualSelection(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+    elseif a:direction == 'replace'
+        call CmdLine("%s" . '/'. l:pattern . '/')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+
+
+function! ToggleVExplorer()
+  if exists("t:expl_buf_num")
+      let expl_win_num = bufwinnr(t:expl_buf_num)
+      if expl_win_num != -1
+          let cur_win_nr = winnr()
+          exec expl_win_num . 'wincmd w'
+          close
+          exec cur_win_nr . 'wincmd w'
+          unlet t:expl_buf_num
+      else
+          unlet t:expl_buf_num
+      endif
+  else
+      exec '1wincmd w'
+      Vexplore
+      let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+
+
+function! StripTrailingWhitespace()
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+function! s:NumberTextObject(whole)
+    normal! v
+
+    while getline('.')[col('.')] =~# '\v[0-9]'
+        normal! l
+    endwhile
+
+    if a:whole
+        normal! o
+
+        while col('.') > 1 && getline('.')[col('.') - 2] =~# '\v[0-9]'
+            normal! h
+        endwhile
+    endif
+endfunction

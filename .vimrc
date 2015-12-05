@@ -690,7 +690,7 @@ vmap ,{ c{<C-R>"}<ESC>
 
 
 "Go to last edit location with ,.
-nnoremap ,. '.
+nnoremap <leader>. `.
 
 :nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 

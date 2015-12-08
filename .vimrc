@@ -32,7 +32,8 @@ let g:netrw_retmap        = 1
 let g:netrw_silent        = 1
 let g:netrw_special_syntax= 1
 
- autocmd FileType netrw nnoremap t :bd<CR>
+autocmd FileType netrw nnoremap q :bd<CR>
+map <silent> <leader>x :Vex<CR>
 
 " ==============================================================================
 " LET VARIABLES END
@@ -359,7 +360,6 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 
 
 
-map <silent> <leader>x :call ToggleVExplorer()<CR>
 
 
 " Change directory to the current buffer when opening files.
@@ -825,27 +825,6 @@ function! VisualSelection(direction) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
-
-
-function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      exec '1wincmd w'
-      Vexplore
-      let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
-
 
 function! StripTrailingWhitespace()
     let _s=@/

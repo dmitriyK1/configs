@@ -4,6 +4,8 @@ set nocompatible
 
 runtime macros/matchit.vim
 
+colorscheme monokai2
+
 " ==============================================================================
 " LET VARIABLES START
 " ==============================================================================
@@ -318,7 +320,7 @@ if has("gui_running")
   " colorscheme molokai
   " colorscheme onedark
   set t_Co=256
-  colorscheme monokai2
+  " colorscheme monokai2
   set lines=40                " 40 lines of text instead of 24
 
 
@@ -636,7 +638,7 @@ nnoremap Vat vatV
 nnoremap Vab vabV
 nnoremap VaB vaBV
 
-
+let &scrolloff=999-&scrolloff<cr> 
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
 
@@ -698,6 +700,15 @@ nnoremap <leader>. `.
 
 " TODO: split to files ( leader-commands etc. ) and source from here
 
+" This mapping will change the behavior of the <Enter> key when the popup menu is visible. In that case the Enter key will simply select the highlighted menu item, just as <C-Y> does.
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+"  What this accomplishes is it keeps a menu item always highlighted. This way you can keep typing characters to narrow the matches
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 " ===============================================================================
 " FUNCTIONS

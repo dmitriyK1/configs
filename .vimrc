@@ -1,3 +1,9 @@
+ """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               To remember                               "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" gi        go to last position of insert mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
  " Use vim settings, rather then vi settings (much better!)
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -53,6 +59,12 @@ map <silent> <leader>x :Vex<CR>
 " ==============================================================================
 
 map <leader>% :%s/
+
+ " These commands open folds
+set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
+
+" Add ignorance of whitespace to diff
+set diffopt+=iwhite
 
 set grepprg=grep\ -nH\ $*                   " Make grep always print the file name.
 set fileformats=unix,mac,dos                " Allows automatic line-end detection.
@@ -385,6 +397,8 @@ set spell                           " Spell checking on
 " Disable capitalization check in spellcheck.
 set spellcapcheck=""
 
+" Toggle spell check
+map <F6> :setlocal spell! spelllang=en_us<CR>
 
 set iskeyword-=.                    " '.' is an end of word designator
 set iskeyword-=#                    " '#' is an end of word designator
@@ -710,7 +724,10 @@ vmap ,{ c{<C-R>"}<ESC>
 "Go to last edit location with ,.
 nnoremap <leader>. `.
 
-:nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
+nmap <leader>w :setlocal wrap!<CR>:setlocal wrap?<CR>
+
+ " Delete empty lines
+nmap ,del :g/^$/d<cr>
 
 " study later: https://github.com/skwp/dotfiles/tree/master/vim/settings
 
@@ -862,3 +879,16 @@ function! s:NumberTextObject(whole)
         endwhile
     endif
 endfunction
+
+ " Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
+" -------------------------------------------------------------------------
+"               Source the vimrc file after saving it
+" -------------------------------------------------------------------------
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif

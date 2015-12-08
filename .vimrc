@@ -20,11 +20,19 @@ let g:netrw_winsize = -28
 " do not display info on the top of window
 let g:netrw_banner = 0
 
-" tree-view
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 0
 
 " sort is affecting only: directories on the top, files below
 let g:netrw_sort_sequence = '[\/]$,*'
+let g:netrw_preview=1           " open previews vertically
+
+let g:netrw_fastbrowse    = 2
+let g:netrw_keepdir       = 0
+let g:netrw_retmap        = 1
+let g:netrw_silent        = 1
+let g:netrw_special_syntax= 1
+
+ autocmd FileType netrw nnoremap t :bd<CR>
 
 " ==============================================================================
 " LET VARIABLES END

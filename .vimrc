@@ -4,7 +4,6 @@ set nocompatible
 
 runtime macros/matchit.vim
 
-colorscheme monokai2
 
 " ==============================================================================
 " LET VARIABLES START
@@ -638,7 +637,7 @@ nnoremap Vat vatV
 nnoremap Vab vabV
 nnoremap VaB vaBV
 
-let &scrolloff=999-&scrolloff<cr> 
+let &scrolloff=999-&scrolloff
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
 
@@ -709,6 +708,8 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+colorscheme monokai2
 
 " ===============================================================================
 " FUNCTIONS

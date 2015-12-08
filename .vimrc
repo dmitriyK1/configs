@@ -150,7 +150,7 @@ set shortmess=atI
 " prevent flashing
 set novisualbell t_vb=
 set cursorline
-set lazyredraw
+" set lazyredraw
 
 set foldlevelstart=10
 set foldnestmax=10
@@ -222,9 +222,6 @@ set wrapscan
 set ch=2
 
 set laststatus=2
-
-" Set up the gui cursor to look nice
-set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 
 set guioptions=acg
 
@@ -711,7 +708,7 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 
 " original settings:
 "set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
-set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkon0,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
+set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait250-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 
 colorscheme monokai2
 

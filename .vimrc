@@ -10,6 +10,7 @@ runtime macros/matchit.vim
 " ==============================================================================
 let s:oldcmdline = [ ]
 let mapleader=","
+
 " Hit enter in the file browser to open the selected
 " file with :vsplit to the right of the browser.
 let g:netrw_browse_split = 4
@@ -24,7 +25,14 @@ let g:netrw_liststyle = 0
 
 " sort is affecting only: directories on the top, files below
 let g:netrw_sort_sequence = '[\/]$,*'
-let g:netrw_preview=1           " open previews vertically
+
+" hide vim swap files
+let g:netrw_list_hide='.*\.swp$'
+
+ " open files in left window by default
+let g:netrw_chgwin=1
+
+" let g:netrw_preview=1           " open previews vertically
 
 let g:netrw_fastbrowse    = 2
 let g:netrw_keepdir       = 0
@@ -469,7 +477,7 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 
 
 " Easier formatting
-nnoremap <silent> <leader>q gwip
+" nnoremap <silent> <leader>q gwip
 
 
 

@@ -21,8 +21,6 @@ let g:netrw_winsize = -28
 " do not display info on the top of window
 let g:netrw_banner = 0
 
-let g:netrw_liststyle = 0
-
 " sort is affecting only: directories on the top, files below
 let g:netrw_sort_sequence = '[\/]$,*'
 
@@ -32,13 +30,20 @@ let g:netrw_list_hide='.*\.swp$'
  " open files in left window by default
 let g:netrw_chgwin=1
 
-" let g:netrw_preview=1           " open previews vertically
-
 let g:netrw_fastbrowse    = 2
 let g:netrw_keepdir       = 0
 let g:netrw_retmap        = 1
 let g:netrw_silent        = 1
 let g:netrw_special_syntax= 1
+
+let g:netrw_dirhistmax=100
+let g:netrw_altfile=1
+let g:netrw_chgwin = winnr()
+let g:netrw_retmap = 1
+let g:netrw_home = $HOME."/.cache"
+let g:netrw_liststyle=2
+
+set browsedir=current
 
 autocmd FileType netrw nnoremap q :bw!<CR>
 map <silent> <leader>x :Vex<CR>

@@ -40,7 +40,7 @@ let g:netrw_retmap        = 1
 let g:netrw_silent        = 1
 let g:netrw_special_syntax= 1
 
-autocmd FileType netrw nnoremap q :bd<CR>
+autocmd FileType netrw nnoremap q :bw!<CR>
 map <silent> <leader>x :Vex<CR>
 
 " ==============================================================================

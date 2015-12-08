@@ -52,8 +52,7 @@ map <silent> <leader>x :Vex<CR>
 " LET VARIABLES END
 " ==============================================================================
 
-
-
+map <leader>% :%s/
 
 set grepprg=grep\ -nH\ $*                   " Make grep always print the file name.
 set fileformats=unix,mac,dos                " Allows automatic line-end detection.

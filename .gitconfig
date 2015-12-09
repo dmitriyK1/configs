@@ -60,7 +60,10 @@
     autoupdate = 1
 
 [alias]
-    co=checkout
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
     s=status
     d=diff
     dw=diff --color-words

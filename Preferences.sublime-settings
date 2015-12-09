@@ -45,7 +45,7 @@
     "use_tab_stops": true,
     "spell_check": true,
 	"wide_caret": true,
-	"word_wrap": true,
+	"word_wrap": false,
 	"wrap_width": 80,
 	"vintage_start_in_command_mode": true,
 	"save_on_focus_lost": true

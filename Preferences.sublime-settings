@@ -13,19 +13,14 @@
 	"fallback_encoding": "Cyrillic (Windows 1251)",
 	"flatland_square_tabs": true,
 	"fold_buttons": true,
-	"font_face": "Liberation Mono",
+	"font_face": "Consolas",
 	"font_options":
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 14,
 	"gutter": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"ignored_packages":
-	[
-		"AAAPackageDev"
-	],
 	"indent_guide_options":
 	[
 		"draw_active"

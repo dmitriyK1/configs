@@ -47,7 +47,7 @@ let g:netrw_altfile=1
 let g:netrw_chgwin = winnr()
 let g:netrw_retmap = 1
 let g:netrw_home = $HOME."/.cache"
-let g:netrw_liststyle=2
+let g:netrw_liststyle=0
 
 set browsedir=current
 

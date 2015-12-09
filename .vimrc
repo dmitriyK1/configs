@@ -85,7 +85,7 @@ set ttyfast
 set background=dark
 
 filetype plugin indent on
-syntax on
+syntax off
 nmap <Space> :
 set wildchar=<Tab> wildmenu
 set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.

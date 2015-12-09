@@ -52,7 +52,7 @@ let g:netrw_liststyle=2
 set browsedir=current
 
 autocmd FileType netrw nnoremap q :bw!<CR>
-map <silent> <leader>x :Vex<CR>
+map <leader>x :Vex<CR>
 
 " ==============================================================================
 " LET VARIABLES END

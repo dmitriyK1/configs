@@ -51,7 +51,6 @@ let g:netrw_liststyle=0
 
 set browsedir=current
 
-autocmd FileType netrw nnoremap q :bw!<CR>
 map <leader>x :Vex<CR>
 
 " ==============================================================================

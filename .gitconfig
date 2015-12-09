@@ -1,0 +1,297 @@
+# vim:ft=gitconfig
+
+[url "https://"]
+	insteadOf = git://
+
+[apply]
+    whitespace = fix
+
+[user]
+	name = Dmitriy Kaminskiy
+	email = dmitriy.kaminskiy@maxpay.com
+
+[diff]
+    tool = vimdiff
+    mnemonicprefix = true
+
+[difftool]
+	prompt = false
+
+[core]
+    excludesfile = ~/.gitignore
+    pager=less -FXRS
+    editor = vim +0 -f
+	autocrlf = true
+    compression = 9
+    filemode = false
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[color]
+    ui = auto
+    grep = auto
+
+[color "grep"]
+    filename   = magenta
+    linenumber = green
+    match      = red bold
+
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+
+[grep]
+    lineNumber = true
+
+[rerere]
+    enabled = 1
+    autoupdate = 1
+
+[alias]
+    co=checkout
+    s=status
+    d=diff
+    dw=diff --color-words
+    dc=diff --cached
+    recommit=commit --amend --reuse-message=HEAD
+    l=log --decorate=full
+    g=grep
+    ack="grep --break --heading -A3 -B3"
+    rmbranch = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
+    corebase = "!f(){ git checkout ${1} && git stash && git rebase master && git stash pop; };f"
+    rerebase = "!f(){ git stash && git rebase master && git stash pop; };f"
+    b = branch
+    ba = branch -a
+    ci = commit
+    fp = format-patch
+    g = !git gui &
+    gr = log --graph
+    go = log --graph --pretty=oneline --abbrev-commit
+    k = !gitk &
+    ka = !gitk --all &
+    lc = log ORIG_HEAD.. --stat --no-merges
+    lp = log --patch-with-stat
+    mnf = merge --no-ff
+    mnff = merge --no-ff
+    mt = mergetool
+    p = format-patch -1
+    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+    sra = svn rebase --all
+    sh = !git-sh
+    stm = status --untracked=no
+    stfu = status --untracked=no
+    pullsrb = !git stash save && git pull --rebase && git stash pop && echo 'Success!'
+    a = add --all
+    ai = add -i
+    #############
+    ap = apply
+    as = apply --stat
+    ac = apply --check
+    #############
+    ama = am --abort
+    amr = am --resolved
+    ams = am --skip
+    #############
+    b = branch
+    ba = branch -a
+    bd = branch -d
+    br = branch -r
+    #############
+    c = commit
+    ca = commit -a
+    cm = commit -m
+    cem = commit --allow-empty -m
+    cam = commit -am
+    cd = commit --amend
+    cad = commit -a --amend
+    ced = commit --allow-empty --amend
+    #############
+    d = diff
+    dc = diff --cached
+    dl = difftool
+    dlc = difftool --cached
+    dk = diff --check
+    dp = diff --patience
+    dck = diff --cached --check
+    #############
+    f = fetch
+    fo = fetch origin
+    fu = fetch upstream
+    #############
+    fp = format-patch
+    #############
+    fk = fsck
+    #############
+    g = grep -p
+    #############
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+    #############
+    ls = ls-files
+    lsf = "!git ls-files | grep -i"
+    #############
+    m = merge
+    ma = merge --abort
+    mc = merge --continue
+    ms = merge --skip
+    #############
+    o = checkout
+    ob = checkout -b
+    #############
+    pr = prune -v
+    #############
+    ps = push
+    psf = push -f
+    psu = push -u
+    pso = push origin
+    psao = push --all origin
+    psfo = push -f origin
+    psuo = push -u origin
+    psom = push origin master
+    psfom = push -f origin master
+    psuom = push -u origin master
+    #############
+    pl = pull
+    plu = pull -u
+    plo = pull origin
+    plp = pull upstream
+    plom = pull origin master
+    plpm = pull upstream master
+    #############
+    pb = pull --rebase
+    pbo = pull --rebase origin
+    pbp = pull --rebase upstream
+    pbom = pull --rebase origin master
+    pbpm = pull --rebase upstream master
+    #############
+    rb = rebase
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbi = rebase --interactive
+    rbs = rebase --skip
+    #############
+    re = reset
+    rh = reset HEAD
+    reh = reset --hard
+    rem = reset --mixed
+    res = reset --soft
+    rehh = reset --hard HEAD
+    remh = reset --mixed HEAD
+    resh = reset --soft HEAD
+    #############
+    r = remote
+    ra = remote add
+    rr = remote rm
+    rv = remote -v
+    rm = remote rename
+    rp = remote prune
+    rs = remote show
+    rao = remote add origin
+    rau = remote add upstream
+    rso = remote show origin
+    rsu = remote show upstream
+    rpo = remote prune origin
+    rpu = remote prune upstream
+    #############
+    s = status
+    sb = status -s -b
+    #############
+    sa = stash apply
+    sc = stash clear
+    sd = stash drop
+    sl = stash list
+    sp = stash pop
+    ss = stash save
+    sw = stash show
+    #############
+    w = show
+    wp = show -p
+    wr = show -p --no-color
+    #############
+    svnr = svn rebase
+    svnd = svn dcommit
+    svnl = svn log --oneline --show-commit
+    #############
+    assume = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+    unassumeall = !git assumed | xargs git update-index --no-assume-unchanged
+    assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+    #############
+    ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+    #############
+    whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+    #############
+    barebranch = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
+    flat = clone --depth 1
+    subpull = !git submodule foreach git pull --tags origin master
+    subrepo = !sh -c 'filter-branch --prune-empty --subdirectory-filter $1 master' -
+    human = name-rev --name-only --refs=refs/heads/*
+    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+    snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+
+    addremove = !git r && git add . --all
+    aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
+    all = add . --all
+    amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+    br = branch -av
+    brname = !git branch | grep "^*" | awk '{ print $2 }'
+    brdel = branch -D
+    ci = commit
+    changes = "!f() { git log --pretty=format:'* %s' $1..$2; }; f"
+    churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+    co = checkout
+    details = log -n1 -p --format=fuller
+    export = archive -o latest.tar.gz -9 --prefix=latest/
+    unstage = reset HEAD --
+    g = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    in = pull --dry-run
+    l = "!f() { git log $* | grep '^commit ' | cut -f 2 -d ' '; }; f"
+    out = log --branches --not --remotes
+    r = !git ls-files -z --deleted | xargs -0 git rm
+    root = rev-parse --show-toplevel
+    st = status
+    subup = submodule update --init
+    tags = tag -l
+    this = !git init && git add . && git commit -m \"Initial commit.\"
+    trim = !git reflog expire --expire=now --all && git gc --prune=now
+    lgp = log --stat -p
+    lgs = log --stat
+    who = shortlog -sn
+
+[merge]
+    tool=vimdiff
+    log = true
+    ff = false
+
+[push]
+	default = simple
+
+[clean]
+    requireForce = false
+
+[include]
+    path = ~/.gitconfig.local
+
+[url "https://bitbucket.org/"]
+    insteadOf = bb:
+
+[url "https://github.com/"]
+    insteadOf = gh:
+
+[url "https://gist.github.com/"]
+    insteadOf = gist:

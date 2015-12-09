@@ -53,6 +53,10 @@ set browsedir=current
 
 map <leader>x :Vex<CR>
 
+autocmd FileType netrw setl bufhidden=wipe
+map - :Vex<CR>
+map = <C-l><C-w>o
+
 " ==============================================================================
 " LET VARIABLES END
 " ==============================================================================

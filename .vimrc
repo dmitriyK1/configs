@@ -60,6 +60,8 @@ map <leader>x :Vex<CR>
 
 map <leader>% :%s/
 
+map gi gi<Esc>
+
  " These commands open folds
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 

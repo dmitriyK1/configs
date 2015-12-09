@@ -21,7 +21,7 @@
     excludesfile = ~/.gitignore
     pager=less -FXRS
     editor = vim +0 -f
-	" autocrlf = true
+	# autocrlf = true
     compression = 9
     filemode = false
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -279,7 +279,8 @@
     ff = false
 
 [push]
-	default = simple
+	# default = simple
+	default = current
 
 [clean]
     requireForce = false

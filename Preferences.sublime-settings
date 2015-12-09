@@ -4,8 +4,8 @@
 	"auto_complete_selector": "source, text",
 	"auto_indent": true,
 	"bold_folder_labels": true,
-	"caret_style": "phase",
-	"color_scheme": "Packages/Color Scheme - Default/Espresso Libre.tmTheme",
+	"caret_style": "wide",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
 	"detect_slow_plugins": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
@@ -48,5 +48,7 @@
 	"trim_trailing_white_space_on_save": true,
 	"wide_caret": true,
 	"word_wrap": true,
-	"wrap_width": 80
+	"wrap_width": 80,
+	"vintage_start_in_command_mode": true,
+	"save_on_focus_lost": true
 }

@@ -85,7 +85,7 @@ set ttyfast
 set background=dark
 
 filetype plugin indent on
-syntax off
+syntax on
 nmap <Space> :
 set wildchar=<Tab> wildmenu
 set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
@@ -398,7 +398,7 @@ set autochdir
 set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
 
-set spell                           " Spell checking on
+set nospell                           " Spell checking on
 " Disable capitalization check in spellcheck.
 set spellcapcheck=""
 

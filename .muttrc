@@ -1,0 +1,13 @@
+set imap_user = "dimaroxx@gmail.com"
+set imap_pass = "qwerasdfzxcv4"
+set smtp_url = "smtp://dimaroxx@gmail.com@smtp.gmail.com:587/"
+set smtp_pass = "qwerasdfzxcv4"
+set from = "dimaroxx@gmail.com"
+set realname = "Your Name"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set postponed = "+[GMail]/Drafts"
+set record = "+[GMail]/Sent Mail"

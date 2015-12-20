@@ -1,0 +1,13 @@
+set imap_user = "user@gmail.com"
+set imap_pass = "yourpassword"
+set smtp_url = "smtp://user@gmail.com@smtp.gmail.com:587/"
+set smtp_pass = "yourpassword"
+set from = "user@gmail.com"
+set realname = "Your Name"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set postponed = "+[GMail]/Drafts"
+set record = "+[GMail]/Sent Mail"

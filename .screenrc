@@ -1,6 +1,15 @@
+#==================================================================
+# TO REMEMBER:
+#==================================================================
+# <prefix> + s    // split windows
+# <prefix> + [    // copy mode (enables vi-bindings for scrolling, find etc)
+# <prefix> + :    // run command for screen
+#==================================================================
+
+
 startup_message off
 defmonitor on
-defscrollback 10240
+defscrollback 1024
 autodetach on
 vbell off
 termcapinfo xterm|xterms|xs|rxvt ti@:te@
@@ -27,3 +36,11 @@ bind 'K' kill
 bind 'I' login on
 bind 'O' login off
 bind '}' history
+
+defscrollback 5000			# default: 100
+bind = resize =
+bind + resize +1
+bind - resize -1
+bind _ resize max
+bind ' ' windowlist -b
+# from http://www.softpanorama.org/Utilities/Screen/screenrc_examples.shtml

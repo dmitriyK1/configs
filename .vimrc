@@ -169,7 +169,7 @@ noremap <leader>ss :source $MYVIMRC<CR>
 "
 " Source current file
 noremap <leader>so :so%<CR>
-nnoremap <leader>m :mksession<CR>
+" nnoremap <leader>m :mksession<CR>
 nnoremap <leader>p :set paste!<CR>
 set shiftwidth=4
 set shiftround
@@ -890,6 +890,56 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
+
+" -------------------------------------------------------------------------
+"  autosave\autoload sessions
+" -------------------------------------------------------------------------
+
+" Creates a session
+" !! should have $HOME/.vim/sessions folder to work properly on all OSes
+" should create a session file if not present (<leader>m)
+function! MakeSession()
+  " let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  let b:sessiondir = $HOME . "/.vim/sessions"
+  if (filewritable(b:sessiondir) != 2)
+    exe 'silent !mkdir -p ' b:sessiondir
+    redraw!
+  endif
+  let b:sessionfile = b:sessiondir . '/session.vim'
+  exe "mksession! " . b:sessionfile
+endfunction
+
+" Updates a session, BUT ONLY IF IT ALREADY EXISTS
+function! UpdateSession()
+  " let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+  let b:sessiondir = $HOME . "/.vim/sessions"
+  let b:sessionfile = b:sessiondir . "/session.vim"
+  if (filereadable(b:sessionfile))
+    exe "mksession! " . b:sessionfile
+    echo "updating session"
+  endif
+endfunction
+
+" Loads a session if it exists
+function! LoadSession()
+  if argc() == 0
+    " let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
+    let b:sessiondir = $HOME . "/.vim/sessions"
+    let b:sessionfile = b:sessiondir . "/session.vim"
+    if (filereadable(b:sessionfile))
+      exe 'source ' b:sessionfile
+    else
+      echo "No session loaded."
+    endif
+  else
+    let b:sessionfile = ""
+    let b:sessiondir = ""
+  endif
+endfunction
+
+au VimEnter * nested :call LoadSession()
+au VimLeave * :call UpdateSession()
+map <leader>m :call MakeSession()<CR>
 
 " -------------------------------------------------------------------------
 "               Source the vimrc file after saving it

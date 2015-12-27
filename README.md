@@ -1,5 +1,3 @@
-Docs
-====
 Configs for:
 ------------
 - w3m
@@ -9,3 +7,4 @@ Configs for:
 - zshrc
 - Sublime
 - irssi
+and more...

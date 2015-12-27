@@ -22,6 +22,9 @@ hardstatus alwayslastline
 hardstatus string '%{= kG}%{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}'
 pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 
+deflogin off
+defutf8 on
+title screen
 
 #remove some stupid / dangerous key bindings
 bind k
@@ -44,3 +47,7 @@ bind - resize -1
 bind _ resize max
 bind ' ' windowlist -b
 # from http://www.softpanorama.org/Utilities/Screen/screenrc_examples.shtml
+
+# Define the time that all windows monitored for silence should
+# wait before displaying a message. Default 30 seconds.
+silencewait 15			# default: 30

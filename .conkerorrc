@@ -1,0 +1,177 @@
+define_lastfm_webjumps("Loveless777");
+
+// Implement undo closed tab {{
+
+var my_closed_buffers = new Array();
+//save the URL of the current buffer before closing it
+
+interactive("my-close-and-save-current-buffer",
+    "close and save the current buffer for later restore",
+    function(I) {
+        if(my_closed_buffers.length==10){
+            my_closed_buffers.shift(); // remove older item to save
+            // memory, just save maximum 10 buffers
+        }
+        my_closed_buffers.push(I.buffer.document.URL);
+        kill_buffer(I.buffer); //kill the current buffer
+    });
+
+undefine_key(default_global_keymap, "q");
+define_key(default_global_keymap, "q", "my-close-and-save-current-buffer");
+
+interactive("my-open-closed-buffer",
+  "open the last closed buffer",
+  function(I){
+    // check if the array length > 0
+    if(my_closed_buffers.length>0){
+      // load the URL in new windows
+      load_url_in_new_buffer(
+        my_closed_buffers[my_closed_buffers.length - 1], I.window);
+      // remove the first item in the array
+      my_closed_buffers.pop();
+    }
+  });
+
+define_key(default_global_keymap, "Q", "my-open-closed-buffer")
+
+// }}
+
+// Prevent focus-stealing {{
+
+function focusblock (buffer) {
+    var s = Components.utils.Sandbox(buffer.top_frame);
+    s.document = buffer.document.wrappedJSObject;
+    Components.utils.evalInSandbox(
+        "(function () {\
+            function nothing () {}\
+            if (! document.forms)\
+                return;\
+            for (var i = 0, nforms = document.forms.length; i < nforms; i++) {\
+              for (var j = 0, nels = document.forms[i].elements.length; j < nels; j++)\
+                document.forms[i].elements[j].focus = nothing;\
+            }\
+          })();",
+        s);
+}
+add_hook('content_buffer_progress_change_hook', focusblock);
+
+require("block-content-focus-change.js");
+block_content_focus_change_duration = 40;
+
+// }}
+
+// Show tab bar {{
+
+require("favicon.js");
+require("new-tabs.js");
+tab_bar_show_icon = true;
+tab_bar_show_index = true;
+
+// }}
+
+// history completion
+// comment line below for separate history\bookmarks handling (via h\H\g keys)
+url_completion_use_history = true;
+
+define_browser_object_class(
+    "history-url", null, 
+    function (I, prompt) {
+        check_buffer (I.buffer, content_buffer);
+        var result = yield I.buffer.window.minibuffer.read_url(
+            $prompt = prompt,  $use_webjumps = false, $use_history = true, $use_bookmarks = false);
+        yield co_return (result);
+    });
+
+interactive("find-url-from-history",
+            "Find a page from history in the current buffer",
+            "find-url",
+            $browser_object = browser_object_history_url);
+
+interactive("find-url-from-history-new-buffer",
+            "Find a page from history in the current buffer",
+            "find-url-new-buffer",
+            $browser_object = browser_object_history_url);
+
+define_key(content_buffer_normal_keymap, "h", "find-url-from-history-new-buffer");
+define_key(content_buffer_normal_keymap, "H", "find-url-from-history");
+
+// enable bookmarks autocompletion
+url_completion_use_bookmarks=true 
+
+// show bookmarks list on M-x list-bookmarks {{
+
+interactive("list-bookmarks",
+    "List all bookmarks",
+    function (I) {
+        var data = "", error = "";
+        var result = yield shell_command(
+            "conkeror-bookmarks.py --html",
+            $fds = [{ output: async_binary_string_writer("") },
+                    { input: async_binary_reader(function (s) data+=s||"") },
+                    { input: async_binary_reader(function (s) error+=s||"") }]);
+        if (result != 0 || error != "")
+            throw new interactive_error("status "+result+", "+error);
+        var uri = "data:text/html;charset=utf-8;base64,"+btoa(data);
+        browser_object_follow(I.buffer, OPEN_NEW_BUFFER, load_spec({ uri: uri }));
+    });
+
+// }}
+
+// =============================================================
+
+define_key(default_global_keymap, "C-T", "revive-buffer");
+
+var kill_buffer_original = kill_buffer_original || kill_buffer;
+
+var killed_buffer_urls = [];
+var killed_buffer_histories = [];
+
+//  remember_killed_buffer
+kill_buffer = function (buffer, force) {
+    var hist = buffer.web_navigation.sessionHistory;
+
+    if (buffer.display_uri_string && hist) {
+        killed_buffer_histories.push(hist);
+        killed_buffer_urls.push(buffer.display_uri_string);
+    }
+
+    kill_buffer_original(buffer,force);
+};
+
+interactive("revive-buffer",
+    "Loads url from a previously killed buffer",
+    function restore_killed_buffer (I) {
+        if (killed_buffer_urls.length !== 0) {
+            var url = yield I.minibuffer.read(
+                $prompt = "Restore killed url:",
+                $completer = new all_word_completer($completions = killed_buffer_urls),
+                $default_completion = killed_buffer_urls[killed_buffer_urls.length - 1],
+                $auto_complete = "url",
+                $auto_complete_initial = true,
+                $auto_complete_delay = 0,
+                $require_match = true);
+
+            var window = I.window;
+            var creator = buffer_creator(content_buffer);
+            var idx = killed_buffer_urls.indexOf(url);
+
+            // Create the buffer
+            var buf = creator(window, null);
+
+            // Recover the history
+            buf.web_navigation.sessionHistory = killed_buffer_histories[idx];
+
+            // This line may seem redundant, but it's necessary.
+            var original_index = buf.web_navigation.sessionHistory.index;
+            buf.web_navigation.gotoIndex(original_index);
+
+            // Focus the new tab
+            window.buffers.current = buf;
+
+            // Remove revived from cemitery
+            killed_buffer_urls.splice(idx,1);
+            killed_buffer_histories.splice(idx,1);
+        } else {
+            I.window.minibuffer.message("No killed buffer urls");
+        }
+    });

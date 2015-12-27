@@ -1,0 +1,3 @@
+ set! browser.tabs.closeWindowWithLastTab=false
+ set encoding=UTF-8
+ " colorscheme solarized-dark

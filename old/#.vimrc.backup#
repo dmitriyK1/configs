@@ -1,0 +1,273 @@
+set nocompatible              " be iMproved
+filetype off                  " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"BUNDLES
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'wincent/Command-T'
+Bundle 'Shougo/vimfiler.vim'
+Bundle 'gmarik/vundle'
+Bundle 'tomasr/molokai'
+Bundle 'Shougo/vimshell.vim'
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+" Bundle 'Valloric/YouCompleteMe'
+Bundle 'bkad/CamelCaseMotion'
+Bundle 'pangloss/vim-javascript'
+Bundle 'jeetsukumaran/vim-buffersaurus'
+" Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-shell'
+Bundle 'xolox/vim-misc'
+Bundle 'vim-scripts/L9'
+Bundle 'vim-scripts/FuzzyFinder'
+" Bundle 'vim-scripts/YankRing.vim'
+Bundle 'bling/vim-airline'
+" Bundle 'bling/vim-bufferline'
+" Bundle 'airblade/vim-gitgutter'
+" Bundle 'Townk/vim-autoclose'
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-entire'
+" Bundle 'SirVer/ultisnips'
+" Bundle 'rstacruz/vim-ultisnips-css'
+Bundle 'tpope/vim-commentary'
+Bundle 'scrooloose/syntastic'
+Bundle "wookiehangover/jshint.vim"
+Bundle 'majutsushi/tagbar'
+Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Shougo/neocomplete.vim'
+Bundle 'tpope/vim-repeat'
+Bundle 'scrooloose/nerdcommenter'
+"Bundle 'Shougo/neosnippet.vim'
+Bundle 'rstacruz/sparkup'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Chiel92/vim-autoformat'
+Bundle 'gregsexton/MatchTag'
+" Bundle 'kien/ctrlp.vim'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+" Bundle 'garbas/vim-snipmate'
+" Bundle 'honza/vim-snippets'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'jlanzarotta/bufexplorer'
+runtime macros/matchit.vim
+
+"   ================ SETTINGS ================
+
+" don't show intro
+set shortmess+=I
+
+" better splits
+set splitbelow
+set splitright
+
+" no backup files
+set nobackup
+
+" no write backup
+set nowritebackup
+
+" no swap file
+set noswapfile
+
+" scroll with more context
+set scrolloff=10
+
+" allow backspace to delete end of line, indent and start of line characters
+set backspace=indent,eol,start
+
+" convert tabs to spaces
+set expandtab
+
+" set tab size
+set tabstop=4
+
+" the number of spaces inserted for a tab
+set shiftwidth=4
+
+" get rid of the delay when pressing O (for example)
+" http://stackoverflow.com/questions/2158516/vim-delay-before-o-opens-a-new-line
+set timeout timeoutlen=1000 ttimeoutlen=100
+
+" always show status bar
+set laststatus=2
+
+" set the status line to something useful
+set statusline=%f\ %=L:%l/%L\ %c\ (%p%%)
+
+" autoload files that have changed outside of vim
+set autoread
+
+syntax on
+syntax enable
+filetype plugin indent on     " required!
+set switchbuf=useopen
+" set foldmethod=indent
+set colorcolumn=80
+set history=1000
+set undolevels=1000
+set title
+set novisualbell
+set noerrorbells
+set nobackup
+set noswapfile
+set relativenumber
+set nrformats=
+set linespace=3
+set laststatus=2
+" set cmdheight=2
+set incsearch
+set hlsearch
+set textwidth=79
+set ignorecase
+set smartcase
+set mousehide
+set foldenable
+set encoding=utf-8
+" highlight tabs and trailing spaces
+set list lcs=trail:·,tab:»·
+set autoindent
+set smartindent
+set copyindent
+set smarttab
+set et
+set tabstop=4
+set cin
+set showmatch
+set ffs=unix,dos,mac
+set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866
+set showcmd
+set confirm
+set hidden
+set backspace=indent,eol,start
+set nostartofline
+set pastetoggle=<F2>
+set mouse=a
+set winaltkeys=no
+set number
+set wildmenu
+set wildmode=longest:full,full
+set cursorline
+set nospell
+set guifont=Consolas\ 12
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.bak,*.pyc,*.class  " Windows
+set wrap
+set ruler
+
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+        set t_Co=256
+endif
+
+" Jump 5 lines when running out of the screen
+" set scrolljump=5
+" Indicate jump out of the screen when 3 lines before end of the screen
+" set scrolloff=3
+
+
+" MAPPINGS
+inoremap ii <Esc>I
+inoremap aa <Esc>A
+inoremap OO <Esc>O
+inoremap oo <Esc>o
+inoremap cc <Esc>C
+inoremap ss <Esc>S
+inoremap dd <Esc>dd
+inoremap uu <Esc>ui
+nmap <M-1> Go
+map <space> :
+nmap <F8> :TagbarToggle<CR>
+inoremap kj <esc>
+inoremap jk <esc>
+inoremap jj <esc>
+" inoremap <esc> <nop>
+" Splits navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+cmap w!! w !sudo tee % >/dev/null
+nmap <leader>f :FufFileWithCurrentBufferDir<CR>
+nmap <leader>b :FufBuffer<CR>
+nmap <leader>t :FufTaggedFile<CR>
+nnoremap <silent> <F9> :bn<CR>
+nnoremap <silent> <S-F9> :bp<CR>
+" NerdTree {
+map <C-q> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+map <leader>e :NERDTreeFind<CR>
+nmap <leader>nt :NERDTreeFind<CR>
+
+noremap <F3> :Autoformat<CR><CR>
+map Y y$
+nnoremap <leader>l :nohl<CR><C-L>
+
+"Vertical bubbling(all modes)
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+"Horizontal bubbling
+"vnoremap < <gv
+"vnoremap > >gv"
+"nmap <C-h> <<
+"nmap <C-l> >>
+
+"VARIABLES & AUTOCMDs
+let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=1
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=0
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=0
+
+let g:ctrlp_custom_ignore = {
+                        \ 'dir':  '\.git$\|\.hg$\|\.svn$\',
+                        \ 'file': '\.exe$\|\.so$\|\.dat$'
+                        \ }
+
+augroup reload_vimrc " {
+        autocmd!
+        autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
+
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:airline_enable_fugitive=1
+let g:airline_enable_syntastic=1
+let g:airline_enable_bufferline=1
+let g:airline_theme='powerlineish'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_linecolumn_prefix = '¶ '
+let g:airline_fugitive_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
+let g:session_autoload = 'yes'
+let g:session_autosave = 'yes'
+
+colorscheme molokai
+let g:molokai_original=1
+kkkkku
+set background=dark
+
+
+function s:appendSemiColon()
+        if getline('.') !~ ';$'
+                let original_cursor_position = getpos('.')
+                exec("s/$/;/")
+                call setpos('.', original_cursor_position)
+        endif
+endfunction
+
+autocmd FileType c,cpp,css,java,javascript,perl,php,html
+                        \ inoremap <silent> ;; <esc> :call <SID>appendSemiColon()<cr>
+
+set autowrite
+

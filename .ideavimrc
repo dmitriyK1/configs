@@ -1,0 +1,5 @@
+imap jj <Esc>
+imap JJ <Esc>
+imap оо <Esc>
+nmap vv ggVG
+nmap gc :close<cr>

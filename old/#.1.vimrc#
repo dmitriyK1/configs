@@ -1,0 +1,214 @@
+"Vundle
+
+set nocompatible	       " be iMproved
+filetype off		       " required!
+
+set rtp+=~/.vim/bundle/vundxLE/
+CALL vundle#rc()
+
+" let Vundle manage Vundle
+"  " required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+Bundle "Chiel92/vim-autoformat"
+Bundle "einars/js-beautify"
+Bundle "scrooloose/syntastic"
+Bundle "esukram/vim-taglist"
+Bundle "scrooloose/nerdtree"
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'jelera/vim-javascript-syntax'
+"Bundle 'vim-scripts/JavaScript-Indent'
+"Bundle 'lukaszb/vim-web-indent'
+Bundle "vim-scripts/bufexplorer.zip"
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'groenewege/vim-less'
+Bundle 'vim-scripts/AutoComplPop'
+Bundle 'embear/vim-localvimrc'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+" ...
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList	       - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+"/Vundle
+
+" fast switch between windows
+map å <C-w>h
+map ø <C-w>j
+map æ <C-w>k
+map é <C-w>l
+
+" fast windows rotation
+map <C-a> <C-w>H
+map <C-o> <C-w>J
+map <C-e> <C-w>K
+map <C-u> <C-w>L
+
+" custom scroll
+nnoremap <A-j> 10j
+nnoremap <A-k> 10k
+
+" vim-autoformat mapping
+noremap <F3> :Autoformat<CR> :retab!<CR>
+
+" fugitive mappings
+" go to up a level to the parent directory
+autocmd User fugitive
+			\ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+			\   nnoremap <buffer> .. :edit %:h<CR> |
+			\ endif
+" auto clean fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
+" add git branch name to status line
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" EasyMotion mappings
+let g:EasyMotion_mapping_w = '<S-j>'
+let g:EasyMotion_mapping_b = '<S-k>'
+
+" Remap recording macro from q to Q to avoid accidental hitting
+nnoremap " q
+nnoremap q <Nop>
+
+" Fast saving
+nnoremap <A-S-w> :w<CR>
+" Fast exit
+nnoremap <S-q> :q<CR>
+
+" Show Google Closure Linter output in a separate split
+noremap <F4> :Shell gjslint %<CR>
+noremap <C-f>f :! fixjsstyle %<CR>
+" Syntastic
+noremap <A-C-e><A-C-e> :Errors<CR>
+noremap <A-]> :lnext<CR>
+noremap <A-[> :lprevious<CR>
+let g:syntastic_javascript_checkers=['gjslint']
+" Taglist
+nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Auto_Open = 0
+let Tlist_WinWidth = 75
+
+"NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
+nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
+
+" BufExplorer
+nmap <A-+> <Esc>:BufExplorer<cr>
+vmap <A-+> <esc>:BufExplorer<cr>
+imap <A-+> <esc>:BufExplorer<cr>
+
+" previous buffer
+nmap <A-*> :bp<cr>
+vmap <A-*> <esc>:bp<cr>i
+imap <A-*> <esc>:bp<cr>i
+
+" next buffer
+nmap <A-)> :bn<cr>
+vmap <A-)> <esc>:bn<cr>i
+imap <A-)> <esc>:bn<cr>i
+
+" show line numbers
+set number
+
+" default colorscheme
+colorscheme greenvision2
+
+" Omnicompletion
+filetype plugin on
+set ofu=syntaxcomplete#Complete
+
+" Indentation per file type
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+	" Enable file type detection
+	filetype on
+
+	" Syntax of these languages is fussy over tabs Vs spaces
+	autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+	" Customisations based on house-style (arbitrary)
+	autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType less setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType php setlocal ts=2 sts=2 sw=2 expandtab
+
+	" Treat .rss files as XML
+	autocmd BufNewFile,BufRead *.rss setfiletype xml
+endif
+
+" Show external command in a new window
+function! s:ExecuteInShell(command)
+	let command = join(map(split(a:command), 'expand(v:val)'))
+	let winnr = bufwinnr('^' . command . '$')
+	silent! execute  winnr < 0 ? 'botright new ' . fnameescape(command) : winnr . 'wincmd w'
+	setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile nowrap number
+	echo 'Execute ' . command . '...'
+	silent! execute 'silent %!'. command
+	silent! execute 'resize ' . 10
+	silent! redraw
+	silent! execute 'au BufUnload <buffer> execute bufwinnr(' . bufnr('#') . ') . ''wincmd w'''
+	silent! execute 'nnoremap <silent> <buffer> <LocalLeader>r :call <SID>ExecuteInShell(''' . command . ''')<CR>'
+	echo 'Shell command ' . command . ' executed.'
+endfunction
+command! -complete=shellcmd -nargs=+ Shell call s:ExecuteInShell(<q-args>)
+
+" Automatic folding
+set foldmethod=syntax
+set foldlevelstart=99
+
+let javaScript_fold=1	      " JavaScript
+let perl_fold=1		      " Perl
+let php_folding=1	      " PHP
+let r_syntax_folding=1	      " R
+let ruby_fold=1		      " Ruby
+let sh_fold_enabled=1	      " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
+
+au FileType javascript call JavaScriptFold()
+" remap folding to space key
+nnoremap <Space> za
+
+" auto compile less files after saving
+function LessToCss()
+	"let current_file = shellescape(expand('%:p'))
+	"let filename = shellescape(expand('%:r'))
+	"let command = "!lessc " . current_file . " ../css/" . filename . ".css"
+	let command = "!lessc less/main.less > css/style.css && lessc less/ie.less > css/ie.css"
+	execute command
+endfunction
+autocmd BufWritePost,FileWritePost *.less call LessToCss()
+
+" Add hyphen to auto complete list
+set iskeyword+=-
+
+" Online search in Vim
+" Google search
+:vmap ?? <Esc>:silent exec
+			\ ":Shell google-chrome \\\http://www.google.com/search?q=".substitute(@*,"\\W\\+\\\\|\\<\\w\\>"," ","g")<CR><C-W>c<CR>
+" Javascript.ru search
+:vmap ?S <Esc>:silent exec
+			\ ":Shell google-chrome \\\http://learn.javascript.ru/search/node/".substitute(@*,"\\W\\+\\\\|\\<\\w\\>"," ","g")<CR><C-W>c<CR>

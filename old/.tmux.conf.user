@@ -1,0 +1,61 @@
+set -g prefix `
+bind ` send-prefix
+bind-key ` last-window
+unbind %
+unbind '"'
+unbind x
+unbind C-o
+unbind k
+unbind j
+unbind h
+unbind l
+
+bind-key H split-window -v
+bind-key V split-window -h
+bind-key a send-keys `
+bind-key X kill-pane
+bind-key K confirm-before kill-window
+bind-key N rotate-window -U
+bind-key P rotate-window -D
+
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key h select-pane -L
+bind-key l select-pane -R
+
+bind-key F swap-pane -U
+bind-key D swap-pane -D
+
+#-------- Mouse {{{
+#------------------------------------------------------
+# mouse to highlight and copy; to paste use prefix + ]
+# http://awhan.wordpress.com/2012/04/18/tmux-copy-paste-with-mouse/
+
+# temporarily allow regular terminal copy mode while mouse mode is enable
+# visual line:  shift+mouse
+# visual block: ctrl+shift+mouse <-- only works on some terminals
+# visual block: ctrl+mouse <-- (while mouse mode is disable) only works on some terminals
+
+# toggle mouse on/off
+# http://tangledhelix.com/blog/2012/07/16/tmux-and-mouse-mode/
+bind-key m \
+  set-option -g mode-mouse on \;\
+  set-option -g mouse-resize-pane on \;\
+  set-option -g mouse-select-pane on \;\
+  set-option -g mouse-select-window on \;\
+  display-message 'Mouse: ON'
+bind-key M \
+  set-option -g mode-mouse off \;\
+  set-option -g mouse-resize-pane off \;\
+  set-option -g mouse-select-pane off \;\
+  set-option -g mouse-select-window off \;\
+  display-message 'Mouse: OFF'
+
+
+# }}}
+
+# Lowers the delay time between the prefix key and other keys - fixes pausing in vim
+set -sg escape-time 1
+
+# reload .tmux.conf
+bind-key r source-file ~/.tmux.conf \; display-message "Configuration reloaded"

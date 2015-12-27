@@ -6,11 +6,8 @@
 # <prefix> + :    // run command for screen
 #==================================================================
 
-
 startup_message off
 defmonitor on
-defscrollback 1024
-autodetach on
 vbell off
 termcapinfo xterm|xterms|xs|rxvt ti@:te@
 escape `e

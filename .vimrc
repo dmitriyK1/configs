@@ -678,6 +678,8 @@ let &scrolloff=999-&scrolloff
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
 
+map <leader>c :set cursorline!<cr>
+
 " Numbers {{{
 
 " Motion for numbers.  Great for CSS.  Lets you do things like this:

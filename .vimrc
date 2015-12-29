@@ -137,6 +137,7 @@ noremap <leader>, :update<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map gn :bn<CR>
 map gp :bp<CR>
+map gc :bd<CR>
 " map gd :bd<CR>
 map <leader>d :bd<CR>
 

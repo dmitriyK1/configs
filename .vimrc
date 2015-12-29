@@ -741,6 +741,8 @@ nmap ,del :g/^$/d<cr>
 
 " TODO: split to files ( leader-commands etc. ) and source from here
 
+" TODO: fix visual selection not showing up instantly
+
 " This mapping will change the behavior of the <Enter> key when the popup menu is visible. In that case the Enter key will simply select the highlighted menu item, just as <C-Y> does.
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 

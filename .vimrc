@@ -60,8 +60,16 @@ map = <C-l><C-w>o
 " ==============================================================================
 " LET VARIABLES END
 " ==============================================================================
+" using colon as a separator to easier read regular expressions; 
+" using \v key to make vim regular expressions work as common regexps
+map <leader>% :%s:\v::g<Left><Left><Left>
 
-map <leader>% :%s/
+" find and replace with confirmation
+map <leader>; :%s:\v::cg<Left><Left><Left><Left>
+
+ " make regexp search not suck by default
+nnoremap / /\v
+vnoremap / /\v
 
 map gi gi<Esc>
 

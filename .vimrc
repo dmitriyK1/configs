@@ -212,7 +212,7 @@ nnoremap gk k
 inoremap jj <ESC>
 
 " add semicolon at the end of the line in insert mode
-inoremap <C-s> <C-o>A;<Esc>
+inoremap <C-s> <end>;<Esc>
 
 " highlight last inserted text
 nnoremap gV `[v`]

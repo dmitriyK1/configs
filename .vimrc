@@ -196,7 +196,7 @@ set shortmess=atI
 
 " prevent flashing
 set novisualbell t_vb=
-set cursorline
+" set cursorline
 " set lazyredraw
 
 set foldlevelstart=10
@@ -263,8 +263,8 @@ augroup cline
     au!
     "au WinLeave * set nocursorline
     "au WinEnter * set cursorline
-    au InsertEnter * set nocursorline
-    au InsertLeave * set cursorline
+    "au InsertEnter * set nocursorline
+    "au InsertLeave * set cursorline
 augroup END
 " }}}
 

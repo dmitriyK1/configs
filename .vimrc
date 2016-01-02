@@ -781,6 +781,9 @@ set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver2
 
 colorscheme monokai2
 
+" repeat last search and replace operation with confirmation
+map $ :%sgc
+
 " ===============================================================================
 " FUNCTIONS
 " ===============================================================================

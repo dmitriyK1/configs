@@ -7,8 +7,8 @@
     whitespace = fix
 
 [user]
-	name = Dmitriy Kaminskiy
-	email = dmitriy.kaminskiy@maxpay.com
+	name = Dmitriy
+	email = email@gmail.com
 
 [diff]
     tool = vimdiff

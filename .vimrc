@@ -212,10 +212,10 @@ nnoremap gk k
 " -------------------------------------------------------------------------
 "               Prevent cursor from moving when leaving insert mode
 " -------------------------------------------------------------------------
-let CursorColumnI = 0 "the cursor column position in INSERT
-autocmd InsertEnter * let CursorColumnI = col('.')
-autocmd CursorMovedI * let CursorColumnI = col('.')
-autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
+"let CursorColumnI = 0 "the cursor column position in INSERT
+"autocmd InsertEnter * let CursorColumnI = col('.')
+"autocmd CursorMovedI * let CursorColumnI = col('.')
+"autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
 " -------------------------------------------------------------------------
 
 inoremap jj <ESC>

@@ -209,6 +209,15 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
+" -------------------------------------------------------------------------
+"               Prevent cursor from moving when leaving insert mode
+" -------------------------------------------------------------------------
+let CursorColumnI = 0 "the cursor column position in INSERT
+autocmd InsertEnter * let CursorColumnI = col('.')
+autocmd CursorMovedI * let CursorColumnI = col('.')
+autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
+" -------------------------------------------------------------------------
+
 inoremap jj <ESC>
 
 " add semicolon at the end of the line in insert mode
@@ -965,17 +974,6 @@ map <leader>m :call MakeSession()<CR>
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-
-
-" -------------------------------------------------------------------------
-"               Prevent cursor from moving when leaving insert mode
-" -------------------------------------------------------------------------
-let CursorColumnI = 0 "the cursor column position in INSERT
-autocmd InsertEnter * let CursorColumnI = col('.')
-autocmd CursorMovedI * let CursorColumnI = col('.')
-autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
-" -------------------------------------------------------------------------
-
 
 
 highlight Cursor guifg=white guibg=green

@@ -785,6 +785,11 @@ colorscheme monokai2
 " TODO: currently replaces only first occurence on each line
 noremap $ :%sgc<cr>
 
+" always use the command editing window
+nnoremap : q:i
+nnoremap ? q?i
+nnoremap / q/i
+
 " ===============================================================================
 " FUNCTIONS
 " ===============================================================================

@@ -783,7 +783,7 @@ colorscheme monokai2
 
 " repeat last search and replace operation with confirmation
 " TODO: currently replaces only first occurence on each line
-noremap $ :%sgc<cr>
+noremap & :%sgc<cr>
 
 " always use the command editing window
 nnoremap : q:i

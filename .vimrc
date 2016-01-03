@@ -131,8 +131,11 @@ set smartcase
 set hidden
 set title
 
+" clear hlsearch
+nmap <leader><space> :nohlsearch<cr>
+
 " toggle hlsearch
-nmap <leader><space> :set invhlsearch<CR>
+nnoremap <leader>/ :set invhlsearch<cr>
 
 " Strip all trailing whitespace from a file, using ,W
 nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
@@ -697,7 +700,7 @@ let &scrolloff=999-&scrolloff
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
 
-map <leader>c :nohlsearch<cr>
+map <leader>c :set cursorline!<cr>
 
 " Numbers {{{
 
@@ -783,10 +786,9 @@ colorscheme monokai2
 noremap & :%sgc<cr>
 
 " always use the command editing window
-" nnoremap / q/i
-" nnoremap ? q?i
+nnoremap / q/i\v
+nnoremap ? q?i\v
 nnoremap : q:i
-nnoremap <leader>/ q/i
 
 " ===============================================================================
 " FUNCTIONS

@@ -131,11 +131,8 @@ set smartcase
 set hidden
 set title
 
-" clear hlsearch
-nmap <leader><space> :nohl<CR>
-
 " toggle hlsearch
-nmap <silent> <leader>/ :set invhlsearch<CR>
+nmap <leader><space> :set invhlsearch<CR>
 
 " Strip all trailing whitespace from a file, using ,W
 nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
@@ -786,9 +783,10 @@ colorscheme monokai2
 noremap & :%sgc<cr>
 
 " always use the command editing window
+" nnoremap / q/i
+" nnoremap ? q?i
 nnoremap : q:i
-nnoremap ? q?i
-nnoremap / q/i
+nnoremap <leader>/ q/i
 
 " ===============================================================================
 " FUNCTIONS

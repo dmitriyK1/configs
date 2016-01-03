@@ -697,7 +697,7 @@ let &scrolloff=999-&scrolloff
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
 
-map <leader>c :set cursorline!<cr>
+map <leader>c :nohlsearch<cr>
 
 " Numbers {{{
 

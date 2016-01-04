@@ -21,6 +21,7 @@ call vundle#begin('$HOME/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 " git plugin
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-surround'
 " autodetect tabs/spaces of buffer
 Plugin 'tpope/vim-sleuth'
@@ -31,10 +32,21 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'tpope/vim-heroku'
-Plugin 'tpope/vim-commentary'
+" Plugin 'tpope/vim-commentary'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-repeat'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'itchyny/lightline.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Raimondi/delimitMate'
+Plugin 'pangloss/vim-javascript'
 " Plugins End
 
+" https://github.com/Valloric/YouCompleteMe
+" https://github.com/SirVer/ultisnips
+" https://github.com/Shutnik/jshint2.vim
+" https://github.com/scrooloose/syntastic
+" http://vimawesome.com
 
 
 call vundle#end()            

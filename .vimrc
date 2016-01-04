@@ -8,6 +8,31 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+"==============================================================
+" VUNDLE CONFIG START 
+"==============================================================
+filetype off                  " required for Vundle
+set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+call vundle#begin('$HOME/vimfiles/bundle/')
+
+
+
+" Plugins Start
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+" Plugins End
+
+
+
+call vundle#end()            
+filetype plugin indent on    
+"==============================================================
+" VUNDLE CONFIG END
+"==============================================================
+
+
+
 runtime macros/matchit.vim
 
 

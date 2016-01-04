@@ -21,6 +21,11 @@ call vundle#begin('$HOME/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-rsi'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
 " Plugins End
 
 
@@ -79,8 +84,9 @@ set browsedir=current
 map <leader>x :Vex<CR>
 
 autocmd FileType netrw setl bufhidden=wipe
-map - :Vex<CR>
-map = <C-l><C-w>o
+"map - :Vex<CR>
+map - :NERDTreeToggle<CR>
+"map = <C-l><C-w>o
 
 " ==============================================================================
 " LET VARIABLES END

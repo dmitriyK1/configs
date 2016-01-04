@@ -19,13 +19,20 @@ call vundle#begin('$HOME/vimfiles/bundle/')
 
 " Plugins Start
 Plugin 'VundleVim/Vundle.vim'
+" git plugin
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+" autodetect tabs/spaces of buffer
 Plugin 'tpope/vim-sleuth'
+" readline keybindings
 Plugin 'tpope/vim-rsi'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'tpope/vim-heroku'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
 " Plugins End
 
 
@@ -176,7 +183,7 @@ noremap <leader>, :update<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map gn :bn<CR>
 map gp :bp<CR>
-map gc :bd<CR>
+" map gc :bd<CR>
 " map gd :bd<CR>
 map <leader>d :bd<CR>
 
@@ -1028,6 +1035,16 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 " -------------------------------------------------------------------------
 "               Source the vimrc file after saving it
 " -------------------------------------------------------------------------
+
+noremap <F3> :Autoformat<CR>
+
+" Or to have your code be formatted upon saving your file, you could use something like this:
+" au BufWrite * :Autoformat
+
+ " To disable the fallback to vim's indent file, set the following variable to be 0.
+let g:autoformat_autoindent = 0
+
+
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif

@@ -8,31 +8,6 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-"==============================================================
-" VUNDLE CONFIG START 
-"==============================================================
-filetype off                  " required for Vundle
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$HOME/vimfiles/bundle/')
-
-
-
-" Plugins Start
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-" Plugins End
-
-
-
-call vundle#end()            
-filetype plugin indent on    
-"==============================================================
-" VUNDLE CONFIG END
-"==============================================================
-
-
-
 runtime macros/matchit.vim
 
 
@@ -1002,23 +977,6 @@ au VimEnter * nested :call LoadSession()
 au VimLeave * :call UpdateSession()
 map <leader>m :call MakeSession()<CR>
 
-" -------------------------------------------------------------------------
- " fugitive git bindings
-nnoremap <leader>ga :Git add %:p<CR><CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit -v -q<CR>
-nnoremap <leader>gt :Gcommit -v -q %:p<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>ge :Gedit<CR>
-nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gw :Gwrite<CR><CR>
-nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <leader>gp :Ggrep<Space>
-nnoremap <leader>gm :Gmove<Space>
-nnoremap <leader>gb :Git branch<Space>
-nnoremap <leader>go :Git checkout<Space>
-nnoremap <leader>gps :Dispatch! git push<CR>
-nnoremap <leader>gpl :Dispatch! git pull<CR>
 " -------------------------------------------------------------------------
 "               Source the vimrc file after saving it
 " -------------------------------------------------------------------------

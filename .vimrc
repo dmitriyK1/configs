@@ -196,7 +196,7 @@ nnoremap <leader>/ :set invhlsearch<cr>
 nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 
 noremap <leader>w :update<CR>
-noremap <leader>, :update<CR>
+" noremap <leader>, :update<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map gn :bn<CR>
 map gp :bp<CR>

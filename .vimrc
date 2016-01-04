@@ -32,14 +32,18 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'tpope/vim-heroku'
-" Plugin 'tpope/vim-commentary'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'easymotion/vim-easymotion'
+" custom status line
 Plugin 'itchyny/lightline.vim'
 Plugin 'airblade/vim-gitgutter'
+" braces auto-closing
 Plugin 'Raimondi/delimitMate'
+" js indentation support
 Plugin 'pangloss/vim-javascript'
+" cycle through yanks (alt-p \ alt-shift-p)
+Plugin 'maxbrunsfeld/vim-yankstack'
 " Plugins End
 
 " https://github.com/Valloric/YouCompleteMe
@@ -47,6 +51,7 @@ Plugin 'pangloss/vim-javascript'
 " https://github.com/Shutnik/jshint2.vim
 " https://github.com/scrooloose/syntastic
 " http://vimawesome.com
+" Plugin 'moll/vim-bbye'
 
 
 call vundle#end()            

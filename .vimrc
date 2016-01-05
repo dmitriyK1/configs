@@ -44,6 +44,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'pangloss/vim-javascript'
 " cycle through yanks (alt-p \ alt-shift-p)
 Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'othree/html5.vim'
 " Plugins End
 
 " https://github.com/Valloric/YouCompleteMe
@@ -196,7 +197,10 @@ nnoremap <leader>/ :set invhlsearch<cr>
 nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 
 noremap <leader>w :update<CR>
-" noremap <leader>, :update<CR>
+noremap <leader>, :update<CR>
+
+map = <Plug>(easymotion-prefix)
+
 nnoremap <F5> :buffers<CR>:buffer<Space>
 map gn :bn<CR>
 map gp :bp<CR>
@@ -1054,6 +1058,7 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 " -------------------------------------------------------------------------
 
 noremap <F3> :Autoformat<CR>
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Or to have your code be formatted upon saving your file, you could use something like this:
 " au BufWrite * :Autoformat

@@ -52,6 +52,7 @@ Plugin 'othree/html5.vim'
 " https://github.com/Shutnik/jshint2.vim
 " https://github.com/scrooloose/syntastic
 " http://vimawesome.com
+" http://spf13.com/post/the-15-best-vim-plugins
 " Plugin 'moll/vim-bbye'
 
 

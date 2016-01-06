@@ -356,8 +356,8 @@ set textwidth=0
 " get rid of the silly characters in separators
 set fillchars = ""
 
-" Add the unnamed register to the clipboard
-set clipboard+=unnamed
+" Copy to system clipboard
+set clipboard^=unnamed,unnamedplus
 
 " Automatically read a file that has changed on disk
 set autoread

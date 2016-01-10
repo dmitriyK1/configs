@@ -1072,5 +1072,6 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 highlight Cursor guifg=white guibg=green

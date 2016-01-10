@@ -45,6 +45,7 @@ Plugin 'pangloss/vim-javascript'
 " cycle through yanks (alt-p \ alt-shift-p)
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'othree/html5.vim'
+Plugin 'tpope/vim-speeddating'
 " Plugins End
 
 " https://github.com/Valloric/YouCompleteMe

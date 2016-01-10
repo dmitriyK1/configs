@@ -37,7 +37,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'easymotion/vim-easymotion'
 " custom status line
 Plugin 'itchyny/lightline.vim'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 " braces auto-closing
 Plugin 'Raimondi/delimitMate'
 " js indentation support

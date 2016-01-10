@@ -389,7 +389,7 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 au FocusLost * silent! wa
-au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
+" au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
 
 set termencoding=utf-8
 set encoding=utf-8 nobomb                   " set default encoding

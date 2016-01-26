@@ -46,6 +46,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-speeddating'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 " Plugins End
 
 " https://github.com/Valloric/YouCompleteMe

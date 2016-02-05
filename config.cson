@@ -1,0 +1,24 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "vim-mode-plus"
+    ]
+    themes: [
+      "seti-ui"
+      "monokai-seti"
+    ]
+  editor:
+    fontSize: 13
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "3dc8480b-07b9-fb50-de7f-99b5c6fc9291"
+  "lazy-motion": {}
+  minimap: {}
+  smalls: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false

@@ -1,5 +1,6 @@
 {
     "default_line_ending": "unix",
+    "always_show_minimap_viewport": true,
     "auto_complete_cycle": true,
     "auto_complete_commit_on_tab": true,
     "auto_complete_delay": 0,

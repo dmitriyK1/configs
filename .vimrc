@@ -193,6 +193,10 @@ set ignorecase
 set smartcase
 set hidden
 set title
+" configure title to look like: Vim /path/to/file
+set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70
+set titleold=""
+execute "set titleold=".hostname()
 
 " clear hlsearch
 nmap <leader><space> :nohlsearch<cr>

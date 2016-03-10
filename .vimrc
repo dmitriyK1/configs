@@ -9,13 +9,33 @@
 set nocompatible
 
 if has("unix")
+  " Do Linux stuff here
+  let s:os    = "unix"
   let s:uname = system("uname")
-
-  set shell=/bin/bash
 
   if s:uname == "Darwin"
     " Do Mac stuff here
   endif
+elseif has("win32") || has("win16")
+  let s:os    = "windows"
+  " Do Windows stuff here
+endif
+
+
+if has("gui_running")
+  " set guifont=Consolas:h10
+  set guifont=Consolas
+  " colorscheme molokai
+  " colorscheme onedark
+  set t_Co=256
+  " colorscheme monokai2
+  set lines=40                " 40 lines of text instead of 24
+
+  set guioptions-=T
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=R
 endif
 
 "==============================================================
@@ -24,8 +44,14 @@ endif
 filetype off                  " required for Vundle
 
 
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$HOME/vimfiles/bundle/')
+if s:os == "unix"
+  set shell=/bin/bash
+  set rtp+=~/.vim/bundle/Vundle.vim/
+  call vundle#begin()
+elseif s:os == "windows"
+  set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+  call vundle#begin('$HOME/vimfiles/bundle/')
+endif
 
 
 
@@ -452,24 +478,6 @@ autocmd BufWrite *.css :call DeleteTrailingWS()
 map <leader>q :e ~/buffer<cr>
 
 "-----------------------------------------------------------------------------
-" Set up the window colors and size
-"-----------------------------------------------------------------------------
-if has("gui_running")
-  " set guifont=Consolas:h10
-  set guifont=Consolas
-  " colorscheme molokai
-  " colorscheme onedark
-  set t_Co=256
-  " colorscheme monokai2
-  set lines=40                " 40 lines of text instead of 24
-
-
-  set guioptions-=T
-  set guioptions-=l
-  set guioptions-=L
-  set guioptions-=r
-  set guioptions-=R
-endif
 
 " When you press gv you vimgrep after the selected text
 vnoremap <silent> gv :call VisualSelection('gv')<CR>

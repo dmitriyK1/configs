@@ -61,6 +61,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular'
 " autodetect tabs/spaces of buffer
 Plugin 'tpope/vim-sleuth'
 " readline keybindings
@@ -105,6 +106,25 @@ filetype plugin indent on
 "==============================================================
 " VUNDLE CONFIG END
 "==============================================================
+
+
+
+
+"==============================================================
+" PLUGIN SETTINGS START
+"==============================================================
+
+" Tabular
+" from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
+nnoremap <leader>a= :Tabularize /=<CR>
+vnoremap <leader>a= :Tabularize /=<CR>
+nnoremap <leader>a: :Tabularize /:<CR>
+vnoremap <leader>a: :Tabularize /:<CR>
+
+"==============================================================
+" PLUGIN SETTINGS END
+"==============================================================
+
 
 
 

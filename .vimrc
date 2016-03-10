@@ -23,11 +23,17 @@ endif
 
 
 if has("gui_running")
-  " set guifont=Consolas:h10
-  set guifont=Consolas
-  " colorscheme molokai
-  " colorscheme onedark
+  if has('win32')
+      set guifont=Consolas:h10   " Win32.
+  elseif has('gui_macvim')
+      set guifont=Monaco:h14     " OSX.
+  else
+      set guifont=Monospace\ 12  " Linux.
+  endif
+
   set t_Co=256
+  " colorscheme onedark
+  " colorscheme molokai
   " colorscheme monokai2
   set lines=40                " 40 lines of text instead of 24
 
@@ -37,6 +43,8 @@ if has("gui_running")
   set guioptions-=r
   set guioptions-=R
 endif
+
+
 
 "==============================================================
 " VUNDLE CONFIG START 

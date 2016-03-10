@@ -171,6 +171,8 @@ map <leader>; :%s:\v::cg<Left><Left><Left><Left>
  " make regexp search not suck by default
 nnoremap / /\v
 vnoremap / /\v
+" copy
+vnoremap <C-c> "*y
 
 map gi gi<Esc>
 
@@ -316,6 +318,7 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+nnoremap L $
 
 " -------------------------------------------------------------------------
 "               Prevent cursor from moving when leaving insert mode
@@ -384,6 +387,27 @@ augroup cline
     "au InsertLeave * set cursorline
 augroup END
 " }}}
+
+augroup file_types
+    autocmd!
+    autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
+    autocmd BufRead,BufNewFile *.md set filetype=markdown
+    autocmd BufRead,BufNewFile *.txt set filetype=markdown
+    autocmd BufRead,BufNewFile *.module set filetype=php
+    autocmd BufRead,BufNewFile *.install set filetype=php
+    autocmd BufRead,BufNewFile *.test set filetype=php
+    autocmd BufRead,BufNewFile *.inc set filetype=php
+    autocmd BufRead,BufNewFile *.profile set filetype=php
+    autocmd BufRead,BufNewFile *.view set filetype=php
+    autocmd BufNewFile,BufRead *.less set filetype=less
+    autocmd BufRead,BufNewFile *.js set ft=javascript syntax=javascript
+    autocmd BufRead,BufNewFile *.ts set ft=typescript syntax=typescript
+    autocmd BufRead,BufNewFile *.es6 set ft=javascript syntax=javascript
+    autocmd BufRead,BufNewFile *.json set ft=json syntax=javascript
+    autocmd BufRead,BufNewFile *.twig set ft=htmldjango
+    autocmd BufRead,BufNewFile *.rabl set ft=ruby
+    autocmd BufRead,BufNewFile *.jade set ft=jade
+augroup END
 
 
 set wrapscan

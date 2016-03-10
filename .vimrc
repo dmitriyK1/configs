@@ -8,10 +8,22 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+if has("unix")
+  let s:uname = system("uname")
+
+  set shell=/bin/bash
+
+  if s:uname == "Darwin"
+    " Do Mac stuff here
+  endif
+endif
+
 "==============================================================
 " VUNDLE CONFIG START 
 "==============================================================
 filetype off                  " required for Vundle
+
+
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$HOME/vimfiles/bundle/')
 
@@ -443,7 +455,8 @@ map <leader>q :e ~/buffer<cr>
 " Set up the window colors and size
 "-----------------------------------------------------------------------------
 if has("gui_running")
-  set guifont=Consolas:h10
+  " set guifont=Consolas:h10
+  set guifont=Consolas
   " colorscheme molokai
   " colorscheme onedark
   set t_Co=256

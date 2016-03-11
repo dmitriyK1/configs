@@ -302,7 +302,6 @@ set formatoptions+=cqron1                   " Some useful formatting options
 
 nmap <leader>l :set list!<CR>
 
-" highlight last pasted text
 nmap vv ggVG
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.

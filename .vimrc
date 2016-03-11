@@ -118,23 +118,6 @@ filetype plugin indent on
 
 
 
-"==============================================================
-" PLUGIN SETTINGS START
-"==============================================================
-
-" Tabular
-" from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
-nnoremap <leader>a= :Tabularize /=<CR>
-vnoremap <leader>a= :Tabularize /=<CR>
-nnoremap <leader>a: :Tabularize /:<CR>
-vnoremap <leader>a: :Tabularize /:<CR>
-nnoremap <leader>a- :Tabularize /-<CR>
-vnoremap <leader>a- :Tabularize /-<CR>
-
-"==============================================================
-" PLUGIN SETTINGS END
-"==============================================================
-
 
 
 
@@ -1161,3 +1144,20 @@ endif
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 highlight Cursor guifg=white guibg=green
+
+"==============================================================
+" PLUGIN SETTINGS START
+"==============================================================
+
+" Tabular
+" from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
+nnoremap <leader>a= :Tabularize /=<CR>
+vnoremap <leader>a= :Tabularize /=<CR>
+nnoremap <leader>a: :Tabularize /:<CR>
+vnoremap <leader>a: :Tabularize /:<CR>
+nnoremap <leader>a- :Tabularize /-<CR>
+vnoremap <leader>a- :Tabularize /-<CR>
+
+"==============================================================
+" PLUGIN SETTINGS END
+"==============================================================

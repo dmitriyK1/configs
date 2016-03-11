@@ -11,9 +11,8 @@ set nocompatible
 if has("unix")
   " Do Linux stuff here
   let s:os    = "unix"
-  let s:uname = system("uname")
 
-  if s:uname == "Darwin"
+  if has("mac")
     " Do Mac stuff here
   endif
 elseif has("win32") || has("win16")
@@ -203,6 +202,9 @@ set modelines=0
 
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 
+if exists('+macmeta')
+  set macmeta
+endif
 
 set ttyfast
 

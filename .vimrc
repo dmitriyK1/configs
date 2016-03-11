@@ -3,8 +3,15 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gi        go to last position of insert mode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                            Nice configs list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/tpope/tpope/blob/master/.vimrc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
- " Use vim settings, rather then vi settings (much better!)
+
+" Use vim settings, rather then vi settings (much better!)
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
@@ -12,12 +19,18 @@ if has("unix")
   " Do Linux stuff here
   let s:os    = "unix"
 
-  if has("mac")
+  if has("mac") || has("macunix")
     " Do Mac stuff here
   endif
-elseif has("win32") || has("win16")
+elseif has("win32") || has("win16") || has("win64")
   let s:os    = "windows"
   " Do Windows stuff here
+  if has("win32unix")
+    " Cygwin
+    set shell=bash
+    set shellpipe=2>&1\|tee
+    set shellslash
+  endif
 endif
 
 

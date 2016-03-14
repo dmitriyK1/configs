@@ -99,10 +99,8 @@ shopt -s nocaseglob                 # pathname expansion will be treated as case
 shopt -s sourcepath
 
 # COMPLETION {{{
-complete -cf sudo
-if [[ -f /etc/bash_completion ]]; then
-    ./etc/bash_completion
-fi
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 #}}}
 
 export EDITOR="vim"
@@ -167,4 +165,5 @@ PS1="\n\[\e[32;1m\](\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else ech
 
 LS_COLORS="$LS_COLORS:di=00;33"
 
-
+setxkbmap -option ctrl:swapcaps 
+source /usr/share/autojump/autojump.sh

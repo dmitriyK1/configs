@@ -6,3 +6,8 @@ nmap gc :close<cr>
 set ignorecase
 set smartcase
 set hlsearch
+set showmode
+set incsearch
+set wrapscan
+set number
+" set relativenumber

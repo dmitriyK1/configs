@@ -3,3 +3,6 @@ imap JJ <Esc>
 imap оо <Esc>
 nmap vv ggVG
 nmap gc :close<cr>
+set ignorecase
+set smartcase
+set hlsearch

@@ -922,7 +922,8 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 "set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait200-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175,v:block-Cursor-blinkon0 
 
-colorscheme monokai2
+" from http://ku1ik.com/
+colorscheme monokai-new
 
 " repeat last search and replace operation with confirmation
 " TODO: currently replaces only first occurence on each line

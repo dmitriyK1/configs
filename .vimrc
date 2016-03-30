@@ -2,6 +2,7 @@
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gi        go to last position of insert mode
+" @:        repeat last colon command
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1176,3 +1177,6 @@ vnoremap <leader>a- :Tabularize /-<CR>
 "==============================================================
 " PLUGIN SETTINGS END
 "==============================================================
+
+" Disable auto comments on a next line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

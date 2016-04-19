@@ -111,6 +111,7 @@ Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'maksimr/vim-jsbeautify'
 " Plugins End
 
 " https://github.com/Valloric/YouCompleteMe
@@ -1182,3 +1183,10 @@ vnoremap <leader>a- :Tabularize /-<CR>
 
 " Disable auto comments on a next line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+
+autocmd FileType javascript vnoremap <buffer>  <c-f> : call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <c-f>        : call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <c-f>         : call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f>        : call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<cr>

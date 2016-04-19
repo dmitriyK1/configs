@@ -1143,21 +1143,23 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 "               Source the vimrc file after saving it
 " -------------------------------------------------------------------------
 
-noremap <F3> :Autoformat<CR>
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
+
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+
+noremap <F3> :Autoformat<CR>
 " Or to have your code be formatted upon saving your file, you could use something like this:
 " au BufWrite * :Autoformat
 
  " To disable the fallback to vim's indent file, set the following variable to be 0.
 let g:autoformat_autoindent = 0
 
-
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
-
-autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_install_global = 0
+let g:user_emmet_expandabbr_key = '<tab>'
 
 highlight Cursor guifg=white guibg=green
 

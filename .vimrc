@@ -3,6 +3,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gi        go to last position of insert mode
 " @:        repeat last colon command
+" :CoffeeMake \ :make
+" :CoffeeWatch [vert[ical]] [WINDOW-SIZE]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1190,3 +1192,7 @@ autocmd FileType json vnoremap <buffer> <c-f>        : call RangeJsonBeautify()<
 autocmd FileType jsx vnoremap <buffer> <c-f>         : call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f>        : call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<cr>
+
+" show quickfix window on compile errors
+autocmd QuickFixCmdPost * nested cwindow | redraw!
+

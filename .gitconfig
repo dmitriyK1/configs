@@ -306,3 +306,7 @@
     insteadOf = gist:
 [mergetool]
 	keepBackup = false
+#[credential]
+#      helper = wincred
+[branch]
+	autosetuprebase = always

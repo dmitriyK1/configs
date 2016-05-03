@@ -97,6 +97,7 @@ Plugin 'tpope/vim-heroku'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-scripts/occur.vim'
 " custom status line
 Plugin 'itchyny/lightline.vim'
 " Plugin 'airblade/vim-gitgutter'

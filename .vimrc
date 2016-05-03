@@ -5,6 +5,9 @@
 " @:        repeat last colon command
 " :CoffeeMake \ :make
 " :CoffeeWatch [vert[ical]] [WINDOW-SIZE]
+" <Leader>oc   - Occur (Search current buffer) 
+" <Leader>mo   - Moccur (Search all buffers)
+" <Leader>*    - StarOccur (Search all buffers for occurrence of the word nearest to the cursor)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

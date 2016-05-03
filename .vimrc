@@ -105,6 +105,7 @@ Plugin 'Raimondi/delimitMate'
 " js indentation support
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'Olical/vim-syntax-expand'
 " cycle through yanks (alt-p \ alt-shift-p)
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'othree/html5.vim'
@@ -1223,3 +1224,7 @@ let g:javascript_conceal_prototype = "#"
 
 hi Conceal guibg=black guifg=red
 
+" Map the conceal characters to their expanded forms.
+inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
+inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>

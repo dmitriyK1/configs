@@ -1226,10 +1226,11 @@ let g:javascript_conceal_static         = "•"
 let g:javascript_conceal_super          = "Ω"
 let g:javascript_conceal_arrow_function = "⇒"
 
-let g:javascript_conceal_function = "λ"
-let g:javascript_conceal_this = "@"
-let g:javascript_conceal_return = "<"
-let g:javascript_conceal_prototype = "#"
+let g:javascript_conceal_function       = "λ"
+let g:javascript_conceal_this           = "@"
+let g:javascript_conceal_return         = "<"
+let g:javascript_conceal_prototype      = "#"
+let g:javascript_conceal_infinity       = "∞"
 
 hi Conceal guibg=black guifg=red
 

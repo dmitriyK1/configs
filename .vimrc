@@ -104,6 +104,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'Raimondi/delimitMate'
 " js indentation support
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " cycle through yanks (alt-p \ alt-shift-p)
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'othree/html5.vim'
@@ -1196,3 +1197,4 @@ autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<c
 " show quickfix window on compile errors
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 
+let g:jsx_ext_required = 0

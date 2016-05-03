@@ -928,7 +928,9 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait200-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175,v:block-Cursor-blinkon0 
 
 " from http://ku1ik.com/
-colorscheme monokai2
+" colorscheme monokai2
+colorscheme molokai
+
 
 " repeat last search and replace operation with confirmation
 " TODO: currently replaces only first occurence on each line
@@ -1198,3 +1200,26 @@ autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<c
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 
 let g:jsx_ext_required = 0
+let g:javascript_enable_domhtmlcss = 1
+
+set conceallevel=1
+set concealcursor=nvic
+
+" let g:javascript_conceal_function       = "ƒ"
+" let g:javascript_conceal_this           = "@"
+" let g:javascript_conceal_return         = "⇚"
+" let g:javascript_conceal_prototype      = "¶"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_undefined      = "¿"
+let g:javascript_conceal_NaN            = "ℕ"
+let g:javascript_conceal_static         = "•"
+let g:javascript_conceal_super          = "Ω"
+let g:javascript_conceal_arrow_function = "⇒"
+
+let g:javascript_conceal_function = "λ"
+let g:javascript_conceal_this = "@"
+let g:javascript_conceal_return = "<"
+let g:javascript_conceal_prototype = "#"
+
+hi Conceal guibg=black guifg=red
+

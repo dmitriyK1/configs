@@ -942,10 +942,19 @@ nnoremap / q/i\v
 nnoremap ? q?i\v
 nnoremap : q:i
 
+map <silent> <leader>t :call ConcealToggle()<CR>
+
 " ===============================================================================
 " FUNCTIONS
 " ===============================================================================
 
+function! ConcealToggle()
+    if &conceallevel == 0
+        setlocal conceallevel=1
+    else
+        setlocal conceallevel=0
+    endif
+endfunction
 
 function! <SID>saveUndoHistory(cmdline, cmdpos)
     if len(s:oldcmdline) == 0 || a:cmdline != s:oldcmdline[0][0]

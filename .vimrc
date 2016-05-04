@@ -131,6 +131,7 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'maksimr/vim-jsbeautify'
+Plugin 'kien/rainbow_parentheses.vim'
 " Plugins End
 
 " https://github.com/Valloric/YouCompleteMe
@@ -140,7 +141,7 @@ Plugin 'maksimr/vim-jsbeautify'
 " http://vimawesome.com
 " http://spf13.com/post/the-15-best-vim-plugins
 " Plugin 'moll/vim-bbye'
-
+" https://github.com/tpope/vim-dispatch
 
 call vundle#end()            
 filetype plugin indent on    
@@ -1253,3 +1254,38 @@ hi Conceal guibg=black guifg=red
 inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
 inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
 inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+
+" ================================================================================
+" Rainbox parentheses options start
+" ================================================================================
+
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" ================================================================================
+" Rainbox parentheses options end
+" ================================================================================

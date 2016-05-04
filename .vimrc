@@ -16,6 +16,8 @@
 "
 " :grep <patter> <file name pattern>         
 " example: :grep colorscheme %          (search in current file)
+
+" :Ack <pattern> <file>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,6 +111,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-scripts/occur.vim'
+Plugin 'mileszs/ack.vim'
 " custom status line
 Plugin 'itchyny/lightline.vim'
 " Plugin 'airblade/vim-gitgutter'

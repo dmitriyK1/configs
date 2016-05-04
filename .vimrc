@@ -1289,3 +1289,7 @@ au Syntax * RainbowParenthesesLoadBraces
 " ================================================================================
 " Rainbox parentheses options end
 " ================================================================================
+
+" add a new line when auto braces {} inserted
+imap <C-c> <CR><Esc>O
+

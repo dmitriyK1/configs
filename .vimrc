@@ -98,6 +98,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'helino/vim-json'
+" show git diff via sign column
+" Plugin 'mhinz/vim-signify'
 " autodetect tabs/spaces of buffer
 Plugin 'tpope/vim-sleuth'
 " readline keybindings
@@ -131,13 +135,13 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'maksimr/vim-jsbeautify'
-Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
+" https://github.com/scrooloose/syntastic      // slow
 " Plugins End
 
 " https://github.com/Valloric/YouCompleteMe
 " https://github.com/SirVer/ultisnips
 " https://github.com/Shutnik/jshint2.vim
-" https://github.com/scrooloose/syntastic
 " http://vimawesome.com
 " http://spf13.com/post/the-15-best-vim-plugins
 " Plugin 'moll/vim-bbye'
@@ -161,6 +165,9 @@ runtime macros/matchit.vim
 " ==============================================================================
 " LET VARIABLES START
 " ==============================================================================
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
+
 let s:oldcmdline = [ ]
 let mapleader=","
 
@@ -931,7 +938,10 @@ nmap ,del :g/^$/d<cr>
 " TODO: fix visual selection not showing up instantly
 
 " This mapping will change the behavior of the <Enter> key when the popup menu is visible. In that case the Enter key will simply select the highlighted menu item, just as <C-Y> does.
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <CR> pumvisible() ? '\<C-y>' : '\<C-g>u\<CR>'
+
+" TODO: make it work
+" inoremap <expr> <CR> pumvisible() ? '\<C-y>' : '<Plug>delimitMateCR'
 
 "  What this accomplishes is it keeps a menu item always highlighted. This way you can keep typing characters to narrow the matches
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
@@ -1228,8 +1238,8 @@ autocmd QuickFixCmdPost * nested cwindow | redraw!
 let g:jsx_ext_required = 0
 let g:javascript_enable_domhtmlcss = 1
 
-set conceallevel=1
-set concealcursor=nvic
+set conceallevel  = 1
+set concealcursor = nvic
 
 " let g:javascript_conceal_function       = "ƒ"
 " let g:javascript_conceal_this           = "@"
@@ -1256,40 +1266,38 @@ inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
 inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
 
 " ================================================================================
-" Rainbox parentheses options start
+" Rainbow parentheses options start
 " ================================================================================
 
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" let g:rbpt_colorpairs = [
+"     \ ['brown',       'RoyalBlue3'],
+"     \ ['Darkblue',    'SeaGreen3'],
+"     \ ['darkgray',    'DarkOrchid3'],
+"     \ ['darkgreen',   'firebrick3'],
+"     \ ['darkcyan',    'RoyalBlue3'],
+"     \ ['darkred',     'SeaGreen3'],
+"     \ ['darkmagenta', 'DarkOrchid3'],
+"     \ ['brown',       'firebrick3'],
+"     \ ['gray',        'RoyalBlue3'],
+"     \ ['black',       'SeaGreen3'],
+"     \ ['darkmagenta', 'DarkOrchid3'],
+"     \ ['Darkblue',    'firebrick3'],
+"     \ ['darkgreen',   'RoyalBlue3'],
+"     \ ['darkcyan',    'SeaGreen3'],
+"     \ ['darkred',     'DarkOrchid3'],
+"     \ ['red',         'firebrick3'],
+"     \ ]
+"
+" let g:rbpt_max = 16
+" let g:rbpt_loadcmd_toggle = 0
+"
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
 
 " ================================================================================
-" Rainbox parentheses options end
+" Rainbow parentheses options end
 " ================================================================================
 
-" add a new line when auto braces {} inserted
-imap <C-c> <CR><Esc>O
 

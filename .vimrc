@@ -122,8 +122,7 @@ Plugin 'itchyny/lightline.vim'
 " braces auto-closing
 Plugin 'Raimondi/delimitMate'
 " js indentation support
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'Olical/vim-syntax-expand'
 " cycle through yanks (alt-p \ alt-shift-p)
 Plugin 'maxbrunsfeld/vim-yankstack'

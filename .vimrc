@@ -1237,8 +1237,8 @@ autocmd QuickFixCmdPost * nested cwindow | redraw!
 let g:jsx_ext_required = 0
 let g:javascript_enable_domhtmlcss = 1
 
-set conceallevel  = 1
-set concealcursor = nvic
+set conceallevel=1
+set concealcursor=nvic
 
 " let g:javascript_conceal_function       = "ƒ"
 " let g:javascript_conceal_this           = "@"

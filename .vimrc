@@ -99,7 +99,6 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'helino/vim-json'
 " show git diff via sign column
 " Plugin 'mhinz/vim-signify'
 " autodetect tabs/spaces of buffer
@@ -126,13 +125,10 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'Olical/vim-syntax-expand'
 " cycle through yanks (alt-p \ alt-shift-p)
 Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-speeddating'
 Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'maksimr/vim-jsbeautify'
 " Plugin 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 " https://github.com/scrooloose/syntastic      // slow

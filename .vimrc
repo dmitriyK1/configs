@@ -1,6 +1,10 @@
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" gu        lowercase selection
+" gU        uppercase selection
+" g~ / ~    invert case of selection
+
 " gi        go to last position of insert mode
 " @:        repeat last colon command
 " :CoffeeMake \ :make

@@ -1308,3 +1308,7 @@ let g:jsdoc_return_description=0
 let g:jsdoc_enable_es6=1
 
 nmap <C-k> A, <Esc>
+nmap <C-k> A, <Esc>
+
+nmap <silent> dJ VGx
+nmap <silent> dK Vggx

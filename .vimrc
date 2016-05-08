@@ -1317,3 +1317,5 @@ nmap <C-k> A, <Esc>
 
 nmap <silent> dJ VGx
 nmap <silent> dK Vggx
+
+map <silent> <leader>G :GundoToggle<CR>

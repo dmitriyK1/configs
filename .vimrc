@@ -1,6 +1,9 @@
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" earlier 5m
+" later 1m
+
 " gu        lowercase selection
 " gU        uppercase selection
 " g~ / ~    invert case of selection

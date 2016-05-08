@@ -3,6 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " earlier 5m
 " later 1m
+" U         undo a change on one line
 
 " gu        lowercase selection
 " gU        uppercase selection
@@ -106,6 +107,7 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'sjl/gundo.vim'
 " show git diff via sign column
 " Plugin 'mhinz/vim-signify'
 " autodetect tabs/spaces of buffer

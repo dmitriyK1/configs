@@ -1315,7 +1315,7 @@ let g:jsdoc_enable_es6=1
 nmap <C-k> A, <Esc>
 nmap <C-k> A, <Esc>
 
-nmap <silent> dJ VGx
-nmap <silent> dK Vggx
+nmap <silent> dJ dG
+nmap <silent> dK dgg
 
 map <silent> <leader>G :GundoToggle<CR>

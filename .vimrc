@@ -261,7 +261,6 @@ set background=dark
 
 filetype plugin indent on
 syntax on
-nmap <Space> :
 set wildchar=<Tab> wildmenu
 set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
 set wildcharm=<C-Z>
@@ -973,7 +972,8 @@ noremap & :%sgc<cr>
 " always use the command editing window
 nnoremap / q/i\v
 nnoremap ? q?i\v
-nnoremap : q:i
+nnoremap <Space> q:i
+nnoremap <silent> <leader>: q:
 
 map <silent> <leader>t :call ConcealToggle()<CR>
 

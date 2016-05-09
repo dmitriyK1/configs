@@ -60,7 +60,8 @@ endif
 
 if has("gui_running")
   if has('win32')
-      set guifont=Consolas:h10   " Win32.
+      " set guifont=Consolas:h10   " Win32.
+      set guifont=DejaVu\ Sans\ Mono:h11   " Win32.
   elseif has('gui_macvim')
       set guifont=Monaco:h14     " OSX.
   else
@@ -1248,7 +1249,6 @@ set conceallevel=1
 set concealcursor=nvic
 
 " let g:javascript_conceal_function       = "ƒ"
-" let g:javascript_conceal_this           = "@"
 " let g:javascript_conceal_return         = "⇚"
 " let g:javascript_conceal_prototype      = "¶"
 let g:javascript_conceal_null           = "ø"

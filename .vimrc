@@ -284,7 +284,7 @@ set sidescrolloff=3
 set noerrorbells
 set printoptions=paper:letter
 nnoremap <F10> :b <C-Z>
-nmap ! :!
+map ! q:i!
 set number
 set relativenumber
 set wildmenu

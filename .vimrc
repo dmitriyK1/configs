@@ -1306,14 +1306,16 @@ inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
 " Rainbow parentheses options end
 " ================================================================================
 
-nmap <silent> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
+" REMAP NEEDED
+" nmap <silent> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
 
 let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_return_description=0
 let g:jsdoc_enable_es6=1
 
-nmap <C-k> A, <Esc>
-nmap <C-k> A, <Esc>
+" REMAP NEEDED
+" add a comma
+" nmap <C-k> A, <Esc>
 
 nmap <silent> dJ dG
 nmap <silent> dK dgg

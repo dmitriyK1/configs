@@ -26,6 +26,10 @@
 " example: :grep colorscheme %          (search in current file)
 
 " :Ack <pattern> <file>
+
+" Ctrl-P
+" Press <c-f> and <c-b> to cycle between modes.
+" Use <c-j>, <c-k> or the arrow keys to navigate the result list.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1325,4 +1329,5 @@ nmap <silent> dK dgg
 
 map <silent> <leader>G :GundoToggle<CR>
 
-map <leader>t :browse oldfiles!<CR>
+" map <leader>t :browse oldfiles!<CR>
+map <leader>t :CtrlPMRUFiles<CR>

@@ -1330,4 +1330,4 @@ nmap <silent> dK dgg
 map <silent> <leader>G :GundoToggle<CR>
 
 " map <leader>t :browse oldfiles!<CR>
-map <leader>t :CtrlPMRUFiles<CR>
+map <leader>r :CtrlPMRUFiles<CR>

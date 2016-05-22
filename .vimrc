@@ -961,8 +961,8 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait200-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175,v:block-Cursor-blinkon0 
 
 " from http://ku1ik.com/
-" colorscheme monokai2
-colorscheme molokai
+colorscheme monokai2
+" colorscheme molokai
 
 
 " repeat last search and replace operation with confirmation
@@ -1270,9 +1270,9 @@ let g:javascript_conceal_infinity       = "∞"
 hi Conceal guibg=black guifg=red
 
 " Map the conceal characters to their expanded forms.
-inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
-inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
-inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+" inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+" inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
+" inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
 
 " ================================================================================
 " Rainbow parentheses options start
@@ -1324,3 +1324,5 @@ nmap <silent> dJ dG
 nmap <silent> dK dgg
 
 map <silent> <leader>G :GundoToggle<CR>
+
+map <leader>t :browse oldfiles!<CR>

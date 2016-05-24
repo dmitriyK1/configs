@@ -1331,3 +1331,5 @@ map <silent> <leader>G :GundoToggle<CR>
 
 " map <leader>t :browse oldfiles!<CR>
 map <silent> <leader>r :CtrlPMRUFiles<CR>
+
+set infercase

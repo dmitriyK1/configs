@@ -1332,4 +1332,9 @@ map <silent> <leader>G :GundoToggle<CR>
 " map <leader>t :browse oldfiles!<CR>
 map <silent> <leader>r :CtrlPMRUFiles<CR>
 
+" for case-insensetive autocomplete
 set infercase
+
+if exists("&wildignorecase")
+    set wildignorecase
+endif

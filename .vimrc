@@ -113,6 +113,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'sjl/gundo.vim'
+Plugin 'statianzo/vim-jade'
 " show git diff via sign column
 " Plugin 'mhinz/vim-signify'
 " autodetect tabs/spaces of buffer

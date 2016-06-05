@@ -37,6 +37,10 @@
 " :Wopen http://vim.org
 " :Wsearch google how to learn vim
 " <leader>ws searches WORD under cursor, while the same mapping in visual mode searches current visual selection
+
+" https://github.com/tpope/vim-surround
+" ysiw (     // surround an inner word with ()
+" yss (      // surround a line with ()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

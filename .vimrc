@@ -30,12 +30,20 @@
 " Ctrl-P
 " Press <c-f> and <c-b> to cycle between modes.
 " Use <c-j>, <c-k> or the arrow keys to navigate the result list.
+
+" Open man page for word under cursor
+" SHIFT+k
+
+" :Wopen http://vim.org
+" :Wsearch google how to learn vim
+" <leader>ws searches WORD under cursor, while the same mapping in visual mode searches current visual selection
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Nice configs list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://github.com/tpope/tpope/blob/master/.vimrc
+" https://github.com/paulirish/dotfiles/blob/master/.vimrc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -146,6 +154,8 @@ Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'heavenshell/vim-jsdoc'
+Plugin 'waiting-for-dev/vim-www'
+Plugin 'ervandew/supertab'
 
 " Plugin 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 " https://github.com/scrooloose/syntastic      // slow
@@ -217,6 +227,9 @@ let g:netrw_liststyle=0
 
 set browsedir=current
 
+set noshowmode    " Don't show the current mode (airline.vim takes care of us)
+set nostartofline " Don't reset cursor to start of line when moving around
+
 map <leader>x :Vex<CR>
 
 autocmd FileType netrw setl bufhidden=wipe
@@ -278,9 +291,6 @@ set undolevels=1000      " use many muchos levels of undo
 " set and lazyredraw is set then it's slow as molasses, so we unset this
 set showcmd
 
-" Show the current mode
-set showmode
-
 " Hide the mouse pointer while typing
 set mousehide
 
@@ -326,6 +336,10 @@ map gp :bp<CR>
 " map gc :bd<CR>
 " map gd :bd<CR>
 map <leader>d :bd<CR>
+map <leader>bd :Bclose<cr>:tabclose<cr>gT
+
+" Close all the buffers
+map <leader>ba :bufdo bd<cr>
 
 " set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,nbsp:. " Highlight problematic whitespace
@@ -501,8 +515,7 @@ set clipboard^=unnamed,unnamedplus
 " Automatically read a file that has changed on disk
 set autoread
 
-" Syntax coloring lines that are too long just slows down the world
-set synmaxcol=2048
+set synmaxcol=1000  " don't syntax-highlight long lines (default: 3000)
 
 set pastetoggle=<F2>
 
@@ -777,6 +790,7 @@ nmap <M-.> :bn<cr>
 
 " set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize,globals,localoptions,tabpages
+set sessionoptions+=unix,slash " for unix/windows compatibility
 
 
 "Bubble single lines
@@ -816,10 +830,13 @@ nnoremap <c-o> <c-o>zz
 set wildignore+=.hg,.git,.svn                    " Version control
 set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+set wildignore+=*.psd,*.min.js
 set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
 set wildignore+=*.spl                            " compiled spelling word lists
 set wildignore+=*.sw?                            " Vim swap files
 set wildignore+=*.DS_Store                       " OSX bullshit
+set wildignore+=*/bower_components/*,*/node_modules/*
+set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
 
 set wildignore+=*.luac                           " Lua byte code
 
@@ -1233,6 +1250,8 @@ vnoremap <leader>a> :Tabularize /><CR>
 vnoremap <leader>a[ :Tabularize /[<CR>
 vnoremap <leader>a{ :Tabularize /{<CR>
 vnoremap <leader>a( :Tabularize /(<CR>
+vnoremap <leader>a" :Tabularize /"<CR>
+vnoremap <leader>a' :Tabularize /'<CR>
 "==============================================================
 " PLUGIN SETTINGS END
 "==============================================================
@@ -1339,3 +1358,15 @@ set infercase
 if exists("&wildignorecase")
     set wildignorecase
 endif
+
+set report=0       " Show all changes
+set regexpengine=1 " Use the old regular expression engine (it's faster for certain language syntaxes)
+" set showtabline=2  " Always show tab bar
+
+set suffixes=.bak,~,.swp,.swo,.o,.d,.info,.aux,.log,.dvi,.pdf,.bin,.bbl,.blg,.brf,.cb,.dmg,.exe,.ind,.idx,.ilg,.inx,.out,.toc,.pyc,.pyd,.dll
+
+set noequalalways " do not auto-resize windows when opening/closing them!
+set confirm       " ask for confirmation by default (instead of silently failing)
+
+let g:www_default_search_engine = 'google'
+

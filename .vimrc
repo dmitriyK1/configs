@@ -1232,9 +1232,9 @@ noremap <F3> :Autoformat<CR>
  " To disable the fallback to vim's indent file, set the following variable to be 0.
 let g:autoformat_autoindent = 0
 
-autocmd FileType html,css EmmetInstall
-let g:user_emmet_install_global = 0
-let g:user_emmet_expandabbr_key = '<tab>'
+" autocmd FileType html,css EmmetInstall
+" let g:user_emmet_install_global = 0
+" let g:user_emmet_expandabbr_key = '<tab>'
 
 highlight Cursor guifg=white guibg=green
 

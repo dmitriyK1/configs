@@ -126,6 +126,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'sjl/gundo.vim'
+Plugin 'frace/vim-bubbles'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'statianzo/vim-jade'
 Plugin 'vim-scripts/indentpython.vim'
@@ -806,14 +807,10 @@ set sessionoptions+=unix,slash " for unix/windows compatibility
 "Bubble single lines
 nmap <C-Up> ddkP
 nmap <C-Down> ddp
-nmap <M-j> ddp
-nmap <M-k> ddkP
 
 "Bubble multiple lines
 vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
-vmap <M-j> xp`[V`]
-vmap <M-k> xkP`[V`]
 
 " Prevent cursor jumps while joining lines
 nnoremap J mzJ`z
@@ -1397,4 +1394,7 @@ let g:ctrlp_map = '<c-t>'
 autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 
+" in case of glitches
+" au BufWriteCmd *.py write || :PymodeLint
 
+let g:bubbles_leader = '<M>'

@@ -77,7 +77,8 @@ endif
 if has("gui_running")
   if has('win32')
       " set guifont=Consolas:h10   " Win32.
-      set guifont=DejaVu\ Sans\ Mono:h11   " Win32.
+      " set guifont=DejaVu\ Sans\ Mono:h11   " Win32.
+      set guifont=Source\ Code\ Pro:h11   " Win32.
   elseif has('gui_macvim')
       set guifont=Monaco:h14     " OSX.
   else

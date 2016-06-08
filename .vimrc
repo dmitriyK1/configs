@@ -125,15 +125,19 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'sjl/gundo.vim'
+Plugin 'tmhedberg/SimpylFold'
 Plugin 'statianzo/vim-jade'
+Plugin 'vim-scripts/indentpython.vim'
 " show git diff via sign column
 " Plugin 'mhinz/vim-signify'
 " autodetect tabs/spaces of buffer
 Plugin 'tpope/vim-sleuth'
+Plugin 'klen/python-mode'
 " readline keybindings
 Plugin 'tpope/vim-rsi'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mattn/emmet-vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'tpope/vim-heroku'
@@ -398,6 +402,7 @@ set foldlevelstart=10
 set foldnestmax=10
 " nnoremap <space> za
 set foldmethod=indent
+set foldlevel=99
 
 nnoremap j gj
 nnoremap k gk
@@ -1374,3 +1379,10 @@ set confirm       " ask for confirmation by default (instead of silently failing
 
 let g:www_default_search_engine = 'google'
 
+let g:SimpylFold_docstring_preview=1
+
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" enable all Python syntax highlighting features
+let python_highlight_all = 1

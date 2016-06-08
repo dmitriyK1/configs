@@ -1,4 +1,4 @@
- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " earlier 5m
@@ -58,6 +58,7 @@ set nocompatible
 if has("unix")
   " Do Linux stuff here
   let s:os    = "unix"
+  set shell=/bin/bash
 
   if has("mac") || has("macunix")
     " Do Mac stuff here
@@ -101,95 +102,75 @@ endif
 
 
 "==============================================================
-" VUNDLE CONFIG START 
+" PLUGINS CONFIG START 
 "==============================================================
-filetype off                  " required for Vundle
 
+call plug#begin()
 
-if s:os == "unix"
-  set shell=/bin/bash
-  set rtp+=~/.vim/bundle/Vundle.vim/
-  call vundle#begin()
-elseif s:os == "windows"
-  set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-  call vundle#begin('$HOME/vimfiles/bundle/')
-endif
-
-
-
-" Plugins Start
-Plugin 'VundleVim/Vundle.vim'
 " git plugin
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-surround'
-Plugin 'godlygeek/tabular'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'sjl/gundo.vim'
-Plugin 'frace/vim-bubbles'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'statianzo/vim-jade'
-Plugin 'vim-scripts/indentpython.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
+Plug 'sjl/gundo.vim'
+Plug 'frace/vim-bubbles'
+Plug 'tmhedberg/SimpylFold'
+Plug 'statianzo/vim-jade'
+Plug 'vim-scripts/indentpython.vim'
 " show git diff via sign column
-" Plugin 'mhinz/vim-signify'
+" Plug 'mhinz/vim-signify'
 " autodetect tabs/spaces of buffer
-Plugin 'tpope/vim-sleuth'
-Plugin 'klen/python-mode'
+Plug 'tpope/vim-sleuth'
+Plug 'klen/python-mode'
 " readline keybindings
-Plugin 'tpope/vim-rsi'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'mattn/emmet-vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'tpope/vim-heroku'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'vim-scripts/occur.vim'
-Plugin 'mileszs/ack.vim'
+Plug 'tpope/vim-rsi'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'mattn/emmet-vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'tpope/vim-heroku'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-repeat'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-scripts/occur.vim'
+Plug 'mileszs/ack.vim'
 " custom status line
-Plugin 'itchyny/lightline.vim'
-" Plugin 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
+" Plug 'airblade/vim-gitgutter'
 " braces auto-closing
-Plugin 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 " js indentation support
-Plugin 'sheerun/vim-polyglot'
-Plugin 'Olical/vim-syntax-expand'
+Plug 'sheerun/vim-polyglot'
+Plug 'Olical/vim-syntax-expand'
 " cycle through yanks (alt-p \ alt-shift-p)
-Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'tpope/vim-speeddating'
-Plugin 'Shougo/neocomplete'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'heavenshell/vim-jsdoc'
-Plugin 'waiting-for-dev/vim-www'
-Plugin 'ervandew/supertab'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'tpope/vim-speeddating'
+Plug 'Shougo/neocomplete'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'waiting-for-dev/vim-www'
+Plug 'ervandew/supertab'
 
-" Plugin 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
+" Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 " https://github.com/scrooloose/syntastic      // slow
-" Plugins End
 
 " https://github.com/Valloric/YouCompleteMe
 " https://github.com/SirVer/ultisnips
 " https://github.com/Shutnik/jshint2.vim
 " http://vimawesome.com
 " http://spf13.com/post/the-15-best-vim-plugins
-" Plugin 'moll/vim-bbye'
+" Plug 'moll/vim-bbye'
 " https://github.com/tpope/vim-dispatch
 
-call vundle#end()            
-filetype plugin indent on    
+call plug#end()
+
 "==============================================================
-" VUNDLE CONFIG END
+" PLUGINS CONFIG END
 "==============================================================
-
-
-
-
-
-
 
 runtime macros/matchit.vim
 
@@ -398,7 +379,7 @@ set shortmess=atI
 " prevent flashing
 set novisualbell t_vb=
 set cursorline
-" set lazyredraw
+set lazyredraw
 
 set foldlevelstart=10
 set foldnestmax=10

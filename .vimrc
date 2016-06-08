@@ -1,3 +1,8 @@
+" consider using
+" let g:pymode_rope = 0
+" https://github.com/davidhalter/jedi-vim
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1394,3 +1399,4 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 " au BufWriteCmd *.py write || :PymodeLint
 
 let g:bubbles_leader = '<M>'
+

@@ -128,6 +128,7 @@ endif
 call plug#begin()
 
 " git plugin
+Plug 'szw/vim-g'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-surround'
@@ -172,7 +173,7 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'heavenshell/vim-jsdoc'
-Plug 'waiting-for-dev/vim-www'
+" Plug 'waiting-for-dev/vim-www'
 Plug 'ervandew/supertab'
 
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting

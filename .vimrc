@@ -1251,16 +1251,33 @@ highlight Cursor guifg=white guibg=green
 " from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
 nnoremap <leader>a= :Tabularize /=<CR>
 vnoremap <leader>a= :Tabularize /=<CR>
+
 nnoremap <leader>a: :Tabularize /:<CR>
 vnoremap <leader>a: :Tabularize /:<CR>
+
 nnoremap <leader>a- :Tabularize /-<CR>
 vnoremap <leader>a- :Tabularize /-<CR>
+
+nnoremap <leader>a> :Tabularize /><CR>
 vnoremap <leader>a> :Tabularize /><CR>
+
+nnoremap <leader>a[ :Tabularize /[<CR>
 vnoremap <leader>a[ :Tabularize /[<CR>
+
+nnoremap <leader>a{ :Tabularize /{<CR>
 vnoremap <leader>a{ :Tabularize /{<CR>
+
+nnoremap <leader>a( :Tabularize /(<CR>
 vnoremap <leader>a( :Tabularize /(<CR>
+
+nnoremap <leader>a" :Tabularize /"<CR>
 vnoremap <leader>a" :Tabularize /"<CR>
+
+nnoremap <leader>a' :Tabularize /'<CR>
 vnoremap <leader>a' :Tabularize /'<CR>
+
+nnoremap <leader>af :Tabularize /from<CR>
+vnoremap <leader>af :Tabularize /from<CR>
 "==============================================================
 " PLUGIN SETTINGS END
 "==============================================================

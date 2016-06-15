@@ -1418,3 +1418,4 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 
 let g:bubbles_leader = '<M>'
 
+au BufRead,BufNewFile *.cson set ft=coffee

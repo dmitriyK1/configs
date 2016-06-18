@@ -140,9 +140,7 @@ endif
 
 call plug#begin()
 
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-scripts/LargeFile'
 Plug 'AndrewRadev/linediff.vim'

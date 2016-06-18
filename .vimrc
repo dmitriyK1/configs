@@ -140,6 +140,7 @@ endif
 
 call plug#begin()
 
+Plug 'powerman/vim-plugin-ruscmd'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-scripts/LargeFile'

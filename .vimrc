@@ -140,7 +140,10 @@ endif
 
 call plug#begin()
 
-" git plugin
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 Plug 'vim-scripts/LargeFile'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'powerman/vim-plugin-autosess'
@@ -148,6 +151,7 @@ Plug 'tpope/vim-ragtag'
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'vim-scripts/searchfold.vim'
 Plug 'szw/vim-g'
+" git plugin
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-surround'

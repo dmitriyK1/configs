@@ -6,6 +6,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Search fold bindings:
+"
+" <Leader>z
+" fold away lines not matching the last search pattern.
+
+" <Leader>iz
+" fold away lines that do match the last search pattern (inverse folding).
+
+" <Leader>Z
+" try hard to restore the previous fold settings"
+"
+"
+"
 " earlier 5m
 " later 1m
 " U         undo a change on one line
@@ -20,14 +33,14 @@
 " :CoffeeWatch [vert[ical]] [WINDOW-SIZE]
 "
 " Occur.vim:
-  " <Leader>oc   - Occur (Search current buffer) 
+  " <Leader>oc   - Occur (Search current buffer)
   " <Leader>mo   - Moccur (Search all buffers)
   " <Leader>*    - StarOccur (Search all buffers for occurrence of the word nearest to the cursor)
   " <Space> : Set current window height to highest.
   " x : Display the occurence the current line.
   " q : Quit the quickfix window.
 "
-" :grep <patter> <file name pattern>         
+" :grep <patter> <file name pattern>
 " example: :grep colorscheme %          (search in current file)
 
 " :Ack <pattern> <file>
@@ -62,7 +75,7 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Nice configs list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -122,12 +135,18 @@ endif
 
 
 "==============================================================
-" PLUGINS CONFIG START 
+" PLUGINS CONFIG START
 "==============================================================
 
 call plug#begin()
 
 " git plugin
+Plug 'vim-scripts/LargeFile'
+Plug 'AndrewRadev/linediff.vim'
+Plug 'powerman/vim-plugin-autosess'
+Plug 'tpope/vim-ragtag'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'vim-scripts/searchfold.vim'
 Plug 'szw/vim-g'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
@@ -252,7 +271,7 @@ map - :NERDTreeToggle<CR>
 " ==============================================================================
 " LET VARIABLES END
 " ==============================================================================
-" using colon as a separator to easier read regular expressions; 
+" using colon as a separator to easier read regular expressions;
 " using \v key to make vim regular expressions work as common regexps
 map <leader>% :%s:\v::g<Left><Left><Left>
 
@@ -989,7 +1008,7 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 
 " original settings:
 "set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
-set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait200-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175,v:block-Cursor-blinkon0 
+set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait200-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175,v:block-Cursor-blinkon0
 
 " from http://ku1ik.com/
 colorscheme monokai2

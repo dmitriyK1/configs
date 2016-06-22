@@ -450,8 +450,8 @@ nnoremap L $
 inoremap jj <ESC>
 
 " add semicolon at the end of the line in insert mode
-map <C-s> A;<Esc>
-imap <C-s> <end>;<Esc>
+" map <C-s> A;<Esc>
+" imap <C-s> <end>;<Esc>
 
 autocmd FileType javascript,css,YOUR_LANG nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
 autocmd FileType javascript,css,YOUR_LANG inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>

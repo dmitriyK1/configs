@@ -139,7 +139,9 @@ endif
 "==============================================================
 
 call plug#begin()
-
+" Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'lfilho/cosco.vim'
+Plug 'AndrewRadev/switch.vim'
 Plug 'powerman/vim-plugin-ruscmd'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -450,6 +452,9 @@ inoremap jj <ESC>
 " add semicolon at the end of the line in insert mode
 map <C-s> A;<Esc>
 imap <C-s> <end>;<Esc>
+
+autocmd FileType javascript,css,YOUR_LANG nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css,YOUR_LANG inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
 
 " highlight last inserted text
 nnoremap gV `[v`]
@@ -1441,3 +1446,5 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 let g:bubbles_leader = '<M>'
 
 au BufRead,BufNewFile *.cson set ft=coffee
+
+map <leader>S :Switch<CR>

@@ -7,7 +7,6 @@
 " http://blog.ezyang.com/2010/03/vim-textwidth/
 
 " http://chibicode.com/vimrc/
-" https://github.com/spolu/dwm.vim
 
 " consider using
 " let g:pymode_rope = 0
@@ -163,7 +162,8 @@ call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'spolu/dwm.vim'
+" Plug 'spolu/dwm.vim'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'lfilho/cosco.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'powerman/vim-plugin-ruscmd'
@@ -1475,3 +1475,6 @@ map <leader>S :Switch<CR>
 
 let g:indent_guides_color_change_percent = 5
 let g:indent_guides_enable_on_vim_startup = 1
+
+let g:multi_cursor_quit_key='<C-c>'
+nnoremap <C-c> :call multiple_cursors#quit()<CR>

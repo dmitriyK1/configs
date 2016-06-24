@@ -2,6 +2,12 @@
 " let g:pymode_rope = 0
 " https://github.com/davidhalter/jedi-vim
 
+" Plug 'scrooloose/syntastic'
+" let g:syntastic_check_on_open=1
+
+" http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
+" https://github.com/nathanaelkane/vim-indent-guides
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "

@@ -8,6 +8,8 @@
 " http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 " https://github.com/nathanaelkane/vim-indent-guides
 
+" vim-sneak, Indent Guides, indentLine, Rainbow Parentheses, Airline, Lightline, GitGutter, Signify, ShowMarks, Signature, Syntastic, CtrlP, Startify
+" https://github.com/morhetz/gruvbox
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "

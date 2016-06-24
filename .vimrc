@@ -1472,3 +1472,6 @@ let g:bubbles_leader = '<M>'
 au BufRead,BufNewFile *.cson set ft=coffee
 
 map <leader>S :Switch<CR>
+
+let g:indent_guides_color_change_percent = 5
+let g:indent_guides_enable_on_vim_startup = 1

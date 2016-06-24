@@ -1,3 +1,5 @@
+" http://blog.ezyang.com/2010/03/vim-textwidth/
+
 " http://chibicode.com/vimrc/
 " https://github.com/spolu/dwm.vim
 

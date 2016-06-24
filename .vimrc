@@ -1,3 +1,6 @@
+" http://chibicode.com/vimrc/
+" https://github.com/spolu/dwm.vim
+
 " consider using
 " let g:pymode_rope = 0
 " https://github.com/davidhalter/jedi-vim

@@ -424,7 +424,7 @@ set shortmess=atI
 " prevent flashing
 set novisualbell t_vb=
 set cursorline
-set lazyredraw
+" set lazyredraw
 
 set foldlevelstart=10
 set foldnestmax=10

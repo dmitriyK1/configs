@@ -1,3 +1,9 @@
+
+" TODO: add automatic text wrap for plain text files
+"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
 " http://blog.ezyang.com/2010/03/vim-textwidth/
 
 " http://chibicode.com/vimrc/
@@ -20,6 +26,8 @@
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search fold bindings:
+"
+" <leader>ig  toggle indent guides
 "
 " <Leader>z
 " fold away lines not matching the last search pattern.
@@ -153,6 +161,9 @@ endif
 
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
+" Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'spolu/dwm.vim'
 Plug 'lfilho/cosco.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'powerman/vim-plugin-ruscmd'

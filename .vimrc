@@ -477,8 +477,8 @@ inoremap jj <ESC>
 " map <C-s> A;<Esc>
 " imap <C-s> <end>;<Esc>
 
-autocmd FileType javascript,css,YOUR_LANG nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
-autocmd FileType javascript,css,YOUR_LANG inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css,sh nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css,sh inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
 
 " highlight last inserted text
 nnoremap gV `[v`]

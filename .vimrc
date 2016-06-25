@@ -1483,7 +1483,7 @@ let g:indent_guides_color_change_percent = 5
 let g:indent_guides_enable_on_vim_startup = 1
 
 let g:multi_cursor_quit_key='<C-c>'
-nnoremap <C-c> :call multiple_cursors#quit()<CR>
+nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'

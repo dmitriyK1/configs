@@ -16,9 +16,7 @@
 " let g:syntastic_check_on_open=1
 
 " http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
-" https://github.com/nathanaelkane/vim-indent-guides
 
-" vim-sneak, Indent Guides, indentLine, Rainbow Parentheses, Airline, Lightline, GitGutter, Signify, ShowMarks, Signature, Syntastic, CtrlP, Startify
 " https://github.com/morhetz/gruvbox
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -130,9 +128,9 @@ endif
 
 if has("gui_running")
   if has('win32')
-      " set guifont=Consolas:h10   " Win32.
+      set guifont=Consolas:h12   " Win32.
       " set guifont=DejaVu\ Sans\ Mono:h11   " Win32.
-      set guifont=Source\ Code\ Pro:h11   " Win32.
+      " set guifont=Source\ Code\ Pro:h11   " Win32.
   elseif has('gui_macvim')
       set guifont=Monaco:h14     " OSX.
   else
@@ -152,7 +150,9 @@ if has("gui_running")
   set guioptions-=R
 endif
 
-
+if !has('gui_running')
+  set t_Co=256
+endif
 
 "==============================================================
 " PLUGINS CONFIG START
@@ -161,6 +161,7 @@ endif
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
+Plug 'mhinz/vim-startify'
 Plug 'kshenoy/vim-signature'
 Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'spolu/dwm.vim'
@@ -172,7 +173,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-scripts/LargeFile'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'powerman/vim-plugin-autosess'
+" Plug 'powerman/vim-plugin-autosess'
 Plug 'tpope/vim-ragtag'
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'vim-scripts/searchfold.vim'
@@ -1274,10 +1275,12 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 "               Source the vimrc file after saving it
 " -------------------------------------------------------------------------
 
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
-
+augroup reload_vimrc
+  if has("autocmd")
+    autocmd!
+    autocmd bufwritepost $MYVIMRC nested source $MYVIMRC
+  endif
+augroup END
 
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 

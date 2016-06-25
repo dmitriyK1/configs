@@ -177,3 +177,5 @@ function new-scratch {
   cd $cur_dir
   echo "New scratch dir ready for grinding ;>"
 }
+
+export TERM=xterm-256color

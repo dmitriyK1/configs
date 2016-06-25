@@ -161,6 +161,7 @@ endif
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
+Plug 'kshenoy/vim-signature'
 Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'spolu/dwm.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -176,7 +177,6 @@ Plug 'tpope/vim-ragtag'
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'vim-scripts/searchfold.vim'
 Plug 'szw/vim-g'
-" git plugin
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-surround'

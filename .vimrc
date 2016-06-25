@@ -198,6 +198,7 @@ Plug 'tpope/vim-rsi'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'Xuyuanp/nerdtree-git-plugin'            " not working for some reason
 Plug 'mattn/emmet-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-heroku'
@@ -1481,3 +1482,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 let g:multi_cursor_quit_key='<C-c>'
 nnoremap <C-c> :call multiple_cursors#quit()<CR>
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'

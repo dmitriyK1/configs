@@ -161,6 +161,7 @@ endif
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
+Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'
 Plug 'kshenoy/vim-signature'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -1485,3 +1486,10 @@ nnoremap <C-c> :call multiple_cursors#quit()<CR>
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+nmap f <Plug>Sneak_s
+nmap F <Plug>Sneak_S
+xmap f <Plug>Sneak_s
+xmap F <Plug>Sneak_S
+omap f <Plug>Sneak_s
+omap F <Plug>Sneak_S

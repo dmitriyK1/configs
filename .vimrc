@@ -161,6 +161,7 @@ endif
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
+Plug 'altercation/vim-colors-solarized'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'
@@ -1496,3 +1497,5 @@ xmap F <Plug>Sneak_S
 " omap F <Plug>Sneak_S
 
 nmap <F8> :TagbarToggle<CR>
+
+call togglebg#map("<F12>")

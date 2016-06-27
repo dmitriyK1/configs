@@ -450,4 +450,4 @@ nnoremap <f8> :delete<cr>
 
 map <Space> :
 
-
+map ,se :!start gvim $HOME/AppData/Roaming/Vifm/vifmrc<cr>

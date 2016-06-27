@@ -161,7 +161,19 @@ endif
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
+
+" Colorschemes:
+Plug 'dracula/vim'
+Plug 'ciaranm/inkpot'
+Plug 'jnurmine/Zenburn'
+Plug 'vim-scripts/Wombat'
+Plug 'sickill/vim-sunburst'
+Plug 'vim-scripts/vibrantink'
+Plug 'lisposter/vim-blackboard'
 Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+" Colorschemes end
+
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'

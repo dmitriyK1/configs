@@ -639,7 +639,7 @@ nnoremap <leader>\ :vsplit<cr><C-w>l
 " set fileformats="unix,dos,mac"
 set nrformats=
 
-set colorcolumn=85
+set colorcolumn=80
 
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>

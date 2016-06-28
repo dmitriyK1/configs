@@ -402,8 +402,8 @@ set noerrorbells
 set printoptions=paper:letter
 nnoremap <F10> :b <C-Z>
 map ! q:i!
-set number
-set relativenumber
+set nonumber
+set norelativenumber
 set wildmenu
 set hlsearch
 " When sourcing this file, do not immediately turn on highlighting.
@@ -1085,9 +1085,9 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait200-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175,v:block-Cursor-blinkon0
 
 " from http://ku1ik.com/
-" colorscheme monokai2
+colorscheme monokai2
 " colorscheme molokai
-colorscheme greenvision
+" colorscheme greenvision
 
 
 " repeat last search and replace operation with confirmation

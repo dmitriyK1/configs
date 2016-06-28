@@ -1084,8 +1084,9 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait200-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175,v:block-Cursor-blinkon0
 
 " from http://ku1ik.com/
-colorscheme monokai2
+" colorscheme monokai2
 " colorscheme molokai
+colorscheme greenvision
 
 
 " repeat last search and replace operation with confirmation
@@ -1517,7 +1518,7 @@ au BufRead,BufNewFile *.cson set ft=coffee
 map <leader>S :Switch<CR>
 
 let g:indent_guides_color_change_percent = 5
-let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_enable_on_vim_startup = 1
 
 let g:multi_cursor_quit_key='<C-c>'
 nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
@@ -1556,3 +1557,9 @@ function! ToggleHiddenAll()
 endfunction
 
 nnoremap <silent> <leader>3 :call ToggleHiddenAll()<CR>
+
+call ToggleHiddenAll()
+set nocursorline
+set colorcolumn=0
+
+nnoremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 

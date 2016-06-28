@@ -184,6 +184,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'noahfrederick/vim-hemisu'
 " Plug 'mdlerch/tungsten.vim'
 Plug 'reedes/vim-colors-pencil'
+Plug 'blueshirts/darcula'
 " Colorschemes end
 
 Plug 'majutsushi/tagbar'

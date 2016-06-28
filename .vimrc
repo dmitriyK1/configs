@@ -163,6 +163,7 @@ call plug#begin()
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
 
 " Colorschemes:
+Plug 'michalbachowski/vim-wombat256mod'
 Plug 'dracula/vim'
 Plug 'ciaranm/inkpot'
 Plug 'jnurmine/Zenburn'

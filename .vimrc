@@ -172,6 +172,18 @@ Plug 'vim-scripts/vibrantink'
 Plug 'lisposter/vim-blackboard'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plug 'romainl/Apprentice'
+Plug 'vim-scripts/Sorcerer'
+Plug 'penicolas/simplon.vim'
+Plug 'whatyouhide/vim-gotham'
+Plug 'morhetz/gruvbox'
+Plug 'thomd/vim-wasabi-colorscheme'
+Plug 'nanotech/jellybeans.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'noahfrederick/vim-hemisu'
+" Plug 'mdlerch/tungsten.vim'
+Plug 'reedes/vim-colors-pencil'
 " Colorschemes end
 
 Plug 'majutsushi/tagbar'

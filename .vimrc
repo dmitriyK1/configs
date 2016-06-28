@@ -598,7 +598,7 @@ augroup END
 
 
 set wrapscan
-set cmdheight=2
+set cmdheight=1
 
 set laststatus=2
 

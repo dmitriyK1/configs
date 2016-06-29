@@ -1567,3 +1567,6 @@ set nocursorline
 set colorcolumn=0
 
 nnoremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
+
+map <leader>L :set cursorcolumn!<CR>
+

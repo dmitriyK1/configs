@@ -364,8 +364,8 @@ map <leader>% :%s:\v::g<Left><Left><Left>
 map <leader>; :%s:\v::cg<Left><Left><Left><Left>
 
  " make regexp search not suck by default
-nnoremap / /\v
-vnoremap / /\v
+" nnoremap / /\v
+" vnoremap / /\v
 " copy
 vnoremap <C-c> "*y
 
@@ -1112,8 +1112,10 @@ colorscheme monokai2
 noremap & :%sgc<cr>
 
 " always use the command editing window
-nnoremap / q/i\v
-nnoremap ? q?i\v
+" nnoremap / q/i\v
+" nnoremap ? q?i\v
+nnoremap q/ q/i\v
+nnoremap q? q?i\v
 nnoremap <Space> q:i
 nnoremap <silent> <leader>: q:
 
@@ -1594,3 +1596,5 @@ endif
 
 " replace ex mode map and use it for repeating last executed macro
 nnoremap Q @@
+
+let g:multi_cursor_next_key='<C-d>'

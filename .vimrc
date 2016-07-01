@@ -3,6 +3,9 @@
 "
 " TODO: add colorschemes to vimfiles instead of plugins
 "
+" https://medium.com/@saaguero/improve-gvim-startup-time-in-tmux-a259e04241c3#.uajqc6nzk
+
+" https://medium.com/@saaguero/improving-performance-in-vim-9b33598c8eaf#.h5qot2ar3
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " http://blog.ezyang.com/2010/03/vim-textwidth/

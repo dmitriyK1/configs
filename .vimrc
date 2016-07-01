@@ -6,6 +6,14 @@
 " TODO: remove plugin-less autocompletion
 
 " TODO: fix % not working on braces bug ( ) in html files 
+
+" TODO: add plugins lazy-loading
+" https://github.com/saaguero/dotvim/blob/44c3bbc9b2996fcf7e86f624785a3a06ca978167/.vimrc#L60-L69
+
+" TODO: ? try to make snail default keybindings work ?
+
+" TODO: make vimcompletesme work
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

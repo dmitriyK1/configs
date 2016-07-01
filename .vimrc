@@ -96,10 +96,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                            Nice configs list
+"                            Good configs list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " https://github.com/tpope/tpope/blob/master/.vimrc
 " https://github.com/paulirish/dotfiles/blob/master/.vimrc
+" https://github.com/saaguero/dotvim/blob/master/.vimrc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -1590,3 +1591,6 @@ if executable('ag')
   set grepformat=%f:%l:%c:%m
   command! -nargs=+ -bang Ag silent! grep <args> | redraw! | botright copen
 endif
+
+" replace ex mode map and use it for repeating last executed macro
+nnoremap Q @@

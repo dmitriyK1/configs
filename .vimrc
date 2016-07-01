@@ -10,6 +10,8 @@
 " https://medium.com/@saaguero/vim-s-first-year-with-me-4bfbdae4ef44#.9ql0eoxc3
 
 " https://github.com/ajh17/VimCompletesMe
+
+" https://github.com/saaguero/dotvim/blob/67f18869042773191d0135ed4b37fbe1fe11f37f/.vimrc#L294-L299
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " http://blog.ezyang.com/2010/03/vim-textwidth/

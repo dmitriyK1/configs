@@ -1571,3 +1571,6 @@ nnoremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)
 
 map <leader>L :set cursorcolumn!<CR>
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif

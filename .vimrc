@@ -1,6 +1,7 @@
 
 " TODO: add automatic text wrap for plain text files
 "
+" TODO: add colorschemes to vimfiles instead of plugins
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "

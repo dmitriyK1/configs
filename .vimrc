@@ -8,6 +8,11 @@
 " TODO: fix % not working on braces bug ( ) in html files 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" https://www.destroyallsoftware.com/talks    ( about regular expressions )
+" https://www.amazon.com/Mastering-Regular-Expressions-Jeffrey-Friedl/dp/0596528124?ie=UTF8&*Version*=1&*entries*=0
+" https://www.infoq.com/presentations/regex
+" http://vimdoc.sourceforge.net/htmldoc/pattern.html
+
 " http://blog.ezyang.com/2010/03/vim-textwidth/
 
 " http://chibicode.com/vimrc/

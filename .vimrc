@@ -2,18 +2,9 @@
 " TODO: add automatic text wrap for plain text files
 "
 " TODO: add colorschemes to vimfiles instead of plugins
-"
-" https://medium.com/@saaguero/improve-gvim-startup-time-in-tmux-a259e04241c3#.uajqc6nzk
 
-" https://medium.com/@saaguero/improving-performance-in-vim-9b33598c8eaf#.h5qot2ar3
-
-" https://medium.com/@saaguero/vim-s-first-year-with-me-4bfbdae4ef44#.9ql0eoxc3
-
-" https://github.com/ajh17/VimCompletesMe
-
-" https://github.com/saaguero/dotvim/blob/67f18869042773191d0135ed4b37fbe1fe11f37f/.vimrc#L294-L299
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
+
 " http://blog.ezyang.com/2010/03/vim-textwidth/
 
 " http://chibicode.com/vimrc/
@@ -26,8 +17,6 @@
 " let g:syntastic_check_on_open=1
 
 " http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
-
-" https://github.com/morhetz/gruvbox
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "

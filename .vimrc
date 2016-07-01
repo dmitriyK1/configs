@@ -3,6 +3,8 @@
 "
 " TODO: add colorschemes to vimfiles instead of plugins
 
+" TODO: remove plugin-less autocompletion
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " http://blog.ezyang.com/2010/03/vim-textwidth/
@@ -200,6 +202,15 @@ Plug 'vim-scripts/obsidian2.vim'
 Plug 'gosukiwi/vim-atom-dark'
 " Colorschemes end
 
+Plug 'ajh17/VimCompletesMe'
+Plug 'haya14busa/incsearch.vim' "{{{
+  map /  <Plug>(incsearch-forward)
+  map ?  <Plug>(incsearch-backward)
+"}}}
+Plug 'kana/vim-textobj-user'
+Plug 'FelikZ/ctrlp-py-matcher' "{{{
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+""}}}                     
 Plug 'nazo/pt.vim'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
@@ -1572,6 +1583,10 @@ nnoremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)
 
 map <leader>L :set cursorcolumn!<CR>
 
+" Use Ag instead of ack and grep if available
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
+  set grepprg=ag\ --nogroup\ --nocolor\ --column
+  set grepformat=%f:%l:%c:%m
+  command! -nargs=+ -bang Ag silent! grep <args> | redraw! | botright copen
 endif

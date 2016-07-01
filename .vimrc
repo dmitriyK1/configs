@@ -433,7 +433,7 @@ map ! q:i!
 set nonumber
 set norelativenumber
 set wildmenu
-set hlsearch
+set nohlsearch
 " When sourcing this file, do not immediately turn on highlighting.
 nohlsearch
 set incsearch
@@ -885,8 +885,8 @@ set backupdir-=~/
 set backupdir^=~/.vim/backup/
 set backupdir^=./.vim-backup/
 set backup
-set swapfile
 set writebackup
+set noswapfile
 
 " Save your swp files to a less annoying place than the current directory.
 " If you have .vim-swap in the current directory, it'll use that.

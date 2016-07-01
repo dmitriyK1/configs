@@ -278,7 +278,7 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'heavenshell/vim-jsdoc'
 " Plug 'waiting-for-dev/vim-www'
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'           // use VimCompletesMe instead (faster)
 
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 " https://github.com/scrooloose/syntastic      // slow
@@ -573,7 +573,8 @@ set ttimeout
 set ttimeoutlen=10
 
 " Better Completion
-set completeopt=longest,menuone,preview
+" set completeopt=longest,menuone,preview
+set completeopt=menu
 
 " Resize splits when the window is resized
 au VimResized * :wincmd =

@@ -14,6 +14,11 @@
 
 " TODO: make vimcompletesme work
 
+" TODO: add textobject plugins
+
+" TODO: use vim-grepper instead of other text search plugins
+" https://github.com/mhinz/vim-grepper
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

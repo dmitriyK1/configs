@@ -141,7 +141,6 @@ if has("gui_running")
       set guifont=Monospace\ 12  " Linux.
   endif
 
-  set t_Co=256
   " colorscheme onedark
   " colorscheme molokai
   " colorscheme monokai2
@@ -156,6 +155,9 @@ endif
 
 if !has('gui_running')
   set t_Co=256
+  set term=xterm
+  let &t_AB="\e[48;5;%dm"
+  let &t_AF="\e[38;5;%dm"
 endif
 
 "==============================================================

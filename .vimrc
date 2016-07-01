@@ -9,6 +9,7 @@
 
 " https://medium.com/@saaguero/vim-s-first-year-with-me-4bfbdae4ef44#.9ql0eoxc3
 
+" https://github.com/ajh17/VimCompletesMe
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " http://blog.ezyang.com/2010/03/vim-textwidth/

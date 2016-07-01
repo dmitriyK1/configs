@@ -209,6 +209,7 @@ Plug 'vim-scripts/obsidian2.vim'
 Plug 'gosukiwi/vim-atom-dark'
 " Colorschemes end
 
+Plug 'nazo/pt.vim'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-startify'

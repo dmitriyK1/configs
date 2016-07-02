@@ -1642,6 +1642,3 @@ let g:multi_cursor_next_key='<C-d>'
 
 " visual paste without losing the copied content
 xnoremap p "0p
-
-" Close preview window when leaving insert mode http://stackoverflow.com/a/3107159/854676
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif

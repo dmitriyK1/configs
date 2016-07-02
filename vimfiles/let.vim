@@ -35,8 +35,6 @@ let g:netrw_retmap = 1
 let g:netrw_home = $HOME."/.cache"
 let g:netrw_liststyle=0
 
-let &scrolloff=999-&scrolloff
-
 " To disable the fallback to vim's indent file, set the following variable to be 0.
 let g:autoformat_autoindent = 0
 

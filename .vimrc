@@ -305,6 +305,7 @@ Plug 'tpope/vim-rsi'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'ctrlpvim/ctrlp.vim' "{{{
   let g:ctrlp_map = '<c-t>'
+  let g:ctrlp_open_multiple_files = '1jr'
   let g:ctrlp_max_files = 0
   let g:ctrlp_lazy_update = 50
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
@@ -314,7 +315,6 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
         \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
         \ 'file': '\.pyc$\|\.pyo$',
         \ }
-  map <silent> <leader>r :CtrlPMRUFiles<CR>
 "}}}
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
     let g:nerdtree_tabs_open_on_gui_startup = 0
@@ -524,10 +524,10 @@ map gp :bp<CR>
 " map gc :bd<CR>
 " map gd :bd<CR>
 map <leader>d :bd<CR>
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+" map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers
-map <leader>ba :bufdo bd<cr>
+" map <leader>ba :bufdo bd<cr>
 
 " set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,nbsp:. " Highlight problematic whitespace
@@ -1665,3 +1665,35 @@ let g:multi_cursor_next_key='<C-d>'
 
 " visual paste without losing the copied content
 xnoremap p "0p
+
+nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
+nnoremap <silent> <leader>b :CtrlPBuffer<cr>
+
+
+" ================================================================================
+" Leader mappings start
+" ================================================================================
+
+" ================================================================================
+" Leader mappings end
+" ================================================================================
+
+
+
+" ================================================================================
+" Ctrl mappings start
+" ================================================================================
+
+" ================================================================================
+" Ctrl mappings end
+" ================================================================================
+
+
+
+" ================================================================================
+" Alt mappings start
+" ================================================================================
+
+" ================================================================================
+" Alt mappings end
+" ================================================================================

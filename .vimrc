@@ -124,6 +124,10 @@
 
 " TODO: add package-specific let\set settings to packages.vim
 
+" TODO: remove unnecessary keybindings
+
+" TODO: check if all let mappings were transferred
+
 filetype plugin indent on
 syntax on
 

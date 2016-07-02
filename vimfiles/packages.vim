@@ -44,6 +44,7 @@ Plug 'sjl/badwolf'
 Plug 'endel/vim-github-colorscheme'
 " Colorschemes end
 
+Plug 'romainl/vim-qf'
 Plug 'kana/vim-arpeggio'
 
 Plug 'AndrewRadev/switch.vim' "{{{

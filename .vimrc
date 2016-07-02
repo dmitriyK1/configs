@@ -150,6 +150,8 @@ endif
 
 
 if has("gui_running")
+  set ballooneval
+
   if has('win32')
       set guifont=Consolas:h12   " Win32.
       " set guifont=DejaVu\ Sans\ Mono:h11   " Win32.
@@ -174,9 +176,12 @@ endif
 
 if !has('gui_running')
   set t_Co=256
+  let &t_Co=256
   set term=xterm
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
+  set noerrorbells novisualbell t_vb=
+  set t_ut= " setting for looking properly in tmux
 endif
 
 "==============================================================
@@ -1626,3 +1631,9 @@ nnoremap Q @@
 " let g:multi_cursor_quit_key='<C-c>'
 " nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
 let g:multi_cursor_next_key='<C-d>'
+
+" visual paste without losing the copied content
+xnoremap p "0p
+
+" Close preview window when leaving insert mode http://stackoverflow.com/a/3107159/854676
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif

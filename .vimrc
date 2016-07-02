@@ -1504,7 +1504,7 @@ xnoremap p "0p
 
 
 " Leader mappings
-source ~/vimfiles/leader_mappings
+source ~/vimfiles/keybindings/leader.vim
 
 " Ctrl mappings
 

@@ -530,6 +530,7 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 
 au BufRead,BufNewFile *.cson set ft=coffee
 
+autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
 
 
 
@@ -569,4 +570,3 @@ colorscheme molokai
 
 source ~/vimfiles/highlight.vim
 
-autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg

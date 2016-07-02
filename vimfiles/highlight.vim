@@ -3,4 +3,5 @@
 
 highlight Cursor guifg=white guibg=green
 highlight BadWhitespace ctermbg=red guibg=darkred
+highlight Conceal guibg=black guifg=red
 

@@ -149,9 +149,6 @@ set pastetoggle=<F2>
 " set fileformats="unix,dos,mac"
 set nrformats=
 
-set colorcolumn=80
-
-
 set termencoding=utf-8
 set encoding=utf-8 nobomb                   " set default encoding
 set nottybuiltin
@@ -282,4 +279,5 @@ set confirm       " ask for confirmation by default (instead of silently failing
 
 
 set nocursorline
-set colorcolumn=0
+
+set colorcolumn=0             " good value: 80

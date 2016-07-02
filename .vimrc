@@ -5,7 +5,7 @@
 
 " TODO: remove plugin-less autocompletion
 
-" TODO: fix % not working on braces bug ( ) in html files 
+" TODO: fix % not working on braces bug ( ) in html files
 
 " TODO: add plugins lazy-loading
 " https://github.com/saaguero/dotvim/blob/44c3bbc9b2996fcf7e86f624785a3a06ca978167/.vimrc#L60-L69
@@ -224,15 +224,17 @@ Plug 'vim-scripts/obsidian2.vim'
 Plug 'gosukiwi/vim-atom-dark'
 " Colorschemes end
 
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ajh17/VimCompletesMe'
 Plug 'haya14busa/incsearch.vim' "{{{
   map /  <Plug>(incsearch-forward)
   map ?  <Plug>(incsearch-backward)
 "}}}
 Plug 'kana/vim-textobj-user'
+Plug 'saaguero/vim-textobj-pastedtext'
 Plug 'FelikZ/ctrlp-py-matcher' "{{{
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-""}}}                     
+""}}}
 Plug 'nazo/pt.vim'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
@@ -1597,7 +1599,7 @@ call ToggleHiddenAll()
 set nocursorline
 set colorcolumn=0
 
-nnoremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
+nnoremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 
 map <leader>L :set cursorcolumn!<CR>
 

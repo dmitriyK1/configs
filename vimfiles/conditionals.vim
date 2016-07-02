@@ -17,6 +17,7 @@ elseif has("win32") || has("win16") || has("win64")
   endif
 endif
 
+" --------------------------------------------------------------------------------
 
 if has("gui_running")
   set ballooneval
@@ -43,6 +44,8 @@ if has("gui_running")
   set guioptions-=R
 endif
 
+" --------------------------------------------------------------------------------
+
 if !has('gui_running')
   set t_Co=256
   let &t_Co=256
@@ -53,16 +56,21 @@ if !has('gui_running')
   set t_ut= " setting for looking properly in tmux
 endif
 
+" --------------------------------------------------------------------------------
 
 if exists('+macmeta')
   set macmeta
 endif
+
+" --------------------------------------------------------------------------------
 
 if has('cmdline_info')
     set ruler                   " Show the ruler
     set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
     set showcmd                 " Show partial commands in status line and " Selected characters/lines in visual mode
 endif
+
+" --------------------------------------------------------------------------------
 
 if has('statusline')
     " Broken down into easily includeable segments
@@ -73,21 +81,18 @@ if has('statusline')
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
 
+" --------------------------------------------------------------------------------
 
-"-----------------------------------------------------------------------------
-" Local system overrides
-"-----------------------------------------------------------------------------
 " if filereadable($HOME . "/.vimrc.local")
 "   execute "source " . $HOME . "/.vimrc.local"
 " endif
 
-" Use local vimrc if available {
+" Use local vimrc if available
 if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
 endif
-" }
 
-
+" --------------------------------------------------------------------------------
 
 " Save your backups to a less annoying place than the current directory.
 " If you have .vim-backup in the current directory, it'll use that.
@@ -96,6 +101,8 @@ if isdirectory($HOME . '/.vim/backup') == 0
   :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
 endif
 
+" --------------------------------------------------------------------------------
+
 " Save your swp files to a less annoying place than the current directory.
 " If you have .vim-swap in the current directory, it'll use that.
 " Otherwise it saves it to ~/.vim/swap, ~/tmp or .
@@ -103,6 +110,7 @@ if isdirectory($HOME . '/.vim/swap') == 0
   :silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
 endif
 
+" --------------------------------------------------------------------------------
 
 if has('persistent_undo')
     " set undofile                " So is persistent undo ...
@@ -116,17 +124,21 @@ if has('persistent_undo')
     set undodir+=~/.vim/undo//
 endif
 
+" --------------------------------------------------------------------------------
+
  " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
 
+" --------------------------------------------------------------------------------
 
 if exists("&wildignorecase")
     set wildignorecase
 endif
 
+" --------------------------------------------------------------------------------
 
 " Use Ag instead of ack and grep if available
 if executable('ag')

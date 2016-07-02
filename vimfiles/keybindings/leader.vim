@@ -178,3 +178,6 @@ map <silent> <leader>G :GundoToggle<CR>
 nnoremap <silent> <leader>3 :call ToggleHiddenAll()<CR>
 
 nnoremap <silent> <leader>L :set list!<cr>
+
+" delete duplicated lines
+nnoremap <silent> <leader>u :sort u<cr>

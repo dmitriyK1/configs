@@ -316,3 +316,12 @@ nnoremap Q @@
 
 " visual paste without losing the copied content
 xnoremap p "0p
+
+" nnoremap <tab> %
+" vnoremap <tab> %
+
+" Map the conceal characters to their expanded forms.
+" inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+" inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
+" inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+

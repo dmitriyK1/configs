@@ -82,3 +82,6 @@ let g:hidden_all = 0
 " let g:multi_cursor_quit_key='<C-c>'
 let g:multi_cursor_next_key='<C-d>'
 
+" let g:user_emmet_install_global = 0
+" let g:user_emmet_expandabbr_key = '<tab>'
+

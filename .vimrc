@@ -130,22 +130,20 @@ source ~/vimfiles/conditionals.vim
 source ~/vimfiles/packages.vim
 source ~/vimfiles/aucmds.vim
 
-
 runtime macros/matchit.vim
-
 
 filetype plugin indent on
 syntax on
 
-" When sourcing this file, do not immediately turn on highlighting.
-nohlsearch
+nohlsearch   " When sourcing this file, do not immediately turn on highlighting
 
 execute "set titleold=".hostname()
 
+command! Bclose call <SID>BufcloseCloseIt()   " Don't close window, when deleting a buffer
 
-
-" nnoremap <tab> %
-" vnoremap <tab> %
+" ===============================================================================
+" FUNCTIONS
+" ===============================================================================
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
@@ -153,20 +151,6 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-
-
-"-----------------------------------------------------------------------------
-
-
-
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-
-
-
-" ===============================================================================
-" FUNCTIONS
-" ===============================================================================
 
 function! ConcealToggle()
     if &conceallevel == 0
@@ -349,50 +333,6 @@ function! LoadSession()
   endif
 endfunction
 
-
-
-" let g:user_emmet_install_global = 0
-" let g:user_emmet_expandabbr_key = '<tab>'
-
-" Map the conceal characters to their expanded forms.
-" inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
-" inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
-" inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
-
-" ================================================================================
-" Rainbow parentheses options start
-" ================================================================================
-
-" let g:rbpt_colorpairs = [
-"     \ ['brown',       'RoyalBlue3'],
-"     \ ['Darkblue',    'SeaGreen3'],
-"     \ ['darkgray',    'DarkOrchid3'],
-"     \ ['darkgreen',   'firebrick3'],
-"     \ ['darkcyan',    'RoyalBlue3'],
-"     \ ['darkred',     'SeaGreen3'],
-"     \ ['darkmagenta', 'DarkOrchid3'],
-"     \ ['brown',       'firebrick3'],
-"     \ ['gray',        'RoyalBlue3'],
-"     \ ['black',       'SeaGreen3'],
-"     \ ['darkmagenta', 'DarkOrchid3'],
-"     \ ['Darkblue',    'firebrick3'],
-"     \ ['darkgreen',   'RoyalBlue3'],
-"     \ ['darkcyan',    'SeaGreen3'],
-"     \ ['darkred',     'DarkOrchid3'],
-"     \ ['red',         'firebrick3'],
-"     \ ]
-"
-" let g:rbpt_max = 16
-" let g:rbpt_loadcmd_toggle = 0
-"
-" au VimEnter * RainbowParenthesesToggle
-" au Syntax * RainbowParenthesesLoadRound
-" au Syntax * RainbowParenthesesLoadSquare
-" au Syntax * RainbowParenthesesLoadBraces
-
-" ================================================================================
-" Rainbow parentheses options end
-" ================================================================================
 function! ToggleHiddenAll()
     if g:hidden_all  == 0
         let g:hidden_all = 1
@@ -409,20 +349,14 @@ function! ToggleHiddenAll()
     endif
 endfunction
 
+" --------------------------------------------------------------------------------
+
 call ToggleHiddenAll()
-
 call togglebg#map("<F12>")
-
-
-source ~/vimfiles/keybindings/map.vim
-source ~/vimfiles/keybindings/leader.vim
-
-
-" from http://ku1ik.com/
-
 
 let g:molokai_original=0      " use a darker background
 colorscheme molokai
 
+source ~/vimfiles/keybindings/map.vim
+source ~/vimfiles/keybindings/leader.vim
 source ~/vimfiles/highlight.vim
-

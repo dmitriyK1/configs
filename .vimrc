@@ -122,7 +122,6 @@
 source ~/vimfiles/let.vim
 source ~/vimfiles/set.vim
 
-let s:is_nvim=has('nvim')
 
 
 if has("unix")
@@ -184,55 +183,10 @@ source ~/vimfiles/packages.vim
 
 runtime macros/matchit.vim
 
-
-" ==============================================================================
-" LET VARIABLES START
-" ==============================================================================
-
-let s:oldcmdline = [ ]
-let mapleader=","
-
-" Hit enter in the file browser to open the selected
-" file with :vsplit to the right of the browser.
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-" absolute width of netrw window
-let g:netrw_winsize = -28
-
-" do not display info on the top of window
-let g:netrw_banner = 0
-
-" sort is affecting only: directories on the top, files below
-let g:netrw_sort_sequence = '[\/]$,*'
-
-" hide vim swap files
-let g:netrw_list_hide='.*\.swp$'
-
- " open files in left window by default
-let g:netrw_chgwin=1
-
-let g:netrw_fastbrowse    = 2
-let g:netrw_keepdir       = 0
-let g:netrw_retmap        = 1
-let g:netrw_silent        = 1
-let g:netrw_special_syntax= 1
-
-let g:netrw_dirhistmax=100
-let g:netrw_altfile=1
-let g:netrw_chgwin = winnr()
-let g:netrw_retmap = 1
-let g:netrw_home = $HOME."/.cache"
-let g:netrw_liststyle=0
-
-
-
 autocmd FileType netrw setl bufhidden=wipe
 "map - :Vex<CR>
 "map = <C-l><C-w>o
 
-" ==============================================================================
-" LET VARIABLES END
-" ==============================================================================
 
  " make regexp search not suck by default
 " nnoremap / /\v
@@ -591,7 +545,6 @@ nnoremap Vat vatV
 nnoremap Vab vabV
 nnoremap VaB vaBV
 
-let &scrolloff=999-&scrolloff
 
 
 " Numbers {{{
@@ -697,13 +650,13 @@ function! ConcealToggle()
 endfunction
 
 function! <SID>saveUndoHistory(cmdline, cmdpos)
-    if len(s:oldcmdline) == 0 || a:cmdline != s:oldcmdline[0][0]
-        call insert(s:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
+    if len(g:oldcmdline) == 0 || a:cmdline != g:oldcmdline[0][0]
+        call insert(g:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
     else
-        let s:oldcmdline[0][1] = a:cmdpos
+        let g:oldcmdline[0][1] = a:cmdpos
     endif
-    if len(s:oldcmdline) > 100
-        call remove(s:oldcmdline, 100)
+    if len(g:oldcmdline) > 100
+        call remove(g:oldcmdline, 100)
     endif
 endfunction
 
@@ -894,8 +847,6 @@ noremap <F3> :Autoformat<CR>
 " Or to have your code be formatted upon saving your file, you could use something like this:
 " au BufWrite * :Autoformat
 
- " To disable the fallback to vim's indent file, set the following variable to be 0.
-let g:autoformat_autoindent = 0
 
 " autocmd FileType html,css EmmetInstall
 " let g:user_emmet_install_global = 0
@@ -916,25 +867,6 @@ autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<c
 " show quickfix window on compile errors
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 
-let g:jsx_ext_required = 0
-let g:javascript_enable_domhtmlcss = 1
-
-
-" let g:javascript_conceal_function       = "ƒ"
-" let g:javascript_conceal_return         = "⇚"
-" let g:javascript_conceal_prototype      = "¶"
-let g:javascript_conceal_null           = "ø"
-let g:javascript_conceal_undefined      = "¿"
-let g:javascript_conceal_NaN            = "ℕ"
-let g:javascript_conceal_static         = "•"
-let g:javascript_conceal_super          = "Ω"
-let g:javascript_conceal_arrow_function = "⇒"
-
-let g:javascript_conceal_function       = "λ"
-let g:javascript_conceal_this           = "@"
-let g:javascript_conceal_return         = "<"
-let g:javascript_conceal_prototype      = "#"
-let g:javascript_conceal_infinity       = "∞"
 
 hi Conceal guibg=black guifg=red
 
@@ -981,9 +913,6 @@ hi Conceal guibg=black guifg=red
 " REMAP NEEDED
 " nmap <silent> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
 
-let g:jsdoc_allow_input_prompt=1
-let g:jsdoc_return_description=0
-let g:jsdoc_enable_es6=1
 
 " REMAP NEEDED
 " add a comma
@@ -998,15 +927,10 @@ if exists("&wildignorecase")
 endif
 
 
-let g:www_default_search_engine = 'google'
-
-let g:SimpylFold_docstring_preview=1
 
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-" enable all Python syntax highlighting features
-let python_highlight_all = 1
 
 
 
@@ -1017,12 +941,9 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 " in case of glitches
 " au BufWriteCmd *.py write || :PymodeLint
 
-let g:bubbles_leader = '<M>'
 
 au BufRead,BufNewFile *.cson set ft=coffee
 
-let g:indent_guides_color_change_percent = 5
-" let g:indent_guides_enable_on_vim_startup = 1
 
 
 nmap f <Plug>Sneak_s
@@ -1036,16 +957,16 @@ nmap <F8> :TagbarToggle<CR>
 
 call togglebg#map("<F12>")
 
-let s:hidden_all = 0
+
 function! ToggleHiddenAll()
-    if s:hidden_all  == 0
-        let s:hidden_all = 1
+    if g:hidden_all  == 0
+        let g:hidden_all = 1
         set noshowmode
         set noruler
         set laststatus=0
         set noshowcmd
     else
-        let s:hidden_all = 0
+        let g:hidden_all = 0
         set showmode
         set ruler
         set laststatus=2
@@ -1069,10 +990,7 @@ endif
 nnoremap Q @@
 
 
-" let g:multi_cursor_exit_from_insert_mode=0
-" let g:multi_cursor_quit_key='<C-c>'
 " nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
-let g:multi_cursor_next_key='<C-d>'
 
 " visual paste without losing the copied content
 xnoremap p "0p

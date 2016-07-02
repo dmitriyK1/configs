@@ -129,8 +129,6 @@ set virtualedit=all
 " When completing by tag, show the whole tag, not just the function name
 set showfulltag
 
-set textwidth=0
-
 " get rid of the silly characters in separators
 set fillchars = ""
 

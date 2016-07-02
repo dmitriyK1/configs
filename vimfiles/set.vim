@@ -201,7 +201,7 @@ set backupdir^=~/.vim/backup/
 set backupdir^=./.vim-backup/
 set backup
 set writebackup
-set noswapfile
+set swapfile
 
 
 set directory=./.vim-swap//

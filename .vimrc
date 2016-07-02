@@ -419,7 +419,6 @@ set browsedir=current
 set noshowmode    " Don't show the current mode (airline.vim takes care of us)
 set nostartofline " Don't reset cursor to start of line when moving around
 
-map <leader>x :Vex<CR>
 
 autocmd FileType netrw setl bufhidden=wipe
 "map - :Vex<CR>
@@ -428,12 +427,6 @@ autocmd FileType netrw setl bufhidden=wipe
 " ==============================================================================
 " LET VARIABLES END
 " ==============================================================================
-" using colon as a separator to easier read regular expressions;
-" using \v key to make vim regular expressions work as common regexps
-map <leader>% :%s:\v::g<Left><Left><Left>
-
-" find and replace with confirmation
-map <leader>; :%s:\v::cg<Left><Left><Left><Left>
 
  " make regexp search not suck by default
 " nnoremap / /\v
@@ -504,17 +497,6 @@ set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70
 set titleold=""
 execute "set titleold=".hostname()
 
-" clear hlsearch
-nmap <leader><space> :nohlsearch<cr>
-
-" toggle hlsearch
-nnoremap <leader>/ :set invhlsearch<cr>
-
-" Strip all trailing whitespace from a file, using ,W
-nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
-
-noremap <leader>w :update<CR>
-noremap <leader>, :update<CR>
 
 map = <Plug>(easymotion-prefix)
 
@@ -523,11 +505,6 @@ map gn :bn<CR>
 map gp :bp<CR>
 " map gc :bd<CR>
 " map gd :bd<CR>
-map <leader>d :bd<CR>
-" map <leader>bd :Bclose<cr>:tabclose<cr>gT
-
-" Close all the buffers
-" map <leader>ba :bufdo bd<cr>
 
 " set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,nbsp:. " Highlight problematic whitespace
@@ -542,23 +519,11 @@ set gdefault
 " set formatoptions=qrn1
 set formatoptions+=cqron1                   " Some useful formatting options
 
-nmap <leader>l :set list!<CR>
 
 nmap vv ggVG
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
-nnoremap <leader>v V`]
-
-" noremap <leader>r :set relativenumber!<CR>
-nnoremap <leader>n :setlocal number!<CR>
-nmap <silent> <leader>se :e $MYVIMRC<CR>
-noremap <leader>ss :source $MYVIMRC<CR>
-"
-" Source current file
-noremap <leader>so :so%<CR>
-" nnoremap <leader>m :mksession<CR>
-nnoremap <leader>p :set paste!<CR>
 set shiftwidth=4
 set shiftround
 set tabstop=4
@@ -720,9 +685,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Split previously opened file in a split window
-nnoremap <leader>- :split<cr><C-w>j
-nnoremap <leader>\ :vsplit<cr><C-w>l
 
 " set fileformats="unix,dos,mac"
 set nrformats=
@@ -749,13 +711,6 @@ set switchbuf=useopen           " reveal already opened files from the
                                 " quickfix window instead of opening new
                                 " buffers
 
-" Quote words under cursor
-nnoremap <leader>" viW<esc>a"<esc>gvo<esc>i"<esc>gvo<esc>3l
-nnoremap <leader>' viW<esc>a'<esc>gvo<esc>i'<esc>gvo<esc>3l
-
-" Quote current selection
-vnoremap <leader>" <esc>a"<esc>gvo<esc>i"<esc>gvo<esc>ll
-vnoremap <leader>' <esc>a'<esc>gvo<esc>i'<esc>gvo<esc>ll
 
 " nnoremap <tab> %
 " vnoremap <tab> %
@@ -770,9 +725,6 @@ autocmd BufWrite *.html :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufWrite *.js :call DeleteTrailingWS()
 autocmd BufWrite *.css :call DeleteTrailingWS()
-
-" Quickly open a buffer for scripbble
-map <leader>q :e ~/buffer<cr>
 
 "-----------------------------------------------------------------------------
 
@@ -852,21 +804,6 @@ autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,pe
 
 
 
-" Code folding options
-nmap <leader>f0 :set foldlevel=0<CR>
-nmap <leader>f1 :set foldlevel=1<CR>
-nmap <leader>f2 :set foldlevel=2<CR>
-nmap <leader>f3 :set foldlevel=3<CR>
-nmap <leader>f4 :set foldlevel=4<CR>
-nmap <leader>f5 :set foldlevel=5<CR>
-nmap <leader>f6 :set foldlevel=6<CR>
-nmap <leader>f7 :set foldlevel=7<CR>
-nmap <leader>f8 :set foldlevel=8<CR>
-nmap <leader>f9 :set foldlevel=9<CR>
-
-
-" Find merge conflict markers
-map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
 
 " Shortcuts
 " Change Working Directory to that of the current file
@@ -888,8 +825,6 @@ vnoremap > >gv
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
 
-" Adjust viewports to the same size
-map <Leader>= <C-w>=
 
 " Easier horizontal scrolling
 map zl zL
@@ -898,21 +833,7 @@ map zh zH
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
-map <leader>ew :e %%
-map <leader>es :sp %%
-map <leader>ev :vsp %%
-map <leader>et :tabe %%
-" Get to home dir easier
-nmap <leader>h :cd ~/ <CR>
 
-
-" Map <Leader>ff to display all lines with keyword under cursor
-" and ask which one to jump to
-nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
-
-
-" Easier formatting
-" nnoremap <silent> <leader>q gwip
 
 
 
@@ -1055,12 +976,6 @@ augroup END
 
 " }}}
 
-" System clipboard interaction.
-noremap <leader>y "*y
-vnoremap <leader>y "*ygv
-
-" Clean trailing whitespace
-nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
 
 " Insert the directory of the current buffer in command line mode
@@ -1070,9 +985,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap Q gqip
 vnoremap Q gq
 
-" Cmdheight switching
-nnoremap <leader>1 :set cmdheight=1<cr>
-nnoremap <leader>2 :set cmdheight=2<cr>
 
 "nnoremap / /\v
 "vnoremap / /\v
@@ -1086,10 +998,7 @@ nnoremap Vab vabV
 nnoremap VaB vaBV
 
 let &scrolloff=999-&scrolloff
-" Toggle 'keep current line in the center of the screen' mode
-nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
 
-map <leader>c :set cursorline!<cr>
 
 " Numbers {{{
 
@@ -1140,10 +1049,6 @@ vmap ,} c{ <C-R>" }<ESC>
 vmap ,{ c{<C-R>"}<ESC>
 
 
-"Go to last edit location with ,.
-nnoremap <leader>. `.
-
-nmap <leader>w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
  " Delete empty lines
 nmap ,del :g/^$/d<cr>
@@ -1190,9 +1095,6 @@ noremap & :%sgc<cr>
 nnoremap q/ q/i\v
 nnoremap q? q?i\v
 nnoremap <Space> q:i
-nnoremap <silent> <leader>: q:
-
-map <silent> <leader>t :call ConcealToggle()<CR>
 
 " ===============================================================================
 " FUNCTIONS
@@ -1386,25 +1288,7 @@ endfunction
 
 au VimEnter * nested :call LoadSession()
 au VimLeave * :call UpdateSession()
-map <leader>m :call MakeSession()<CR>
 
-" -------------------------------------------------------------------------
- " fugitive git bindings
-nnoremap <leader>ga :Git add %:p<CR><CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit -v -q<CR>
-nnoremap <leader>gt :Gcommit -v -q %:p<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>ge :Gedit<CR>
-nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gw :Gwrite<CR><CR>
-nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <leader>gp :Ggrep<Space>
-nnoremap <leader>gm :Gmove<Space>
-nnoremap <leader>gb :Git branch<Space>
-nnoremap <leader>go :Git checkout<Space>
-nnoremap <leader>gps :Dispatch! git push<CR>
-nnoremap <leader>gpl :Dispatch! git pull<CR>
 " -------------------------------------------------------------------------
 "               Source the vimrc file after saving it
 " -------------------------------------------------------------------------
@@ -1430,45 +1314,6 @@ let g:autoformat_autoindent = 0
 " let g:user_emmet_expandabbr_key = '<tab>'
 
 highlight Cursor guifg=white guibg=green
-
-"==============================================================
-" PLUGIN SETTINGS START
-"==============================================================
-
-" Tabular
-" from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
-nnoremap <leader>a= :Tabularize /=<CR>
-vnoremap <leader>a= :Tabularize /=<CR>
-
-nnoremap <leader>a: :Tabularize /:<CR>
-vnoremap <leader>a: :Tabularize /:<CR>
-
-nnoremap <leader>a- :Tabularize /-<CR>
-vnoremap <leader>a- :Tabularize /-<CR>
-
-nnoremap <leader>a> :Tabularize /><CR>
-vnoremap <leader>a> :Tabularize /><CR>
-
-nnoremap <leader>a[ :Tabularize /[<CR>
-vnoremap <leader>a[ :Tabularize /[<CR>
-
-nnoremap <leader>a{ :Tabularize /{<CR>
-vnoremap <leader>a{ :Tabularize /{<CR>
-
-nnoremap <leader>a( :Tabularize /(<CR>
-vnoremap <leader>a( :Tabularize /(<CR>
-
-nnoremap <leader>a" :Tabularize /"<CR>
-vnoremap <leader>a" :Tabularize /"<CR>
-
-nnoremap <leader>a' :Tabularize /'<CR>
-vnoremap <leader>a' :Tabularize /'<CR>
-
-nnoremap <leader>af :Tabularize /from<CR>
-vnoremap <leader>af :Tabularize /from<CR>
-"==============================================================
-" PLUGIN SETTINGS END
-"==============================================================
 
 " Disable auto comments on a next line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -1561,10 +1406,6 @@ let g:jsdoc_enable_es6=1
 nmap <silent> dJ dG
 nmap <silent> dK dgg
 
-map <silent> <leader>G :GundoToggle<CR>
-
-" map <leader>t :browse oldfiles!<CR>
-
 " for case-insensetive autocomplete
 set infercase
 
@@ -1636,15 +1477,11 @@ function! ToggleHiddenAll()
     endif
 endfunction
 
-nnoremap <silent> <leader>3 :call ToggleHiddenAll()<CR>
-
 call ToggleHiddenAll()
 set nocursorline
 set colorcolumn=0
 
 nnoremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
-
-map <leader>L :set cursorcolumn!<CR>
 
 " Use Ag instead of ack and grep if available
 if executable('ag')
@@ -1666,13 +1503,188 @@ let g:multi_cursor_next_key='<C-d>'
 " visual paste without losing the copied content
 xnoremap p "0p
 
-nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
-nnoremap <silent> <leader>b :CtrlPBuffer<cr>
 
 
 " ================================================================================
 " Leader mappings start
 " ================================================================================
+nnoremap <silent> <leader>b :CtrlPBuffer<cr>
+nnoremap <silent> <leader>l :CtrlPLine<cr>
+nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
+nnoremap <silent> <leader>L :set list!<cr>
+nnoremap <leader>x :Vex<cr>
+
+" using colon as a separator to easier read regular expressions;
+" using \v key to make vim regular expressions work as common regexps
+map <leader>% :%s:\v::g<Left><Left><Left>
+
+" find and replace with confirmation
+map <leader>; :%s:\v::cg<Left><Left><Left><Left>
+
+" clear hlsearch
+nmap <leader><space> :nohlsearch<cr>
+
+" toggle hlsearch
+nnoremap <leader>/ :set invhlsearch<cr>
+
+" Strip all trailing whitespace from a file, using ,W
+nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+
+noremap <leader>w :update<CR>
+noremap <leader>, :update<CR>
+
+map <leader>d :bd<CR>
+" map <leader>bd :Bclose<cr>:tabclose<cr>gT
+
+" Close all the buffers
+" map <leader>ba :bufdo bd<cr>
+
+nnoremap <leader>v V`]
+
+" noremap <leader>r :set relativenumber!<CR>
+nnoremap <leader>n :setlocal number!<CR>
+nmap <silent> <leader>se :e $MYVIMRC<CR>
+noremap <leader>ss :source $MYVIMRC<CR>
+"
+" Source current file
+noremap <leader>so :so%<CR>
+" nnoremap <leader>m :mksession<CR>
+nnoremap <leader>p :set paste!<CR>
+
+" Split previously opened file in a split window
+nnoremap <leader>- :split<cr><C-w>j
+nnoremap <leader>\ :vsplit<cr><C-w>l
+
+" Quote words under cursor
+nnoremap <leader>" viW<esc>a"<esc>gvo<esc>i"<esc>gvo<esc>3l
+nnoremap <leader>' viW<esc>a'<esc>gvo<esc>i'<esc>gvo<esc>3l
+
+" Quote current selection
+vnoremap <leader>" <esc>a"<esc>gvo<esc>i"<esc>gvo<esc>ll
+vnoremap <leader>' <esc>a'<esc>gvo<esc>i'<esc>gvo<esc>ll
+
+" Quickly open a buffer for scripbble
+map <leader>q :e ~/buffer<cr>
+
+" Code folding options
+nmap <leader>f0 :set foldlevel=0<CR>
+nmap <leader>f1 :set foldlevel=1<CR>
+nmap <leader>f2 :set foldlevel=2<CR>
+nmap <leader>f3 :set foldlevel=3<CR>
+nmap <leader>f4 :set foldlevel=4<CR>
+nmap <leader>f5 :set foldlevel=5<CR>
+nmap <leader>f6 :set foldlevel=6<CR>
+nmap <leader>f7 :set foldlevel=7<CR>
+nmap <leader>f8 :set foldlevel=8<CR>
+nmap <leader>f9 :set foldlevel=9<CR>
+
+
+" Find merge conflict markers
+map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+
+" Adjust viewports to the same size
+map <Leader>= <C-w>=
+
+" Some helpers to edit mode
+" http://vimcasts.org/e/14
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+" Get to home dir easier
+nmap <leader>h :cd ~/ <CR>
+
+
+" Map <Leader>ff to display all lines with keyword under cursor
+" and ask which one to jump to
+nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+
+
+" Easier formatting
+" nnoremap <silent> <leader>q gwip
+
+" System clipboard interaction.
+noremap <leader>y "*y
+vnoremap <leader>y "*ygv
+
+" Clean trailing whitespace
+nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
+
+" Cmdheight switching
+nnoremap <leader>1 :set cmdheight=1<cr>
+nnoremap <leader>2 :set cmdheight=2<cr>
+
+" Toggle 'keep current line in the center of the screen' mode
+nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
+
+map <leader>c :set cursorline!<cr>
+
+"Go to last edit location with ,.
+nnoremap <leader>. `.
+
+nmap <leader>w :setlocal wrap!<CR>:setlocal wrap?<CR>
+
+nnoremap <silent> <leader>: q:
+
+map <silent> <leader>t :call ConcealToggle()<CR>
+
+map <leader>m :call MakeSession()<CR>
+
+ " fugitive git bindings
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit -v -q<CR>
+nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <leader>gp :Ggrep<Space>
+nnoremap <leader>gm :Gmove<Space>
+nnoremap <leader>gb :Git branch<Space>
+nnoremap <leader>go :Git checkout<Space>
+nnoremap <leader>gps :Dispatch! git push<CR>
+nnoremap <leader>gpl :Dispatch! git pull<CR>
+
+" Tabular
+" from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
+nnoremap <leader>a= :Tabularize /=<CR>
+vnoremap <leader>a= :Tabularize /=<CR>
+
+nnoremap <leader>a: :Tabularize /:<CR>
+vnoremap <leader>a: :Tabularize /:<CR>
+
+nnoremap <leader>a- :Tabularize /-<CR>
+vnoremap <leader>a- :Tabularize /-<CR>
+
+nnoremap <leader>a> :Tabularize /><CR>
+vnoremap <leader>a> :Tabularize /><CR>
+
+nnoremap <leader>a[ :Tabularize /[<CR>
+vnoremap <leader>a[ :Tabularize /[<CR>
+
+nnoremap <leader>a{ :Tabularize /{<CR>
+vnoremap <leader>a{ :Tabularize /{<CR>
+
+nnoremap <leader>a( :Tabularize /(<CR>
+vnoremap <leader>a( :Tabularize /(<CR>
+
+nnoremap <leader>a" :Tabularize /"<CR>
+vnoremap <leader>a" :Tabularize /"<CR>
+
+nnoremap <leader>a' :Tabularize /'<CR>
+vnoremap <leader>a' :Tabularize /'<CR>
+
+nnoremap <leader>af :Tabularize /from<CR>
+vnoremap <leader>af :Tabularize /from<CR>
+
+map <silent> <leader>G :GundoToggle<CR>
+" map <leader>t :browse oldfiles!<CR>
+
+nnoremap <silent> <leader>3 :call ToggleHiddenAll()<CR>
+map <leader>L :set cursorcolumn!<CR>
 
 " ================================================================================
 " Leader mappings end

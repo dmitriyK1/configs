@@ -286,7 +286,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
-Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align' "{{{
+  " xmap gl <Plug>(EasyAlign)
+  " nmap gl <Plug>(EasyAlign)
+"}}}
 Plug 'sjl/gundo.vim'
 Plug 'frace/vim-bubbles'
 Plug 'tmhedberg/SimpylFold'

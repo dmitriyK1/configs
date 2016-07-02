@@ -181,3 +181,4 @@ nnoremap <silent> <leader>L :set list!<cr>
 
 " delete duplicated lines
 nnoremap <silent> <leader>u :sort u<cr>
+vnoremap <silent> <leader>u :sort u<cr>

@@ -1055,8 +1055,6 @@ nmap ,del :g/^$/d<cr>
 
 " study later: https://github.com/skwp/dotfiles/tree/master/vim/settings
 
-" TODO: split to files ( leader-commands etc. ) and source from here
-
 " TODO: fix visual selection not showing up instantly
 
 " This mapping will change the behavior of the <Enter> key when the popup menu is visible. In that case the Enter key will simply select the highlighted menu item, just as <C-Y> does.

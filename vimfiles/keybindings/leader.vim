@@ -106,7 +106,7 @@ nnoremap <leader>1 :set cmdheight=1<cr>
 nnoremap <leader>2 :set cmdheight=2<cr>
 
 " Toggle 'keep current line in the center of the screen' mode
-nnoremap <leader>C :let &scrolloff=999-&scrolloff<cr>
+nnoremap <leader>C :let &scrolloff=999-&scrolloff+3<cr>
 
 map <leader>c :set cursorline!<cr>
 

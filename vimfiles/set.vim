@@ -190,8 +190,8 @@ set linespace=0                 " No extra spaces between rows
 set winminheight=0              " Windows can be 0 line high
 
 set scrolljump=5                " Lines to scroll when cursor leaves screen
-set scrolloff=3                 " Minimum lines to keep above and below cursor
 set foldenable                  " Auto fold code
+set scrolloff=999               " Minimum lines to keep above and below cursor; 999 - keep centered
 
 
 set backupdir-=.

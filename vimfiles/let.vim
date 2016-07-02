@@ -81,3 +81,4 @@ let g:hidden_all = 0
 " let g:multi_cursor_exit_from_insert_mode=0
 " let g:multi_cursor_quit_key='<C-c>'
 let g:multi_cursor_next_key='<C-d>'
+

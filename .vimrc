@@ -124,7 +124,6 @@ source ~/vimfiles/set.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/packages.vim
 
-let &scrolloff=999-&scrolloff
 
 runtime macros/matchit.vim
 

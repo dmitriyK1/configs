@@ -128,13 +128,11 @@ source ~/vimfiles/let.vim
 source ~/vimfiles/set.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/packages.vim
-
-
+source ~/vimfiles/aucmds.vim
 
 
 runtime macros/matchit.vim
 
-autocmd FileType netrw setl bufhidden=wipe
 
 filetype plugin indent on
 syntax on
@@ -143,63 +141,6 @@ syntax on
 nohlsearch
 
 execute "set titleold=".hostname()
-
-" -------------------------------------------------------------------------
-"               Prevent cursor from moving when leaving insert mode
-" -------------------------------------------------------------------------
-"let CursorColumnI = 0 "the cursor column position in INSERT
-"autocmd InsertEnter * let CursorColumnI = col('.')
-"autocmd CursorMovedI * let CursorColumnI = col('.')
-"autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
-" -------------------------------------------------------------------------
-
-
-autocmd FileType javascript,css,sh nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
-autocmd FileType javascript,css,sh inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
-
-
-
-
-" Resize splits when the window is resized
-au VimResized * :wincmd =
-
-" Cursorline {{{
-" Only show cursorline in the current window and in normal mode.
-augroup cline
-    au!
-    "au WinLeave * set nocursorline
-    "au WinEnter * set cursorline
-    "au InsertEnter * set nocursorline
-    "au InsertLeave * set cursorline
-augroup END
-" }}}
-
-augroup file_types
-    autocmd!
-    autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
-    autocmd BufRead,BufNewFile *.md set filetype=markdown
-    autocmd BufRead,BufNewFile *.txt set filetype=markdown
-    autocmd BufRead,BufNewFile *.module set filetype=php
-    autocmd BufRead,BufNewFile *.install set filetype=php
-    autocmd BufRead,BufNewFile *.test set filetype=php
-    autocmd BufRead,BufNewFile *.inc set filetype=php
-    autocmd BufRead,BufNewFile *.profile set filetype=php
-    autocmd BufRead,BufNewFile *.view set filetype=php
-    autocmd BufNewFile,BufRead *.less set filetype=less
-    autocmd BufRead,BufNewFile *.js set ft=javascript syntax=javascript
-    autocmd BufRead,BufNewFile *.ts set ft=typescript syntax=typescript
-    autocmd BufRead,BufNewFile *.es6 set ft=javascript syntax=javascript
-    autocmd BufRead,BufNewFile *.json set ft=json syntax=javascript
-    autocmd BufRead,BufNewFile *.twig set ft=htmldjango
-    autocmd BufRead,BufNewFile *.rabl set ft=ruby
-    autocmd BufRead,BufNewFile *.jade set ft=jade
-augroup END
-
-
-
-
-au FocusLost * silent! wa
-" au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
 
 
 
@@ -212,10 +153,7 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
-autocmd BufWrite *.html :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-autocmd BufWrite *.js :call DeleteTrailingWS()
-autocmd BufWrite *.css :call DeleteTrailingWS()
+
 
 "-----------------------------------------------------------------------------
 
@@ -223,37 +161,6 @@ autocmd BufWrite *.css :call DeleteTrailingWS()
 
 " Don't close window, when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()
-
-
-
-
-
-au filetype help set nonumber
-
-
-
-
-
-
-" Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
-
-
-" Line Return {{{
-
-" Make sure Vim returns to the same line when you reopen a file.
-" Thanks, Amit
-augroup line_return
-    au!
-    au BufReadPost *
-        \ if line("'\"") > 0 && line("'\"") <= line("$") |
-        \     execute 'normal! g`"zvzz' |
-        \ endif
-augroup END
-
-" }}}
-
-
 
 
 
@@ -442,41 +349,10 @@ function! LoadSession()
   endif
 endfunction
 
-au VimEnter * nested :call LoadSession()
-au VimLeave * :call UpdateSession()
 
-" -------------------------------------------------------------------------
-"               Source the vimrc file after saving it
-" -------------------------------------------------------------------------
 
-augroup reload_vimrc
-  if has("autocmd")
-    autocmd!
-    autocmd bufwritepost $MYVIMRC nested source $MYVIMRC
-  endif
-augroup END
-
-autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
-
-" autocmd FileType html,css EmmetInstall
 " let g:user_emmet_install_global = 0
 " let g:user_emmet_expandabbr_key = '<tab>'
-
-
-" Disable auto comments on a next line
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-
-autocmd FileType javascript vnoremap <buffer>  <c-f> : call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <c-f>        : call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <c-f>         : call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <c-f>        : call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<cr>
-
-" show quickfix window on compile errors
-autocmd QuickFixCmdPost * nested cwindow | redraw!
-
-
 
 " Map the conceal characters to their expanded forms.
 " inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
@@ -517,25 +393,6 @@ autocmd QuickFixCmdPost * nested cwindow | redraw!
 " ================================================================================
 " Rainbow parentheses options end
 " ================================================================================
-
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
-" ensure SimpylFold init properly
-autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
-autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
-
-" in case of glitches
-" au BufWriteCmd *.py write || :PymodeLint
-
-
-au BufRead,BufNewFile *.cson set ft=coffee
-
-autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
-
-
-
-
-
 function! ToggleHiddenAll()
     if g:hidden_all  == 0
         let g:hidden_all = 1
@@ -559,7 +416,6 @@ call togglebg#map("<F12>")
 
 source ~/vimfiles/keybindings/map.vim
 source ~/vimfiles/keybindings/leader.vim
-
 
 
 " from http://ku1ik.com/

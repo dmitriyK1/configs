@@ -229,7 +229,7 @@ Plug 'endel/vim-github-colorscheme'
 " Colorschemes end
 
 Plug 'AndrewRadev/switch.vim' "{{{
-  let g:switch_mapping = ""
+  " let g:switch_mapping = ""
 "}}}
 
 Plug 'mhinz/vim-grepper' "{{{
@@ -547,7 +547,7 @@ nmap vv ggVG
 nnoremap Y y$
 nnoremap <leader>v V`]
 
-noremap <leader>r :set relativenumber!<CR>
+" noremap <leader>r :set relativenumber!<CR>
 nnoremap <leader>n :setlocal number!<CR>
 nmap <silent> <leader>se :e $MYVIMRC<CR>
 noremap <leader>ss :source $MYVIMRC<CR>

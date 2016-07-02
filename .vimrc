@@ -128,6 +128,8 @@
 
 " TODO: check if all let mappings were transferred
 
+" TODO: remove unnecessary functions (find similar plugins instead)
+
 filetype plugin indent on
 syntax on
 

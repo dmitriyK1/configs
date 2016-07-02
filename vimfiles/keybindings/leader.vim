@@ -1,7 +1,6 @@
 nnoremap <silent> <leader>b :CtrlPBuffer<cr>
 nnoremap <silent> <leader>l :CtrlPLine<cr>
 nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
-nnoremap <silent> <leader>L :set list!<cr>
 nnoremap <leader>x :Vex<cr>
 
 " using colon as a separator to easier read regular expressions;
@@ -138,8 +137,10 @@ nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :Dispatch! git push<CR>
 nnoremap <leader>gpl :Dispatch! git pull<CR>
 
+" --------------------------------------------------------------------------------
 " Tabular
 " from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
+" --------------------------------------------------------------------------------
 nnoremap <leader>a= :Tabularize /=<CR>
 vnoremap <leader>a= :Tabularize /=<CR>
 
@@ -169,10 +170,11 @@ vnoremap <leader>a' :Tabularize /'<CR>
 
 nnoremap <leader>af :Tabularize /from<CR>
 vnoremap <leader>af :Tabularize /from<CR>
+" --------------------------------------------------------------------------------
 
 map <silent> <leader>G :GundoToggle<CR>
 " map <leader>t :browse oldfiles!<CR>
 
 nnoremap <silent> <leader>3 :call ToggleHiddenAll()<CR>
-map <leader>L :set cursorcolumn!<CR>
 
+nnoremap <silent> <leader>L :set list!<cr>

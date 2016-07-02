@@ -533,7 +533,6 @@ au BufRead,BufNewFile *.cson set ft=coffee
 
 
 
-call togglebg#map("<F12>")
 
 
 function! ToggleHiddenAll()
@@ -554,20 +553,11 @@ endfunction
 
 call ToggleHiddenAll()
 
+call togglebg#map("<F12>")
+
 
 source ~/vimfiles/keybindings/map.vim
-
-
-
-
-" Leader mappings
 source ~/vimfiles/keybindings/leader.vim
-
-" Ctrl mappings
-
-" Alt mappings
-
-
 
 
 autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg

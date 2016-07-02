@@ -126,6 +126,8 @@ source ~/vimfiles/let.vim
 source ~/vimfiles/set.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/packages.vim
+source ~/vimfiles/highlight.vim
+
 
 
 
@@ -228,9 +230,6 @@ command! Bclose call <SID>BufcloseCloseIt()
 au filetype help set nonumber
 
 
-
-" highlight clear SignColumn      " SignColumn should match background
-" highlight clear LineNr          " Current line number row will have same background color in relative mode
 
 
 
@@ -468,7 +467,6 @@ autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 " let g:user_emmet_install_global = 0
 " let g:user_emmet_expandabbr_key = '<tab>'
 
-highlight Cursor guifg=white guibg=green
 
 " Disable auto comments on a next line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -526,7 +524,6 @@ hi Conceal guibg=black guifg=red
 " Rainbow parentheses options end
 " ================================================================================
 
-highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " ensure SimpylFold init properly

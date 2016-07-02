@@ -124,30 +124,27 @@
 
 " TODO: add package-specific let\set settings to packages.vim
 
+filetype plugin indent on
+syntax on
+
+runtime macros/matchit.vim
+
 source ~/vimfiles/let.vim
 source ~/vimfiles/set.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/packages.vim
 source ~/vimfiles/aucmds.vim
 source ~/vimfiles/functions.vim
+source ~/vimfiles/keybindings/map.vim
+source ~/vimfiles/keybindings/leader.vim
 
-runtime macros/matchit.vim
+colorscheme molokai
 
-filetype plugin indent on
-syntax on
-
-nohlsearch   " When sourcing this file, do not immediately turn on highlighting
+source ~/vimfiles/highlight.vim
 
 execute "set titleold=".hostname()
-
 command! Bclose call <SID>BufcloseCloseIt()   " Don't close window, when deleting a buffer
-
 call ToggleHiddenAll()
 call togglebg#map("<F12>")
 
-let g:molokai_original=0      " use a darker background
-colorscheme molokai
-
-source ~/vimfiles/keybindings/map.vim
-source ~/vimfiles/keybindings/leader.vim
-source ~/vimfiles/highlight.vim
+nohlsearch   " When sourcing this file, do not immediately turn on highlighting

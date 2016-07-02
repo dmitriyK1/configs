@@ -107,6 +107,7 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 au BufRead,BufNewFile *.cson set ft=coffee
 
 autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
+autocmd Colorscheme * highlight Conceal guibg=black guifg=red
 
 autocmd BufWrite *.html :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()

@@ -16,9 +16,6 @@
 
 " TODO: add textobject plugins
 
-" TODO: use vim-grepper instead of other text search plugins
-" https://github.com/mhinz/vim-grepper
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )
@@ -231,6 +228,30 @@ Plug 'sjl/badwolf'
 Plug 'endel/vim-github-colorscheme'
 " Colorschemes end
 
+Plug 'AndrewRadev/switch.vim' "{{{
+  let g:switch_mapping = ""
+"}}}
+
+Plug 'mhinz/vim-grepper' "{{{
+  let g:grepper = {
+      \ 'tools':     ['ag', 'csearch', 'findstr'],
+      \ 'dispatch':  1,
+      \ 'open':      1,
+      \ 'switch':    0,
+      \ 'jump':      0,
+      \ 'ag': {
+      \   'grepprg': 'ag --nogroup --nocolor --column',
+      \   'grepformat': '%f:%l:%c:%m'
+      \ },
+      \ 'csearch': {
+      \   'grepprg': 'csearch -n',
+      \   'grepformat': '%f:%l:%m'
+      \ }}
+
+  " nmap gs  <plug>(GrepperOperator)
+  xmap gs  <plug>(GrepperOperator)
+"}}}
+
 Plug 'vasconcelloslf/vim-interestingwords'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ajh17/VimCompletesMe'
@@ -251,7 +272,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'spolu/dwm.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'lfilho/cosco.vim'
-Plug 'AndrewRadev/switch.vim'
 Plug 'powerman/vim-plugin-ruscmd'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

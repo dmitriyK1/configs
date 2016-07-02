@@ -16,6 +16,8 @@
 
 " TODO: add textobject plugins
 
+" TODO: remove custom duplicated functionality, that already present in plugins
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )
@@ -126,7 +128,6 @@ source ~/vimfiles/let.vim
 source ~/vimfiles/set.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/packages.vim
-source ~/vimfiles/highlight.vim
 
 
 
@@ -255,12 +256,6 @@ augroup END
 
 
 
-autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
-
-" from http://ku1ik.com/
-colorscheme monokai2
-" colorscheme molokai
-" colorscheme greenvision
 
 " ===============================================================================
 " FUNCTIONS
@@ -482,7 +477,6 @@ autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<c
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 
 
-hi Conceal guibg=black guifg=red
 
 " Map the conceal characters to their expanded forms.
 " inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
@@ -563,6 +557,9 @@ call ToggleHiddenAll()
 
 source ~/vimfiles/keybindings/map.vim
 
+
+
+
 " Leader mappings
 source ~/vimfiles/keybindings/leader.vim
 
@@ -570,3 +567,12 @@ source ~/vimfiles/keybindings/leader.vim
 
 " Alt mappings
 
+
+
+
+autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
+
+" from http://ku1ik.com/
+colorscheme monokai2
+
+source ~/vimfiles/highlight.vim

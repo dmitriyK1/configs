@@ -122,6 +122,8 @@
 " https://github.com/saaguero/dotvim/blob/master/.vimrc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let s:is_nvim=has('nvim')
+
 
 " Use vim settings, rather then vi settings (much better!)
 " This must be first, because it changes other options as a side effect.
@@ -1555,11 +1557,8 @@ let g:bubbles_leader = '<M>'
 
 au BufRead,BufNewFile *.cson set ft=coffee
 
-map <leader>S :Switch<CR>
-
 let g:indent_guides_color_change_percent = 5
 " let g:indent_guides_enable_on_vim_startup = 1
-
 
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -1583,14 +1582,12 @@ function! ToggleHiddenAll()
         set noruler
         set laststatus=0
         set noshowcmd
-        set cmdheight=1
     else
         let s:hidden_all = 0
         set showmode
         set ruler
         set laststatus=2
         set showcmd
-        set cmdheight=2
     endif
 endfunction
 

@@ -222,8 +222,11 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'shaond/vim-guru'
 Plug 'vim-scripts/obsidian2.vim'
 Plug 'gosukiwi/vim-atom-dark'
+Plug 'sjl/badwolf'
+Plug 'endel/vim-github-colorscheme'
 " Colorschemes end
 
+Plug 'vasconcelloslf/vim-interestingwords'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ajh17/VimCompletesMe'
 Plug 'haya14busa/incsearch.vim' "{{{
@@ -232,6 +235,8 @@ Plug 'haya14busa/incsearch.vim' "{{{
 "}}}
 Plug 'kana/vim-textobj-user'
 Plug 'saaguero/vim-textobj-pastedtext'
+Plug 'konfekt/fastfold'
+Plug 'tpope/vim-dispatch'
 Plug 'FelikZ/ctrlp-py-matcher' "{{{
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 ""}}}
@@ -273,8 +278,14 @@ Plug 'klen/python-mode'
 " readline keybindings
 Plug 'tpope/vim-rsi'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
+    let g:nerdtree_tabs_open_on_gui_startup = 0
+    let NERDTreeIgnore=['\.pyc$', '\~$']
+    let g:NERDTreeDirArrowExpandable = '▸'
+    let g:NERDTreeDirArrowCollapsible = '▾'
+    map - :NERDTreeToggle<CR>
+"}}}
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
 " Plug 'Xuyuanp/nerdtree-git-plugin'            " not working for some reason
 Plug 'mattn/emmet-vim'
 Plug 'Chiel92/vim-autoformat'
@@ -288,7 +299,10 @@ Plug 'mileszs/ack.vim'
 Plug 'itchyny/lightline.vim'
 " Plug 'airblade/vim-gitgutter'
 " braces auto-closing
-Plug 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate' "{{{
+    let g:delimitMate_expand_cr=1
+    let g:delimitMate_expand_space=1
+"}}}
 " js indentation support
 Plug 'sheerun/vim-polyglot'
 Plug 'Olical/vim-syntax-expand'
@@ -326,8 +340,6 @@ runtime macros/matchit.vim
 " ==============================================================================
 " LET VARIABLES START
 " ==============================================================================
-let g:delimitMate_expand_cr = 1
-let g:delimitMate_expand_space = 1
 
 let s:oldcmdline = [ ]
 let mapleader=","
@@ -373,7 +385,6 @@ map <leader>x :Vex<CR>
 
 autocmd FileType netrw setl bufhidden=wipe
 "map - :Vex<CR>
-map - :NERDTreeToggle<CR>
 "map = <C-l><C-w>o
 
 " ==============================================================================
@@ -1543,8 +1554,6 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
 
-let g:nerdtree_tabs_open_on_gui_startup = 0
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 let g:ctrlp_map = '<c-t>'
 
@@ -1562,8 +1571,6 @@ au BufRead,BufNewFile *.cson set ft=coffee
 let g:indent_guides_color_change_percent = 5
 " let g:indent_guides_enable_on_vim_startup = 1
 
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
 
 nmap f <Plug>Sneak_s
 nmap F <Plug>Sneak_S

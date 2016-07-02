@@ -242,9 +242,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'saaguero/vim-textobj-pastedtext'
 Plug 'konfekt/fastfold'
 Plug 'tpope/vim-dispatch'
-Plug 'FelikZ/ctrlp-py-matcher' "{{{
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-""}}}
 Plug 'nazo/pt.vim'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
@@ -282,7 +279,20 @@ Plug 'tpope/vim-sleuth'
 Plug 'klen/python-mode'
 " readline keybindings
 Plug 'tpope/vim-rsi'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'ctrlpvim/ctrlp.vim' "{{{
+  let g:ctrlp_map = '<c-t>'
+  let g:ctrlp_max_files = 0
+  let g:ctrlp_lazy_update = 50
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+  let g:ctrlp_match_window = 'bottom,order:btt,min:20,max:20,results:20'
+  let g:ctrlp_working_path_mode = 0
+  let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
+        \ 'file': '\.pyc$\|\.pyo$',
+        \ }
+  map <silent> <leader>r :CtrlPMRUFiles<CR>
+"}}}
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
     let g:nerdtree_tabs_open_on_gui_startup = 0
     let NERDTreeIgnore=['\.pyc$', '\~$']
@@ -1531,7 +1541,6 @@ nmap <silent> dK dgg
 map <silent> <leader>G :GundoToggle<CR>
 
 " map <leader>t :browse oldfiles!<CR>
-map <silent> <leader>r :CtrlPMRUFiles<CR>
 
 " for case-insensetive autocomplete
 set infercase
@@ -1560,7 +1569,6 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 let python_highlight_all = 1
 
 
-let g:ctrlp_map = '<c-t>'
 
 " ensure SimpylFold init properly
 autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr

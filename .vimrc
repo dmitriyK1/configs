@@ -560,9 +560,13 @@ source ~/vimfiles/keybindings/map.vim
 source ~/vimfiles/keybindings/leader.vim
 
 
-autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
 
 " from http://ku1ik.com/
-colorscheme monokai2
+
+
+let g:molokai_original=0      " use a darker background
+colorscheme molokai
 
 source ~/vimfiles/highlight.vim
+
+autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg

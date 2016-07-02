@@ -3,6 +3,9 @@ call plug#begin()
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
 
 " Colorschemes:
+Plug 'jaromero/vim-monokai-refined'
+Plug 'sickill/vim-monokai'
+Plug 'tomasr/molokai'
 Plug 'michalbachowski/vim-wombat256mod'
 Plug 'dracula/vim'
 Plug 'ciaranm/inkpot'
@@ -40,6 +43,8 @@ Plug 'gosukiwi/vim-atom-dark'
 Plug 'sjl/badwolf'
 Plug 'endel/vim-github-colorscheme'
 " Colorschemes end
+
+Plug 'kana/vim-arpeggio'
 
 Plug 'AndrewRadev/switch.vim' "{{{
   " let g:switch_mapping = ""

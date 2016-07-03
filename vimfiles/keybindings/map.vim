@@ -325,3 +325,4 @@ xnoremap p "0p
 " inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
 " inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
 
+call togglebg#map("<F12>")

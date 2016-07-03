@@ -151,6 +151,5 @@ source ~/vimfiles/highlight.vim
 execute "set titleold=".hostname()
 command! Bclose call <SID>BufcloseCloseIt()   " Don't close window, when deleting a buffer
 call ToggleHiddenAll()
-call togglebg#map("<F12>")
 
 nohlsearch   " When sourcing this file, do not immediately turn on highlighting

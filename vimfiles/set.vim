@@ -276,6 +276,6 @@ set noequalalways " do not auto-resize windows when opening/closing them!
 set confirm       " ask for confirmation by default (instead of silently failing)
 
 
-set nocursorline
+set cursorline
 
 set colorcolumn=0             " good value: 80

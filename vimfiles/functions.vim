@@ -123,7 +123,7 @@ function! StripTrailingWhitespace()
     call cursor(l, c)
 endfunction
 
-function! s:NumberTextObject(whole)
+function! NumberTextObject(whole)
     normal! v
 
     while getline('.')[col('.')] =~# '\v[0-9]'

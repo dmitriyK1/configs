@@ -44,6 +44,7 @@ Plug 'sjl/badwolf'
 Plug 'endel/vim-github-colorscheme'
 " Colorschemes end
 
+Plug 'wellle/targets.vim'
 Plug 'romainl/vim-qf'
 Plug 'kana/vim-arpeggio'
 
@@ -149,7 +150,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-heroku'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
-Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion' "{{{
+  map = <Plug>(easymotion-prefix)
+"}}}
 Plug 'vim-scripts/occur.vim'
 Plug 'mileszs/ack.vim'
 " custom status line

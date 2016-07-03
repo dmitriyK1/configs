@@ -13,7 +13,7 @@ function! ConcealToggle()
     endif
 endfunction
 
-function! <SID>saveUndoHistory(cmdline, cmdpos)
+function! SaveUndoHistory(cmdline, cmdpos)
     if len(g:oldcmdline) == 0 || a:cmdline != g:oldcmdline[0][0]
         call insert(g:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
     else
@@ -25,21 +25,21 @@ function! <SID>saveUndoHistory(cmdline, cmdpos)
 endfunction
 
 
-function! <SID>KillLine()
-    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
+function! KillLine()
+    call SaveUndoHistory(getcmdline(), getcmdpos())
     let l:cmd = getcmdline()
     let l:rem = strpart(l:cmd, getcmdpos() - 1)
     if ('' != l:rem)
         let @c = l:rem
     endif
     let l:ret = strpart(l:cmd, 0, getcmdpos() - 1)
-    call <SID>saveUndoHistory(l:ret, getcmdpos())
+    call SaveUndoHistory(l:ret, getcmdpos())
     return l:ret
 endfunction
 
 
-function! <SID>KillWord()
-    call <SID>saveUndoHistory(getcmdline(), getcmdpos())
+function! KillWord()
+    call SaveUndoHistory(getcmdline(), getcmdpos())
     let l:loc = strpart(getcmdline(), 0, getcmdpos() - 1)
     let l:roc = strpart(getcmdline(), getcmdpos() - 1)
     if (l:roc =~ '\v^\s*\w')
@@ -54,7 +54,7 @@ function! <SID>KillWord()
     endif
     let @c = l:rem
     let l:ret = l:loc . strpart(l:roc, strlen(l:rem))
-    call <SID>saveUndoHistory(l:ret, getcmdpos())
+    call SaveUndoHistory(l:ret, getcmdpos())
     return l:ret
 endfunction
 
@@ -66,7 +66,7 @@ function! CmdLine(str)
 endfunction
 
 
-function! <SID>BufcloseCloseIt()
+function! BufcloseCloseIt()
    let l:currentBufNum = bufnr("%")
    let l:alternateBufNum = bufnr("#")
 

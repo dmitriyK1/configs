@@ -22,7 +22,8 @@ nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 noremap <leader>w :update<CR>
 noremap <leader>, :update<CR>
 
-map <leader>d :bd<CR>
+map <silent> <leader>d :Bclose<cr>
+map <silent> <leader>D :Bclose<cr>:tabclose<cr>
 " map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers

@@ -139,8 +139,8 @@ source ~/vimfiles/let.vim
 source ~/vimfiles/set.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/packages.vim
-source ~/vimfiles/aucmds.vim
 source ~/vimfiles/functions.vim
+source ~/vimfiles/aucmds.vim
 source ~/vimfiles/keybindings/map.vim
 source ~/vimfiles/keybindings/leader.vim
 

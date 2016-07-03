@@ -2,6 +2,7 @@ let g:is_nvim=has('nvim')
 
 let g:oldcmdline = [ ]
 let mapleader=","
+let maplocalleader=","
 
 " Hit enter in the file browser to open the selected
 " file with :vsplit to the right of the browser.

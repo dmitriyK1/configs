@@ -183,3 +183,42 @@ nnoremap <silent> <leader>L :set list!<cr>
 " delete duplicated lines
 nnoremap <silent> <leader>u :sort u<cr>
 vnoremap <silent> <leader>u :sort u<cr>
+
+
+" ,# Surround a word with #{ruby interpolation}
+map <leader># ysiw#
+vmap <leader># c#{<C-R>"}<ESC>
+
+" ," Surround a word with "quotes"
+map <leader>" ysiw"
+vmap <leader>" c"<C-R>""<ESC>
+
+" ,' Surround a word with 'single quotes'
+map <leader>' ysiw'
+vmap <leader>' c'<C-R>"'<ESC>
+
+" ,) or ,( Surround a word with (parens)
+" The difference is in whether a space is put in
+map <leader>( ysiw(
+map <leader>) ysiw)
+vmap <leader>( c( <C-R>" )<ESC>
+vmap <leader>) c(<C-R>")<ESC>
+
+" ,[ Surround a word with [brackets]
+map <leader>] ysiw]
+map <leader>[ ysiw[
+vmap <leader>[ c[ <C-R>" ]<ESC>
+vmap <leader>] c[<C-R>"]<ESC>
+
+" ,{ Surround a word with {braces}
+map <leader>} ysiw}
+map <leader>{ ysiw{
+vmap <leader>} c{ <C-R>" }<ESC>
+vmap <leader>{ c{<C-R>"}<ESC>
+
+
+
+" Delete empty lines
+nmap <leader>del :g/^$/d<cr>
+
+

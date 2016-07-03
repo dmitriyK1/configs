@@ -5,7 +5,7 @@
 " --------------------------------------------------------------------------------
 " Command mode mappings
 " --------------------------------------------------------------------------------
-cnoremap <C-K> <C-\>e<SID>KillLine()<CR>
+cnoremap <C-K> <C-\>e KillLine()<CR>
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
 cnoremap <C-e> <End>
@@ -17,7 +17,7 @@ cnoremap <C-p> <Up>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 " cnoremap <C-g>  <C-c>
-cnoremap <Esc>d <C-\>e<SID>KillWord()<CR>
+cnoremap <Esc>d <C-\>e KillWord()<CR>
 " Shortcuts
 " Change Working Directory to that of the current file
 cmap cwd lcd %:p:h

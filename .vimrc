@@ -130,6 +130,10 @@
 
 " TODO: remove unnecessary functions (find similar plugins instead)
 
+" TODO: https://github.com/csscomb/vim-csscomb
+
+
+
 filetype plugin indent on
 syntax on
 

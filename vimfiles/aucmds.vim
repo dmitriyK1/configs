@@ -45,10 +45,6 @@ au FocusLost * silent! wa
 
 au filetype help set nonumber
 
-" Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> if !exists('g:spf13_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
-
-
 " Line Return {{{
 
 " Make sure Vim returns to the same line when you reopen a file.
@@ -109,11 +105,11 @@ au BufRead,BufNewFile *.cson set ft=coffee
 autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
 autocmd Colorscheme * highlight Conceal guibg=black guifg=red
 
-autocmd BufWrite *.html :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-autocmd BufWrite *.js :call DeleteTrailingWS()
-autocmd BufWrite *.css :call DeleteTrailingWS()
-
+" TODO: add ^M chars removal
+autocmd FileWritePre    * :call DeleteTrailingWS()
+autocmd FileAppendPre   * :call DeleteTrailingWS()
+autocmd FilterWritePre  * :call DeleteTrailingWS()
+autocmd BufWritePre     * :call DeleteTrailingWS()
 
 " -------------------------------------------------------------------------
 "               Prevent cursor from moving when leaving insert mode

@@ -44,6 +44,11 @@ Plug 'sjl/badwolf'
 Plug 'endel/vim-github-colorscheme'
 " Colorschemes end
 
+Plug 'kana/vim-smartinput'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-function'
+Plug 'kana/vim-textobj-line'
+Plug 'glts/vim-textobj-comment'
 Plug 'wellle/targets.vim'
 Plug 'romainl/vim-qf'
 Plug 'kana/vim-arpeggio'

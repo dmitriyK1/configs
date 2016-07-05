@@ -49,7 +49,6 @@ map <F6> :setlocal spell! spelllang=en_us<cr>
 nmap <F8> :TagbarToggle<cr>
 
 nnoremap <F10> :b <C-Z>
-nnoremap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<cr>
 call togglebg#map("<F12>")
 
 

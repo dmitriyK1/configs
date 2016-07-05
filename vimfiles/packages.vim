@@ -47,7 +47,12 @@ Plug 'pR0Ps/molokai-dark'
 Plug 'zeekay/vice-colorful'
 " Colorschemes end
 
-Plug 'zeekay/vim-color-switch'
+" Plug 'xolox/vim-session'
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+Plug 'xolox/vim-shell'
+Plug 'xolox/vim-easytags'
 
 Plug 'kana/vim-smartinput'
 Plug 'kana/vim-textobj-entire'

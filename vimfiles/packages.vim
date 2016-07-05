@@ -42,7 +42,12 @@ Plug 'vim-scripts/obsidian2.vim'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'sjl/badwolf'
 Plug 'endel/vim-github-colorscheme'
+Plug 'changyuheng/color-scheme-holokai-for-vim'
+Plug 'pR0Ps/molokai-dark'
+Plug 'zeekay/vice-colorful'
 " Colorschemes end
+
+Plug 'zeekay/vim-color-switch'
 
 Plug 'kana/vim-smartinput'
 Plug 'kana/vim-textobj-entire'

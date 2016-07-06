@@ -210,7 +210,7 @@ nnoremap Q @@
 nnoremap Y y$
 
 " -------------------V--------------------
-nmap vv ggVG
+nmap VV ggVG
 
 " Fix linewise visual selection of various text objects
 nnoremap Vit vitVkoj

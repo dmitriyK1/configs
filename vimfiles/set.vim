@@ -279,3 +279,6 @@ set confirm       " ask for confirmation by default (instead of silently failing
 set cursorline
 
 set colorcolumn=0             " good value: 80
+
+" show linebreak
+set showbreak=>>>

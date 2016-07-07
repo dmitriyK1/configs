@@ -120,6 +120,6 @@ autocmd BufWritePre     * :call DeleteTrailingWS()
 "autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
 " -------------------------------------------------------------------------
 
-autocmd FileType javascript inoremap <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
-autocmd FileType javascript inoremap <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
-autocmd FileType javascript inoremap <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
+autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>

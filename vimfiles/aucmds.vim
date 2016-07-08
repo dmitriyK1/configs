@@ -126,3 +126,7 @@ autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#exp
 
 " maximize vim on startup
 au GUIEnter * simalt ~x
+
+" automatically open quickfix window on :grep
+" https://github.com/tpope/vim-fugitive
+autocmd QuickFixCmdPost *grep* cwindow

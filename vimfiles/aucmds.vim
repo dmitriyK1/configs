@@ -123,3 +123,6 @@ autocmd BufWritePre     * :call DeleteTrailingWS()
 autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
 autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
 autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+
+" maximize vim on startup
+au GUIEnter * simalt ~x

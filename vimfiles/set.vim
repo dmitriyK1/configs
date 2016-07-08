@@ -282,3 +282,8 @@ set colorcolumn=0             " good value: 80
 
 " show linebreak
 set showbreak=>>>
+
+" maximize vim window on startup:
+" set lines=999 columns=999
+" winpos 0 0
+

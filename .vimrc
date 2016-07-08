@@ -153,7 +153,6 @@ colorscheme molokai
 source ~/vimfiles/highlight.vim
 
 execute "set titleold=".hostname()
-command! Bclose call BufcloseCloseIt()   " Don't close window, when deleting a buffer
 call ToggleHiddenAll()
 
 nohlsearch   " When sourcing this file, do not immediately turn on highlighting

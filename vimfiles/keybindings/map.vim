@@ -30,7 +30,7 @@ cmap w!! w !sudo tee % >/dev/null
 " Insert the directory of the current buffer in command line mode
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-
+command! Bclose call BufcloseCloseIt()   " Don't close window, when deleting a buffer
 
 " --------------------------------------------------------------------------------
 " F mappings

@@ -11,3 +11,4 @@ set incsearch
 set wrapscan
 set number
 " set relativenumber
+set surround

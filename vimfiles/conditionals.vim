@@ -18,9 +18,17 @@ elseif has("win32") || has("win16") || has("win64")
 endif
 
 " --------------------------------------------------------------------------------
+" Gvim settings
+" --------------------------------------------------------------------------------
 
 if has("gui_running")
   set ballooneval
+
+  set guioptions-=T
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=R
 
   if has('win32')
       set guifont=Consolas:h12   " Win32.
@@ -30,20 +38,15 @@ if has("gui_running")
       set guifont=Monaco:h14     " OSX.
   else
       set guifont=Monospace\ 12  " Linux.
+
+      " for linux gvim
+      set lines=999 columns=999
   endif
 
-  " colorscheme onedark
-  " colorscheme molokai
-  " colorscheme monokai2
-  set lines=40                " 40 lines of text instead of 24
-
-  set guioptions-=T
-  set guioptions-=l
-  set guioptions-=L
-  set guioptions-=r
-  set guioptions-=R
 endif
 
+" --------------------------------------------------------------------------------
+" Console vim settings
 " --------------------------------------------------------------------------------
 
 if !has('gui_running')

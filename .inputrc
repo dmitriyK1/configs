@@ -12,8 +12,8 @@ set skip-completed-text on
 set show-all-if-ambiguous on
 set show-all-if-unmodified off
 set menu-complete-display-prefix off
+# replace matches inline on <tab>
 Tab: menu-complete
+# show matches on <shift-tab>
+"\e[Z": complete
 set completion-query-items -1 
-
-
-

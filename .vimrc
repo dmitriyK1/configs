@@ -132,6 +132,8 @@
 
 " TODO: remove unnecessary functions (find similar plugins instead)
 
+" TODO: prevent jumping on space trim
+
 " TODO: https://github.com/csscomb/vim-csscomb
 
 

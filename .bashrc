@@ -157,6 +157,8 @@ alias la='ll -A'
 alias lm='la | less'
 #}}}
 
+alias tmux="tmux new-session -A -s main"
+
 # TOP 10 COMMANDS {{{
 top10() { history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}' | sort -rn | head; }
 #}}}
@@ -179,3 +181,11 @@ function new-scratch {
 }
 
 export TERM=xterm-256color
+
+# Tmux - attach to an existing session or create a new one
+if command -v tmux>/dev/null; then
+        if [ ! -z "$PS1" ]; then # unless shell not loaded interactively, run tmux
+		[[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux new-session -A -s main
+	fi
+fi
+

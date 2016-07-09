@@ -34,12 +34,15 @@ if has("gui_running")
       set guifont=Consolas:h12   " Win32.
       " set guifont=DejaVu\ Sans\ Mono:h11   " Win32.
       " set guifont=Source\ Code\ Pro:h11   " Win32.
+     
+      " maximize gvim on windows
+      au GUIEnter * simalt ~x 
   elseif has('gui_macvim')
       set guifont=Monaco:h14     " OSX.
   else
       set guifont=Monospace\ 12  " Linux.
 
-      " for linux gvim
+      " maximize gvim on linux
       set lines=999 columns=999
   endif
 

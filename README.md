@@ -5,6 +5,6 @@ Configs for:
 - vim
 - mutt
 - zshrc
-- Sublime
+- Sublime Text
 - irssi
 and more...

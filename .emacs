@@ -1,3 +1,7 @@
+;; https://habrahabr.ru/post/39564/
+
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -13,7 +17,12 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; display column & row in status bar
+(column-number-mode t)
+
 ;; display time in status bar
+(setq display-time-interval 1)
+(setq display-time-format "%H:%M:%S")
 (display-time-mode)
 
 ;; scroll bar
@@ -54,5 +63,10 @@
 (global-set-key [f3] 'kmacro-start-macro-or-insert-counter)
 (global-set-key [f4] 'kmacro-end-or-call-macro)
 
+;; set mark
+(global-set-key [f5] 'bookmark-set)
+(global-set-key [f6] 'bookmark-jump)
+
 ;; save session on quit
 (desktop-save-mode t)
+

@@ -34,9 +34,11 @@ if has("gui_running")
       set guifont=Consolas:h12   " Win32.
       " set guifont=DejaVu\ Sans\ Mono:h11   " Win32.
       " set guifont=Source\ Code\ Pro:h11   " Win32.
-     
+
       " maximize gvim on windows
-      au GUIEnter * simalt ~x 
+      " put into .vimrc.local for portability
+      " au GUIEnter * simalt ~x
+
   elseif has('gui_macvim')
       set guifont=Monaco:h14     " OSX.
   else
@@ -104,7 +106,7 @@ endif
 " If you have .vim-backup in the current directory, it'll use that.
 " Otherwise it saves it to ~/.vim/backup or . if all else fails.
 if isdirectory($HOME . '/.vim/backup') == 0
-  :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
+  " :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
 endif
 
 " --------------------------------------------------------------------------------
@@ -113,7 +115,7 @@ endif
 " If you have .vim-swap in the current directory, it'll use that.
 " Otherwise it saves it to ~/.vim/swap, ~/tmp or .
 if isdirectory($HOME . '/.vim/swap') == 0
-  :silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
+  " :silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
 endif
 
 " --------------------------------------------------------------------------------
@@ -124,7 +126,7 @@ if has('persistent_undo')
     set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
 
     if isdirectory($HOME . '/.vim/undo') == 0
-        :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+        " :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
     endif
     set undodir=./.vim-undo//
     set undodir+=~/.vim/undo//

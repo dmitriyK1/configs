@@ -39,7 +39,11 @@ noremap <leader>ss :source $MYVIMRC<CR>
 " Source current file
 noremap <leader>so :so%<CR>
 " nnoremap <leader>m :mksession<CR>
-nnoremap <leader>p :set paste!<CR>
+nnoremap <leader>P :set paste!<CR>
+
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pc :PlugClean<CR>
+nnoremap <leader>pu :PlugUpdate<CR>
 
 " Split previously opened file in a split window
 nnoremap <leader>- :split<cr><C-w>j

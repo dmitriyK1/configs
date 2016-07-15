@@ -1,6 +1,11 @@
 [
+    { "keys": ["ctrl+;"], "command": "ace_jump_char" },
+    { "keys": ["alt+;"], "command": "ace_jump_word" },
+    { "keys": ["alt+j"], "command": "swap_line_down" },
+    { "keys": ["alt+k"], "command": "swap_line_up" },
     { "keys": ["g", "t"], "command": "next_view" },
     { "keys": ["g", "T"], "command": "prev_view" },
+    { "keys": ["g", "c"], "command": "close" }
     { "keys": [",", ","], "command": "save" },
     { "keys": ["alt+o"], "command": "prompt_open_folder" },
     { "keys": ["j", "j"], "command": "_enter_normal_mode", "args": {"mode": "mode_insert"}, "context": [{"key": "vi_insert_mode_aware"}] },

@@ -2,6 +2,8 @@ call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
 
+Plug 'dkprice/vim-easygrep'
+
 " Colorschemes:
 Plug 'jaromero/vim-monokai-refined'
 Plug 'sickill/vim-monokai'

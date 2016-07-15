@@ -1,4 +1,6 @@
 
+" http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
+
 " TODO: show cursorline only in active split
 
 " TODO: add automatic text wrap for plain text files

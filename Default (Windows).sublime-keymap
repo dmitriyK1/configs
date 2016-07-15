@@ -1,4 +1,5 @@
 [
+    { "keys": ["alt+e"], "command": "open_terminal" },
     { "keys": ["ctrl+;"], "command": "ace_jump_char" },
     { "keys": ["alt+;"], "command": "ace_jump_word" },
     { "keys": ["alt+j"], "command": "swap_line_down" },

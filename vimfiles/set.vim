@@ -196,7 +196,7 @@ set backupdir^=~/.vim/backup/
 set backupdir^=./.vim-backup/
 set writebackup
 set nobackup
-set noswapfile
+set swapfile
 set noundofile
 
 

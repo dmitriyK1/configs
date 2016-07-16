@@ -1,4 +1,6 @@
 {
+    "margin": 0,
+    "line_numbers": false,
     "default_line_ending": "unix",
     "always_show_minimap_viewport": true,
     "auto_complete_cycle": true,

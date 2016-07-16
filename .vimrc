@@ -1,6 +1,8 @@
 
 " http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
 
+" TODO: prevent jumping on whitespace trim
+
 " TODO: add automatic text wrap for plain text files
 
 " TODO: add colorschemes to vimfiles instead of plugins

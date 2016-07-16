@@ -276,9 +276,6 @@ set suffixes=.bak,~,.swp,.swo,.o,.d,.info,.aux,.log,.dvi,.pdf,.bin,.bbl,.blg,.br
 set noequalalways " do not auto-resize windows when opening/closing them!
 set confirm       " ask for confirmation by default (instead of silently failing)
 
-
-set cursorline
-
 set colorcolumn=0             " good value: 80
 
 " show linebreak

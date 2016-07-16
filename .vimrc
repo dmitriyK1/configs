@@ -1,10 +1,8 @@
 
 " http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
 
-" TODO: show cursorline only in active split
-
 " TODO: add automatic text wrap for plain text files
-"
+
 " TODO: add colorschemes to vimfiles instead of plugins
 
 " TODO: remove plugin-less autocompletion
@@ -14,7 +12,7 @@
 " TODO: add plugins lazy-loading
 " https://github.com/saaguero/dotvim/blob/44c3bbc9b2996fcf7e86f624785a3a06ca978167/.vimrc#L60-L69
 
-" TODO: ? try to make snail default keybindings work ?
+" TODO: ? try to make sneak default keybindings work ?
 
 " TODO: make vimcompletesme work
 

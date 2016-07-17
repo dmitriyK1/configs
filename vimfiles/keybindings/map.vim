@@ -212,10 +212,10 @@ nnoremap Y y$
 " -------------------V--------------------
 
 " Fix linewise visual selection of various text objects
-nnoremap Vit vitVkoj
-nnoremap Vat vatV
-nnoremap Vab vabV
-nnoremap VaB vaBV
+" nnoremap Vit vitVkoj
+" nnoremap Vat vatV
+" nnoremap Vab vabV
+" nnoremap VaB vaBV
 
 " -------------------Z--------------------
 " Easier horizontal scrolling

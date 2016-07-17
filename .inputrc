@@ -17,3 +17,6 @@ Tab: menu-complete
 # show matches on <shift-tab>
 "\e[Z": complete
 set completion-query-items -1 
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward

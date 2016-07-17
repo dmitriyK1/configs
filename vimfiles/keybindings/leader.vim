@@ -27,8 +27,8 @@ noremap <leader>, :update<CR>
 " map <silent> <leader>d :Bclose<cr>
 " map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
-map <silent> <leader>d :enew<CR>:bwipeout #<CR>
-map <silent> <leader>D :Bclose<cr>:tabclose<cr>
+map <silent> <leader>d :bd<CR>
+map <silent> <leader>c :enew<CR>:bwipeout #<CR>
 
 nnoremap <leader>v V`]
 
@@ -113,7 +113,7 @@ nnoremap <leader>2 :set cmdheight=2<cr>
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff+3<cr>
 
-map <leader>c :set cursorline!<cr>
+" map <leader>c :set cursorline!<cr>
 
 "Go to last edit location with ,.
 nnoremap <leader>. `.

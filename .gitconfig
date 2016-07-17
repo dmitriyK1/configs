@@ -310,3 +310,5 @@
 #      helper = wincred
 [branch]
 	autosetuprebase = always
+[status]
+	submoduleSummary = true

@@ -19,15 +19,16 @@ nnoremap <leader>/ :set invhlsearch<cr>
 " Strip all trailing whitespace from a file, using ,W
 nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 
-noremap <leader>w :update<CR>
 noremap <leader>, :update<CR>
-
-map <silent> <leader>d :Bclose<cr>
-map <silent> <leader>D :Bclose<cr>:tabclose<cr>
-" map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers
 " map <leader>ba :bufdo bd<cr>
+
+" map <silent> <leader>d :Bclose<cr>
+" map <leader>bd :Bclose<cr>:tabclose<cr>gT
+
+map <silent> <leader>d :enew<CR>:bwipeout #<CR>
+map <silent> <leader>D :Bclose<cr>:tabclose<cr>
 
 nnoremap <leader>v V`]
 
@@ -46,8 +47,8 @@ nnoremap <leader>pc :PlugClean<CR>
 nnoremap <leader>pu :PlugUpdate<CR>
 
 " Split previously opened file in a split window
-nnoremap <leader>- :split<cr><C-w>j
-nnoremap <leader>\ :vsplit<cr><C-w>l
+nnoremap <leader>- :new<cr><C-w>j
+nnoremap <leader>\ :vnew<cr><C-w>l
 
 " Quote words under cursor
 nnoremap <leader>" viW<esc>a"<esc>gvo<esc>i"<esc>gvo<esc>3l

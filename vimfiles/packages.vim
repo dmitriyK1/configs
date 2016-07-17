@@ -193,7 +193,9 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'heavenshell/vim-jsdoc'
 " Plug 'waiting-for-dev/vim-www'
-" Plug 'ervandew/supertab'           // use VimCompletesMe instead (faster)
+
+" use VimCompletesMe instead (faster)
+Plug 'ervandew/supertab'
 
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 " https://github.com/scrooloose/syntastic      // slow

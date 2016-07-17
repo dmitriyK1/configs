@@ -1,6 +1,10 @@
 
 " http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
 
+" TODO: remove redundant keybindings
+
+" TODO: sort leader.vim alphabetically
+
 " TODO: prevent jumping on whitespace trim
 
 " TODO: add automatic text wrap for plain text files

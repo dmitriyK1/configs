@@ -1,3 +1,4 @@
 " example settings
 au GUIEnter * simalt ~x
 
+colorscheme molokai

@@ -87,3 +87,5 @@ let g:multi_cursor_next_key='<C-d>'
 " let g:user_emmet_expandabbr_key = '<tab>'
 
 let g:molokai_original=0      " use a darker background
+
+let g:startify_custom_header = []

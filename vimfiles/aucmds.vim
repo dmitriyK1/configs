@@ -90,8 +90,6 @@ autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<c
 " show quickfix window on compile errors
 autocmd QuickFixCmdPost * nested cwindow | redraw!
 
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
 " ensure SimpylFold init properly
 autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<

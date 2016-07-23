@@ -78,14 +78,6 @@ function! BufcloseCloseIt()
    endif
 endfunction
 
-
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
-endfunction
-
 function! VisualSelection(direction) range
     let l:saved_reg = @"
     execute "normal! vgvy"

@@ -37,8 +37,8 @@ command! Bclose call BufcloseCloseIt()   " Don't close window, when deleting a b
 " --------------------------------------------------------------------------------
 
 nnoremap <silent> <F1> :set cursorline!<CR>
-inoremap <silent> <F1> :set cursorline!<CR>
-vnoremap <silent> <F1> :set cursorline!<CR>
+inoremap <silent> <F1> <Nop>
+vnoremap <silent> <F1> <Nop>
 
 noremap <F3> :Autoformat<cr>
 nnoremap <F5> :buffers<cr>:buffer<Space>

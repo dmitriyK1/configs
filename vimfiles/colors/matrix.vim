@@ -78,3 +78,5 @@ hi Type		guifg=#55ff55 guibg=#000000 gui=bold
 hi Underlined	guifg=#55ff55 guibg=#000000 gui=underline
 hi Error	guifg=#55ff55 guibg=#339933
 hi Todo		guifg=#113311 guibg=#44cc44 gui=none
+
+hi CursorLine guifg=#55ff55 guibg=#226622

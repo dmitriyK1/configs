@@ -105,12 +105,6 @@ au BufRead,BufNewFile *.cson set ft=coffee
 autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
 autocmd Colorscheme * highlight Conceal guibg=black guifg=red
 
-" TODO: add ^M chars removal
-autocmd FileWritePre    * :call DeleteTrailingWS()
-autocmd FileAppendPre   * :call DeleteTrailingWS()
-autocmd FilterWritePre  * :call DeleteTrailingWS()
-autocmd BufWritePre     * :call DeleteTrailingWS()
-
 " -------------------------------------------------------------------------
 "               Prevent cursor from moving when leaving insert mode
 " -------------------------------------------------------------------------

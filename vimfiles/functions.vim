@@ -1,7 +1,3 @@
-func! DeleteTrailingWS()
-    %s/\s\+$//e
-endfunc
-
 function! ConcealToggle()
     if &conceallevel == 0
         setlocal conceallevel=1
@@ -109,15 +105,6 @@ function! VisualSelection(direction) range
 
     let @/ = l:pattern
     let @" = l:saved_reg
-endfunction
-
-function! StripTrailingWhitespace()
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    let @/=_s
-    call cursor(l, c)
 endfunction
 
 function! NumberTextObject(whole)

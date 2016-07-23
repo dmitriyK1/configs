@@ -89,3 +89,6 @@ let g:multi_cursor_next_key='<C-d>'
 let g:molokai_original=0      " use a darker background
 
 let g:startify_custom_header = []
+
+let g:DeleteTrailingWhitespace = 1
+let g:DeleteTrailingWhitespace_Action = 'delete'

@@ -36,7 +36,9 @@ command! Bclose call BufcloseCloseIt()   " Don't close window, when deleting a b
 " Functional keys mappings
 " --------------------------------------------------------------------------------
 
-map <silent> <F1> :set cursorline!<CR>
+nnoremap <silent> <F1> :set cursorline!<CR>
+inoremap <silent> <F1> :set cursorline!<CR>
+vnoremap <silent> <F1> :set cursorline!<CR>
 
 noremap <F3> :Autoformat<cr>
 nnoremap <F5> :buffers<cr>:buffer<Space>

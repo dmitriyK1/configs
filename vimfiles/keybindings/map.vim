@@ -198,7 +198,9 @@ vnoremap Q gq
 " always use the command editing window
 nnoremap q/ q/i\v
 nnoremap q? q?i\v
-nnoremap <Space> q:i
+" nnoremap <Space> q:i
+nnoremap <Space> :
+
 " nnoremap / q/i\v
 " nnoremap ? q?i\v
 

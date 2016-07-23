@@ -44,7 +44,8 @@ hi ModeMsg	guifg=#44cc44 guibg=#000000
 " |more-prompt|
 hi MoreMsg	guifg=#44cc44 guibg=#000000
 " '~' and '@' at the end of the window, characters from
-hi NonText	guifg=#44cc44 guibg=#113311
+" hi NonText	guifg=#44cc44 guibg=#113311
+hi NonText	guifg=#44cc44 guibg=NONE
 " normal text
 hi Normal	guifg=#44cc44 guibg=#000000
 " |hit-enter| prompt and yes/no questions

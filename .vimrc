@@ -5,8 +5,6 @@
 
 " TODO: sort leader.vim alphabetically
 
-" TODO: prevent jumping on whitespace trim
-
 " TODO: add automatic text wrap for plain text files
 
 " TODO: add colorschemes to vimfiles instead of plugins
@@ -25,6 +23,7 @@
 " TODO: add textobject plugins
 
 " TODO: remove custom duplicated functionality, that already present in plugins
+" TODO: replace custom functions etc. on plugins doing similar things
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

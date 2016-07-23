@@ -9,3 +9,6 @@ highlight Conceal guibg=NONE guifg=red
 
 " highlight trailing space
 match ErrorMsg '\s\+$'
+
+" make background transparent
+hi Normal guibg=NONE ctermbg=NONE

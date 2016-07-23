@@ -6,6 +6,8 @@ Plug 'vim-scripts/CursorLineCurrentWindow'
 Plug 'dkprice/vim-easygrep'
 
 " Colorschemes:
+Plug 'vim-scripts/reloaded.vim'
+Plug 'vim-scripts/revolutions.vim'
 Plug 'jaromero/vim-monokai-refined'
 Plug 'sickill/vim-monokai'
 Plug 'tomasr/molokai'

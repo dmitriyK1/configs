@@ -11,4 +11,4 @@ highlight Conceal guibg=NONE guifg=red
 match ErrorMsg '\s\+$'
 
 " make background transparent
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE

@@ -12,3 +12,4 @@ match ErrorMsg '\s\+$'
 
 " make background transparent
 " hi Normal guibg=NONE ctermbg=NONE
+hi Normal ctermbg=NONE

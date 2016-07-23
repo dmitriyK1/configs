@@ -120,7 +120,8 @@ nnoremap <leader>. `.
 
 nmap <leader>w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
-nnoremap <silent> <leader>: q:i
+" nnoremap <silent> <leader>: q:i
+nnoremap <silent> <leader>: q:
 
 map <silent> <leader>t :call ConcealToggle()<CR>
 

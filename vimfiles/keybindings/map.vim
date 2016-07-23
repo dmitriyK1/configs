@@ -200,7 +200,6 @@ nnoremap q/ q/i\v
 nnoremap q? q?i\v
 " nnoremap <Space> q:i
 nnoremap <Space> :
-nnoremap : q:
 
 " nnoremap / q/i\v
 " nnoremap ? q?i\v

@@ -33,11 +33,11 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 command! Bclose call BufcloseCloseIt()   " Don't close window, when deleting a buffer
 
 " --------------------------------------------------------------------------------
-" F mappings
+" Functional keys mappings
 " --------------------------------------------------------------------------------
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
+
+map <silent> <F1> :set cursorline!<CR>
+
 noremap <F3> :Autoformat<cr>
 nnoremap <F5> :buffers<cr>:buffer<Space>
 
@@ -50,8 +50,6 @@ nmap <F8> :TagbarToggle<cr>
 
 nnoremap <F10> :b <C-Z>
 call togglebg#map("<F12>")
-
-
 
 " --------------------------------------------------------------------------------
 " Ctrl mappings

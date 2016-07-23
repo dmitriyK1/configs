@@ -4,6 +4,7 @@ call plug#begin()
 
 Plug 'vim-scripts/CursorLineCurrentWindow'
 Plug 'dkprice/vim-easygrep'
+Plug 'vimwiki/vimwiki'
 
 " Colorschemes:
 Plug 'vim-scripts/reloaded.vim'

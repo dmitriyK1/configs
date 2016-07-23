@@ -2,8 +2,6 @@ call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
 
-" Plug 'vim-scripts/JumpToTrailingWhitespace'
-Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'vim-scripts/CursorLineCurrentWindow'
 Plug 'dkprice/vim-easygrep'

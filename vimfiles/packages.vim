@@ -7,6 +7,7 @@ Plug 'vim-scripts/CursorLineCurrentWindow'
 Plug 'dkprice/vim-easygrep'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-abolish'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Colorschemes:
 Plug 'vim-scripts/reloaded.vim'

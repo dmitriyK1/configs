@@ -259,7 +259,7 @@ set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver2
 set foldcolumn=3
 
 
-set conceallevel=1
+set conceallevel=0
 set concealcursor=nvic
 
 

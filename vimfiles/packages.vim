@@ -8,9 +8,10 @@ Plug 'dkprice/vim-easygrep'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-abolish'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'justinj/vim-react-snippets'
-Plug 'mlaursen/vim-react-snippets'
-Plug 'bentayloruk/vim-react-es6-snippets'
+" Plug 'justinj/vim-react-snippets'
+" Plug 'mlaursen/vim-react-snippets'
+" Plug 'bentayloruk/vim-react-es6-snippets'
+Plug 'dmitriyK1/ReactVimSnippets'
 
 " Colorschemes:
 Plug 'vim-scripts/reloaded.vim'

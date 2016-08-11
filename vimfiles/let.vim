@@ -92,3 +92,6 @@ let g:startify_custom_header = []
 
 let g:DeleteTrailingWhitespace = 1
 let g:DeleteTrailingWhitespace_Action = 'delete'
+
+let g:flow#enable = 0
+let g:flow#errjmp = 1

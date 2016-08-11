@@ -227,3 +227,5 @@ vmap <leader>{ c{<C-R>"}<ESC>
 " Delete empty lines
 " nmap <leader>del :g/^$/d<cr>
 nmap <leader>el :g/^$/d<cr>
+
+nmap <leader>fl :FlowToggle<cr>

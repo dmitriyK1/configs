@@ -99,8 +99,11 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 " nnoremap <silent> <leader>q gwip
 
 " System clipboard interaction.
-noremap <leader>y "*y
-vnoremap <leader>y "*ygv
+" noremap <leader>y "*y
+" vnoremap <leader>y "*ygv
+
+nnor ,yp :let @*=expand("%:p")<CR>    " Mnemonic: Yank File path
+nnor ,yn :let @*=expand("%")<CR>      " Mnemonic: yank File Name
 
 " Clean trailing whitespace
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z

@@ -107,8 +107,6 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 
 " nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
 
-
-
 " --------------------------------------------------------------------------------
 " Alt mappings
 " --------------------------------------------------------------------------------
@@ -254,6 +252,15 @@ vnoremap < <gv
 vnoremap > >gv
 
 map ! q:i!
+
+" apply macro to all selected lines where matches are found
+" from https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
 
 " nnoremap <space> za
 

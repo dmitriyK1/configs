@@ -2,6 +2,9 @@ call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
 
+" apply macro to a multiple files at once
+Plug 'Olical/vim-enmasse'
+
 Plug 'flowtype/vim-flow'
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'vim-scripts/CursorLineCurrentWindow'

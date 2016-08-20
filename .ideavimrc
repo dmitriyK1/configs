@@ -12,3 +12,4 @@ set wrapscan
 set number
 " set relativenumber
 set surround
+nmap ,, :w<cr>

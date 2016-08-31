@@ -282,11 +282,11 @@ endfunction
 " TODO: make it work
 " inoremap <expr> <CR> pumvisible() ? '\<C-y>' : '<Plug>delimitMateCR'
 
-nmap <Left> <<
-nmap <Right> >>
-vnoremap <Left> <gv
-vnoremap <Right> >gv
-nmap <Up> [e
-nmap <Down> ]e
-vmap <Up> [egv
-vmap <Down> ]egv
+" nmap <Left> <<
+" nmap <Right> >>
+" vnoremap <Left> <gv
+" vnoremap <Right> >gv
+" nmap <Up> [e
+" nmap <Down> ]e
+" vmap <Up> [egv
+" vmap <Down> ]egv

@@ -2,6 +2,7 @@ call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
 
+Plug 'chrisbra/NrrwRgn'
 Plug 'tpope/vim-unimpaired'
 
 " apply macro to a multiple files at once

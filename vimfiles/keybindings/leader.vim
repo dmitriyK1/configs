@@ -233,5 +233,5 @@ nmap <leader>el :g/^$/d<cr>
 
 nmap <leader>fl :FlowToggle<cr>
 
-" compare opened buffers
-nmap <leader>D :windo diffthis
+" compare open splits
+nmap <leader>D :windo diffthis<CR>

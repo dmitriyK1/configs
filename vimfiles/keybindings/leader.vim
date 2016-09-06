@@ -232,3 +232,6 @@ vmap <leader>{ c{<C-R>"}<ESC>
 nmap <leader>el :g/^$/d<cr>
 
 nmap <leader>fl :FlowToggle<cr>
+
+" compare opened buffers
+nmap <leader>D :windo diffthis

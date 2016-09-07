@@ -21,6 +21,13 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dmitriyK1/ReactVimSnippets'
 
 " Colorschemes:
+Plug 'mbbill/desertEx'
+Plug 'brafales/vim-desert256'
+Plug 'vim-scripts/werks.vim'
+Plug 'vim-scripts/sonoma.vim'
+Plug 'rainux/vim-desert-warm-256'
+Plug 'toupeira/vim-desertink'
+
 Plug 'vim-scripts/reloaded.vim'
 Plug 'vim-scripts/revolutions.vim'
 Plug 'jaromero/vim-monokai-refined'

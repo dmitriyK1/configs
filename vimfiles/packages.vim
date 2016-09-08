@@ -21,6 +21,9 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dmitriyK1/ReactVimSnippets'
 
 " Colorschemes:
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'GertjanReynaert/cobalt2-vim-theme'
+
 Plug 'mbbill/desertEx'
 Plug 'brafales/vim-desert256'
 Plug 'vim-scripts/werks.vim'

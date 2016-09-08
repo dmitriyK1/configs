@@ -112,9 +112,9 @@ autocmd Colorscheme * highlight Conceal guibg=black guifg=red
 "autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
 " -------------------------------------------------------------------------
 
-autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
-autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
-autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+" autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+" autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
+" autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
 
 " automatically open quickfix window on :grep
 " https://github.com/tpope/vim-fugitive

@@ -21,7 +21,11 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dmitriyK1/ReactVimSnippets'
 
 " Colorschemes:
+Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
+
+Plug 'w0ng/vim-hybrid'
+Plug 'cocopon/lightline-hybrid.vim'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'GertjanReynaert/cobalt2-vim-theme'
@@ -52,7 +56,6 @@ Plug 'altercation/vim-colors-solarized'
 " Plug 'vim-scripts/Sorcerer'
 " Plug 'penicolas/simplon.vim'
 " Plug 'whatyouhide/vim-gotham'
-Plug 'morhetz/gruvbox'
 " Plug 'thomd/vim-wasabi-colorscheme'
 " Plug 'nanotech/jellybeans.vim'
 " Plug 'junegunn/seoul256.vim'

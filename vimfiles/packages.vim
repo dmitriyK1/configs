@@ -217,7 +217,10 @@ Plug 'Raimondi/delimitMate' "{{{
 "}}}
 " js indentation support
 Plug 'sheerun/vim-polyglot'
-Plug 'Olical/vim-syntax-expand'
+
+" conceals language constructs
+" Plug 'Olical/vim-syntax-expand'
+
 " cycle through yanks (alt-p \ alt-shift-p)
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-speeddating'

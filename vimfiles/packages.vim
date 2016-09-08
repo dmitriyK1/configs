@@ -1,6 +1,8 @@
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
-" Plug 'Yggdroot/indentLine'          " conflicts with js conceal feature
+
+" conflicts with js conceal feature
+Plug 'Yggdroot/indentLine'
 
 Plug 'chrisbra/NrrwRgn'
 Plug 'tpope/vim-unimpaired'

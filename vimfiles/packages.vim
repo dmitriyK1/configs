@@ -1,6 +1,8 @@
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
+Plug 'vim-scripts/UnconditionalPaste'
+
 " conflicts with js conceal feature
 Plug 'Yggdroot/indentLine'
 

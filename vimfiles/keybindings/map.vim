@@ -59,7 +59,11 @@ call togglebg#map("<F12>")
 
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
-vnoremap <C-c> "*y
+" vnoremap <C-c> "*y
+
+" copy without new line character
+vnoremap <C-c> <Esc>'<0v'>g_y
+
 vnoremap <C-e> 3<C-e>
 vnoremap <C-y> 3<C-y>
 

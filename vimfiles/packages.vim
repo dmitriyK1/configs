@@ -6,6 +6,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'rhysd/conflict-marker.vim'
+Plug 'vim-scripts/UnconditionalPaste'
 
 " conflicts with js conceal feature
 Plug 'Yggdroot/indentLine'

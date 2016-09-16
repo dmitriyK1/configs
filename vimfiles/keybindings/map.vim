@@ -122,7 +122,12 @@ nmap <M-.> :bn<cr>
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-
+imap <A-j> <Down>
+imap <A-k> <Up>
+imap <A-h> <Left>
+imap <A-l> <Right>
+imap <A-i> <Home>
+imap <A-a> <End>
 
 " --------------------------------------------------------------------------------
 " Letter mappings

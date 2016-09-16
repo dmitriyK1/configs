@@ -14,6 +14,8 @@ cnoremap <C-g> <Delete>
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
+cnoremap jj <C-c>
+
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 " cnoremap <C-g>  <C-c>

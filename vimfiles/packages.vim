@@ -1,6 +1,10 @@
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
+Plug 'thinca/vim-quickrun'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-eunuch'
 Plug 'rhysd/conflict-marker.vim'
 
 " conflicts with js conceal feature

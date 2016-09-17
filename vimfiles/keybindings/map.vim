@@ -42,6 +42,8 @@ nnoremap <silent> <F1> :set cursorline!<CR>
 inoremap <silent> <F1> <Nop>
 vnoremap <silent> <F1> <Nop>
 
+nnoremap <silent> <F2> :UndotreeToggle<cr>:UndotreeFocus<cr>
+
 noremap <F3> :Autoformat<cr>
 nnoremap <F5> :buffers<cr>:buffer<Space>
 

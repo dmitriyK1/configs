@@ -1,0 +1,42 @@
+set runtimepath+=~/vimperator-plugins
+
+source ~/vimperator/vimppm/plugin/vimppm.js
+
+" Github
+" vimppm 'cd01/evernote-clearly-vimp'
+" vimppm 'hoge/hogehoge-vimp'
+" vimppm 'homu/homuhomu-vimp'
+
+" Vimpr
+" vimppm '_smooziee.js'
+
+"===[ Settings ]========================================================
+
+" Autocomplete using Firefox Awesomebar subsystem
+" set complete=l
+
+" Show completions as you type? '' waits for tab, 'auto' shows them immediately
+" set wildoptions=''
+
+" Select the longest autocomplete match
+" set wildmode='list:full'
+
+" Show a (n)umber on tabs, the (b)ottom scrollbar, and the (r)ight scrollbar
+" set guioptions=nbr
+
+" Always show tab bar
+" set showtabline=1
+
+" Don't beep
+" set noerrorbells
+
+" Make Firefox run faster by using JIT
+" set! javascript.options.jit.chrome=true
+
+" map <F2> :echo new Date().toDateString()<CR>
+map <F2> :echo Date().slice(0, (Date().indexOf(' GMT')))
+
+" set gui=none
+set gui=noaddons,nobookmarks,nomenu,nonavigation,tabs
+
+" vim: ft=vim

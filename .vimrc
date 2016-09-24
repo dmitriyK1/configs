@@ -1,7 +1,7 @@
 
 " http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
 
-" TODO: remove redundant keybindings
+" TODO: remove redundant keybindings ( delete keybindings provided by unimpaired first )
 
 " TODO: sort leader.vim alphabetically
 

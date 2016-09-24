@@ -36,6 +36,8 @@ source ~/vimperator/vimppm/plugin/vimppm.js
 " map <F2> :echo new Date().toDateString()<CR>
 map <F2> :echo Date().slice(0, (Date().indexOf(' GMT')))
 
+map s :tabopen google 
+
 " set gui=none
 set gui=noaddons,nobookmarks,nomenu,nonavigation,tabs
 

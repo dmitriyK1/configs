@@ -1,6 +1,7 @@
 call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
+Plug 'tpope/vim-capslock'
 Plug 'mbbill/undotree'
 Plug 'thinca/vim-quickrun'
 Plug 'christoomey/vim-tmux-navigator'

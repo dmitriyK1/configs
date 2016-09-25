@@ -32,6 +32,21 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dmitriyK1/ReactVimSnippets'
 
 " Colorschemes:
+Plug 'jyota/vimColors'
+Plug 'mkarmona/colorsbox'
+Plug 'nowk/genericdc'
+Plug 'stulzer/heroku-colorscheme'
+Plug 'andreasvc/vim-256noir'
+Plug 'marciomazza/vim-brogrammer-theme'
+Plug 'cocopon/iceberg.vim'
+Plug 'ryanpcmcquen/true-monochrome_vim'
+Plug 'snowcrshd/cyberpunk.vim'
+Plug 'roosta/vim-srcery'
+Plug 'lifepillar/vim-solarized8'
+Plug 'pbrisbin/vim-colors-off'
+Plug 'YorickPeterse/Autumn.vim'
+Plug 'YorickPeterse/happy_hacking.vim'
+
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 

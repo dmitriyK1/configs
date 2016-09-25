@@ -138,7 +138,7 @@
 		comes up, but cursor stays in file name prompt).
 
 
- -icase         Search is case insensitive by default.
+-icase         Search is case insensitive by default.
 
 -wrap          Search wraps
 

@@ -263,7 +263,7 @@
 
 -highlight		Enable highlighting
 
-	-smarthome		Home key first moves cursor to beginning of line,
+-smarthome		Home key first moves cursor to beginning of line,
 				then if hit again, to first non-blank character.
 
 -indentfirst		Smart home goes to first non-blank character first,
@@ -288,7 +288,7 @@
 
 	-crlf			File uses CR-LF at ends of lines
 
-	-wordwrap		Wordwrap
+-wordwrap		Wordwrap
 
 -nobackup		If you don't want backup file to be created
 

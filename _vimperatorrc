@@ -1,3 +1,7 @@
+" https://github.com/seudut/dotfiles/blob/master/vimperatorrc
+
+cd ~
+
 set runtimepath+=~/vimperator-plugins
 
 source ~/vimperator/vimppm/plugin/vimppm.js
@@ -11,6 +15,15 @@ source ~/vimperator/vimppm/plugin/vimppm.js
 " vimppm '_smooziee.js'
 
 "===[ Settings ]========================================================
+
+let mapleader = ','
+
+nmap <Leader>ss :source ~/_vimperatorrc<CR>
+
+cmap <C-p> <Up>
+cmap <C-n> <Down>
+cmap <C-h> <BS>
+cmap <C-[> <Esc>
 
 " Autocomplete using Firefox Awesomebar subsystem
 " set complete=l
@@ -36,10 +49,17 @@ source ~/vimperator/vimppm/plugin/vimppm.js
 " map <F2> :echo new Date().toDateString()<CR>
 map <F2> :echo Date().slice(0, (Date().indexOf(' GMT')))
 
-map s :tabopen google 
-map S :open google 
+map s :tabopen google<SPACE>
+map S :open google<SPACE>
 
 " set gui=none
 set gui=noaddons,nobookmarks,nomenu,nonavigation,tabs
+
+js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
+
+cmap jj <Esc>
+
+nnoremap J gT
+nnoremap K gt
 
 " vim: ft=vim

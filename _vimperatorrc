@@ -18,10 +18,27 @@ source ~/vimperator/vimppm/plugin/vimppm.js
 
 let mapleader = ','
 
+javascript <<EOB
+var hintsType = 'numbers'
+
+function switchHintsType() {
+    if (hintsType == 'numbers') {
+        hintsType = 'letters';
+        liberator.execute(':set hintchars=hjklasdfgyuiopqwertnmzxcvb');
+    } else {
+        hintsType = 'numbers';
+        liberator.execute(':set hintchars=0123456789');
+    }
+}
+EOB
+
+command! switchHintsType javascript switchHintsType()
+nnoremap <C-i> :switchHintsType<CR>
+
 nmap <Leader>ss :source ~/_vimperatorrc<CR>
 
-nnoremap <Leader>a :set hintchars=hjklasdfgyuiopqwertnmzxcvb<CR>
-nnoremap <Leader>n :set hintchars=0123456789<CR>
+" nnoremap <Leader>a :set hintchars=hjklasdfgyuiopqwertnmzxcvb<CR>
+" nnoremap <Leader>n :set hintchars=0123456789<CR>
 
 highlight Hint font-size:125%;color:white;background-color:red;padding:2px;
 

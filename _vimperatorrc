@@ -20,6 +20,11 @@ let mapleader = ','
 
 nmap <Leader>ss :source ~/_vimperatorrc<CR>
 
+nnoremap <Leader>a :set hintchars=hjklasdfgyuiopqwertnmzxcvb<CR>
+nnoremap <Leader>n :set hintchars=0123456789<CR>
+
+highlight Hint font-size:125%;color:white;background-color:red;padding:2px;
+
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-h> <BS>

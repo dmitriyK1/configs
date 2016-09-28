@@ -32,6 +32,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'dmitriyK1/ReactVimSnippets'
 
 " Colorschemes:
+Plug 'grod/sublime-color-schemes.vim'
 Plug 'jyota/vimColors'
 Plug 'mkarmona/colorsbox'
 Plug 'nowk/genericdc'

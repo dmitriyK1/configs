@@ -5,8 +5,6 @@
 "
 " Ignored all GUI-mode colors. Set simple terminal colors
 " to be visible on iTerm.app for OS X with a light background.
-"
-" 20130912: light modification by Jabba Laci (changed the color of String)
 
 set background=light
 if version > 580
@@ -29,7 +27,7 @@ hi Constant     ctermfg=blue
 hi Literal      ctermfg=blue
 hi Identifier   ctermfg=magenta cterm=none
 hi Keyword      ctermfg=magenta
-hi String       ctermfg=darkgreen
+hi String       ctermfg=red
 hi Float        ctermfg=magenta
 hi Boolean      ctermfg=darkblue
 hi Number       ctermfg=darkblue

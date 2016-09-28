@@ -27,8 +27,12 @@ noremap <leader>, :update<CR>
 " map <silent> <leader>d :Bclose<cr>
 " map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
-map <silent> <leader>d :bd<CR>
-map <silent> <leader>c :enew<CR>:bwipeout #<CR>
+" map <silent> <leader>d :bd<CR>
+" map <silent> <leader>c :enew<CR>:bwipeout #<CR>
+
+map <silent> <leader>ad :bufdo :Bdelete<CR>
+map <silent> <leader>d :Bdelete<CR>
+map <silent> <leader>c :bd<CR>
 
 nnoremap <leader>v V`]
 

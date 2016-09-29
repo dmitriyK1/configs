@@ -42,53 +42,51 @@ Plug 'AndrewRadev/splitjoin.vim'
 " Plug 'bentayloruk/vim-react-es6-snippets'
 Plug 'dmitriyK1/ReactVimSnippets'
 
+
+" ================================================================================
 " Colorschemes:
-Plug 'grod/sublime-color-schemes.vim'
-Plug 'jyota/vimColors'
-Plug 'mkarmona/colorsbox'
-Plug 'nowk/genericdc'
-Plug 'stulzer/heroku-colorscheme'
-Plug 'andreasvc/vim-256noir'
-Plug 'marciomazza/vim-brogrammer-theme'
-Plug 'cocopon/iceberg.vim'
-Plug 'ryanpcmcquen/true-monochrome_vim'
-Plug 'snowcrshd/cyberpunk.vim'
-Plug 'roosta/vim-srcery'
-Plug 'lifepillar/vim-solarized8'
-Plug 'pbrisbin/vim-colors-off'
-Plug 'YorickPeterse/Autumn.vim'
-Plug 'YorickPeterse/happy_hacking.vim'
-
-Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
-
-Plug 'w0ng/vim-hybrid'
-Plug 'cocopon/lightline-hybrid.vim'
-
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'GertjanReynaert/cobalt2-vim-theme'
-
-Plug 'mbbill/desertEx'
-Plug 'brafales/vim-desert256'
-Plug 'vim-scripts/werks.vim'
-Plug 'vim-scripts/sonoma.vim'
-Plug 'rainux/vim-desert-warm-256'
-Plug 'toupeira/vim-desertink'
-
-Plug 'vim-scripts/reloaded.vim'
-Plug 'vim-scripts/revolutions.vim'
-Plug 'jaromero/vim-monokai-refined'
-Plug 'sickill/vim-monokai'
-Plug 'tomasr/molokai'
+" ================================================================================
+" Plug 'grod/sublime-color-schemes.vim'
+" Plug 'jyota/vimColors'
+" Plug 'mkarmona/colorsbox'
+" Plug 'nowk/genericdc'
+" Plug 'stulzer/heroku-colorscheme'
+" Plug 'andreasvc/vim-256noir'
+" Plug 'marciomazza/vim-brogrammer-theme'
+" Plug 'cocopon/iceberg.vim'
+" Plug 'ryanpcmcquen/true-monochrome_vim'
+" Plug 'snowcrshd/cyberpunk.vim'
+" Plug 'roosta/vim-srcery'
+" Plug 'lifepillar/vim-solarized8'
+" Plug 'pbrisbin/vim-colors-off'
+" Plug 'YorickPeterse/Autumn.vim'
+" Plug 'YorickPeterse/happy_hacking.vim'
+" Plug 'morhetz/gruvbox'
+" Plug 'shinchu/lightline-gruvbox.vim'
+" Plug 'w0ng/vim-hybrid'
+" Plug 'cocopon/lightline-hybrid.vim'
+" Plug 'NLKNguyen/papercolor-theme'
+" Plug 'GertjanReynaert/cobalt2-vim-theme'
+" Plug 'mbbill/desertEx'
+" Plug 'brafales/vim-desert256'
+" Plug 'vim-scripts/werks.vim'
+" Plug 'vim-scripts/sonoma.vim'
+" Plug 'rainux/vim-desert-warm-256'
+" Plug 'toupeira/vim-desertink'
+" Plug 'vim-scripts/reloaded.vim'
+" Plug 'vim-scripts/revolutions.vim'
+" Plug 'jaromero/vim-monokai-refined'
+" Plug 'sickill/vim-monokai'
+" Plug 'tomasr/molokai'
 " Plug 'michalbachowski/vim-wombat256mod'
-Plug 'dracula/vim'
+" Plug 'dracula/vim'
 " Plug 'ciaranm/inkpot'
 " Plug 'jnurmine/Zenburn'
 " Plug 'vim-scripts/Wombat'
 " Plug 'sickill/vim-sunburst'
 " Plug 'vim-scripts/vibrantink'
-Plug 'lisposter/vim-blackboard'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'lisposter/vim-blackboard'
+" Plug 'altercation/vim-colors-solarized'
 " Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 " Plug 'romainl/Apprentice'
 " Plug 'vim-scripts/Sorcerer'
@@ -105,7 +103,7 @@ Plug 'altercation/vim-colors-solarized'
 " Plug 'bounceme/highwayman'
 " Plug 'gummesson/stereokai.vim'
 " Plug 'amadeus/vim-evokai'
-Plug 'vim-scripts/greenvision'
+" Plug 'vim-scripts/greenvision'
 " Plug 'oguzbilgic/sexy-railscasts-theme'
 " Plug 'juanedi/predawn.vim'
 " Plug 'jdkanani/vim-material-theme'
@@ -116,9 +114,12 @@ Plug 'vim-scripts/greenvision'
 " Plug 'sjl/badwolf'
 " Plug 'endel/vim-github-colorscheme'
 " Plug 'changyuheng/color-scheme-holokai-for-vim'
-Plug 'pR0Ps/molokai-dark'
+" Plug 'pR0Ps/molokai-dark'
 " Plug 'zeekay/vice-colorful'
+" ================================================================================
 " Colorschemes end
+" ================================================================================
+
 
 " Plug 'xolox/vim-session'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -250,8 +251,10 @@ Plug 'Raimondi/delimitMate' "{{{
     let g:delimitMate_expand_cr=1
     let g:delimitMate_expand_space=1
 "}}}
+
 " js indentation support
-Plug 'sheerun/vim-polyglot'
+" breaks gruvbox highlighting
+" Plug 'sheerun/vim-polyglot'
 
 " conceals language constructs
 " Plug 'Olical/vim-syntax-expand'

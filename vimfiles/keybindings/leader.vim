@@ -37,7 +37,7 @@ map <silent> <leader>c :bd<CR>
 nnoremap <leader>v V`]
 
 " noremap <leader>r :set relativenumber!<CR>
-nnoremap <leader>n :setlocal number!<CR>
+" nnoremap <leader>n :setlocal number!<CR>
 nmap <silent> <leader>se :e $MYVIMRC<CR>
 noremap <leader>ss :source $MYVIMRC<CR>
 "

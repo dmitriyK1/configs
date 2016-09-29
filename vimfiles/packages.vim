@@ -86,7 +86,7 @@ Plug 'dmitriyK1/ReactVimSnippets'
 " Plug 'sickill/vim-sunburst'
 " Plug 'vim-scripts/vibrantink'
 " Plug 'lisposter/vim-blackboard'
-" Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 " Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 " Plug 'romainl/Apprentice'
 " Plug 'vim-scripts/Sorcerer'
@@ -255,6 +255,8 @@ Plug 'Raimondi/delimitMate' "{{{
 " js indentation support
 " breaks gruvbox highlighting
 " Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " conceals language constructs
 " Plug 'Olical/vim-syntax-expand'

@@ -3,8 +3,8 @@ call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
-  nnoremap <silent> gn :call WordNavigation(1)<CR>
-  nnoremap <silent> gN :call WordNavigation(0)<CR>
+  nnoremap <silent> g1 :call WordNavigation(1)<CR>
+  nnoremap <silent> g2 :call WordNavigation(0)<CR>
 "}}}
 
 Plug 'henrik/vim-indexed-search' "{{{

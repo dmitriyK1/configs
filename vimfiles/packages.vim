@@ -8,7 +8,7 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 "}}}
 
 Plug 'henrik/vim-indexed-search' "{{{
-  let g:indexed_search_colors=0
+  " let g:indexed_search_colors=0
 "}}}
 
 Plug 'moll/vim-bbye'

@@ -2,6 +2,8 @@ call plug#begin()
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
 Plug 'henrik/vim-indexed-search'
+let g:indexed_search_colors=0
+
 Plug 'moll/vim-bbye'
 Plug 'tpope/vim-capslock'
 Plug 'mbbill/undotree'

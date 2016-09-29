@@ -1,8 +1,15 @@
 call plug#begin()
+
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
-Plug 'henrik/vim-indexed-search'
-let g:indexed_search_colors=0
+Plug 'vasconcelloslf/vim-interestingwords' "{{{
+  nnoremap <silent> gn :call WordNavigation(1)<CR>
+  nnoremap <silent> gN :call WordNavigation(0)<CR>
+"}}}
+
+Plug 'henrik/vim-indexed-search' "{{{
+  let g:indexed_search_colors=0
+"}}}
 
 Plug 'moll/vim-bbye'
 Plug 'tpope/vim-capslock'
@@ -153,7 +160,6 @@ Plug 'mhinz/vim-grepper' "{{{
   xmap gs  <plug>(GrepperOperator)
 "}}}
 
-Plug 'vasconcelloslf/vim-interestingwords'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ajh17/VimCompletesMe'
 Plug 'haya14busa/incsearch.vim' "{{{

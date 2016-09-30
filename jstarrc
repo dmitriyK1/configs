@@ -180,7 +180,7 @@
 
 -restore	Restore previous cursor position when files are opened
 
- -search_prompting
+-search_prompting
 		Search prompts with previous search request.
 
  -regex		Search uses standard regular expression format (otherwise it uses

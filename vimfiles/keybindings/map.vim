@@ -52,6 +52,8 @@ map <F6> :setlocal spell! spelllang=en_us<cr>
 
 " to format on save use:
 " au BufWrite * :Autoformat
+
+nmap <F7> :PrevColorScheme<CR>
 nmap <F8> :TagbarToggle<cr>
 
 nnoremap <F10> :b <C-Z>

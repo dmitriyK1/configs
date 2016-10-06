@@ -255,8 +255,13 @@ Plug 'Raimondi/delimitMate' "{{{
 " js indentation support
 " breaks gruvbox highlighting
 " Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
+
+Plug 'othree/yajs'
+Plug 'othree/es.next.syntax.vim'
 Plug 'mxw/vim-jsx'
+Plug 'othree/javascript-libraries-syntax.vim'
+let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
 
 " conceals language constructs
 " Plug 'Olical/vim-syntax-expand'

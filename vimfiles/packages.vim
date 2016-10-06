@@ -46,6 +46,7 @@ Plug 'dmitriyK1/ReactVimSnippets'
 " ================================================================================
 " Colorschemes:
 " ================================================================================
+Plug 'trevordmiller/nova-vim'
 " Plug 'grod/sublime-color-schemes.vim'
 " Plug 'jyota/vimColors'
 " Plug 'mkarmona/colorsbox'

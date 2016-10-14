@@ -1,15 +1,4 @@
-
-# Load posh-git example profile
-#. 'C:\Users\dima\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
-
-Import-Module PowerTab
-Import-Module PowerZip
-
-# CaptureScreen is good for blog posts or email showing a transaction
-# of what you did when asking for help or demonstrating a technique.
-Set-PSReadlineKeyHandler -Chord 'Ctrl+Q,C' -Function CaptureScreen
-
-# Chocolatey profile
+﻿# Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
@@ -117,6 +106,10 @@ Set-PSReadlineKeyHandler -Key Ctrl+Shift+Q -Function TabCompletePrevious
 # Clipboard interaction is bound by default in Windows mode, but not Emacs mode.
 Set-PSReadlineKeyHandler -Key Shift+Ctrl+C -Function Copy
 Set-PSReadlineKeyHandler -Key Ctrl+V -Function Paste
+
+# CaptureScreen is good for blog posts or email showing a transaction
+# of what you did when asking for help or demonstrating a technique.
+Set-PSReadlineKeyHandler -Chord 'Ctrl+D,Ctrl+C' -Function CaptureScreen
 
 # The built-in word movement uses character delimiters, but token based word
 # movement is also very useful - these are the bindings you'd use if you

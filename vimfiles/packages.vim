@@ -22,7 +22,9 @@ Plug 'rhysd/conflict-marker.vim'
 Plug 'vim-scripts/UnconditionalPaste'
 
 " conflicts with js conceal feature
-Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine' "{{{
+  map <leader>il :IndentLinesToggle<CR>
+"}}}
 
 Plug 'chrisbra/NrrwRgn'
 Plug 'tpope/vim-unimpaired'

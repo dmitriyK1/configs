@@ -1,22 +1,15 @@
-
+﻿
 # Load posh-git example profile
-#. 'C:\Users\dima\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
+. 'C:\Users\dima\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
 
 Import-Module PowerTab
 Import-Module PowerZip
-
-# CaptureScreen is good for blog posts or email showing a transaction
-# of what you did when asking for help or demonstrating a technique.
-Set-PSReadlineKeyHandler -Chord 'Ctrl+Q,C' -Function CaptureScreen
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
-
-#  bash style completion without using Emacs mode
-Set-PSReadlineKeyHandler -Key Tab -Function Complete
 
 # ================================================================================
 # From https://github.com/lzybkr/PSReadLine/blob/master/PSReadLine/SamplePSReadlineProfile.ps1
@@ -30,6 +23,14 @@ Set-PSReadlineKeyHandler -Key Tab -Function Complete
 Import-Module PSReadLine
 
 Set-PSReadLineOption -EditMode Emacs
+
+#  bash style completion without using Emacs mode
+Set-PSReadlineKeyHandler -Key Tab -Function Complete
+
+# CaptureScreen is good for blog posts or email showing a transaction
+# of what you did when asking for help or demonstrating a technique.
+# Set-PSReadlineKeyHandler -Chord 'Ctrl+D,Ctrl+C' -Function CaptureScreen
+Set-PSReadlineKeyHandler 'Alt+C' -Function CaptureScreen
 
 # Searching for commands with up/down arrow is really handy.  The
 # option "moves to end" is useful if you want the cursor at the end

@@ -233,6 +233,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
     let NERDTreeIgnore=['\.pyc$', '\~$']
     let g:NERDTreeDirArrowExpandable = '▸'
     let g:NERDTreeDirArrowCollapsible = '▾'
+    let g:NERDTreeMinimalUI = 1
+    let g:NERDTreeWinSize = 24
+    autocmd VimEnter * if (0 == argc()) | NERDTree | endif
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     map - :NERDTreeToggle<CR>
 "}}}
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
@@ -258,7 +262,10 @@ Plug 'Raimondi/delimitMate' "{{{
 
 " js indentation support
 " breaks gruvbox highlighting
-" Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' "{{{
+  let g:polyglot_disabled = ['elm', 'js', 'jsx']
+"}}}
+
 " Plug 'pangloss/vim-javascript'
 
 Plug 'othree/yajs'

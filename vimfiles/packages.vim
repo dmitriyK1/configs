@@ -235,8 +235,6 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
     let g:NERDTreeDirArrowCollapsible = '▾'
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeWinSize = 24
-    autocmd VimEnter * if (0 == argc()) | NERDTree | endif
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     map - :NERDTreeToggle<CR>
 "}}}
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }

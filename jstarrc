@@ -53,6 +53,8 @@
  -help_is_utf8	Set if help text is in UTF-8 format.  Leave clear if it's a raw 8-bit format.
 
 -mid		Cursor is recentered when scrolling is necessary
+ -left nn	Amount to jump left when scrolling is necessary (-1 for 1/4 width)
+ -right nn	Amount to jump right when scrolling is necessary (-1 for 1/4 width)
  -marking	Text between ^KB and cursor is highlighted (use with -lightoff)
  -asis		Characters 128 - 255 shown as-is
 -force		Force final newline when files are saved
@@ -60,8 +62,8 @@
  -nomodcheck	Disable periodic checking of disk file newer than buffer
 		(this checking happens on save even with this option).
  -nocurdir	Do not prompt with current directory
--nobackups	If you don't want backup files to be created
--nodeadjoe	If you don't want DEADJOE files to be created
+ -nobackups	If you don't want backup files to be created
+ -nodeadjoe	If you don't want DEADJOE files to be created
  -break_hardlinks
 		Delete file before writing, to break hard links
 		(but don't break symbolic links).
@@ -76,9 +78,9 @@
  -nosta		Disable top-most status line
 -keepup		%k and %c status line escape sequences updated frequently
  -pg nnn	No. lines to keep for PgUp/PgDn
--undo_keep 0  nnn	Number of undo records to keep.  0 for infinite.
+-undo_keep 0	Number of undo records to keep.  0 for infinite.
 
--csmode	^KF after a pervious search does a ^L instead
+ -csmode	^KF after a pervious search does a ^L instead
 
  -backpath path
 		Directory to store backup files (one space between 'backpath' and
@@ -96,7 +98,7 @@
  -lines nnn	Set no. screen lines
  -baud nnn	Set baud rate for terminal optimizations
  -columns nnn	Set no. screen columns
- -help		Start with help on
+ -helpon	Start with help on
  -skiptop nnn	Don't use top nnn lines of the screen
 
 -notite         Don't send terminal initialization and termination strings: prevents
@@ -180,7 +182,7 @@
 
 -restore	Restore previous cursor position when files are opened
 
--search_prompting
+ -search_prompting
 		Search prompts with previous search request.
 
  -regex		Search uses standard regular expression format (otherwise it uses
@@ -235,6 +237,11 @@
 -rmsg  %S Row %4r Col %3c %t  Ctrl-J for help
 -smsg ** Line %r Col %c Offset %o(0x%O) %e %a(0x%A) Width %w ** 
 -zmsg ** Line %r Col %c Offset %o(0x%O) ** 
+-xmsg \i Joe's Own Editor for Windows %v (%b) ** Type \bCtrl-K Q\b to exit or \bCtrl-J\b for help **\i
+
+ Key sequence hints which are displayed in various prompts.
+-aborthint ^C
+-helphint ^J
 
 
  SECOND SECTION: File name dependant local option settings:
@@ -411,6 +418,7 @@ mode,"asis",rtn	% % Meta chars as-is
 mode,"language",rtn	V Language
 mode,"picture",rtn	P picture %Zpicture%
 mode,"type",rtn		F File type [%Ztype%]
+mode,"title",rtn	C Context %Ztitle%
 menu,"more-options",rtn	  % % More options...
 
 :defmenu more-options menu,"root",rtn
@@ -492,6 +500,8 @@ mode,"backpath",rtn	% % Path to backup files %Zbackpath%
 :defmenu cursor menu,"more-options",rtn
 mode,"pg",rtn	% % No. PgUp/PgDn lines %Zpg%
 mode,"mid",rtn	C Center on scroll %Zmid%
+mode,"left",rtn	L Columns to scroll left %Zleft%
+mode,"right",rtn R Columns to scroll right %Zright%
 mode,"floatmouse",rtn	% % Click past end %Zfloatmouse%
 mode,"rtbutton",rtn	% % Right button %Zrtbutton%
 
@@ -626,6 +636,9 @@ mode,"spaces",rtn	% % No tabs %Zspaces%
 \i \i  user joerc file is here %LOCALAPPDATA%\\JoeEditor\\jstarrc \|\i \i
 \i \i  default syntax and i18n files are here (Program location)\\syntax \|\i \i
 \i \i  additional documentation can be found here (Program location)\\doc \|\i \i
+\i \i \|\i \i
+\i \i  Right-click in the editor window to display the context menu, \|\i \i
+\i \i  which has some settings and links to documentation. \|\i \i
 }
 
 {CharTable
@@ -753,9 +766,10 @@ defm2drag	M2DRAG		Select a region of words
 defm3down	M3DOWN		Select the line at the mouse location
 defm3up		M3UP
 defm3drag	M3DRAG		Select a region of lines
-defmmup		MMUP		No-op
+defmiddleup	MIDDLEUP	No-op
+defmiddledrag	MIDDLEDRAG	No-op
+defmiddledown	MIDDLEDOWN	No-op
 defmrdown	MRDOWN		No-op
-defmmdrag	MMDRAG		No-op
 defmrdrag	MRDRAG		No-op
 winpaste	MMDOWN		Paste on middle-click
 wincontext	MRUP		Show context menu on right-click

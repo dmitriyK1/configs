@@ -2,3 +2,5 @@
 au GUIEnter * simalt ~x
 
 colorscheme molokai
+
+call ToggleHiddenAll()

@@ -163,6 +163,5 @@ source ~/vimfiles/conditionals.vim
 source ~/vimfiles/highlight.vim
 
 execute "set titleold=".hostname()
-call ToggleHiddenAll()
 
 nohlsearch   " When sourcing this file, do not immediately turn on highlighting

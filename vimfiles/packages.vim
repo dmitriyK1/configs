@@ -1,5 +1,15 @@
 call plug#begin()
 
+Plug 'cohama/agit.vim'
+
+Plug 'elmcast/elm-vim' "{{{
+  let g:elm_detailed_complete = 1
+" }}}
+
+Plug 'avh4/elm-format' "{{{
+  let g:elm_format_autosave = 1
+" }}}
+
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
@@ -249,8 +259,8 @@ Plug 'easymotion/vim-easymotion' "{{{
 "}}}
 Plug 'vim-scripts/occur.vim'
 Plug 'mileszs/ack.vim'
-" custom status line
 Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline-powerful'
 " Plug 'airblade/vim-gitgutter'
 " braces auto-closing
 Plug 'Raimondi/delimitMate' "{{{

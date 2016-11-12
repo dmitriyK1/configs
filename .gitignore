@@ -141,3 +141,4 @@ fabric.properties
 node_modules
 
 update.bat
+update_packages.bat

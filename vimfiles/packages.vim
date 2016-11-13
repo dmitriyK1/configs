@@ -340,7 +340,8 @@ Plug 'ervandew/supertab' " {{{
 
   " http://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme/22253548#22253548
   let g:SuperTabDefaultCompletionType = '<C-n>'
-  let g:SuperTabCrMapping = 0
+  let g:SuperTabLongestHighlight = 1
+  let g:SuperTabLongestEnhanced = 1
 " }}}
 
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting

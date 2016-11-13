@@ -292,7 +292,13 @@ Plug 'Shougo/neocomplete'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'heavenshell/vim-jsdoc'
+Plug 'heavenshell/vim-jsdoc' " {{{
+  let g:jsdoc_input_description=1
+  let g:jsdoc_additional_descriptions=1
+  let g:jsdoc_enable_es6=1
+  let g:jsdoc_underscore_private=1
+" }}}
+
 " Plug 'waiting-for-dev/vim-www'
 
 " use VimCompletesMe instead (faster)

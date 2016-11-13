@@ -297,6 +297,7 @@ Plug 'heavenshell/vim-jsdoc' " {{{
   let g:jsdoc_additional_descriptions=1
   let g:jsdoc_enable_es6=1
   let g:jsdoc_underscore_private=1
+  map <leader>js :JsDoc<CR>
 " }}}
 
 " Plug 'waiting-for-dev/vim-www'

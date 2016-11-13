@@ -58,6 +58,12 @@ Plug 'dmitriyK1/ReactVimSnippets'
 " ================================================================================
 " Colorschemes:
 " ================================================================================
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'kamwitsta/mythos'
+Plug 'kamwitsta/nordisk'
+Plug 'AlessandroYorba/Sierra'
+Plug 'Blevs/vim-dzo'
+
 Plug 'robertmeta/nofrils'
 Plug 'trevordmiller/nova-vim'
 " Plug 'grod/sublime-color-schemes.vim'
@@ -271,13 +277,14 @@ Plug 'Raimondi/delimitMate' "{{{
 " js indentation support
 " breaks gruvbox highlighting
 Plug 'sheerun/vim-polyglot' "{{{
-  let g:polyglot_disabled = ['elm', 'javascript']
+  let g:polyglot_disabled = ['elm']
 "}}}
 
 " Plug 'pangloss/vim-javascript'
 
-Plug 'othree/yajs'
-Plug 'othree/es.next.syntax.vim'
+" Plug 'othree/yajs'
+" Plug 'othree/es.next.syntax.vim'
+
 Plug 'othree/javascript-libraries-syntax.vim' "{{{
   let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
 " }}}

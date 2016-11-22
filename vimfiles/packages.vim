@@ -275,10 +275,24 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
     let g:NERDTreeDirArrowCollapsible = '▾'
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeWinSize = 24
+    let g:NERDTreeHijackNetrw = 1
     map - :NERDTreeToggle<CR>
 "}}}
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
-" Plug 'Xuyuanp/nerdtree-git-plugin'            " not working for some reason
+Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
+  let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+" }}}
+
 Plug 'mattn/emmet-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-heroku'

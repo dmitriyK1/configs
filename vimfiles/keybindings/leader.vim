@@ -45,6 +45,10 @@ noremap <leader>ss :source $MYVIMRC<CR>
 "
 " Source current file
 noremap <leader>so :so%<CR>
+
+" Save and source config
+nnoremap <silent> <leader>R :w<CR> :source $MYVIMRC<CR>
+
 " nnoremap <leader>m :mksession<CR>
 nnoremap <leader>P :set paste!<CR>
 

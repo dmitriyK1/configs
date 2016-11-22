@@ -279,6 +279,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
     let g:NERDTreeWinSize = 24
     let g:NERDTreeHijackNetrw = 1
     map - :NERDTreeToggle<CR>
+    map g- :NERDTreeFind<CR>
 "}}}
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin' " {{{

@@ -1,5 +1,7 @@
 call plug#begin()
 
+Plug 'fatih/vim-go'
+
 Plug 'cohama/agit.vim'
 
 Plug 'elmcast/elm-vim' "{{{

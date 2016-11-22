@@ -32,13 +32,15 @@ noremap <leader>, :update<CR>
 
 map <silent> <leader>ad :bufdo :Bdelete<CR>
 map <silent> <leader>d :Bdelete<CR>
-map <silent> <leader>c :bd<CR>
+map <silent> <leader>c :bd<CR>:tabclose<CR>
 
 nnoremap <leader>v V`]
 
 " noremap <leader>r :set relativenumber!<CR>
 " nnoremap <leader>n :setlocal number!<CR>
-nmap <silent> <leader>se :e $MYVIMRC<CR>
+
+" nmap <silent> <leader>se :e $MYVIMRC<CR>
+nmap <silent> <leader>se :tabedit $MYVIMRC<CR>
 noremap <leader>ss :source $MYVIMRC<CR>
 "
 " Source current file

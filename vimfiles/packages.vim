@@ -270,7 +270,9 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
         \ 'file': '\.pyc$\|\.pyo$',
         \ }
 "}}}
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
+
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
+Plug 'scrooloose/nerdtree' "{{{
     let g:nerdtree_tabs_open_on_gui_startup = 0
     let NERDTreeIgnore=['\.pyc$', '\~$']
     let g:NERDTreeDirArrowExpandable = '▸'

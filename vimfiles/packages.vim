@@ -4,12 +4,12 @@ Plug 'fatih/vim-go'
 
 Plug 'cohama/agit.vim'
 
-Plug 'elmcast/elm-vim' "{{{
-  let g:elm_detailed_complete = 1
+" Plug 'elmcast/elm-vim' "{{{
+  " let g:elm_detailed_complete = 1
 " }}}
 
-Plug 'avh4/elm-format' "{{{
-  let g:elm_format_autosave = 1
+" Plug 'avh4/elm-format' "{{{
+  " let g:elm_format_autosave = 1
 " }}}
 
 " Plug 'vim-ctrlspace/vim-ctrlspace'

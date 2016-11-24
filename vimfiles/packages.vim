@@ -280,7 +280,7 @@ Plug 'scrooloose/nerdtree' "{{{
     let g:NERDTreeMinimalUI = 1
     let g:NERDTreeWinSize = 24
     let g:NERDTreeHijackNetrw = 1
-    map - :NERDTreeToggle<CR>
+    " map - :NERDTreeToggle<CR>
     map g- :NERDTreeFind<CR>
 "}}}
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
@@ -373,6 +373,8 @@ Plug 'ervandew/supertab' " {{{
 " http://spf13.com/post/the-15-best-vim-plugins
 " Plug 'moll/vim-bbye'
 " https://github.com/tpope/vim-dispatch
+
+Plug 'tpope/vim-vinegar'
 
 call plug#end()
 

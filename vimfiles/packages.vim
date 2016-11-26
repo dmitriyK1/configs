@@ -1,5 +1,8 @@
 call plug#begin()
 
+" alternative for vim-easygrep
+" Plug 'skwp/greplace.vim'
+
 Plug 'fatih/vim-go'
 
 Plug 'cohama/agit.vim'

@@ -337,7 +337,14 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-speeddating'
 Plug 'Shougo/neocomplete'
-Plug 'Shougo/neosnippet'
+
+Plug 'Shougo/neosnippet' " {{{
+  " disables all runtime snippets
+  let g:neosnippet#disable_runtime_snippets = {
+        \   '_' : 1,
+        \ }
+" }}}
+
 Plug 'maksimr/vim-jsbeautify'
 Plug 'heavenshell/vim-jsdoc' " {{{
   let g:jsdoc_input_description=1

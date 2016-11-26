@@ -309,15 +309,15 @@ Plug 'mileszs/ack.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/lightline-powerful'
 " Plug 'airblade/vim-gitgutter'
-" braces auto-closing
-Plug 'Raimondi/delimitMate' "{{{
-  let g:delimitMate_expand_cr=1
-  let g:delimitMate_expand_space=1
+
+Plug 'jiangmiao/auto-pairs' " {{{
+  let g:AutoPairsMultilineClose = 0
+
   " prevents adding new line when choosing item from autocomplete dropdown
   imap <expr> <CR> pumvisible()
-                    \ ? "\<C-y><C-y>"
-                    \ : "<Plug>delimitMateCR"
-"}}}
+        \ ? "\<C-y><C-y>"
+        \ : "\<CR>"
+" }}}
 
 " js indentation support
 " breaks gruvbox highlighting

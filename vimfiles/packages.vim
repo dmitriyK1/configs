@@ -311,8 +311,12 @@ Plug 'itchyny/lightline-powerful'
 " Plug 'airblade/vim-gitgutter'
 " braces auto-closing
 Plug 'Raimondi/delimitMate' "{{{
-    let g:delimitMate_expand_cr=1
-    let g:delimitMate_expand_space=1
+  let g:delimitMate_expand_cr=1
+  let g:delimitMate_expand_space=1
+  " prevents adding new line when choosing item from autocomplete dropdown
+  imap <expr> <CR> pumvisible()
+                    \ ? "\<C-y><C-y>"
+                    \ : "<Plug>delimitMateCR"
 "}}}
 
 " js indentation support
@@ -357,8 +361,6 @@ Plug 'heavenshell/vim-jsdoc' " {{{
 " Plug 'waiting-for-dev/vim-www'
 
 Plug 'ervandew/supertab' " {{{
-  " prevents adding new line when choosing item from autocomplete dropdown
-  inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
   set completeopt+=longest
 
   " http://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme/22253548#22253548

@@ -51,9 +51,6 @@ Plug 'dkprice/vim-easygrep'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-abolish'
 Plug 'AndrewRadev/splitjoin.vim'
-" Plug 'justinj/vim-react-snippets'
-" Plug 'mlaursen/vim-react-snippets'
-" Plug 'bentayloruk/vim-react-es6-snippets'
 
 
 " ================================================================================
@@ -227,7 +224,6 @@ Plug 'SirVer/ultisnips' " {{{
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " }}}
 
-Plug 'honza/vim-snippets'
 Plug 'vim-scripts/LargeFile'
 Plug 'AndrewRadev/linediff.vim'
 " Plug 'powerman/vim-plugin-autosess'
@@ -339,7 +335,6 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-speeddating'
 Plug 'Shougo/neocomplete'
 Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'heavenshell/vim-jsdoc' " {{{
   let g:jsdoc_input_description=1

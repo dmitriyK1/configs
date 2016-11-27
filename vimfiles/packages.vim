@@ -293,16 +293,7 @@ Plug 'jiangmiao/auto-pairs' " {{{
         \ : "\<C-g>u\<CR>"
 " }}}
 
-" js indentation support
-" breaks gruvbox highlighting
-Plug 'sheerun/vim-polyglot' "{{{
-  let g:polyglot_disabled = ['elm']
-"}}}
-
-" Plug 'pangloss/vim-javascript'
-
-" Plug 'othree/yajs'
-" Plug 'othree/es.next.syntax.vim'
+Plug 'sheerun/vim-polyglot'
 
 Plug 'othree/javascript-libraries-syntax.vim' "{{{
   let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'

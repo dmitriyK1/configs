@@ -18,33 +18,90 @@ Plug 'henrik/vim-indexed-search' "{{{
   " let g:indexed_search_colors=0
 "}}}
 
+" Delete buffers and close files in Vim without closing your windows or messing up your layout
+" :Bdelete
 Plug 'moll/vim-bbye'
+
+" Press <C-G>c in insert mode to toggle a temporary software caps lock, or gC
+" in normal mode to toggle a slightly more permanent one.
 Plug 'tpope/vim-capslock'
+
+" :UndotreeToggle
 Plug 'mbbill/undotree'
-Plug 'thinca/vim-quickrun'
+
+" execute current buffer and show output
+" Plug 'thinca/vim-quickrun'
+
+" This plugin provides the following mappings which allow you to move between Vim panes and tmux splits seamlessly:
+"   <ctrl-h> => Left
+"   <ctrl-j> => Down
+"   <ctrl-k> => Up
+"   <ctrl-l> => Right
+"   <ctrl-\> => Previous split
 Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'editorconfig/editorconfig-vim'
+
+" Vim sugar for the UNIX shell commands
+  " Remove: Delete a buffer and the file on disk simultaneously.
+  " Unlink: Like :Remove, but keeps the now empty buffer.
+  " Move: Rename a buffer and the file on disk simultaneously.
+  " Rename: Like :Move, but relative to the current file's containing directory.
+  " Chmod: Change the permissions of the current file.
+  " Mkdir: Create a directory, defaulting to the parent of the current file.
+  " Find: Run find and load the results into the quickfix list.
+  " Locate: Run locate and load the results into the quickfix list.
+  " Wall: Write every open window. Handy for kicking off tools like guard.
+  " SudoWrite: Write a privileged file with sudo.
+  " SudoEdit: Edit a privileged file with sudo.
 Plug 'tpope/vim-eunuch'
+
+
+" highlight conflict markers.
+" jump among conflict markers.
+" jump within conflict block; beginning, separator and end of the block.
+" resolve conflict with various strategies; themselves, ourselves, none and both strategies.
+" [x and ]x mappings are defined as default
+" This plugin defines mappings as default, ct for themselves, co for ourselves, cn for none and cb for both.
 Plug 'rhysd/conflict-marker.vim'
+
+" Force linewise or characterwise paste, regardless of how it was yanked.
 Plug 'vim-scripts/UnconditionalPaste'
 
-" conflicts with js conceal feature
 Plug 'Yggdroot/indentLine' "{{{
   map <leader>il :IndentLinesToggle<CR>
 "}}}
 
+" A Vim plugin for focussing on a selected region
+" <Leader>nr       - Open the current visual selection in a new narrowed window
 Plug 'chrisbra/NrrwRgn'
+
+" toggling settings mappings
 Plug 'tpope/vim-unimpaired'
 
 " apply macro to a multiple files at once
 Plug 'Olical/vim-enmasse'
 
+" A vim plugin for Flow
 Plug 'flowtype/vim-flow'
+
 Plug 'vim-scripts/DeleteTrailingWhitespace'
+
+" Only highlight the screen line of the cursor in the currently active window.
 Plug 'vim-scripts/CursorLineCurrentWindow'
+
+" Fast and Easy Find and Replace Across Multiple Files
 Plug 'dkprice/vim-easygrep'
+
 Plug 'vimwiki/vimwiki'
+
+" easily search for, substitute, and abbreviate multiple variants of a word
+" MixedCase (crm), camelCase (crc), snake_case (crs), and UPPER_CASE (cru)
 Plug 'tpope/vim-abolish'
+
+" A vim plugin that simplifies the transition between multiline and single-line code
+  " gS to split a one-liner into multiple lines
+  " gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
 Plug 'AndrewRadev/splitjoin.vim'
 
 
@@ -59,23 +116,24 @@ Plug 'Blevs/vim-dzo'
 
 Plug 'robertmeta/nofrils'
 Plug 'trevordmiller/nova-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'andreasvc/vim-256noir'
+Plug 'pbrisbin/vim-colors-off'
+Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'grod/sublime-color-schemes.vim'
 " Plug 'jyota/vimColors'
 " Plug 'mkarmona/colorsbox'
 " Plug 'nowk/genericdc'
 " Plug 'stulzer/heroku-colorscheme'
-Plug 'andreasvc/vim-256noir'
 " Plug 'marciomazza/vim-brogrammer-theme'
 " Plug 'cocopon/iceberg.vim'
 " Plug 'ryanpcmcquen/true-monochrome_vim'
 " Plug 'snowcrshd/cyberpunk.vim'
 " Plug 'roosta/vim-srcery'
 " Plug 'lifepillar/vim-solarized8'
-Plug 'pbrisbin/vim-colors-off'
 " Plug 'YorickPeterse/Autumn.vim'
 " Plug 'YorickPeterse/happy_hacking.vim'
 " Plug 'morhetz/gruvbox'
-Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'cocopon/lightline-hybrid.vim'
 " Plug 'NLKNguyen/papercolor-theme'
@@ -99,7 +157,6 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'sickill/vim-sunburst'
 " Plug 'vim-scripts/vibrantink'
 " Plug 'lisposter/vim-blackboard'
-Plug 'altercation/vim-colors-solarized'
 " Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 " Plug 'romainl/Apprentice'
 " Plug 'vim-scripts/Sorcerer'
@@ -173,8 +230,6 @@ Plug 'mhinz/vim-grepper' "{{{
   xmap gs  <plug>(GrepperOperator)
 "}}}
 
-Plug 'editorconfig/editorconfig-vim'
-
 Plug 'haya14busa/incsearch.vim' "{{{
   map /  <Plug>(incsearch-forward)
   map ?  <Plug>(incsearch-backward)
@@ -216,7 +271,9 @@ Plug 'junegunn/vim-easy-align' "{{{
   " xmap gl <Plug>(EasyAlign)
   " nmap gl <Plug>(EasyAlign)
 "}}}
-Plug 'sjl/gundo.vim'
+
+" Plug 'sjl/gundo.vim'
+
 Plug 'frace/vim-bubbles'
 Plug 'tmhedberg/SimpylFold'
 Plug 'statianzo/vim-jade'
@@ -328,11 +385,13 @@ Plug 'ervandew/supertab' " {{{
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 " https://github.com/scrooloose/syntastic      // slow
 
-" https://github.com/Shutnik/jshint2.vim
+" After you open a .js file, and save it, it will run eslint on the file and
+" report errors in the location window.
+" :ESLint
+Plug 'bigfish/vim-eslint'
+
 " http://vimawesome.com
 " http://spf13.com/post/the-15-best-vim-plugins
-" Plug 'moll/vim-bbye'
-" https://github.com/tpope/vim-dispatch
 
 Plug 'tpope/vim-vinegar'
 
@@ -341,7 +400,6 @@ call plug#end()
 " ================================================================================
 " Rainbow parentheses options start
 " ================================================================================
-
 " let g:rbpt_colorpairs = [
 "     \ ['brown',       'RoyalBlue3'],
 "     \ ['Darkblue',    'SeaGreen3'],
@@ -368,8 +426,6 @@ call plug#end()
 " au Syntax * RainbowParenthesesLoadRound
 " au Syntax * RainbowParenthesesLoadSquare
 " au Syntax * RainbowParenthesesLoadBraces
-
 " ================================================================================
 " Rainbow parentheses options end
 " ================================================================================
-

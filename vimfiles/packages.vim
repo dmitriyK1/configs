@@ -381,8 +381,8 @@ Plug 'heavenshell/vim-jsdoc' " {{{
 Plug 'ervandew/supertab' " {{{
   set completeopt+=longest
 
+  " let g:SuperTabLongestHighlight = 1
   let g:SuperTabDefaultCompletionType = '<C-n>'
-  let g:SuperTabLongestHighlight = 1
   let g:SuperTabLongestEnhanced = 1
 " }}}
 

@@ -141,7 +141,6 @@ Plug 'xolox/vim-notes'
 Plug 'xolox/vim-shell'
 Plug 'xolox/vim-easytags'
 
-Plug 'kana/vim-smartinput'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-line'
@@ -195,12 +194,12 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'lfilho/cosco.vim'
 " Plug 'powerman/vim-plugin-ruscmd'
 
-" Plug 'SirVer/ultisnips' " {{{
-"   " better key bindings for UltiSnipsExpandTrigger
-"   let g:UltiSnipsExpandTrigger = "<tab>"
-"   let g:UltiSnipsJumpForwardTrigger = "<tab>"
-"   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-" " }}}
+Plug 'SirVer/ultisnips' " {{{
+  " better key bindings for UltiSnipsExpandTrigger
+  let g:UltiSnipsExpandTrigger = "<tab>"
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" }}}
 
 Plug 'vim-scripts/LargeFile'
 Plug 'AndrewRadev/linediff.vim'

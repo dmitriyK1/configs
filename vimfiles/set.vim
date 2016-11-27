@@ -115,6 +115,7 @@ set ttimeoutlen=10
 " set completeopt=longest,menuone,preview
 set completeopt=menu
 
+set complete=.,w,b,u
 
 set wrapscan
 set cmdheight=1

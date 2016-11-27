@@ -1,9 +1,10 @@
+" http://vimawesome.com
+" http://spf13.com/post/the-15-best-vim-plugins
+
 call plug#begin()
 
 " alternative for vim-easygrep
 " Plug 'skwp/greplace.vim'
-
-Plug 'fatih/vim-go'
 
 Plug 'cohama/agit.vim'
 
@@ -276,7 +277,6 @@ Plug 'junegunn/vim-easy-align' "{{{
 
 Plug 'frace/vim-bubbles'
 Plug 'tmhedberg/SimpylFold'
-Plug 'statianzo/vim-jade'
 Plug 'vim-scripts/indentpython.vim'
 " show git diff via sign column
 " Plug 'mhinz/vim-signify'
@@ -350,6 +350,10 @@ Plug 'jiangmiao/auto-pairs' " {{{
         \ : "\<C-g>u\<CR>"
 " }}}
 
+Plug 'statianzo/vim-jade'
+
+Plug 'fatih/vim-go'
+
 Plug 'sheerun/vim-polyglot'
 
 Plug 'othree/javascript-libraries-syntax.vim' "{{{
@@ -383,15 +387,12 @@ Plug 'ervandew/supertab' " {{{
 " }}}
 
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
-" https://github.com/scrooloose/syntastic      // slow
 
 " After you open a .js file, and save it, it will run eslint on the file and
 " report errors in the location window.
 " :ESLint
+" requires .eslintrc in project directory
 Plug 'bigfish/vim-eslint'
-
-" http://vimawesome.com
-" http://spf13.com/post/the-15-best-vim-plugins
 
 Plug 'tpope/vim-vinegar'
 

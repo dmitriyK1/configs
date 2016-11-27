@@ -278,9 +278,6 @@ Plug 'tpope/vim-dispatch'
 " Vim plugin for the_platinum_searcher, 'pt', a replacement for the Perl module/CLI script 'ack'
 Plug 'nazo/pt.vim'
 
-" Code structure browser
-Plug 'vim-scripts/taglist.vim'
-
 " Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar'
 

@@ -1,8 +1,6 @@
 
 " http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
 
-" TODO: add <leader>es keybinding to edit snippets file map <leader>es :e ~/vimfiles/snippets
-
 " TODO: remove redundant keybindings ( delete keybindings provided by unimpaired first )
 
 " TODO: sort leader.vim alphabetically

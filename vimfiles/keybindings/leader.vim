@@ -100,6 +100,7 @@ map <leader>et :tabe %%
 " Get to home dir easier
 nmap <leader>h :cd ~/ <CR>
 
+map <leader>ee :UltiSnipsEdit<CR>
 
 " Map <Leader>ff to display all lines with keyword under cursor
 " and ask which one to jump to

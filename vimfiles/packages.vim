@@ -6,10 +6,12 @@ call plug#begin()
 " alternative for vim-easygrep
 " Plug 'skwp/greplace.vim'
 
+" Git log viewer
 Plug 'cohama/agit.vim'
 
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
+" vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
   nnoremap <silent> g1 :call WordNavigation(1)<CR>
   nnoremap <silent> g2 :call WordNavigation(0)<CR>
@@ -193,24 +195,45 @@ Plug 'shinchu/lightline-gruvbox.vim'
 
 
 " Plug 'xolox/vim-session'
-Plug 'xolox/vim-colorscheme-switcher'
+
+Plug 'xolox/vim-colorscheme-switcher', { 'on': 'NextColorScheme' } "{{{
+  let g:colorscheme_switcher_define_mappings = 0
+"}}}
+
 Plug 'xolox/vim-misc'
+
 Plug 'xolox/vim-notes'
+
 Plug 'xolox/vim-shell'
+
 Plug 'xolox/vim-easytags'
 
 Plug 'kana/vim-textobj-entire'
+
 Plug 'kana/vim-textobj-function'
+
 Plug 'kana/vim-textobj-line'
+
 Plug 'glts/vim-textobj-comment'
+
+" provides additional text objects
 Plug 'wellle/targets.vim'
+
+" a small collection of settings,
+" commands and mappings put together to make working with the
+" location/quickfix list/window smoother.
 Plug 'romainl/vim-qf'
+
 Plug 'kana/vim-arpeggio'
 
+" toggle true/false, && || etc
 Plug 'AndrewRadev/switch.vim' "{{{
   " let g:switch_mapping = ""
 "}}}
 
+" Use your favorite grep tool (ag, ack, git grep, ripgrep, pt, sift, findstr,
+" grep) to start an asynchronous search. All matches will be put in a quickfix
+" or location list.
 Plug 'mhinz/vim-grepper' "{{{
   let g:grepper = {
       \ 'tools':     ['ag', 'csearch', 'findstr'],
@@ -231,23 +254,52 @@ Plug 'mhinz/vim-grepper' "{{{
   xmap gs  <plug>(GrepperOperator)
 "}}}
 
+" incrementally highlights ALL pattern matches unlike default 'incsearch'
 Plug 'haya14busa/incsearch.vim' "{{{
   map /  <Plug>(incsearch-forward)
   map ?  <Plug>(incsearch-backward)
+  map g/ <Plug>(incsearch-stay)
 "}}}
+
+" create your own text objects (dependency)
 Plug 'kana/vim-textobj-user'
+
+" vgb     select last pasted text
+" dgb     delete last pasted text
+" =gb     re-indent last pasted text
 Plug 'saaguero/vim-textobj-pastedtext'
+
+" Speed up Vim by updating folds only when called-for
 Plug 'konfekt/fastfold'
+
+" asynchronous build and test dispatcher
 Plug 'tpope/vim-dispatch'
+
+" Vim plugin for the_platinum_searcher, 'pt', a replacement for the Perl module/CLI script 'ack'
 Plug 'nazo/pt.vim'
+
+" Code structure browser
+Plug 'vim-scripts/taglist.vim'
+
+" Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar'
+
 " Plug 'justinmk/vim-sneak'
+
 Plug 'mhinz/vim-startify'
+
+" Plugin to toggle, display and navigate marks
 Plug 'kshenoy/vim-signature'
+
 Plug 'nathanaelkane/vim-indent-guides'
+
 " Plug 'spolu/dwm.vim'
+
 Plug 'terryma/vim-multiple-cursors'
+
+" colon and semicolon insertion plugin
 Plug 'lfilho/cosco.vim'
+
 " Plug 'powerman/vim-plugin-ruscmd'
 
 Plug 'SirVer/ultisnips' " {{{
@@ -257,17 +309,50 @@ Plug 'SirVer/ultisnips' " {{{
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " }}}
 
+" Edit large files quickly: its just an autocmd that disables certain features of vim in the interests of speed
 Plug 'vim-scripts/LargeFile'
+
+" A vim plugin to perform diffs on blocks of code
+" :Linediff
 Plug 'AndrewRadev/linediff.vim'
+
 " Plug 'powerman/vim-plugin-autosess'
+
+" HTML abbreviations (similar to emmet)
+" <C-X><Space>  <foo>^</foo>
+" <C-X><CR>     <foo>\n^\n</foo>
+" <C-X>/        Last HTML tag closed
+" <C-X>!        <!DOCTYPE...>/<?xml ...?>
+" <C-X>@        <link rel="stylesheet" ...> (mnemonic: @ is used for importing in a CSS file)
+" <C-X>#        <meta http-equiv="Content-Type" ... />
+" <C-X>$        <script src="/javascripts/^.js"></script>
 Plug 'tpope/vim-ragtag'
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" <Leader>z
+" fold away lines not matching the last search pattern.
+"
+" <Leader>iz
+" fold away lines that do match the last search pattern (inverse folding).
+"
+" <Leader>Z
+" restore the previous fold settings
 Plug 'vim-scripts/searchfold.vim'
+
+" Google lookup from Vim
 Plug 'szw/vim-g'
+
+" Git wrapper
 Plug 'tpope/vim-fugitive'
+
+" git runtime files
 Plug 'tpope/vim-git'
+
 Plug 'tpope/vim-surround'
+
+" alignment plugin
 Plug 'godlygeek/tabular'
+
+" alignment plugin
 Plug 'junegunn/vim-easy-align' "{{{
   " xmap gl <Plug>(EasyAlign)
   " nmap gl <Plug>(EasyAlign)
@@ -275,17 +360,26 @@ Plug 'junegunn/vim-easy-align' "{{{
 
 " Plug 'sjl/gundo.vim'
 
+" text bubbling feature
 Plug 'frace/vim-bubbles'
-Plug 'tmhedberg/SimpylFold'
-Plug 'vim-scripts/indentpython.vim'
+
 " show git diff via sign column
 " Plug 'mhinz/vim-signify'
+
 " autodetect tabs/spaces of buffer
 Plug 'tpope/vim-sleuth'
+
+" Python code folding for Vim
+Plug 'tmhedberg/SimpylFold'
+
 Plug 'klen/python-mode'
-" readline keybindings
+Plug 'vim-scripts/indentpython.vim'
+
+" readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
+
 Plug 'FelikZ/ctrlp-py-matcher'
+
 Plug 'ctrlpvim/ctrlp.vim' "{{{
   let g:ctrlp_map = '<c-t>'
   let g:ctrlp_open_multiple_files = '1jr'
@@ -312,7 +406,17 @@ Plug 'scrooloose/nerdtree' "{{{
     " map - :NERDTreeToggle<CR>
     map g- :NERDTreeFind<CR>
 "}}}
-Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
+
+" Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
+
+" This plugin aims at making NERDTree feel like a true panel, independent of tabs.
+" Just one NERDTree, always and ever. It will always look the same in all tabs,
+" including expanded/collapsed nodes, scroll position etc.
+" :NERDTreeTabsToggle
+Plug 'jistr/vim-nerdtree-tabs' "{{{
+  map <silent> <leader>T :NERDTreeTabsToggle<CR>
+" }}}
+
 Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
   let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -327,20 +431,44 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
     \ }
 " }}}
 
+" <c-e> in insert mode
+" <c-n> cycle throught empty elements
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" <c-y>,
 Plug 'mattn/emmet-vim'
+
 Plug 'Chiel92/vim-autoformat'
+
+" A Vim plugin for interacting with Heroku
+" :Hk
 Plug 'tpope/vim-heroku'
+
+" Comment plugin
 Plug 'tomtom/tcomment_vim'
+
+" enable repeating supported plugin maps with "."
 Plug 'tpope/vim-repeat'
+
 Plug 'easymotion/vim-easymotion' "{{{
   map = <Plug>(easymotion-prefix)
 "}}}
+
+" Show all lines in the buffer containing word (grep buffer)
+" <Leader>oc   - Occur       Search current buffer
+" <Leader>mo   - Moccur      Search all buffers
+" <Leader>*   - StarOccur    Search all buffers for occurrence of the word nearest to the cursor:
 Plug 'vim-scripts/occur.vim'
+
+" Vim plugin for the Perl module / CLI script 'ack'
 Plug 'mileszs/ack.vim'
+
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/lightline-powerful'
+
 " Plug 'airblade/vim-gitgutter'
 
+" auto-closer - insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs' " {{{
   let g:AutoPairsMultilineClose = 0
 
@@ -365,9 +493,15 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
 
 " cycle through yanks (alt-p \ alt-shift-p)
 Plug 'maxbrunsfeld/vim-yankstack'
+
+" use CTRL-A/CTRL-X to increment dates, times, and more
 Plug 'tpope/vim-speeddating'
 
+" This extension allows you to use jsbeautifier inside vim to quickly format
+" javascript, html and css files.
 Plug 'maksimr/vim-jsbeautify'
+
+" Generate JSDoc to your JavaScript code
 Plug 'heavenshell/vim-jsdoc' " {{{
   let g:jsdoc_input_description=1
   let g:jsdoc_additional_descriptions=1
@@ -378,6 +512,7 @@ Plug 'heavenshell/vim-jsdoc' " {{{
 
 " Plug 'waiting-for-dev/vim-www'
 
+" autocompletion
 Plug 'ervandew/supertab' " {{{
   set completeopt+=longest
 
@@ -394,6 +529,7 @@ Plug 'ervandew/supertab' " {{{
 " requires .eslintrc in project directory
 Plug 'bigfish/vim-eslint'
 
+" file browser
 Plug 'tpope/vim-vinegar'
 
 call plug#end()

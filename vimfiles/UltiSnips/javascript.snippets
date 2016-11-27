@@ -1,0 +1,65 @@
+snippet l "console.log" w
+console.log($0);
+endsnippet
+# ----------------------------------------
+snippet fn "Function" w
+function $1($2) {
+	$0
+}
+endsnippet
+# ----------------------------------------
+snippet v "Variable" w
+var $1 = $0;
+endsnippet
+# ----------------------------------------
+snippet c "Constant" w
+const $1 = $0;
+endsnippet
+# ----------------------------------------
+snippet cl "Class" w
+class $1 {
+	$0
+}
+endsnippet
+# ----------------------------------------
+snippet ce "Class+extends" w
+class $1 extends $2 {
+	$0
+}
+endsnippet
+# ----------------------------------------
+snippet a "alert" w
+alert($0);
+endsnippet
+# ----------------------------------------
+snippet i "import" w
+import $1 from "$0";
+endsnippet
+# ----------------------------------------
+snippet in "named import" w
+import { $1 } from "$0";
+endsnippet
+# ----------------------------------------
+snippet "([^\s].*)\.(return|ret)" "Return (postfix)" r
+return `!p snip.rv = match.group(1)`$0
+endsnippet
+# ----------------------------------------
+snippet "(\w+).par" "Parenthesis (postfix)" r
+(`!p snip.rv = match.group(1)`$1)$0
+endsnippet
+# ----------------------------------------
+snippet "([^\s].*)\.log" "console.log (postfix)" r
+console.log(`!p snip.rv = match.group(1)`)$0
+endsnippet
+# ----------------------------------------
+snippet "([^\s].*)\.debug" "console.debug (postfix)" r
+console.debug(`!p snip.rv = match.group(1)`)$0
+endsnippet
+# ----------------------------------------
+snippet "([^\s].*)\.(error|err)" "console.error (postfix)" r
+console.error(`!p snip.rv = match.group(1)`)$0
+endsnippet
+# ----------------------------------------
+snippet "([^\s].*)\.warn" "console.warn (postfix)" r
+console.warn(`!p snip.rv = match.group(1)`)$0
+endsnippet

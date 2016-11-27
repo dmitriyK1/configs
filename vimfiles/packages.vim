@@ -7,14 +7,6 @@ Plug 'fatih/vim-go'
 
 Plug 'cohama/agit.vim'
 
-" Plug 'elmcast/elm-vim' "{{{
-  " let g:elm_detailed_complete = 1
-" }}}
-
-" Plug 'avh4/elm-format' "{{{
-  " let g:elm_format_autosave = 1
-" }}}
-
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
@@ -184,23 +176,6 @@ Plug 'mhinz/vim-grepper' "{{{
 
 Plug 'editorconfig/editorconfig-vim'
 
-Plug 'ajh17/VimCompletesMe' " {{{
-  " https://github.com/ajh17/VimCompletesMe/issues/12#issuecomment-94115124
-
-  let g:vcm_default_maps = 0
-  imap <S-Tab> <Plug>vim_completes_me_backward
-
-  " SuperTab like snippets behavior (but yield to neocomplete)
-  imap <expr><Tab> pumvisible() ?
-        \ "\<Plug>vim_completes_me_forward" :
-        \     neosnippet#expandable_or_jumpable() ?
-        \     "\<Plug>(neosnippet_expand_or_jump)" :
-        \ "\<Tab>"
-  smap <expr><Tab> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)"
-  \: "\<Tab>"
-" }}}
-
 Plug 'haya14busa/incsearch.vim' "{{{
   map /  <Plug>(incsearch-forward)
   map ?  <Plug>(incsearch-backward)
@@ -220,12 +195,12 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'lfilho/cosco.vim'
 " Plug 'powerman/vim-plugin-ruscmd'
 
-Plug 'SirVer/ultisnips' " {{{
-  " better key bindings for UltiSnipsExpandTrigger
-  let g:UltiSnipsExpandTrigger = "<tab>"
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-" }}}
+" Plug 'SirVer/ultisnips' " {{{
+"   " better key bindings for UltiSnipsExpandTrigger
+"   let g:UltiSnipsExpandTrigger = "<tab>"
+"   let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" " }}}
 
 Plug 'vim-scripts/LargeFile'
 Plug 'AndrewRadev/linediff.vim'
@@ -314,9 +289,9 @@ Plug 'jiangmiao/auto-pairs' " {{{
   let g:AutoPairsMultilineClose = 0
 
   " prevents adding new line when choosing item from autocomplete dropdown
-  imap <expr> <CR> pumvisible()
+  inoremap <expr> <CR> pumvisible()
         \ ? "\<C-y><C-y>"
-        \ : "\<CR>"
+        \ : "\<C-g>u\<CR>"
 " }}}
 
 " js indentation support
@@ -340,14 +315,6 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
 " cycle through yanks (alt-p \ alt-shift-p)
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-speeddating'
-Plug 'Shougo/neocomplete'
-
-Plug 'Shougo/neosnippet' " {{{
-  " disables all runtime snippets
-  let g:neosnippet#disable_runtime_snippets = {
-        \   '_' : 1,
-        \ }
-" }}}
 
 Plug 'maksimr/vim-jsbeautify'
 Plug 'heavenshell/vim-jsdoc' " {{{
@@ -363,7 +330,6 @@ Plug 'heavenshell/vim-jsdoc' " {{{
 Plug 'ervandew/supertab' " {{{
   set completeopt+=longest
 
-  " http://stackoverflow.com/questions/14896327/ultisnips-and-youcompleteme/22253548#22253548
   let g:SuperTabDefaultCompletionType = '<C-n>'
   let g:SuperTabLongestHighlight = 1
   let g:SuperTabLongestEnhanced = 1
@@ -372,8 +338,6 @@ Plug 'ervandew/supertab' " {{{
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 " https://github.com/scrooloose/syntastic      // slow
 
-" https://github.com/Valloric/YouCompleteMe
-" https://github.com/SirVer/ultisnips
 " https://github.com/Shutnik/jshint2.vim
 " http://vimawesome.com
 " http://spf13.com/post/the-15-best-vim-plugins

@@ -166,6 +166,9 @@ set splitright
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
 " Change directory to the current buffer when opening files.
+" NOTE: will break session plugins (better to use keybinding to change to current directory)
+" cnoremap cd. lcd %:p:h
+" nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 set autochdir
 
 

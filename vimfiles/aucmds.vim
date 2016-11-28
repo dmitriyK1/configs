@@ -119,3 +119,8 @@ autocmd Colorscheme * highlight Conceal guibg=black guifg=red
 " automatically open quickfix window on :grep
 " https://github.com/tpope/vim-fugitive
 autocmd QuickFixCmdPost *grep* cwindow
+
+" NOTE: will break session plugins (better to use keybinding to change to current directory)
+" cnoremap cd. lcd %:p:h
+" nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+autocmd BufEnter * silent! lcd %:p:h

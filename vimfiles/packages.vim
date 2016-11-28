@@ -213,7 +213,7 @@ Plug 'xolox/vim-misc'
 
 " Easy note taking in Vim
 " :Note
-Plug 'xolox/vim-notes'
+" Plug 'xolox/vim-notes'
 
 " Improved integration between Vim and its environment (fullscreen, open URL, background command execution)
 Plug 'xolox/vim-shell'

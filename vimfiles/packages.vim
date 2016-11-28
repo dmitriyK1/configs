@@ -88,13 +88,13 @@ Plug 'pbrisbin/vim-colors-off'
 " ================================================================================
 
 " gitk for Vim
-Plug 'gregsexton/gitv'
+Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 
 " alternative for vim-easygrep
 " Plug 'skwp/greplace.vim'
 
 " Git log viewer
-Plug 'cohama/agit.vim'
+Plug 'cohama/agit.vim', { 'on': 'Agit' }
 
 " tabs / buffers / files management
 " fast fuzzy searching powered by Go
@@ -115,14 +115,14 @@ Plug 'henrik/vim-indexed-search' "{{{
 
 " Delete buffers and close files in Vim without closing your windows or messing up your layout
 " :Bdelete
-Plug 'moll/vim-bbye'
+Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
 
 " Press <C-G>c in insert mode to toggle a temporary software caps lock, or gC
 " in normal mode to toggle a slightly more permanent one.
 Plug 'tpope/vim-capslock'
 
 " :UndotreeToggle
-Plug 'mbbill/undotree'
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
 " Visualize your undo tree
 " Plug 'sjl/gundo.vim'
@@ -273,7 +273,7 @@ Plug 'wellle/targets.vim'
 Plug 'romainl/vim-qf'
 
 " toggle true/false, && || etc
-Plug 'AndrewRadev/switch.vim' "{{{
+Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
   " let g:switch_mapping = ""
 "}}}
 
@@ -325,7 +325,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'nazo/pt.vim'
 
 " Vim plugin that displays tags in a window, ordered by scope
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 " Sneak is a minimalist, versatile motion to reach any location specified by two characters.
 " Plug 'justinmk/vim-sneak'
@@ -364,7 +364,7 @@ Plug 'vim-scripts/LargeFile'
 
 " A vim plugin to perform diffs on blocks of code
 " :Linediff
-Plug 'AndrewRadev/linediff.vim'
+Plug 'AndrewRadev/linediff.vim', { 'on': 'Linediff' }
 
 " auto save/load sessions
 " Plug 'powerman/vim-plugin-autosess'
@@ -385,7 +385,7 @@ Plug 'tpope/vim-ragtag'
 Plug 'vim-scripts/searchfold.vim'
 
 " Google lookup from Vim
-Plug 'szw/vim-g'
+Plug 'szw/vim-g', { 'on': 'Google' }
 
 " Git wrapper
 Plug 'tpope/vim-fugitive'
@@ -397,7 +397,7 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-surround'
 
 " alignment plugin
-Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 
 " alignment plugin
 Plug 'junegunn/vim-easy-align' "{{{
@@ -488,7 +488,7 @@ Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'mattn/emmet-vim'
 
 " :Autoformat
-Plug 'Chiel92/vim-autoformat'
+Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
 
 " A Vim plugin for interacting with Heroku
 " :Hk
@@ -507,7 +507,7 @@ Plug 'easymotion/vim-easymotion' "{{{
 " Show all lines in the buffer containing word (grep buffer)
 " <Leader>oc   - Occur       Search current buffer
 " <Leader>mo   - Moccur      Search all buffers
-" <Leader>*   - StarOccur    Search all buffers for occurrence of the word nearest to the cursor:
+" <Leader>*    - StarOccur    Search all buffers for occurrence of the word nearest to the cursor:
 Plug 'vim-scripts/occur.vim'
 
 " Vim plugin for the Perl module / CLI script 'ack'
@@ -589,7 +589,7 @@ Plug 'vim-scripts/AutoComplPop'
 " report errors in the location window.
 " :ESLint
 " requires .eslintrc in project directory
-Plug 'bigfish/vim-eslint'
+Plug 'bigfish/vim-eslint', { 'on': 'ESLint' }
 
 " file browser
 Plug 'tpope/vim-vinegar'

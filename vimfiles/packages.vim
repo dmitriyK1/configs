@@ -183,14 +183,20 @@ Plug 'tpope/vim-unimpaired'
 Plug 'Olical/vim-enmasse'
 
 " A vim plugin for Flow
-Plug 'flowtype/vim-flow'
+Plug 'flowtype/vim-flow' "{{{
+  let g:flow#enable = 0
+  let g:flow#errjmp = 1
+" }}}
 
 " Better whitespace highlighting for Vim
 " TODO: possibly remove DeleteTrailingWhitespace
 Plug 'ntpeters/vim-better-whitespace'
 
 " Delete unwanted whitespace at the end of lines
-Plug 'vim-scripts/DeleteTrailingWhitespace'
+Plug 'vim-scripts/DeleteTrailingWhitespace' "{{{
+  let g:DeleteTrailingWhitespace = 1
+  let g:DeleteTrailingWhitespace_Action = 'delete'
+" }}}
 
 " Only highlight the screen line of the cursor in the currently active window.
 Plug 'vim-scripts/CursorLineCurrentWindow'
@@ -331,7 +337,9 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 " Plug 'justinmk/vim-sneak'
 
 " start screen
-Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify' "{{{
+  let g:startify_custom_header = []
+" }}}
 
 " Plugin to toggle, display and navigate marks
 Plug 'kshenoy/vim-signature'
@@ -340,13 +348,19 @@ Plug 'kshenoy/vim-signature'
 " Plug 'nathanaelkane/vim-indent-guides' "{{{
   " let g:indent_guides_guide_size = 1
   " let g:indent_guides_start_level = 2
+  " let g:indent_guides_color_change_percent = 5
+  " let g:indent_guides_enable_on_vim_startup = 1
 " }}}
 
 " Tiled Window Management for Vim
 " Plug 'spolu/dwm.vim'
 
 " Sublime Text style multiple selections for Vim
-Plug 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors' "{{{
+  " let g:multi_cursor_exit_from_insert_mode=0
+  " let g:multi_cursor_quit_key='<C-c>'
+  let g:multi_cursor_next_key='<C-d>'
+" }}}
 
 " colon and semicolon insertion plugin
 Plug 'lfilho/cosco.vim'
@@ -409,13 +423,17 @@ Plug 'junegunn/vim-easy-align' "{{{
 "}}}
 
 " text bubbling feature
-Plug 'frace/vim-bubbles'
+Plug 'frace/vim-bubbles' "{{{
+  let g:bubbles_leader = '<M>'
+" }}}
 
 " autodetect tabs/spaces of buffer
 Plug 'tpope/vim-sleuth'
 
 " Python code folding for Vim
-Plug 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold' "{{{
+  let g:SimpylFold_docstring_preview=1
+" }}}
 
 " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
 Plug 'klen/python-mode'
@@ -488,10 +506,16 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " <c-y>,
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim' "{{{
+  " let g:user_emmet_install_global = 0
+  " let g:user_emmet_expandabbr_key = '<tab>'
+" }}}
 
 " :Autoformat
-Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
+Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
+  " To disable the fallback to vim's indent file, set the following variable to be 0.
+  let g:autoformat_autoindent = 0
+" }}}
 
 " A Vim plugin for interacting with Heroku
 " :Hk
@@ -543,7 +567,26 @@ Plug 'statianzo/vim-jade'
 Plug 'fatih/vim-go'
 
 " language pack
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' "{{{
+  let g:jsx_ext_required = 0
+
+  let g:javascript_enable_domhtmlcss = 1
+  " let g:javascript_conceal_function       = "ƒ"
+  " let g:javascript_conceal_return         = "⇚"
+  " let g:javascript_conceal_prototype      = "¶"
+  " let g:javascript_conceal_null           = "ø"
+  " let g:javascript_conceal_undefined      = "¿"
+  " let g:javascript_conceal_NaN            = "ℕ"
+  " let g:javascript_conceal_static         = "•"
+  " let g:javascript_conceal_super          = "Ω"
+  " let g:javascript_conceal_arrow_function = "⇒"
+  "
+  " let g:javascript_conceal_function       = "λ"
+  " let g:javascript_conceal_this           = "@"
+  " let g:javascript_conceal_return         = "<"
+  " let g:javascript_conceal_prototype      = "#"
+  " let g:javascript_conceal_infinity       = "∞"
+" }}}
 
 Plug 'othree/javascript-libraries-syntax.vim' "{{{
   let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
@@ -568,11 +611,15 @@ Plug 'heavenshell/vim-jsdoc' " {{{
   let g:jsdoc_additional_descriptions=1
   let g:jsdoc_enable_es6=1
   let g:jsdoc_underscore_private=1
+  let g:jsdoc_allow_input_prompt=1
+  let g:jsdoc_return_description=1
   map <leader>js :JsDoc<CR>
 " }}}
 
 " Toolbox to open & search URLs from vim
-" Plug 'waiting-for-dev/vim-www'
+" Plug 'waiting-for-dev/vim-www' "{{{
+"   let g:www_default_search_engine = 'google'
+" }}}
 
 " autocompletion
 Plug 'ervandew/supertab' " {{{

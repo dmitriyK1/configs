@@ -337,7 +337,10 @@ Plug 'mhinz/vim-startify'
 Plug 'kshenoy/vim-signature'
 
 " A Vim plugin for visually displaying indent levels in code
-" Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides' "{{{
+  " let g:indent_guides_guide_size = 1
+  " let g:indent_guides_start_level = 2
+" }}}
 
 " Tiled Window Management for Vim
 " Plug 'spolu/dwm.vim'

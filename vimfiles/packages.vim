@@ -96,6 +96,7 @@ Plug 'vim-scripts/CursorLineCurrentWindow'
 " Fast and Easy Find and Replace Across Multiple Files
 Plug 'dkprice/vim-easygrep'
 
+" Personal Wiki for Vim
 Plug 'vimwiki/vimwiki'
 
 " easily search for, substitute, and abbreviate multiple variants of a word
@@ -194,26 +195,53 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " ================================================================================
 
 
+" Extended session management for Vim (:mksession on steroids)
+" :SaveSession
+" :OpenSession
+" :RestartVim
+" :CloseSession
+" :DeleteSession
 " Plug 'xolox/vim-session'
 
+" colorscheme switcher
 Plug 'xolox/vim-colorscheme-switcher', { 'on': 'NextColorScheme' } "{{{
   let g:colorscheme_switcher_define_mappings = 0
 "}}}
 
+" Miscellaneous auto-load Vim scripts(dependency)
 Plug 'xolox/vim-misc'
 
+" Easy note taking in Vim
+" :Note
 Plug 'xolox/vim-notes'
 
+" Improved integration between Vim and its environment (fullscreen, open URL, background command execution)
 Plug 'xolox/vim-shell'
 
+" Automated tag file generation and syntax highlighting of tags in Vim
+" <C-]>   Jump to the definition of the keyword under the cursor.
 Plug 'xolox/vim-easytags'
 
+" ae targets the entire content of the current buffer.
+" ie is similar to ae, but ie does not include leading and trailing empty lines.
 Plug 'kana/vim-textobj-entire'
 
+" daf to Delete A Function
+" vif to Visually select the code Inside a Function
+" yaF to Yank A Function with leading or trailing blank lines
+" viF to visually select a function without leading or trailing blank lines
 Plug 'kana/vim-textobj-function'
 
+" val - select line (including whitespace)
+" vil - select line
 Plug 'kana/vim-textobj-line'
 
+" Mappings for simultaneously pressed keys
+Plug 'kana/vim-arpeggio'
+
+" ac selects a comment including the comment delimiters
+" ic selects just the comment content
+" aC selects a comment including trailing or leading whitespace
 Plug 'glts/vim-textobj-comment'
 
 " provides additional text objects
@@ -223,8 +251,6 @@ Plug 'wellle/targets.vim'
 " commands and mappings put together to make working with the
 " location/quickfix list/window smoother.
 Plug 'romainl/vim-qf'
-
-Plug 'kana/vim-arpeggio'
 
 " toggle true/false, && || etc
 Plug 'AndrewRadev/switch.vim' "{{{
@@ -281,17 +307,22 @@ Plug 'nazo/pt.vim'
 " Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar'
 
+" Sneak is a minimalist, versatile motion to reach any location specified by two characters.
 " Plug 'justinmk/vim-sneak'
 
+" start screen
 Plug 'mhinz/vim-startify'
 
 " Plugin to toggle, display and navigate marks
 Plug 'kshenoy/vim-signature'
 
+" A Vim plugin for visually displaying indent levels in code
 Plug 'nathanaelkane/vim-indent-guides'
 
+" Tiled Window Management for Vim
 " Plug 'spolu/dwm.vim'
 
+" Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
 
 " colon and semicolon insertion plugin
@@ -299,6 +330,7 @@ Plug 'lfilho/cosco.vim'
 
 " Plug 'powerman/vim-plugin-ruscmd'
 
+" snippets support
 Plug 'SirVer/ultisnips' " {{{
   let g:UltiSnipsSnippetsDir = "~/vimfiles/UltiSnips"
   let g:UltiSnipsExpandTrigger = "<tab>"
@@ -369,14 +401,19 @@ Plug 'tpope/vim-sleuth'
 " Python code folding for Vim
 Plug 'tmhedberg/SimpylFold'
 
+" Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
 Plug 'klen/python-mode'
+
+" This indentation script for python tries to match more closely what is suggested in PEP 8
 Plug 'vim-scripts/indentpython.vim'
 
 " readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
 
+" Fast vim CtrlP matcher based on python
 Plug 'FelikZ/ctrlp-py-matcher'
 
+" Fuzzy file, buffer, mru, tag, etc finder
 Plug 'ctrlpvim/ctrlp.vim' "{{{
   let g:ctrlp_map = '<c-t>'
   let g:ctrlp_open_multiple_files = '1jr'
@@ -414,6 +451,7 @@ Plug 'jistr/vim-nerdtree-tabs' "{{{
   map <silent> <leader>T :NERDTreeTabsToggle<CR>
 " }}}
 
+" git status support
 Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
   let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -435,6 +473,7 @@ Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 " <c-y>,
 Plug 'mattn/emmet-vim'
 
+" :Autoformat
 Plug 'Chiel92/vim-autoformat'
 
 " A Vim plugin for interacting with Heroku
@@ -460,6 +499,7 @@ Plug 'vim-scripts/occur.vim'
 " Vim plugin for the Perl module / CLI script 'ack'
 Plug 'mileszs/ack.vim'
 
+" status line
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/lightline-powerful'
 
@@ -475,10 +515,13 @@ Plug 'jiangmiao/auto-pairs' " {{{
         \ : "\<C-g>u\<CR>"
 " }}}
 
+" jade highlighting support
 Plug 'statianzo/vim-jade'
 
+" go language support
 Plug 'fatih/vim-go'
 
+" language pack
 Plug 'sheerun/vim-polyglot'
 
 Plug 'othree/javascript-libraries-syntax.vim' "{{{

@@ -518,12 +518,8 @@ Plug 'ervandew/supertab' " {{{
   let g:SuperTabLongestEnhanced = 1
 " }}}
 
-" autocomplete plugin; I use for autoopening when more than 3 letters are shown
-" TODO: try to find option for supertab
-Plug 'maxboisvert/vim-simple-complete' "{{{
-  let g:vsc_completion_command = "\<C-N>"
-  let g:vsc_reverse_completion_command = "\<C-P>"
-" }}}
+" autocomplete plugin - autoopen popup when 2 letters typed
+Plug 'vim-scripts/AutoComplPop'
 
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 

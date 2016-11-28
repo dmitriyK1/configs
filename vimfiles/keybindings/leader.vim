@@ -33,7 +33,8 @@ noremap <leader>, :write<CR>
 
 map <silent> <leader>ad :bufdo :Bdelete<CR>
 map <silent> <leader>d :Bdelete<CR>
-map <silent> <leader>c :bd<CR>:tabclose<CR>
+map <silent> <leader>c :bd<CR>
+map <silent> <leader>tc :tabclose<CR>
 
 nnoremap <leader>v V`]
 

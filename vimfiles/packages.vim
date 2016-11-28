@@ -3,127 +3,20 @@
 
 call plug#begin()
 
-" alternative for vim-easygrep
-" Plug 'skwp/greplace.vim'
-
-" Git log viewer
-Plug 'cohama/agit.vim'
-
-" Plug 'vim-ctrlspace/vim-ctrlspace'
-
-" vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
-Plug 'vasconcelloslf/vim-interestingwords' "{{{
-  nnoremap <silent> g1 :call WordNavigation(1)<CR>
-  nnoremap <silent> g2 :call WordNavigation(0)<CR>
-"}}}
-
-Plug 'henrik/vim-indexed-search' "{{{
-  " let g:indexed_search_colors=0
-"}}}
-
-" Delete buffers and close files in Vim without closing your windows or messing up your layout
-" :Bdelete
-Plug 'moll/vim-bbye'
-
-" Press <C-G>c in insert mode to toggle a temporary software caps lock, or gC
-" in normal mode to toggle a slightly more permanent one.
-Plug 'tpope/vim-capslock'
-
-" :UndotreeToggle
-Plug 'mbbill/undotree'
-
-" execute current buffer and show output
-" Plug 'thinca/vim-quickrun'
-
-" This plugin provides the following mappings which allow you to move between Vim panes and tmux splits seamlessly:
-"   <ctrl-h> => Left
-"   <ctrl-j> => Down
-"   <ctrl-k> => Up
-"   <ctrl-l> => Right
-"   <ctrl-\> => Previous split
-Plug 'christoomey/vim-tmux-navigator'
-
-Plug 'editorconfig/editorconfig-vim'
-
-" Vim sugar for the UNIX shell commands
-  " Remove: Delete a buffer and the file on disk simultaneously.
-  " Unlink: Like :Remove, but keeps the now empty buffer.
-  " Move: Rename a buffer and the file on disk simultaneously.
-  " Rename: Like :Move, but relative to the current file's containing directory.
-  " Chmod: Change the permissions of the current file.
-  " Mkdir: Create a directory, defaulting to the parent of the current file.
-  " Find: Run find and load the results into the quickfix list.
-  " Locate: Run locate and load the results into the quickfix list.
-  " Wall: Write every open window. Handy for kicking off tools like guard.
-  " SudoWrite: Write a privileged file with sudo.
-  " SudoEdit: Edit a privileged file with sudo.
-Plug 'tpope/vim-eunuch'
-
-
-" highlight conflict markers.
-" jump among conflict markers.
-" jump within conflict block; beginning, separator and end of the block.
-" resolve conflict with various strategies; themselves, ourselves, none and both strategies.
-" [x and ]x mappings are defined as default
-" This plugin defines mappings as default, ct for themselves, co for ourselves, cn for none and cb for both.
-Plug 'rhysd/conflict-marker.vim'
-
-" Force linewise or characterwise paste, regardless of how it was yanked.
-Plug 'vim-scripts/UnconditionalPaste'
-
-Plug 'Yggdroot/indentLine' "{{{
-  map <leader>il :IndentLinesToggle<CR>
-"}}}
-
-" A Vim plugin for focussing on a selected region
-" <Leader>nr       - Open the current visual selection in a new narrowed window
-Plug 'chrisbra/NrrwRgn'
-
-" toggling settings mappings
-Plug 'tpope/vim-unimpaired'
-
-" apply macro to a multiple files at once
-Plug 'Olical/vim-enmasse'
-
-" A vim plugin for Flow
-Plug 'flowtype/vim-flow'
-
-Plug 'vim-scripts/DeleteTrailingWhitespace'
-
-" Only highlight the screen line of the cursor in the currently active window.
-Plug 'vim-scripts/CursorLineCurrentWindow'
-
-" Fast and Easy Find and Replace Across Multiple Files
-Plug 'dkprice/vim-easygrep'
-
-" Personal Wiki for Vim
-Plug 'vimwiki/vimwiki'
-
-" easily search for, substitute, and abbreviate multiple variants of a word
-" MixedCase (crm), camelCase (crc), snake_case (crs), and UPPER_CASE (cru)
-Plug 'tpope/vim-abolish'
-
-" A vim plugin that simplifies the transition between multiline and single-line code
-  " gS to split a one-liner into multiple lines
-  " gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
-Plug 'AndrewRadev/splitjoin.vim'
-
-
 " ================================================================================
 " Colorschemes:
 " ================================================================================
+Plug 'altercation/vim-colors-solarized'
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'kamwitsta/mythos'
 Plug 'kamwitsta/nordisk'
 Plug 'AlessandroYorba/Sierra'
 Plug 'Blevs/vim-dzo'
-
 Plug 'robertmeta/nofrils'
 Plug 'trevordmiller/nova-vim'
-Plug 'altercation/vim-colors-solarized'
 Plug 'andreasvc/vim-256noir'
 Plug 'pbrisbin/vim-colors-off'
-Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'grod/sublime-color-schemes.vim'
 " Plug 'jyota/vimColors'
 " Plug 'mkarmona/colorsbox'
@@ -194,6 +87,128 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " Colorschemes end
 " ================================================================================
 
+" gitk for Vim
+Plug 'gregsexton/gitv'
+
+" alternative for vim-easygrep
+" Plug 'skwp/greplace.vim'
+
+" Git log viewer
+Plug 'cohama/agit.vim'
+
+" tabs / buffers / files management
+" fast fuzzy searching powered by Go
+" workspaces (sessions)
+" bookmarks for your favorite projects
+" Plug 'vim-ctrlspace/vim-ctrlspace'
+
+" vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
+Plug 'vasconcelloslf/vim-interestingwords' "{{{
+  nnoremap <silent> g1 :call WordNavigation(1)<CR>
+  nnoremap <silent> g2 :call WordNavigation(0)<CR>
+"}}}
+
+" Show "Match 123 of 456 /search term/" in Vim searches
+Plug 'henrik/vim-indexed-search' "{{{
+  " let g:indexed_search_colors=0
+"}}}
+
+" Delete buffers and close files in Vim without closing your windows or messing up your layout
+" :Bdelete
+Plug 'moll/vim-bbye'
+
+" Press <C-G>c in insert mode to toggle a temporary software caps lock, or gC
+" in normal mode to toggle a slightly more permanent one.
+Plug 'tpope/vim-capslock'
+
+" :UndotreeToggle
+Plug 'mbbill/undotree'
+
+" Visualize your undo tree
+" Plug 'sjl/gundo.vim'
+
+" execute current buffer and show output
+" Plug 'thinca/vim-quickrun'
+
+" This plugin provides the following mappings which allow you to move between Vim panes and tmux splits seamlessly:
+"   <ctrl-h> => Left
+"   <ctrl-j> => Down
+"   <ctrl-k> => Up
+"   <ctrl-l> => Right
+"   <ctrl-\> => Previous split
+Plug 'christoomey/vim-tmux-navigator'
+
+" EditorConfig plugin for Vim
+Plug 'editorconfig/editorconfig-vim'
+
+" Vim sugar for the UNIX shell commands
+  " Remove: Delete a buffer and the file on disk simultaneously.
+  " Unlink: Like :Remove, but keeps the now empty buffer.
+  " Move: Rename a buffer and the file on disk simultaneously.
+  " Rename: Like :Move, but relative to the current file's containing directory.
+  " Chmod: Change the permissions of the current file.
+  " Mkdir: Create a directory, defaulting to the parent of the current file.
+  " Find: Run find and load the results into the quickfix list.
+  " Locate: Run locate and load the results into the quickfix list.
+  " Wall: Write every open window. Handy for kicking off tools like guard.
+  " SudoWrite: Write a privileged file with sudo.
+  " SudoEdit: Edit a privileged file with sudo.
+Plug 'tpope/vim-eunuch'
+
+
+" highlight conflict markers.
+" jump among conflict markers.
+" jump within conflict block; beginning, separator and end of the block.
+" resolve conflict with various strategies; themselves, ourselves, none and both strategies.
+" [x and ]x mappings are defined as default
+" This plugin defines mappings as default, ct for themselves, co for ourselves, cn for none and cb for both.
+Plug 'rhysd/conflict-marker.vim'
+
+" Force linewise or characterwise paste, regardless of how it was yanked.
+Plug 'vim-scripts/UnconditionalPaste'
+
+" A vim plugin to display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine' "{{{
+  map <leader>il :IndentLinesToggle<CR>
+"}}}
+
+" A Vim plugin for focussing on a selected region
+" <Leader>nr       - Open the current visual selection in a new narrowed window
+Plug 'chrisbra/NrrwRgn'
+
+" toggling settings mappings
+Plug 'tpope/vim-unimpaired'
+
+" apply macro to a multiple files at once
+Plug 'Olical/vim-enmasse'
+
+" A vim plugin for Flow
+Plug 'flowtype/vim-flow'
+
+" Better whitespace highlighting for Vim
+" TODO: possibly remove DeleteTrailingWhitespace
+Plug 'ntpeters/vim-better-whitespace'
+
+" Delete unwanted whitespace at the end of lines
+Plug 'vim-scripts/DeleteTrailingWhitespace'
+
+" Only highlight the screen line of the cursor in the currently active window.
+Plug 'vim-scripts/CursorLineCurrentWindow'
+
+" Fast and Easy Find and Replace Across Multiple Files
+Plug 'dkprice/vim-easygrep'
+
+" Personal Wiki for Vim
+Plug 'vimwiki/vimwiki'
+
+" easily search for, substitute, and abbreviate multiple variants of a word
+" MixedCase (crm), camelCase (crc), snake_case (crs), and UPPER_CASE (cru)
+Plug 'tpope/vim-abolish'
+
+" A vim plugin that simplifies the transition between multiline and single-line code
+  " gS to split a one-liner into multiple lines
+  " gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Extended session management for Vim (:mksession on steroids)
 " :SaveSession
@@ -245,6 +260,11 @@ Plug 'kana/vim-arpeggio'
 Plug 'glts/vim-textobj-comment'
 
 " provides additional text objects
+" Pair text objects
+" Quote text objects
+" Separator text objects
+" Argument text objects
+" https://github.com/wellle/targets.vim/blob/master/cheatsheet.md
 Plug 'wellle/targets.vim'
 
 " a small collection of settings,
@@ -328,6 +348,7 @@ Plug 'terryma/vim-multiple-cursors'
 " colon and semicolon insertion plugin
 Plug 'lfilho/cosco.vim'
 
+" support command mode in Russian keyboard layout
 " Plug 'powerman/vim-plugin-ruscmd'
 
 " snippets support
@@ -345,6 +366,7 @@ Plug 'vim-scripts/LargeFile'
 " :Linediff
 Plug 'AndrewRadev/linediff.vim'
 
+" auto save/load sessions
 " Plug 'powerman/vim-plugin-autosess'
 
 " HTML abbreviations (similar to emmet)
@@ -357,14 +379,9 @@ Plug 'AndrewRadev/linediff.vim'
 " <C-X>$        <script src="/javascripts/^.js"></script>
 Plug 'tpope/vim-ragtag'
 
-" <Leader>z
-" fold away lines not matching the last search pattern.
-"
-" <Leader>iz
-" fold away lines that do match the last search pattern (inverse folding).
-"
-" <Leader>Z
-" restore the previous fold settings
+" <Leader>z    fold away lines not matching the last search pattern.
+" <Leader>iz   fold away lines that do match the last search pattern (inverse folding).
+" <Leader>Z    restore the previous fold settings
 Plug 'vim-scripts/searchfold.vim'
 
 " Google lookup from Vim
@@ -376,6 +393,7 @@ Plug 'tpope/vim-fugitive'
 " git runtime files
 Plug 'tpope/vim-git'
 
+" quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
 " alignment plugin
@@ -387,13 +405,8 @@ Plug 'junegunn/vim-easy-align' "{{{
   " nmap gl <Plug>(EasyAlign)
 "}}}
 
-" Plug 'sjl/gundo.vim'
-
 " text bubbling feature
 Plug 'frace/vim-bubbles'
-
-" show git diff via sign column
-" Plug 'mhinz/vim-signify'
 
 " autodetect tabs/spaces of buffer
 Plug 'tpope/vim-sleuth'
@@ -451,7 +464,7 @@ Plug 'jistr/vim-nerdtree-tabs' "{{{
   map <silent> <leader>T :NERDTreeTabsToggle<CR>
 " }}}
 
-" git status support
+" NERDTree git status support
 Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
   let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -466,6 +479,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
     \ }
 " }}}
 
+" expand html snippets
 " <c-e> in insert mode
 " <c-n> cycle throught empty elements
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -503,7 +517,11 @@ Plug 'mileszs/ack.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/lightline-powerful'
 
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
 " Plug 'airblade/vim-gitgutter'
+
+" show git diff via sign column
+" Plug 'mhinz/vim-signify'
 
 " auto-closer - insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs' " {{{
@@ -550,6 +568,7 @@ Plug 'heavenshell/vim-jsdoc' " {{{
   map <leader>js :JsDoc<CR>
 " }}}
 
+" Toolbox to open & search URLs from vim
 " Plug 'waiting-for-dev/vim-www'
 
 " autocompletion

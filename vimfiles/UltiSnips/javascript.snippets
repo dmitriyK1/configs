@@ -41,7 +41,7 @@ import { $1 } from "$0";
 endsnippet
 # ----------------------------------------
 snippet "([^\s].*)\.(return|ret)" "Return (postfix)" r
-return `!p snip.rv = match.group(1)`$0
+return `!p snip.rv = match.group(1)`;$0
 endsnippet
 # ----------------------------------------
 snippet "(\w+).par" "Parenthesis (postfix)" r
@@ -49,17 +49,17 @@ snippet "(\w+).par" "Parenthesis (postfix)" r
 endsnippet
 # ----------------------------------------
 snippet "([^\s].*)\.log" "console.log (postfix)" r
-console.log(`!p snip.rv = match.group(1)`)$0
+console.log(`!p snip.rv = match.group(1)`);$0
 endsnippet
 # ----------------------------------------
 snippet "([^\s].*)\.debug" "console.debug (postfix)" r
-console.debug(`!p snip.rv = match.group(1)`)$0
+console.debug(`!p snip.rv = match.group(1)`);$0
 endsnippet
 # ----------------------------------------
 snippet "([^\s].*)\.(error|err)" "console.error (postfix)" r
-console.error(`!p snip.rv = match.group(1)`)$0
+console.error(`!p snip.rv = match.group(1)`);$0
 endsnippet
 # ----------------------------------------
 snippet "([^\s].*)\.warn" "console.warn (postfix)" r
-console.warn(`!p snip.rv = match.group(1)`)$0
+console.warn(`!p snip.rv = match.group(1)`);$0
 endsnippet

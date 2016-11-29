@@ -134,14 +134,19 @@ Plug 'henrik/vim-indexed-search' "{{{
 
 " Delete buffers and close files in Vim without closing your windows or messing up your layout
 " :Bdelete
-Plug 'moll/vim-bbye', { 'on': 'Bdelete' }
+Plug 'moll/vim-bbye', { 'on': 'Bdelete' } "{{{
+  map <silent> <leader>ad :bufdo :Bdelete<CR>
+  map <silent> <leader>d :Bdelete<CR>
+" }}}
 
 " Press <C-G>c in insert mode to toggle a temporary software caps lock, or gC
 " in normal mode to toggle a slightly more permanent one.
 Plug 'tpope/vim-capslock'
 
 " :UndotreeToggle
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
+  nnoremap <silent> <F2> :UndotreeToggle<cr>:UndotreeFocus<cr>
+" }}}
 
 " Visualize your undo tree
 " Plug 'sjl/gundo.vim'
@@ -205,6 +210,8 @@ Plug 'Olical/vim-enmasse'
 Plug 'flowtype/vim-flow' "{{{
   let g:flow#enable = 0
   let g:flow#errjmp = 1
+
+  nmap <leader>fl :FlowToggle<cr>
 " }}}
 
 " Better whitespace highlighting for Vim
@@ -350,10 +357,19 @@ Plug 'tpope/vim-dispatch'
 Plug 'nazo/pt.vim'
 
 " Vim plugin that displays tags in a window, ordered by scope
-Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } "{{{
+  nmap <F8> :TagbarToggle<cr>
+" }}}
 
 " Sneak is a minimalist, versatile motion to reach any location specified by two characters.
-" Plug 'justinmk/vim-sneak'
+" Plug 'justinmk/vim-sneak' "{{{
+  " nmap f <Plug>Sneak_s
+  " nmap F <Plug>Sneak_S
+  " xmap f <Plug>Sneak_s
+  " xmap F <Plug>Sneak_S
+  " omap f <Plug>Sneak_s
+  " omap F <Plug>Sneak_S
+" }}}
 
 " start screen
 Plug 'mhinz/vim-startify' "{{{
@@ -379,6 +395,8 @@ Plug 'terryma/vim-multiple-cursors' "{{{
   " let g:multi_cursor_exit_from_insert_mode=0
   " let g:multi_cursor_quit_key='<C-c>'
   let g:multi_cursor_next_key='<C-d>'
+
+  " nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
 " }}}
 
 " colon and semicolon insertion plugin
@@ -396,6 +414,8 @@ Plug 'SirVer/ultisnips' " {{{
   let g:UltiSnipsExpandTrigger = "<tab>"
   let g:UltiSnipsJumpForwardTrigger = "<tab>"
   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+  map <leader>ee :UltiSnipsEdit<CR>
 " }}}
 
 " Edit large files quickly: its just an autocmd that disables certain features of vim in the interests of speed
@@ -427,7 +447,23 @@ Plug 'vim-scripts/searchfold.vim'
 Plug 'szw/vim-g', { 'on': 'Google' }
 
 " Git wrapper
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' "{{{
+  nnoremap <leader>ga :Git add %:p<CR><CR>
+  nnoremap <leader>gs :Gstatus<CR>
+  nnoremap <leader>gc :Gcommit -v -q<CR>
+  nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+  nnoremap <leader>gd :Gdiff<CR>
+  nnoremap <leader>ge :Gedit<CR>
+  nnoremap <leader>gr :Gread<CR>
+  nnoremap <leader>gw :Gwrite<CR><CR>
+  nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+  nnoremap <leader>gp :Ggrep<Space>
+  nnoremap <leader>gm :Gmove<Space>
+  nnoremap <leader>gb :Git branch<Space>
+  nnoremap <leader>go :Git checkout<Space>
+  nnoremap <leader>gps :Dispatch! git push<CR>
+  nnoremap <leader>gpl :Dispatch! git pull<CR>
+" }}}
 
 " git runtime files
 Plug 'tpope/vim-git'
@@ -438,7 +474,38 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-surround'
 
 " alignment plugin
-Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
+Plug 'godlygeek/tabular', { 'on': 'Tabularize' } "{{{
+  " from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
+  nnoremap <leader>a= :Tabularize /=<CR>
+  vnoremap <leader>a= :Tabularize /=<CR>
+
+  nnoremap <leader>a: :Tabularize /:<CR>
+  vnoremap <leader>a: :Tabularize /:<CR>
+
+  nnoremap <leader>a- :Tabularize /-<CR>
+  vnoremap <leader>a- :Tabularize /-<CR>
+
+  nnoremap <leader>a> :Tabularize /><CR>
+  vnoremap <leader>a> :Tabularize /><CR>
+
+  nnoremap <leader>a[ :Tabularize /[<CR>
+  vnoremap <leader>a[ :Tabularize /[<CR>
+
+  nnoremap <leader>a{ :Tabularize /{<CR>
+  vnoremap <leader>a{ :Tabularize /{<CR>
+
+  nnoremap <leader>a( :Tabularize /(<CR>
+  vnoremap <leader>a( :Tabularize /(<CR>
+
+  nnoremap <leader>a" :Tabularize /"<CR>
+  vnoremap <leader>a" :Tabularize /"<CR>
+
+  nnoremap <leader>a' :Tabularize /'<CR>
+  vnoremap <leader>a' :Tabularize /'<CR>
+
+  nnoremap <leader>af :Tabularize /from<CR>
+  vnoremap <leader>af :Tabularize /from<CR>
+" }}}
 
 " alignment plugin
 Plug 'junegunn/vim-easy-align' "{{{
@@ -505,6 +572,10 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
         \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
         \ 'file': '\.pyc$\|\.pyo$',
         \ }
+
+  nnoremap <silent> <leader>b :CtrlPBuffer<cr>
+  nnoremap <silent> <leader>l :CtrlPLine<cr>
+  nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
 "}}}
 
 Plug 'scrooloose/nerdtree' "{{{
@@ -559,6 +630,8 @@ Plug 'mattn/emmet-vim' "{{{
 Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
   " To disable the fallback to vim's indent file, set the following variable to be 0.
   let g:autoformat_autoindent = 0
+
+  noremap <F3> :Autoformat<cr>
 " }}}
 
 " A Vim plugin for interacting with Heroku
@@ -639,7 +712,7 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
   let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
 " }}}
 
-" expands symbols to language constructs
+" Map the conceal characters to their expanded forms.
 Plug 'Olical/vim-syntax-expand' "{{{
   " autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
   " autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
@@ -673,6 +746,9 @@ Plug 'heavenshell/vim-jsdoc' " {{{
   let g:jsdoc_allow_input_prompt=1
   let g:jsdoc_return_description=1
   map <leader>js :JsDoc<CR>
+
+  " REMAP NEEDED
+  " nmap <silent> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
 " }}}
 
 " Toolbox to open & search URLs from vim

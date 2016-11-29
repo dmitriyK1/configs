@@ -1,7 +1,3 @@
-
-" TODO: fix visual selection not showing up instantly
-
-
 " --------------------------------------------------------------------------------
 " Command mode mappings
 " --------------------------------------------------------------------------------
@@ -32,6 +28,7 @@ cmap w!! w !sudo tee % >/dev/null
 " Insert the directory of the current buffer in command line mode
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+" TODO: possibly remove this because there is already plugin for it
 command! Bclose call BufcloseCloseIt()   " Don't close window, when deleting a buffer
 
 " --------------------------------------------------------------------------------
@@ -42,19 +39,10 @@ nnoremap <silent> <F1> :set cursorline!<CR>
 inoremap <silent> <F1> <Nop>
 vnoremap <silent> <F1> <Nop>
 
-nnoremap <silent> <F2> :UndotreeToggle<cr>:UndotreeFocus<cr>
-
-noremap <F3> :Autoformat<cr>
 nnoremap <F5> :buffers<cr>:buffer<Space>
 
 " Toggle spell check
 map <F6> :setlocal spell! spelllang=en_us<cr>
-
-" to format on save use:
-" au BufWrite * :Autoformat
-
-nmap <F7> :PrevColorScheme<CR>
-nmap <F8> :TagbarToggle<cr>
 
 nnoremap <F10> :b <C-Z>
 call togglebg#map("<F12>")
@@ -101,21 +89,11 @@ nnoremap <c-o> <c-o>zz
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-" Map the conceal characters to their expanded forms.
-" inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
-" inoremap <silent> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
-" inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
-
-" REMAP NEEDED
-" nmap <silent> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
-
 " REMAP NEEDED
 " add a comma
 " nmap <C-k> A, <Esc>
 
 "map = <C-l><C-w>o
-
-" nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
 
 " --------------------------------------------------------------------------------
 " Alt mappings
@@ -148,12 +126,6 @@ nmap <silent> dJ dG
 nmap <silent> dK dgg
 
 " ------------------F----------------------
-" nmap f <Plug>Sneak_s
-" nmap F <Plug>Sneak_S
-" xmap f <Plug>Sneak_s
-" xmap F <Plug>Sneak_S
-" omap f <Plug>Sneak_s
-" omap F <Plug>Sneak_S
 
 " ------------------J----------------------
 nnoremap j gj
@@ -272,6 +244,7 @@ map ! q:i!
 " from https://github.com/stoeffel/.dotfiles/blob/master/vim/visual-at.vim
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
+" TODO: possibly move to functions.vim
 function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
@@ -293,9 +266,6 @@ endfunction
 " is visible. In that case the Enter key will simply select the highlighted
 " menu item, just as <C-Y> does.
 " inoremap <expr> <CR> pumvisible() ? '\<C-y>' : '\<C-g>u\<CR>'
-
-" TODO: make it work
-" inoremap <expr> <CR> pumvisible() ? '\<C-y>' : '<Plug>delimitMateCR'
 
 " nmap <Left> <<
 " nmap <Right> >>

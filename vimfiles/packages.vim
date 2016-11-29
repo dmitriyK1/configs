@@ -105,7 +105,7 @@ Plug 'shinchu/lightline-gruvbox.vim'
 
 " :substitute preview
 Plug 'osyo-manga/vim-over' "{{{
-  map <leader>% :OverCommandLine<CR>%s/
+  map <silent> <leader>% :OverCommandLine<CR>%s/
 " }}}
 
 " gitk for Vim

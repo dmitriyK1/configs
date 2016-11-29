@@ -79,6 +79,11 @@ noremap <leader>ss :source $MYVIMRC<CR>
 " Source current file
 noremap <leader>so :so%<CR>
 
+" Substitution
+" using colon as a separator to easier read regular expressions;
+" using \v key to make vim regular expressions work as common regexps
+map <leader>S :%s:\v::g<Left><Left><Left>
+
 " T ================================================================================
 map <silent> <leader>tc :tabclose<CR>
 

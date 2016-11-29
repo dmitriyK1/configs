@@ -16,6 +16,7 @@ if empty(glob('~/vimfiles/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
+
 call plug#begin()
 
 " ================================================================================
@@ -101,6 +102,11 @@ Plug 'pbrisbin/vim-colors-off'
 " ================================================================================
 " Colorschemes end
 " ================================================================================
+
+" :substitute preview
+Plug 'osyo-manga/vim-over' "{{{
+  map <leader>% :OverCommandLine<CR>%s/
+" }}}
 
 " gitk for Vim
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }

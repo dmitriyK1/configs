@@ -25,6 +25,8 @@
 " TODO: remove custom duplicated functionality, that already present in plugins
 " TODO: replace custom functions etc. on plugins doing similar things
 
+" TODO: use sparkup <c-n><c-p> only in relevant file types
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

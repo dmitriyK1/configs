@@ -382,7 +382,10 @@ Plug 'terryma/vim-multiple-cursors' "{{{
 " }}}
 
 " colon and semicolon insertion plugin
-Plug 'lfilho/cosco.vim'
+Plug 'lfilho/cosco.vim' "{{{
+  autocmd FileType javascript,css,sh nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
+  autocmd FileType javascript,css,sh inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
+" }}}
 
 " support command mode in Russian keyboard layout
 " Plug 'powerman/vim-plugin-ruscmd'
@@ -452,8 +455,12 @@ Plug 'frace/vim-bubbles' "{{{
 Plug 'tpope/vim-sleuth'
 
 " Python code folding for Vim
-Plug 'tmhedberg/SimpylFold' "{{{
+Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
   let g:SimpylFold_docstring_preview=1
+
+  " ensure SimpylFold init properly
+  autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+  autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 " }}}
 
 " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
@@ -467,13 +474,17 @@ Plug 'tmhedberg/SimpylFold' "{{{
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
-" NOTE: consider using
-" let g:pymode_rope = 0
-" https://github.com/davidhalter/jedi-vim
-Plug 'klen/python-mode'
+Plug 'klen/python-mode', { 'for': 'python' } "{{{
+  " in case of glitches
+  " au BufWriteCmd *.py write || :PymodeLint
+
+  " NOTE: consider using
+  " let g:pymode_rope = 0
+  " https://github.com/davidhalter/jedi-vim
+" }}}
 
 " This indentation script for python tries to match more closely what is suggested in PEP 8
-Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 
 " readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
@@ -540,6 +551,8 @@ Plug 'rstacruz/sparkup', { 'rtp': 'vim/', 'for': ['html', 'php'] }
 Plug 'mattn/emmet-vim' "{{{
   " let g:user_emmet_install_global = 0
   " let g:user_emmet_expandabbr_key = '<tab>'
+
+  " autocmd FileType html,css EmmetInstall
 " }}}
 
 " :Autoformat
@@ -626,8 +639,12 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
   let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
 " }}}
 
-" conceals language constructs
-" Plug 'Olical/vim-syntax-expand'
+" expands symbols to language constructs
+Plug 'Olical/vim-syntax-expand' "{{{
+  " autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+  " autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
+  " autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+" }}}
 
 " cycle through yanks (alt-p \ alt-shift-p)
 Plug 'maxbrunsfeld/vim-yankstack'
@@ -638,7 +655,13 @@ Plug 'tpope/vim-speeddating'
 " This extension allows you to use jsbeautifier inside vim to quickly format
 " javascript, html and css files.
 Plug 'maksimr/vim-jsbeautify' "{{{
-  map <c-F> :call JsBeautify()<cr>
+  map <leader>B :call JsBeautify()<cr>
+
+  autocmd FileType javascript vnoremap <buffer>  <c-f> : call RangeJsBeautify()<cr>
+  autocmd FileType json vnoremap <buffer> <c-f>        : call RangeJsonBeautify()<cr>
+  autocmd FileType jsx vnoremap <buffer> <c-f>         : call RangeJsxBeautify()<cr>
+  autocmd FileType html vnoremap <buffer> <c-f>        : call RangeHtmlBeautify()<cr>
+  autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<cr>
 " }}}
 
 " Generate JSDoc to your JavaScript code

@@ -106,9 +106,6 @@ Plug 'pbrisbin/vim-colors-off'
 "   let g:syntastic_check_on_open=1
 " }}}
 
-" CSSComb plugin
-Plug 'csscomb/vim-csscomb'
-
 " gitk for Vim
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 

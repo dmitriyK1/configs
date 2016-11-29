@@ -108,13 +108,6 @@ Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 " Git log viewer
 Plug 'cohama/agit.vim', { 'on': 'Agit' }
 
-" vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
-Plug 'vasconcelloslf/vim-interestingwords' "{{{
-  " TODO: examine settings for keybindings (maps n anyway)
-  nnoremap <silent> g1 :call WordNavigation(1)<CR>
-  nnoremap <silent> g2 :call WordNavigation(0)<CR>
-"}}}
-
 " Show "Match 123 of 456 /search term/" in Vim searches
 " Plug 'henrik/vim-indexed-search' "{{{
   " let g:indexed_search_colors=0
@@ -313,6 +306,19 @@ Plug 'haya14busa/vim-asterisk' "{{{
 " incrementally highlights ALL pattern matches unlike default 'incsearch'
 Plug 'haya14busa/incsearch.vim' "{{{
   let g:incsearch#auto_nohlsearch = 1
+  let g:incsearch#do_not_save_error_message_history = 1
+  let g:incsearch#magic = '\v' " very magic
+  let g:incsearch#separate_highlight = 1
+
+  " search autocomplete
+  augroup incsearch-keymap
+      autocmd!
+      autocmd VimEnter * call s:incsearch_keymap()
+  augroup END
+  function! s:incsearch_keymap()
+      IncSearchNoreMap <Tab> <Over>(buffer-complete)
+      IncSearchNoreMap <S-Tab> <Over>(buffer-complete-prev)
+  endfunction
 
   map /  <Plug>(incsearch-forward)
   map ?  <Plug>(incsearch-backward)
@@ -330,6 +336,19 @@ Plug 'haya14busa/incsearch.vim' "{{{
   map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
   map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
   map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+"}}}
+
+" vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
+Plug 'vasconcelloslf/vim-interestingwords' "{{{
+  let g:interestingWordsDefaultMappings = 0
+
+  " temporary hack
+  nnoremap µ <Plug>InterestingWords
+
+  nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
+  nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
+  nnoremap <silent> g1 :call WordNavigation(1)<CR>
+  nnoremap <silent> g2 :call WordNavigation(0)<CR>
 "}}}
 
 " create your own text objects (dependency)

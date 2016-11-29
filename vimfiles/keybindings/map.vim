@@ -97,8 +97,8 @@ inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
 " Alt mappings
 " --------------------------------------------------------------------------------
 cmap <M-D> <Esc>d
-nmap <M-,> :bp<cr>
-nmap <M-.> :bn<cr>
+" nmap <M-,> :bp<cr>
+" nmap <M-.> :bn<cr>
 
 imap <A-j> <Down>
 imap <A-k> <Up>

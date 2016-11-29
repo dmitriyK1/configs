@@ -307,8 +307,8 @@ Plug 'haya14busa/vim-asterisk' "{{{
 Plug 'haya14busa/incsearch.vim' "{{{
   let g:incsearch#auto_nohlsearch = 1
   let g:incsearch#do_not_save_error_message_history = 1
-  let g:incsearch#magic = '\v' " very magic
   let g:incsearch#separate_highlight = 1
+  " let g:incsearch#magic = '\v' " very magic
 
   " search autocomplete
   augroup incsearch-keymap
@@ -347,9 +347,15 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 
   nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
   nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
-  nnoremap <silent> g1 :call WordNavigation(1)<CR>
-  nnoremap <silent> g2 :call WordNavigation(0)<CR>
+  nnoremap <silent> <M-.> :call WordNavigation(1)<CR>
+  nnoremap <silent> <M-,> :call WordNavigation(0)<CR>
 "}}}
+
+" helps to isolate a particular fold into its own context
+Plug 'vasconcelloslf/vim-foldfocus' "{{{
+  nmap <CR> :call FoldFocus('e')<CR>
+  nmap <Leader><CR> :call FoldFocus('vnew')<CR>
+" }}}
 
 " create your own text objects (dependency)
 Plug 'kana/vim-textobj-user'

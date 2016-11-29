@@ -718,7 +718,7 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
 " }}}
 
 " Map the conceal characters to their expanded forms.
-Plug 'Olical/vim-syntax-expand' "{{{
+" Plug 'Olical/vim-syntax-expand' "{{{
   " autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
   " autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
   " autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>

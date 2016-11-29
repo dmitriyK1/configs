@@ -637,7 +637,9 @@ Plug 'tpope/vim-speeddating'
 
 " This extension allows you to use jsbeautifier inside vim to quickly format
 " javascript, html and css files.
-Plug 'maksimr/vim-jsbeautify'
+Plug 'maksimr/vim-jsbeautify' "{{{
+  map <c-F> :call JsBeautify()<cr>
+" }}}
 
 " Generate JSDoc to your JavaScript code
 Plug 'heavenshell/vim-jsdoc' " {{{

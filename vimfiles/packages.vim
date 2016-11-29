@@ -116,7 +116,7 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 "}}}
 
 " Show "Match 123 of 456 /search term/" in Vim searches
-Plug 'henrik/vim-indexed-search' "{{{
+" Plug 'henrik/vim-indexed-search' "{{{
   " let g:indexed_search_colors=0
 "}}}
 
@@ -302,11 +302,42 @@ Plug 'mhinz/vim-grepper' "{{{
   xmap gs  <plug>(GrepperOperator)
 "}}}
 
+" provides star feature in visual-mode
+Plug 'thinca/vim-visualstar' "{{{
+  vmap * <plug>(visualstar-*)N
+  vmap # <plug>(visualstar-#)N
+  vmap g* <plug>(visualstar-g*)N
+  vmap g# <plug>(visualstar-g#)N
+" }}}
+
+" vim search status (similar to indexedsearch)
+Plug 'osyo-manga/vim-anzu'
+
+" improved */# search
+Plug 'haya14busa/vim-asterisk' "{{{
+  let g:asterisk#keeppos = 1
+" }}}
+
 " incrementally highlights ALL pattern matches unlike default 'incsearch'
 Plug 'haya14busa/incsearch.vim' "{{{
+  let g:incsearch#auto_nohlsearch = 1
+
   map /  <Plug>(incsearch-forward)
   map ?  <Plug>(incsearch-backward)
   map g/ <Plug>(incsearch-stay)
+
+  map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
+  map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
+
+  map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
+  map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
+  map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
+  map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
+
+  map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+  map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+  map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+  map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
 "}}}
 
 " create your own text objects (dependency)

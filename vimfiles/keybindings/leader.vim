@@ -127,11 +127,16 @@ map <silent> <leader>t :call ConcealToggle()<CR>
 
 nnoremap <silent> <leader>3 :call ToggleHiddenAll()<CR>
 
-nnoremap <silent> <leader>L :set list!<cr>
-
 " delete duplicated lines
 nnoremap <silent> <leader>u :sort! u<cr>
 vnoremap <silent> <leader>u :sort! u<cr>
+
+" delete empty lines
+" nmap <leader>del :g/^$/d<cr>
+nmap <leader>el :g/^$/d<cr>
+
+" compare open splits
+nmap <silent> <leader>D :windo diffthis<CR>
 
 " Surround mappings {{{
   " ,# Surround a word with #{ruby interpolation}
@@ -165,10 +170,3 @@ vnoremap <silent> <leader>u :sort! u<cr>
   vmap <leader>} c{ <C-R>" }<ESC>
   vmap <leader>{ c{<C-R>"}<ESC>
 " }}}
-
-" Delete empty lines
-" nmap <leader>del :g/^$/d<cr>
-nmap <leader>el :g/^$/d<cr>
-
-" compare open splits
-nmap <silent> <leader>D :windo diffthis<CR>

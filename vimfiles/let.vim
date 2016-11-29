@@ -46,7 +46,3 @@ let maplocalleader=","
 let g:hidden_all = 0
 
 let g:molokai_original=0      " use a darker background
-
-" UtilSnips new snippet template
-" let@s="isnippet\\endsnippetkkA  "
-let@s="o40i-I# osnippetoendsnippetkkA  "

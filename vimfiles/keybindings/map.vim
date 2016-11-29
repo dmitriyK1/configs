@@ -38,9 +38,6 @@ vnoremap <silent> <F1> <Nop>
 
 nnoremap <F5> :buffers<cr>:buffer<Space>
 
-" Toggle spell check
-map <F6> :setlocal spell! spelllang=en_us<cr>
-
 nnoremap <F10> :b <C-Z>
 call togglebg#map("<F12>")
 
@@ -82,9 +79,13 @@ vmap <C-Down> xp`[V`]
 " keep screen centered on jumps
 nnoremap <c-o> <c-o>zz
 
-"  What this accomplishes is it keeps a menu item always highlighted. This way you can keep typing characters to narrow the matches
+" pre-select first menu item on <C-n>
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+" pre-select first menu item on <C-p>
+inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
+  \ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
 
 " REMAP NEEDED
 " add a comma
@@ -220,7 +221,6 @@ noremap & :%sgc<cr>
 nnoremap } }zz
 
 " repeat last colon command
-" nmap :: @:
 nmap \\ @:
 
 " Allow using the repeat operator with a visual selection (!)

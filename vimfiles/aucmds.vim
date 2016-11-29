@@ -59,13 +59,7 @@ augroup END
 
 " }}}
 
-au VimEnter * nested :call LoadSession()
-au VimLeave * :call UpdateSession()
-
-
-
 " Source the vimrc file after saving it
-
 augroup reload_vimrc
   if has("autocmd")
     autocmd!

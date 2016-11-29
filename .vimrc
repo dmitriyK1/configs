@@ -4,8 +4,6 @@
 " TODO: remove redundant keybindings ( delete keybindings provided by unimpaired first )
 " TODO: replace custom functions etc. (find similar plugins instead)
 
-" TODO: sort leader.vim alphabetically
-
 " TODO: add automatic text wrap for plain text files (string splitting)
 
 " TODO: add plugins lazy-loading

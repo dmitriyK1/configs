@@ -352,6 +352,7 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 "}}}
 
 " helps to isolate a particular fold into its own context
+" q - quit temporary buffer
 Plug 'vasconcelloslf/vim-foldfocus' "{{{
   nmap <CR> :call FoldFocus('e')<CR>
   nmap <Leader><CR> :call FoldFocus('vnew')<CR>

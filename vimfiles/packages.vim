@@ -496,17 +496,16 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
         \ }
 "}}}
 
-" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
-Plug 'scrooloose/nerdtree' "{{{
-    let g:nerdtree_tabs_open_on_gui_startup = 0
-    let NERDTreeIgnore=['\.pyc$', '\~$']
-    let g:NERDTreeDirArrowExpandable = '▸'
-    let g:NERDTreeDirArrowCollapsible = '▾'
-    let g:NERDTreeMinimalUI = 1
-    let g:NERDTreeWinSize = 24
-    let g:NERDTreeHijackNetrw = 1
-    " map - :NERDTreeToggle<CR>
-    map g- :NERDTreeFind<CR>
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } "{{{
+  let g:nerdtree_tabs_open_on_gui_startup = 0
+  let NERDTreeIgnore=['\.pyc$', '\~$']
+  let g:NERDTreeDirArrowExpandable = '▸'
+  let g:NERDTreeDirArrowCollapsible = '▾'
+  let g:NERDTreeMinimalUI = 1
+  let g:NERDTreeWinSize = 24
+  let g:NERDTreeHijackNetrw = 1
+  " map - :NERDTreeToggle<CR>
+  map g- :NERDTreeFind<CR>
 "}}}
 
 " Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }

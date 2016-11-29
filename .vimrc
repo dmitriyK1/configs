@@ -2,20 +2,16 @@
 " http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
 
 " TODO: remove redundant keybindings ( delete keybindings provided by unimpaired first )
+" TODO: replace custom functions etc. (find similar plugins instead)
 
 " TODO: sort leader.vim alphabetically
 
 " TODO: add automatic text wrap for plain text files (string splitting)
 
-" TODO: remove plugin-less autocompletion
-
 " TODO: add plugins lazy-loading
 " https://github.com/saaguero/dotvim/blob/44c3bbc9b2996fcf7e86f624785a3a06ca978167/.vimrc#L60-L69
 
 " TODO: ? try to make sneak default keybindings work ?
-
-" TODO: remove custom duplicated functionality, that already present in plugins
-" TODO: replace custom functions etc. on plugins doing similar things
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -43,10 +39,8 @@
 
 " gi        go to last position of insert mode
 " @:        repeat last colon command
-" :CoffeeMake \ :make
-" :CoffeeWatch [vert[ical]] [WINDOW-SIZE]
 "
-" :grep <patter> <file name pattern>
+" :grep <pattern> <file name pattern>
 " example: :grep colorscheme %          (search in current file)
 
 " :Ack <pattern> <file>
@@ -55,12 +49,8 @@
 " Press <c-f> and <c-b> to cycle between modes.
 " Use <c-j>, <c-k> or the arrow keys to navigate the result list.
 
-" Open man page for word under cursor
+" Open help page for word under cursor
 " SHIFT+k
-
-" :Wopen http://vim.org
-" :Wsearch google how to learn vim
-" <leader>ws searches WORD under cursor, while the same mapping in visual mode searches current visual selection
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Good configs list
@@ -70,15 +60,6 @@
 " https://github.com/saaguero/dotvim/blob/master/.vimrc
 " https://github.com/skwp/dotfiles/tree/master/vim/settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" TODO: add package-specific let\set settings to packages.vim
-
-" TODO: remove unnecessary keybindings
-
-" TODO: check if all let mappings were transferred
-
-" TODO: remove unnecessary functions (find similar plugins instead)
-
 
 filetype plugin indent on
 syntax on

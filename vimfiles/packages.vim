@@ -690,6 +690,8 @@ Plug 'statianzo/vim-jade'
 Plug 'fatih/vim-go'
 
 " language pack
+" :CoffeeMake \ :make
+" :CoffeeWatch [vert[ical]] [WINDOW-SIZE]
 Plug 'sheerun/vim-polyglot' "{{{
   let g:jsx_ext_required = 0
 
@@ -757,6 +759,9 @@ Plug 'heavenshell/vim-jsdoc' " {{{
 " Toolbox to open & search URLs from vim
 " Plug 'waiting-for-dev/vim-www' "{{{
 "   let g:www_default_search_engine = 'google'
+  " :Wopen http://vim.org
+  " :Wsearch google how to learn vim
+  " <leader>ws searches WORD under cursor, while the same mapping in visual mode searches current visual selection
 " }}}
 
 " autocompletion

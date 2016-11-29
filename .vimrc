@@ -1,8 +1,6 @@
 
 " http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
 
-" TODO: try to integrate indexed search & incremental search (or change anzu settings)
-
 " TODO: remove redundant keybindings ( delete keybindings provided by unimpaired first )
 " TODO: replace custom functions etc. (find similar plugins instead)
 

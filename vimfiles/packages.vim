@@ -324,8 +324,10 @@ Plug 'haya14busa/incsearch.vim' "{{{
   map ?  <Plug>(incsearch-backward)
   map g/ <Plug>(incsearch-stay)
 
-  map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
-  map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
+  " map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
+  " map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
+  map n <Plug>(incsearch-nohl)<Plug>(anzu-mode-n)
+  map N <Plug>(incsearch-nohl)<Plug>(anzu-mode-N)
 
   map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
   map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)

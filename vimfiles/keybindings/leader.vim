@@ -120,10 +120,6 @@ nnor <leader>yp :let @*=expand("%:p")<CR>    " Mnemonic: Yank File path
 nnor <leader>yn :let @*=expand("%")<CR>      " Mnemonic: yank File Name
 
 " SPECIAL CHARACTERS ===============================================================
-" using colon as a separator to easier read regular expressions;
-" using \v key to make vim regular expressions work as common regexps
-map <leader>% :%s:\v::g<Left><Left><Left>
-
 " find and replace with confirmation
 map <leader>; :%s:\v::cg<Left><Left><Left><Left>
 

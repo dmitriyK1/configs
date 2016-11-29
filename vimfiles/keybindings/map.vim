@@ -155,10 +155,6 @@ nnoremap g, g,zz
 xnoremap p "0p
 
 " -------------------N--------------------
-" Keep search matches in the middle of the window.
-nnoremap n nzzzv
-nnoremap N Nzzzv
-
 " Motion for numbers. Great for CSS.
 " margin-top: 200px; -> daN -> margin-top: px;
 onoremap N  :<c-u>call NumberTextObject(0)<cr>

@@ -826,9 +826,6 @@ Plug 'tpope/vim-vinegar'
 " execute current buffer and show output
 " Plug 'thinca/vim-quickrun'
 
-" improves search
-" Plug 'osyo-manga/vim-anzu'
-
 " Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
 
 " Syntax check

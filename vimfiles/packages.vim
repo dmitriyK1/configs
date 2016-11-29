@@ -102,28 +102,15 @@ Plug 'pbrisbin/vim-colors-off'
 " Colorschemes end
 " ================================================================================
 
-" Syntax check
-" Plug 'scrooloose/syntastic' "{{{
-"   let g:syntastic_check_on_open=1
-" }}}
-
 " gitk for Vim
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
-
-" alternative for vim-easygrep
-" Plug 'skwp/greplace.vim'
 
 " Git log viewer
 Plug 'cohama/agit.vim', { 'on': 'Agit' }
 
-" tabs / buffers / files management
-" fast fuzzy searching powered by Go
-" workspaces (sessions)
-" bookmarks for your favorite projects
-" Plug 'vim-ctrlspace/vim-ctrlspace'
-
 " vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
+  " TODO: examine settings for keybindings (maps n anyway)
   nnoremap <silent> g1 :call WordNavigation(1)<CR>
   nnoremap <silent> g2 :call WordNavigation(0)<CR>
 "}}}
@@ -148,12 +135,6 @@ Plug 'tpope/vim-capslock'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
   nnoremap <silent> <F2> :UndotreeToggle<cr>:UndotreeFocus<cr>
 " }}}
-
-" Visualize your undo tree
-" Plug 'sjl/gundo.vim'
-
-" execute current buffer and show output
-" Plug 'thinca/vim-quickrun'
 
 " This plugin provides the following mappings which allow you to move between Vim panes and tmux splits seamlessly:
 "   <ctrl-h> => Left
@@ -243,14 +224,6 @@ Plug 'tpope/vim-abolish'
   " gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
 Plug 'AndrewRadev/splitjoin.vim'
 
-" Extended session management for Vim (:mksession on steroids)
-" :SaveSession
-" :OpenSession
-" :RestartVim
-" :CloseSession
-" :DeleteSession
-" Plug 'xolox/vim-session'
-
 " colorscheme switcher
 Plug 'xolox/vim-colorscheme-switcher', { 'on': 'NextColorScheme' } "{{{
   let g:colorscheme_switcher_define_mappings = 0
@@ -258,10 +231,6 @@ Plug 'xolox/vim-colorscheme-switcher', { 'on': 'NextColorScheme' } "{{{
 
 " Miscellaneous auto-load Vim scripts(dependency)
 Plug 'xolox/vim-misc'
-
-" Easy note taking in Vim
-" :Note
-" Plug 'xolox/vim-notes'
 
 " Improved integration between Vim and its environment (fullscreen, open URL, background command execution)
 Plug 'xolox/vim-shell'
@@ -362,16 +331,6 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } "{{{
   nmap <F8> :TagbarToggle<cr>
 " }}}
 
-" Sneak is a minimalist, versatile motion to reach any location specified by two characters.
-" Plug 'justinmk/vim-sneak' "{{{
-  " nmap f <Plug>Sneak_s
-  " nmap F <Plug>Sneak_S
-  " xmap f <Plug>Sneak_s
-  " xmap F <Plug>Sneak_S
-  " omap f <Plug>Sneak_s
-  " omap F <Plug>Sneak_S
-" }}}
-
 " start screen
 Plug 'mhinz/vim-startify' "{{{
   let g:startify_custom_header = []
@@ -379,17 +338,6 @@ Plug 'mhinz/vim-startify' "{{{
 
 " Plugin to toggle, display and navigate marks
 Plug 'kshenoy/vim-signature'
-
-" A Vim plugin for visually displaying indent levels in code
-" Plug 'nathanaelkane/vim-indent-guides' "{{{
-  " let g:indent_guides_guide_size = 1
-  " let g:indent_guides_start_level = 2
-  " let g:indent_guides_color_change_percent = 5
-  " let g:indent_guides_enable_on_vim_startup = 1
-" }}}
-
-" Tiled Window Management for Vim
-" Plug 'spolu/dwm.vim'
 
 " Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors' "{{{
@@ -405,9 +353,6 @@ Plug 'lfilho/cosco.vim' "{{{
   autocmd FileType javascript,css,sh nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
   autocmd FileType javascript,css,sh inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
 " }}}
-
-" support command mode in Russian keyboard layout
-" Plug 'powerman/vim-plugin-ruscmd'
 
 " snippets support
 Plug 'SirVer/ultisnips' " {{{
@@ -428,9 +373,6 @@ Plug 'vim-scripts/LargeFile'
 " A vim plugin to perform diffs on blocks of code
 " :Linediff
 Plug 'AndrewRadev/linediff.vim', { 'on': 'Linediff' }
-
-" auto save/load sessions
-" Plug 'powerman/vim-plugin-autosess'
 
 " HTML abbreviations (similar to emmet)
 " <C-X><Space>  <foo>^</foo>
@@ -668,12 +610,6 @@ Plug 'mileszs/ack.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/lightline-powerful'
 
-" A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
-" Plug 'airblade/vim-gitgutter'
-
-" show git diff via sign column
-" Plug 'mhinz/vim-signify'
-
 " auto-closer - insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs' " {{{
   let g:AutoPairsMultilineClose = 0
@@ -718,13 +654,6 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
   let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
 " }}}
 
-" Map the conceal characters to their expanded forms.
-" Plug 'Olical/vim-syntax-expand' "{{{
-  " autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
-  " autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
-  " autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
-" }}}
-
 " cycle through yanks (alt-p \ alt-shift-p)
 Plug 'maxbrunsfeld/vim-yankstack'
 
@@ -757,14 +686,6 @@ Plug 'heavenshell/vim-jsdoc' " {{{
   " nmap <silent> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
 " }}}
 
-" Toolbox to open & search URLs from vim
-" Plug 'waiting-for-dev/vim-www' "{{{
-"   let g:www_default_search_engine = 'google'
-  " :Wopen http://vim.org
-  " :Wsearch google how to learn vim
-  " <leader>ws searches WORD under cursor, while the same mapping in visual mode searches current visual selection
-" }}}
-
 " autocompletion
 Plug 'ervandew/supertab' " {{{
   set completeopt+=longest
@@ -777,8 +698,6 @@ Plug 'ervandew/supertab' " {{{
 " autocomplete plugin - autoopen popup when 2 letters typed
 Plug 'vim-scripts/AutoComplPop'
 
-" Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
-
 " After you open a .js file, and save it, it will run eslint on the file and
 " report errors in the location window.
 " :ESLint
@@ -787,6 +706,95 @@ Plug 'bigfish/vim-eslint', { 'on': 'ESLint' }
 
 " file browser
 Plug 'tpope/vim-vinegar'
+
+" ================================================================================
+" Unused:
+" ================================================================================
+" Toolbox to open & search URLs from vim
+" Plug 'waiting-for-dev/vim-www' "{{{
+"   let g:www_default_search_engine = 'google'
+  " :Wopen http://vim.org
+  " :Wsearch google how to learn vim
+  " <leader>ws searches WORD under cursor, while the same mapping in visual mode searches current visual selection
+" }}}
+
+" Map the conceal characters to their expanded forms.
+" Plug 'Olical/vim-syntax-expand' "{{{
+  " autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+  " autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
+  " autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+" }}}
+
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
+" Plug 'airblade/vim-gitgutter'
+
+" show git diff via sign column
+" Plug 'mhinz/vim-signify'
+
+" auto save/load sessions
+" Plug 'powerman/vim-plugin-autosess'
+
+" support command mode in Russian keyboard layout
+" Plug 'powerman/vim-plugin-ruscmd'
+
+" A Vim plugin for visually displaying indent levels in code
+" Plug 'nathanaelkane/vim-indent-guides' "{{{
+  " let g:indent_guides_guide_size = 1
+  " let g:indent_guides_start_level = 2
+  " let g:indent_guides_color_change_percent = 5
+  " let g:indent_guides_enable_on_vim_startup = 1
+" }}}
+
+" Tiled Window Management for Vim
+" Plug 'spolu/dwm.vim'
+
+" Sneak is a minimalist, versatile motion to reach any location specified by two characters.
+" Plug 'justinmk/vim-sneak' "{{{
+  " nmap f <Plug>Sneak_s
+  " nmap F <Plug>Sneak_S
+  " xmap f <Plug>Sneak_s
+  " xmap F <Plug>Sneak_S
+  " omap f <Plug>Sneak_s
+  " omap F <Plug>Sneak_S
+" }}}
+
+" Extended session management for Vim (:mksession on steroids)
+" :SaveSession
+" :OpenSession
+" :RestartVim
+" :CloseSession
+" :DeleteSession
+" Plug 'xolox/vim-session'
+
+" Easy note taking in Vim
+" :Note
+" Plug 'xolox/vim-notes'
+" Visualize your undo tree
+" Plug 'sjl/gundo.vim'
+
+" execute current buffer and show output
+" Plug 'thinca/vim-quickrun'
+
+" improves search
+" Plug 'osyo-manga/vim-anzu'
+
+" Plug 'kien/rainbow_parentheses.vim'        // breaks syntax highlighting
+
+" Syntax check
+" Plug 'scrooloose/syntastic' "{{{
+"   let g:syntastic_check_on_open=1
+" }}}
+
+" alternative for vim-easygrep
+" Plug 'skwp/greplace.vim'
+
+" tabs / buffers / files management
+" fast fuzzy searching powered by Go
+" workspaces (sessions)
+" bookmarks for your favorite projects
+" Plug 'vim-ctrlspace/vim-ctrlspace'
+
+" ================================================================================
 
 call plug#end()
 

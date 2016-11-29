@@ -23,14 +23,14 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'KeitaNakamura/neodark.vim'
-Plug 'kamwitsta/mythos'
-Plug 'kamwitsta/nordisk'
 Plug 'AlessandroYorba/Sierra'
 Plug 'Blevs/vim-dzo'
 Plug 'robertmeta/nofrils'
 Plug 'trevordmiller/nova-vim'
 Plug 'andreasvc/vim-256noir'
 Plug 'pbrisbin/vim-colors-off'
+" Plug 'kamwitsta/mythos'
+" Plug 'kamwitsta/nordisk'
 " Plug 'grod/sublime-color-schemes.vim'
 " Plug 'jyota/vimColors'
 " Plug 'mkarmona/colorsbox'
@@ -515,9 +515,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
 " }}}
 
 " expand html snippets
-" <c-e> in insert mode
-" <c-n> cycle throught empty elements
-Plug 'rstacruz/sparkup', { 'rtp': 'vim/', 'for': ['html', 'php', 'xml'] }
+" <c-e> completes (insert mode)
+" <c-n> cycles throught empty elements (insert mode)
+Plug 'rstacruz/sparkup', { 'rtp': 'vim/', 'for': ['html', 'php'] }
 
 " <c-y>,
 Plug 'mattn/emmet-vim' "{{{

@@ -1,6 +1,8 @@
 " Use vim settings, rather then vi settings (much better!)
 " This must be first, because it changes other options as a side effect.
-set nocompatible
+if &compatible
+  set nocompatible
+endif
 
 set browsedir=current
 

@@ -302,14 +302,6 @@ Plug 'mhinz/vim-grepper' "{{{
   xmap gs  <plug>(GrepperOperator)
 "}}}
 
-" provides star feature in visual-mode
-Plug 'thinca/vim-visualstar' "{{{
-  vmap * <plug>(visualstar-*)N
-  vmap # <plug>(visualstar-#)N
-  vmap g* <plug>(visualstar-g*)N
-  vmap g# <plug>(visualstar-g#)N
-" }}}
-
 " vim search status (similar to indexedsearch)
 Plug 'osyo-manga/vim-anzu'
 

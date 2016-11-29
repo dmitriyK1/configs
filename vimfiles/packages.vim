@@ -496,7 +496,6 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
         \ }
 "}}}
 
-" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } "{{{
 Plug 'scrooloose/nerdtree' "{{{
   let g:nerdtree_tabs_open_on_gui_startup = 0
   let NERDTreeIgnore=['\.pyc$', '\~$']
@@ -508,8 +507,6 @@ Plug 'scrooloose/nerdtree' "{{{
   " map - :NERDTreeToggle<CR>
   map g- :NERDTreeFind<CR>
 "}}}
-
-" Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
 
 " This plugin aims at making NERDTree feel like a true panel, independent of tabs.
 " Just one NERDTree, always and ever. It will always look the same in all tabs,

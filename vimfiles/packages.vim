@@ -101,6 +101,14 @@ Plug 'pbrisbin/vim-colors-off'
 " Colorschemes end
 " ================================================================================
 
+" Syntax check
+" Plug 'scrooloose/syntastic' "{{{
+"   let g:syntastic_check_on_open=1
+" }}}
+
+" CSSComb plugin
+Plug 'csscomb/vim-csscomb'
+
 " gitk for Vim
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 
@@ -425,6 +433,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 
 " quoting/parenthesizing made simple
+" ysiw(  surround an inner word with ( )
+" yss(   surround a line with        ( )
 Plug 'tpope/vim-surround'
 
 " alignment plugin
@@ -450,6 +460,19 @@ Plug 'tmhedberg/SimpylFold' "{{{
 " }}}
 
 " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
+" K             Show python docs
+" <Ctrl-Space>  Rope autocomplete
+" <Ctrl-c>g     Rope goto definition
+" <Ctrl-c>d     Rope show documentation
+" <Ctrl-c>f     Rope find occurrences
+" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
+" [[            Jump on previous class or function (normal, visual, operator modes)
+" ]]            Jump on next class or function (normal, visual, operator modes)
+" [M            Jump on previous class or method (normal, visual, operator modes)
+" ]M            Jump on next class or method (normal, visual, operator modes)
+" NOTE: consider using
+" let g:pymode_rope = 0
+" https://github.com/davidhalter/jedi-vim
 Plug 'klen/python-mode'
 
 " This indentation script for python tries to match more closely what is suggested in PEP 8
@@ -549,6 +572,9 @@ Plug 'easymotion/vim-easymotion' "{{{
 " <Leader>oc   - Occur       Search current buffer
 " <Leader>mo   - Moccur      Search all buffers
 " <Leader>*    - StarOccur    Search all buffers for occurrence of the word nearest to the cursor:
+" <Space>      : Set current window height to highest.
+" x            : Display the occurence the current line.
+" q            : Quit the quickfix window.
 Plug 'vim-scripts/occur.vim'
 
 " Vim plugin for the Perl module / CLI script 'ack'

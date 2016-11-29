@@ -5,27 +5,17 @@
 
 " TODO: sort leader.vim alphabetically
 
-" TODO: add automatic text wrap for plain text files
-
-" TODO: add colorschemes to vimfiles instead of plugins
+" TODO: add automatic text wrap for plain text files (string splitting)
 
 " TODO: remove plugin-less autocompletion
-
-" TODO: fix % not working on braces bug ( ) in html files
 
 " TODO: add plugins lazy-loading
 " https://github.com/saaguero/dotvim/blob/44c3bbc9b2996fcf7e86f624785a3a06ca978167/.vimrc#L60-L69
 
 " TODO: ? try to make sneak default keybindings work ?
 
-" TODO: make vimcompletesme work
-
-" TODO: add textobject plugins
-
 " TODO: remove custom duplicated functionality, that already present in plugins
 " TODO: replace custom functions etc. on plugins doing similar things
-
-" TODO: use sparkup <c-n><c-p> only in relevant file types
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -38,37 +28,11 @@
 
 " http://chibicode.com/vimrc/
 
-" consider using
-" let g:pymode_rope = 0
-" https://github.com/davidhalter/jedi-vim
-
-" Plug 'scrooloose/syntastic'
-" let g:syntastic_check_on_open=1
-
 " http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" gS to split a one-liner into multiple lines
-" gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
-
-" Search fold bindings:
-"
-" <leader>ig  toggle indent guides
-"
-" <Leader>z
-" fold away lines not matching the last search pattern.
-
-" <Leader>iz
-" fold away lines that do match the last search pattern (inverse folding).
-
-" <Leader>Z
-" try hard to restore the previous fold settings"
-"
-"
-"
 " earlier 5m
 " later 1m
 " U         undo a change on one line
@@ -81,14 +45,6 @@
 " @:        repeat last colon command
 " :CoffeeMake \ :make
 " :CoffeeWatch [vert[ical]] [WINDOW-SIZE]
-"
-" Occur.vim:
-  " <Leader>oc   - Occur (Search current buffer)
-  " <Leader>mo   - Moccur (Search all buffers)
-  " <Leader>*    - StarOccur (Search all buffers for occurrence of the word nearest to the cursor)
-  " <Space> : Set current window height to highest.
-  " x : Display the occurence the current line.
-  " q : Quit the quickfix window.
 "
 " :grep <patter> <file name pattern>
 " example: :grep colorscheme %          (search in current file)
@@ -106,26 +62,6 @@
 " :Wsearch google how to learn vim
 " <leader>ws searches WORD under cursor, while the same mapping in visual mode searches current visual selection
 
-" https://github.com/tpope/vim-surround
-" ysiw (     // surround an inner word with ()
-" yss (      // surround a line with ()
-
-
-" Python-mode
-" K             Show python docs
-" <Ctrl-Space>  Rope autocomplete
-" <Ctrl-c>g     Rope goto definition
-" <Ctrl-c>d     Rope show documentation
-" <Ctrl-c>f     Rope find occurrences
-" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
-" [[            Jump on previous class or function (normal, visual, operator modes)
-" ]]            Jump on next class or function (normal, visual, operator modes)
-" [M            Jump on previous class or method (normal, visual, operator modes)
-" ]M            Jump on next class or method (normal, visual, operator modes)
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Good configs list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -142,11 +78,6 @@
 " TODO: check if all let mappings were transferred
 
 " TODO: remove unnecessary functions (find similar plugins instead)
-
-" TODO: prevent jumping on space trim
-
-" TODO: https://github.com/csscomb/vim-csscomb
-
 
 
 filetype plugin indent on

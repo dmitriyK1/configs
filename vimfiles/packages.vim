@@ -1,3 +1,11 @@
+" Lazy-loading example for filetypes:
+" autocmd BufNewFile,BufRead *.gpg setf gpg
+" Plug 'jamessan/vim-gnupg', { 'for': 'gpg' }
+
+" Lazy-loading on <Plug> mappings:
+" Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
+" xmap ga <Plug>(EasyAlign)
+
 " http://vimawesome.com
 " http://spf13.com/post/the-15-best-vim-plugins
 
@@ -509,7 +517,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
 " expand html snippets
 " <c-e> in insert mode
 " <c-n> cycle throught empty elements
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'rstacruz/sparkup', { 'rtp': 'vim/', 'for': ['html', 'php', 'xml'] }
 
 " <c-y>,
 Plug 'mattn/emmet-vim' "{{{

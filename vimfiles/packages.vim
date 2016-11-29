@@ -108,11 +108,6 @@ Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 " Git log viewer
 Plug 'cohama/agit.vim', { 'on': 'Agit' }
 
-" Show "Match 123 of 456 /search term/" in Vim searches
-" Plug 'henrik/vim-indexed-search' "{{{
-  " let g:indexed_search_colors=0
-"}}}
-
 " Delete buffers and close files in Vim without closing your windows or messing up your layout
 " :Bdelete
 Plug 'moll/vim-bbye', { 'on': 'Bdelete' } "{{{
@@ -761,6 +756,11 @@ Plug 'tpope/vim-vinegar'
 " ================================================================================
 " Unused:
 " ================================================================================
+" Show "Match 123 of 456 /search term/" in Vim searches
+" Plug 'henrik/vim-indexed-search' "{{{
+  " let g:indexed_search_colors=0
+"}}}
+
 " Toolbox to open & search URLs from vim
 " Plug 'waiting-for-dev/vim-www' "{{{
 "   let g:www_default_search_engine = 'google'

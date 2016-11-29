@@ -99,10 +99,6 @@ cmap <M-D> <Esc>d
 nmap <M-,> :bp<cr>
 nmap <M-.> :bn<cr>
 
-"  What this accomplishes is it keeps a menu item always highlighted. This way you can keep typing characters to narrow the matches
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-\ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
 imap <A-j> <Down>
 imap <A-k> <Up>
 imap <A-h> <Left>
@@ -257,12 +253,6 @@ endfunction
 
 " nnoremap <tab> %
 " vnoremap <tab> %
-
-
-" This mapping will change the behavior of the <Enter> key when the popup menu
-" is visible. In that case the Enter key will simply select the highlighted
-" menu item, just as <C-Y> does.
-" inoremap <expr> <CR> pumvisible() ? '\<C-y>' : '\<C-g>u\<CR>'
 
 " nmap <Left> <<
 " nmap <Right> >>

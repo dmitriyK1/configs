@@ -808,7 +808,9 @@ Plug 'tpope/vim-vinegar'
 " }}}
 
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
-" Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter' "{{{
+  " let g:gitgutter_realtime = 0
+" }}}
 
 " show git diff via sign column
 " Plug 'mhinz/vim-signify'

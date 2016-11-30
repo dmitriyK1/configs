@@ -37,7 +37,7 @@ augroup END
 
 " Autosave {{{
   autocmd FocusLost,BufLeave * silent! wall
-  autocmd InsertLeave,CursorHoldI * if expand('%') != '' | silent! update | endif
+  autocmd InsertLeave,CursorHold,CursorHoldI * if expand('%') != '' | silent! update | endif
 
   " messes undotree history every time split is switched
   " autocmd FocusLost,BufLeave * silent! DeleteTrailingWhitespace

@@ -103,6 +103,12 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " Colorschemes end
 " ================================================================================
 
+" plugin to dim inactive windows
+Plug 'blueyed/vim-diminactive' "{{{
+  let g:diminactive_filetype_blacklist = ['startify']
+  let g:diminactive_enable_focus = 1
+" }}}
+
 " :substitute preview
 Plug 'osyo-manga/vim-over' "{{{
   map <silent> <leader>% :OverCommandLine<CR>%s/
@@ -556,11 +562,26 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 " readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
 
+" CtrlP plugin: Filetype finder and setter
+Plug 'endel/ctrlp-filetype.vim' "{{{
+  silent! nnoremap <unique> <silent> <Leader>F :CtrlPFiletype<CR>
+" }}}
+
 " Fast vim CtrlP matcher based on python
 Plug 'FelikZ/ctrlp-py-matcher'
 
+" A simple function navigator for ctrlp.vim
+Plug 'tacahiroy/ctrlp-funky' "{{{
+  let g:ctrlp_funky_syntax_highlight = 1
+
+  nnoremap <Leader>fu :CtrlPFunky<Cr>
+  " narrow the list down with a word under cursor
+  nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+" }}}
+
 " Fuzzy file, buffer, mru, tag, etc finder
 Plug 'ctrlpvim/ctrlp.vim' "{{{
+  let g:ctrlp_extensions = ['filetype', 'funky']
   let g:ctrlp_map = '<c-t>'
   let g:ctrlp_open_multiple_files = '1jr'
   let g:ctrlp_max_files = 0

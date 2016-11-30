@@ -103,6 +103,12 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " Colorschemes end
 " ================================================================================
 
+" Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
+" Then whenever you are in the insert mode and paste into your terminal
+" emulator using command+v, shift+insert, ctrl+shift+v or middle-click, vim
+" will automatically :set paste for you.
+Plug 'ConradIrwin/vim-bracketed-paste'
+
 " plugin to dim inactive windows
 Plug 'blueyed/vim-diminactive' "{{{
   let g:diminactive_filetype_blacklist = ['startify']
@@ -674,11 +680,14 @@ Plug 'easymotion/vim-easymotion' "{{{
 " Show all lines in the buffer containing word (grep buffer)
 " <Leader>oc   - Occur       Search current buffer
 " <Leader>mo   - Moccur      Search all buffers
-" <Leader>*    - StarOccur    Search all buffers for occurrence of the word nearest to the cursor:
+" <Leader>*    - StarOccur    Search all buffers for occurrence of the word nearest to the cursor
 " <Space>      : Set current window height to highest.
 " x            : Display the occurence the current line.
 " q            : Quit the quickfix window.
 Plug 'vim-scripts/occur.vim'
+
+" Start a * or # search from a visual block
+Plug 'bronson/vim-visual-star-search'
 
 " Vim plugin for the Perl module / CLI script 'ack'
 Plug 'mileszs/ack.vim'

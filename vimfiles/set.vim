@@ -143,7 +143,7 @@ set autoread
 
 set synmaxcol=1000  " don't syntax-highlight long lines (default: 3000)
 
-set pastetoggle=<F2>
+" set pastetoggle=<F2>
 
 " set mouse=a
 
@@ -156,8 +156,9 @@ set nottybuiltin
 set t_ut=                                   " http://sunaku.github.io/vim-256color-bce.html
 set textwidth=0
 set wrapmargin=0
+set autowrite
 set autowriteall
-
+set updatetime=1000
 
 set switchbuf=useopen           " reveal already opened files from the
                                 " quickfix window instead of opening new

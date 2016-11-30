@@ -149,7 +149,7 @@ nnoremap <silent> <leader>3 :call ToggleHiddenAll()<CR>
 nnoremap <leader>. `.
 
 " nnoremap <silent> <leader>: q:i
-nnoremap <silent> <leader>: q:
+" nnoremap <silent> <leader>: q:
 
 " Surround mappings {{{
   " ,# Surround a word with #{ruby interpolation}

@@ -35,8 +35,15 @@ augroup file_types
     autocmd BufRead,BufNewFile *.jade set ft=jade
 augroup END
 
+" Autosave {{{
+  autocmd FocusLost,BufLeave * silent! wall
+  autocmd InsertLeave,CursorHoldI * if expand('%') != '' | silent! update | endif
 
-au FocusLost * silent! wa
+  " messes undotree history every time split is switched
+  " autocmd FocusLost,BufLeave * silent! DeleteTrailingWhitespace
+" }}}
+
+" return to command mode when focus is lost
 " au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
 
 au filetype help set nonumber

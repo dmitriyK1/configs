@@ -6,9 +6,6 @@
 " TODO: remove redundant keybindings ( delete keybindings provided by unimpaired first )
 " TODO: replace custom functions etc. (find similar plugins instead)
 
-" TODO: add plugins lazy-loading
-" https://github.com/saaguero/dotvim/blob/44c3bbc9b2996fcf7e86f624785a3a06ca978167/.vimrc#L60-L69
-
 " TODO: ? try to make sneak default keybindings work ?
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -52,6 +52,10 @@ snippet "([^\s].*)\.log" "console.log (postfix)" r
 console.log(`!p snip.rv = match.group(1)`);$0
 endsnippet
 # ----------------------------------------
+snippet "([^\s].*)\.info" "console.info (postfix)" r
+console.info(`!p snip.rv = match.group(1)`);$0
+endsnippet
+# ----------------------------------------
 snippet "([^\s].*)\.debug" "console.debug (postfix)" r
 console.debug(`!p snip.rv = match.group(1)`);$0
 endsnippet

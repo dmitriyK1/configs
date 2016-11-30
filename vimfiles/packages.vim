@@ -297,7 +297,9 @@ Plug 'mhinz/vim-grepper' "{{{
 "}}}
 
 " vim search status (similar to indexedsearch)
-Plug 'osyo-manga/vim-anzu'
+Plug 'osyo-manga/vim-anzu' "{{{
+  let g:anzu_enable_CursorMoved_AnzuUpdateSearchStatus = 1
+" }}}
 
 " improved */# search
 Plug 'haya14busa/vim-asterisk' "{{{

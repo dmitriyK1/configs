@@ -55,6 +55,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Good configs list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/blueyed/dotfiles/blob/master/vimrc
 " https://github.com/tpope/tpope/blob/master/.vimrc
 " https://github.com/paulirish/dotfiles/blob/master/.vimrc
 " https://github.com/saaguero/dotvim/blob/master/.vimrc

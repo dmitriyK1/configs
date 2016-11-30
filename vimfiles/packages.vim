@@ -272,7 +272,9 @@ Plug 'wellle/targets.vim'
 " a small collection of settings,
 " commands and mappings put together to make working with the
 " location/quickfix list/window smoother.
-Plug 'romainl/vim-qf'
+Plug 'romainl/vim-qf' "{{{
+  nmap <silent> <F4> <Plug>QfCtoggle
+" }}}
 
 " toggle true/false, && || etc
 Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{

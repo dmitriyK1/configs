@@ -734,7 +734,7 @@ Plug 'ervandew/supertab' " {{{
 " }}}
 
 " autocomplete plugin - autoopen popup when 2 letters typed
-Plug 'vim-scripts/AutoComplPop'
+Plug 'exvim/ex-autocomplpop'
 
 " After you open a .js file, and save it, it will run eslint on the file and
 " report errors in the location window.

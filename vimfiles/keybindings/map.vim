@@ -145,6 +145,9 @@ vnoremap <silent> gv :call VisualSelection('gv')<CR>
 nnoremap g; g;zz
 nnoremap g, g,zz
 
+" -------------------H---------------------
+nnoremap H _
+
 " -------------------P---------------------
 " visual paste without losing the copied content
 xnoremap p "0p

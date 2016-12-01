@@ -178,7 +178,9 @@ nnoremap <Space> :
 " nnoremap ? q?i\v
 
 " replace ex mode map and use it for repeating last executed macro
-nnoremap Q @@
+" nnoremap Q @@
+
+nnoremap Q q:
 
 " -------------------Y---------------------
 " Yank from the cursor to the end of the line, to be consistent with C and D.

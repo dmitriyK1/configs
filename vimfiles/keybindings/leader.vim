@@ -87,7 +87,7 @@ map <leader>S :%s:\v::g<Left><Left><Left>
 " T ================================================================================
 map <silent> <leader>tc :tabclose<CR>
 
-map <silent> <leader>t :call ConcealToggle()<CR>
+map <silent> <leader>T :call ConcealToggle()<CR>
 
 " map <leader>t :browse oldfiles!<CR>
 

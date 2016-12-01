@@ -752,6 +752,8 @@ Plug 'drmikehenry/vim-fixkey'
 Plug 'terryma/vim-expand-region' "{{{
   map <Up> <Plug>(expand_region_expand)
   map <Down> <Plug>(expand_region_shrink)
+  " vmap v <Plug>(expand_region_expand)
+  " vmap <C-v> <Plug>(expand_region_shrink)
 " }}}
 
 " plugin that defines a new text object representing lines of code at the same indent level

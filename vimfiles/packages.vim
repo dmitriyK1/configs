@@ -745,6 +745,9 @@ Plug 'bigfish/vim-eslint', { 'on': 'ESLint' }
 " file browser
 Plug 'tpope/vim-vinegar'
 
+" fixes key codes for console Vim
+Plug 'drmikehenry/vim-fixkey'
+
 " ================================================================================
 " Unused:
 " ================================================================================

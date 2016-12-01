@@ -122,8 +122,8 @@ Plug 'osyo-manga/vim-over' "{{{
 
 " gitk for Vim
 Plug 'gregsexton/gitv', { 'on': 'Gitv' } "{{{
-  map <F9> :Gitv<CR>
-  vmap <F9> :Gitv<CR>
+  map <F10> :Gitv<CR>
+  vmap <F10> :Gitv<CR>
 " }}}
 
 " Delete buffers and close files in Vim without closing your windows or messing up your layout

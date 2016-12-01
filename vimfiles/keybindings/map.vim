@@ -32,9 +32,8 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " Functional keys mappings
 " --------------------------------------------------------------------------------
 
-nnoremap <F5> :buffers<cr>:buffer<Space>
+nnoremap <F5> :buffers<cr>:buffer<Space><C-Z>
 
-nnoremap <F10> :b <C-Z>
 call togglebg#map("<F12>")
 
 " --------------------------------------------------------------------------------

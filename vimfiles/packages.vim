@@ -748,6 +748,15 @@ Plug 'tpope/vim-vinegar'
 " fixes key codes for console Vim
 Plug 'drmikehenry/vim-fixkey'
 
+" allows to visually select increasingly larger regions of text using the same key combination
+Plug 'terryma/vim-expand-region' "{{{
+  map <Up> <Plug>(expand_region_expand)
+  map <Down> <Plug>(expand_region_shrink)
+" }}}
+
+" plugin that defines a new text object representing lines of code at the same indent level
+Plug 'michaeljsmith/vim-indent-object'
+
 " ================================================================================
 " Unused:
 " ================================================================================

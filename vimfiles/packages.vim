@@ -123,9 +123,6 @@ Plug 'osyo-manga/vim-over' "{{{
 " gitk for Vim
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 
-" Git log viewer
-Plug 'cohama/agit.vim', { 'on': 'Agit' }
-
 " Delete buffers and close files in Vim without closing your windows or messing up your layout
 " :Bdelete
 Plug 'moll/vim-bbye', { 'on': 'Bdelete' } "{{{
@@ -166,7 +163,6 @@ Plug 'editorconfig/editorconfig-vim'
   " SudoWrite: Write a privileged file with sudo.
   " SudoEdit: Edit a privileged file with sudo.
 Plug 'tpope/vim-eunuch'
-
 
 " highlight conflict markers.
 " jump among conflict markers.
@@ -229,11 +225,6 @@ Plug 'tpope/vim-abolish'
   " gS to split a one-liner into multiple lines
   " gJ (with the cursor on the first line of a block) to join a block into a single-line statement.
 Plug 'AndrewRadev/splitjoin.vim'
-
-" colorscheme switcher
-Plug 'xolox/vim-colorscheme-switcher', { 'on': 'NextColorScheme' } "{{{
-  let g:colorscheme_switcher_define_mappings = 0
-"}}}
 
 " Miscellaneous auto-load Vim scripts(dependency)
 Plug 'xolox/vim-misc'
@@ -391,9 +382,6 @@ Plug 'konfekt/fastfold'
 " asynchronous build and test dispatcher
 Plug 'tpope/vim-dispatch'
 
-" Vim plugin for the_platinum_searcher, 'pt', a replacement for the Perl module/CLI script 'ack'
-Plug 'nazo/pt.vim'
-
 " Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } "{{{
   nmap <F8> :TagbarToggle<cr>
@@ -456,9 +444,6 @@ Plug 'tpope/vim-ragtag'
 " <Leader>iz   fold away lines that do match the last search pattern (inverse folding).
 " <Leader>Z    restore the previous fold settings
 Plug 'vim-scripts/searchfold.vim'
-
-" Google lookup from Vim
-Plug 'szw/vim-g', { 'on': 'Google' }
 
 " Git wrapper
 Plug 'tpope/vim-fugitive' "{{{
@@ -535,38 +520,6 @@ Plug 'frace/vim-bubbles' "{{{
 " autodetect tabs/spaces of buffer
 Plug 'tpope/vim-sleuth'
 
-" Python code folding for Vim
-Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
-  let g:SimpylFold_docstring_preview=1
-
-  " ensure SimpylFold init properly
-  autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
-  autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
-" }}}
-
-" Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
-" K             Show python docs
-" <Ctrl-Space>  Rope autocomplete
-" <Ctrl-c>g     Rope goto definition
-" <Ctrl-c>d     Rope show documentation
-" <Ctrl-c>f     Rope find occurrences
-" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
-" [[            Jump on previous class or function (normal, visual, operator modes)
-" ]]            Jump on next class or function (normal, visual, operator modes)
-" [M            Jump on previous class or method (normal, visual, operator modes)
-" ]M            Jump on next class or method (normal, visual, operator modes)
-Plug 'klen/python-mode', { 'for': 'python' } "{{{
-  " in case of glitches
-  " au BufWriteCmd *.py write || :PymodeLint
-
-  " NOTE: consider using
-  " let g:pymode_rope = 0
-  " https://github.com/davidhalter/jedi-vim
-" }}}
-
-" This indentation script for python tries to match more closely what is suggested in PEP 8
-Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
-
 " readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
 
@@ -642,11 +595,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
     \ }
 " }}}
 
-" expand html snippets
-" <c-e> completes (insert mode)
-" <c-n> cycles throught empty elements (insert mode)
-Plug 'rstacruz/sparkup', { 'rtp': 'vim/', 'for': ['html', 'php'] }
-
 " <c-y>,
 Plug 'mattn/emmet-vim' "{{{
   " let g:user_emmet_install_global = 0
@@ -705,9 +653,6 @@ Plug 'jiangmiao/auto-pairs' " {{{
         \ ? "\<C-y><C-y>"
         \ : "\<C-g>u\<CR>"
 " }}}
-
-" jade highlighting support
-Plug 'statianzo/vim-jade'
 
 " go language support
 Plug 'fatih/vim-go'
@@ -796,6 +741,67 @@ Plug 'tpope/vim-vinegar'
 " ================================================================================
 " Unused:
 " ================================================================================
+
+" --------------------------------------------------------------------------------
+" Python plugins start
+" --------------------------------------------------------------------------------
+" Python code folding for Vim
+" Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
+  " let g:SimpylFold_docstring_preview=1
+
+  " ensure SimpylFold init properly
+  " autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+  " autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+" }}}
+
+" Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
+" K             Show python docs
+" <Ctrl-Space>  Rope autocomplete
+" <Ctrl-c>g     Rope goto definition
+" <Ctrl-c>d     Rope show documentation
+" <Ctrl-c>f     Rope find occurrences
+" <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
+" [[            Jump on previous class or function (normal, visual, operator modes)
+" ]]            Jump on next class or function (normal, visual, operator modes)
+" [M            Jump on previous class or method (normal, visual, operator modes)
+" ]M            Jump on next class or method (normal, visual, operator modes)
+" Plug 'klen/python-mode', { 'for': 'python' } "{{{
+  " in case of glitches
+  " au BufWriteCmd *.py write || :PymodeLint
+
+  " NOTE: consider using
+  " let g:pymode_rope = 0
+  " https://github.com/davidhalter/jedi-vim
+" }}}
+
+" This indentation script for python tries to match more closely what is suggested in PEP 8
+" Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
+" --------------------------------------------------------------------------------
+" Python plugins end
+" --------------------------------------------------------------------------------
+
+" Google lookup from Vim
+" Plug 'szw/vim-g', { 'on': 'Google' }
+
+" colorscheme switcher
+" Plug 'xolox/vim-colorscheme-switcher', { 'on': 'NextColorScheme' } "{{{
+"   let g:colorscheme_switcher_define_mappings = 0
+"}}}
+
+" Git log viewer
+" Plug 'cohama/agit.vim', { 'on': 'Agit' }
+
+" expand html snippets
+" <c-e> completes (insert mode)
+" <c-n> cycles throught empty elements (insert mode)
+" Plug 'rstacruz/sparkup', { 'rtp': 'vim/', 'for': ['html', 'php'] }
+
+" jade highlighting support
+" Plug 'statianzo/vim-jade'
+
+" Vim plugin for the_platinum_searcher, 'pt', a replacement for the Perl module/CLI script 'ack'
+" Plug 'nazo/pt.vim'
+
 " Show "Match 123 of 456 /search term/" in Vim searches
 " Plug 'henrik/vim-indexed-search' "{{{
   " let g:indexed_search_colors=0

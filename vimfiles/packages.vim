@@ -121,7 +121,10 @@ Plug 'osyo-manga/vim-over' "{{{
 " }}}
 
 " gitk for Vim
-Plug 'gregsexton/gitv', { 'on': 'Gitv' }
+Plug 'gregsexton/gitv', { 'on': 'Gitv' } "{{{
+  map <F9> :Gitv<CR>
+  vmap <F9> :Gitv<CR>
+" }}}
 
 " Delete buffers and close files in Vim without closing your windows or messing up your layout
 " :Bdelete
@@ -577,7 +580,8 @@ Plug 'scrooloose/nerdtree' "{{{
 " including expanded/collapsed nodes, scroll position etc.
 " :NERDTreeTabsToggle
 Plug 'jistr/vim-nerdtree-tabs' "{{{
-  map <silent> <leader>T :NERDTreeTabsToggle<CR>
+  " map <silent> <leader>T :NERDTreeTabsToggle<CR>
+  map <silent> <F1> :NERDTreeTabsToggle<CR>
 " }}}
 
 " NERDTree git status support

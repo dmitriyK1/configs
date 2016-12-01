@@ -111,7 +111,7 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 
 " plugin to dim inactive windows
 Plug 'blueyed/vim-diminactive' "{{{
-  let g:diminactive_filetype_blacklist = ['startify']
+  let g:diminactive_filetype_blacklist = ['startify', 'git']
   let g:diminactive_enable_focus = 1
 " }}}
 

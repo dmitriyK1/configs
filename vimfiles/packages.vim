@@ -695,6 +695,12 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
 " cycle through yanks (alt-p \ alt-shift-p)
 Plug 'maxbrunsfeld/vim-yankstack'
 
+" Maintains a history of previous yanks, changes and deletes
+" :YRSearch
+Plug 'vim-scripts/YankRing.vim' "{{{
+  nnoremap <silent> <F9> :YRShow<CR>
+" }}}
+
 " use CTRL-A/CTRL-X to increment dates, times, and more
 Plug 'tpope/vim-speeddating'
 

@@ -180,6 +180,7 @@ Plug 'vim-scripts/UnconditionalPaste'
 
 " A vim plugin to display the indention levels with thin vertical lines
 Plug 'Yggdroot/indentLine' "{{{
+  let g:indentLine_enabled = 0
   map <leader>il :IndentLinesToggle<CR>
 "}}}
 

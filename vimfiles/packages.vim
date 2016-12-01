@@ -581,7 +581,9 @@ Plug 'scrooloose/nerdtree' "{{{
 " :NERDTreeTabsToggle
 Plug 'jistr/vim-nerdtree-tabs' "{{{
   " map <silent> <leader>T :NERDTreeTabsToggle<CR>
-  map <silent> <F1> :NERDTreeTabsToggle<CR>
+  nnoremap <silent> <F1> :NERDTreeTabsToggle<CR>
+  inoremap <silent> <F1> <Esc>:NERDTreeTabsToggle<CR>
+  vnoremap <silent> <F1> <Esc>:NERDTreeTabsToggle<CR>
 " }}}
 
 " NERDTree git status support

@@ -222,6 +222,7 @@
     w = show
     wp = show -p
     wr = show -p --no-color
+    sf = show --name-only --pretty=""
     #############
     svnr = svn rebase
     svnd = svn dcommit

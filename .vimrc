@@ -10,8 +10,6 @@
 
 " TODO: implement NERDTreeFind toggle
 
-" TODO: show scroll percentage
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

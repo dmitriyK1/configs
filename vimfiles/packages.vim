@@ -602,12 +602,13 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
     \ }
 " }}}
 
-" <c-y>,
+" html & css abbreviations
+" <c-e>,
 Plug 'mattn/emmet-vim' "{{{
-  " let g:user_emmet_install_global = 0
-  " let g:user_emmet_expandabbr_key = '<tab>'
+  let g:user_emmet_install_global = 0
+  let g:user_emmet_leader_key = '<C-e>'
 
-  " autocmd FileType html,css EmmetInstall
+  autocmd FileType html,css EmmetInstall
 " }}}
 
 " :Autoformat
@@ -654,11 +655,6 @@ Plug 'itchyny/lightline-powerful'
 " auto-closer - insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs' " {{{
   let g:AutoPairsMultilineClose = 0
-
-  " prevents adding new line when choosing item from autocomplete dropdown
-  inoremap <expr> <CR> pumvisible()
-        \ ? "\<C-y><C-y>"
-        \ : "\<C-g>u\<CR>"
 " }}}
 
 " go language support
@@ -740,7 +736,12 @@ Plug 'ervandew/supertab' " {{{
 " }}}
 
 " autocomplete plugin - autoopen popup when 2 letters typed
-Plug 'exvim/ex-autocomplpop'
+Plug 'exvim/ex-autocomplpop' "{{{
+  " prevents adding new line when choosing item from autocomplete dropdown
+  inoremap <expr> <CR> pumvisible()
+        \ ? "\<C-y>"
+        \ : "\<C-g>u\<CR>"
+" }}}
 
 " After you open a .js file, and save it, it will run eslint on the file and
 " report errors in the location window.

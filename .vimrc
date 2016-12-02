@@ -10,8 +10,6 @@
 
 " TODO: ? try to make sneak default keybindings work ?
 
-" TODO: install clipboard manager plugin
-
 " TODO: implement NERDTreeFind toggle
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -102,6 +102,23 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " ================================================================================
 " Colorschemes end
 " ================================================================================
+" plugin provides commands that fold away lines that don't match a specific
+" search pattern.
+" This pattern can be the word under the cursor, the last search pattern,
+" a regular expression or spelling errors.
+Plug 'embear/vim-foldsearch'
+
+" Interactive command execution in Vim (dependency)
+" If you use vim-plug, you can update and build vimproc automatically:
+"    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/vimproc.vim'
+
+"  Powerful shell implemented by vim
+" :VimShell
+Plug 'Shougo/vimshell.vim'
+
+" adds autocomplete functionality dependency to vimshell
+Plug 'Shougo/unite.vim'
 
 " Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
 " Then whenever you are in the insert mode and paste into your terminal
@@ -368,7 +385,7 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 " helps to isolate a particular fold into its own context
 " q - quit temporary buffer
 Plug 'vasconcelloslf/vim-foldfocus' "{{{
-  nmap <CR> :call FoldFocus('e')<CR>
+  nmap <S-CR> :call FoldFocus('e')<CR>
   nmap <Leader><CR> :call FoldFocus('vnew')<CR>
 " }}}
 
@@ -564,17 +581,42 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
   nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
 "}}}
 
+"  Adds file type glyphs/icons to many popular Vim plugins such as: NERDTree,
+"  vim-airline, unite, vim-startify and many more
+Plug 'ryanoasis/vim-devicons' "{{{
+  " enable open and close folder/directory glyph flags (disabled by default with 0)
+  let g:DevIconsEnableFoldersOpenClose = 1
+  " enable folder/directory glyph flag (disabled by default with 0)
+  let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+  " whether or not to show the nerdtree brackets around flags
+  let g:webdevicons_conceal_nerdtree_brackets = 1
+  " the amount of space to use after the glyph character (default ' ')
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+  " Force extra padding in NERDTree so that the filetype icons line up vertically
+  let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+" }}}
+
 Plug 'scrooloose/nerdtree' "{{{
+  let g:NERDTreeMapMenu='M'
   let g:nerdtree_tabs_open_on_gui_startup = 0
   let NERDTreeIgnore=['\.pyc$', '\~$']
-  let g:NERDTreeDirArrowExpandable = '▸'
-  let g:NERDTreeDirArrowCollapsible = '▾'
   let g:NERDTreeMinimalUI = 1
   let g:NERDTreeWinSize = 24
   let g:NERDTreeHijackNetrw = 1
+  " let g:NERDTreeDirArrowExpandable = '▸'
+  " let g:NERDTreeDirArrowCollapsible = '▾'
   " map - :NERDTreeToggle<CR>
   map g- :NERDTreeFind<CR>
 "}}}
+
+" Extra syntax and highlight for nerdtree files
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "{{{
+  let g:NERDTreeFileExtensionHighlightFullName = 1
+" }}}
+
+" NERDtree + ack.vim
+" press Ms on a directory
+Plug 'tyok/nerdtree-ack'
 
 " This plugin aims at making NERDTree feel like a true panel, independent of tabs.
 " Just one NERDTree, always and ever. It will always look the same in all tabs,
@@ -649,7 +691,144 @@ Plug 'bronson/vim-visual-star-search'
 Plug 'mileszs/ack.vim'
 
 " status line
-Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim' "{{{
+  " from https://github.com/itchyny/lightline.vim
+  let g:lightline = {
+        \ 'component': {
+        \   'lineinfo': ' %3l:%-2v',
+        \ },
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+        \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+        \ },
+        \ 'component_function': {
+        \   'fugitive': 'LightlineFugitive',
+        \   'readonly': 'LightlineReadonly',
+        \   'modified': 'LightlineModified',
+        \   'filename': 'LightlineFilename',
+        \   'fileformat': 'LightlineFileformat',
+        \   'filetype': 'LightlineFiletype',
+        \   'fileencoding': 'LightlineFileencoding',
+        \   'mode': 'LightlineMode',
+        \   'ctrlpmark': 'CtrlPMark'
+        \ },
+        \ 'component_expand': {
+        \   'syntastic': 'SyntasticStatuslineFlag',
+        \ },
+        \ 'component_type': {
+        \   'syntastic': 'error',
+        \ },
+        \ 'separator': { 'left': '', 'right': '' },
+        \ 'subseparator': { 'left': '', 'right': '' }
+        \ }
+
+  function! LightlineModified()
+  return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+  endfunction
+
+  function! LightlineFugitive()
+  try
+      if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
+      let mark = ''
+      let branch = fugitive#head()
+      return branch !=# '' ? mark.branch : ''
+      endif
+  catch
+  endtry
+  return ''
+  endfunction
+
+  function! LightlineReadonly()
+  return &ft !~? 'help' && &readonly ? '' : ''
+  endfunction
+
+  function! LightlineFilename()
+      let fname = expand('%:t')
+      return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
+                  \ fname == '__Tagbar__' ? g:lightline.fname :
+                  \ fname =~ '__Gundo\|NERD_tree' ? '' :
+                  \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
+                  \ &ft == 'unite' ? unite#get_status_string() :
+                  \ &ft == 'vimshell' ? vimshell#get_status_string() :
+                  \ ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
+                  \ ('' != fname ? fname : '[No Name]') .
+                  \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+  endfunction
+
+  function! LightlineFileformat()
+  return winwidth(0) > 70 ? &fileformat : ''
+  endfunction
+
+  function! LightlineFiletype()
+  return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
+  endfunction
+
+  function! LightlineFileencoding()
+  return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
+  endfunction
+
+  function! LightlineMode()
+  let fname = expand('%:t')
+  return fname == '__Tagbar__' ? 'Tagbar' :
+          \ fname == 'ControlP' ? 'CtrlP' :
+          \ fname == '__Gundo__' ? 'Gundo' :
+          \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
+          \ fname =~ 'NERD_tree' ? 'NERDTree' :
+          \ &ft == 'unite' ? 'Unite' :
+          \ &ft == 'vimfiler' ? 'VimFiler' :
+          \ &ft == 'vimshell' ? 'VimShell' :
+          \ winwidth(0) > 60 ? lightline#mode() : ''
+  endfunction
+
+  function! CtrlPMark()
+  if expand('%:t') =~ 'ControlP' && has_key(g:lightline, 'ctrlp_item')
+      call lightline#link('iR'[g:lightline.ctrlp_regex])
+      return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
+          \ , g:lightline.ctrlp_next], 0)
+  else
+      return ''
+  endif
+  endfunction
+
+  let g:ctrlp_status_func = {
+  \ 'main': 'CtrlPStatusFunc_1',
+  \ 'prog': 'CtrlPStatusFunc_2',
+  \ }
+
+  function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
+  let g:lightline.ctrlp_regex = a:regex
+  let g:lightline.ctrlp_prev = a:prev
+  let g:lightline.ctrlp_item = a:item
+  let g:lightline.ctrlp_next = a:next
+  return lightline#statusline(0)
+  endfunction
+
+  function! CtrlPStatusFunc_2(str)
+  return lightline#statusline(0)
+  endfunction
+
+  let g:tagbar_status_func = 'TagbarStatusFunc'
+
+  function! TagbarStatusFunc(current, sort, fname, ...) abort
+      let g:lightline.fname = a:fname
+  return lightline#statusline(0)
+  endfunction
+
+  augroup AutoSyntastic
+  autocmd!
+  autocmd BufWritePost *.c,*.cpp call s:syntastic()
+  augroup END
+  function! s:syntastic()
+  SyntasticCheck
+  call lightline#update()
+  endfunction
+
+  let g:unite_force_overwrite_statusline = 0
+  let g:vimfiler_force_overwrite_statusline = 0
+  let g:vimshell_force_overwrite_statusline = 0
+" }}}
+
+" Powerful settings for lightline.vim
 Plug 'itchyny/lightline-powerful'
 
 " auto-closer - insert or delete brackets, parens, quotes in pair
@@ -765,8 +944,8 @@ Plug 'drmikehenry/vim-fixkey'
 
 " allows to visually select increasingly larger regions of text using the same key combination
 Plug 'terryma/vim-expand-region' "{{{
-  map <Up> <Plug>(expand_region_expand)
-  map <Down> <Plug>(expand_region_shrink)
+    map <M-s> <Plug>(expand_region_expand)
+    map <M-d> <Plug>(expand_region_shrink)
   " vmap v <Plug>(expand_region_expand)
   " vmap <C-v> <Plug>(expand_region_shrink)
 " }}}

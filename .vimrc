@@ -10,6 +10,8 @@
 
 " TODO: implement NERDTreeFind toggle
 
+" TODO: show scroll percentage
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )
@@ -52,6 +54,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Good configs list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/kana/config/blob/master/vim/personal/dot.vimrc
 " https://github.com/blueyed/dotfiles/blob/master/vimrc
 " https://github.com/tpope/tpope/blob/master/.vimrc
 " https://github.com/paulirish/dotfiles/blob/master/.vimrc

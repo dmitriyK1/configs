@@ -172,8 +172,7 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 " NOTE: will break session plugins (better to use keybinding to change to current directory)
 " cnoremap cd. lcd %:p:h
 " nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
-set autochdir
-
+" set autochdir
 
 set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility

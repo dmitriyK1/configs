@@ -8,6 +8,10 @@
 
 " TODO: ? try to make sneak default keybindings work ?
 
+" TODO: add text soft-wrap
+" TODO: add project plugin
+" TODO: add project-wide search
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

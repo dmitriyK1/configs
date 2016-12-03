@@ -4,7 +4,7 @@
 
 " C ================================================================================
 " map <silent> <leader>c :enew<CR>:bwipeout #<CR>
-map <silent> <leader>c :bd<CR>
+" map <silent> <leader>c :bd<CR>
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff+3<cr>
 
@@ -76,8 +76,8 @@ map <leader>q :e ~/buffer<cr>
 nnoremap <silent> <leader>R :w<CR> :source $MYVIMRC<CR>
 
 " S ================================================================================
-" nmap <silent> <leader>se :e $MYVIMRC<CR>
-nmap <silent> <leader>se :tabedit $MYVIMRC<CR>
+" nmap <silent> <leader>se :tabedit $MYVIMRC<CR>
+nmap <silent> <leader>se :e $MYVIMRC<CR>
 noremap <leader>ss :source $MYVIMRC<CR>
 "
 " Source current file

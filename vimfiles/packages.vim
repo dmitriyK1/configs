@@ -150,6 +150,12 @@ Plug 'moll/vim-bbye', { 'on': 'Bdelete' } "{{{
   map <silent> <leader>d :Bdelete<CR>
 " }}}
 
+" Sane buffer/window deletion
+Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
+  let g:sayonara_confirm_quit = 1
+  map <silent> <leader>c :Sayonara<CR>
+" }}}
+
 " Press <C-G>c in insert mode to toggle a temporary software caps lock, or gC
 " in normal mode to toggle a slightly more permanent one.
 Plug 'tpope/vim-capslock'
@@ -898,6 +904,9 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'vim-scripts/YankRing.vim' "{{{
   nnoremap <silent> <F9> :YRShow<CR>
 " }}}
+
+" Forget Vim tabs – now you can have buffer tabs
+Plug 'ap/vim-buftabline'
 
 " use CTRL-A/CTRL-X to increment dates, times, and more
 Plug 'tpope/vim-speeddating'

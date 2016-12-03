@@ -862,7 +862,7 @@ Plug 'jiangmiao/auto-pairs' " {{{
 " }}}
 
 " go language support
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 " language pack
 " :CoffeeMake \ :make

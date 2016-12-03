@@ -113,13 +113,6 @@ Plug 'embear/vim-foldsearch'
 "    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/vimproc.vim'
 
-"  Powerful shell implemented by vim
-" :VimShell
-Plug 'Shougo/vimshell.vim'
-
-" adds autocomplete functionality dependency to vimshell
-Plug 'Shougo/unite.vim'
-
 " Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
 " Then whenever you are in the insert mode and paste into your terminal
 " emulator using command+v, shift+insert, ctrl+shift+v or middle-click, vim
@@ -982,6 +975,13 @@ Plug 'michaeljsmith/vim-indent-object'
 " ================================================================================
 " Unused:
 " ================================================================================
+
+"  Powerful shell implemented by vim
+" :VimShell
+" Plug 'Shougo/vimshell.vim'
+
+" adds autocomplete functionality (dependency for vimshell)
+" Plug 'Shougo/unite.vim'
 
 " cycle through yanks (alt-p \ alt-shift-p)
 " Plug 'maxbrunsfeld/vim-yankstack'

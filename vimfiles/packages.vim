@@ -686,8 +686,8 @@ Plug 'tpope/vim-repeat'
 
 Plug 'easymotion/vim-easymotion' "{{{
   map = <Plug>(easymotion-prefix)
-  nnoremap <M-f> =f
-  nnoremap <M-b> =F
+  map <M-f> =f
+  map <M-b> =F
 "}}}
 
 " Show all lines in the buffer containing word (grep buffer)

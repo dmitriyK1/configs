@@ -9,7 +9,7 @@
 " http://vimawesome.com
 " http://spf13.com/post/the-15-best-vim-plugins
 
-" vim-plug automatic installation
+" vim-plug & plugins automatic installation
 " TODO: change install location to ~/.vim
 if empty(glob('~/vimfiles/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -25,7 +25,8 @@ call plug#begin()
 Plug 'altercation/vim-colors-solarized'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'trevordmiller/nova-vim'
-Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'morhetz/gruvbox'
+" Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'AlessandroYorba/Sierra'
 " Plug 'Blevs/vim-dzo'
 " Plug 'robertmeta/nofrils'
@@ -46,7 +47,6 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'lifepillar/vim-solarized8'
 " Plug 'YorickPeterse/Autumn.vim'
 " Plug 'YorickPeterse/happy_hacking.vim'
-" Plug 'morhetz/gruvbox'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'cocopon/lightline-hybrid.vim'
 " Plug 'NLKNguyen/papercolor-theme'
@@ -102,6 +102,23 @@ Plug 'shinchu/lightline-gruvbox.vim'
 " ================================================================================
 " Colorschemes end
 " ================================================================================
+
+" lean & mean status/tabline for vim that's light as air
+Plug 'vim-airline/vim-airline' "{{{
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
+" }}}
+
+" a collection of themes for vim-airline
+Plug 'vim-airline/vim-airline-themes'
+
+" super simple vim plugin to show the list of buffers in the command bar
+Plug 'bling/vim-bufferline' "{{{
+  let g:bufferline_echo = 0
+  " let g:bufferline_active_buffer_left = ''
+  " let g:bufferline_active_buffer_right = ''
+" }}}
+
 " plugin provides commands that fold away lines that don't match a specific
 " search pattern.
 " This pattern can be the word under the cursor, the last search pattern,
@@ -705,148 +722,6 @@ Plug 'bronson/vim-visual-star-search'
 " Vim plugin for the Perl module / CLI script 'ack'
 Plug 'mileszs/ack.vim'
 
-" status line
-" TODO: replace on airline
-Plug 'itchyny/lightline.vim' "{{{
-  " from https://github.com/itchyny/lightline.vim
-  let g:lightline = {
-        \ 'component': {
-        \   'lineinfo': ' %3l:%-2v',
-        \ },
-        \ 'active': {
-        \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-        \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
-        \ },
-        \ 'component_function': {
-        \   'fugitive': 'LightlineFugitive',
-        \   'readonly': 'LightlineReadonly',
-        \   'modified': 'LightlineModified',
-        \   'filename': 'LightlineFilename',
-        \   'fileformat': 'LightlineFileformat',
-        \   'filetype': 'LightlineFiletype',
-        \   'fileencoding': 'LightlineFileencoding',
-        \   'mode': 'LightlineMode',
-        \   'ctrlpmark': 'CtrlPMark'
-        \ },
-        \ 'component_expand': {
-        \   'syntastic': 'SyntasticStatuslineFlag',
-        \ },
-        \ 'component_type': {
-        \   'syntastic': 'error',
-        \ },
-        \ 'separator': { 'left': '', 'right': '' },
-        \ 'subseparator': { 'left': '', 'right': '' }
-        \ }
-
-  function! LightlineModified()
-  return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-  endfunction
-
-  function! LightlineFugitive()
-  try
-      if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
-      let mark = ''
-      let branch = fugitive#head()
-      return branch !=# '' ? mark.branch : ''
-      endif
-  catch
-  endtry
-  return ''
-  endfunction
-
-  function! LightlineReadonly()
-  return &ft !~? 'help' && &readonly ? '' : ''
-  endfunction
-
-  function! LightlineFilename()
-      let fname = expand('%:t')
-      return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
-                  \ fname == '__Tagbar__' ? g:lightline.fname :
-                  \ fname =~ '__Gundo\|NERD_tree' ? '' :
-                  \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
-                  \ &ft == 'unite' ? unite#get_status_string() :
-                  \ &ft == 'vimshell' ? vimshell#get_status_string() :
-                  \ ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
-                  \ ('' != fname ? fname : '[No Name]') .
-                  \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
-  endfunction
-
-  function! LightlineFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
-  endfunction
-
-  function! LightlineFiletype()
-  return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
-  endfunction
-
-  function! LightlineFileencoding()
-  return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
-  endfunction
-
-  function! LightlineMode()
-  let fname = expand('%:t')
-  return fname == '__Tagbar__' ? 'Tagbar' :
-          \ fname == 'ControlP' ? 'CtrlP' :
-          \ fname == '__Gundo__' ? 'Gundo' :
-          \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
-          \ fname =~ 'NERD_tree' ? 'NERDTree' :
-          \ &ft == 'unite' ? 'Unite' :
-          \ &ft == 'vimfiler' ? 'VimFiler' :
-          \ &ft == 'vimshell' ? 'VimShell' :
-          \ winwidth(0) > 60 ? lightline#mode() : ''
-  endfunction
-
-  function! CtrlPMark()
-  if expand('%:t') =~ 'ControlP' && has_key(g:lightline, 'ctrlp_item')
-      call lightline#link('iR'[g:lightline.ctrlp_regex])
-      return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
-          \ , g:lightline.ctrlp_next], 0)
-  else
-      return ''
-  endif
-  endfunction
-
-  let g:ctrlp_status_func = {
-  \ 'main': 'CtrlPStatusFunc_1',
-  \ 'prog': 'CtrlPStatusFunc_2',
-  \ }
-
-  function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
-  let g:lightline.ctrlp_regex = a:regex
-  let g:lightline.ctrlp_prev = a:prev
-  let g:lightline.ctrlp_item = a:item
-  let g:lightline.ctrlp_next = a:next
-  return lightline#statusline(0)
-  endfunction
-
-  function! CtrlPStatusFunc_2(str)
-  return lightline#statusline(0)
-  endfunction
-
-  let g:tagbar_status_func = 'TagbarStatusFunc'
-
-  function! TagbarStatusFunc(current, sort, fname, ...) abort
-      let g:lightline.fname = a:fname
-  return lightline#statusline(0)
-  endfunction
-
-  augroup AutoSyntastic
-  autocmd!
-  autocmd BufWritePost *.c,*.cpp call s:syntastic()
-  augroup END
-  function! s:syntastic()
-  SyntasticCheck
-  call lightline#update()
-  endfunction
-
-  let g:unite_force_overwrite_statusline = 0
-  let g:vimfiler_force_overwrite_statusline = 0
-  let g:vimshell_force_overwrite_statusline = 0
-" }}}
-
-" Powerful settings for lightline.vim
-Plug 'itchyny/lightline-powerful'
-
 " auto-closer - insert or delete brackets, parens, quotes in pair
 " Shortcuts:
 "   <CR>  : Insert new indented line after return if cursor in blank brackets or quotes.
@@ -899,10 +774,6 @@ Plug 'vim-scripts/YankRing.vim' "{{{
   let g:yankring_replace_n_nkey = '<M-n>'
   nnoremap <silent> <F9> :YRShow<CR>
 " }}}
-
-" Forget Vim tabs – now you can have buffer tabs
-" TODO: replace on airline
-Plug 'ap/vim-buftabline'
 
 " use CTRL-A/CTRL-X to increment dates, times, and more
 Plug 'tpope/vim-speeddating'
@@ -976,6 +847,150 @@ Plug 'michaeljsmith/vim-indent-object'
 " ================================================================================
 " Unused:
 " ================================================================================
+
+" status line
+" Plug 'itchyny/lightline.vim' "{{{
+"   " from https://github.com/itchyny/lightline.vim
+"   let g:lightline = {
+"         \ 'component': {
+"         \   'lineinfo': ' %3l:%-2v',
+"         \ },
+"         \ 'active': {
+"         \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
+"         \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+"         \ },
+"         \ 'component_function': {
+"         \   'fugitive': 'LightlineFugitive',
+"         \   'readonly': 'LightlineReadonly',
+"         \   'modified': 'LightlineModified',
+"         \   'filename': 'LightlineFilename',
+"         \   'fileformat': 'LightlineFileformat',
+"         \   'filetype': 'LightlineFiletype',
+"         \   'fileencoding': 'LightlineFileencoding',
+"         \   'mode': 'LightlineMode',
+"         \   'ctrlpmark': 'CtrlPMark'
+"         \ },
+"         \ 'component_expand': {
+"         \   'syntastic': 'SyntasticStatuslineFlag',
+"         \ },
+"         \ 'component_type': {
+"         \   'syntastic': 'error',
+"         \ },
+"         \ 'separator': { 'left': '', 'right': '' },
+"         \ 'subseparator': { 'left': '', 'right': '' }
+"         \ }
+"
+"   function! LightlineModified()
+"   return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+"   endfunction
+"
+"   function! LightlineFugitive()
+"   try
+"       if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
+"       let mark = ''
+"       let branch = fugitive#head()
+"       return branch !=# '' ? mark.branch : ''
+"       endif
+"   catch
+"   endtry
+"   return ''
+"   endfunction
+"
+"   function! LightlineReadonly()
+"   return &ft !~? 'help' && &readonly ? '' : ''
+"   endfunction
+"
+"   function! LightlineFilename()
+"       let fname = expand('%:t')
+"       return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
+"                   \ fname == '__Tagbar__' ? g:lightline.fname :
+"                   \ fname =~ '__Gundo\|NERD_tree' ? '' :
+"                   \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
+"                   \ &ft == 'unite' ? unite#get_status_string() :
+"                   \ &ft == 'vimshell' ? vimshell#get_status_string() :
+"                   \ ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
+"                   \ ('' != fname ? fname : '[No Name]') .
+"                   \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+"   endfunction
+"
+"   function! LightlineFileformat()
+"   return winwidth(0) > 70 ? &fileformat : ''
+"   endfunction
+"
+"   function! LightlineFiletype()
+"   return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
+"   endfunction
+"
+"   function! LightlineFileencoding()
+"   return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
+"   endfunction
+"
+"   function! LightlineMode()
+"   let fname = expand('%:t')
+"   return fname == '__Tagbar__' ? 'Tagbar' :
+"           \ fname == 'ControlP' ? 'CtrlP' :
+"           \ fname == '__Gundo__' ? 'Gundo' :
+"           \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
+"           \ fname =~ 'NERD_tree' ? 'NERDTree' :
+"           \ &ft == 'unite' ? 'Unite' :
+"           \ &ft == 'vimfiler' ? 'VimFiler' :
+"           \ &ft == 'vimshell' ? 'VimShell' :
+"           \ winwidth(0) > 60 ? lightline#mode() : ''
+"   endfunction
+"
+"   function! CtrlPMark()
+"   if expand('%:t') =~ 'ControlP' && has_key(g:lightline, 'ctrlp_item')
+"       call lightline#link('iR'[g:lightline.ctrlp_regex])
+"       return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
+"           \ , g:lightline.ctrlp_next], 0)
+"   else
+"       return ''
+"   endif
+"   endfunction
+"
+"   let g:ctrlp_status_func = {
+"   \ 'main': 'CtrlPStatusFunc_1',
+"   \ 'prog': 'CtrlPStatusFunc_2',
+"   \ }
+"
+"   function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
+"   let g:lightline.ctrlp_regex = a:regex
+"   let g:lightline.ctrlp_prev = a:prev
+"   let g:lightline.ctrlp_item = a:item
+"   let g:lightline.ctrlp_next = a:next
+"   return lightline#statusline(0)
+"   endfunction
+"
+"   function! CtrlPStatusFunc_2(str)
+"   return lightline#statusline(0)
+"   endfunction
+"
+"   let g:tagbar_status_func = 'TagbarStatusFunc'
+"
+"   function! TagbarStatusFunc(current, sort, fname, ...) abort
+"       let g:lightline.fname = a:fname
+"   return lightline#statusline(0)
+"   endfunction
+"
+"   augroup AutoSyntastic
+"   autocmd!
+"   autocmd BufWritePost *.c,*.cpp call s:syntastic()
+"   augroup END
+"   function! s:syntastic()
+"   SyntasticCheck
+"   call lightline#update()
+"   endfunction
+"
+"   let g:unite_force_overwrite_statusline = 0
+"   let g:vimfiler_force_overwrite_statusline = 0
+"   let g:vimshell_force_overwrite_statusline = 0
+" }}}
+
+" Powerful settings for lightline.vim
+" Plug 'itchyny/lightline-powerful'
+
+" Forget Vim tabs – now you can have buffer tabs
+" Plug 'ap/vim-buftabline'
 
 "  Powerful shell implemented by vim
 " :VimShell

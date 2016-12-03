@@ -712,6 +712,7 @@ Plug 'bronson/vim-visual-star-search'
 Plug 'mileszs/ack.vim'
 
 " status line
+" TODO: replace on airline
 Plug 'itchyny/lightline.vim' "{{{
   " from https://github.com/itchyny/lightline.vim
   let g:lightline = {
@@ -863,6 +864,7 @@ Plug 'itchyny/lightline-powerful'
 Plug 'jiangmiao/auto-pairs' " {{{
   let g:AutoPairsMultilineClose = 0
   let g:AutoPairsShortcutToggle = ''
+  let g:AutoPairsShortcutJump = ''
 " }}}
 
 " go language support
@@ -896,16 +898,16 @@ Plug 'othree/javascript-libraries-syntax.vim' "{{{
   let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
 " }}}
 
-" cycle through yanks (alt-p \ alt-shift-p)
-Plug 'maxbrunsfeld/vim-yankstack'
-
 " Maintains a history of previous yanks, changes and deletes
 " :YRSearch
 Plug 'vim-scripts/YankRing.vim' "{{{
+  let g:yankring_replace_n_pkey = '<M-p>'
+  let g:yankring_replace_n_nkey = '<M-n>'
   nnoremap <silent> <F9> :YRShow<CR>
 " }}}
 
 " Forget Vim tabs – now you can have buffer tabs
+" TODO: replace on airline
 Plug 'ap/vim-buftabline'
 
 " use CTRL-A/CTRL-X to increment dates, times, and more
@@ -980,6 +982,9 @@ Plug 'michaeljsmith/vim-indent-object'
 " ================================================================================
 " Unused:
 " ================================================================================
+
+" cycle through yanks (alt-p \ alt-shift-p)
+" Plug 'maxbrunsfeld/vim-yankstack'
 
 " --------------------------------------------------------------------------------
 " Python plugins start

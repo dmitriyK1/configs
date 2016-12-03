@@ -150,7 +150,7 @@ endif
 
 " Use Ag instead of ack and grep if available
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --vimgrep --smart-case'
   set grepprg=ag\ --nogroup\ --nocolor\ --column
   set grepformat=%f:%l:%c:%m
   command! -nargs=+ -bang Ag silent! grep <args> | redraw! | botright copen

@@ -295,7 +295,7 @@ Plug 'romainl/vim-qf' "{{{
 
 " toggle true/false, && || etc
 Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
-  " let g:switch_mapping = ""
+  let g:switch_mapping = "g-"
 "}}}
 
 " Use your favorite grep tool (ag, ack, git grep, ripgrep, pt, sift, findstr,

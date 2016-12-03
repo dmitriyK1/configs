@@ -12,7 +12,7 @@ set guifont=DejaVuSansMonoForPowerline_NF:h12
 " ----------------------------------------
 
 colorscheme gruvbox
-let g:lightline.colorscheme = 'gruvbox'
+" let g:lightline.colorscheme = 'gruvbox'
 " set guifont=Menlo:h12
 " hi NonText	guifg=#282828 guibg=NONE
 
@@ -66,3 +66,4 @@ set cursorline
 highlight Conceal guibg=NONE guifg=red
 
 let g:indentLine_enabled = 1
+" let g:gitgutter_realtime = 0

@@ -421,7 +421,8 @@ Plug 'konfekt/fastfold'
 Plug 'tpope/vim-dispatch'
 
 " Vim plugin that displays tags in a window, ordered by scope
-Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } "{{{
+" Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } "{{{
+Plug 'majutsushi/tagbar'  "{{{
   nmap <F8> :TagbarToggle<cr>
 " }}}
 

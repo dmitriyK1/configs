@@ -1,0 +1,27 @@
+{
+  "name": "configs",
+  "version": "1.0.0",
+  "description": "Configs for: ------------ - w3m - tmux - vim - mutt - zshrc - Sublime Text - irssi and more...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "update.bat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriyK1/configs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitriyK1/configs/issues"
+  },
+  "homepage": "https://github.com/dmitriyK1/configs#readme",
+  "devDependencies": {
+    "pre-commit": "^1.1.3"
+  },
+  "pre-commit": [
+    "update"
+  ]
+}

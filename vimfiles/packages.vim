@@ -605,8 +605,22 @@ Plug 'scrooloose/nerdtree' "{{{
   let g:NERDTreeHijackNetrw = 1
   " let g:NERDTreeDirArrowExpandable = '▸'
   " let g:NERDTreeDirArrowCollapsible = '▾'
-  " map - :NERDTreeToggle<CR>
-  map g- :NERDTreeFind<CR>
+
+  nnoremap <silent> <F1> :call NERDTreeFindToggle()<CR>
+  inoremap <silent> <F1> <Esc>:call NERDTreeFindToggle()<CR>
+  vnoremap <silent> <F1> <Esc>:call NERDTreeFindToggle()<CR>
+
+  function! NERDTreeFindToggle()
+    if IsNERDTreeOpen()
+      NERDTreeTabsClose
+    else
+      NERDTreeFind
+    endif
+  endfunction
+
+  function! IsNERDTreeOpen()
+    return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+  endfunction
 "}}}
 
 " Extra syntax and highlight for nerdtree files
@@ -623,10 +637,9 @@ Plug 'tyok/nerdtree-ack'
 " including expanded/collapsed nodes, scroll position etc.
 " :NERDTreeTabsToggle
 Plug 'jistr/vim-nerdtree-tabs' "{{{
-  " map <silent> <leader>T :NERDTreeTabsToggle<CR>
-  nnoremap <silent> <F1> :NERDTreeTabsToggle<CR>
-  inoremap <silent> <F1> <Esc>:NERDTreeTabsToggle<CR>
-  vnoremap <silent> <F1> <Esc>:NERDTreeTabsToggle<CR>
+  nnoremap <silent> <M-t> :NERDTreeTabsToggle<CR>
+  inoremap <silent> <M-t> <Esc>:NERDTreeTabsToggle<CR>
+  vnoremap <silent> <M-t> <Esc>:NERDTreeTabsToggle<CR>
 " }}}
 
 " NERDTree git status support

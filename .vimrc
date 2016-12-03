@@ -8,8 +8,6 @@
 
 " TODO: ? try to make sneak default keybindings work ?
 
-" TODO: implement NERDTreeFind toggle
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

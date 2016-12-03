@@ -66,3 +66,4 @@ set cursorline
 highlight Conceal guibg=NONE guifg=red
 
 let g:indentLine_enabled = 1
+let g:gitgutter_realtime = 0

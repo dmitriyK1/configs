@@ -964,8 +964,8 @@ Plug 'drmikehenry/vim-fixkey'
 
 " allows to visually select increasingly larger regions of text using the same key combination
 Plug 'terryma/vim-expand-region' "{{{
-    map <M-s> <Plug>(expand_region_expand)
-    map <M-d> <Plug>(expand_region_shrink)
+  map <M-s> <Plug>(expand_region_expand)
+  map <M-d> <Plug>(expand_region_shrink)
   " vmap v <Plug>(expand_region_expand)
   " vmap <C-v> <Plug>(expand_region_shrink)
 " }}}

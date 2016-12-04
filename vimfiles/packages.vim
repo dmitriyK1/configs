@@ -200,6 +200,9 @@ Plug 'editorconfig/editorconfig-vim'
   " SudoEdit: Edit a privileged file with sudo.
 Plug 'tpope/vim-eunuch'
 
+" toggling settings mappings
+Plug 'tpope/vim-unimpaired'
+
 " highlight conflict markers.
 " jump among conflict markers.
 " jump within conflict block; beginning, separator and end of the block.
@@ -220,9 +223,6 @@ Plug 'Yggdroot/indentLine' "{{{
 " A Vim plugin for focussing on a selected region
 " <Leader>nr       - Open the current visual selection in a new narrowed window
 Plug 'chrisbra/NrrwRgn'
-
-" toggling settings mappings
-Plug 'tpope/vim-unimpaired'
 
 " apply macro to a multiple files at once
 Plug 'Olical/vim-enmasse'
@@ -646,6 +646,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "{{{
   let g:NERDTreeFileExtensionHighlightFullName = 1
 " }}}
 
+" Vim plugin for the Perl module / CLI script 'ack'
+Plug 'mileszs/ack.vim'
+
 " NERDtree + ack.vim
 " press Ms on a directory
 Plug 'tyok/nerdtree-ack'
@@ -719,9 +722,6 @@ Plug 'vim-scripts/occur.vim'
 
 " Start a * or # search from a visual block
 Plug 'bronson/vim-visual-star-search'
-
-" Vim plugin for the Perl module / CLI script 'ack'
-Plug 'mileszs/ack.vim'
 
 " auto-closer - insert or delete brackets, parens, quotes in pair
 " Shortcuts:

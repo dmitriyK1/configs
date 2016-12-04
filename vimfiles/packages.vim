@@ -213,7 +213,16 @@ Plug 'tpope/vim-unimpaired'
 " co for ourselves
 " cn for none
 " cb for both
-Plug 'rhysd/conflict-marker.vim'
+Plug 'rhysd/conflict-marker.vim' "{{{
+  " mappings in order to resolve conflict with unimpaired
+  let g:conflict_marker_enable_mappings = 0
+  map ]c <Plug>(conflict-marker-next-hunk)
+  map [c <Plug>(conflict-marker-prev-hunk)
+  map cb <Plug>(conflict-marker-both)
+  map cn <Plug>(conflict-marker-none)
+  map ct <Plug>(conflict-marker-themselves)
+  map co <Plug>(conflict-marker-ourselves)
+" }}}
 
 " Force linewise or characterwise paste, regardless of how it was yanked.
 Plug 'vim-scripts/UnconditionalPaste'
@@ -742,7 +751,7 @@ Plug 'jiangmiao/auto-pairs' " {{{
 " }}}
 
 " go language support
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 
 " language pack
 " :CoffeeMake \ :make

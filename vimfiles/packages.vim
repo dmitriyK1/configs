@@ -215,8 +215,8 @@ Plug 'tpope/vim-unimpaired'
 " cb for both
 Plug 'rhysd/conflict-marker.vim' "{{{
   " mappings in order to resolve conflict with unimpaired
-  map ]c <Plug>(conflict-marker-next-hunk)
-  map [c <Plug>(conflict-marker-prev-hunk)
+  map ]k <Plug>(conflict-marker-next-hunk)
+  map [k <Plug>(conflict-marker-prev-hunk)
 " }}}
 
 " Force linewise or characterwise paste, regardless of how it was yanked.
@@ -1102,6 +1102,11 @@ Plug 'tommcdo/vim-exchange'
 " }}}
 
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
+  " nmap [c <Plug>GitGutterPrevHunk
+  " nmap ]c <Plug>GitGutterNextHunk
+  " nmap <Leader>hs <Plug>GitGutterStageHunk
+  " nmap <Leader>hu <Plug>GitGutterUndoHunk
+  " nmap <Leader>hp <Plug>GitGutterPreviewHunk
 " Plug 'airblade/vim-gitgutter' "{{{
   " let g:gitgutter_realtime = 0
   " let g:gitgutter_highlight_lines = 1

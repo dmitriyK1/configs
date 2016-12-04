@@ -149,8 +149,8 @@ Plug 'osyo-manga/vim-over' "{{{
 
 " gitk for Vim
 Plug 'gregsexton/gitv', { 'on': 'Gitv' } "{{{
-  map <F10> :Gitv<CR>
-  vmap <F10> :Gitv<CR>
+  map <silent> <F10> :Gitv<CR>
+  vmap <silent> <F10> :Gitv<CR>
 " }}}
 
 " Delete buffers and close files in Vim without closing your windows or messing up your layout
@@ -208,7 +208,11 @@ Plug 'tpope/vim-unimpaired'
 " jump within conflict block; beginning, separator and end of the block.
 " resolve conflict with various strategies; themselves, ourselves, none and both strategies.
 " [x and ]x mappings are defined as default
-" This plugin defines mappings as default, ct for themselves, co for ourselves, cn for none and cb for both.
+" This plugin defines mappings as default:
+" ct for themselves
+" co for ourselves
+" cn for none
+" cb for both
 Plug 'rhysd/conflict-marker.vim'
 
 " Force linewise or characterwise paste, regardless of how it was yanked.
@@ -313,7 +317,7 @@ Plug 'romainl/vim-qf' "{{{
 " toggle true/false, && || etc
 Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
   let g:switch_mapping = ""
-  nnoremap g- :Switch<CR>
+  nnoremap <silent> g- :Switch<CR>
 "}}}
 
 " Use your favorite grep tool (ag, ack, git grep, ripgrep, pt, sift, findstr,

@@ -862,6 +862,9 @@ Plug 'michaeljsmith/vim-indent-object'
 " Unused:
 " ================================================================================
 
+" Cursor line number color = Airline mode color
+" Plug 'ntpeters/vim-airline-colornum'
+
 " status line
 " Plug 'itchyny/lightline.vim' "{{{
 "   " from https://github.com/itchyny/lightline.vim

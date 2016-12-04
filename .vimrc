@@ -11,6 +11,8 @@
 " TODO: add project plugin
 " TODO: add project-wide search
 
+" TODO: change cursor color in different modes
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

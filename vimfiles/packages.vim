@@ -858,6 +858,13 @@ Plug 'terryma/vim-expand-region' "{{{
 " plugin that defines a new text object representing lines of code at the same indent level
 Plug 'michaeljsmith/vim-indent-object'
 
+" Easy text exchange operator for Vim 
+" nmap cx <Plug>(Exchange)
+" vmap X <Plug>(Exchange)
+" nmap cxc <Plug>(ExchangeClear)
+" nmap cxx <Plug>(ExchangeLine)
+Plug 'tommcdo/vim-exchange'
+
 " ================================================================================
 " Unused:
 " ================================================================================

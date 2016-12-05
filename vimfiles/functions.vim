@@ -6,6 +6,7 @@ function! ConcealToggle()
     endif
 endfunction
 
+" for KillLine \ KillWord
 function! SaveUndoHistory(cmdline, cmdpos)
     if len(g:oldcmdline) == 0 || a:cmdline != g:oldcmdline[0][0]
         call insert(g:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
@@ -17,6 +18,7 @@ function! SaveUndoHistory(cmdline, cmdpos)
     endif
 endfunction
 
+" for command line shortcuts <C-k>
 function! KillLine()
     call SaveUndoHistory(getcmdline(), getcmdpos())
     let l:cmd = getcmdline()
@@ -29,7 +31,7 @@ function! KillLine()
     return l:ret
 endfunction
 
-
+" for command line shortcuts <M-d>
 function! KillWord()
     call SaveUndoHistory(getcmdline(), getcmdpos())
     let l:loc = strpart(getcmdline(), 0, getcmdpos() - 1)
@@ -56,6 +58,8 @@ function! CmdLine(str)
     unmenu Foo
 endfunction
 
+" gv in visual mode to vimgrep selection
+" <leader>r in visual mode to search & replace selection
 function! VisualSelection(direction) range
     let l:saved_reg = @"
     execute "normal! vgvy"
@@ -63,36 +67,17 @@ function! VisualSelection(direction) range
     let l:pattern = escape(@", '\\/.*$^~[]')
     let l:pattern = substitute(l:pattern, "\n$", "", "")
 
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
+    if a:direction == 'gv'
         call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
     elseif a:direction == 'replace'
         call CmdLine("%s" . '/'. l:pattern . '/')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
     endif
 
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
 
-function! NumberTextObject(whole)
-    normal! v
-
-    while getline('.')[col('.')] =~# '\v[0-9]'
-        normal! l
-    endwhile
-
-    if a:whole
-        normal! o
-
-        while col('.') > 1 && getline('.')[col('.') - 2] =~# '\v[0-9]'
-            normal! h
-        endwhile
-    endif
-endfunction
-
+" used in vimrc.local to hide all interface elements on startup
 function! ToggleHiddenAll()
     if g:hidden_all  == 0
         let g:hidden_all = 1

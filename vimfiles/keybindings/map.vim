@@ -107,8 +107,6 @@ imap <A-a> <End>
 " --------------------------------------------------------------------------------
 
 " ------------------A---------------------
-onoremap aN :<c-u>call NumberTextObject(1)<cr>
-xnoremap aN :<c-u>call NumberTextObject(1)<cr>
 
 " ------------------D---------------------
 nmap <silent> dJ dG
@@ -124,8 +122,6 @@ inoremap jj <ESC>
 nnoremap J mzJ`z
 
 " ------------------I----------------------
-onoremap iN :<c-u>call NumberTextObject(1)<cr>
-xnoremap iN :<c-u>call NumberTextObject(1)<cr>
 
 " ------------------G----------------------
 " highlight last inserted text
@@ -153,10 +149,7 @@ nnoremap H _
 xnoremap p "0p
 
 " -------------------N--------------------
-" Motion for numbers. Great for CSS.
-" margin-top: 200px; -> daN -> margin-top: px;
-onoremap N  :<c-u>call NumberTextObject(0)<cr>
-xnoremap N  :<c-u>call NumberTextObject(0)<cr>
+
 " -------------------K--------------------
 nnoremap k gk
 
@@ -202,12 +195,6 @@ map zh zH
 " --------------------------------------------------------------------------------
 " Special characters mappings
 " --------------------------------------------------------------------------------
-" TODO: fix; doesn't work now
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f')<CR>
-vnoremap <silent> # :call VisualSelection('b')<CR>
-
 " repeat last search and replace operation with confirmation
 " TODO: currently replaces only first occurence on each line
 noremap & :%sgc<cr>

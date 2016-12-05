@@ -74,6 +74,7 @@ map <leader>q :e ~/buffer<cr>
 " R ================================================================================
 " Save and source config
 nnoremap <silent> <leader>R :w<CR> :source $MYVIMRC<CR>
+vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 
 " S ================================================================================
 " nmap <silent> <leader>se :tabedit $MYVIMRC<CR>

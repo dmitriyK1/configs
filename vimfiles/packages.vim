@@ -299,6 +299,9 @@ Plug 'kana/vim-arpeggio'
 " aC selects a comment including trailing or leading whitespace
 Plug 'glts/vim-textobj-comment'
 
+" Vim plugin to provide text objects for numbers
+Plug 'tkhren/vim-textobj-numeral'
+
 " provides additional text objects
 " Pair text objects
 " Quote text objects

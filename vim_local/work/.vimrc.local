@@ -1,0 +1,16 @@
+au GUIEnter * simalt ~x
+set conceallevel=1
+" set guifont=Menlo:h11
+set guifont=DejaVu_Sans_Mono:h11
+set nocursorline
+
+colorscheme nova
+
+" colorscheme gruvbox
+" let g:lightline = {}
+" let g:lightline.colorscheme = 'gruvbox'
+
+call ToggleHiddenAll()
+
+highlight Conceal guibg=NONE guifg=red
+autocmd Colorscheme * highlight Conceal guibg=NONE guifg=red

@@ -1,15 +1,3 @@
-" for KillLine \ KillWord
-function! SaveUndoHistory(cmdline, cmdpos)
-    if len(g:oldcmdline) == 0 || a:cmdline != g:oldcmdline[0][0]
-        call insert(g:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
-    else
-        let g:oldcmdline[0][1] = a:cmdpos
-    endif
-    if len(g:oldcmdline) > 100
-        call remove(g:oldcmdline, 100)
-    endif
-endfunction
-
 " for command line shortcuts <C-k>
 function! KillLine()
     call SaveUndoHistory(getcmdline(), getcmdpos())
@@ -42,6 +30,18 @@ function! KillWord()
     let l:ret = l:loc . strpart(l:roc, strlen(l:rem))
     call SaveUndoHistory(l:ret, getcmdpos())
     return l:ret
+endfunction
+
+" for KillLine \ KillWord
+function! SaveUndoHistory(cmdline, cmdpos)
+    if len(g:oldcmdline) == 0 || a:cmdline != g:oldcmdline[0][0]
+        call insert(g:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
+    else
+        let g:oldcmdline[0][1] = a:cmdpos
+    endif
+    if len(g:oldcmdline) > 100
+        call remove(g:oldcmdline, 100)
+    endif
 endfunction
 
 " gv in visual mode to vimgrep selection

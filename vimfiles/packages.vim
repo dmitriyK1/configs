@@ -316,6 +316,7 @@ Plug 'wellle/targets.vim'
 " location/quickfix list/window smoother.
 Plug 'romainl/vim-qf' "{{{
   nmap <silent> <F4> <Plug>QfCtoggle
+  nmap <silent> <F7> <Plug>QfLtoggle
 " }}}
 
 " toggle true/false, && || etc
@@ -859,6 +860,19 @@ Plug 'michaeljsmith/vim-indent-object'
 " nmap cxc <Plug>(ExchangeClear)
 " nmap cxx <Plug>(ExchangeLine)
 Plug 'tommcdo/vim-exchange'
+
+" Syntax checking hacks for vim
+Plug 'vim-syntastic/syntastic' "{{{
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+  let g:syntastic_javascript_checkers = ['jshint']
+" }}}
 
 " ================================================================================
 " Unused:

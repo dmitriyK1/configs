@@ -213,11 +213,7 @@ Plug 'tpope/vim-unimpaired'
 " co for ourselves
 " cn for none
 " cb for both
-Plug 'rhysd/conflict-marker.vim' "{{{
-  " mappings in order to resolve conflict with unimpaired
-  map ]k <Plug>(conflict-marker-next-hunk)
-  map [k <Plug>(conflict-marker-prev-hunk)
-" }}}
+Plug 'rhysd/conflict-marker.vim'
 
 " Force linewise or characterwise paste, regardless of how it was yanked.
 Plug 'vim-scripts/UnconditionalPaste'

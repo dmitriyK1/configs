@@ -11,6 +11,7 @@
 " TODO: add project-wide search
 
 " TODO: change cursor color in different modes
+" TODO: show/hide cursorline (if cursorline was enabled at startup)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

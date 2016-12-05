@@ -1,4 +1,4 @@
-" for command line shortcuts <C-k>
+" for <C-k> command line shortcut
 function! KillLine()
     call SaveUndoHistory(getcmdline(), getcmdpos())
     let l:cmd = getcmdline()
@@ -11,28 +11,7 @@ function! KillLine()
     return l:ret
 endfunction
 
-" for command line shortcuts <M-d>
-function! KillWord()
-    call SaveUndoHistory(getcmdline(), getcmdpos())
-    let l:loc = strpart(getcmdline(), 0, getcmdpos() - 1)
-    let l:roc = strpart(getcmdline(), getcmdpos() - 1)
-    if (l:roc =~ '\v^\s*\w')
-        let l:rem = matchstr(l:roc, '\v^\s*\w+')
-    elseif (l:roc =~ '\v^\s*[^[:alnum:]_[:blank:]]')
-        let l:rem = matchstr(l:roc, '\v^\s*[^[:alnum:]_[:blank:]]+')
-    elseif (l:roc =~ '\v^\s+$')
-        let @c = l:roc
-        return l:loc
-    else
-        return getcmdline()
-    endif
-    let @c = l:rem
-    let l:ret = l:loc . strpart(l:roc, strlen(l:rem))
-    call SaveUndoHistory(l:ret, getcmdpos())
-    return l:ret
-endfunction
-
-" for KillLine \ KillWord
+" for KillLine
 function! SaveUndoHistory(cmdline, cmdpos)
     if len(g:oldcmdline) == 0 || a:cmdline != g:oldcmdline[0][0]
         call insert(g:oldcmdline, [ a:cmdline, a:cmdpos ], 0)

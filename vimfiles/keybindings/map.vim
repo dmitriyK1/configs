@@ -10,6 +10,9 @@ cnoremap <C-g> <Delete>
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 
+" killline (readline shortcut)
+cnoremap <c-k> <c-\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
+
 cnoremap jj <C-c>
 
 " cnoremap <C-g>  <C-c>
@@ -78,6 +81,9 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 " pre-select first menu item on <C-p>
 inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
   \ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
+
+" killline (readline shortcut)
+inoremap <c-k> <c-o>D
 
 " REMAP NEEDED
 " add a comma

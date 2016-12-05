@@ -1,28 +1,3 @@
-" for <C-k> command line shortcut
-function! KillLine()
-    call SaveUndoHistory(getcmdline(), getcmdpos())
-    let l:cmd = getcmdline()
-    let l:rem = strpart(l:cmd, getcmdpos() - 1)
-    if ('' != l:rem)
-        let @c = l:rem
-    endif
-    let l:ret = strpart(l:cmd, 0, getcmdpos() - 1)
-    call SaveUndoHistory(l:ret, getcmdpos())
-    return l:ret
-endfunction
-
-" for KillLine
-function! SaveUndoHistory(cmdline, cmdpos)
-    if len(g:oldcmdline) == 0 || a:cmdline != g:oldcmdline[0][0]
-        call insert(g:oldcmdline, [ a:cmdline, a:cmdpos ], 0)
-    else
-        let g:oldcmdline[0][1] = a:cmdpos
-    endif
-    if len(g:oldcmdline) > 100
-        call remove(g:oldcmdline, 100)
-    endif
-endfunction
-
 " gv in visual mode to vimgrep selection
 " <leader>r in visual mode to search & replace selection
 function! VisualSelection(direction) range

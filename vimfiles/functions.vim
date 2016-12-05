@@ -1,11 +1,3 @@
-function! ConcealToggle()
-    if &conceallevel == 0
-        setlocal conceallevel=1
-    else
-        setlocal conceallevel=0
-    endif
-endfunction
-
 " for KillLine \ KillWord
 function! SaveUndoHistory(cmdline, cmdpos)
     if len(g:oldcmdline) == 0 || a:cmdline != g:oldcmdline[0][0]
@@ -52,12 +44,6 @@ function! KillWord()
     return l:ret
 endfunction
 
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
-
 " gv in visual mode to vimgrep selection
 " <leader>r in visual mode to search & replace selection
 function! VisualSelection(direction) range
@@ -75,6 +61,22 @@ function! VisualSelection(direction) range
 
     let @/ = l:pattern
     let @" = l:saved_reg
+endfunction
+
+" for VisualSelection
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
+endfunction
+
+" change current conceallevel
+function! ConcealToggle()
+    if &conceallevel == 0
+        setlocal conceallevel=1
+    else
+        setlocal conceallevel=0
+    endif
 endfunction
 
 " used in vimrc.local to hide all interface elements on startup

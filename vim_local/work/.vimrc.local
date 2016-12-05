@@ -1,8 +1,9 @@
 au GUIEnter * simalt ~x
 set conceallevel=1
+" set nocursorline
 " set guifont=Menlo:h11
-set guifont=DejaVu_Sans_Mono:h11
-set nocursorline
+" set guifont=DejaVu_Sans_Mono:h11
+set guifont=DejaVuSansMonoForPowerline_NF:h12
 
 colorscheme nova
 
@@ -10,7 +11,23 @@ colorscheme nova
 " let g:lightline = {}
 " let g:lightline.colorscheme = 'gruvbox'
 
-call ToggleHiddenAll()
+" call ToggleHiddenAll()
 
 highlight Conceal guibg=NONE guifg=red
 autocmd Colorscheme * highlight Conceal guibg=NONE guifg=red
+
+let g:javascript_conceal_function       = "ƒ"
+let g:javascript_conceal_return         = "⇚"
+let g:javascript_conceal_prototype      = "¶"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_undefined      = "¿"
+let g:javascript_conceal_NaN            = "ℕ"
+let g:javascript_conceal_static         = "•"
+let g:javascript_conceal_super          = "Ω"
+let g:javascript_conceal_arrow_function = "⇒"
+
+let g:javascript_conceal_function       = "λ"
+let g:javascript_conceal_this           = "@"
+let g:javascript_conceal_return         = "<"
+let g:javascript_conceal_prototype      = "#"
+let g:javascript_conceal_infinity       = "∞"

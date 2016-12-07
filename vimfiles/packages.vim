@@ -103,17 +103,18 @@ Plug 'morhetz/gruvbox'
 " Colorschemes end
 " ================================================================================
 
+" A Vim plugin that always highlights the enclosing html/xml tags
+Plug 'valloric/MatchTagAlways'
+
+" Argumentative aids with manipulating and moving between function arguments
+Plug 'PeterRincker/vim-argumentative' "{{{
+  nmap <; <Plug>Argumentative_MoveLeft
+  nmap >; <Plug>Argumentative_MoveRight
+" }}}
+
 " Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
 Plug 'junegunn/vim-peekaboo' "{{{
   let g:peekaboo_ins_prefix = '<c-x>'
-" }}}
-
-" cmdline-mode enhancement for Vim
-Plug 'gelguy/Cmd2.vim' "{{{
-  nmap : :<F12>
-  nmap <Space> :<F12>
-  nmap / /<F12>
-  cmap <F12> <Plug>(Cmd2Suggest)
 " }}}
 
 " lean & mean status/tabline for vim that's light as air
@@ -889,9 +890,30 @@ Plug 'vim-syntastic/syntastic' "{{{
   let g:syntastic_javascript_checkers = ['jshint']
 " }}}
 
+" cmdline-mode enhancement for Vim
+Plug 'gelguy/Cmd2.vim' "{{{
+  nmap : :<F12>
+  nmap <Space> :<F12>
+  nmap / /<F12>
+  cmap <F12> <Plug>(Cmd2Suggest)
+" }}}
+
 " ================================================================================
 " Unused:
 " ================================================================================
+
+" Plug 'unblevable/quick-scope' "{{{
+  " let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" }}}
+
+" Plug 'junegunn/limelight.vim' "{{{
+  " autocmd VimEnter * Limelight
+" }}}
+
+" Plug 'junegunn/goyo.vim' "{{{
+"   autocmd! User GoyoEnter Limelight
+"   autocmd! User GoyoLeave Limelight!
+" }}}
 
 " Cursor line number color = Airline mode color
 " Plug 'ntpeters/vim-airline-colornum'

@@ -13,6 +13,8 @@
 " TODO: change cursor color in different modes
 " TODO: show/hide cursorline (if cursorline was enabled at startup)
 
+" TODO: replace recursive mappings to non-recursive
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

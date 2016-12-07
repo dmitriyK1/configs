@@ -47,12 +47,10 @@ set sidescrolloff=3
 set noerrorbells
 set printoptions=paper:letter
 
-
 set nonumber
 set norelativenumber
 set wildmenu
 set nohlsearch
-
 
 set incsearch
 set ignorecase
@@ -62,7 +60,6 @@ set title
 " configure title to look like: Vim /path/to/file
 set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70
 set titleold=""
-
 
 " set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,nbsp:. " Highlight problematic whitespace
@@ -77,14 +74,12 @@ set gdefault
 " set formatoptions=qrn1
 set formatoptions+=cqron1                   " Some useful formatting options
 
-
 set shiftwidth=4
 set shiftround
 set tabstop=4
 set expandtab
 set softtabstop=4               " Let backspace delete indent
 set history=1000
-
 
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
@@ -98,10 +93,8 @@ set cursorline
 set foldlevelstart=10
 set foldnestmax=10
 
-
 set foldmethod=indent
 set foldlevel=99
-
 
 set autoindent
 set copyindent    " copy the previous indentation on autoindenting
@@ -142,8 +135,6 @@ set clipboard^=unnamed,unnamedplus
 set autoread
 
 set synmaxcol=1000  " don't syntax-highlight long lines (default: 3000)
-
-" set pastetoggle=<F2>
 
 " set mouse=a
 
@@ -186,7 +177,6 @@ set iskeyword-=.                    " '.' is an end of word designator
 set iskeyword-=#                    " '#' is an end of word designator
 set iskeyword-=-                    " '-' is an end of word designator
 
-
 set linespace=0                 " No extra spaces between rows
 set winminheight=0              " Windows can be 0 line high
 
@@ -194,41 +184,34 @@ set scrolljump=0                " Lines to scroll when cursor leaves screen
 set foldenable                  " Auto fold code
 set scrolloff=999               " Minimum lines to keep above and below cursor; 999 - keep centered
 
-
 set backupdir-=.
 set backupdir+=.
 set backupdir-=~/
 set backupdir^=~/.vim/backup/
 set backupdir^=./.vim-backup/
-set writebackup
-set nobackup
-set swapfile
-set noundofile
+set writebackup                 " make a backup of the original file when writing
+set nobackup                    " save files after close
+set backupcopy=yes              " keep attributes of the original file
+set backupext=~                 " backup file extension
 
+set noswapfile
+set noundofile
 
 set directory=./.vim-swap//
 set directory+=~/.vim/swap//
 set directory+=~/tmp//
 set directory+=.
 
-
 " viminfo stores the the state of your previous editing session
 set viminfo+=n~/.vim/viminfo
-
 
 set backupskip=/tmp/*,/private/tmp/*
 "set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 "set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-
 " set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 set sessionoptions=blank,buffers,curdir,folds,help,options,tabpages,winsize,globals,localoptions,tabpages
 set sessionoptions+=unix,slash " for unix/windows compatibility
-
-
-" set wrap
-" set linebreak
-
 
 " Wildmenu completion {{{
 
@@ -251,27 +234,21 @@ set wildignore+=*.pyc                            " Python byte code
 set wildignore+=*.orig                           " Merge resolution files
 
 " Clojure/Leiningen
-set wildignore+=classes
-set wildignore+=lib
-
+  set wildignore+=classes
+  set wildignore+=lib
 " }}}
-
 
 " original settings:
 "set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 set guicursor=n-c:hor20-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor-blinkon0,r-cr:block-Cursor-blinkwait200-blinkoff300-blinkon300,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175,v:block-Cursor-blinkon0
 
-
 set foldcolumn=3
-
 
 set conceallevel=0
 set concealcursor=nvic
 
-
 " for case-insensetive autocomplete
 set infercase
-
 
 set report=0       " Show all changes
 set regexpengine=1 " Use the old regular expression engine (it's faster for certain language syntaxes)
@@ -290,4 +267,3 @@ set showbreak=>>>
 " maximize vim window on startup:
 " set lines=999 columns=999
 " winpos 0 0
-

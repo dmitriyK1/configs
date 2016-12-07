@@ -103,10 +103,26 @@ Plug 'morhetz/gruvbox'
 " Colorschemes end
 " ================================================================================
 
+" Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
+Plug 'junegunn/vim-peekaboo' "{{{
+  let g:peekaboo_ins_prefix = '<c-x>'
+" }}}
+
+" cmdline-mode enhancement for Vim
+Plug 'gelguy/Cmd2.vim' "{{{
+  nmap : :<F12>
+  nmap <Space> :<F12>
+  nmap / /<F12>
+  cmap <F12> <Plug>(Cmd2Suggest)
+" }}}
+
 " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline' "{{{
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_min_count = 2
+  let g:airline#extensions#tabline#enabled = 1
+ " let g:airline#extensions#syntastic#enabled = 1
 " }}}
 
 " a collection of themes for vim-airline

@@ -313,3 +313,5 @@
 	autosetuprebase = always
 [status]
 	submoduleSummary = true
+[pull]
+	rebase = true

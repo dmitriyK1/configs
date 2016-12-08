@@ -23,6 +23,7 @@
   },
   "config": {
     "ghooks": {
+      "post-merge": "update.bat && echo ------------------ FILES COPIED!",
       "post-rewrite": "update.bat && echo ------------------ FILES COPIED!"
     }
   },

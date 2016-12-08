@@ -1161,6 +1161,18 @@ Plug 'gelguy/Cmd2.vim' "{{{
 " Plug 'airblade/vim-gitgutter' "{{{
   " let g:gitgutter_realtime = 0
   " let g:gitgutter_highlight_lines = 1
+
+  let g:gitgutter_sign_added = '✚'
+  let g:gitgutter_sign_modified = '➜'
+  let g:gitgutter_sign_removed = '✘'
+  let g:gitgutter_sign_removed_first_line = '^'
+  let g:gitgutter_sign_modified_removed = '➜_'
+
+  " let g:gitgutter_sign_added = '✚'
+  " let g:gitgutter_sign_modified = '✔'
+  " let g:gitgutter_sign_removed = '✘'
+  " let g:gitgutter_sign_removed_first_line = '^'
+  " let g:gitgutter_sign_modified_removed = '~_'
 " }}}
 
 " show git diff via sign column

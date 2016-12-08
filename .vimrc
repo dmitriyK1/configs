@@ -80,6 +80,6 @@ source ~/vimfiles/keybindings/leader.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/highlight.vim
 
-execute "set titleold=".hostname()
+execute "set titleold=" . hostname()
 
 nohlsearch   " When sourcing this file, do not immediately turn on highlighting

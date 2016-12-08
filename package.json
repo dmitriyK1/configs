@@ -21,6 +21,11 @@
   "devDependencies": {
     "pre-commit": "^1.1.3"
   },
+  "config": {
+    "ghooks": {
+      "post-rewrite": "update.bat && echo ------------------ FILES COPIED!"
+    }
+  },
   "pre-commit": [
     "update"
   ]

@@ -1163,11 +1163,14 @@ Plug 'gelguy/Cmd2.vim' "{{{
   " let g:gitgutter_highlight_lines = 1
 
   " double git gutter symbols for better visibility
+
   let g:gitgutter_sign_added = '✚✚'
-  let g:gitgutter_sign_modified = '••'
+  " let g:gitgutter_sign_modified = '••'
+  let g:gitgutter_sign_modified = '✱✱'
   let g:gitgutter_sign_removed = '✘✘'
   let g:gitgutter_sign_removed_first_line = '^^'
-  let g:gitgutter_sign_modified_removed = '➜_'
+  " let g:gitgutter_sign_modified_removed = '➜_'
+  let g:gitgutter_sign_modified_removed = '✱_'
 
   " let g:gitgutter_sign_added = '✚'
   " let g:gitgutter_sign_modified = '➜'

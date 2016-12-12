@@ -130,8 +130,8 @@ nnoremap J mzJ`z
 " highlight last inserted text
 nnoremap gV `[v`]
 map gi gi<Esc>
-map gn :bn<CR>
-map gp :bp<CR>
+" map gn :bn<CR>
+" map gp :bp<CR>
 " map gc :bd<CR>
 " map gd :bd<CR>
 nnoremap gj j

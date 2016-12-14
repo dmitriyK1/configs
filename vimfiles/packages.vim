@@ -1161,7 +1161,7 @@ Plug 'gelguy/Cmd2.vim' "{{{
   " nmap <Leader>hs <Plug>GitGutterStageHunk
   " nmap <Leader>hu <Plug>GitGutterUndoHunk
   " nmap <Leader>hp <Plug>GitGutterPreviewHunk
-" Plug 'airblade/vim-gitgutter' "{{{
+Plug 'airblade/vim-gitgutter' "{{{
   " let g:gitgutter_realtime = 0
   " let g:gitgutter_highlight_lines = 1
 
@@ -1199,7 +1199,7 @@ Plug 'gelguy/Cmd2.vim' "{{{
 " Plug 'powerman/vim-plugin-ruscmd'
 
 " A Vim plugin for visually displaying indent levels in code
-" Plug 'nathanaelkane/vim-indent-guides' "{{{
+Plug 'nathanaelkane/vim-indent-guides' "{{{
   " let g:indent_guides_guide_size = 1
   " let g:indent_guides_start_level = 2
   " let g:indent_guides_color_change_percent = 5

@@ -892,8 +892,10 @@ Plug 'vim-syntastic/syntastic' "{{{
 
 " cmdline-mode enhancement for Vim
 Plug 'gelguy/Cmd2.vim' "{{{
-  nmap : :<F12>
-  nmap <Space> :<F12>
+  " nmap : :<F12>
+  " nmap <Space> :<F12>
+
+  nmap <Space> :
   nmap / /<F12>
   nmap ? ?<F12>
   cmap <F12> <Plug>(Cmd2Suggest)

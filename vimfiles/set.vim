@@ -50,7 +50,7 @@ set printoptions=paper:letter
 set nonumber
 set norelativenumber
 set wildmenu
-set nohlsearch
+set hlsearch
 
 set incsearch
 set ignorecase

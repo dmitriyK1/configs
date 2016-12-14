@@ -15,6 +15,8 @@
 
 " TODO: replace recursive mappings to non-recursive
 
+" TODO: try to make suggest & incsearch work together
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

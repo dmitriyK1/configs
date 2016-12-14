@@ -1,42 +1,42 @@
-snippet l "console.log" w
+snippet l "console.log"
 console.log($0);
 endsnippet
 # ----------------------------------------
-snippet fn "Function" w
+snippet fn "Function"
 function $1($2) {
 	$0
 }
 endsnippet
 # ----------------------------------------
-snippet v "Variable" w
+snippet v "Variable"
 var $1 = $0;
 endsnippet
 # ----------------------------------------
-snippet c "Constant" w
+snippet c "Constant"
 const $1 = $0;
 endsnippet
 # ----------------------------------------
-snippet cl "Class" w
+snippet cl "Class"
 class $1 {
 	$0
 }
 endsnippet
 # ----------------------------------------
-snippet ce "Class+extends" w
+snippet ce "Class+extends"
 class $1 extends $2 {
 	$0
 }
 endsnippet
 # ----------------------------------------
-snippet a "alert" w
+snippet a "alert"
 alert($0);
 endsnippet
 # ----------------------------------------
-snippet i "import" w
+snippet i "import"
 import $1 from "$0";
 endsnippet
 # ----------------------------------------
-snippet in "named import" w
+snippet in "named import"
 import { $1 } from "$0";
 endsnippet
 # ----------------------------------------
@@ -48,7 +48,7 @@ snippet "(\w+).par" "Parenthesis (postfix)" r
 (`!p snip.rv = match.group(1)`$1)$0
 endsnippet
 # ----------------------------------------
-snippet "([^\s].*)\.log" "console.log (postfix)" r
+snippet "([^\s].*)\.(log|l)" "console.log (postfix)" r
 console.log(`!p snip.rv = match.group(1)`);$0
 endsnippet
 # ----------------------------------------

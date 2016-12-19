@@ -763,7 +763,7 @@ Plug 'jiangmiao/auto-pairs' " {{{
 " }}}
 
 " go language support
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+" Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 
 " language pack
 " :CoffeeMake \ :make

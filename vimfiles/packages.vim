@@ -103,6 +103,9 @@ Plug 'morhetz/gruvbox'
 " Colorschemes end
 " ================================================================================
 
+" A Vim plugin for managing three-way merges
+Plug 'sjl/splice.vim'
+
 " A Vim plugin that always highlights the enclosing html/xml tags
 Plug 'valloric/MatchTagAlways'
 

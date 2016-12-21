@@ -1,6 +1,4 @@
 
-" http://vim.wikia.com/wiki/Using_vim_as_an_IDE_all_in_one
-
 " TODO: use sessions handling /w Startify
 
 " TODO: remove redundant keybindings ( delete keybindings provided by unimpaired first )

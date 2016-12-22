@@ -1,7 +1,7 @@
 
 " TODO: use sessions handling /w Startify
 
-" TODO: remove redundant keybindings ( delete keybindings provided by unimpaired first )
+" TODO: remove redundant keybindings
 
 " TODO: ? try to make sneak default keybindings work ?
 

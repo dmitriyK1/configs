@@ -1,15 +1,10 @@
 " B ================================================================================
-" Close all the buffers
-" map <leader>ba :bufdo bd<cr>
 
 " C ================================================================================
-" map <silent> <leader>c :enew<CR>:bwipeout #<CR>
-" map <silent> <leader>c :bd<CR>
 " Toggle 'keep current line in the center of the screen' mode
 nnoremap <leader>C :let &scrolloff=999-&scrolloff+3<cr>
 
 " D ================================================================================
-" map <silent> <leader>d :bd<CR>
 " delete empty lines
 " nmap <leader>del :g/^$/d<cr>
 " compare open splits
@@ -94,8 +89,6 @@ map <silent> <leader>tc :tabclose<CR>
 
 map <silent> <leader>T :call ConcealToggle()<CR>
 
-" map <leader>t :browse oldfiles!<CR>
-
 " U ================================================================================
 " delete duplicated lines
 nnoremap <silent> <leader>u :sort! u<cr>
@@ -134,7 +127,6 @@ nmap <leader><space> :nohlsearch<cr>
 " toggle hlsearch
 nnoremap <leader>/ :set invhlsearch<cr>
 
-" noremap <leader>, :update<CR>
 noremap <leader>, :write<CR>
 
 " Split previously opened file in a split window

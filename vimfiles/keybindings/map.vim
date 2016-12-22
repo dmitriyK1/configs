@@ -32,8 +32,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " Functional keys mappings
 " --------------------------------------------------------------------------------
 
-" nnoremap <F5> :buffers<cr>:buffer<Space><C-Z>
-
 call togglebg#map("<F12>")
 
 " --------------------------------------------------------------------------------
@@ -49,10 +47,6 @@ vnoremap <C-c> <Esc>'<0v'>g_y
 
 vnoremap <C-e> 3<C-e>
 vnoremap <C-y> 3<C-y>
-
-" add semicolon at the end of the line in insert mode
-" map <C-s> A;<Esc>
-" imap <C-s> <end>;<Esc>
 
 " Easy window navigation
 nnoremap <C-h> <C-w>h
@@ -85,18 +79,12 @@ inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
 " killline (readline shortcut)
 inoremap <c-k> <c-o>D
 
-" REMAP NEEDED
-" add a comma
-" nmap <C-k> A, <Esc>
-
 "map = <C-l><C-w>o
 
 " --------------------------------------------------------------------------------
 " Alt mappings
 " --------------------------------------------------------------------------------
 cmap <M-D> <Esc>d
-" nmap <M-,> :bp<cr>
-" nmap <M-.> :bn<cr>
 
 imap <A-j> <Down>
 imap <A-k> <Up>
@@ -229,13 +217,9 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
-" nnoremap <space> za
-
 " make regexp search not suck by default
 " nnoremap / /\v
 " vnoremap / /\v
-
-"map - :Vex<CR>
 
 " nnoremap <tab> %
 " vnoremap <tab> %

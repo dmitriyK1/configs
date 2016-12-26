@@ -91,8 +91,12 @@ map <silent> <leader>T :call ConcealToggle()<CR>
 
 " U ================================================================================
 " delete duplicated lines
-nnoremap <silent> <leader>u :sort! u<cr>
-vnoremap <silent> <leader>u :sort! u<cr>
+nnoremap <silent> <leader>u :sort u<cr>
+vnoremap <silent> <leader>u :sort u<cr>
+
+" invert sort
+nnoremap <silent> <leader>U :sort! u<cr>
+vnoremap <silent> <leader>U :sort! u<cr>
 
 " V ================================================================================
 " select last pasted text

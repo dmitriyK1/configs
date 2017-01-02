@@ -1,19 +1,19 @@
 snippet l "console.log"
-console.log($0);
+console.log($1);$0
 endsnippet
 # ----------------------------------------
 snippet fn "Function"
 function $1($2) {
-	$0
-}
+	$3
+}$0
 endsnippet
 # ----------------------------------------
 snippet v "Variable"
-var $1 = $0;
+var $1 = $2;$0
 endsnippet
 # ----------------------------------------
 snippet c "Constant"
-const $1 = $0;
+const $1 = $2;$0
 endsnippet
 # ----------------------------------------
 snippet cl "Class"
@@ -29,15 +29,15 @@ class $1 extends $2 {
 endsnippet
 # ----------------------------------------
 snippet a "alert"
-alert($0);
+alert($1);$0
 endsnippet
 # ----------------------------------------
 snippet i "import"
-import $1 from "$0";
+import $1 from "$2";$0
 endsnippet
 # ----------------------------------------
 snippet in "named import"
-import { $1 } from "$0";
+import { $1 } from "$2";$0
 endsnippet
 # ----------------------------------------
 snippet "([^\s].*)\.(return|ret)" "Return (postfix)" r

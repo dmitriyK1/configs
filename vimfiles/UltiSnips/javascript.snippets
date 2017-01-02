@@ -143,8 +143,22 @@ constructor($1) {
 endsnippet
 # ----------------------------------------
 snippet wh "while"
-while($1) {
+while ($1) {
 	$2
+}$0
+endsnippet
+# ----------------------------------------
+snippet if "if"
+if ($1) {
+	$2
+}$0
+endsnippet
+# ----------------------------------------
+snippet ife "if-else"
+if ($1) {
+	$2
+} else {
+	$3
 }$0
 endsnippet
 # TODO: add  https://orktes.github.io/atom-react/#snippets-list

@@ -26,6 +26,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'trevordmiller/nova-vim'
 Plug 'morhetz/gruvbox'
+" Plug 'dbb/vim-gummybears-colorscheme'
+" Plug 'vim-scripts/Eddie.vim'
 " Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'AlessandroYorba/Sierra'
 " Plug 'Blevs/vim-dzo'
@@ -907,6 +909,8 @@ Plug 'gelguy/Cmd2.vim' "{{{
 " ================================================================================
 " Unused:
 " ================================================================================
+" Semantic highlight
+" Plug 'jaxbot/semantic-highlight.vim'
 
 " Plug 'unblevable/quick-scope' "{{{
   " let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']

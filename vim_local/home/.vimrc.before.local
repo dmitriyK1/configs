@@ -1,0 +1,2 @@
+" prevent loading plugins for home env
+let g:is_home_env = 1

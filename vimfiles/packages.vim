@@ -128,7 +128,7 @@ Plug 'vim-airline/vim-airline' "{{{
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffer_min_count = 2
   let g:airline#extensions#tabline#enabled = 1
- " let g:airline#extensions#syntastic#enabled = 1
+  let g:airline#extensions#syntastic#enabled = 1
 " }}}
 
 " a collection of themes for vim-airline
@@ -882,18 +882,20 @@ Plug 'michaeljsmith/vim-indent-object'
 " nmap cxx <Plug>(ExchangeLine)
 Plug 'tommcdo/vim-exchange'
 
-" Syntax checking hacks for vim
-Plug 'vim-syntastic/syntastic' "{{{
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
+if !exists('g:is_home_env')
+  " Syntax checking hacks for vim
+  Plug 'vim-syntastic/syntastic' "{{{
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 
-  let g:syntastic_always_populate_loc_list = 1
-  let g:syntastic_auto_loc_list = 1
-  let g:syntastic_check_on_open = 1
-  let g:syntastic_check_on_wq = 0
-  let g:syntastic_javascript_checkers = ['jshint']
-" }}}
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_javascript_checkers = ['jshint']
+  " }}}
+endif
 
 " cmdline-mode enhancement for Vim
 Plug 'gelguy/Cmd2.vim' "{{{
@@ -1162,39 +1164,41 @@ Plug 'gelguy/Cmd2.vim' "{{{
   " autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
 " }}}
 
-" A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
-  " nmap [c <Plug>GitGutterPrevHunk
-  " nmap ]c <Plug>GitGutterNextHunk
-  " nmap <Leader>hs <Plug>GitGutterStageHunk
-  " nmap <Leader>hu <Plug>GitGutterUndoHunk
-  " nmap <Leader>hp <Plug>GitGutterPreviewHunk
-Plug 'airblade/vim-gitgutter' "{{{
-  " let g:gitgutter_realtime = 0
-  " let g:gitgutter_highlight_lines = 1
+if !exists('g:is_home_env')
+  " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
+    " nmap [c <Plug>GitGutterPrevHunk
+    " nmap ]c <Plug>GitGutterNextHunk
+    " nmap <Leader>hs <Plug>GitGutterStageHunk
+    " nmap <Leader>hu <Plug>GitGutterUndoHunk
+    " nmap <Leader>hp <Plug>GitGutterPreviewHunk
+  Plug 'airblade/vim-gitgutter' "{{{
+    " let g:gitgutter_realtime = 0
+    " let g:gitgutter_highlight_lines = 1
 
-  " double git gutter symbols for better visibility
+    " double git gutter symbols for better visibility
 
-  let g:gitgutter_sign_added = '✚✚'
-  " let g:gitgutter_sign_modified = '••'
-  let g:gitgutter_sign_modified = '✱✱'
-  let g:gitgutter_sign_removed = '✘✘'
-  " let g:gitgutter_sign_removed_first_line = '^^'
-  let g:gitgutter_sign_removed_first_line = '▲▲'
-  " let g:gitgutter_sign_modified_removed = '➜_'
-  let g:gitgutter_sign_modified_removed = '✱_'
+    let g:gitgutter_sign_added = '✚✚'
+    " let g:gitgutter_sign_modified = '••'
+    let g:gitgutter_sign_modified = '✱✱'
+    let g:gitgutter_sign_removed = '✘✘'
+    " let g:gitgutter_sign_removed_first_line = '^^'
+    let g:gitgutter_sign_removed_first_line = '▲▲'
+    " let g:gitgutter_sign_modified_removed = '➜_'
+    let g:gitgutter_sign_modified_removed = '✱_'
 
-  " let g:gitgutter_sign_added = '✚'
-  " let g:gitgutter_sign_modified = '➜'
-  " let g:gitgutter_sign_removed = '✘'
-  " let g:gitgutter_sign_removed_first_line = '^'
-  " let g:gitgutter_sign_modified_removed = '➜_'
+    " let g:gitgutter_sign_added = '✚'
+    " let g:gitgutter_sign_modified = '➜'
+    " let g:gitgutter_sign_removed = '✘'
+    " let g:gitgutter_sign_removed_first_line = '^'
+    " let g:gitgutter_sign_modified_removed = '➜_'
 
-  " let g:gitgutter_sign_added = '✚'
-  " let g:gitgutter_sign_modified = '✔'
-  " let g:gitgutter_sign_removed = '✘'
-  " let g:gitgutter_sign_removed_first_line = '^'
-  " let g:gitgutter_sign_modified_removed = '~_'
-" }}}
+    " let g:gitgutter_sign_added = '✚'
+    " let g:gitgutter_sign_modified = '✔'
+    " let g:gitgutter_sign_removed = '✘'
+    " let g:gitgutter_sign_removed_first_line = '^'
+    " let g:gitgutter_sign_modified_removed = '~_'
+  " }}}
+endif
 
 " show git diff via sign column
 " Plug 'mhinz/vim-signify'
@@ -1205,13 +1209,15 @@ Plug 'airblade/vim-gitgutter' "{{{
 " support command mode in Russian keyboard layout
 " Plug 'powerman/vim-plugin-ruscmd'
 
-" A Vim plugin for visually displaying indent levels in code
-Plug 'nathanaelkane/vim-indent-guides' "{{{
-  " let g:indent_guides_guide_size = 1
-  " let g:indent_guides_start_level = 2
-  " let g:indent_guides_color_change_percent = 5
-  " let g:indent_guides_enable_on_vim_startup = 1
-" }}}
+if !exists('g:is_home_env')
+  " A Vim plugin for visually displaying indent levels in code
+  Plug 'nathanaelkane/vim-indent-guides' "{{{
+    " let g:indent_guides_guide_size = 1
+    " let g:indent_guides_start_level = 2
+    " let g:indent_guides_color_change_percent = 5
+    " let g:indent_guides_enable_on_vim_startup = 1
+  " }}}
+endif
 
 " Tiled Window Management for Vim
 " Plug 'spolu/dwm.vim'

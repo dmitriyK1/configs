@@ -84,6 +84,8 @@ noremap <leader>so :so%<CR>
 " using \v key to make vim regular expressions work as common regexps
 map <leader>S :%s:\v::g<Left><Left><Left>
 
+" open packages config
+nnoremap <silent> <leader>sp :e ~/vimfiles/packages.vim<CR>
 " T ================================================================================
 map <silent> <leader>tc :tabclose<CR>
 

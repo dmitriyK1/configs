@@ -96,3 +96,9 @@ autocmd QuickFixCmdPost *grep* cwindow
 " cnoremap cd. lcd %:p:h
 " nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 autocmd BufEnter * silent! lcd %:p:h
+
+ " Remember last location in file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif

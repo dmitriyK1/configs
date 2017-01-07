@@ -770,11 +770,17 @@ Plug 'jiangmiao/auto-pairs' " {{{
 " go language support
 " Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 
+" jsx syntax highlight
+Plug 'MaxMEllon/vim-jsx-pretty' "{{{
+  let g:vim_jsx_pretty_colorful_config = 1
+" }}}
+
 " language pack
 " :CoffeeMake \ :make
 " :CoffeeWatch [vert[ical]] [WINDOW-SIZE]
 Plug 'sheerun/vim-polyglot' "{{{
-  let g:jsx_ext_required = 0
+  let g:polyglot_disabled = ['jsx']
+  " let g:jsx_ext_required = 0
 
   let g:javascript_plugin_jsdoc = 1
   let g:javascript_plugin_ngdoc = 1

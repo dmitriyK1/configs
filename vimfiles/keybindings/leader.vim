@@ -87,8 +87,7 @@ map <leader>S :%s:\v::g<Left><Left><Left>
 " T ================================================================================
 map <silent> <leader>tc :tabclose<CR>
 
-map <silent> <leader>T :call ConcealToggle()<CR>
-
+map <silent> <leader>T :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 " U ================================================================================
 " delete duplicated lines
 nnoremap <silent> <leader>u :sort u<cr>

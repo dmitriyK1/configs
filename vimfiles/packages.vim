@@ -776,6 +776,9 @@ Plug 'jiangmiao/auto-pairs' " {{{
 Plug 'sheerun/vim-polyglot' "{{{
   let g:jsx_ext_required = 0
 
+  let g:javascript_plugin_jsdoc = 1
+  let g:javascript_plugin_ngdoc = 1
+  let g:javascript_plugin_flow = 1
   let g:javascript_enable_domhtmlcss = 1
   " let g:javascript_conceal_function       = "ƒ"
   " let g:javascript_conceal_return         = "⇚"

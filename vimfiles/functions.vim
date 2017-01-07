@@ -24,15 +24,6 @@ function! CmdLine(str)
     unmenu Foo
 endfunction
 
-" change current conceallevel
-function! ConcealToggle()
-    if &conceallevel == 0
-        setlocal conceallevel=1
-    else
-        setlocal conceallevel=0
-    endif
-endfunction
-
 " used in vimrc.local to hide all interface elements on startup
 function! ToggleHiddenAll()
     if g:hidden_all  == 0

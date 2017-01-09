@@ -105,7 +105,13 @@ endsnippet
 snippet st
 setTimeout(function() {
 	$1
-}, $0);
+}, $2);$0
+endsnippet
+# ----------------------------------------
+snippet st6
+setTimeout(() => {
+	$1
+}, $2);$0
 endsnippet
 # ----------------------------------------
 snippet "([^\s].*)\.fun" "function (postfix)" r

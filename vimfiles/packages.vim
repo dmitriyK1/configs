@@ -240,12 +240,6 @@ Plug 'rhysd/conflict-marker.vim'
 " Force linewise or characterwise paste, regardless of how it was yanked.
 Plug 'vim-scripts/UnconditionalPaste'
 
-" A vim plugin to display the indention levels with thin vertical lines
-Plug 'Yggdroot/indentLine' "{{{
-  let g:indentLine_enabled = 0
-  map <leader>il :IndentLinesToggle<CR>
-"}}}
-
 " A Vim plugin for focussing on a selected region
 " <Leader>nr       - Open the current visual selection in a new narrowed window
 Plug 'chrisbra/NrrwRgn'
@@ -901,6 +895,17 @@ Plug 'gelguy/Cmd2.vim' "{{{
   " nmap : :<F12>
   " nmap <Space> :<F12>
 " }}}
+
+
+if exists('g:is_home_env')
+
+  " A vim plugin to display the indention levels with thin vertical lines
+  Plug 'Yggdroot/indentLine' "{{{
+    let g:indentLine_enabled = 0
+    map <leader>il :IndentLinesToggle<CR>
+  "}}}
+
+endif
 
 
 " if check prevents these plugins to be installed

@@ -501,7 +501,9 @@ Plug 'AndrewRadev/linediff.vim', { 'on': 'Linediff' }
 " <C-X>@        <link rel="stylesheet" ...> (mnemonic: @ is used for importing in a CSS file)
 " <C-X>#        <meta http-equiv="Content-Type" ... />
 " <C-X>$        <script src="/javascripts/^.js"></script>
-Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-ragtag' "{{{
+  let g:ragtag_global_maps = 1
+" }}}
 
 " <Leader>z    fold away lines not matching the last search pattern.
 " <Leader>iz   fold away lines that do match the last search pattern (inverse folding).

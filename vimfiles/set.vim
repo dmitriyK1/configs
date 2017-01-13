@@ -35,10 +35,6 @@ set matchtime=0
 set nowrap        " don't wrap lines
 set undolevels=1000      " use many muchos levels of undo
 
-" Don't show the current command in the lower right corner.  In OSX, if this is
-" set and lazyredraw is set then it's slow as molasses, so we unset this
-set showcmd
-
 " Hide the mouse pointer while typing
 set mousehide
 
@@ -88,7 +84,6 @@ set shortmess=atI
 " prevent flashing
 set novisualbell t_vb=
 set cursorline
-" set lazyredraw
 
 set foldlevelstart=10
 set foldnestmax=10
@@ -267,3 +262,6 @@ set showbreak=>>>
 " maximize vim window on startup:
 " set lines=999 columns=999
 " winpos 0 0
+
+set showcmd
+set lazyredraw

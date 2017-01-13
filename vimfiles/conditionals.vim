@@ -5,6 +5,11 @@ if has("unix")
 
   if has("mac") || has("macunix")
     " Do Mac stuff here
+
+    " Don't show the current command in the lower right corner.  In OSX, if this is
+    " set and lazyredraw is set then it's slow as molasses, so we unset this
+    set noshowcmd
+    set nolazyredraw
   endif
 elseif has("win32") || has("win16") || has("win64")
   let g:os    = "windows"

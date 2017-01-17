@@ -45,6 +45,7 @@ if has("gui_running")
     " au GUIEnter * simalt ~x
   elseif has('gui_macvim')
     set guifont=Monaco:h14     " OSX.
+    set macligatures
   else
     set guifont=Monospace\ 12  " Linux.
 

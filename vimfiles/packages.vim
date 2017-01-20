@@ -105,6 +105,12 @@ Plug 'morhetz/gruvbox'
 " Colorschemes end
 " ================================================================================
 
+" Ease your git worflow within vim
+Plug 'jreybert/vimagit' "{{{
+  let g:magit_default_fold_level = 2
+  let g:magit_refresh_gitgutter = 1
+" }}}
+
 " A Vim plugin for managing three-way merges
 Plug 'sjl/splice.vim'
 

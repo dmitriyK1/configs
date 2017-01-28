@@ -14,3 +14,4 @@ set number
 set surround
 nmap ,, :w<cr>
 nnoremap <space> :
+nnoremap <C-l> :nohlsearch<CR>

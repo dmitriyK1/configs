@@ -229,7 +229,14 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-eunuch'
 
 " toggling settings mappings
-Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-unimpaired' "{{{
+  " Bubble single lines
+  map <A-Up> [e
+  map <A-Down> ]e
+  " Bubble multiple lines
+  vmap <A-Up> [egv
+  vmap <A-Down> ]egv
+" }}}
 
 " highlight conflict markers.
 " jump among conflict markers.
@@ -582,11 +589,6 @@ Plug 'junegunn/vim-easy-align' "{{{
   " xmap gl <Plug>(EasyAlign)
   " nmap gl <Plug>(EasyAlign)
 "}}}
-
-" text bubbling feature
-Plug 'frace/vim-bubbles' "{{{
-  let g:bubbles_leader = '<M>'
-" }}}
 
 " autodetect tabs/spaces of buffer
 Plug 'tpope/vim-sleuth'
@@ -980,6 +982,12 @@ endif
 " ================================================================================
 " Unused:
 " ================================================================================
+" USE UNIMPAIRED INSTEAD
+" text bubbling feature
+" Plug 'frace/vim-bubbles' "{{{
+"   let g:bubbles_leader = '<M>'
+" }}}
+
 " Semantic highlight
 " Plug 'jaxbot/semantic-highlight.vim'
 

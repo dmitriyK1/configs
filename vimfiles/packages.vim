@@ -805,7 +805,8 @@ Plug 'sheerun/vim-polyglot' "{{{
   " let g:javascript_conceal_infinity       = "∞"
 " }}}
 
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'html', 'typescript', 'php'] } "{{{
+" Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'html', 'typescript', 'php'] } "{{{
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'typescript', 'php'] } "{{{
   let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
 " }}}
 

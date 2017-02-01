@@ -231,11 +231,11 @@ Plug 'tpope/vim-eunuch'
 " toggling settings mappings
 Plug 'tpope/vim-unimpaired' "{{{
   " Bubble single lines
-  map <A-Up> [e
-  map <A-Down> ]e
+  map <M-k> [e
+  map <M-j> ]e
   " Bubble multiple lines
-  vmap <A-Up> [egv
-  vmap <A-Down> ]egv
+  vmap <M-k> [egv
+  vmap <M-j> ]egv
 " }}}
 
 " highlight conflict markers.

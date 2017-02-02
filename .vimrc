@@ -1,6 +1,4 @@
 
-" TODO: make text bubbling mappings work
-
 " TODO: use sessions handling /w Startify
 
 " TODO: remove redundant keybindings

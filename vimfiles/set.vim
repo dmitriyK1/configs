@@ -266,4 +266,4 @@ set showbreak=>>>
 set showcmd
 set lazyredraw
 
-set rtp += ~/vimfiles
+set rtp+=~/vimfiles

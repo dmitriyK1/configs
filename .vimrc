@@ -15,6 +15,8 @@
 
 " TODO: fix global clipboard handling
 
+" TODO: add sort lines by length shortcut
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

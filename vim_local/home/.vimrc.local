@@ -1,69 +1,46 @@
-set modeline
-set modelines=10
-set nocursorline
-" highlight Cursor guifg=white guibg=green
+" au GUIEnter * simalt ~x
+set conceallevel=1
+" set nocursorline
+" set guifont=Menlo:h11
+" set guifont=DejaVu_Sans_Mono:h11
+set guifont=DejaVuSansMono_Nerd_Font:h15
 
-" set guifont=DejaVu_Sans_Mono:h12
+set background=dark
+set t_Co=256
 
-set guifont=DejaVuSansMonoForPowerline_NF:h12
-
-" ----------------------------------------
-" GRUVBOX
-" ----------------------------------------
-
-colorscheme gruvbox
-" let g:lightline.colorscheme = 'gruvbox'
-" set guifont=Menlo:h12
-" hi NonText	guifg=#282828 guibg=NONE
-
-" ----------------------------------------
-" MATRIX
-" ----------------------------------------
-
-" colorscheme matrix
-" set guifont=Courier\ New:h12:b
-" set guicursor=n-v-c:block-Cursor/lCursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
-" set report=2
-" autocmd FileType startify set ft=
-" hi NonText	guifg=#000000 guibg=NONE
-
-" ----------------------------------------
-" BROGRAMMER
-" ----------------------------------------
-
-" colorscheme brogrammer
-" set guifont=DejaVu_Sans_Mono:h12
-
-" hi NonText	guifg=#1A1A1A guibg=NONE
-" set guifont=Operator\ Mono\ Book:h12
-" let g:indentLine_char = '|'
-
-" ----------------------------------------
-
-" colorscheme monokai2
-" colorscheme chlordane
-" colorscheme ir_black
-" colorscheme moria
-" colorscheme desertEx
-" colorscheme desertink
-" colorscheme herald
-" colorscheme seti
-" colorscheme base16-greenscreen
-" colorscheme monochrome
-
-" set guifont=Fira_Code:h12
+if has('gui_macvim')
+    colorscheme gruvbox
+    " let g:lightline = {}
+    " let g:lightline.colorscheme = 'gruvbox'
+else
+    colorscheme nova
+    set nofoldenable
+endif
 
 " call ToggleHiddenAll()
 
-" colorscheme neodark
-" colorscheme off
-" colorscheme atom-dark
-" colorscheme onedark
-
-" set guifont=Menlo:h12
-set cursorline
-
 highlight Conceal guibg=NONE guifg=red
+autocmd Colorscheme * highlight Conceal guibg=NONE guifg=red
 
-let g:indentLine_enabled = 1
-" let g:gitgutter_realtime = 0
+let g:javascript_conceal_function       = "ƒ"
+let g:javascript_conceal_return         = "⇚"
+let g:javascript_conceal_prototype      = "¶"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_undefined      = "¿"
+let g:javascript_conceal_NaN            = "ℕ"
+let g:javascript_conceal_static         = "•"
+let g:javascript_conceal_super          = "Ω"
+let g:javascript_conceal_arrow_function = "⇒"
+
+let g:javascript_conceal_function       = "λ"
+let g:javascript_conceal_this           = "@"
+let g:javascript_conceal_return         = "<"
+let g:javascript_conceal_prototype      = "#"
+let g:javascript_conceal_infinity       = "∞"
+
+" slow scrolling fixes
+set nocursorline
+set synmaxcol=128
+syntax sync minlines=256
+
+set cursorline

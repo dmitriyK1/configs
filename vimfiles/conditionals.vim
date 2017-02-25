@@ -5,6 +5,9 @@ if has("unix")
 
   if has("mac") || has("macunix")
     " Do Mac stuff here
+    if exists('+macmeta')
+      set macmeta
+    endif
 
     " Silence bells
     set vb t_vb=
@@ -23,6 +26,10 @@ elseif has("win32") || has("win16") || has("win64")
     set shellpipe=2>&1\|tee
     set shellslash
   endif
+endif
+
+if !has("mac") || !has("macunix")
+  set noerrorbells novisualbell t_vb=
 endif
 
 " --------------------------------------------------------------------------------
@@ -68,14 +75,7 @@ if !has('gui_running')
   set term=xterm
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
-  set noerrorbells novisualbell t_vb=
   set t_ut= " setting for looking properly in tmux
-endif
-
-" --------------------------------------------------------------------------------
-
-if exists('+macmeta')
-  set macmeta
 endif
 
 " --------------------------------------------------------------------------------

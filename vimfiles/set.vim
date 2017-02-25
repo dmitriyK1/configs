@@ -83,6 +83,7 @@ set shortmess=atI
 
 " prevent flashing
 set noeb vb t_vb=
+set belloff=all
 set cursorline
 
 set foldlevelstart=10

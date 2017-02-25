@@ -82,7 +82,7 @@ set backspace=indent,eol,start
 set shortmess=atI
 
 " prevent flashing
-set novisualbell t_vb=
+set noeb vb t_vb=
 set cursorline
 
 set foldlevelstart=10

@@ -9,9 +9,6 @@ if has("unix")
       set macmeta
     endif
 
-    " Silence bells
-    set vb t_vb=
-
     " Don't show the current command in the lower right corner.  In OSX, if this is
     " set and lazyredraw is set then it's slow as molasses, so we unset this
     set noshowcmd
@@ -26,10 +23,6 @@ elseif has("win32") || has("win16") || has("win64")
     set shellpipe=2>&1\|tee
     set shellslash
   endif
-endif
-
-if !has("mac") || !has("macunix")
-  set noerrorbells novisualbell t_vb=
 endif
 
 " --------------------------------------------------------------------------------

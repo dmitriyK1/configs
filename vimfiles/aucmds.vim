@@ -103,4 +103,5 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
+" https://github.com/prettier/prettier
 autocmd FileType javascript set formatprg=prettier\ --stdin

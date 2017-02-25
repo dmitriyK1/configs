@@ -6,6 +6,9 @@ if has("unix")
   if has("mac") || has("macunix")
     " Do Mac stuff here
 
+    " Silence bells
+    set vb t_vb=
+
     " Don't show the current command in the lower right corner.  In OSX, if this is
     " set and lazyredraw is set then it's slow as molasses, so we unset this
     set noshowcmd
@@ -46,7 +49,6 @@ if has("gui_running")
   elseif has('gui_macvim')
     set guifont=Monaco:h14     " OSX.
     set macligatures
-    set vb t_vb=
   else
     set guifont=Monospace\ 12  " Linux.
 

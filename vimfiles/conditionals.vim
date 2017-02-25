@@ -46,6 +46,7 @@ if has("gui_running")
   elseif has('gui_macvim')
     set guifont=Monaco:h14     " OSX.
     set macligatures
+    set vb t_vb=
   else
     set guifont=Monospace\ 12  " Linux.
 

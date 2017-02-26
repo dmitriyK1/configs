@@ -1,8 +1,11 @@
 alias up ~/update.sh
 
 alias gs "git status "
-alias gc "git checkout "
+alias gc "git commit -m "
+alias gco "git checkout "
 alias gd "git diff "
 alias ga "git add "
 alias gl "git log"
 alias gr "git rebase -i "
+alias gps "git push -u"
+alias gpl "git pull"

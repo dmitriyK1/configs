@@ -96,6 +96,14 @@ imap <A-a> <End>
 " --------------------------------------------------------------------------------
 " Letter mappings
 " --------------------------------------------------------------------------------
+inoremap II <Esc>I
+inoremap AA <Esc>A
+inoremap OO <Esc>O
+
+inoremap CC <Esc>C
+inoremap SS <Esc>S
+inoremap DD <Esc>dd
+inoremap UU <Esc>u
 
 " ------------------A---------------------
 

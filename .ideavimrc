@@ -9,7 +9,7 @@ set hlsearch
 set showmode
 set incsearch
 set wrapscan
-set number
+set nonumber
 " set relativenumber
 set surround
 nmap ,, :w<cr>

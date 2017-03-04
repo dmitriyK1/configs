@@ -11,3 +11,5 @@ alias gr "git rebase -i "
 alias gps "git push -u "
 alias gpl "git pull "
 alias gsh "git show "
+
+alias v "vim "

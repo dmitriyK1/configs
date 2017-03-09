@@ -1,16 +1,10 @@
-highlight clear
-
 " au GUIEnter * simalt ~x
 set conceallevel=1
-" set nocursorline
 " set guifont=Menlo:h11
 " set guifont=DejaVu_Sans_Mono:h11
 set guifont=DejaVuSansMono_Nerd_Font:h15
 
 set background=dark
-set t_Co=256
-set termguicolors
-set fillchars=""
 
 if has('gui_macvim')
     colorscheme gruvbox
@@ -18,9 +12,13 @@ if has('gui_macvim')
     " let g:lightline = {}
     " let g:lightline.colorscheme = 'gruvbox'
 else
+    highlight clear
+    set nofoldenable
+    set fillchars=""
+    set termguicolors
+    set t_Co=256
     colorscheme gruvbox
     " colorscheme nova
-    set nofoldenable
 endif
 
 " call ToggleHiddenAll()
@@ -45,6 +43,6 @@ let g:javascript_conceal_prototype      = "#"
 let g:javascript_conceal_infinity       = "∞"
 
 " slow scrolling fixes
-set nocursorline
+" set nocursorline
 set synmaxcol=128
 syntax sync minlines=256

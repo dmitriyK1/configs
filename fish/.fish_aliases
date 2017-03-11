@@ -15,3 +15,9 @@ alias gpl "git pull "
 alias gsh "git show "
 
 alias v "vim "
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ls="ls -G"
+

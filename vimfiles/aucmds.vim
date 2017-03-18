@@ -14,9 +14,6 @@ au VimResized * :wincmd =
   " augroup END
 " }}}
 
-autocmd InsertLeave,WinEnter * set cursorline
-autocmd InsertEnter,WinLeave * set nocursorline
-
 augroup file_types
     autocmd!
     autocmd BufRead,BufNewFile *.fdoc set filetype=yaml

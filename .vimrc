@@ -9,11 +9,8 @@
 " TODO: add project-wide search
 
 " TODO: change cursor color in different modes
-" TODO: show/hide cursorline (if cursorline was enabled at startup)
 
 " TODO: replace recursive mappings to non-recursive
-
-" TODO: fix global clipboard handling
 
 " TODO: add sort lines by length shortcut
 

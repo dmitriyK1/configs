@@ -47,9 +47,3 @@ let g:javascript_conceal_infinity       = "∞"
 " set nocursorline
 set synmaxcol=128
 syntax sync minlines=256
-
-" toggle cursorline in normal/insert mode and when switching splits only if cursorline is enabled in settings
-if &cursorline
-  autocmd InsertLeave,WinEnter * set cursorline
-  autocmd InsertEnter,WinLeave * set nocursorline
-endif

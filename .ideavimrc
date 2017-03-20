@@ -17,3 +17,4 @@ nnoremap <space> :
 nnoremap <C-l> :nohlsearch<CR>
 set clipboard=unnamed, unnamedplus
 set visualbell
+set nonumber

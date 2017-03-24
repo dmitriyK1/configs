@@ -2,4 +2,4 @@ set --export PATH /usr/local/sbin $PATH
 set --export PATH /opt/local/bin $PATH
 
 set EDITOR vim
-set VISUAL mvim
+" set VISUAL mvim

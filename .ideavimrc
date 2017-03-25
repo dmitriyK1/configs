@@ -22,3 +22,5 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <A-f> <S-Right>
 inoremap <A-b> <S-Left>
+inoremap II <Esc>I
+inoremap AA <Esc>A

@@ -11,9 +11,10 @@ set imap_check_subscribed
 set hostname = gmail.com
 set postponed = "+[GMail]/Drafts"
 set record = "+[GMail]/Sent Mail"
+set header_cache = "~/.mutt/headers"
 
 # ctrl-b opens email in w3m to follow links
 # After typing Ctrl-B to launch w3m, type : (a colon) to tell w3m to convert URL strings to links.
-# You may also want to w3m's Option Setting Panel (type o) and set the "Treat URL-like strings as links in all pages" to YES. 
+# You may also want to w3m's Option Setting Panel (type o) and set the "Treat URL-like strings as links in all pages" to YES.
 # Then you won't have to keep typing : as you page through the message.
 macro index,pager \cb ": unset wait_key; set pipe_decode\n|w3m\n: set wait_key; unset pipe_decode\n" "call w3m to extract URLs out of a message"

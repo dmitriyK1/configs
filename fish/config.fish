@@ -25,9 +25,13 @@
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 # source ~/.iterm2_shell_integration.fish
 
-function fish_prompt
-  ~/Soft/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
-end
+# function fish_prompt
+#   ~/Soft/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
+# end
+
+# requires installing omf install bobthefish
+set theme_color_scheme gruvbox
+set -g theme_nerd_fonts yes
 
 source ~/.fish_aliases
 source ~/.fish_variables

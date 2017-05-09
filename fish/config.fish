@@ -31,6 +31,8 @@
 
 export LESS='-R'
 export LESSOPEN='|pygmentize -g %s'
+export SHELL=/usr/local/bin/fish
+export EDITOR=/usr/local/bin/vim
 
 # requires installing omf install bobthefish
 set theme_color_scheme gruvbox

@@ -29,6 +29,9 @@
 #   ~/Soft/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
 # end
 
+export LESS='-R'
+export LESSOPEN='|pygmentize -g %s'
+
 # requires installing omf install bobthefish
 set theme_color_scheme gruvbox
 set -g theme_nerd_fonts yes

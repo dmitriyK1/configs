@@ -16,9 +16,16 @@ alias gpl "git pull "
 alias gsh "git show "
 alias grv "git remote -vv"
 
+alias vim "/usr/local/bin/vim"
 alias v "vim "
 alias b "brew install "
 alias bu "brew uninstall "
 alias p "percol "
 alias ss "source ~/.config/fish/config.fish"
 alias vless='/usr/share/vim/vim74/macros/less.sh '
+
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+
+alias numFiles='echo (ls -1 | wc -l)'       # numFiles:     Count of non-hidden files in current dir

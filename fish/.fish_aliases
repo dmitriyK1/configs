@@ -21,3 +21,4 @@ alias b "brew install "
 alias bu "brew uninstall "
 alias p "percol "
 alias ss "source ~/.config/fish/config.fish"
+alias vless='/usr/share/vim/vim74/macros/less.sh '

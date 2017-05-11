@@ -84,7 +84,7 @@ as input."
 (key-chord-mode 1)
 (key-chord-define-global "xx" 'execute-extended-command)
 
-(add-hook 'before-save-hook 'whitespace-cleanup)
+;;;(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;;; ================================================================================
 ;;; HELM CONFIG

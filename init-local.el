@@ -1,3 +1,5 @@
+;;; (server-start)
+
 ;;; https://github.com/bbatsov/crux
 
 ;;; (evil-mode)
@@ -33,6 +35,56 @@
 
 ;; highlight active line
 (global-hl-line-mode 1)
+
+;; higlight changes in documents
+(global-highlight-changes-mode t)
+(setq highlight-changes-visibility-initial-state nil); initially hide
+
+;; toggle visibility
+(global-set-key (kbd "<f6>")      'highlight-changes-visible-mode) ;; changes
+;; remove the change-highlight in region
+(global-set-key (kbd "S-<f6>")    'highlight-changes-remove-highlight)
+;; http://emacs-fu.blogspot.com/2009/05/tracking-changes.html
+
+;;(require 'recentf)
+;;(recentf-mode 1)
+;;(setq recentf-max-menu-items 25)
+;;(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+;;; save periodically
+;;(run-at-time nil (* 5 60) 'recentf-save-list)
+
+(global-set-key "\C-x\ \C-r" 'helm-recentf)
+
+(require-package 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-swoop)
+
+;;;(setq sml/no-confirm-load-theme t)
+;;;(setq sml/theme 'powerline)
+;;;(sml/setup)
+
+;;;(require 'telephone-line)
+;;;(telephone-line-mode 1)
+
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
+(spaceline-helm-mode)
+(spaceline-info-mode)
+
+(defun shell-command-on-buffer ()
+  "Asks for a command and executes it in inferior shell with current buffer
+as input."
+  (interactive)
+  (shell-command-on-region
+   (point-min) (point-max)
+   (read-shell-command "Shell command on buffer: ")))
+
+(global-set-key (kbd "M-\\") 'shell-command-on-buffer)
+
+(require-package 'key-chord)
+(key-chord-mode 1)
+(key-chord-define-global "xx" 'execute-extended-command)
+
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;;; ================================================================================
 ;;; HELM CONFIG
@@ -91,6 +143,7 @@
 (ido-mode 1)
 (setq ido-everywhere t)
 (setq ido-enable-flex-matching t)
+(setq ido-use-filename-at-point 'guess)
 ;;; ================================================================================
 
 ;;; save on focus lost

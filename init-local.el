@@ -86,6 +86,10 @@ as input."
 
 ;;;(add-hook 'before-save-hook 'whitespace-cleanup)
 
+(require 'auto-package-update)
+(auto-package-update-maybe)
+(setq auto-package-update-delete-old-versions t)
+
 ;;; ================================================================================
 ;;; HELM CONFIG
 ;;; ================================================================================

@@ -117,8 +117,8 @@ export HISTTIMEFORMAT='%Y-%m-%d_%H:%M:%S_%a  '  # makes history display in YYYY-
 export BLOCKSIZE=K
 export VISUAL='vi'
 
-set -b                      
-set -o notify                   
+set -b
+set -o notify
 set visible-stats on
 
 # AUTOCOLOR {{{
@@ -167,7 +167,7 @@ PS1="\n\[\e[32;1m\](\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else ech
 
 LS_COLORS="$LS_COLORS:di=00;33"
 
-setxkbmap -option ctrl:swapcaps 
+setxkbmap -option ctrl:swapcaps
 source /usr/share/autojump/autojump.sh
 
 # Create scratch dir

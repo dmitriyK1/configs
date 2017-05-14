@@ -27,4 +27,4 @@ inoremap AA <Esc>A
 nmap dJ dG
 nmap dK dgg
 nmap <M-;> A;<Esc>
-imap <M-;> <End>;
+imap <M-;> <End>;<Esc>

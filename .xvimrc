@@ -1,1 +1,6 @@
 imap jj <Esc>
+inoremap <C-e> <C-o>$
+set ignorecase
+set smartcase
+set clipboard=unnamed
+set noerrorbells

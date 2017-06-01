@@ -15,6 +15,7 @@ alias gps "git push -u "
 alias gpl "git pull "
 alias gsh "git show "
 alias grv "git remote -vv"
+alias gsw "git switch "
 
 alias vim "/usr/local/bin/vim"
 alias v "vim "

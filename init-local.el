@@ -6,6 +6,12 @@
 
 (load-theme 'spacemacs-dark)
 
+(require-package 'spaceline)
+(require-package 'spaceline-all-icons)
+(require-package 'auto-package-update)
+(require-package 'helm-descbinds)
+(require-package 'helm-describe-modes)
+
 ;;; (setq evil-emacs-state-cursor '("red" box))
 ;;; (setq evil-normal-state-cursor '("green" box))
 ;;; (setq evil-visual-state-cursor '("orange" box))

@@ -44,3 +44,7 @@ end
 function glf
   git log --all --grep=$argv
 end
+
+# function vim
+#   mvim -v $argv
+# end

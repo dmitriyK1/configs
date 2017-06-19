@@ -39,3 +39,8 @@ function fish_user_key_bindings
   bind '$' bind_dollar
   fzf_key_bindings
 end
+
+# Git log find by commit message
+function glf
+  git log --all --grep=$argv
+end

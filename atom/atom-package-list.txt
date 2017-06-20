@@ -31,6 +31,7 @@ duotone-dark-syntax@2.1.0
 easy-motion-redux@1.1.1
 ex-mode@0.15.0
 expand-region@0.3.0
+editorconfig@2.2.2
 file-icons@2.1.7
 filesize@3.0.0
 git-clone@0.2.0
@@ -66,7 +67,6 @@ oceans16-atom@21.0.17
 oceans16-syntax@21.0.36
 open-in-browser@0.5.2
 project-plus@1.0.0
-proton-mode@0.16.0
 qolor@0.4.2
 quick-file-actions@0.2.0
 recent-files-fuzzy-finder@0.3.2

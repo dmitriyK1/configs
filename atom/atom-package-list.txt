@@ -1,3 +1,8 @@
+ask-stack@2.2.0
+emmet@2.4.3
+minimap@4.28.2
+minimap-highlight-selected@4.6.1
+project-manager@3.3.5
 advanced-open-file@0.16.6
 aligner@1.2.2
 aligner-css@1.2.1

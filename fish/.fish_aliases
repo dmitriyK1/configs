@@ -17,6 +17,8 @@ alias gsh "git show "
 alias grv "git remote -vv"
 alias gsw "git switch "
 alias gcp "git cherry-pick "
+alias gcf "git commit --no-verify -m "
+alias gpf "git push --no-verify "
 
 alias vim "/usr/local/bin/vim"
 alias v "vim "

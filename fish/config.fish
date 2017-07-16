@@ -29,6 +29,7 @@
 #   ~/Soft/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
 # end
 
+export LANG=en_US.UTF-8
 export LESS='-R'
 export LESSOPEN='|pygmentize -g %s'
 export SHELL=/usr/local/bin/fish
@@ -41,3 +42,4 @@ set -g theme_nerd_fonts yes
 source ~/.fish_aliases
 source ~/.fish_variables
 source ~/.fish_functions
+source (npx --shell-auto-fallback fish | psub)

@@ -13,6 +13,7 @@
 [diff]
     tool = vimdiff
     mnemonicprefix = true
+    context = 10
 
 [difftool]
 	prompt = false

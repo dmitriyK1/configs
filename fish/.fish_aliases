@@ -3,6 +3,7 @@ alias up ~/update.sh
 alias gs "git status "
 alias gsy "git sync "
 alias gb "git branch "
+alias gbs "git branches"
 alias gc "git commit -m "
 alias gco "git checkout "
 alias gch "git checkout "

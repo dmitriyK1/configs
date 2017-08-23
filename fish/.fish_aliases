@@ -19,6 +19,7 @@ alias gsw "git switch "
 alias gcp "git cherry-pick "
 alias gcf "git commit --no-verify -m "
 alias gpf "git push --no-verify "
+alias gpu "git publish"
 
 alias vim "/usr/local/bin/vim"
 alias v "vim "

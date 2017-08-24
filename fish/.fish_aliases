@@ -40,3 +40,7 @@ alias numFiles='echo (ls -1 | wc -l)'       # numFiles:     Count of non-hidden 
 
 alias emacs "/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias cat=ccat
+
+alias bi='brew install '
+
+alias fp='ls | fpp'

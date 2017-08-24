@@ -22,6 +22,7 @@ alias gcp "git cherry-pick "
 alias gcf "git commit --no-verify -m "
 alias gpf "git push --no-verify "
 alias gpu "git publish"
+# alias h "how2 -l javascript "
 
 alias vim "/usr/local/bin/vim"
 alias v "vim "
@@ -38,3 +39,4 @@ alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias numFiles='echo (ls -1 | wc -l)'       # numFiles:     Count of non-hidden files in current dir
 
 alias emacs "/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias cat=ccat

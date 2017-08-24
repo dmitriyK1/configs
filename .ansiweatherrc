@@ -1,0 +1,8 @@
+location:Kiev
+show_daylight:true
+ansi:false
+symbols:true
+show_humidity:true
+show_pressure:true
+dateformat:%a %b %d
+timeformat:%b %d %r

@@ -67,6 +67,7 @@ alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
 alias gbmv='git branch -m'
+alias cat='ccat'
 
 # Stash (s)
 alias gsa='git stash apply'

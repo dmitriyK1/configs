@@ -267,3 +267,7 @@ set showcmd
 set lazyredraw
 
 set rtp+=~/vimfiles
+
+if has('termguicolors')
+    set termguicolors
+endif

@@ -652,6 +652,10 @@ Plug 'ryanoasis/vim-devicons' "{{{
   let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
   " Force extra padding in NERDTree so that the filetype icons line up vertically
   let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+
+  if exists('g:loaded_webdevicons')
+      call webdevicons#refresh()
+  endif
 " }}}
 
 Plug 'scrooloose/nerdtree' "{{{
@@ -663,6 +667,8 @@ Plug 'scrooloose/nerdtree' "{{{
   let g:NERDTreeHijackNetrw = 1
   " let g:NERDTreeDirArrowExpandable = '▸'
   " let g:NERDTreeDirArrowCollapsible = '▾'
+  let NERDTreeDirArrowExpandable = " "
+  let NERDTreeDirArrowCollapsible = " "
 
   nnoremap <silent> <F1> :call NERDTreeFindToggle()<CR>
   inoremap <silent> <F1> <Esc>:call NERDTreeFindToggle()<CR>
@@ -913,29 +919,6 @@ Plug 'gelguy/Cmd2.vim' "{{{
   " nmap <Space> :<F12>
 " }}}
 
-
-if exists('g:is_home_env')
-
-  " A vim plugin to display the indention levels with thin vertical lines
-  Plug 'Yggdroot/indentLine' "{{{
-    let g:indentLine_enabled = 0
-    map <leader>il :IndentLinesToggle<CR>
-  "}}}
-
-endif
-
-
-" if check prevents these plugins to be installed
-if !exists('g:is_home_env')
-
-  " A Vim plugin for visually displaying indent levels in code
-  Plug 'nathanaelkane/vim-indent-guides' "{{{
-    " let g:indent_guides_guide_size = 1
-    " let g:indent_guides_start_level = 2
-    " let g:indent_guides_color_change_percent = 5
-    " let g:indent_guides_enable_on_vim_startup = 1
-  " }}}
-
   " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
     " nmap [c <Plug>GitGutterPrevHunk
     " nmap ]c <Plug>GitGutterNextHunk
@@ -967,6 +950,28 @@ if !exists('g:is_home_env')
     " let g:gitgutter_sign_removed = '✘'
     " let g:gitgutter_sign_removed_first_line = '^'
     " let g:gitgutter_sign_modified_removed = '~_'
+  " }}}
+
+if exists('g:is_home_env')
+
+  " A vim plugin to display the indention levels with thin vertical lines
+  Plug 'Yggdroot/indentLine' "{{{
+    let g:indentLine_enabled = 0
+    map <leader>il :IndentLinesToggle<CR>
+  "}}}
+
+endif
+
+
+" if check prevents these plugins to be installed
+if !exists('g:is_home_env')
+
+  " A Vim plugin for visually displaying indent levels in code
+  Plug 'nathanaelkane/vim-indent-guides' "{{{
+    " let g:indent_guides_guide_size = 1
+    " let g:indent_guides_start_level = 2
+    " let g:indent_guides_color_change_percent = 5
+    " let g:indent_guides_enable_on_vim_startup = 1
   " }}}
 
   " Syntax checking hacks for vim

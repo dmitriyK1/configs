@@ -91,3 +91,5 @@ nohlsearch   " When sourcing this file, do not immediately turn on highlighting
 if filereadable(expand("~/.vimrc.after.local"))
   source ~/.vimrc.after.local
 endif
+
+set secure

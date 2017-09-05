@@ -58,17 +58,10 @@
 (transient-mark-mode t)
 (setq x-select-enable-clipboard t)
 
-;; enable trailing newline
-(setq require-final-newline t)
-
 ;; use brew services start emacs instead
 ;; enable server mode
 ;; (require 'server)
 ;; (server-start)
-
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(menu-bar-mode -1)
 
 (setq inhibit-splash-screen t
       inhibit-startup-message t
@@ -83,7 +76,8 @@
 
 (setq echo-keystrokes 0.1
       use-dialog-box nil
-      visible-bell t)
+)
+
 (show-paren-mode t)
 
 (ido-mode t)

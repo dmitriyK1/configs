@@ -35,6 +35,8 @@
 ;; Package management end
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'better-defaults)
+
 (global-hl-line-mode 1)
 
 (load-theme 'spacemacs-dark t)
@@ -78,7 +80,6 @@
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
-(global-set-key (kbd "M-/") 'hippie-expand)
 
 (setq echo-keystrokes 0.1
       use-dialog-box nil

@@ -45,9 +45,10 @@
 ;; enable trailing newline
 (setq require-final-newline t)
 
+;; use brew services start emacs instead
 ;; enable server mode
-(require 'server)
-(server-start)
+;; (require 'server)
+;; (server-start)
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -101,3 +102,10 @@
 (global-set-key (kbd "C-x C-S-k") 'nuke-all-buffers)
 
 (global-set-key (kbd "C-c r") 'revert-buffer)
+
+;; save on focus lost
+(defun save-all ()
+  (interactive)
+  (save-some-buffers t))
+
+(add-hook 'focus-out-hook 'save-all)

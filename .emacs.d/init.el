@@ -12,7 +12,7 @@
 (require 'package)
 
 ; list the packages you want
-(setq package-list '(undo-tree spacemacs-theme))
+(setq package-list '(undo-tree spacemacs-theme better-defaults magit))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -132,7 +132,7 @@
 ;; IDO CONFIG
 ;; ================================================================================
 (require 'ido)
-(ido-mode 1)
+(ido-mode t)
 (setq ido-everywhere t)
 (setq ido-enable-flex-matching t)
 (setq ido-use-filename-at-point 'guess)

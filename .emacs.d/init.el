@@ -1,22 +1,43 @@
+;; NOTES
+
+;; M-x revert-buffer      // revert a buffer to initial state
+
 ;; some stuff taken from
 ;; http://aaronbedra.com/emacs.d/
 ;; http://seancribbs.com/emacs.d
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Package management start
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'package)
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+
+; list the packages you want
+(setq package-list '(undo-tree spacemacs-theme))
+
+; list the repositories containing them
+(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+; activate all the packages (in particular autoloads)
 (package-initialize)
 
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Package management end
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (global-hl-line-mode 1)
 
-(load-theme 'misterioso)
+(load-theme 'spacemacs-dark t)
 
 (toggle-frame-maximized)
 (toggle-frame-fullscreen)
@@ -124,6 +145,9 @@
 
 ;; save on focus lost
 (add-hook 'focus-out-hook 'save-buffer)
+
+;; refresh buffers when files changes on disk
+(global-auto-revert-mode t)
 
 ;; Shortcuts
 (global-set-key (kbd "M-o") 'other-window)

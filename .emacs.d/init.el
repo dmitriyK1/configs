@@ -18,7 +18,6 @@
 
 (load-theme 'misterioso)
 
-
 (toggle-frame-maximized)
 (toggle-frame-fullscreen)
 
@@ -103,9 +102,31 @@
 
 (global-set-key (kbd "C-c r") 'revert-buffer)
 
-;; save on focus lost
-(defun save-all ()
-  (interactive)
-  (save-some-buffers t))
+;; display current time
+(setq display-time-interval 1)
+(setq display-time-format "%H:%M:%S")
+(display-time-mode)
 
-(add-hook 'focus-out-hook 'save-all)
+(setq sentence-end-double-space nil)
+
+(setq-default cursor-type 'bar)
+
+(blink-cursor-mode 0)
+
+;; ================================================================================
+;; IDO CONFIG
+;; ================================================================================
+(ido-mode 1)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
+(setq ido-use-filename-at-point 'guess)
+;; ================================================================================
+
+;; save on focus lost
+(add-hook 'focus-out-hook 'save-buffer)
+
+;; Shortcuts
+(global-set-key (kbd "M-o") 'other-window)
+(global-set-key (kbd "M-h") 'mark-paragraph)
+(global-set-key (kbd "M-i") 'imenu)
+(global-set-key (kbd "C-^") 'join-line)

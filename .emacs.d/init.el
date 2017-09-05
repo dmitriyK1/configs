@@ -18,7 +18,7 @@
 (require 'package)
 
 ; list the packages you want
-(setq package-list '(undo-tree spacemacs-theme better-defaults magit smooth-scrolling dashboard))
+(setq package-list '(undo-tree spacemacs-theme better-defaults magit smooth-scrolling dashboard smex))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -48,6 +48,8 @@
 (dashboard-setup-startup-hook)
 
 (global-hl-line-mode 1)
+
+(smex-initialize) 
 
 (load-theme 'spacemacs-dark t)
 
@@ -141,6 +143,11 @@
 (global-set-key (kbd "M-i") 'imenu)
 (global-set-key (kbd "C-^") 'join-line)
 (global-set-key (kbd "C-x B") 'ibuffer)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Start fullscreen (cross-platf)
 (add-hook 'window-setup-hook 'toggle-frame-fullscreen t)

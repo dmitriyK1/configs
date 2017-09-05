@@ -7,6 +7,8 @@
 ;; http://seancribbs.com/emacs.d
 ;; https://github.com/magnars/.emacs.d/tree/master/settings         // thnx for sane-defaults
 
+;; https://sriramkswamy.github.io/dotemacs/
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (setq custom-file (expand-file-name user-emacs-directory))
 
@@ -16,7 +18,7 @@
 (require 'package)
 
 ; list the packages you want
-(setq package-list '(undo-tree spacemacs-theme better-defaults magit smooth-scrolling))
+(setq package-list '(undo-tree spacemacs-theme better-defaults magit smooth-scrolling dashboard))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -41,6 +43,9 @@
 
 (require 'better-defaults)
 (require 'sane-defaults)
+
+(require 'dashboard)
+(dashboard-setup-startup-hook)
 
 (global-hl-line-mode 1)
 

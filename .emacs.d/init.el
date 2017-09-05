@@ -47,21 +47,12 @@
 (load-theme 'spacemacs-dark t)
 
 ;; enable recent files mode
-(recentf-mode 1)
-(setq recentf-max-menu-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
-
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; disable backup files
 (setq make-backup-files nil)
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
-
-;; text selection behavior
-(delete-selection-mode t)
-(transient-mark-mode t)
-(setq x-select-enable-clipboard t)
 
 ;; use brew services start emacs instead
 ;; enable server mode
@@ -79,9 +70,7 @@
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
-(setq echo-keystrokes 0.1
-      use-dialog-box nil
-)
+(setq use-dialog-box nil)
 
 (show-paren-mode t)
 
@@ -140,9 +129,6 @@
 
 ;; save on focus lost
 (add-hook 'focus-out-hook 'save-buffer)
-
-;; refresh buffers when files changes on disk
-(global-auto-revert-mode t)
 
 ;; Shortcuts
 (global-set-key (kbd "M-o") 'other-window)

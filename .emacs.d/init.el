@@ -44,9 +44,6 @@
 (setq recentf-max-menu-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
-(setq mac-option-modifier 'super)
-(setq mac-command-modifier 'meta)
-
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; disable backup files
@@ -134,6 +131,7 @@
 ;; ================================================================================
 ;; IDO CONFIG
 ;; ================================================================================
+(require 'ido)
 (ido-mode 1)
 (setq ido-everywhere t)
 (setq ido-enable-flex-matching t)
@@ -151,6 +149,19 @@
 (global-set-key (kbd "M-h") 'mark-paragraph)
 (global-set-key (kbd "M-i") 'imenu)
 (global-set-key (kbd "C-^") 'join-line)
+(global-set-key (kbd "C-x B") 'ibuffer)
 
 ;; Start fullscreen (cross-platf)
 (add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
+
+; Add proper word wrapping
+(global-visual-line-mode t)
+
+(if (string-match "apple-darwin" system-configuration)
+    (set-face-font 'default "Monaco-13")
+  (set-frame-font "Monospace-10"))
+
+(when (string-match "apple-darwin" system-configuration)
+  (setq mac-allow-anti-aliasing t)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier 'super))

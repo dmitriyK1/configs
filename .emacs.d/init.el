@@ -5,6 +5,10 @@
 ;; some stuff taken from
 ;; http://aaronbedra.com/emacs.d/
 ;; http://seancribbs.com/emacs.d
+;; https://github.com/magnars/.emacs.d/tree/master/settings         // thnx for sane-defaults
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(setq custom-file (expand-file-name user-emacs-directory))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package management start
@@ -12,7 +16,7 @@
 (require 'package)
 
 ; list the packages you want
-(setq package-list '(undo-tree spacemacs-theme better-defaults magit))
+(setq package-list '(undo-tree spacemacs-theme better-defaults magit smooth-scrolling))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -36,6 +40,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'better-defaults)
+(require 'sane-defaults)
 
 (global-hl-line-mode 1)
 

@@ -39,9 +39,6 @@
 
 (load-theme 'spacemacs-dark t)
 
-(toggle-frame-maximized)
-(toggle-frame-fullscreen)
-
 ;; enable recent files mode
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
@@ -154,3 +151,6 @@
 (global-set-key (kbd "M-h") 'mark-paragraph)
 (global-set-key (kbd "M-i") 'imenu)
 (global-set-key (kbd "C-^") 'join-line)
+
+;; Start fullscreen (cross-platf)
+(add-hook 'window-setup-hook 'toggle-frame-fullscreen t)

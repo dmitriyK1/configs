@@ -10,7 +10,6 @@
 ;; https://sriramkswamy.github.io/dotemacs/
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(setq custom-file (expand-file-name user-emacs-directory))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package management start
@@ -49,7 +48,7 @@
 
 (global-hl-line-mode 1)
 
-(smex-initialize) 
+(smex-initialize)
 
 (load-theme 'spacemacs-dark t)
 

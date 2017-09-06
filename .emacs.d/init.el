@@ -31,10 +31,12 @@
   use-package))
 
 ; list the repositories containing them
-(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(setq package-archives
+      '(("elpa"        . "http://tromey.com/elpa/")
+        ("gnu"         . "http://elpa.gnu.org/packages/")
+        ("org"         . "http://orgmode.org/elpa/")
+        ("melpa"       . "http://melpa.org/packages/")
+        ("marmalade"   . "http://marmalade-repo.org/packages/")))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
@@ -182,3 +184,7 @@
   (setq mac-allow-anti-aliasing t)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super))
+
+;; allows to detach M-x customize options to a separate file
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)

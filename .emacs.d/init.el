@@ -17,7 +17,18 @@
 (require 'package)
 
 ; list the packages you want
-(setq package-list '(undo-tree spacemacs-theme better-defaults magit smooth-scrolling dashboard smex ace-jump-mode helm spaceline))
+(setq package-list '(
+  undo-tree
+  spacemacs-theme
+  better-defaults
+  magit
+  smooth-scrolling
+  dashboard
+  smex
+  ace-jump-mode
+  helm
+  spaceline
+  use-package))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -40,15 +51,17 @@
 ;; Package management end
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'spaceline-config)
-(spaceline-spacemacs-theme)
+(use-package spaceline-config
+  :config
+  (spaceline-spacemacs-theme))
 
-(require 'better-defaults)
-(require 'sane-defaults)
+(use-package better-defaults)
+(use-package sane-defaults)
 (load-file "~/.emacs.d/lisp/sensible-defaults.el")
 
-(require 'dashboard)
-(dashboard-setup-startup-hook)
+(use-package dashboard
+  :config
+  (dashboard-setup-startup-hook))
 
 (global-hl-line-mode 1)
 
@@ -131,11 +144,12 @@
 ;; ================================================================================
 ;; IDO CONFIG
 ;; ================================================================================
-(require 'ido)
-(ido-mode t)
-(setq ido-everywhere t)
-(setq ido-enable-flex-matching t)
-(setq ido-use-filename-at-point 'guess)
+(use-package ido
+  :config
+  (ido-mode t)
+  (setq ido-everywhere t)
+  (setq ido-enable-flex-matching t)
+  (setq ido-use-filename-at-point 'guess))
 ;; ================================================================================
 
 ;; save on focus lost

@@ -170,6 +170,9 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+
 ;; Start fullscreen (cross-platf)
 (add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
 
@@ -188,3 +191,6 @@
 ;; allows to detach M-x customize options to a separate file
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
+
+(when window-system
+  (tooltip-mode -1))

@@ -54,7 +54,7 @@
 (load-theme 'spacemacs-dark t)
 
 ;; enable recent files mode
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'recentf-open-files)
 
 ;; disable backup files
 (setq make-backup-files nil)

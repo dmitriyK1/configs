@@ -17,7 +17,7 @@
 (require 'package)
 
 ; list the packages you want
-(setq package-list '(undo-tree spacemacs-theme better-defaults magit smooth-scrolling dashboard smex ace-jump-mode helm))
+(setq package-list '(undo-tree spacemacs-theme better-defaults magit smooth-scrolling dashboard smex ace-jump-mode helm spaceline))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -39,6 +39,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package management end
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
 
 (require 'better-defaults)
 (require 'sane-defaults)

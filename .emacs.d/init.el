@@ -70,8 +70,8 @@
 (load-theme 'spacemacs-dark t)
 
 ;; enable recent files mode
-;; (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 (global-set-key (kbd "C-x C-r") 'helm-recentf)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 ;; disable backup files
 (setq make-backup-files nil)

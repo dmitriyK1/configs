@@ -42,6 +42,7 @@
 
 (require 'better-defaults)
 (require 'sane-defaults)
+(load-file "~/.emacs.d/lisp/sensible-defaults.el")
 
 (require 'dashboard)
 (dashboard-setup-startup-hook)

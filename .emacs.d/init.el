@@ -4,6 +4,8 @@
 
 ;; M-x revert-buffer      // revert a buffer to initial state
 
+;; http://tuhdo.github.io/
+
 ;; some stuff taken from
 ;; http://aaronbedra.com/emacs.d/
 ;; http://seancribbs.com/emacs.d
@@ -18,7 +20,7 @@
 
 (package-initialize)
 
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 
 (require 'init-package)
 (require 'init-defaults)

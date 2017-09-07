@@ -1,6 +1,6 @@
 (use-package better-defaults)
 (use-package sane-defaults)
-(load-file "~/.emacs.d/lisp/sensible-defaults.el")
+(load-file "~/.emacs.d/config/sensible-defaults.el")
 
 ;; save on focus lost
 (add-hook 'focus-out-hook 'save-buffer)

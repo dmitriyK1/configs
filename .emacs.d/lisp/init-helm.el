@@ -36,4 +36,19 @@
 (global-set-key (kbd "C-x c:")   #'helm-eval-expression-with-eldoc)
 (define-key helm-map (kbd "M-o") #'helm-previous-source)
 
+(global-set-key (kbd "M-s s")   #'helm-ag)
+
+(require 'helm-projectile)
+(setq helm-projectile-sources-list (cons 'helm-source-projectile-files-list
+                                         (remove 'helm-source-projectile-files-list
+                                              helm-projectile-sources-list)))
+(helm-projectile-on)
+
+(define-key projectile-mode-map (kbd "C-c p /")
+  #'(lambda ()
+      (interactive)
+      (helm-ag (projectile-project-root))))
+
+(define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)
+
 (provide 'init-helm)

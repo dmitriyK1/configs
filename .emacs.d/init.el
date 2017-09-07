@@ -27,7 +27,9 @@
   smex
   ace-jump-mode
   helm
+  which-key
   spaceline
+  key-chord
   use-package))
 
 ; list the repositories containing them
@@ -53,6 +55,16 @@
 ;; Package management end
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(use-package which-key
+  :config
+  (which-key-mode)
+  (which-key-setup-side-window-right))
+
+;; key chords
+(require 'key-chord)
+(key-chord-define-global "x x" 'smex)
+(key-chord-mode t)
+
 (use-package spaceline-config
   :config
   (spaceline-spacemacs-theme))
@@ -74,6 +86,7 @@
 ;; enable recent files mode
 (global-set-key (kbd "C-x C-r") 'helm-recentf)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; disable backup files
 (setq make-backup-files nil)
@@ -173,6 +186,11 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
+(global-set-key (kbd "C-M-h") 'backward-kill-word)
+(global-set-key (kbd "C-x \\") 'align-regexp)
+(global-set-key (kbd "C-c r") 'revert-buffer)
+(global-set-key (kbd "C-h a") 'apropos)
+
 ;; Start fullscreen (cross-platf)
 (add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
 
@@ -194,3 +212,21 @@
 
 (when window-system
   (tooltip-mode -1))
+
+;; Backups
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq delete-old-versions -1)
+(setq version-control t)
+(setq vc-make-backup-files t)
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
+
+;; History
+(setq savehist-file "~/.emacs.d/savehist")
+(savehist-mode 1)
+(setq history-length t)
+(setq history-delete-duplicates t)
+(setq savehist-save-minibuffer-history 1)
+(setq savehist-additional-variables
+      '(kill-ring
+        search-ring
+        regexp-search-ring))

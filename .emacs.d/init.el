@@ -162,9 +162,12 @@
 (use-package ido
   :config
   (ido-mode t)
-  (setq ido-everywhere t)
-  (setq ido-enable-flex-matching t)
-  (setq ido-use-filename-at-point 'guess))
+  (setq ido-enable-prefix nil
+        ido-everywhere t
+        ido-enable-flex-matching t
+        ido-use-filename-at-point 'guess
+        ido-create-new-buffer 'always
+        ido-max-prospects 10))
 ;; ================================================================================
 
 ;; save on focus lost
@@ -206,12 +209,14 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super))
 
+(when window-system
+  (tooltip-mode -1))
+
+(set-default 'imenu-auto-rescan t)
+
 ;; allows to detach M-x customize options to a separate file
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
-
-(when window-system
-  (tooltip-mode -1))
 
 ;; Backups
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))

@@ -49,6 +49,6 @@
       (interactive)
       (helm-ag (projectile-project-root))))
 
-(define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)
+;; (define-key org-mode-map (kbd "C-x c o h") #'helm-org-headlines)
 
 (provide 'init-helm)

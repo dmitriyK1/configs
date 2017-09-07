@@ -11,6 +11,7 @@
   smex
   ace-jump-mode
   helm
+  helm-projectile
   which-key
   spaceline
   key-chord

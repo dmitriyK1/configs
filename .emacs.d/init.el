@@ -73,7 +73,7 @@
 
 ;; key chords
 (require 'key-chord)
-(key-chord-define-global "x x" 'smex)
+(key-chord-define-global "xx" 'smex)
 (key-chord-mode t)
 
 (use-package spaceline-config

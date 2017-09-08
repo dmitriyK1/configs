@@ -44,3 +44,5 @@ alias emacs "/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias cat=ccat
 
 alias fp='ls | fpp'
+
+alias cal='cal | grep --color -EC6 "\b"(date +%e | sed "s/ //g")'

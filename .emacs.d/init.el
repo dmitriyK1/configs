@@ -44,9 +44,9 @@
 ;; Allow access from emacsclient
 ;; use brew services start emacs instead
 ;;----------------------------------------------------------------------------
-;; (require 'server)
-;; (unless (server-running-p)
-;;  (server-start))
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-local" containing personal settings

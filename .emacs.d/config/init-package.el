@@ -15,6 +15,7 @@
   which-key
   spaceline
   key-chord
+  auto-package-update
   use-package))
 
 ; list the repositories containing them
@@ -56,5 +57,10 @@
   :config (auto-compile-on-load-mode))
 
 (setq load-prefer-newer t)
+
+(use-package auto-package-update
+  :config
+  (auto-package-update-maybe)
+  (setq auto-package-update-prompt-before-update t))
 
 (provide 'init-package)

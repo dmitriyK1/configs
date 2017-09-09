@@ -40,9 +40,17 @@
   :config
   (dashboard-setup-startup-hook))
 
-;; ================================================================================
-
+;;----------------------------------------------------------------------------
+;; Allow access from emacsclient
 ;; use brew services start emacs instead
-;; enable server mode
+;;----------------------------------------------------------------------------
 ;; (require 'server)
-;; (server-start)
+;; (unless (server-running-p)
+;;  (server-start))
+
+;;----------------------------------------------------------------------------
+;; Allow users to provide an optional "init-local" containing personal settings
+;;----------------------------------------------------------------------------
+(require 'init-local nil t)
+
+(provide 'init)

@@ -1,7 +1,7 @@
 alias up ~/update.sh
 
-alias gdl "git icdiff"
-alias gdlc "git icdiff --cached"
+alias gdl "git difftool"
+alias gdlc "git difftool --cached"
 alias gf "git fetch"
 alias gs "git status "
 alias gsy "git sync "

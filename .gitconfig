@@ -326,3 +326,14 @@
 	grep = always
 	decorate = always
 	showbranch = always
+[pager]
+    difftool = true
+[diff]
+    tool = icdiff
+[difftool "icdiff"]
+    cmd = icdiff --head=5000 --highlight --line-numbers -L \"$BASE\" -L \"$REMOTE\" \"$LOCAL\" \"$REMOTE\"
+
+# [diff]
+# 	tool = p4merge
+# [difftool "p4merge"]
+# 	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge $LOCAL $REMOTE

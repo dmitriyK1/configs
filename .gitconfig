@@ -316,3 +316,13 @@
 	submoduleSummary = true
 [pull]
 	rebase = true
+[color]
+	diff = always
+	status = always
+	branch = always
+	interactive = always
+	ui = always
+	pager = true
+	grep = always
+	decorate = always
+	showbranch = always

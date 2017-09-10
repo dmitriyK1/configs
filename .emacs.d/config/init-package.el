@@ -35,7 +35,12 @@
   auto-package-update
   whitespace-cleanup-mode
   guru-mode
+  rainbow-delimiters
+  color-identifiers-mode
   use-package))
+
+(global-color-identifiers-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; install the missing packages
 (dolist (package package-list)

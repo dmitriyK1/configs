@@ -4,6 +4,12 @@
 
 ;; M-x revert-buffer      // revert a buffer to initial state
 
+;; C-x n n
+;;  Narrow down to between point and mark (narrow-to-region).
+
+;; C-x n w
+;;  Widen to make the entire buffer accessible again (widen).
+
 ;; http://tuhdo.github.io/
 
 ;; some stuff taken from

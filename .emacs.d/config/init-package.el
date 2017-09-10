@@ -34,6 +34,7 @@
   key-chord
   auto-package-update
   whitespace-cleanup-mode
+  guru-mode
   use-package))
 
 ;; install the missing packages

@@ -1,3 +1,6 @@
+(use-package guru-mode
+  :config (global-guru-mode))
+
 (use-package key-chord
   :config
   (key-chord-define-global "xx" 'helm-M-x)

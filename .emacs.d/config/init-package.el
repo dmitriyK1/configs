@@ -35,6 +35,7 @@
   auto-package-update
   whitespace-cleanup-mode
   guru-mode
+  autopair
   use-package))
 
 ;; install the missing packages

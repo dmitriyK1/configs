@@ -2,4 +2,8 @@ set --export PATH /usr/local/sbin $PATH
 set --export PATH /opt/local/bin $PATH
 
 set EDITOR vim
-" set VISUAL mvim
+# set VISUAL mvim
+
+# Use ripgrep to list filenames for fzf
+set --export FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND

@@ -1,5 +1,5 @@
 (use-package guru-mode
-  :config (global-guru-mode))
+  :config (guru-global-mode))
 
 (use-package key-chord
   :config

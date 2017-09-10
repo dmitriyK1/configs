@@ -2,6 +2,8 @@
 (use-package sane-defaults)
 (load-file "~/.emacs.d/config/sensible-defaults.el")
 
+(setq-default show-trailing-whitespace t)
+
 ;; save on focus lost
 (add-hook 'focus-out-hook 'save-buffer)
 

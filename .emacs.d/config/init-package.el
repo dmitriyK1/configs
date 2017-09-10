@@ -29,6 +29,7 @@
   ace-jump-mode
   helm
   helm-projectile
+  helm-swoop
   which-key
   spaceline
   key-chord

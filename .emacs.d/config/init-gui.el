@@ -1,7 +1,5 @@
 (set-mouse-color "#ffffff")
 
-(set-fringe-mode -1)
-
 (when window-system
   (tooltip-mode -1))
 

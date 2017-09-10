@@ -2,6 +2,11 @@
 (use-package sane-defaults)
 (load-file "~/.emacs.d/config/sensible-defaults.el")
 
+;; make scrolling smoother
+(setq scroll-margin 5
+scroll-conservatively 9999
+scroll-step 1)
+
 ;; save on focus lost
 (add-hook 'focus-out-hook 'save-buffer)
 

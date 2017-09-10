@@ -1,9 +1,6 @@
-(smex-initialize)
-
-;; key chords
 (use-package key-chord
   :config
-  (key-chord-define-global "xx" 'smex)
+  (key-chord-define-global "xx" 'helm-M-x)
   (key-chord-mode t)
 )
 
@@ -48,10 +45,9 @@
 (global-set-key (kbd "C-^") 'join-line)
 (global-set-key (kbd "C-x B") 'ibuffer)
 
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 
 (global-set-key (kbd "C-x g") 'magit-status)

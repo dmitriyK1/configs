@@ -25,7 +25,6 @@
   magit
   smooth-scrolling
   dashboard
-  smex
   ace-jump-mode
   helm
   helm-projectile

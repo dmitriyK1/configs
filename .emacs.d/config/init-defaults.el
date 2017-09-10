@@ -2,8 +2,7 @@
 (use-package sane-defaults)
 (load-file "~/.emacs.d/config/sensible-defaults.el")
 
-(use-package autopair
-  :config (autopair-global-mode))
+(electric-pair-mode)
 
 ;; make scrolling smoother
 (setq scroll-margin 5

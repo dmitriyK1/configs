@@ -45,9 +45,6 @@
 (setq use-package-verbose t)
 ;; (setq use-package-always-ensure t)
 
-(use-package whitespace-cleanup-mode
-  :config (global-whitespace-cleanup-mode))
-
 (use-package auto-compile
   :config (auto-compile-on-load-mode))
 

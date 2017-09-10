@@ -24,6 +24,7 @@
 
 (require 'init-package)
 (require 'init-defaults)
+(require 'init-whitespace)
 (require 'init-gui)
 (require 'init-keybindings)
 (require 'init-save)

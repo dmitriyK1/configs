@@ -4,6 +4,7 @@ set --export PATH /opt/local/bin $PATH
 set EDITOR vim
 # set VISUAL mvim
 
-# Use ripgrep to list filenames for fzf
-set --export FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+# Use ripgrep to list filenames for fzf & list directories with bfs
+set --export FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --smart-case --follow --glob "!{.git,node_modules}/*" 2> /dev/null'
 set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+set --export FZF_ALT_C_COMMAND "bfs -type d -nohidden"

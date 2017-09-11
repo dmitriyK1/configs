@@ -36,17 +36,7 @@
 (require 'init-save)
 (require 'init-helm)
 (require 'init-modes)
-
-;; ================================================================================
-
-(use-package which-key
-  :config
-  (which-key-mode)
-  (which-key-setup-side-window-right))
-
-(use-package dashboard
-  :config
-  (dashboard-setup-startup-hook))
+(require 'init-hooks)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient

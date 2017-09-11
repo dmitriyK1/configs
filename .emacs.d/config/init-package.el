@@ -59,6 +59,15 @@
   :config
   (auto-package-update-maybe)
   (setq auto-package-update-prompt-before-update t))
+
+(use-package which-key
+  :config
+  (which-key-mode)
+  (which-key-setup-side-window-right))
+
+(use-package dashboard
+  :config
+  (dashboard-setup-startup-hook))
 ;; --------------------------------------------------------------------------------
 
 (provide 'init-package)

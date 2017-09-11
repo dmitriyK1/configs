@@ -7,9 +7,6 @@
 scroll-conservatively 9999
 scroll-step 1)
 
-;; save on focus lost
-(add-hook 'focus-out-hook 'save-buffer)
-
 (set-default 'imenu-auto-rescan t)
 
 (setq sentence-end-double-space nil)

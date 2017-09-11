@@ -11,11 +11,11 @@
 
 ; fetch the list of packages available
 (unless package-archive-contents
-  (package-refresh-contents)
   (package-refresh-contents))
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
+  (package-refresh-contents)
   (package-install 'use-package))
 
 ;; list the packages you want

@@ -1,6 +1,7 @@
 (require 'package)
 
 (setq package-enable-at-startup nil)
+(setq load-prefer-newer t)
 
 ; list the repositories containing them
 (setq package-archives
@@ -13,12 +14,16 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-;; Bootstrap `use-package'
+;; bootstrap `use-package'
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
-;; list the packages you want
+(require 'use-package)
+(setq use-package-always-ensure t)
+(setq use-package-verbose t)
+
+;; packages to be installed
 (setq package-list '(
   undo-tree
   spacemacs-theme
@@ -37,30 +42,23 @@
   whitespace-cleanup-mode
   guru-mode
   rainbow-delimiters
-  color-identifiers-mode
-  use-package))
-
-(global-color-identifiers-mode)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+  color-identifiers-mode))
 
 ;; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
-    (package-refresh-contents)
     (package-install package)))
 
-;; use-package config
-(setq use-package-verbose t)
-;; (setq use-package-always-ensure t)
-
+;; --------------------------------------------------------------------------------
+;; Requires
+;; --------------------------------------------------------------------------------
 (use-package auto-compile
   :config (auto-compile-on-load-mode))
-
-(setq load-prefer-newer t)
 
 (use-package auto-package-update
   :config
   (auto-package-update-maybe)
   (setq auto-package-update-prompt-before-update t))
+;; --------------------------------------------------------------------------------
 
 (provide 'init-package)

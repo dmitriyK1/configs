@@ -35,6 +35,7 @@
 (require 'init-keybindings)
 (require 'init-save)
 (require 'init-helm)
+(require 'init-modes)
 
 ;; ================================================================================
 

@@ -326,12 +326,19 @@
 	grep = always
 	decorate = always
 	showbranch = always
-[pager]
-    difftool = true
+[alias]
+  showtool = "!f() { git difftool $1^ $1; }; f"
+  added = difftool --cached
 [diff]
-    tool = icdiff
+  context = 10
+  tool = icdiff
+[difftool]
+  prompt = false
 [difftool "icdiff"]
-    cmd = icdiff --head=5000 --highlight --line-numbers -L \"$BASE\" -L \"$REMOTE\" \"$LOCAL\" \"$REMOTE\"
+  # cmd = icdiff --line-numbers $LOCAL $REMOTE
+  cmd = icdiff --head=5000 --line-numbers -L $BASE -L $REMOTE $LOCAL $REMOTE
+[pager]
+  difftool = true
 
 # [diff]
 # 	tool = p4merge

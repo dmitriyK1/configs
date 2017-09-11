@@ -11,6 +11,6 @@ scroll-step 1)
 
 (setq sentence-end-double-space nil)
 
-(provide 'init-defaults)
+(provide 'init-set)
 
 

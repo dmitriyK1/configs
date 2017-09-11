@@ -29,7 +29,7 @@
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 
 (require 'init-package)
-(require 'init-defaults)
+(require 'init-set)
 (require 'init-whitespace)
 (require 'init-gui)
 (require 'init-keybindings)

@@ -1,3 +1,9 @@
+;; Add proper word wrapping
+(global-visual-line-mode t)
+
+;; automatically insert brackets
+(electric-pair-mode)
+
 ;; colorize variable names in different colors
 (global-color-identifiers-mode)
 

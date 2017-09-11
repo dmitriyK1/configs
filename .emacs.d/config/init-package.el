@@ -11,6 +11,7 @@
 
 ; fetch the list of packages available
 (unless package-archive-contents
+  (package-refresh-contents)
   (package-refresh-contents))
 
 ;; Bootstrap `use-package'
@@ -45,6 +46,7 @@
 ;; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
+    (package-refresh-contents)
     (package-install package)))
 
 ;; use-package config

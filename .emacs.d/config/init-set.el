@@ -11,6 +11,9 @@ scroll-step 1)
 
 (setq sentence-end-double-space nil)
 
+;; supress ad-handle-definition messages
+(setq ad-redefinition-action 'accept)
+
 (provide 'init-set)
 
 

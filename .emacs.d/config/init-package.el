@@ -6,7 +6,7 @@
 ; list the repositories containing them
 (setq package-archives
        '(("gnu"        . "http://elpa.gnu.org/packages/")
-        ("org"         . "http://orgmode.org/elpa/")
+        ; ("org"         . "http://orgmode.org/elpa/")
         ("melpa"       . "http://melpa.org/packages/")
         ("marmalade"   . "http://marmalade-repo.org/packages/")))
 

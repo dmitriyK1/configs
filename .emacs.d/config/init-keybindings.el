@@ -1,3 +1,6 @@
+;; use M-w to copy a whole line
+(global-set-key [remap kill-ring-save] 'easy-kill)
+
 ;; enable narrowing
 (put 'narrow-to-defun  'disabled nil)
 (put 'narrow-to-page   'disabled nil)

@@ -41,6 +41,7 @@
   auto-package-update
   whitespace-cleanup-mode
   guru-mode
+  easy-kill
   easy-kill-extras
   rainbow-delimiters
   color-identifiers-mode))

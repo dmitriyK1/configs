@@ -190,3 +190,4 @@ if command -v tmux>/dev/null; then
 	fi
 fi
 
+eval "$(fasd --init auto)"

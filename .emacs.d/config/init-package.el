@@ -40,6 +40,7 @@
   key-chord
   auto-package-update
   whitespace-cleanup-mode
+  expand-region
   guru-mode
   easy-kill
   easy-kill-extras

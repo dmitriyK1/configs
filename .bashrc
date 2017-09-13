@@ -5,6 +5,11 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# Source bash_profile
+if [ -f ~/.bash_profile ]; then
+  source ~/.bash_profile
+fi
+
 # User specific aliases and functions
 
 # Git Aliases

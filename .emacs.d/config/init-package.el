@@ -71,6 +71,8 @@
   (which-key-setup-side-window-right))
 
 (use-package anzu
+  :init
+  (setq anzu-cons-mode-line-p nil)
   :config
   (global-anzu-mode))
 

@@ -2,9 +2,6 @@
 (use-package sane-defaults)
 (load-file "~/.emacs.d/config/sensible-defaults.el")
 
-;; prevent anzu putting itself into modeline (spaceline handles it)
-(setq anzu-cons-mode-line-p nil)
-
 ;; make scrolling smoother
 (setq scroll-margin 5
 scroll-conservatively 9999

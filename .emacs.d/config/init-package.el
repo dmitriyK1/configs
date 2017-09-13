@@ -45,6 +45,7 @@
   easy-kill-extras
   treemacs
   info+
+  dired+
   anzu
   rainbow-delimiters
   color-identifiers-mode))

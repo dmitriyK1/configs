@@ -14,6 +14,9 @@ scroll-step 1)
 ;; supress ad-handle-definition messages
 (setq ad-redefinition-action 'accept)
 
+;; supress confirmation to load a theme
+(setq custom-safe-themes t)
+
 (provide 'init-set)
 
 

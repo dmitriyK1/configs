@@ -1,3 +1,5 @@
+(global-prettify-symbols-mode)
+
 ;; Add proper word wrapping
 (global-visual-line-mode t)
 

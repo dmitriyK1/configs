@@ -1,3 +1,6 @@
+;; switch windows using ace-window
+(global-set-key (kbd "M-p") 'ace-window)
+
 ;; use M-w to copy a whole line
 (global-set-key [remap kill-ring-save] 'easy-kill)
 

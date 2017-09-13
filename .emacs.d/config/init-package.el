@@ -43,6 +43,7 @@
   guru-mode
   easy-kill
   easy-kill-extras
+  info+
   rainbow-delimiters
   color-identifiers-mode))
 

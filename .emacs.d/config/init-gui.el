@@ -7,7 +7,9 @@
 
 (use-package spaceline-config
   :config
-  (spaceline-spacemacs-theme))
+  (spaceline-spacemacs-theme)
+  (spaceline-helm-mode)
+  (spaceline-info-mode))
 
 ;; Color the gutter
 ;; (use-package fill-column-indicator

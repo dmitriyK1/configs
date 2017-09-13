@@ -8,6 +8,7 @@
 (use-package spaceline-config
   :config
   (spaceline-spacemacs-theme)
+  (spaceline-toggle-anzu-on)
   (spaceline-helm-mode)
   (spaceline-info-mode))
 

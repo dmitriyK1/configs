@@ -43,7 +43,9 @@
   guru-mode
   easy-kill
   easy-kill-extras
+  treemacs
   info+
+  anzu
   rainbow-delimiters
   color-identifiers-mode))
 
@@ -67,6 +69,10 @@
   :config
   (which-key-mode)
   (which-key-setup-side-window-right))
+
+(use-package anzu
+  :config
+  (global-anzu-mode))
 
 (use-package dashboard
   :config

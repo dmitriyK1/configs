@@ -45,6 +45,7 @@
   easy-kill
   easy-kill-extras
   treemacs
+  writeroom-mode
   info+
   dired+
   anzu

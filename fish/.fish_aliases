@@ -1,5 +1,6 @@
 alias up ~/update.sh
 
+alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"
 alias gdl "git difftool | less"
 alias gdlc "git difftool --cached | less"
 alias gf "git fetch"

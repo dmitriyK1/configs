@@ -48,6 +48,7 @@
   writeroom-mode
   info+
   dired+
+  markdown-mode+
   anzu
   rainbow-delimiters
   color-identifiers-mode))

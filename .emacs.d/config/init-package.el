@@ -46,6 +46,7 @@
   easy-kill-extras
   treemacs
   writeroom-mode
+  drag-stuff
   info+
   dired+
   markdown-mode+
@@ -83,6 +84,11 @@
 (use-package dashboard
   :config
   (dashboard-setup-startup-hook))
+
+(use-package drag-stuff
+  :config
+  (drag-stuff-global-mode 1)
+  (drag-stuff-define-keys))
 ;; --------------------------------------------------------------------------------
 
 (provide 'init-package)

@@ -2,9 +2,13 @@
 
 echo 'start updating ...'
 
-echo 'updating emacs config'
-cd ~/.emacs.d/
-git pull
+# echo 'updating emacs config'
+# cd ~/.emacs.d/
+# git pull
+
+echo 'synchronizing configs'
+cd ~/Development/configs
+git sync
 
 echo 'updating vim'
 vim +PlugUpgrade +PlugUpdate +qall
@@ -19,8 +23,8 @@ fisher up
 fish_update_completions
 
 echo 'updating npm'
-npm update npm -g
-npm update -g
+sudo npm update npm -g
+sudo npm update -g
 
 echo 'checking Apple Updates'
 /usr/sbin/softwareupdate -ia

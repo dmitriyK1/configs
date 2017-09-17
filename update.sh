@@ -21,6 +21,7 @@ brew cleanup
 echo 'updating fish shell'
 fisher up
 fish_update_completions
+omf update
 
 echo 'updating npm'
 sudo npm update npm -g

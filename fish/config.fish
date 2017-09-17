@@ -1,3 +1,8 @@
+# colorizer:
+# https://github.com/oh-my-fish/plugin-grc
+# git flow completion:
+# https://github.com/oh-my-fish/plugin-git-flow
+
 # fasd support here:
 # https://github.com/fishgretel/fasd
 

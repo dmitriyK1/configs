@@ -3,6 +3,9 @@
 # git flow completion:
 # https://github.com/oh-my-fish/plugin-git-flow
 
+# https://github.com/oh-my-fish/plugin-node-binpath
+# https://github.com/oh-my-fish/plugin-brew
+
 # fasd support here:
 # https://github.com/fishgretel/fasd
 

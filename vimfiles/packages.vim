@@ -24,6 +24,7 @@ call plug#begin()
 " ================================================================================
 " Colorschemes:
 " ================================================================================
+Plug 'liuchengxu/space-vim-dark'
 Plug 'rakr/vim-one'
 Plug 'altercation/vim-colors-solarized'
 Plug 'KeitaNakamura/neodark.vim'

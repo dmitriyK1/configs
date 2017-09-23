@@ -1,3 +1,6 @@
+(global-set-key (kbd "M-;") 'smart-comment)
+;; (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
+
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; switch windows using ace-window
@@ -26,7 +29,6 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 (global-set-key (kbd "RET") 'newline-and-indent)
-(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
 ;; windows resizing
 (global-set-key (kbd "s-<right>") 'enlarge-window-horizontally)

@@ -47,6 +47,7 @@
   treemacs
   writeroom-mode
   drag-stuff
+  smart-comment
   info+
   dired+
   markdown-mode+

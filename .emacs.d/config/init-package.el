@@ -47,6 +47,7 @@
   treemacs
   writeroom-mode
   drag-stuff
+  smart-hungry-delete
   smart-comment
   auto-complete
   info+

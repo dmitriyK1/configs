@@ -48,6 +48,7 @@
   writeroom-mode
   drag-stuff
   smart-comment
+  auto-complete
   info+
   dired+
   markdown-mode+
@@ -90,6 +91,10 @@
   :config
   (drag-stuff-global-mode 1)
   (drag-stuff-define-keys))
+
+(use-package auto-complete
+  :config
+  (ac-config-default))
 ;; --------------------------------------------------------------------------------
 
 (provide 'init-package)

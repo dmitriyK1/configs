@@ -1,3 +1,5 @@
+(global-set-key (kbd "s-/") 'treemacs)
+
 (use-package smart-hungry-delete
   :ensure t
   :bind (("<backspace>" . smart-hungry-delete-backward-char)

@@ -598,8 +598,10 @@ Plug 'godlygeek/tabular', { 'on': 'Tabularize' } "{{{
 
 " alignment plugin
 Plug 'junegunn/vim-easy-align' "{{{
-  " xmap gl <Plug>(EasyAlign)
-  " nmap gl <Plug>(EasyAlign)
+ " Start interactive EasyAlign in visual mode (e.g. vipga)
+  xmap ga <Plug>(EasyAlign)
+  " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+  nmap ga <Plug>(EasyAlign)
 "}}}
 
 " autodetect tabs/spaces of buffer

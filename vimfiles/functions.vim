@@ -47,3 +47,10 @@ function! Cond(cond, ...)
   let opts = get(a:000, 0, {})
   return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
 endfunction
+
+" helper function to sort visual selection by length
+function! SortLinesByWidth() range
+  execute a:firstline . "," . a:lastline . 's/^\(.*\)$/\=strdisplaywidth( submatch(0) ) . " " . submatch(0)/'
+  execute a:firstline . "," . a:lastline . 'sort n'
+  execute a:firstline . "," . a:lastline . 's/^\d\+\s//'
+endfunction

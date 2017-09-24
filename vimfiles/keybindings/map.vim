@@ -136,6 +136,9 @@ nnoremap gk k
 " When you press gv you vimgrep after the selected text
 vnoremap <silent> gv :call VisualSelection('gv')<CR>
 
+" sort visual selection by line width
+vnoremap <silent> gW :call SortLinesByWidth()<CR><CR>
+
 " Keep search matches in the middle of the window.
 nnoremap g; g;zz
 nnoremap g, g,zz

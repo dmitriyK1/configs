@@ -12,8 +12,6 @@
 
 " TODO: replace recursive mappings to non-recursive
 
-" TODO: add sort lines by length shortcut
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " https://www.destroyallsoftware.com/talks    ( about regular expressions )

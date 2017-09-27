@@ -50,6 +50,7 @@
   smart-hungry-delete
   smart-comment
   auto-complete
+  focus-autosave-mode
   info+
   dired+
   markdown-mode+
@@ -96,6 +97,10 @@
 (use-package auto-complete
   :config
   (ac-config-default))
+
+ (use-package focus-autosave-mode
+  :config
+  (focus-autosave-mode))
 ;; --------------------------------------------------------------------------------
 
 (provide 'init-package)

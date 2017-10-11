@@ -48,3 +48,8 @@ end
 # function vim
 #   mvim -v $argv
 # end
+
+# Git find all commits unique to a current branch
+function gitu
+  git log (git rev-parse --abbrev-ref HEAD) --not (git for-each-ref --format='%(refname)' refs/heads/ | grep -v "refs/heads/"(git rev-parse --abbrev-ref HEAD))
+end

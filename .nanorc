@@ -7,7 +7,7 @@ set cutfromcursor
 set smooth
 set autoindent
 set backup
-set backupdir "~/nano-backups"
+set backupdir "~/.nano/backups"
 set historylog
 set morespace
 # set nohelp

@@ -110,7 +110,7 @@ Plug 'morhetz/gruvbox'
 " Colorschemes end
 " ================================================================================
 " Vim bundle for http://styled-components.com based javascript files.
-Plug 'styled-components/vim-styled-components'
+" Plug 'styled-components/vim-styled-components'
 
 " (Vit)ality is a plugin that makes (V)im play nicely with (i)Term 2 and (t)mux.
 Plug 'sjl/vitality.vim' "{{{

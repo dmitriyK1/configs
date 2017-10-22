@@ -30,6 +30,7 @@ alias gpf "git push --no-verify "
 alias gpu "git publish"
 # alias h "how2 -l javascript "
 
+alias nano="env LC_ALL=ru_RU.UTF-8 nano"
 alias vim "/usr/local/bin/vim"
 alias v "vim "
 alias bi "brew install "

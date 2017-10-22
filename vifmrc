@@ -449,6 +449,8 @@ nnoremap <f8> :delete<cr>
 "
 " nnoremap <left> <nop>
 
+set cpoptions=fs
+
 map <Space> :
 
 map ,se :!start gvim $HOME/AppData/Roaming/Vifm/vifmrc<cr>

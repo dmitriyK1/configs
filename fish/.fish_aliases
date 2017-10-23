@@ -1,6 +1,7 @@
 alias up ~/update.sh
 
 alias g "git"
+alias gcl="git clone"
 alias gca="git commit --amend"
 alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"
 alias gdl "git difftool | less"

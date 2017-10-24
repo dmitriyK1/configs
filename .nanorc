@@ -3,7 +3,7 @@
 # supress config file errors:
 # set quiet
 set cutfromcursor
-set casesensitive
+# set casesensitive
 # set boldtext
 set smooth
 set autoindent

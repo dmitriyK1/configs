@@ -1,0 +1,72 @@
+
+################################################################################
+#
+# R.nanorc -- nano syntax-highlighting file for R
+#
+# Origin: This file is part of the pkgutils package for R.
+#
+# Usage: This file should be placed in a directory such as /usr/share/nano/ (on
+#   Ubuntu 12.04). That nano uses syntax highlighting at all might need to be
+#   enabled separately.
+#
+# Limitations: The syntax is covered as completely as possible; for instance,
+#   all reserved words are marked in a uniform way. That R syntactical names
+#   may contain dots, however, appears to make it impossible to hightlight
+#   them properly using nano's limited regular-expression capabilities.
+#
+# NB: This syntax highlighting distinguishes between normal and Roxygen-style
+#   comments.
+#
+# (C) 2012 by Markus Goeker (markus [DOT] goeker [AT] dsmz [DOT] de)
+#
+# This program is distributed under the terms of the Gnu Public License V2.
+#   For further information, see http://www.gnu.org/licenses/gpl.html
+#
+################################################################################
+
+
+##
+syntax "R" "\.R$"
+header "^#!.*/Rscript"
+
+## Asciibetical list of reserved words, including '...', '..1' etc.
+color brightgreen "(\<(break|else|for|function|if|in|next|repeat|return|while)\>|[.]{3,3}|[.]{2,2}[0-9]+)"
+
+## Assignment operators (only the preferred '<-' and '<<-' ones)
+color green "(<){1,2}-"
+
+## Delimiters 
+color green "[\)\(,;]+|[\{\}]+|[][]+"
+
+## Boolean
+color brightblue "\<(TRUE|FALSE|NA)\>"
+
+## Other special constants
+color brightblue "\<(Inf|NA_character_|NA_complex_|NA_integer_|NA_real_|NaN|NULL)\>"
+
+## Special operators (infix operators)
+color brightcyan "%[^%]*%"
+
+## Integers
+color brightred "(\b|-)[0-9]+[iL]?\b"
+
+## Floating-point numbers
+color brightred "(\b|-)([0-9]+[Ee][-+]?[0-9]+|([0-9]*\.[0-9]+|[0-9]+\.)([Ee][-+]?[0-9]+)?)[i]?\b"
+
+## Backtic-quoted names
+color brightmagenta "`[^`]*`"
+
+## Unevaluated words (as occurring in '$' and '@' operators)
+color brightwhite "[@$][a-zA-Z.][a-zA-Z0-9._]*"
+
+## Strings, double-quoted
+color brightyellow ""([^"]|(\\"))*""
+
+## Strings, single-quoted
+color brightyellow "'([^']|(\\'))*'"
+
+## Comments
+color magenta "#[^'].*$" "#$"
+
+## Special comments (Roxygen-style)
+color cyan "#'.*$"

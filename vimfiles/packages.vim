@@ -24,6 +24,13 @@ call plug#begin()
 " ================================================================================
 " Colorschemes:
 " ================================================================================
+Plug 'jacoborus/tender.vim'
+Plug 'Badacadabra/vim-archery'
+Plug 'nightsense/office'
+Plug 'nightsense/seagrey'
+Plug 'nightsense/forgotten'
+Plug 'nightsense/vrunchbang'
+Plug 'nightsense/carbonized'
 Plug 'ashfinal/vim-colors-violet'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'rakr/vim-one'

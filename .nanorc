@@ -11,7 +11,7 @@ set backup
 set backupdir "~/.nano/backups"
 set historylog
 set morespace
-# set nohelp
+set nohelp
 set nowrap
 set softwrap
 set smarthome

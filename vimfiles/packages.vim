@@ -120,8 +120,8 @@ Plug 'morhetz/gruvbox'
 " Plug 'styled-components/vim-styled-components'
 
 " (Vit)ality is a plugin that makes (V)im play nicely with (i)Term 2 and (t)mux.
-Plug 'sjl/vitality.vim' "{{{
-  let g:vitality_always_assume_iterm = 1
+" Plug 'sjl/vitality.vim' "{{{
+"  let g:vitality_always_assume_iterm = 1
 " }}}
 
 " Ease your git worflow within vim

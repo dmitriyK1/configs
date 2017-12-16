@@ -44,6 +44,7 @@ alias gcp "git cherry-pick "
 alias gcf "git commit --no-verify -m "
 alias gpf "git push --no-verify "
 alias gpu "git publish"
+alias gtg "git tag"
 # alias h "how2 -l javascript "
 
 alias nano="env LC_ALL=ru_RU.UTF-8 nano"

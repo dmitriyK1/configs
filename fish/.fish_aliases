@@ -14,7 +14,13 @@ alias gsy "git sync "
 alias gb "git branch "
 alias gbd "git branch -D"
 alias gbs "git branches"
-alias gbl "git blame"
+alias gst "git stash"
+
+#alias gbl "git blame"
+# requires `gem install git-blame-color`
+# https://rubygems.org/gems/git-blame-color/versions/0.1.0
+
+alias gbl "git-blame-color"
 alias gc "git commit -m "
 alias gco "git checkout "
 alias gch "git checkout "

@@ -2,6 +2,7 @@ alias up ~/update.sh
 
 alias g "git"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"
+alias gls="git log -S"
 alias gcl="git clone"
 alias gca="git commit --amend"
 alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"

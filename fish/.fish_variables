@@ -6,6 +6,7 @@ set EDITOR vim
 
 #  http://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before/
 # Use ripgrep to list filenames for fzf & list directories with bfs
-set --export FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --smart-case --follow --glob "!{.git,node_modules}/*" 2> /dev/null'
-set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+# set --export FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --smart-case --follow --glob "!{.git,node_modules}/*" 2> /dev/null'
+set --export FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --smart-case --follow  --column --line-number --no-heading --fixed-strings --ignore-case --color "always" -g "!{.git,node_modules}/*" 2> /dev/null'
+# set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set --export FZF_ALT_C_COMMAND "bfs -type d -nohidden"

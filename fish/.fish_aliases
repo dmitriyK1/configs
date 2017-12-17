@@ -1,3 +1,4 @@
+alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias up ~/update.sh
 
 # gitu - from .fish_functions

@@ -1,5 +1,8 @@
 alias up ~/update.sh
 
+# gitu - from .fish_functions
+# glf  - from .fish_functions
+
 alias g "git"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"
 alias gls="git log -S"

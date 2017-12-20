@@ -13,6 +13,7 @@ alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"
 alias gdl "git difftool | less"
 alias gdlc "git difftool --cached | less"
 alias gf "git fetch"
+alias gfo "git follow" # requires https://github.com/nickolasburr/git-follow
 alias gs "git status "
 alias gsy "git sync "
 alias gb "git branch "

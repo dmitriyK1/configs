@@ -20,7 +20,7 @@
 
 [core]
     excludesfile = ~/.gitignore
-    pager=less -FXRS
+    pager=less -FXRSi
     editor = vim +0 -f
 	# autocrlf = true
     compression = 9

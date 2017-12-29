@@ -24,6 +24,8 @@ alias gstp "git stash pop"
 alias gsta "git stash apply"
 alias gstl "git stash list"
 alias gsts "git stash show -p"
+alias gstp "git stash -p"
+alias gstpu "git stash push"
 
 #alias gbl "git blame"
 # requires `gem install git-blame-color`

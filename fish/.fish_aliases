@@ -5,6 +5,7 @@ alias up ~/update.sh
 # glf  - from .fish_functions
 
 alias g "git"
+alias gi "git init"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"
 alias gls="git log -S"
 alias gcl="git clone"

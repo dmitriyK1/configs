@@ -1,6 +1,10 @@
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias up ~/update.sh
 
+alias ns "npm start"
+alias ni "npm i"
+alias nt "npm t"
+
 # gitu - from .fish_functions
 # glf  - from .fish_functions
 

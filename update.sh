@@ -8,7 +8,7 @@ echo 'start updating ...'
 
 echo 'synchronizing configs'
 cd ~/Development/configs
-git sync
+legit sync
 
 echo 'updating vim'
 vim +PlugUpgrade +PlugUpdate +qall

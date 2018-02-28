@@ -1,6 +1,7 @@
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias up ~/update.sh
 
+alias n "npm"
 alias ns "npm start"
 alias ni "npm i"
 alias nt "npm t"

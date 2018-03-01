@@ -11,6 +11,7 @@ alias nr "npm run"
 # glf  - from .fish_functions
 
 alias g "git"
+alias gt "git checkout -"
 alias gi "git init"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"
 alias gls="git log -S"

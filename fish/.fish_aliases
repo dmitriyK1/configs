@@ -64,6 +64,7 @@ alias gpu "git publish"
 alias gtg "git tag"
 # alias h "how2 -l javascript "
 
+alias cd- "cd -"
 alias nano="env LC_ALL=ru_RU.UTF-8 nano"
 alias vim "/usr/local/bin/vim"
 alias v "vim "

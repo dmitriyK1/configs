@@ -6,6 +6,7 @@ alias ns "npm start"
 alias ni "npm i"
 alias nt "npm t"
 alias nr "npm run"
+alias nl "npm link"
 
 # gitu - from .fish_functions
 # glf  - from .fish_functions

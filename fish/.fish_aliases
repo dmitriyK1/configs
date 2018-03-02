@@ -10,6 +10,7 @@ alias nr "npm run"
 alias nl "npm link"
 alias nul "npm unlink"
 alias no "npm outdated"
+alias nup "npm upgrade"
 
 # gitu - from .fish_functions
 # glf  - from .fish_functions

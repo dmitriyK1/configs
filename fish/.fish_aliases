@@ -4,9 +4,11 @@ alias up ~/update.sh
 alias n "npm"
 alias ns "npm start"
 alias ni "npm i"
+alias nu "npm uninstall"
 alias nt "npm t"
 alias nr "npm run"
 alias nl "npm link"
+alias nul "npm unlink"
 
 # gitu - from .fish_functions
 # glf  - from .fish_functions

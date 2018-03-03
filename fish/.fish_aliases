@@ -4,6 +4,7 @@ alias up ~/update.sh
 alias n "npm"
 alias ns "npm start"
 alias ni "npm i"
+alias nig "npm i -g"
 alias nid "npm i -D"
 alias nu "npm uninstall"
 alias nud "npm uninstall -D"

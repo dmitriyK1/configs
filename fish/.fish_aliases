@@ -19,6 +19,8 @@ alias nup "npm upgrade"
 # glf  - from .fish_functions
 
 alias g "git"
+alias gwa "git worktree add"
+alias gwp "git worktree prune"
 alias gt "git checkout -"
 alias gi "git init"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"

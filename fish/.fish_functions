@@ -58,3 +58,8 @@ end
 function gdh
   git diff $argv HEAD
 end
+
+# Diff current branch with specified branch using difftool
+function gdlh
+  git difftool $argv HEAD | less
+end

@@ -19,7 +19,8 @@ alias nup "npm upgrade"
 # glf  - from .fish_functions
 
 alias g "git"
-alias gh "git rev-parse --verify HEAD"
+# alias gh "git rev-parse --verify HEAD"
+alias gh "git log --pretty=format:'%h' -n 1"
 alias gwa "git worktree add"
 alias gwp "git worktree prune"
 alias gwl "git worktree list"

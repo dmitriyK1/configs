@@ -47,4 +47,5 @@ map ,ga :action GotoAction<CR>
 map ,gf :action GotoFile<CR>
 map ,gs :action GotoSymbol<CR>
 
+map ,pi :action WelcomeScreen.Plugins<CR>
 map ,pu :action CheckForUpdate<CR>

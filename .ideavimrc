@@ -32,8 +32,16 @@ imap <M-;> <End>;<Esc>
 " Git
 map ,Gf :action Git.Fetch<CR>
 map ,Gpl :action Git.Pull<CR>
+map ,Gm :action Git.Merge<CR>
 map ,Gd :action Compare.SameVersion<CR>
 map ,Gc :action CheckinProject<CR>
+map ,Gst :action Git.Stash<CR>
+map ,Gust :action Git.Unstash<CR>
+map ,Grb :action Git.Rebase<CR>
+map ,Gre :action Git.Reset<CR>
+map ,Gb :action Git.CreateNewBranch<CR>
+map ,GR :action Git.Configure.Remotes<CR>
+map ,Gbs :action Git.Branches<CR>
 
 " Refactorings
 map ,ri :action Inline<CR>
@@ -46,6 +54,7 @@ map ,ro :action OptimizeImports<CR>
 map ,ga :action GotoAction<CR>
 map ,gf :action GotoFile<CR>
 map ,gs :action GotoSymbol<CR>
+map ,gu :action FindUsages<CR>
 
 map ,pi :action WelcomeScreen.Plugins<CR>
 map ,pu :action CheckForUpdate<CR>

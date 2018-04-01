@@ -28,3 +28,23 @@ nmap dJ dG
 nmap dK dgg
 nmap <M-;> A;<Esc>
 imap <M-;> <End>;<Esc>
+
+" Git
+map ,Gf :action Git.Fetch<CR>
+map ,Gpl :action Git.Pull<CR>
+map ,Gd :action Compare.SameVersion<CR>
+map ,Gc :action CheckinProject<CR>
+
+" Refactorings
+map ,ri :action Inline<CR>
+map ,rr :action RenameElement<CR>
+map ,rv :action IntroduceVariable<CR>
+map ,rm :action Move<CR>
+map ,ro :action OptimizeImports<CR>
+
+" Goto
+map ,ga :action GotoAction<CR>
+map ,gf :action GotoFile<CR>
+map ,gs :action GotoSymbol<CR>
+
+map ,pu :action CheckForUpdate<CR>

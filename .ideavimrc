@@ -65,3 +65,4 @@ map ,pu :action CheckForUpdate<CR>
 map crs :action StringManipulation.ToSnakeCaseOrCamelCase<CR>
 map crp :action StringManipulation.ToPascalCaseOrCamelCase<CR>
 map crh :action StringManipulation.ToHyphenCaseOrCamelCase<CR>
+map crt :action StringManipulation.SwitchStyleAction<CR>

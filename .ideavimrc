@@ -44,6 +44,7 @@ map ,Gn :action Git.CreateNewBranch<CR><Esc>
 map ,GR :action Git.Configure.Remotes<CR>
 map ,GB :action Git.Branches<CR><Esc>
 map ,Gl :action Vcs.Show.Log<CR>
+map ,Ga :action Git.Add<CR>
 
 " Refactorings
 map ,ri :action Inline<CR>
@@ -58,6 +59,7 @@ map ,gf :action GotoFile<CR>
 map ,gs :action GotoSymbol<CR>
 map ,gu :action FindUsages<CR>
 
+" Plugins
 map ,pi :action WelcomeScreen.Plugins<CR>
 map ,pu :action CheckForUpdate<CR>
 

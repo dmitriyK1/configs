@@ -52,6 +52,8 @@ map ,rr :action RenameElement<CR>
 map ,rv :action IntroduceVariable<CR>
 map ,rm :action Move<CR>
 map ,ro :action OptimizeImports<CR>
+map ,rs :action SurroundWith<CR>
+map ,re :action SurroundWithEmmet<CR>
 
 " Goto
 map ,fa :action GotoAction<CR>

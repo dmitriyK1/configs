@@ -85,6 +85,10 @@ alias gpu "git publish"
 alias gtg "git tag"
 # alias h "how2 -l javascript "
 
+# requires brew install gron
+alias norg="gron --ungron"
+alias ungron="gron --ungron"
+
 alias cd- "cd -"
 alias cdr "cd (git rev-parse --show-toplevel)"
 alias nano="env LC_ALL=ru_RU.UTF-8 nano"

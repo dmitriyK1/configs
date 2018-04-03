@@ -58,6 +58,7 @@ map ,fa :action GotoAction<CR>
 map ,ff :action GotoFile<CR>
 map ,fs :action GotoSymbol<CR>
 map ,fu :action FindUsages<CR>
+map ,fp :action ManageRecentProjects<CR>
 
 " Plugins
 map ,pi :action WelcomeScreen.Plugins<CR>
@@ -68,3 +69,6 @@ map crs :action StringManipulation.ToSnakeCaseOrCamelCase<CR>
 map crp :action StringManipulation.ToPascalCaseOrCamelCase<CR>
 map crh :action StringManipulation.ToHyphenCaseOrCamelCase<CR>
 map crt :action StringManipulation.SwitchStyleAction<CR>
+
+" Close
+map ,cp :action CloseProject<CR>

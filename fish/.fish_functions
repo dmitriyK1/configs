@@ -63,3 +63,7 @@ end
 function gdlh
   git difftool $argv HEAD | less
 end
+
+function gro
+  gron $argv[1] | fgrep $argv[2] | norg
+end

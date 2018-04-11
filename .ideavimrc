@@ -85,3 +85,6 @@ map ,tv :action ActivateVersionControlToolWindow<CR>
 
 map [<Space> O<Esc>j,,
 map ]<Space> o<Esc>k,,
+
+map [x k0dd,,
+map ]x j0ddk,,

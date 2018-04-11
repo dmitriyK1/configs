@@ -74,3 +74,14 @@ map crt :action StringManipulation.SwitchStyleAction<CR>
 
 " Close
 map ,cp :action CloseProject<CR>
+
+" tool windows
+map ,te :action ActivateEventLogToolWindow<CR>
+map ,tp :action ActivateProjectToolWindow<CR>
+map ,ts :action ActivateStructureToolWindow<CR>
+map ,tt :action ActivateTerminalToolWindow<CR>
+map ,to :action ActivateTODOToolWindow<CR>
+map ,tv :action ActivateVersionControlToolWindow<CR>
+
+map [<Space> O<Esc>j,,
+map ]<Space> o<Esc>k,,

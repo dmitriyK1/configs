@@ -19,6 +19,7 @@ brew upgrade
 brew cleanup
 
 echo 'updating fish shell'
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fisher up
 fish_update_completions
 omf update

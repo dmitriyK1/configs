@@ -17,6 +17,7 @@ alias nl "npm link"
 alias nul "npm unlink"
 alias no "npm outdated"
 alias nup "npm upgrade"
+alias ndd "npm dedupe"
 
 # gitu - from .fish_functions
 # glf  - from .fish_functions

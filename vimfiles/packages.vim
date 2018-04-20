@@ -24,18 +24,18 @@ call plug#begin()
 " ================================================================================
 " Colorschemes:
 " ================================================================================
-Plug 'jacoborus/tender.vim'
-Plug 'Badacadabra/vim-archery'
-Plug 'nightsense/office'
-Plug 'nightsense/seagrey'
-Plug 'nightsense/forgotten'
-Plug 'nightsense/vrunchbang'
-Plug 'nightsense/carbonized'
+" Plug 'jacoborus/tender.vim'
+" Plug 'Badacadabra/vim-archery'
+" Plug 'nightsense/office'
+" Plug 'nightsense/seagrey'
+" Plug 'nightsense/forgotten'
+" Plug 'nightsense/vrunchbang'
+" Plug 'nightsense/carbonized'
 Plug 'ashfinal/vim-colors-violet'
 Plug 'liuchengxu/space-vim-dark'
-Plug 'rakr/vim-one'
+" Plug 'rakr/vim-one'
 Plug 'altercation/vim-colors-solarized'
-Plug 'KeitaNakamura/neodark.vim'
+" Plug 'KeitaNakamura/neodark.vim'
 Plug 'trevordmiller/nova-vim'
 Plug 'morhetz/gruvbox'
 " Plug 'dbb/vim-gummybears-colorscheme'
@@ -125,7 +125,7 @@ Plug 'morhetz/gruvbox'
 " }}}
 
 " Ease your git worflow within vim
-Plug 'jreybert/vimagit' "{{{
+" Plug 'jreybert/vimagit' "{{{
   let g:magit_default_fold_level = 2
   let g:magit_refresh_gitgutter = 1
 " }}}
@@ -137,13 +137,13 @@ Plug 'sjl/splice.vim'
 Plug 'valloric/MatchTagAlways'
 
 " Argumentative aids with manipulating and moving between function arguments
-Plug 'PeterRincker/vim-argumentative' "{{{
+" Plug 'PeterRincker/vim-argumentative' "{{{
   nmap <; <Plug>Argumentative_MoveLeft
   nmap >; <Plug>Argumentative_MoveRight
 " }}}
 
 " Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
-Plug 'junegunn/vim-peekaboo' "{{{
+" Plug 'junegunn/vim-peekaboo' "{{{
   let g:peekaboo_ins_prefix = '<c-x>'
 " }}}
 
@@ -170,12 +170,12 @@ Plug 'bling/vim-bufferline' "{{{
 " search pattern.
 " This pattern can be the word under the cursor, the last search pattern,
 " a regular expression or spelling errors.
-Plug 'embear/vim-foldsearch'
+" Plug 'embear/vim-foldsearch'
 
 " Interactive command execution in Vim (dependency)
 " If you use vim-plug, you can update and build vimproc automatically:
 "    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'Shougo/vimproc.vim'
+" Plug 'Shougo/vimproc.vim'
 
 " Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
 " Then whenever you are in the insert mode and paste into your terminal
@@ -195,7 +195,7 @@ Plug 'osyo-manga/vim-over' "{{{
 " }}}
 
 " gitk for Vim
-Plug 'gregsexton/gitv', { 'on': 'Gitv' } "{{{
+" Plug 'gregsexton/gitv', { 'on': 'Gitv' } "{{{
   map <silent> <F10> :Gitv<CR>
   vmap <silent> <F10> :Gitv<CR>
 " }}}
@@ -215,10 +215,10 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
 
 " Press <C-G>c in insert mode to toggle a temporary software caps lock, or gC
 " in normal mode to toggle a slightly more permanent one.
-Plug 'tpope/vim-capslock'
+" Plug 'tpope/vim-capslock'
 
 " :UndotreeToggle
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
+" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
   nnoremap <silent> <F2> :UndotreeToggle<cr>:UndotreeFocus<cr>
 " }}}
 
@@ -228,7 +228,7 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
 "   <ctrl-k> => Up
 "   <ctrl-l> => Right
 "   <ctrl-\> => Previous split
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 
 " EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
@@ -245,7 +245,7 @@ Plug 'editorconfig/editorconfig-vim'
   " Wall: Write every open window. Handy for kicking off tools like guard.
   " SudoWrite: Write a privileged file with sudo.
   " SudoEdit: Edit a privileged file with sudo.
-Plug 'tpope/vim-eunuch'
+" Plug 'tpope/vim-eunuch'
 
 " toggling settings mappings
 Plug 'tpope/vim-unimpaired' "{{{
@@ -274,17 +274,17 @@ Plug 'vim-scripts/UnconditionalPaste'
 
 " A Vim plugin for focussing on a selected region
 " <Leader>nr       - Open the current visual selection in a new narrowed window
-Plug 'chrisbra/NrrwRgn'
+" Plug 'chrisbra/NrrwRgn'
 
 " apply macro to a multiple files at once
-Plug 'Olical/vim-enmasse'
+" Plug 'Olical/vim-enmasse'
 
 " A vim plugin for Flow
-Plug 'flowtype/vim-flow' "{{{
-  let g:flow#enable = 0
-  let g:flow#errjmp = 1
+" Plug 'flowtype/vim-flow' "{{{
+  " let g:flow#enable = 0
+  " let g:flow#errjmp = 1
 
-  nmap <leader>fl :FlowToggle<cr>
+  " nmap <leader>fl :FlowToggle<cr>
 " }}}
 
 " Better whitespace highlighting for Vim
@@ -301,10 +301,10 @@ Plug 'vim-scripts/DeleteTrailingWhitespace' "{{{
 Plug 'vim-scripts/CursorLineCurrentWindow'
 
 " Fast and Easy Find and Replace Across Multiple Files
-Plug 'dkprice/vim-easygrep'
+" Plug 'dkprice/vim-easygrep'
 
 " Personal Wiki for Vim
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 " easily search for, substitute, and abbreviate multiple variants of a word
 " MixedCase (crm), camelCase (crc), snake_case (crs), and UPPER_CASE (cru)
@@ -340,7 +340,7 @@ Plug 'kana/vim-textobj-function'
 Plug 'kana/vim-textobj-line'
 
 " Mappings for simultaneously pressed keys
-Plug 'kana/vim-arpeggio'
+" Plug 'kana/vim-arpeggio'
 
 " ac selects a comment including the comment delimiters
 " ic selects just the comment content
@@ -375,7 +375,7 @@ Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
 " Use your favorite grep tool (ag, ack, git grep, ripgrep, pt, sift, findstr,
 " grep) to start an asynchronous search. All matches will be put in a quickfix
 " or location list.
-Plug 'mhinz/vim-grepper' "{{{
+" Plug 'mhinz/vim-grepper' "{{{
   let g:grepper = {
       \ 'tools':     ['ag', 'csearch', 'findstr'],
       \ 'dispatch':  1,
@@ -457,7 +457,7 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 
 " helps to isolate a particular fold into its own context
 " q - quit temporary buffer
-Plug 'vasconcelloslf/vim-foldfocus' "{{{
+" Plug 'vasconcelloslf/vim-foldfocus' "{{{
   nmap <S-CR> :call FoldFocus('e')<CR>
   nmap <Leader><CR> :call FoldFocus('vnew')<CR>
 " }}}
@@ -478,7 +478,7 @@ Plug 'tpope/vim-dispatch'
 
 " Vim plugin that displays tags in a window, ordered by scope
 " Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } "{{{
-Plug 'majutsushi/tagbar'  "{{{
+" Plug 'majutsushi/tagbar'  "{{{
   nmap <F8> :TagbarToggle<cr>
 " }}}
 
@@ -523,7 +523,7 @@ Plug 'vim-scripts/LargeFile'
 
 " A vim plugin to perform diffs on blocks of code
 " :Linediff
-Plug 'AndrewRadev/linediff.vim', { 'on': 'Linediff' }
+" Plug 'AndrewRadev/linediff.vim', { 'on': 'Linediff' }
 
 " HTML abbreviations (similar to emmet)
 " <C-X><Space>  <foo>^</foo>
@@ -533,17 +533,17 @@ Plug 'AndrewRadev/linediff.vim', { 'on': 'Linediff' }
 " <C-X>@        <link rel="stylesheet" ...> (mnemonic: @ is used for importing in a CSS file)
 " <C-X>#        <meta http-equiv="Content-Type" ... />
 " <C-X>$        <script src="/javascripts/^.js"></script>
-Plug 'tpope/vim-ragtag' "{{{
+" Plug 'tpope/vim-ragtag' "{{{
   let g:ragtag_global_maps = 1
 " }}}
 
 " <Leader>z    fold away lines not matching the last search pattern.
 " <Leader>iz   fold away lines that do match the last search pattern (inverse folding).
 " <Leader>Z    restore the previous fold settings
-Plug 'vim-scripts/searchfold.vim'
+" Plug 'vim-scripts/searchfold.vim'
 
 " Git wrapper
-Plug 'tpope/vim-fugitive' "{{{
+" Plug 'tpope/vim-fugitive' "{{{
   nnoremap <leader>ga :Git add %:p<CR><CR>
   nnoremap <leader>gs :Gstatus<CR>
   nnoremap <leader>gc :Gcommit -v -q<CR>
@@ -562,7 +562,7 @@ Plug 'tpope/vim-fugitive' "{{{
 " }}}
 
 " git runtime files
-Plug 'tpope/vim-git'
+" Plug 'tpope/vim-git'
 
 " quoting/parenthesizing made simple
 " ysiw(  surround an inner word with ( )
@@ -708,11 +708,11 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "{{{
 " }}}
 
 " Vim plugin for the Perl module / CLI script 'ack'
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 
 " NERDtree + ack.vim
 " press Ms on a directory
-Plug 'tyok/nerdtree-ack'
+" Plug 'tyok/nerdtree-ack'
 
 " This plugin aims at making NERDTree feel like a true panel, independent of tabs.
 " Just one NERDTree, always and ever. It will always look the same in all tabs,
@@ -741,11 +741,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
 
 " html & css abbreviations
 " <c-e>,
-Plug 'mattn/emmet-vim' "{{{
-  let g:user_emmet_install_global = 0
-  let g:user_emmet_leader_key = '<C-e>'
+" Plug 'mattn/emmet-vim' "{{{
+  " let g:user_emmet_install_global = 0
+  " let g:user_emmet_leader_key = '<C-e>'
 
-  autocmd FileType html,css,scss,javascript,jsx EmmetInstall
+  " autocmd FileType html,css,scss,javascript,jsx EmmetInstall
 " }}}
 
 " :Autoformat
@@ -758,7 +758,7 @@ Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
 
 " A Vim plugin for interacting with Heroku
 " :Hk
-Plug 'tpope/vim-heroku'
+" Plug 'tpope/vim-heroku'
 
 " Comment plugin
 Plug 'tomtom/tcomment_vim'
@@ -836,7 +836,7 @@ Plug 'sheerun/vim-polyglot' "{{{
 
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'html', 'typescript', 'php'] } "{{{
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'typescript', 'php'] } "{{{
-  let g:used_javascript_libs = 'jquery, underscore, angularjs, angularui, react'
+  let g:used_javascript_libs = 'lodash, react'
 " }}}
 
 " Maintains a history of previous yanks, changes and deletes
@@ -897,7 +897,7 @@ Plug 'exvim/ex-autocomplpop' "{{{
 " report errors in the location window.
 " :ESLint
 " requires .eslintrc in project directory
-Plug 'bigfish/vim-eslint', { 'on': 'ESLint' }
+" Plug 'bigfish/vim-eslint', { 'on': 'ESLint' }
 
 " file browser
 Plug 'tpope/vim-vinegar'
@@ -982,7 +982,7 @@ endif
 if !exists('g:is_home_env')
 
   " A Vim plugin for visually displaying indent levels in code
-  Plug 'nathanaelkane/vim-indent-guides' "{{{
+  " Plug 'nathanaelkane/vim-indent-guides' "{{{
     " let g:indent_guides_guide_size = 1
     " let g:indent_guides_start_level = 2
     " let g:indent_guides_color_change_percent = 5
@@ -990,17 +990,17 @@ if !exists('g:is_home_env')
   " }}}
 
   " Syntax checking hacks for vim
-  Plug 'vim-syntastic/syntastic' "{{{
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
+  " Plug 'vim-syntastic/syntastic' "{{{
+    " set statusline+=%#warningmsg#
+    " set statusline+=%{SyntasticStatuslineFlag()}
+    " set statusline+=%*
 
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
+    " let g:syntastic_always_populate_loc_list = 1
+    " let g:syntastic_auto_loc_list = 1
+    " let g:syntastic_check_on_open = 1
+    " let g:syntastic_check_on_wq = 0
     " let g:syntastic_javascript_checkers = ['jshint']
-    let g:syntastic_javascript_checkers = ['eslint']
+    " let g:syntastic_javascript_checkers = ['eslint']
   " }}}
 
 endif

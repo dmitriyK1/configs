@@ -27,7 +27,7 @@ inoremap AA <Esc>A
 nmap dJ dG
 nmap dK dgg
 nmap <M-;> mgA;<Esc>`g
-imap <M-;> <End>;<Esc>
+imap <M-;> <Esc>mgA;<Esc>`gi<Right>
 
 " Git
 map ,gf :action Git.Fetch<CR>

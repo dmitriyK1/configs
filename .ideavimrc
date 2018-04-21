@@ -26,7 +26,7 @@ inoremap II <Esc>I
 inoremap AA <Esc>A
 nmap dJ dG
 nmap dK dgg
-nmap <M-;> A;<Esc>
+nmap <M-;> mgA;<Esc>`g
 imap <M-;> <End>;<Esc>
 
 " Git

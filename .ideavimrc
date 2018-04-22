@@ -26,6 +26,8 @@ inoremap II <Esc>I
 inoremap AA <Esc>A
 nmap dJ dG
 nmap dK dgg
+nmap vJ vG
+nmap vK vgg
 nmap <M-;> mgA;<Esc>`g
 imap <M-;> <Esc>mgA;<Esc>`gi<Right>
 

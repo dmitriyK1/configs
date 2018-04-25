@@ -22,6 +22,8 @@ alias ndd "npm dedupe"
 # gitu - from .fish_functions
 # glf  - from .fish_functions
 
+alias fi "find . -name"
+
 alias g "git"
 # alias gh "git rev-parse --verify HEAD"
 alias gh "git log --pretty=format:'%h' -n 1"

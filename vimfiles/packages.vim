@@ -124,6 +124,10 @@ Plug 'morhetz/gruvbox'
 "  let g:vitality_always_assume_iterm = 1
 " }}}
 
+Plug 'maralla/completor.vim' "{{{
+  let g:completor_auto_trigger = 0
+"}}}
+
 " Ease your git worflow within vim
 " Plug 'jreybert/vimagit' "{{{
   let g:magit_default_fold_level = 2

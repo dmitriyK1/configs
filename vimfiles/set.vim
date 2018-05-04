@@ -110,7 +110,7 @@ set complete=.,w,b,u
 set wrapscan
 set cmdheight=1
 
-set laststatus=2
+"set laststatus=2
 
 set guioptions=acg
 

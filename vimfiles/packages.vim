@@ -151,26 +151,24 @@ Plug 'valloric/MatchTagAlways'
   let g:peekaboo_ins_prefix = '<c-x>'
 " }}}
 
-if has('gui_macvim')
-  " lean & mean status/tabline for vim that's light as air
-  Plug 'vim-airline/vim-airline' "{{{
-    let g:airline_powerline_fonts = 1
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#tabline#buffer_min_count = 2
-    let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#syntastic#enabled = 1
-  " }}}
+" lean & mean status/tabline for vim that's light as air
+Plug 'vim-airline/vim-airline' "{{{
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_min_count = 2
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#syntastic#enabled = 1
+" }}}
 
-  " a collection of themes for vim-airline
-  Plug 'vim-airline/vim-airline-themes'
+" a collection of themes for vim-airline
+Plug 'vim-airline/vim-airline-themes'
 
-  " super simple vim plugin to show the list of buffers in the command bar
-  Plug 'bling/vim-bufferline' "{{{
-    let g:bufferline_echo = 0
-    " let g:bufferline_active_buffer_left = ''
-    " let g:bufferline_active_buffer_right = ''
-  " }}}
-endif
+" super simple vim plugin to show the list of buffers in the command bar
+Plug 'bling/vim-bufferline' "{{{
+  let g:bufferline_echo = 0
+  " let g:bufferline_active_buffer_left = ''
+  " let g:bufferline_active_buffer_right = ''
+" }}}
 
 " plugin provides commands that fold away lines that don't match a specific
 " search pattern.

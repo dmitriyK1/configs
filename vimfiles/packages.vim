@@ -124,31 +124,32 @@ Plug 'morhetz/gruvbox'
 "  let g:vitality_always_assume_iterm = 1
 " }}}
 
+" Async completion framework made ease.
 Plug 'maralla/completor.vim' "{{{
   let g:completor_auto_trigger = 0
 "}}}
 
 " Ease your git worflow within vim
 " Plug 'jreybert/vimagit' "{{{
-  let g:magit_default_fold_level = 2
-  let g:magit_refresh_gitgutter = 1
+  " let g:magit_default_fold_level = 2
+  " let g:magit_refresh_gitgutter = 1
 " }}}
 
 " A Vim plugin for managing three-way merges
-Plug 'sjl/splice.vim'
+" Plug 'sjl/splice.vim'
 
 " A Vim plugin that always highlights the enclosing html/xml tags
 Plug 'valloric/MatchTagAlways'
 
 " Argumentative aids with manipulating and moving between function arguments
 " Plug 'PeterRincker/vim-argumentative' "{{{
-  nmap <; <Plug>Argumentative_MoveLeft
-  nmap >; <Plug>Argumentative_MoveRight
+  " nmap <; <Plug>Argumentative_MoveLeft
+  " nmap >; <Plug>Argumentative_MoveRight
 " }}}
 
 " Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
 " Plug 'junegunn/vim-peekaboo' "{{{
-  let g:peekaboo_ins_prefix = '<c-x>'
+  " let g:peekaboo_ins_prefix = '<c-x>'
 " }}}
 
 " lean & mean status/tabline for vim that's light as air
@@ -189,8 +190,8 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 
 " plugin to dim inactive windows
 " Plug 'blueyed/vim-diminactive' "{{{
-  let g:diminactive_filetype_blacklist = ['startify', 'git']
-  let g:diminactive_enable_focus = 1
+  " let g:diminactive_filetype_blacklist = ['startify', 'git']
+  " let g:diminactive_enable_focus = 1
 " }}}
 
 " :substitute preview
@@ -200,8 +201,8 @@ Plug 'osyo-manga/vim-over' "{{{
 
 " gitk for Vim
 " Plug 'gregsexton/gitv', { 'on': 'Gitv' } "{{{
-  map <silent> <F10> :Gitv<CR>
-  vmap <silent> <F10> :Gitv<CR>
+  " map <silent> <F10> :Gitv<CR>
+  " vmap <silent> <F10> :Gitv<CR>
 " }}}
 
 " Delete buffers and close files in Vim without closing your windows or messing up your layout
@@ -222,8 +223,9 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
 " Plug 'tpope/vim-capslock'
 
 " :UndotreeToggle
-" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
-  nnoremap <silent> <F2> :UndotreeToggle<cr>:UndotreeFocus<cr>
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
+  " nnoremap <silent> <F2> :UndotreeToggle<cr>:UndotreeFocus<cr>
+  nnoremap <silent> <M-u> :UndotreeToggle<cr>:UndotreeFocus<cr>
 " }}}
 
 " This plugin provides the following mappings which allow you to move between Vim panes and tmux splits seamlessly:
@@ -254,11 +256,11 @@ Plug 'editorconfig/editorconfig-vim'
 " toggling settings mappings
 Plug 'tpope/vim-unimpaired' "{{{
   " Bubble single lines
-  map <M-k> [e
-  map <M-j> ]e
+  " map <M-k> [e
+  " map <M-j> ]e
   " Bubble multiple lines
-  vmap <M-k> [egv
-  vmap <M-j> ]egv
+  " vmap <M-k> [egv
+  " vmap <M-j> ]egv
 " }}}
 
 " highlight conflict markers.
@@ -365,9 +367,9 @@ Plug 'wellle/targets.vim'
 " a small collection of settings,
 " commands and mappings put together to make working with the
 " location/quickfix list/window smoother.
-Plug 'romainl/vim-qf' "{{{
-  nmap <silent> <F4> <Plug>QfCtoggle
-  nmap <silent> <F7> <Plug>QfLtoggle
+" Plug 'romainl/vim-qf' "{{{
+  " nmap <silent> <F4> <Plug>QfCtoggle
+  " nmap <silent> <F7> <Plug>QfLtoggle
 " }}}
 
 " toggle true/false, && || etc
@@ -380,23 +382,23 @@ Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
 " grep) to start an asynchronous search. All matches will be put in a quickfix
 " or location list.
 " Plug 'mhinz/vim-grepper' "{{{
-  let g:grepper = {
-      \ 'tools':     ['ag', 'csearch', 'findstr'],
-      \ 'dispatch':  1,
-      \ 'open':      1,
-      \ 'switch':    0,
-      \ 'jump':      0,
-      \ 'ag': {
-      \   'grepprg': 'ag --nogroup --nocolor --column',
-      \   'grepformat': '%f:%l:%c:%m'
-      \ },
-      \ 'csearch': {
-      \   'grepprg': 'csearch -n',
-      \   'grepformat': '%f:%l:%m'
-      \ }}
+  " let g:grepper = {
+  "     \ 'tools':     ['ag', 'csearch', 'findstr'],
+  "     \ 'dispatch':  1,
+  "     \ 'open':      1,
+  "     \ 'switch':    0,
+  "     \ 'jump':      0,
+  "     \ 'ag': {
+  "     \   'grepprg': 'ag --nogroup --nocolor --column',
+  "     \   'grepformat': '%f:%l:%c:%m'
+  "     \ },
+  "     \ 'csearch': {
+  "     \   'grepprg': 'csearch -n',
+  "     \   'grepformat': '%f:%l:%m'
+  "     \ }}
 
   " nmap gs  <plug>(GrepperOperator)
-  xmap gs  <plug>(GrepperOperator)
+  " xmap gs  <plug>(GrepperOperator)
 "}}}
 
 " vim search status (similar to indexedsearch)
@@ -405,8 +407,8 @@ Plug 'osyo-manga/vim-anzu' "{{{
 " }}}
 
 " improved */# search
-Plug 'haya14busa/vim-asterisk' "{{{
-  let g:asterisk#keeppos = 1
+" Plug 'haya14busa/vim-asterisk' "{{{
+"   let g:asterisk#keeppos = 1
 " }}}
 
 " incrementally highlights ALL pattern matches unlike default 'incsearch'
@@ -435,15 +437,15 @@ Plug 'haya14busa/incsearch.vim' "{{{
   map n <Plug>(incsearch-nohl)<Plug>(anzu-mode-n)
   map N <Plug>(incsearch-nohl)<Plug>(anzu-mode-N)
 
-  map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
-  map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
-  map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
-  map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
-
-  map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
-  map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
-  map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
-  map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+  " map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
+  " map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
+  " map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
+  " map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
+  "
+  " map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+  " map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+  " map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+  " map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
 "}}}
 
 " vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
@@ -538,7 +540,7 @@ Plug 'vim-scripts/LargeFile'
 " <C-X>#        <meta http-equiv="Content-Type" ... />
 " <C-X>$        <script src="/javascripts/^.js"></script>
 " Plug 'tpope/vim-ragtag' "{{{
-  let g:ragtag_global_maps = 1
+  " let g:ragtag_global_maps = 1
 " }}}
 
 " <Leader>z    fold away lines not matching the last search pattern.
@@ -548,21 +550,21 @@ Plug 'vim-scripts/LargeFile'
 
 " Git wrapper
 " Plug 'tpope/vim-fugitive' "{{{
-  nnoremap <leader>ga :Git add %:p<CR><CR>
-  nnoremap <leader>gs :Gstatus<CR>
-  nnoremap <leader>gc :Gcommit -v -q<CR>
-  nnoremap <leader>gt :Gcommit -v -q %:p<CR>
-  nnoremap <leader>gd :Gdiff<CR>
-  nnoremap <leader>ge :Gedit<CR>
-  nnoremap <leader>gr :Gread<CR>
-  nnoremap <leader>gw :Gwrite<CR><CR>
-  nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-  nnoremap <leader>gp :Ggrep<Space>
-  nnoremap <leader>gm :Gmove<Space>
-  nnoremap <leader>gb :Git branch<Space>
-  nnoremap <leader>go :Git checkout<Space>
-  nnoremap <leader>gps :Dispatch! git push<CR>
-  nnoremap <leader>gpl :Dispatch! git pull<CR>
+  " nnoremap <leader>ga :Git add %:p<CR><CR>
+  " nnoremap <leader>gs :Gstatus<CR>
+  " nnoremap <leader>gc :Gcommit -v -q<CR>
+  " nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+  " nnoremap <leader>gd :Gdiff<CR>
+  " nnoremap <leader>ge :Gedit<CR>
+  " nnoremap <leader>gr :Gread<CR>
+  " nnoremap <leader>gw :Gwrite<CR><CR>
+  " nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+  " nnoremap <leader>gp :Ggrep<Space>
+  " nnoremap <leader>gm :Gmove<Space>
+  " nnoremap <leader>gb :Git branch<Space>
+  " nnoremap <leader>go :Git checkout<Space>
+  " nnoremap <leader>gps :Dispatch! git push<CR>
+  " nnoremap <leader>gpl :Dispatch! git pull<CR>
 " }}}
 
 " git runtime files
@@ -677,38 +679,38 @@ Plug 'ryanoasis/vim-devicons' "{{{
   endif
 " }}}
 
-Plug 'scrooloose/nerdtree' "{{{
-  let g:NERDTreeMapMenu='M'
-  let g:nerdtree_tabs_open_on_gui_startup = 0
-  let NERDTreeIgnore=['\.pyc$', '\~$']
-  let g:NERDTreeMinimalUI = 1
-  let g:NERDTreeWinSize = 24
-  let g:NERDTreeHijackNetrw = 1
-  " let g:NERDTreeDirArrowExpandable = '▸'
-  " let g:NERDTreeDirArrowCollapsible = '▾'
-  let NERDTreeDirArrowExpandable = " "
-  let NERDTreeDirArrowCollapsible = " "
-
-  nnoremap <silent> <F1> :call NERDTreeFindToggle()<CR>
-  inoremap <silent> <F1> <Esc>:call NERDTreeFindToggle()<CR>
-  vnoremap <silent> <F1> <Esc>:call NERDTreeFindToggle()<CR>
-
-  function! NERDTreeFindToggle()
-    if IsNERDTreeOpen()
-      NERDTreeTabsClose
-    else
-      NERDTreeFind
-    endif
-  endfunction
-
-  function! IsNERDTreeOpen()
-    return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-  endfunction
-"}}}
+" Plug 'scrooloose/nerdtree' "{{{
+"   let g:NERDTreeMapMenu='M'
+"   let g:nerdtree_tabs_open_on_gui_startup = 0
+"   let NERDTreeIgnore=['\.pyc$', '\~$']
+"   let g:NERDTreeMinimalUI = 1
+"   let g:NERDTreeWinSize = 24
+"   let g:NERDTreeHijackNetrw = 1
+"   " let g:NERDTreeDirArrowExpandable = '▸'
+"   " let g:NERDTreeDirArrowCollapsible = '▾'
+"   let NERDTreeDirArrowExpandable = " "
+"   let NERDTreeDirArrowCollapsible = " "
+"
+"   nnoremap <silent> <F1> :call NERDTreeFindToggle()<CR>
+"   inoremap <silent> <F1> <Esc>:call NERDTreeFindToggle()<CR>
+"   vnoremap <silent> <F1> <Esc>:call NERDTreeFindToggle()<CR>
+"
+"   function! NERDTreeFindToggle()
+"     if IsNERDTreeOpen()
+"       NERDTreeTabsClose
+"     else
+"       NERDTreeFind
+"     endif
+"   endfunction
+"
+"   function! IsNERDTreeOpen()
+"     return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+"   endfunction
+" "}}}
 
 " Extra syntax and highlight for nerdtree files
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "{{{
-  let g:NERDTreeFileExtensionHighlightFullName = 1
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "{{{
+  " let g:NERDTreeFileExtensionHighlightFullName = 1
 " }}}
 
 " Vim plugin for the Perl module / CLI script 'ack'
@@ -722,25 +724,25 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "{{{
 " Just one NERDTree, always and ever. It will always look the same in all tabs,
 " including expanded/collapsed nodes, scroll position etc.
 " :NERDTreeTabsToggle
-Plug 'jistr/vim-nerdtree-tabs' "{{{
-  nnoremap <silent> <M-t> :NERDTreeTabsToggle<CR>
-  inoremap <silent> <M-t> <Esc>:NERDTreeTabsToggle<CR>
-  vnoremap <silent> <M-t> <Esc>:NERDTreeTabsToggle<CR>
+" Plug 'jistr/vim-nerdtree-tabs' "{{{
+"   nnoremap <silent> <M-t> :NERDTreeTabsToggle<CR>
+"   inoremap <silent> <M-t> <Esc>:NERDTreeTabsToggle<CR>
+"   vnoremap <silent> <M-t> <Esc>:NERDTreeTabsToggle<CR>
 " }}}
 
 " NERDTree git status support
-Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
-  let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+" Plug 'Xuyuanp/nerdtree-git-plugin' " {{{
+"   let g:NERDTreeIndicatorMapCustom = {
+"     \ "Modified"  : "✹",
+"     \ "Staged"    : "✚",
+"     \ "Untracked" : "✭",
+"     \ "Renamed"   : "➜",
+"     \ "Unmerged"  : "═",
+"     \ "Deleted"   : "✖",
+"     \ "Dirty"     : "✗",
+"     \ "Clean"     : "✔︎",
+"     \ "Unknown"   : "?"
+"     \ }
 " }}}
 
 " html & css abbreviations
@@ -757,7 +759,8 @@ Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
   " To disable the fallback to vim's indent file, set the following variable to be 0.
   let g:autoformat_autoindent = 0
 
-  noremap <F3> :Autoformat<cr>
+  " noremap <F3> :Autoformat<cr>
+  noremap <M-a> :Autoformat<cr>
 " }}}
 
 " A Vim plugin for interacting with Heroku
@@ -839,31 +842,31 @@ Plug 'sheerun/vim-polyglot' "{{{
 " }}}
 
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'html', 'typescript', 'php'] } "{{{
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'typescript', 'php'] } "{{{
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'typescript'] } "{{{
   let g:used_javascript_libs = 'lodash, react'
 " }}}
 
 " Maintains a history of previous yanks, changes and deletes
 " :YRSearch
-Plug 'vim-scripts/YankRing.vim' "{{{
-  let g:yankring_replace_n_pkey = '<M-p>'
-  let g:yankring_replace_n_nkey = '<M-n>'
-  nnoremap <silent> <F9> :YRShow<CR>
+" Plug 'vim-scripts/YankRing.vim' "{{{
+"   let g:yankring_replace_n_pkey = '<M-p>'
+"   let g:yankring_replace_n_nkey = '<M-n>'
+"   nnoremap <silent> <F9> :YRShow<CR>
 " }}}
 
 " use CTRL-A/CTRL-X to increment dates, times, and more
-Plug 'tpope/vim-speeddating'
+" Plug 'tpope/vim-speeddating'
 
 " This extension allows you to use jsbeautifier inside vim to quickly format
 " javascript, html and css files.
-Plug 'maksimr/vim-jsbeautify' "{{{
-  map <leader>B :call JsBeautify()<cr>
-
-  autocmd FileType javascript vnoremap <buffer>  <c-f> : call RangeJsBeautify()<cr>
-  autocmd FileType json vnoremap <buffer> <c-f>        : call RangeJsonBeautify()<cr>
-  autocmd FileType jsx vnoremap <buffer> <c-f>         : call RangeJsxBeautify()<cr>
-  autocmd FileType html vnoremap <buffer> <c-f>        : call RangeHtmlBeautify()<cr>
-  autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<cr>
+" Plug 'maksimr/vim-jsbeautify' "{{{
+"   map <leader>B :call JsBeautify()<cr>
+"
+"   autocmd FileType javascript vnoremap <buffer>  <c-f> : call RangeJsBeautify()<cr>
+"   autocmd FileType json vnoremap <buffer> <c-f>        : call RangeJsonBeautify()<cr>
+"   autocmd FileType jsx vnoremap <buffer> <c-f>         : call RangeJsxBeautify()<cr>
+"   autocmd FileType html vnoremap <buffer> <c-f>        : call RangeHtmlBeautify()<cr>
+"   autocmd FileType css vnoremap <buffer> <c-f>         : call RangeCSSBeautify()<cr>
 " }}}
 
 " Generate JSDoc to your JavaScript code
@@ -904,15 +907,16 @@ Plug 'exvim/ex-autocomplpop' "{{{
 " Plug 'bigfish/vim-eslint', { 'on': 'ESLint' }
 
 " file browser
+" open by pressing -
 Plug 'tpope/vim-vinegar'
 
 " fixes key codes for console Vim
 Plug 'drmikehenry/vim-fixkey'
 
 " allows to visually select increasingly larger regions of text using the same key combination
-Plug 'terryma/vim-expand-region' "{{{
-  map <M-s> <Plug>(expand_region_expand)
-  map <M-d> <Plug>(expand_region_shrink)
+" Plug 'terryma/vim-expand-region' "{{{
+"   map <M-s> <Plug>(expand_region_expand)
+"   map <M-d> <Plug>(expand_region_shrink)
   " vmap v <Plug>(expand_region_expand)
   " vmap <C-v> <Plug>(expand_region_shrink)
 " }}}
@@ -928,14 +932,14 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'tommcdo/vim-exchange'
 
 " cmdline-mode enhancement for Vim
-Plug 'gelguy/Cmd2.vim' "{{{
-  let g:Cmd2__complete_ignorecase = 1
-  nnoremap <Space> :
-  cmap <F12> <Plug>(Cmd2Suggest)
-  " nmap / /<F12>
-  " nmap ? ?<F12>
-  " nmap : :<F12>
-  " nmap <Space> :<F12>
+" Plug 'gelguy/Cmd2.vim' "{{{
+"   let g:Cmd2__complete_ignorecase = 1
+"   nnoremap <Space> :
+"   cmap <F12> <Plug>(Cmd2Suggest)
+"   nmap / /<F12>
+"   nmap ? ?<F12>
+"   nmap : :<F12>
+"   nmap <Space> :<F12>
 " }}}
 
   " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
@@ -971,19 +975,14 @@ Plug 'gelguy/Cmd2.vim' "{{{
     " let g:gitgutter_sign_modified_removed = '~_'
   " }}}
 
-if exists('g:is_home_env')
-
-  " A vim plugin to display the indention levels with thin vertical lines
-  Plug 'Yggdroot/indentLine' "{{{
-    let g:indentLine_enabled = 0
-    map <leader>il :IndentLinesToggle<CR>
-  "}}}
-
-endif
-
+" A vim plugin to display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine' "{{{
+  let g:indentLine_enabled = 0
+  map <leader>il :IndentLinesToggle<CR>
+"}}}
 
 " if check prevents these plugins to be installed
-if !exists('g:is_home_env')
+" if !exists('g:is_home_env')
 
   " A Vim plugin for visually displaying indent levels in code
   " Plug 'nathanaelkane/vim-indent-guides' "{{{
@@ -1007,7 +1006,7 @@ if !exists('g:is_home_env')
     " let g:syntastic_javascript_checkers = ['eslint']
   " }}}
 
-endif
+" endif
 
 " ================================================================================
 " Unused:

@@ -124,11 +124,6 @@ Plug 'morhetz/gruvbox'
 "  let g:vitality_always_assume_iterm = 1
 " }}}
 
-" Async completion framework made ease.
-Plug 'maralla/completor.vim' "{{{
-  let g:completor_auto_trigger = 0
-"}}}
-
 " Ease your git worflow within vim
 " Plug 'jreybert/vimagit' "{{{
   " let g:magit_default_fold_level = 2
@@ -294,13 +289,14 @@ Plug 'vim-scripts/UnconditionalPaste'
 " }}}
 
 " Better whitespace highlighting for Vim
-" TODO: possibly remove DeleteTrailingWhitespace
-Plug 'ntpeters/vim-better-whitespace'
+Plug 'ntpeters/vim-better-whitespace' "{{{
+  let g:strip_whitespace_on_save = 1
+"}}}
 
 " Delete unwanted whitespace at the end of lines
-Plug 'vim-scripts/DeleteTrailingWhitespace' "{{{
-  let g:DeleteTrailingWhitespace = 1
-  let g:DeleteTrailingWhitespace_Action = 'delete'
+" Plug 'vim-scripts/DeleteTrailingWhitespace' "{{{
+"   let g:DeleteTrailingWhitespace = 1
+"   let g:DeleteTrailingWhitespace_Action = 'delete'
 " }}}
 
 " Only highlight the screen line of the cursor in the currently active window.
@@ -755,12 +751,11 @@ Plug 'ryanoasis/vim-devicons' "{{{
 " }}}
 
 " :Autoformat
-Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
+" Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
   " To disable the fallback to vim's indent file, set the following variable to be 0.
-  let g:autoformat_autoindent = 0
+  " let g:autoformat_autoindent = 0
 
   " noremap <F3> :Autoformat<cr>
-  noremap <M-a> :Autoformat<cr>
 " }}}
 
 " A Vim plugin for interacting with Heroku
@@ -842,8 +837,8 @@ Plug 'sheerun/vim-polyglot' "{{{
 " }}}
 
 " Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'html', 'typescript', 'php'] } "{{{
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'typescript'] } "{{{
-  let g:used_javascript_libs = 'lodash, react'
+" Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'jsx', 'typescript'] } "{{{
+  " let g:used_javascript_libs = 'lodash, react'
 " }}}
 
 " Maintains a history of previous yanks, changes and deletes
@@ -1350,6 +1345,10 @@ Plug 'Yggdroot/indentLine' "{{{
 " \   }
 " \}
 
+" Async completion framework made ease.
+" Plug 'maralla/completor.vim' "{{{
+"   let g:completor_auto_trigger = 0
+"}}}
 " ================================================================================
 
 call plug#end()

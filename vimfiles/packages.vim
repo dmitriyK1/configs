@@ -865,14 +865,14 @@ Plug 'sheerun/vim-polyglot' "{{{
 " }}}
 
 " Generate JSDoc to your JavaScript code
-Plug 'heavenshell/vim-jsdoc' " {{{
-  let g:jsdoc_input_description=1
-  let g:jsdoc_additional_descriptions=1
-  let g:jsdoc_enable_es6=1
-  let g:jsdoc_underscore_private=1
-  let g:jsdoc_allow_input_prompt=1
-  let g:jsdoc_return_description=1
-  map <leader>js :JsDoc<CR>
+" Plug 'heavenshell/vim-jsdoc' " {{{
+"  let g:jsdoc_input_description=1
+"  let g:jsdoc_additional_descriptions=1
+"  let g:jsdoc_enable_es6=1
+"  let g:jsdoc_underscore_private=1
+"  let g:jsdoc_allow_input_prompt=1
+"  let g:jsdoc_return_description=1
+"  map <leader>js :JsDoc<CR>
 
   " REMAP NEEDED
   " nmap <silent> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)

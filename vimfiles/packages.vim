@@ -218,9 +218,9 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
 " Plug 'tpope/vim-capslock'
 
 " :UndotreeToggle
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
+" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } "{{{
   " nnoremap <silent> <F2> :UndotreeToggle<cr>:UndotreeFocus<cr>
-  nnoremap <silent> <M-u> :UndotreeToggle<cr>:UndotreeFocus<cr>
+  " nnoremap <silent> <M-u> :UndotreeToggle<cr>:UndotreeFocus<cr>
 " }}}
 
 " This plugin provides the following mappings which allow you to move between Vim panes and tmux splits seamlessly:
@@ -271,6 +271,8 @@ Plug 'tpope/vim-unimpaired' "{{{
 Plug 'rhysd/conflict-marker.vim'
 
 " Force linewise or characterwise paste, regardless of how it was yanked.
+" gcp - Paste characterwise (newline characters and indent are flattened to spaces) [count] times.
+" glp - Paste linewise (even if yanked text is not a complete line) [count] times.
 Plug 'vim-scripts/UnconditionalPaste'
 
 " A Vim plugin for focussing on a selected region
@@ -321,11 +323,11 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'xolox/vim-misc'
 
 " Improved integration between Vim and its environment (fullscreen, open URL, background command execution)
-Plug 'xolox/vim-shell'
+" Plug 'xolox/vim-shell'
 
 " Automated tag file generation and syntax highlighting of tags in Vim
 " <C-]>   Jump to the definition of the keyword under the cursor.
-Plug 'xolox/vim-easytags'
+" Plug 'xolox/vim-easytags'
 
 " ae targets the entire content of the current buffer.
 " ie is similar to ae, but ie does not include leading and trailing empty lines.
@@ -335,11 +337,11 @@ Plug 'kana/vim-textobj-entire'
 " vif to Visually select the code Inside a Function
 " yaF to Yank A Function with leading or trailing blank lines
 " viF to visually select a function without leading or trailing blank lines
-Plug 'kana/vim-textobj-function'
+" Plug 'kana/vim-textobj-function'
 
 " val - select line (including whitespace)
 " vil - select line
-Plug 'kana/vim-textobj-line'
+" Plug 'kana/vim-textobj-line'
 
 " Mappings for simultaneously pressed keys
 " Plug 'kana/vim-arpeggio'
@@ -350,7 +352,7 @@ Plug 'kana/vim-textobj-line'
 Plug 'glts/vim-textobj-comment'
 
 " Vim plugin to provide text objects for numbers
-Plug 'tkhren/vim-textobj-numeral'
+" Plug 'tkhren/vim-textobj-numeral'
 
 " provides additional text objects
 " Pair text objects
@@ -460,8 +462,8 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 " helps to isolate a particular fold into its own context
 " q - quit temporary buffer
 " Plug 'vasconcelloslf/vim-foldfocus' "{{{
-  nmap <S-CR> :call FoldFocus('e')<CR>
-  nmap <Leader><CR> :call FoldFocus('vnew')<CR>
+  " nmap <S-CR> :call FoldFocus('e')<CR>
+  " nmap <Leader><CR> :call FoldFocus('vnew')<CR>
 " }}}
 
 " create your own text objects (dependency)
@@ -476,12 +478,12 @@ Plug 'saaguero/vim-textobj-pastedtext'
 Plug 'konfekt/fastfold'
 
 " asynchronous build and test dispatcher
-Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-dispatch'
 
 " Vim plugin that displays tags in a window, ordered by scope
 " Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } "{{{
 " Plug 'majutsushi/tagbar'  "{{{
-  nmap <F8> :TagbarToggle<cr>
+  " nmap <F8> :TagbarToggle<cr>
 " }}}
 
 " start screen
@@ -490,21 +492,27 @@ Plug 'mhinz/vim-startify' "{{{
 " }}}
 
 " Plugin to toggle, display and navigate marks
+" m<Space> Delete all marks from the current buffer
+" m/ Open location list and display marks from current buffer
+" ]` Jump to next mark
+" [` Jump to prev mark
 Plug 'kshenoy/vim-signature'
 
 " Sublime Text style multiple selections for Vim
-Plug 'terryma/vim-multiple-cursors' "{{{
+" Plug 'terryma/vim-multiple-cursors' "{{{
+  " let g:multi_cursor_use_default_mapping=0
   " let g:multi_cursor_exit_from_insert_mode=0
+  " let g:multi_cursor_quit_key='<Esc>'
   " let g:multi_cursor_quit_key='<C-c>'
-  let g:multi_cursor_next_key='<C-d>'
+  " let g:multi_cursor_next_key='<C-d>'
 
   " nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
 " }}}
 
 " colon and semicolon insertion plugin
-Plug 'lfilho/cosco.vim' "{{{
-  autocmd FileType javascript,css,sh nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
-  autocmd FileType javascript,css,sh inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
+" Plug 'lfilho/cosco.vim' "{{{
+"   autocmd FileType javascript,css,sh nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
+"   autocmd FileType javascript,css,sh inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
 " }}}
 
 " snippets support
@@ -572,45 +580,45 @@ Plug 'vim-scripts/LargeFile'
 Plug 'tpope/vim-surround'
 
 " alignment plugin
-Plug 'godlygeek/tabular', { 'on': 'Tabularize' } "{{{
+" Plug 'godlygeek/tabular', { 'on': 'Tabularize' } "{{{
   " from https://github.com/AntJanus/my-dotfiles/blob/master/.vimrc
-  nnoremap <leader>a= :Tabularize /=<CR>
-  vnoremap <leader>a= :Tabularize /=<CR>
-
-  nnoremap <leader>a: :Tabularize /:<CR>
-  vnoremap <leader>a: :Tabularize /:<CR>
-
-  nnoremap <leader>a- :Tabularize /-<CR>
-  vnoremap <leader>a- :Tabularize /-<CR>
-
-  nnoremap <leader>a> :Tabularize /><CR>
-  vnoremap <leader>a> :Tabularize /><CR>
-
-  nnoremap <leader>a[ :Tabularize /[<CR>
-  vnoremap <leader>a[ :Tabularize /[<CR>
-
-  nnoremap <leader>a{ :Tabularize /{<CR>
-  vnoremap <leader>a{ :Tabularize /{<CR>
-
-  nnoremap <leader>a( :Tabularize /(<CR>
-  vnoremap <leader>a( :Tabularize /(<CR>
-
-  nnoremap <leader>a" :Tabularize /"<CR>
-  vnoremap <leader>a" :Tabularize /"<CR>
-
-  nnoremap <leader>a' :Tabularize /'<CR>
-  vnoremap <leader>a' :Tabularize /'<CR>
-
-  nnoremap <leader>af :Tabularize /from<CR>
-  vnoremap <leader>af :Tabularize /from<CR>
+  " nnoremap <leader>a= :Tabularize /=<CR>
+  " vnoremap <leader>a= :Tabularize /=<CR>
+  "
+  " nnoremap <leader>a: :Tabularize /:<CR>
+  " vnoremap <leader>a: :Tabularize /:<CR>
+  "
+  " nnoremap <leader>a- :Tabularize /-<CR>
+  " vnoremap <leader>a- :Tabularize /-<CR>
+  "
+  " nnoremap <leader>a> :Tabularize /><CR>
+  " vnoremap <leader>a> :Tabularize /><CR>
+  "
+  " nnoremap <leader>a[ :Tabularize /[<CR>
+  " vnoremap <leader>a[ :Tabularize /[<CR>
+  "
+  " nnoremap <leader>a{ :Tabularize /{<CR>
+  " vnoremap <leader>a{ :Tabularize /{<CR>
+  "
+  " nnoremap <leader>a( :Tabularize /(<CR>
+  " vnoremap <leader>a( :Tabularize /(<CR>
+  "
+  " nnoremap <leader>a" :Tabularize /"<CR>
+  " vnoremap <leader>a" :Tabularize /"<CR>
+  "
+  " nnoremap <leader>a' :Tabularize /'<CR>
+  " vnoremap <leader>a' :Tabularize /'<CR>
+  "
+  " nnoremap <leader>af :Tabularize /from<CR>
+  " vnoremap <leader>af :Tabularize /from<CR>
 " }}}
 
 " alignment plugin
-Plug 'junegunn/vim-easy-align' "{{{
+" Plug 'junegunn/vim-easy-align' "{{{
  " Start interactive EasyAlign in visual mode (e.g. vipga)
-  xmap ga <Plug>(EasyAlign)
+  " xmap ga <Plug>(EasyAlign)
   " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-  nmap ga <Plug>(EasyAlign)
+  " nmap ga <Plug>(EasyAlign)
 "}}}
 
 " autodetect tabs/spaces of buffer
@@ -903,7 +911,7 @@ Plug 'exvim/ex-autocomplpop' "{{{
 
 " file browser
 " open by pressing -
-Plug 'tpope/vim-vinegar'
+" Plug 'tpope/vim-vinegar'
 
 " fixes key codes for console Vim
 Plug 'drmikehenry/vim-fixkey'
@@ -917,6 +925,10 @@ Plug 'drmikehenry/vim-fixkey'
 " }}}
 
 " plugin that defines a new text object representing lines of code at the same indent level
+" <count>ai	An Indentation level and line above.
+" <count>ii	Inner Indentation level (no line above).
+" <count>aI	An Indentation level and lines above/below.
+" <count>iI	Inner Indentation level (no lines above/below).
 Plug 'michaeljsmith/vim-indent-object'
 
 " Easy text exchange operator for Vim
@@ -972,7 +984,7 @@ Plug 'tommcdo/vim-exchange'
 
 " A vim plugin to display the indention levels with thin vertical lines
 Plug 'Yggdroot/indentLine' "{{{
-  let g:indentLine_enabled = 0
+  let g:indentLine_enabled = 1
   map <leader>il :IndentLinesToggle<CR>
 "}}}
 

@@ -984,9 +984,9 @@ Plug 'tommcdo/vim-exchange'
   " }}}
 
 " A vim plugin to display the indention levels with thin vertical lines
-Plug 'Yggdroot/indentLine' "{{{
-  let g:indentLine_enabled = 1
-  map <leader>il :IndentLinesToggle<CR>
+" Plug 'Yggdroot/indentLine' "{{{
+  " let g:indentLine_enabled = 1
+  " map <leader>il :IndentLinesToggle<CR>
 "}}}
 
 " if check prevents these plugins to be installed

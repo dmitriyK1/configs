@@ -117,6 +117,9 @@ Plug 'morhetz/gruvbox'
 " ================================================================================
 " Colorschemes end
 " ================================================================================
+" jinja plugins for vim (syntax and indent)
+" Plug 'niftylettuce/vim-jinja'
+
 " Vim bundle for http://styled-components.com based javascript files.
 " Plug 'styled-components/vim-styled-components'
 

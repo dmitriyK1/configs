@@ -24,6 +24,7 @@ call plug#begin()
 " ================================================================================
 " Colorschemes:
 " ================================================================================
+Plug 'arcticicestudio/nord-vim'
 " Plug 'jacoborus/tender.vim'
 " Plug 'Badacadabra/vim-archery'
 " Plug 'nightsense/office'

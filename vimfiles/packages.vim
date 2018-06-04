@@ -793,7 +793,7 @@ Plug 'easymotion/vim-easymotion' "{{{
 " <Space>      : Set current window height to highest.
 " x            : Display the occurence the current line.
 " q            : Quit the quickfix window.
-Plug 'vim-scripts/occur.vim'
+" Plug 'vim-scripts/occur.vim'
 
 " Start a * or # search from a visual block
 Plug 'bronson/vim-visual-star-search'

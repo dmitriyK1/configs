@@ -786,15 +786,6 @@ Plug 'easymotion/vim-easymotion' "{{{
   map <M-b> =F
 "}}}
 
-" Show all lines in the buffer containing word (grep buffer)
-" <Leader>oc   - Occur       Search current buffer
-" <Leader>mo   - Moccur      Search all buffers
-" <Leader>*    - StarOccur    Search all buffers for occurrence of the word nearest to the cursor
-" <Space>      : Set current window height to highest.
-" x            : Display the occurence the current line.
-" q            : Quit the quickfix window.
-" Plug 'vim-scripts/occur.vim'
-
 " Start a * or # search from a visual block
 Plug 'bronson/vim-visual-star-search'
 
@@ -1022,6 +1013,16 @@ Plug 'tommcdo/vim-exchange'
 " ================================================================================
 " Unused:
 " ================================================================================
+" USE :vimgrep <pattern> % / :CtrlPLine (,l) instead
+" Show all lines in the buffer containing word (grep buffer)
+" <Leader>oc   - Occur       Search current buffer
+" <Leader>mo   - Moccur      Search all buffers
+" <Leader>*    - StarOccur    Search all buffers for occurrence of the word nearest to the cursor
+" <Space>      : Set current window height to highest.
+" x            : Display the occurence the current line.
+" q            : Quit the quickfix window.
+" Plug 'vim-scripts/occur.vim'
+
 " USE UNIMPAIRED INSTEAD
 " text bubbling feature
 " Plug 'frace/vim-bubbles' "{{{

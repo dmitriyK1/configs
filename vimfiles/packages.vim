@@ -954,6 +954,8 @@ Plug 'tommcdo/vim-exchange'
     " let g:gitgutter_realtime = 0
     " let g:gitgutter_highlight_lines = 1
 
+    nmap <silent> <leader>g :GitGutterToggle<CR>
+
     " double git gutter symbols for better visibility
     let g:gitgutter_sign_added = '✚✚'
     " let g:gitgutter_sign_modified = '••'

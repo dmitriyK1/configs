@@ -24,7 +24,7 @@ call plug#begin()
 " ================================================================================
 " Colorschemes:
 " ================================================================================
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
 " Plug 'jacoborus/tender.vim'
 " Plug 'Badacadabra/vim-archery'
 " Plug 'nightsense/office'
@@ -152,16 +152,16 @@ Plug 'valloric/MatchTagAlways'
 " }}}
 
 " lean & mean status/tabline for vim that's light as air
-Plug 'vim-airline/vim-airline' "{{{
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#buffer_min_count = 2
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#syntastic#enabled = 1
+" Plug 'vim-airline/vim-airline' "{{{
+  " let g:airline_powerline_fonts = 1
+  " let g:airline#extensions#tabline#enabled = 1
+  " let g:airline#extensions#tabline#buffer_min_count = 2
+  " let g:airline#extensions#tabline#enabled = 1
+  " let g:airline#extensions#syntastic#enabled = 1
 " }}}
 
 " a collection of themes for vim-airline
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 
 " super simple vim plugin to show the list of buffers in the command bar
 Plug 'bling/vim-bufferline' "{{{

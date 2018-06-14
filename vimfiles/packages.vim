@@ -117,6 +117,30 @@ Plug 'morhetz/gruvbox'
 " ================================================================================
 " Colorschemes end
 " ================================================================================
+" Asynchronous Lint Engine
+Plug 'w0rp/ale' "{{{
+  let g:ale_fixers = {
+  \   'javascript': ['eslint'],
+  \}
+  let g:ale_linters = {
+  \   'javascript': ['eslint'],
+  \}
+  let g:ale_fix_on_save = 1
+  let g:ale_linters_explicit = 1
+  let g:ale_set_highlights = 0
+  " nmap <C-1> <Plug>ALEPrevious
+  nmap <leader>n :ALENext<CR>
+  " Write this in your vimrc file
+  " let g:ale_set_loclist = 0
+  " let g:ale_set_quickfix = 1
+
+  " let g:ale_open_list = 1
+  " Set this if you want to.
+  " This can be useful if you are combining ALE with
+  " some other plugin which sets quickfix errors, etc.
+  " let g:ale_keep_list_window_open = 0
+" }}}
+
 " jinja plugins for vim (syntax and indent)
 " Plug 'niftylettuce/vim-jinja'
 
@@ -163,9 +187,10 @@ Plug 'valloric/MatchTagAlways'
 " a collection of themes for vim-airline
 " Plug 'vim-airline/vim-airline-themes'
 
+" FIXME: seems not to be working
 " super simple vim plugin to show the list of buffers in the command bar
-Plug 'bling/vim-bufferline' "{{{
-  let g:bufferline_echo = 0
+" Plug 'bling/vim-bufferline' "{{{
+  " let g:bufferline_echo = 0
   " let g:bufferline_active_buffer_left = ''
   " let g:bufferline_active_buffer_right = ''
 " }}}

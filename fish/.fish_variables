@@ -1,12 +1,15 @@
+set --export NODE_ENV development
+
 set --export PATH /usr/local/sbin $PATH
 set --export PATH /opt/local/bin $PATH
 
 set EDITOR vim
 # set VISUAL mvim
 
-#  http://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before/
-# Use ripgrep to list filenames for fzf & list directories with bfs
-# set --export FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --smart-case --follow --glob "!{.git,node_modules}/*" 2> /dev/null'
-set --export FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --smart-case --follow  --column --line-number --no-heading --fixed-strings --ignore-case --color "always" -g "!{.git,node_modules}/*" 2> /dev/null'
-# set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
-set --export FZF_ALT_C_COMMAND "bfs -type d -nohidden"
+# Use fd to list filenames for fzf
+# https://github.com/sharkdp/fd
+# search for files, including hidden, follow symlinks, colorize results instead of fzf
+set --export FZF_DEFAULT_COMMAND 'fd --type file --hidden --follow --color=always --exclude .git'
+set --export FZF_ALT_C_COMMAND 'fd --type directory --hidden --follow --color=always --exclude .git'
+set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+set --export FZF_DEFAULT_OPTS '--ansi'

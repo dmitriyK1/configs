@@ -129,7 +129,7 @@ Plug 'w0rp/ale' "{{{
   let g:ale_linters_explicit = 1
   let g:ale_set_highlights = 0
   " nmap <C-1> <Plug>ALEPrevious
-  nmap <leader>n :ALENext<CR>
+  nmap <silent> <leader>n :ALENext<CR>
   " Write this in your vimrc file
   " let g:ale_set_loclist = 0
   " let g:ale_set_quickfix = 1

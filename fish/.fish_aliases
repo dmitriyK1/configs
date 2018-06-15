@@ -130,3 +130,5 @@ alias fp='ls | fpp'
 alias cal='cal | grep --color -EC6 "\b"(date +%e | sed "s/ //g")'
 
 alias rg='rg -i --color=always'
+
+alias ll='exa -lha --git'

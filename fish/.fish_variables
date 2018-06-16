@@ -13,3 +13,4 @@ set --export FZF_DEFAULT_COMMAND 'fd --type file --hidden --follow --color=alway
 set --export FZF_ALT_C_COMMAND 'fd --type directory --hidden --follow --color=always --exclude "{.git,node_modules}"'
 set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set --export FZF_DEFAULT_OPTS '--ansi'
+# NOTE: disable '--ansi' and '--color=always' to speedup

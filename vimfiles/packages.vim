@@ -428,6 +428,7 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
         \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
         \ 'file': '\.pyc$\|\.pyo$',
         \ }
+  let g:ctrlp_user_command = 'fd --type file --hidden --follow --exclude .git'
 
   nnoremap <silent> <leader>b :CtrlPBuffer<cr>
   nnoremap <silent> <leader>l :CtrlPLine<cr>

@@ -447,7 +447,7 @@ Plug 'd11wtq/ctrlp_bdelete.vim'
 
 " Git branch searching using CtrlP.vim
 Plug 'imkmf/ctrlp-branches' "{{{
-  nmap <silent> <C-g> :CtrlPBranches<br>
+  nmap <silent> <C-g> :CtrlPBranches<CR>
 "}}}
 
 "  Adds file type glyphs/icons to many popular Vim plugins such as: NERDTree,

@@ -447,7 +447,7 @@ Plug 'd11wtq/ctrlp_bdelete.vim'
 
 " Git branch searching using CtrlP.vim
 Plug 'imkmf/ctrlp-branches' "{{{
-  nmap <silent> <C-g> :CtrlPBranches<CR>
+  nmap <silent> <leader>g :CtrlPBranches<CR>
 "}}}
 
 "  Adds file type glyphs/icons to many popular Vim plugins such as: NERDTree,
@@ -591,7 +591,7 @@ Plug 'tommcdo/vim-exchange'
     " let g:gitgutter_realtime = 0
     " let g:gitgutter_highlight_lines = 1
 
-    nmap <silent> <leader>g :GitGutterToggle<CR>
+    nmap <silent> <C-g> :GitGutterToggle<CR>
 
     " double git gutter symbols for better visibility
     let g:gitgutter_sign_added = '✚✚'

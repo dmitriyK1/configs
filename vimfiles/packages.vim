@@ -435,6 +435,11 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
   nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
 "}}}
 
+Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
+  " let g:ctrlp_cmdpalette_execute=1
+  nmap <silent> <leader>P :CtrlPCmdPalette<CR>
+"}}}
+
 "  Adds file type glyphs/icons to many popular Vim plugins such as: NERDTree,
 "  vim-airline, unite, vim-startify and many more
 Plug 'ryanoasis/vim-devicons' "{{{

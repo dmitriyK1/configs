@@ -440,6 +440,16 @@ Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
   nmap <silent> <leader>P :CtrlPCmdPalette<CR>
 "}}}
 
+" An extension to ctrlp.vim for deleting open buffers
+" Open ctrlp in buffer mode (c-p c-b), filter as needed, navigate to a buffer you wish to close and press c-@ (c-2). The buffer will be deleted and will disappear from the list.
+" You may also mark multiple buffers with c-z and then close them all at once with a single press of c-@.
+Plug 'd11wtq/ctrlp_bdelete.vim'
+
+" Git branch searching using CtrlP.vim
+Plug 'imkmf/ctrlp-branches' "{{{
+  nmap <silent> <C-g> :CtrlPBranches<br>
+"}}}
+
 "  Adds file type glyphs/icons to many popular Vim plugins such as: NERDTree,
 "  vim-airline, unite, vim-startify and many more
 Plug 'ryanoasis/vim-devicons' "{{{
@@ -540,8 +550,8 @@ Plug 'exvim/ex-autocomplpop' "{{{
 
 " allows to visually select increasingly larger regions of text using the same key combination
 Plug 'terryma/vim-expand-region' "{{{
-"   map <M-s> <Plug>(expand_region_expand)
-"   map <M-d> <Plug>(expand_region_shrink)
+  map <M-s> <Plug>(expand_region_expand)
+  map <M-d> <Plug>(expand_region_shrink)
   " vmap v <Plug>(expand_region_expand)
   " vmap <C-v> <Plug>(expand_region_shrink)
 " }}}

@@ -90,4 +90,6 @@ if filereadable(expand("~/.vimrc.after.local"))
   source ~/.vimrc.after.local
 endif
 
+call ctrlp_bdelete#init()
+
 set secure

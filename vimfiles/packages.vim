@@ -325,13 +325,6 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
   nnoremap <silent> <M-,> :call WordNavigation(0)<CR>
 "}}}
 
-" helps to isolate a particular fold into its own context
-" q - quit temporary buffer
-Plug 'vasconcelloslf/vim-foldfocus' "{{{
-  " nmap <S-CR> :call FoldFocus('e')<CR>
-  " nmap <Leader><CR> :call FoldFocus('vnew')<CR>
-" }}}
-
 " create your own text objects (dependency)
 Plug 'kana/vim-textobj-user'
 
@@ -1396,6 +1389,15 @@ Plug 'tommcdo/vim-exchange'
   " }}}
 
 " endif
+
+" helps to isolate a particular fold into its own context
+" q - quit temporary buffer
+" Plug 'vasconcelloslf/vim-foldfocus' "{{{
+  " nmap <CR> :call FoldFocus('e')<CR>
+  " nmap <S-CR> :call FoldFocus('e')<CR>
+
+  " nmap <Leader><CR> :call FoldFocus('vnew')<CR>
+" }}}
 " ================================================================================
 
 call plug#end()

@@ -532,9 +532,6 @@ Plug 'exvim/ex-autocomplpop' "{{{
         \ : "\<C-g>u\<CR>"
 " }}}
 
-" fixes key codes for console Vim
-Plug 'drmikehenry/vim-fixkey'
-
 " allows to visually select increasingly larger regions of text using the same key combination
 Plug 'terryma/vim-expand-region' "{{{
 "   map <M-s> <Plug>(expand_region_expand)
@@ -1398,6 +1395,17 @@ Plug 'tommcdo/vim-exchange'
 
   " nmap <Leader><CR> :call FoldFocus('vnew')<CR>
 " }}}
+
+" helps Vim use the non-ASCII keys of a terminal emulator, permitting mapping of several classes of characters, including:
+" Alt-lowercase letters (<M-a> - <M-z>).
+" Alt-uppercase letters (<M-A> - <M-Z>), except <M-O> due to keycode ambiguity).
+" Function keys with no modifiers or combinations of shift, control, and alt: <F1> - <F12>, <S-F1> - <S-F12>, ..., <M-C-S-F1> - <M-C-S-F12>. Note not all combination of terminal and environment send all of these.
+" Arrow keys with no modifiers or combinations of shift, control, and alt: <Up>, <Down>, <Left>, <Right>, <S-Up>, <S-Down>, <S-Left>, <S-Right>, ..., <M-C-S-Up>, <M-C-S-Down>, <M-C-S-Left>, <M-C-S-Right>.
+" Home and End keys with no modifiers or combinations of shift, control, and alt: <Home>, <End>, <S-Home>, <S-End>, ..., <M-C-S-Home>, <M-C-S-End>.
+" <S-Enter> (few terminals).
+" <M-Enter> (not all terminals).
+" Plug 'drmikehenry/vim-fixkey'
+
 " ================================================================================
 
 call plug#end()

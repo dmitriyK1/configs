@@ -134,3 +134,4 @@ alias rg='rg -i --color=always'
 
 alias ls='exa -lha --git'
 alias ll='exa -lha --git'
+alias lc='colorls --gs -la'

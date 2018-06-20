@@ -1,5 +1,3 @@
-" TODO: add https://github.com/vim-scripts/copypath.vim
-
 " Lazy-loading example for filetypes:
 " autocmd BufNewFile,BufRead *.gpg setf gpg
 " Plug 'jamessan/vim-gnupg', { 'for': 'gpg' }

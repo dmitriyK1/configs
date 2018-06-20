@@ -112,7 +112,8 @@ alias bi "brew install"
 alias bu "brew uninstall"
 alias bs "brew search"
 alias bif "brew info"
-alias p "percol "
+# alias p "percol" # brew install percol
+alias p "peco" # brew install peco
 alias ss "source ~/.config/fish/config.fish"
 alias se "vi ~/.config/fish/config.fish"
 alias vless='/usr/share/vim/vim74/macros/less.sh '

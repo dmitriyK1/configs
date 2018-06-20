@@ -245,4 +245,4 @@ endfunction
 " vmap <Down> ]egv
 
 map ]d jddk
-map [d ddk
+map [d kdd

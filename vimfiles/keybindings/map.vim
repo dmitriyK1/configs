@@ -243,3 +243,6 @@ endfunction
 " nmap <Down> ]e
 " vmap <Up> [egv
 " vmap <Down> ]egv
+
+map ]d jddk
+map [d ddk

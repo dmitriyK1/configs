@@ -1,9 +1,12 @@
+" zM close everything
+" zR open everything
+" za toggle state of the current fold
+" zj jump to next fold
+" zk jump to previous fold
 
 " TODO: use sessions handling /w Startify
 
 " TODO: remove redundant keybindings
-
-" TODO: ? try to make sneak default keybindings work ?
 
 " TODO: add project plugin
 " TODO: add project-wide search

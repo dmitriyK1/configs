@@ -117,6 +117,15 @@ Plug 'morhetz/gruvbox'
 " ================================================================================
 " Colorschemes end
 " ================================================================================
+" Language agnostic vim plugin for folding and motion based on indentation.
+" Maps motion commands to [[, ]], [j, ]k
+Plug 'pseewald/vim-anyfold'
+
+" Provides the ability to cycle open and closed folds and nested folds.
+" normal <CR> Cycle open nested folds
+" normal <BS> Cycle close nested folds
+Plug 'arecarn/vim-fold-cycle'
+
 " Asynchronous Lint Engine
 Plug 'w0rp/ale' "{{{
   let g:ale_fixers = {

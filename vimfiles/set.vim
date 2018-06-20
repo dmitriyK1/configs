@@ -88,7 +88,8 @@ set belloff=all
 set foldlevelstart=10
 set foldnestmax=10
 
-set foldmethod=syntax,indent,marker
+" set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
 
 set autoindent

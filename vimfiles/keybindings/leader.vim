@@ -119,6 +119,8 @@ nnoremap <leader>x :Vex<cr>
 " System clipboard interaction.
 " noremap <leader>y "*y
 " vnoremap <leader>y "*ygv
+
+" Plug 'vim-scripts/copypath.vim' - alternative
 nnor <leader>yp :let @*=expand("%:p")<CR>    " Mnemonic: Yank File path
 nnor <leader>yn :let @*=expand("%")<CR>      " Mnemonic: yank File Name
 

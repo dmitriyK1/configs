@@ -119,7 +119,9 @@ Plug 'morhetz/gruvbox'
 " ================================================================================
 " Language agnostic vim plugin for folding and motion based on indentation.
 " Maps motion commands to [[, ]], [j, ]k
-Plug 'pseewald/vim-anyfold'
+Plug 'pseewald/vim-anyfold' "{{{
+  let anyfold_activate=1
+"}}}
 
 " Provides the ability to cycle open and closed folds and nested folds.
 " normal <CR> Cycle open nested folds

@@ -6,3 +6,7 @@
 " make background transparent
 " hi Normal guibg=NONE ctermbg=NONE
 hi Normal ctermbg=NONE
+
+" to enable proper italics rendering in terminal
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"

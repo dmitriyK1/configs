@@ -44,5 +44,3 @@ let maplocalleader=","
 
 " for ToggleHiddenAll
 let g:hidden_all = 0
-
-let g:molokai_original=0      " use a darker background

@@ -74,7 +74,9 @@ Plug 'morhetz/gruvbox'
 " Plug 'vim-scripts/revolutions.vim'
 " Plug 'jaromero/vim-monokai-refined'
 " Plug 'sickill/vim-monokai'
-" Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai' "{{{
+  " let g:molokai_original=0      " use a darker background
+" }}}
 " Plug 'michalbachowski/vim-wombat256mod'
 " Plug 'dracula/vim'
 " Plug 'ciaranm/inkpot'

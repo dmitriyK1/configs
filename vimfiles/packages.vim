@@ -469,11 +469,11 @@ Plug 'ryanoasis/vim-devicons' "{{{
   " enable folder/directory glyph flag (disabled by default with 0)
   let g:WebDevIconsUnicodeDecorateFolderNodes = 1
   " whether or not to show the nerdtree brackets around flags
-  let g:webdevicons_conceal_nerdtree_brackets = 1
+  " let g:webdevicons_conceal_nerdtree_brackets = 1
   " the amount of space to use after the glyph character (default ' ')
-  let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+  " let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
   " Force extra padding in NERDTree so that the filetype icons line up vertically
-  let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+  " let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
   if exists('g:loaded_webdevicons')
       call webdevicons#refresh()

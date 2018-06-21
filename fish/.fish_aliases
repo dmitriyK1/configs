@@ -45,7 +45,9 @@ alias gcln="git clean -df"
 alias gca="git commit --amend"
 alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"
 alias gdl "git difftool | less"
+alias gdt "git difftool | less"
 alias gdlc "git difftool --cached | less"
+alias gdct "git difftool --cached | less"
 alias gf "git fetch --prune"
 alias gfo "git follow" # requires https://github.com/nickolasburr/git-follow
 alias gs "git status"
@@ -116,7 +118,10 @@ alias bif "brew info"
 alias p "peco" # brew install peco
 alias ss "source ~/.config/fish/config.fish"
 alias se "vi ~/.config/fish/config.fish"
-alias vless='/usr/share/vim/vim74/macros/less.sh '
+alias sea "vi ~/.fish_aliases"
+alias sef "vi ~/.fish_functions"
+alias sev "vi ~/.fish_variables"
+alias vless='/usr/share/vim/vim74/macros/less.sh'
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation

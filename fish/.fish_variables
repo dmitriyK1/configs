@@ -9,8 +9,8 @@ set EDITOR vim
 # Use fd to list filenames for fzf
 # https://github.com/sharkdp/fd
 # search for files, including hidden, follow symlinks, colorize results instead of fzf
-set --export FZF_DEFAULT_COMMAND 'fd --type file --hidden --follow --color=always --exclude "{.DS_Store,.git,node_modules}"'
-set --export FZF_ALT_C_COMMAND 'fd --type directory --hidden --follow --color=always --exclude "{.DS_Store,.git,node_modules}"'
+set --export FZF_DEFAULT_COMMAND 'fd --type file --hidden --follow --color=always --exclude "{.DS_Store,.git,node_modules,flow-typed}"'
+set --export FZF_ALT_C_COMMAND 'fd --type directory --hidden --follow --color=always --exclude "{.DS_Store,.git,node_modules,flow-typed}"'
 set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set --export FZF_DEFAULT_OPTS '--ansi'
 # NOTE: disable '--ansi' and '--color=always' to speedup

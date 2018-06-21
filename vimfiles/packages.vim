@@ -117,6 +117,29 @@ Plug 'morhetz/gruvbox'
 " ================================================================================
 " Colorschemes end
 " ================================================================================
+" Function argument-like text object for Vim
+" daa
+" daA
+" dia
+" diA
+Plug 'b4winckler/vim-angry'
+
+" daf to Delete A Function
+" vif to Visually select the code Inside a Function
+" yaF to Yank A Function with leading or trailing blank lines
+" viF to visually select a function without leading or trailing blank lines
+Plug 'kana/vim-textobj-function'
+
+" heuristic syntax-based text-object for function
+" requires kana/vim-textobj-function 0.1.0 or later
+Plug 'haya14busa/vim-textobj-function-syntax'
+
+" A text object to turn foo_bar_baz into foo_baz *and* quuxSpamEggs into quuxEggs *and* shine your shoes
+" iv
+" av
+" requires kana/vim-textobj-user
+Plug 'Julian/vim-textobj-variable-segment'
+
 " Language agnostic vim plugin for folding and motion based on indentation.
 " Maps motion commands to [[, ]], [j, ]k
 Plug 'pseewald/vim-anyfold' "{{{
@@ -1120,12 +1143,6 @@ Plug 'tommcdo/vim-exchange'
 " Automated tag file generation and syntax highlighting of tags in Vim
 " <C-]>   Jump to the definition of the keyword under the cursor.
 " Plug 'xolox/vim-easytags'
-
-" daf to Delete A Function
-" vif to Visually select the code Inside a Function
-" yaF to Yank A Function with leading or trailing blank lines
-" viF to visually select a function without leading or trailing blank lines
-" Plug 'kana/vim-textobj-function'
 
 " val - select line (including whitespace)
 " vil - select line

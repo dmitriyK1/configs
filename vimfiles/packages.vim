@@ -25,6 +25,7 @@ call plug#begin()
 Plug 'ashfinal/vim-colors-violet'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
+" Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }
 " Plug 'nightsense/office'
 " Plug 'nightsense/seagrey'
 " Plug 'nightsense/forgotten'

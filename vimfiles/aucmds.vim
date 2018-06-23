@@ -105,3 +105,9 @@ endif
 
 " https://github.com/prettier/prettier
 autocmd FileType javascript set formatprg=prettier\ --stdin
+
+" maximize help window
+augroup filetype_help
+  autocmd!
+  autocmd BufWinEnter * if &l:buftype ==# 'help' | wincmd _ | endif
+augroup END

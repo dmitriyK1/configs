@@ -272,3 +272,6 @@ set rtp+=~/vimfiles
 if has('termguicolors')
     set termguicolors
 endif
+
+" maximize help window
+set helpheight=99999

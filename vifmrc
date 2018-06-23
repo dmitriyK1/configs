@@ -452,8 +452,6 @@ nnoremap <f8> :delete<cr>
 
 set cpoptions=fs
 
-map <Space> :
-
 map ,se :!start gvim $HOME/AppData/Roaming/Vifm/vifmrc<cr>
 
 " file types
@@ -471,3 +469,8 @@ map q :quit<CR>
 
 " show total size of selected files
 set statusline="  %t%= %A %10u:%-7g %15E %20d  "
+
+map <Tab> <C-w><C-w>
+map <Space> :
+
+set vimhelp

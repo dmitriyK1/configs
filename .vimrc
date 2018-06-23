@@ -1,9 +1,3 @@
-" zM close everything
-" zR open everything
-" za toggle state of the current fold
-" zj jump to next fold
-" zk jump to previous fold
-
 " TODO: use sessions handling /w Startify
 
 " TODO: remove redundant keybindings
@@ -31,6 +25,16 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" change indentation inside of a block:
+" >iB
+" <iB
+
+" zM close everything
+" zR open everything
+" za toggle state of the current fold
+" zj jump to next fold
+" zk jump to previous fold
+
 " earlier 5m
 " later 1m
 " U         undo a change on one line

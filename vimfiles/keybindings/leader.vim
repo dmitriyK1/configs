@@ -79,10 +79,11 @@ noremap <leader>ss :source $MYVIMRC<CR>
 " Source current file
 noremap <leader>so :so%<CR>
 
+" UNUSED - replaced by vim-over package
 " Substitution
 " using colon as a separator to easier read regular expressions;
 " using \v key to make vim regular expressions work as common regexps
-map <leader>S :%s:\v::g<Left><Left><Left>
+" map <leader>S :%s:\v::g<Left><Left><Left>
 
 " open packages config
 nnoremap <silent> <leader>sp :e ~/vimfiles/packages.vim<CR>

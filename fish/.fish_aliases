@@ -125,7 +125,9 @@ alias sev "vi ~/.fish_variables"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias cpp='command cp'
 alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mvv='command mv'
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 
 alias numFiles='echo (command ls -1 | wc -l)'       # numFiles:     Count of non-hidden files in current dir

@@ -11,3 +11,4 @@ sudo npm i -g tldr@latest --unsafe-perm=true
 sudo npm i -g ntl@latest
 sudo npm i -g caniuse@latest
 sudo npm i -g fkill-cli@latest
+sudo npm install -g cz-conventional-changelog@latest

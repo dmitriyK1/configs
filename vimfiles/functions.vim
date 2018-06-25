@@ -55,8 +55,8 @@ function! SortLinesByWidth() range
   execute a:firstline . "," . a:lastline . 's/^\d\+\s//'
 endfunction
 
- " List occurrences of keyword under cursor, and
-jump to selected occurrence.
+" List occurrences of keyword under cursor, and
+" jump to selected occurrence.
 function! s:JumpOccurrence()
   let v:errmsg = ""
   exe "normal [I"
@@ -67,3 +67,5 @@ function! s:JumpOccurrence()
     endif
   endif
 endfunction
+
+nnoremap <Leader>j :call <SID>JumpOccurrence()<CR>

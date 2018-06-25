@@ -54,3 +54,16 @@ function! SortLinesByWidth() range
   execute a:firstline . "," . a:lastline . 'sort n'
   execute a:firstline . "," . a:lastline . 's/^\d\+\s//'
 endfunction
+
+ " List occurrences of keyword under cursor, and
+jump to selected occurrence.
+function! s:JumpOccurrence()
+  let v:errmsg = ""
+  exe "normal [I"
+  if strlen(v:errmsg) == 0
+    let nr = input("Which one: ")
+    if nr =~ '\d\+'
+      exe "normal! " . nr . "[\t"
+    endif
+  endif
+endfunction

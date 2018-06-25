@@ -105,6 +105,7 @@ alias norg="gron --ungron"
 alias ungron="gron --ungron"
 
 alias cd- "cd -"
+alias cdd "cd -"
 alias cdr "cd (git rev-parse --show-toplevel)"
 alias nano="env LC_ALL=ru_RU.UTF-8 nano"
 alias vim "/usr/local/bin/vim"

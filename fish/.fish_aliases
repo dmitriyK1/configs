@@ -69,6 +69,7 @@ alias gstpu "git stash push"
 
 alias gbl "git-blame-color"
 alias gc "git commit -m"
+alias gcz "git cz"
 alias gco "git checkout"
 alias gch "git checkout"
 alias gch. "git checkout ."

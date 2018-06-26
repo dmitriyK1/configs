@@ -13,6 +13,10 @@ legit sync
 echo 'updating vim'
 vim +PlugUpgrade +PlugUpdate +qall
 
+echo 'updating doom emacs'
+doom -y upgrade
+doom -y update
+
 echo 'updating homebrew'
 brew update
 brew upgrade

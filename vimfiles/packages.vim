@@ -336,20 +336,20 @@ Plug 'haya14busa/incsearch.vim' "{{{
   map n <Plug>(incsearch-nohl)<Plug>(anzu-mode-n)
   map N <Plug>(incsearch-nohl)<Plug>(anzu-mode-N)
 
-  map *  <Plug>(incsearch-nohl-*)
-  map #  <Plug>(incsearch-nohl-#)
-  map g* <Plug>(incsearch-nohl-g*)
-  map g# <Plug>(incsearch-nohl-g#)
+  " map *  <Plug>(incsearch-nohl-*)
+  " map g* <Plug>(incsearch-nohl-g*)
+  " map #  <Plug>(incsearch-nohl-#)
+  " map g# <Plug>(incsearch-nohl-g#)
 
-  " map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
-  " map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
-  " map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
-  " map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
-  "
-  " map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
-  " map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
-  " map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
-  " map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+  map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
+  map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
+  map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
+  map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
+
+  map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+  map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+  map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+  map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
 "}}}
 
 " vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
@@ -520,9 +520,6 @@ Plug 'easymotion/vim-easymotion' "{{{
   map <M-f> =f
   map <M-b> =F
 "}}}
-
-" Start a * or # search from a visual block
-Plug 'bronson/vim-visual-star-search'
 
 " auto-closer - insert or delete brackets, parens, quotes in pair
 " Shortcuts:
@@ -1456,6 +1453,9 @@ Plug 'tommcdo/vim-exchange'
 " <M-Enter> (not all terminals).
 " Plug 'drmikehenry/vim-fixkey'
 
+" NOTE: use vim-asterisk instead
+" Start a * or # search from a visual block
+" Plug 'bronson/vim-visual-star-search'
 " ================================================================================
 
 call plug#end()

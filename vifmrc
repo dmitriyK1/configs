@@ -479,3 +479,5 @@ set vimhelp
 
 " requires https://draculatheme.com/pygments/
 fileview *[^/] pygmentize -f terminal256 -O style=dracula -g
+" requires https://github.com/daveyarwood/gruvbox-pygments
+" fileview *[^/] pygmentize -f terminal256 -O style=gruvbox -g

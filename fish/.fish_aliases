@@ -149,3 +149,7 @@ alias ll='exa -lha --git'
 alias lc='colorls --gs -la'
 
 alias tree='tree -a'
+
+# alias tm='tmux new-session -A -s main'
+alias tm='tmux -CC' # start iterm tmux mode
+alias tma='tmux -CC attach' # attach to existing tmux session

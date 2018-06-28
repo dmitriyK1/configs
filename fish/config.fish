@@ -49,8 +49,11 @@ export EDITOR=/usr/local/bin/vim
 # requires installing omf install bobthefish
 set theme_color_scheme gruvbox
 set -g theme_nerd_fonts yes
+set -g fish_prompt_pwd_dir_length 0
 
 source ~/.fish_variables
 source ~/.fish_aliases
 source ~/.fish_functions
 source (npx --shell-auto-fallback fish | psub)
+
+source ~/.iterm2_shell_integration.(basename $SHELL)

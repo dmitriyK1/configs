@@ -147,3 +147,5 @@ alias rg="rg -i --color=always --glob='!flow-typed/*'"
 alias ls='exa -lha --git'
 alias ll='exa -lha --git'
 alias lc='colorls --gs -la'
+
+alias tree='tree -a'

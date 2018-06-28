@@ -19,4 +19,4 @@ set --export FZF_DEFAULT_OPTS '--ansi'
 set --export TERM xterm-256color
 
 # requires https://github.com/rkitover/vimpager#install
-# set --export PAGER vimpager
+set --export PAGER vimpager

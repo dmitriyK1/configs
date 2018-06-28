@@ -50,7 +50,7 @@ export EDITOR=/usr/local/bin/vim
 set theme_color_scheme gruvbox
 set -g theme_nerd_fonts yes
 
-source ~/.fish_aliases
 source ~/.fish_variables
+source ~/.fish_aliases
 source ~/.fish_functions
 source (npx --shell-auto-fallback fish | psub)

@@ -17,3 +17,6 @@ set --export FZF_DEFAULT_OPTS '--ansi'
 # NOTE: disable '--ansi' and '--color=always' to speedup
 
 set --export TERM xterm-256color
+
+# requires https://github.com/rkitover/vimpager#install
+# set --export PAGER vimpager

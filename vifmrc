@@ -478,4 +478,4 @@ map ,ss :restart<CR>
 set vimhelp
 
 " requires https://draculatheme.com/pygments/
-fileview * pygmentize -f terminal256 -O style=dracula -g
+fileview *[^/] pygmentize -f terminal256 -O style=dracula -g

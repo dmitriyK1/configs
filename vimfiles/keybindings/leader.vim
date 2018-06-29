@@ -145,8 +145,8 @@ nnoremap <leader>\ :vnew<cr><C-w>l
 map <Leader>= <C-w>=
 
 " Cmdheight switching
-nnoremap <leader>1 :set cmdheight=1<cr>
-nnoremap <leader>2 :set cmdheight=2<cr>
+" nnoremap <leader>1 :set cmdheight=1<cr>
+" nnoremap <leader>2 :set cmdheight=2<cr>
 
 nnoremap <silent> <leader>3 :call ToggleHiddenAll()<CR>
 

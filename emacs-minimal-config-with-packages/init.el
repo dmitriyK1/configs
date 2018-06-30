@@ -36,7 +36,6 @@
   (package-install 'use-package))
 (require 'use-package)
 
-
 ;; Dependency for ripgrep
 (use-package counsel :ensure t)
 
@@ -80,8 +79,14 @@
   "TAB" '(switch-to-prev-buffer :which-key "previous buffer")
   "SPC" '(helm-M-x :which-key "M-x")
   "pf"  '(helm-find-file :which-key "find files")
+  ;; Files
+  "f."  '(helm-find-files :which-key "find files")
+  "ff"  '(helm-find-files :which-key "find files")
+  "fr"  '(helm-recentf :which-key "recent files")
   ;; Buffers
   "bb"  '(helm-buffers-list :which-key "buffers list")
+  "bs"  '(save-buffer :which-key "save buffer")
+  "bk"  '(kill-this-buffer :which-key "kill buffer")
   ;; Window
   "wl"  '(windmove-right :which-key "move right")
   "wh"  '(windmove-left :which-key "move left")
@@ -93,6 +98,12 @@
   ;; Others
   "at"  '(ansi-term :which-key "open terminal")
 ))
+
+(use-package magit
+  :ensure t)
+
+(use-package evil-magit
+  :ensure t)
 
 ;; no bell
 (setq ring-bell-function 'ignore)
@@ -157,3 +168,14 @@
 
 ;; save on focus lost (without trashing a minibuffer)
 (add-hook 'focus-out-hook (lambda () (cl-flet ((message (format &rest args) nil)) (save-some-buffers t))))
+
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+;; (global-set-key "\C-x\ \C-r" 'recentf-open-files)
+(global-set-key "\C-x\ \C-r" 'helm-recentf)
+;; run periodically
+(run-at-time nil (* 5 60) 'recentf-save-list)
+
+;; Save place in files between Sessions
+(save-place-mode 1)
+(setq save-place-forget-unreadable-files nil)

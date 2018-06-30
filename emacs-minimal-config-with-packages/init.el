@@ -154,3 +154,6 @@
    "/usr/local/bin"
   )
 )
+
+;; save on focus lost (without trashing a minibuffer)
+(add-hook 'focus-out-hook (lambda () (cl-flet ((message (format &rest args) nil)) (save-some-buffers t))))

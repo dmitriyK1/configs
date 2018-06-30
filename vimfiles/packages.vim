@@ -282,25 +282,9 @@ Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
 " Use your favorite grep tool (ag, ack, git grep, ripgrep, pt, sift, findstr,
 " grep) to start an asynchronous search. All matches will be put in a quickfix
 " or location list.
-Plug 'mhinz/vim-grepper' "{{{
-  " let g:grepper = {
-  "     \ 'tools':     ['ag', 'csearch', 'findstr'],
-  "     \ 'dispatch':  1,
-  "     \ 'open':      1,
-  "     \ 'switch':    0,
-  "     \ 'jump':      0,
-  "     \ 'ag': {
-  "     \   'grepprg': 'ag --nogroup --nocolor --column',
-  "     \   'grepformat': '%f:%l:%c:%m'
-  "     \ },
-  "     \ 'csearch': {
-  "     \   'grepprg': 'csearch -n',
-  "     \   'grepformat': '%f:%l:%m'
-  "     \ }}
-
-  " nmap gs  <plug>(GrepperOperator)
-  " xmap gs  <plug>(GrepperOperator)
-
+Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] } "{{{
+  nmap gs  <plug>(GrepperOperator)
+  xmap gs  <plug>(GrepperOperator)
   nmap <leader>vv <plug>(GrepperOperator)iw
   xmap <leader>vv <plug>(GrepperOperator)iw
 "}}}

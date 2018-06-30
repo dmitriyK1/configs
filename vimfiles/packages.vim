@@ -283,8 +283,11 @@ Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
 " grep) to start an asynchronous search. All matches will be put in a quickfix
 " or location list.
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] } "{{{
+"  Useful examples are gsW, gsiw, or gsi".
+  " In visual mode, it uses the current selection.
   nmap gs  <plug>(GrepperOperator)
   xmap gs  <plug>(GrepperOperator)
+
   nmap <leader>vv <plug>(GrepperOperator)iw
   xmap <leader>vv <plug>(GrepperOperator)iw
 "}}}

@@ -105,6 +105,11 @@
 (use-package evil-magit
   :ensure t)
 
+(use-package evil-commentary
+  :ensure t
+  :config
+  (evil-commentary-mode))
+
 ;; no bell
 (setq ring-bell-function 'ignore)
 

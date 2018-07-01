@@ -111,3 +111,6 @@ augroup filetype_help
   autocmd!
   autocmd BufWinEnter * if &l:buftype ==# 'help' | wincmd _ | endif
 augroup END
+
+" reload disk file changes
+" au CursorHold * checktime

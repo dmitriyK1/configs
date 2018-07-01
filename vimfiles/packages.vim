@@ -176,10 +176,8 @@ Plug 'w0rp/ale' "{{{
   " let g:ale_keep_list_window_open = 0
 " }}}
 
-" (Vit)ality is a plugin that makes (V)im play nicely with (i)Term 2 and (t)mux.
-" Plug 'sjl/vitality.vim' "{{{
-"  let g:vitality_always_assume_iterm = 1
-" }}}
+" Have Vim automatically reload a file that has changed externally
+Plug 'djoshea/vim-autoread'
 
 " A Vim plugin that always highlights the enclosing html/xml tags
 Plug 'valloric/MatchTagAlways'
@@ -1443,6 +1441,11 @@ Plug 'tommcdo/vim-exchange'
 " NOTE: use vim-asterisk instead
 " Start a * or # search from a visual block
 " Plug 'bronson/vim-visual-star-search'
+
+" (Vit)ality is a plugin that makes (V)im play nicely with (i)Term 2 and (t)mux.
+" Plug 'sjl/vitality.vim' "{{{
+"  let g:vitality_always_assume_iterm = 1
+" }}}
 " ================================================================================
 
 call plug#end()

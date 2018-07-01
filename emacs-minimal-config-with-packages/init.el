@@ -92,10 +92,12 @@
 (use-package which-key
   :ensure t
   :init
+  (setq which-key-idle-delay 0.0)
   (setq which-key-separator " ")
   (setq which-key-prefix-prefix "+")
   :config
-  (which-key-mode))
+  (which-key-mode)
+  (which-key-setup-side-window-right))
 
 ;; Custom keybinding
 (use-package general
@@ -124,6 +126,11 @@
   "w/"  '(split-window-right :which-key "split right")
   "w-"  '(split-window-below :which-key "split bottom")
   "wx"  '(delete-window :which-key "delete window")
+  ;; Avy
+  "al" '(evil-avy-goto-line :which-key "avy-goto-line")
+  "ad" '(evil-avy-goto-word-1 :which-key "avy-goto-word-1")
+  "at" '(evil-avy-goto-char-timer :which-key "avy-goto-char-timer")
+  "ac" '(evil-avy-goto-char-2 :which-key "avy-goto-char-2")
   ;; Git
   "G"   '(magit :which-key "magit")
   "gs"  '(magit-status :which-key "git status")
@@ -132,6 +139,11 @@
   "q"   '(save-buffers-kill-emacs :which-key "quit emacs")
 ))
 
+(global-set-key (kbd "C-;") 'avy-goto-char-2)
+;; (global-set-key (kbd "M-g f") 'avy-goto-line)
+;; (global-set-key (kbd "M-g w") 'avy-goto-word-1)
+;; (global-set-key (kbd "M-g t") 'avy-goto-char-timer)
+
 (use-package magit
   :ensure t)
 
@@ -139,10 +151,11 @@
   :ensure t)
 
 ;; Emacs key bindings
-;; (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
-;; (global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-line)
-;; (global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
-;; (global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
+(global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
+(global-set-key (kbd "C-c l") 'evilnc-quick-comment-or-uncomment-to-the-line)
+(global-set-key (kbd "C-c c") 'evilnc-copy-and-comment-lines)
+(global-set-key (kbd "C-c p") 'evilnc-comment-or-uncomment-paragraphs)
+
 (use-package evil-nerd-commenter
   :ensure t
   :config (evilnc-default-hotkeys)
@@ -177,7 +190,8 @@
 ;; swap alt and cmd
 (when (eq system-type 'darwin)
   (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier nil))
+ (setq mac-option-modifier 'super))
+  ;; (setq mac-option-modifier nil))
 
 ;; show matching parenthesis
 (show-paren-mode 1)

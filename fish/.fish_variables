@@ -3,6 +3,7 @@ set --export NODE_ENV development
 set --export PATH /usr/local/sbin $PATH
 set --export PATH /opt/local/bin $PATH
 set --export PATH /Users/dmitriy/.emacs.d/bin $PATH
+set --export PATH $HOME/.node_modules_global/bin $PATH
 
 set EDITOR vim
 # set VISUAL mvim

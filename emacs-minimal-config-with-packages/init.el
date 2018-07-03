@@ -1,4 +1,7 @@
 ;; https://gist.github.com/huytd/6b785bdaeb595401d69adc7797e5c22c
+;; useful stuff: https://gitlab.com/buildfunthings/emacs-config/blob/master/loader.org
+;; https://www.youtube.com/watch?v=I28jFkpN5Zk
+;; https://github.com/flyingmachine/emacs-for-clojure
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
@@ -65,8 +68,16 @@
   (package-install 'use-package))
 (require 'use-package)
 
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize))
+
 ;; Dependency for ripgrep
 (use-package counsel :ensure t)
+
+;; diminish modes
+(use-package diminish :ensure t)
 
 ;; Vim mode
 (use-package evil
@@ -95,9 +106,10 @@
   (setq which-key-idle-delay 0.0)
   (setq which-key-separator " ")
   (setq which-key-prefix-prefix "+")
+  :diminish which-key-mode
   :config
-  (which-key-mode)
-  (which-key-setup-side-window-right))
+  (which-key-mode))
+  ;; (which-key-setup-side-window-right))
 
 ;; Custom keybinding
 (use-package general
@@ -106,7 +118,8 @@
   :states '(normal visual insert emacs)
   :prefix "SPC"
   :non-normal-prefix "M-SPC"
-  "/"   '(counsel-rg :which-key "ripgrep") ; You'll need counsel package for this
+  ;; "/"   '(counsel-rg :which-key "ripgrep") ; You'll need counsel package for this
+  "/"   '(helm-projectile-rg :which-key "ripgrep")
   "TAB" '(switch-to-prev-buffer :which-key "previous buffer")
   "SPC" '(helm-M-x :which-key "M-x")
   "pf"  '(helm-find-file :which-key "find files")
@@ -133,13 +146,17 @@
   "ac" '(evil-avy-goto-char-2 :which-key "avy-goto-char-2")
   ;; Git
   "G"   '(magit :which-key "magit")
-  "gs"  '(magit-status :which-key "git status")
+  "gs"  '(magit-status :which-key "status")
+  "gd"  '(magit-diff-unstaged :which-key "diff")
   ;; Others
-  "at"  '(ansi-term :which-key "open terminal")
+  ;; "at"  '(ansi-term :which-key "open terminal")
   "q"   '(save-buffers-kill-emacs :which-key "quit emacs")
 ))
 
-(global-set-key (kbd "C-;") 'avy-goto-char-2)
+;; enable case-sensitive search
+(setq avy-case-fold-search nil)
+
+(global-set-key (kbd "C-;") 'avy-goto-char)
 ;; (global-set-key (kbd "M-g f") 'avy-goto-line)
 ;; (global-set-key (kbd "M-g w") 'avy-goto-word-1)
 ;; (global-set-key (kbd "M-g t") 'avy-goto-char-timer)
@@ -177,7 +194,12 @@
   "."  'evilnc-copy-and-comment-operator
   "\\" 'evilnc-comment-operator ; if you prefer backslash key
   ","  'save-buffer
+  "se" 'load-user-init-file
+  "ss" 'reload-user-init-file
+  "q"  'load-scratch-file
 )
+
+(global-prettify-symbols-mode 1)
 
 ;; (use-package evil-commentary
 ;;   :ensure t
@@ -259,14 +281,6 @@
 (setq ns-use-proxy-icon  nil)
 (setq frame-title-format nil)
 
-;; for ripgrep to work
-(setq exec-path
-  '(
-    "/bin/"
-    "/usr/local/bin"
-  )
-)
-
 ;; save on focus lost (without trashing a minibuffer)
 (add-hook 'focus-out-hook (lambda () (cl-flet ((message (format &rest args) nil)) (save-some-buffers t))))
 
@@ -297,3 +311,68 @@
   :ensure t
   :config
   (global-set-key (kbd "M-o") 'ace-window))
+
+(use-package evil-numbers :ensure t)
+(define-key evil-normal-state-map (kbd "C-c =") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
+
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+(defun load-user-init-file()
+  (interactive)
+  (find-file user-init-file))
+
+(defun load-scratch-file()
+  (interactive) (find-file "~/buffer"))
+
+(defun reload-user-init-file()
+  (interactive)
+  (load-file user-init-file))
+
+;; Projectile
+(use-package projectile
+  :ensure t
+  :init
+  (setq projectile-require-project-root nil) ;; enable projectile even if project file not found (do not use in home folder etc)
+  :config
+  (projectile-mode 1))
+
+;; C-c p p | counsel-projectile-switch-project | Switch project
+;; https://github.com/ericdanan/counsel-projectile
+(use-package counsel-projectile
+    :ensure t
+    :config
+    (counsel-projectile-mode))
+
+;; RipGrep
+(use-package helm-rg :ensure t)
+
+;; Helm Projectile
+(use-package helm-projectile
+  :ensure t
+  :init
+  (setq helm-projectile-fuzzy-match t)
+  :config
+  (helm-projectile-on))
+
+;; From Pragmatic Emacs a more concise way to kill the buffer.
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
+;; Mousewheel scrolling can be quite annoying, lets fix it to scroll smoothly.
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+(setq mouse-wheel-progressive-speed nil)
+
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
+(add-hook 'js-mode-hook 'eslintd-fix-mode)
+(setq eslintd-fix-executable "~/.node_modules_global/bin/eslint_d")
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
+(setq flycheck-javascript-eslint-executable "~/.node_modules_global/bin/eslint_d")

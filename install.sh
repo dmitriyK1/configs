@@ -19,3 +19,4 @@ sudo npm i -g yarn@latest
 sudo npm i -g gtop@latest
 sudo npm i -g cli-stopwatch
 sudo npm i -g mongo-hacker --unsafe-perm
+sudo npm i -g clipboard-cli

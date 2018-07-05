@@ -229,7 +229,10 @@ Plug 'tpope/vim-unimpaired' "{{{
 " co for ourselves
 " cn for none
 " cb for both
-Plug 'rhysd/conflict-marker.vim'
+Plug 'rhysd/conflict-marker.vim' "{{{
+  nmap <buffer><Up> <Plug>(conflict-marker-prev-hunk)
+  nmap <buffer><Down> <Plug>(conflict-marker-next-hunk)
+"}}}
 
 " Force linewise or characterwise paste, regardless of how it was yanked.
 " gcp - Paste characterwise (newline characters and indent are flattened to spaces) [count] times.

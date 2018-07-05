@@ -20,8 +20,7 @@
 
 [core]
     excludesfile = ~/.gitignore
-    # pager=less -FXRSi
-    pager = diff-so-fancy | less --tabs=4 -RFXi --pattern '^(Date|added|deleted|modified): '
+    pager = diff-so-fancy | less --tabs=4 -RFXi
     editor = vim +0 -f
 	# autocrlf = true
     compression = 9

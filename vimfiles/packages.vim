@@ -209,6 +209,7 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
 " EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
 
+" TODO: disable [x ]x [xx ]xx (conflicts with rhysd/conflict-marker.vim)
 " toggling settings mappings
 Plug 'tpope/vim-unimpaired' "{{{
   " Bubble single lines

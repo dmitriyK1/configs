@@ -45,10 +45,6 @@ alias gcl="git clone"
 alias gcln="git clean -df"
 alias gca="git commit --amend"
 alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"
-alias gdl "git difftool | less"
-alias gdt "git difftool | less"
-alias gdlc "git difftool --cached | less"
-alias gdct "git difftool --cached | less"
 alias gf "git fetch --prune"
 alias gfo "git follow" # requires https://github.com/nickolasburr/git-follow
 alias gs "git status"
@@ -78,8 +74,12 @@ alias gch "git checkout"
 alias gch. "git checkout ."
 alias gchp "git checkout -p"
 alias gn "git checkout -b"
-alias gd "git diff "
-alias gdc "git diff --cached"
+alias gd "git diff --color | diff-so-fancy"
+alias gdc "git diff --color --cached | diff-so-fancy"
+alias gdd "git diff"
+alias gddc "git diff --cached"
+alias gdl "git difftool | less"
+alias gdlc "git difftool --cached | less"
 alias gde "git diff develop HEAD"
 alias gdm "git diff master HEAD"
 # from https://stackoverflow.com/questions/4944376/how-to-check-real-git-diff-before-merging-from-remote-branch
@@ -116,6 +116,7 @@ alias cdr "cd (git rev-parse --show-toplevel)"
 alias nano="env LC_ALL=ru_RU.UTF-8 nano"
 alias vim "/usr/local/bin/vim"
 alias v "vim"
+alias vi "vim"
 alias vf "vifm ."
 alias mi "micro"
 alias bi "brew install"
@@ -125,10 +126,10 @@ alias bif "brew info"
 # alias p "percol" # brew install percol
 alias p "peco" # brew install peco
 alias ss "source ~/.config/fish/config.fish"
-alias se "vi ~/.config/fish/config.fish"
-alias sea "vi ~/.fish_aliases"
-alias sef "vi ~/.fish_functions"
-alias sev "vi ~/.fish_variables"
+alias se "vim ~/.config/fish/config.fish"
+alias sea "vim ~/.fish_aliases"
+alias sef "vim ~/.fish_functions"
+alias sev "vim ~/.fish_variables"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
@@ -163,3 +164,5 @@ alias tma='tmux -CC attach' # attach to existing tmux session
 # alias less=$PAGER
 # alias zless=$PAGER
 # alias cat=vimcat
+
+alias t='python ~/Downloads/t/t.py --task-dir ~/tasks --list tasks --delete-if-empty'

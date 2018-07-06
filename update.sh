@@ -29,7 +29,7 @@ fish_update_completions
 omf update
 
 echo 'updating npm'
-sudo npm update npm -g
+npm update npm -g # store modules in ~/.node_modules_global via `npm config set prefix=$HOME/.node_modules_global`
 sudo npm update -g
 
 echo 'checking Apple Updates'

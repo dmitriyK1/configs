@@ -21,3 +21,4 @@ sudo npm i -g cli-stopwatch
 sudo npm i -g mongo-hacker --unsafe-perm
 sudo npm i -g clipboard-cli
 sudo npm i -g eslint_d
+sudo npm i -g tern

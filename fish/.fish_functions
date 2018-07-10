@@ -67,3 +67,7 @@ end
 function gro
   gron $argv[2] | fgrep $argv[1] | norg
 end
+
+function findByPort
+  lsof -i :$argv
+end

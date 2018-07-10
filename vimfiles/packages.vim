@@ -294,6 +294,11 @@ Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] } "{{{
   xmap <leader>vv <plug>(GrepperOperator)iw
 "}}}
 
+" improved */# search
+Plug 'haya14busa/vim-asterisk' "{{{
+  let g:asterisk#keeppos = 1
+" }}}
+
 " vim search status (similar to indexedsearch)
 Plug 'osyo-manga/vim-anzu' "{{{
   let g:anzu_enable_CursorMoved_AnzuUpdateSearchStatus = 1
@@ -1154,11 +1159,6 @@ Plug 'tommcdo/vim-exchange'
   " nmap <silent> <F7> <Plug>QfLtoggle
 " }}}
 
-" improved */# search
-" Plug 'haya14busa/vim-asterisk' "{{{
-"   let g:asterisk#keeppos = 1
-" }}}
-
 " asynchronous build and test dispatcher
 " Plug 'tpope/vim-dispatch'
 
@@ -1185,12 +1185,12 @@ Plug 'tommcdo/vim-exchange'
 " }}}
 
 " Git wrapper
-" Plug 'tpope/vim-fugitive' "{{{
-  " nnoremap <leader>ga :Git add %:p<CR><CR>
-  " nnoremap <leader>gs :Gstatus<CR>
-  " nnoremap <leader>gc :Gcommit -v -q<CR>
+Plug 'tpope/vim-fugitive' "{{{
+  nnoremap <leader>ga :Git add %:p<CR><CR>
+  nnoremap <leader>gs :Gstatus<CR>
+  nnoremap <leader>gc :Gcommit -v -q<CR>
   " nnoremap <leader>gt :Gcommit -v -q %:p<CR>
-  " nnoremap <leader>gd :Gdiff<CR>
+  nnoremap <leader>gd :Gdiff<CR>
   " nnoremap <leader>ge :Gedit<CR>
   " nnoremap <leader>gr :Gread<CR>
   " nnoremap <leader>gw :Gwrite<CR><CR>
@@ -1204,7 +1204,7 @@ Plug 'tommcdo/vim-exchange'
 " }}}
 
 " git runtime files
-" Plug 'tpope/vim-git'
+Plug 'tpope/vim-git'
 
 " alignment plugin
 " Plug 'godlygeek/tabular', { 'on': 'Tabularize' } "{{{
@@ -1450,6 +1450,9 @@ Plug 'tommcdo/vim-exchange'
 " Plug 'sjl/vitality.vim' "{{{
 "  let g:vitality_always_assume_iterm = 1
 " }}}
+"
+" Vim plugin that allows use of vifm as a file picker
+" Plug 'vifm/vifm.vim'
 " ================================================================================
 
 call plug#end()

@@ -69,5 +69,6 @@ function gro
 end
 
 function findByPort
+  # sudo lsof -i :$argv
   lsof -i :$argv
 end

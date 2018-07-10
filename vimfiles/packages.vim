@@ -180,7 +180,7 @@ Plug 'w0rp/ale' "{{{
 Plug 'djoshea/vim-autoread'
 
 " A Vim plugin that always highlights the enclosing html/xml tags
-" Plug 'valloric/MatchTagAlways'
+Plug 'valloric/MatchTagAlways'
 
 " Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
 " Then whenever you are in the insert mode and paste into your terminal

@@ -18,8 +18,8 @@ set diffopt+=iwhite
 set grepprg=grep\ -nH\ $*                   " Make grep always print the file name.
 set fileformats=unix,mac,dos                " Allows automatic line-end detection.
 
-set nomodeline
-set modelines=0
+set modeline
+set modelines=5
 
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 

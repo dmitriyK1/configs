@@ -25,6 +25,7 @@ call plug#begin()
 Plug 'ashfinal/vim-colors-violet'
 Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim'
 " Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }
 " Plug 'nightsense/office'
 " Plug 'nightsense/seagrey'
@@ -79,7 +80,6 @@ Plug 'morhetz/gruvbox'
   " let g:molokai_original=0      " use a darker background
 " }}}
 " Plug 'michalbachowski/vim-wombat256mod'
-" Plug 'dracula/vim'
 " Plug 'ciaranm/inkpot'
 " Plug 'jnurmine/Zenburn'
 " Plug 'vim-scripts/Wombat'

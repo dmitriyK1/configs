@@ -659,16 +659,20 @@ Plug 'tpope/vim-fugitive' "{{{
   " nnoremap <leader>gw :Gwrite<CR><CR>
   " nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
   nnoremap <leader>gl :Git log -p --stat<CR>
+  nnoremap <leader>gsh :Git show<CR>
   " nnoremap <leader>gp :Ggrep<Space>
   " nnoremap <leader>gm :Gmove<Space>
   " nnoremap <leader>gb :Git branch<Space>
   " nnoremap <leader>go :Git checkout<Space>
-  " nnoremap <leader>gps :Dispatch! git push<CR>
-  " nnoremap <leader>gpl :Dispatch! git pull<CR>
+  nnoremap <leader>gps :Dispatch! git push<CR>
+  nnoremap <leader>gpl :Dispatch! git pull<CR>
 " }}}
 
 " git runtime files
 Plug 'tpope/vim-git'
+
+" asynchronous build and test dispatcher
+Plug 'tpope/vim-dispatch'
 
 " ================================================================================
 " Unused:
@@ -1181,9 +1185,6 @@ Plug 'tpope/vim-git'
   " nmap <silent> <F4> <Plug>QfCtoggle
   " nmap <silent> <F7> <Plug>QfLtoggle
 " }}}
-
-" asynchronous build and test dispatcher
-" Plug 'tpope/vim-dispatch'
 
 " Vim plugin that displays tags in a window, ordered by scope
 " Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } "{{{

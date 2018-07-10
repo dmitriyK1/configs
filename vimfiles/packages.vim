@@ -658,6 +658,7 @@ Plug 'tpope/vim-fugitive' "{{{
   " nnoremap <leader>gr :Gread<CR>
   " nnoremap <leader>gw :Gwrite<CR><CR>
   " nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+  nnoremap <leader>gl :Git log -p --stat<CR>
   " nnoremap <leader>gp :Ggrep<Space>
   " nnoremap <leader>gm :Gmove<Space>
   " nnoremap <leader>gb :Git branch<Space>

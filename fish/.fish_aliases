@@ -167,3 +167,5 @@ alias tma='tmux -CC attach' # attach to existing tmux session
 # alias cat=vimcat
 
 alias t='python ~/Downloads/t/t.py --task-dir ~/tasks --list tasks --delete-if-empty'
+
+# vim: filetype=sh

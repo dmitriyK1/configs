@@ -1,3 +1,5 @@
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
 # colorizer:
 # https://github.com/oh-my-fish/plugin-grc
 # git flow completion:
@@ -8,8 +10,6 @@
 
 # fasd support here:
 # https://github.com/fishgretel/fasd
-
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 # fish git prompt
 # set __fish_git_prompt_showdirtystate 'yes'
@@ -49,11 +49,15 @@ export EDITOR=/usr/local/bin/vim
 # requires installing omf install bobthefish
 set theme_color_scheme gruvbox
 set -g theme_nerd_fonts yes
+set -g theme_display_docker_machine yes
 set -g fish_prompt_pwd_dir_length 0
 
-source ~/.fish_variables
-source ~/.fish_aliases
-source ~/.fish_functions
+source ~/fish/.fish_variables
+source ~/fish/.fish_aliases
+source ~/fish/.fish_functions
 source (npx --shell-auto-fallback fish | psub)
 
 source ~/.iterm2_shell_integration.(basename $SHELL)
+
+thefuck --alias | source
+caniuse --completion-fish | source

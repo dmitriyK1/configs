@@ -128,9 +128,9 @@ alias bif "brew info"
 alias p "peco" # brew install peco
 alias ss "source ~/.config/fish/config.fish"
 alias se "vim ~/.config/fish/config.fish"
-alias sea "vim ~/.fish_aliases"
-alias sef "vim ~/.fish_functions"
-alias sev "vim ~/.fish_variables"
+alias sea "vim ~/fish/.fish_aliases"
+alias sef "vim ~/fish/.fish_functions"
+alias sev "vim ~/fish/.fish_variables"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation

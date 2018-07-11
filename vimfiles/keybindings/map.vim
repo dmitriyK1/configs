@@ -32,6 +32,8 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " Functional keys mappings
 " --------------------------------------------------------------------------------
 
+map <F2> :Vexplore<CR>
+
 call togglebg#map("<F12>")
 
 " --------------------------------------------------------------------------------
@@ -246,5 +248,3 @@ endfunction
 
 map ]d jddk
 map [d kdd
-
-map <F2> :Vexplore<CR>

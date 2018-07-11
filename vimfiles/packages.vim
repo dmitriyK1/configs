@@ -481,7 +481,7 @@ Plug 'd11wtq/ctrlp_bdelete.vim'
 
 " Git branch searching using CtrlP.vim
 Plug 'imkmf/ctrlp-branches' "{{{
-  nmap <silent> <leader>g :CtrlPBranches<CR>
+  nmap <silent> <leader>gb :CtrlPBranches<CR>
 "}}}
 
 "  Adds file type glyphs/icons to many popular Vim plugins such as: NERDTree,
@@ -654,6 +654,7 @@ Plug 'tpope/vim-fugitive' "{{{
   nnoremap <leader>gc :Gcommit -v -q<CR>
   " nnoremap <leader>gt :Gcommit -v -q %:p<CR>
   nnoremap <leader>gd :Gdiff<CR>
+  nnoremap <leader>gD :Git diff --staged<CR>
   " nnoremap <leader>ge :Gedit<CR>
   " nnoremap <leader>gr :Gread<CR>
   " nnoremap <leader>gw :Gwrite<CR><CR>

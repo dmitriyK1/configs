@@ -39,7 +39,7 @@ alias gi "git init"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"
 alias gll="git log --oneline --decorate"
 alias gls="git log -S"
-alias glp="git log -p --stat"
+alias glp="git log -p --stat --no-merges"
 # gitu - from .fish_functions
 # glf  - from .fish_functions
 alias gcl="git clone"

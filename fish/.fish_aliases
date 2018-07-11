@@ -23,9 +23,6 @@ alias nup "npm upgrade"
 alias ndd "npm dedupe"
 alias nls "npm ls"
 
-# gitu - from .fish_functions
-# glf  - from .fish_functions
-
 alias fi "find . -name"
 
 alias g "git"
@@ -40,8 +37,11 @@ alias gre "git reset"
 alias gre. "git reset ."
 alias gi "git init"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"
-alias gll="git log --oneline"
+alias gll="git log --oneline --decorate"
 alias gls="git log -S"
+alias glp="git log -p --stat"
+# gitu - from .fish_functions
+# glf  - from .fish_functions
 alias gcl="git clone"
 alias gcln="git clean -df"
 alias gca="git commit --amend"

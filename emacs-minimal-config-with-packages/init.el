@@ -2,6 +2,7 @@
 ;; useful stuff: https://gitlab.com/buildfunthings/emacs-config/blob/master/loader.org
 ;; https://www.youtube.com/watch?v=I28jFkpN5Zk
 ;; https://github.com/flyingmachine/emacs-for-clojure
+;; https://github.com/prathamesh-sonpatki/dotemacs/blob/master/hooks/web.el
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
@@ -13,7 +14,8 @@
 ;; nice scrolling
 (setq scroll-margin 0
       scroll-conservatively 100000
-      scroll-preserve-screen-position 1)
+      scroll-preserve-screen-position 1
+      scroll-step 1)
 
 ;; mode line settings
 (line-number-mode t)
@@ -69,6 +71,7 @@
 (require 'use-package)
 
 (use-package exec-path-from-shell
+  :if (memq window-system '(mac ns))
   :ensure t
   :config
   (exec-path-from-shell-initialize))
@@ -79,17 +82,62 @@
 ;; diminish modes
 (use-package diminish :ensure t)
 
+;; All The Icons
+(use-package all-the-icons :ensure t)
+
 ;; Vim mode
 (use-package evil
   :ensure t
+  :init
+  (setq evil-want-integration nil)
   :config
   (evil-mode 1))
+
+;; NeoTree
+(use-package neotree
+  :ensure t
+  :init
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (setq projectile-switch-project-action 'neotree-projectile-action)
+  :config
+  (setq neo-smart-open t)
+  (evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+  (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
+  (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+  (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter))
+
+  (defun neotree-project-dir ()
+    "Open NeoTree using the git root."
+    (interactive)
+    (let ((project-dir (projectile-project-root))
+          (file-name (buffer-file-name)))
+      (neotree-toggle)
+      (if project-dir
+          (if (neo-global--window-exists-p)
+              (progn
+                (neotree-dir project-dir)
+                (neotree-find file-name)))
+        (message "Could not find git project root."))))
+
+(global-set-key [f8] 'neotree-project-dir)
+
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
 
  ;; Theme
 (use-package dracula-theme
   :ensure t
   :config
-  (load-theme 'dracula t))
+    (if (display-graphic-p)
+        (progn
+        ;; if graphic
+        (load-theme 'dracula t))
+        ;; else
+        (load-theme 'doom-one t)
+    ))
 
  ;; Helm
 (use-package helm
@@ -124,11 +172,18 @@
   "SPC" '(helm-M-x :which-key "M-x")
   "pf"  '(helm-find-file :which-key "find files")
   ;; Files
-  "f."  '(helm-find-files :which-key "find files")
+  "pf"  '(helm-projectile-find-file :which-key "find files")
+  "pp"  '(helm-projectile-switch-project :which-key "switch project")
+  "pb"  '(helm-projectile-switch-to-buffer :which-key "switch buffer")
+  "pr"  '(helm-projectile-recentf :which-key "recent files")
   "ff"  '(helm-find-files :which-key "find files")
   "fr"  '(helm-recentf :which-key "recent files")
+  ;; NeoTree
+  "ft"  '(neotree-toggle :which-key "toggle neotree")
+  "fp"  '(neotree-project-dir :which-key "toggle neotree")
   ;; Buffers
-  "bb"  '(helm-buffers-list :which-key "buffers list")
+  "bb"  '(helm-mini :which-key "buffers list")
+  ;; "bb"  '(helm-buffers-list :which-key "buffers list")
   "bs"  '(save-buffer :which-key "save buffer")
   "bk"  '(kill-this-buffer :which-key "kill buffer")
   ;; Window
@@ -145,12 +200,17 @@
   "at" '(evil-avy-goto-char-timer :which-key "avy-goto-char-timer")
   "ac" '(evil-avy-goto-char-2 :which-key "avy-goto-char-2")
   ;; Git
-  "G"   '(magit :which-key "magit")
-  "gs"  '(magit-status :which-key "status")
-  "gd"  '(magit-diff-unstaged :which-key "diff")
+  "G"  '(magit :which-key "magit")
+  "gs" '(magit-status :which-key "status")
+  "gd" '(magit-diff-unstaged :which-key "diff")
+  "gx" '(git-gutter+-next-hunk :which-key "next hunk")
+  "gX" '(git-gutter+-previous-hunk :which-key "previous hunk")
+  ;; Refactor
+  "rr" '(tern-rename-variable :which-key "rename variable")
   ;; Others
   ;; "at"  '(ansi-term :which-key "open terminal")
   "q"   '(save-buffers-kill-emacs :which-key "quit emacs")
+  "pr"  '(helm-show-kill-ring :which-key "show kill ring")
 ))
 
 ;; enable case-sensitive search
@@ -161,11 +221,9 @@
 ;; (global-set-key (kbd "M-g w") 'avy-goto-word-1)
 ;; (global-set-key (kbd "M-g t") 'avy-goto-char-timer)
 
-(use-package magit
-  :ensure t)
+(use-package magit :ensure t)
 
-(use-package evil-magit
-  :ensure t)
+(use-package evil-magit :ensure t)
 
 ;; Emacs key bindings
 (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines)
@@ -175,8 +233,12 @@
 
 (use-package evil-nerd-commenter
   :ensure t
-  :config (evilnc-default-hotkeys)
-)
+  :config (evilnc-default-hotkeys))
+
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode))
 
 ;; Vim key bindings
 (use-package evil-leader
@@ -194,9 +256,12 @@
   "."  'evilnc-copy-and-comment-operator
   "\\" 'evilnc-comment-operator ; if you prefer backslash key
   ","  'save-buffer
+  "d" 'kill-this-buffer
   "se" 'load-user-init-file
   "ss" 'reload-user-init-file
   "q"  'load-scratch-file
+  "pi" 'package-install
+  "pu" 'package-refresh-contents
 )
 
 (global-prettify-symbols-mode 1)
@@ -217,12 +282,16 @@
 
 ;; show matching parenthesis
 (show-paren-mode 1)
+;; Time taken to highlight the matching parenthesis
+(setq show-paren-delay 0)
 
 ;; Answering just 'y' or 'n' will do
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Never insert tabs
-(set-default 'indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
 
 ;; Highlight current line
 (global-hl-line-mode 1)
@@ -233,6 +302,7 @@
 (setq create-lockfiles nil)
 
 ;; UTF-8 please
+(set-language-environment "UTF-8")
 (setq locale-coding-system 'utf-8) ; pretty
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8) ; pretty
@@ -369,10 +439,207 @@
   (editorconfig-mode 1))
 
 (add-hook 'js-mode-hook 'eslintd-fix-mode)
+(add-hook 'js2-mode-hook 'eslintd-fix-mode)
+(add-hook 'web-mode-hook 'eslintd-fix-mode)
+
 (setq eslintd-fix-executable "~/.node_modules_global/bin/eslint_d")
+(setq flycheck-javascript-eslint-executable "~/.node_modules_global/bin/eslint_d")
 
 (use-package flycheck
   :ensure t
-  :init (global-flycheck-mode))
+  :init (global-flycheck-mode)
+  :config (flycheck-add-mode 'javascript-eslint 'web-mode))
 
-(setq flycheck-javascript-eslint-executable "~/.node_modules_global/bin/eslint_d")
+(ido-mode t)
+(setq ido-enable-flex-matching t)
+
+;; Powerline
+(use-package spaceline
+  :ensure t
+  :config
+  (spaceline-emacs-theme))
+(use-package spaceline-all-the-icons
+  :ensure t
+  :after spaceline
+  :init
+  ;; (spaceline-toggle-all-the-icons-git-status-off)
+  ;; (spaceline-toggle-all-the-icons-time-off)
+  :config (spaceline-all-the-icons-theme))
+
+(use-package yasnippet
+  :ensure t
+  :config
+  (setq yas-snippet-dirs (append yas-snippet-dirs '("~/.emacs.d/Es6-React-Snippets-Emacs/snippets")))
+  (yas-global-mode 1))
+
+(use-package web-mode
+  :ensure t
+  :config
+  (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-css-colorization t)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-content-types-alist
+    '(("jsx" . "\\.js[x]?\\'")))
+  (add-to-list 'auto-mode-alist '("\\.js[x]?\\'" . web-mode)))
+
+; (use-package github-theme :ensure t)
+
+;; http://ccann.github.io/2017/01/15/structural-editing-lisp.html
+;; (add-hook 'cider-mode-hook #'clj-refactor-mode)
+
+;; (add-hook 'clojure-mode-hook #'lispy-mode)
+
+;; (use-package clj-refactor
+;;   :ensure t
+;;   :defer t
+;;   :config (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+;; (use-package lispy
+;;   :ensure t
+;;   :defer t
+;;   :init (setq lispy-compat '(cider)))
+(put 'narrow-to-region 'disabled nil)
+
+(use-package git-gutter+
+  :ensure t
+  :config
+  (global-git-gutter+-mode))
+
+(use-package company
+  :ensure t
+  :config
+  (setq company-backends '((company-capf company-dabbrev-code company-files)))
+  (global-company-mode))
+
+(use-package rainbow-delimiters
+  :ensure t
+  :config (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+
+;; (use-package base16-theme
+;;   :ensure t
+;;   :config
+;;   (load-theme 'base16-default-dark t))
+;; Set the cursor color based on the evil state
+;; (defvar my/base16-colors base16-default-dark-colors)
+;; (setq evil-emacs-state-cursor   `(,(plist-get my/base16-colors :base0D) box)
+;;       evil-insert-state-cursor  `(,(plist-get my/base16-colors :base0D) bar)
+;;       evil-motion-state-cursor  `(,(plist-get my/base16-colors :base0E) box)
+;;       evil-normal-state-cursor  `(,(plist-get my/base16-colors :base0B) box)
+;;       evil-replace-state-cursor `(,(plist-get my/base16-colors :base08) bar)
+;;       evil-visual-state-cursor  `(,(plist-get my/base16-colors :base09) box))
+
+(setq evil-motion-state-cursor  '(box "green"))   ; █
+(setq evil-normal-state-cursor  '(box "green"))   ; █
+(setq evil-visual-state-cursor  '(box "violet"))  ; █
+(setq evil-insert-state-cursor  '(bar "blue"))    ; ⎸
+(setq evil-replace-state-cursor '(bar "red"))     ; ⎸
+(setq evil-emacs-state-cursor   '(hbar "yellow")) ; _
+
+(when (window-system)
+  (set-frame-font "Fira Code"))
+(let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
+               (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
+               (36 . ".\\(?:>\\)")
+               (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
+               (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
+               (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
+               (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
+               (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
+               (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
+               (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
+               (48 . ".\\(?:x[a-zA-Z]\\)")
+               (58 . ".\\(?:::\\|[:=]\\)")
+               (59 . ".\\(?:;;\\|;\\)")
+               (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
+               (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
+               (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
+               (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
+               (91 . ".\\(?:]\\)")
+               (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
+               (94 . ".\\(?:=\\)")
+               (119 . ".\\(?:ww\\)")
+               (123 . ".\\(?:-\\)")
+               (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
+               (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)")
+               )
+             ))
+  (dolist (char-regexp alist)
+    (set-char-table-range composition-function-table (car char-regexp)
+                          `([,(cdr char-regexp) 0 font-shape-gstring]))))
+
+(use-package company-tern
+  :ensure t
+  :config (add-to-list 'company-backends 'company-tern)
+  (add-hook 'js-mode-hook (lambda ()
+                          (tern-mode)
+                          (company-mode)))
+
+   (add-hook 'js2-mode-hook (lambda ()
+                           (tern-mode)
+                           (company-mode)))
+
+   (add-hook 'web-mode-hook (lambda ()
+                           (tern-mode)
+                           (company-mode)))
+)
+
+(use-package js2-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  (add-hook 'web-mode-hook #'js2-minor-mode)
+  (add-hook 'web-mode-hook #'js2-refactor-mode)
+  ;; Better imenu
+  (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
+)
+
+(use-package js2-refactor
+  :ensure t
+  :config
+  (add-hook 'js2-mode-hook #'js2-refactor-mode)
+  (define-key js2-mode-map (kbd "C-k") #'js2r-kill)
+  (js2r-add-keybindings-with-prefix "C-c C-r")
+)
+
+;; M-. find definition
+;; M-, go back after going to definition
+;; M-? find usages
+(use-package xref-js2
+  :ensure t
+  :config
+    ;; js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
+    ;; unbind it.
+    (define-key js-mode-map (kbd "M-.") nil)
+    (define-key evil-normal-state-map (kbd "M-.") nil)
+    (add-hook 'js2-mode-hook (lambda ()
+        (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
+    ;; Disable completion keybindings, as we use xref-js2 instead
+    (define-key tern-mode-keymap (kbd "M-.") nil)
+    (define-key tern-mode-keymap (kbd "M-,") nil)
+)
+
+(use-package ivy
+  :ensure t
+  :config
+    (ivy-mode 1)
+    (setq ivy-use-virtual-buffers t)
+    (setq enable-recursive-minibuffers t)
+    (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+    (global-set-key (kbd "M-x") 'counsel-M-x)
+    (global-set-key (kbd "C-c C-r") 'ivy-resume)
+    (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+    (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+    (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+    (global-set-key (kbd "C-s") 'counsel-grep-or-swiper))
+
+(use-package centered-window
+  :ensure t
+  :config
+  (centered-window-mode t))
+
+(use-package centered-cursor-mode
+  :ensure t
+  :config
+  (global-centered-cursor-mode t))

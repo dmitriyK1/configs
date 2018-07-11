@@ -1,5 +1,3 @@
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
-
 # colorizer:
 # https://github.com/oh-my-fish/plugin-grc
 # git flow completion:
@@ -37,17 +35,14 @@
 # source ~/.iterm2_shell_integration.fish
 
 # function fish_prompt
-#   ~/Soft/powerline-shell/powerline-shell.py $status --shell bare ^/dev/null
+#     powerline-shell --shell bare $status
 # end
 
-export LANG=en_US.UTF-8
-export LESS='-R'
-export LESSOPEN='|pygmentize -g %s'
-export SHELL=/usr/local/bin/fish
-export EDITOR=/usr/local/bin/vim
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 # requires installing omf install bobthefish
-set theme_color_scheme gruvbox
+# set theme_color_scheme gruvbox
+set theme_color_scheme dracula
 set -g theme_nerd_fonts yes
 set -g theme_display_docker_machine yes
 set -g fish_prompt_pwd_dir_length 0
@@ -55,9 +50,16 @@ set -g fish_prompt_pwd_dir_length 0
 source ~/fish/.fish_variables
 source ~/fish/.fish_aliases
 source ~/fish/.fish_functions
-source (npx --shell-auto-fallback fish | psub)
 
+source (npx --shell-auto-fallback fish | psub)
 source ~/.iterm2_shell_integration.(basename $SHELL)
 
 thefuck --alias | source
 caniuse --completion-fish | source
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish

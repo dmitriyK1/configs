@@ -264,6 +264,8 @@
   "pu" 'package-refresh-contents
 )
 
+(setq vc-follow-symlinks t)
+
 (global-prettify-symbols-mode 1)
 
 ;; (use-package evil-commentary

@@ -246,3 +246,5 @@ endfunction
 
 map ]d jddk
 map [d kdd
+
+map <F2> :Vexplore<CR>

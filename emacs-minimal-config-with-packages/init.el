@@ -540,7 +540,8 @@
 (setq evil-emacs-state-cursor   '(hbar "yellow")) ; _
 
 (when (window-system)
-  (set-frame-font "Fira Code"))
+  (set-frame-font "Fira Code 16"))
+
 (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
                (36 . ".\\(?:>\\)")

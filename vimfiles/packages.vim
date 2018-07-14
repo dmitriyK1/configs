@@ -210,8 +210,14 @@ Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
 Plug 'editorconfig/editorconfig-vim'
 
 " toggling settings mappings
-Plug 'dmitriyK1/vim-unimpaired' "{{{
-" Plug 'tpope/vim-unimpaired' "{{{
+Plug 'tpope/vim-unimpaired' "{{{
+  autocmd VimEnter * nunmap ]x
+  autocmd VimEnter * nunmap ]xx
+  autocmd VimEnter * nunmap [x
+  autocmd VimEnter * nunmap [xx
+  autocmd VimEnter * xunmap ]x
+  autocmd VimEnter * xunmap [x
+
   " Bubble single lines
   " map <M-k> [e
   " map <M-j> ]e

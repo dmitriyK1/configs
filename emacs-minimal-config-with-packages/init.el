@@ -540,7 +540,7 @@
 (setq evil-emacs-state-cursor   '(hbar "yellow")) ; _
 
 (when (window-system)
-  (set-frame-font "Fira Code 16"))
+  (set-frame-font "Fira Code 18"))
 
 (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
                (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
@@ -637,12 +637,12 @@
     (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
     (global-set-key (kbd "C-s") 'counsel-grep-or-swiper))
 
-(use-package centered-window
-  :ensure t
-  :config
-  (centered-window-mode t))
+;; (use-package centered-window
+;;   :ensure t
+;;   :config
+;;   (centered-window-mode t))
 
-(use-package centered-cursor-mode
-  :ensure t
-  :config
-  (global-centered-cursor-mode t))
+;; (use-package centered-cursor-mode
+;;   :ensure t
+;;   :config
+;;   (global-centered-cursor-mode t))

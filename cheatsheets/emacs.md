@@ -41,7 +41,7 @@ https://gist.githubusercontent.com/k2052/4089827/raw/31673d54850142806a0c309dd3a
 ## On Buffers
 
 - M | An asterisk means it has been modified since last sav
-- R | A % sign if read olny
+- R | A % sign if read only
 - Buffer | Name of buffer
 - Size | Size of buffed
 - Mode | Mode of buffer

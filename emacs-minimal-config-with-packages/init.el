@@ -400,7 +400,8 @@
   (interactive) (find-file "~/buffer"))
 
 (defun load-emacs-cheat-file()
-  (interactive) (find-file "~/cheatsheets/emacs.md"))
+  (interactive) (find-file "~/cheatsheets/emacs.md")
+  (setq buffer-read-only t))
 
 (defun reload-user-init-file()
   (interactive)

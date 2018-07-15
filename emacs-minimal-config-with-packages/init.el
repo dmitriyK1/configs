@@ -256,10 +256,11 @@
   "."  'evilnc-copy-and-comment-operator
   "\\" 'evilnc-comment-operator ; if you prefer backslash key
   ","  'save-buffer
-  "d" 'kill-this-buffer
+  "d"  'kill-this-buffer
   "se" 'load-user-init-file
   "ss" 'reload-user-init-file
   "q"  'load-scratch-file
+  "Ce" 'load-emacs-cheat-file
   "pi" 'package-install
   "pu" 'package-refresh-contents
 )
@@ -397,6 +398,9 @@
 
 (defun load-scratch-file()
   (interactive) (find-file "~/buffer"))
+
+(defun load-emacs-cheat-file()
+  (interactive) (find-file "~/cheatsheets/emacs.md"))
 
 (defun reload-user-init-file()
   (interactive)
@@ -646,3 +650,5 @@
 ;;   :ensure t
 ;;   :config
 ;;   (global-centered-cursor-mode t))
+
+(use-package markdown-mode+ :ensure t)

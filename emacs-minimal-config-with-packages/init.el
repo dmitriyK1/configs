@@ -401,7 +401,7 @@
 
 (defun load-emacs-cheat-file()
   (interactive) (find-file "~/cheatsheets/emacs.md")
-  (setq buffer-read-only t))
+  (evil-local-mode))
 
 (defun reload-user-init-file()
   (interactive)

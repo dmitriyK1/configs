@@ -27,7 +27,7 @@ https://gist.githubusercontent.com/k2052/4089827/raw/31673d54850142806a0c309dd3a
 - C-k: delete line
 - M-u: make uppercase
 - M-c: make first letter uppercase
-- M-1: make lowercase
+- M-l: make lowercase
 
 ### Marks
 

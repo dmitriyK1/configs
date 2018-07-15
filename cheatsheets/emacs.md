@@ -28,6 +28,8 @@ https://gist.githubusercontent.com/k2052/4089827/raw/31673d54850142806a0c309dd3a
 - M-u: make uppercase
 - M-c: make first letter uppercase
 - M-l: make lowercase
+- M-z: zap up to char
+- M-Z: zap to char
 
 ### Marks
 

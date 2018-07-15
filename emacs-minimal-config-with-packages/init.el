@@ -3,9 +3,7 @@
 ;; https://www.youtube.com/watch?v=I28jFkpN5Zk
 ;; https://github.com/flyingmachine/emacs-for-clojure
 ;; https://github.com/prathamesh-sonpatki/dotemacs/blob/master/hooks/web.el
-
-;; Always load newest byte code
-(setq load-prefer-newer t)
+;; https://github.com/bwolf/EmacsConfig/blob/master/init.el
 
 ;; reduce the frequency of garbage collection by making it happen on
 ;; each 50MB of allocated data (the default is on every 0.76MB)
@@ -283,13 +281,8 @@
  (setq mac-option-modifier 'super))
   ;; (setq mac-option-modifier nil))
 
-;; show matching parenthesis
-(show-paren-mode 1)
 ;; Time taken to highlight the matching parenthesis
 (setq show-paren-delay 0)
-
-;; Answering just 'y' or 'n' will do
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Never insert tabs
 (setq-default indent-tabs-mode nil)
@@ -335,14 +328,35 @@
 ;; Show keystrokes in progress
 (setq echo-keystrokes 0.1)
 
-;; delete selected text on typing
-(delete-selection-mode)
-
 ;; Show me empty lines after buffer end
 (set-default 'indicate-empty-lines t)
 
-;; Allow pasting selection outside of Emacs
-(setq x-select-enable-clipboard t)
+;; Some defaults
+(progn
+  (setq select-enable-clipboard t ;; Allow pasting selection outside of Emacs
+        mouse-yank-at-point t
+        sentence-end-double-space nil
+        shift-select-mode nil
+        transient-mark-mode 1
+        kill-whole-line t
+        echo-keystrokes .15
+        require-final-newline t
+        ;; Always load newest byte code
+        load-prefer-newer t)
+  (delete-selection-mode) ;; delete selected text on typing
+  (show-paren-mode 1) ;; show matching parenthesis
+  (setq-default cursor-in-non-selected-windows nil)
+;; Answering just 'y' or 'n' will do
+  (defalias 'yes-or-no-p 'y-or-n-p))
+
+(progn ; Enable commands which are disabled by default.
+  (put 'narrow-to-defun 'disabled nil)
+  (put 'narrow-to-page 'disabled nil)
+  (put 'narrow-to-region 'disabled nil)
+  (put 'downcase-region 'disabled nil)  ; C-x C-l
+  (put 'upcase-region 'disabled nil)    ; C-x C-u
+  (put 'set-goal-column 'disabled nil)  ; C-x C-n
+  (put 'erase-buffer 'disabled nil))
 
 ;; allows to detach M-x customize options to a separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -401,7 +415,7 @@
 
 (defun load-emacs-cheat-file()
   (interactive) (find-file "~/cheatsheets/emacs.md")
-  (evil-local-mode))
+  (read-only-mode))
 
 (defun reload-user-init-file()
   (interactive)

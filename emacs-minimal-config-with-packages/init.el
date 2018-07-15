@@ -261,6 +261,7 @@
   "Ce" 'load-emacs-cheat-file
   "pi" 'package-install
   "pu" 'package-refresh-contents
+  "r"  'helm-recentf
 )
 
 (setq vc-follow-symlinks t)
@@ -321,9 +322,6 @@
 ;; use hippie-expand instead of dabbrev
 (global-set-key (kbd "M-/") #'hippie-expand)
 (global-set-key (kbd "s-/") #'hippie-expand)
-
-;; replace buffer-menu with ibuffer
-(global-set-key (kbd "C-x C-b") #'ibuffer)
 
 ;; Show keystrokes in progress
 (setq echo-keystrokes 0.1)
@@ -426,6 +424,7 @@
   :ensure t
   :init
   (setq projectile-require-project-root nil) ;; enable projectile even if project file not found (do not use in home folder etc)
+  (setq projectile-completion-system 'helm)
   :config
   (projectile-mode 1))
 
@@ -651,7 +650,7 @@
     (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
     (global-set-key (kbd "M-x") 'counsel-M-x)
     (global-set-key (kbd "C-c C-r") 'ivy-resume)
-    (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+    ;; (global-set-key (kbd "C-x C-f") 'counsel-find-file)
     (global-set-key (kbd "<f1> f") 'counsel-describe-function)
     (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
     (global-set-key (kbd "C-s") 'counsel-grep-or-swiper))
@@ -667,3 +666,19 @@
 ;;   (global-centered-cursor-mode t))
 
 (use-package markdown-mode+ :ensure t)
+
+;; The TAB key tries first to indent the current line, and if the line
+;; was already indented, then try to complete the thing at point.
+(setq tab-always-indent 'complete)
+
+;; Use builtin apropos to lookup all.
+(use-package apropos
+  :config (setq apropos-do-all t))
+
+(setq subword-mode t)
+
+;; replace buffer-menu with ibuffer
+;; (global-set-key (kbd "C-x C-b") #'ibuffer)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x C-b") 'helm-mini)
+(global-set-key (kbd "C-x b") 'helm-mini)

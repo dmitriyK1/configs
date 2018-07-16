@@ -702,6 +702,7 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; save a buffer on window/buffer switch
+;; http://batsov.com/articles/2012/03/08/emacs-tip-number-5-save-buffers-automatically-on-buffer-or-window-switch/
 (defadvice switch-to-prev-buffer (before save-buffer-now activate)
   (when buffer-file-name (save-buffer)))
 (defadvice other-window (before other-window-now activate)

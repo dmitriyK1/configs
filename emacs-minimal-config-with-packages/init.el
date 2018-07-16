@@ -259,6 +259,7 @@
   "ss" 'reload-user-init-file
   "q"  'load-scratch-file
   "Ce" 'load-emacs-cheat-file
+  "Cb" 'load-bash-cheat-file
   "pi" 'package-install
   "pu" 'package-refresh-contents
   "r"  'helm-recentf
@@ -410,6 +411,10 @@
 
 (defun load-scratch-file()
   (interactive) (find-file "~/buffer"))
+
+(defun load-bash-cheat-file()
+  (interactive) (find-file "~/cheatsheets/bash.md")
+  (read-only-mode))
 
 (defun load-emacs-cheat-file()
   (interactive) (find-file "~/cheatsheets/emacs.md")

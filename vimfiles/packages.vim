@@ -164,7 +164,10 @@ Plug 'w0rp/ale' "{{{
   let g:ale_linters_explicit = 1
   let g:ale_set_highlights = 0
   " nmap <C-1> <Plug>ALEPrevious
-  nmap <silent> <leader>n :ALENext<CR>
+  nmap <silent> \n :ALENext<CR>
+  nmap <silent> \p :ALEPrevious<CR>
+  nmap <silent> ]E :ALENext<CR>
+  nmap <silent> [E :ALEPrevious<CR>
   " Write this in your vimrc file
   " let g:ale_set_loclist = 0
   " let g:ale_set_quickfix = 1
@@ -664,6 +667,7 @@ Plug 'tpope/vim-fugitive' "{{{
   nnoremap <leader>gD :Git diff --staged<CR>
   " nnoremap <leader>ge :Gedit<CR>
   " nnoremap <leader>gr :Gread<CR>
+  nnoremap <leader>gre :Git reset %<CR>
   " nnoremap <leader>gw :Gwrite<CR><CR>
   " nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
   nnoremap <leader>gl :Git log -p --stat --no-merges<CR>

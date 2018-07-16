@@ -424,7 +424,7 @@
   :ensure t
   :init
   (setq projectile-require-project-root nil) ;; enable projectile even if project file not found (do not use in home folder etc)
-  (setq projectile-completion-system 'helm)
+  (setq projectile-completion-system 'ivy)
   :config
   (projectile-mode 1))
 

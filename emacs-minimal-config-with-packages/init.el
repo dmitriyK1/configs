@@ -201,8 +201,8 @@
   "G"  '(magit :which-key "magit")
   "gs" '(magit-status :which-key "status")
   "gd" '(magit-diff-unstaged :which-key "diff")
-  "gx" '(git-gutter+-next-hunk :which-key "next hunk")
-  "gX" '(git-gutter+-previous-hunk :which-key "previous hunk")
+  "]c" '(git-gutter+-next-hunk :which-key "next hunk")
+  "[c" '(git-gutter+-previous-hunk :which-key "previous hunk")
   ;; Refactor
   "rr" '(tern-rename-variable :which-key "rename variable")
   ;; Others
@@ -682,3 +682,19 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x C-b") 'helm-mini)
 (global-set-key (kbd "C-x b") 'helm-mini)
+
+(use-package evil-args
+  :ensure t
+  :config
+    ;; bind evil-args text objects
+    (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
+    (define-key evil-outer-text-objects-map "a" 'evil-outer-arg)
+
+    ;; bind evil-forward/backward-args
+    (define-key evil-normal-state-map "L" 'evil-forward-arg)
+    (define-key evil-normal-state-map "H" 'evil-backward-arg)
+    (define-key evil-motion-state-map "L" 'evil-forward-arg)
+    (define-key evil-motion-state-map "H" 'evil-backward-arg)
+
+    ;; bind evil-jump-out-args
+    (define-key evil-normal-state-map "K" 'evil-jump-out-args))

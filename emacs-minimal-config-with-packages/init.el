@@ -700,3 +700,11 @@
     (define-key evil-normal-state-map "K" 'evil-jump-out-args))
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
+
+;; save a buffer on window/buffer switch
+(defadvice switch-to-prev-buffer (before save-buffer-now activate)
+  (when buffer-file-name (save-buffer)))
+(defadvice other-window (before other-window-now activate)
+  (when buffer-file-name (save-buffer)))
+(defadvice ace-window (before other-window-now activate)
+  (when buffer-file-name (save-buffer)))

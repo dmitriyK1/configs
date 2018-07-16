@@ -164,10 +164,10 @@ Plug 'w0rp/ale' "{{{
   let g:ale_linters_explicit = 1
   let g:ale_set_highlights = 0
   " nmap <C-1> <Plug>ALEPrevious
-  nmap <silent> \n :ALENext<CR>
-  nmap <silent> \p :ALEPrevious<CR>
-  nmap <silent> ]E :ALENext<CR>
-  nmap <silent> [E :ALEPrevious<CR>
+  nmap <silent> \n :ALENextWrap<CR>
+  nmap <silent> \p :ALEPreviousWrap<CR>
+  nmap <silent> ]E :ALENextWrap<CR>
+  nmap <silent> [E :ALEPreviousWrap<CR>
   " Write this in your vimrc file
   " let g:ale_set_loclist = 0
   " let g:ale_set_quickfix = 1
@@ -662,6 +662,7 @@ Plug 'tpope/vim-fugitive' "{{{
   nnoremap <leader>gs :Gstatus<CR>
   nnoremap <leader>gc :Gcommit -v -q<CR>
   nnoremap <leader>gC :Gcommit -v -q --no-verify<CR>
+  nnoremap <leader>go :Git checkout %<CR>
   " nnoremap <leader>gt :Gcommit -v -q %:p<CR>
   nnoremap <leader>gd :Gdiff<CR>
   nnoremap <leader>gD :Git diff --staged<CR>

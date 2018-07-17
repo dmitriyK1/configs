@@ -201,8 +201,6 @@
   "G"  '(magit :which-key "magit")
   "gs" '(magit-status :which-key "status")
   "gd" '(magit-diff-unstaged :which-key "diff")
-  "]c" '(git-gutter+-next-hunk :which-key "next hunk")
-  "[c" '(git-gutter+-previous-hunk :which-key "previous hunk")
   ;; Refactor
   "rr" '(tern-rename-variable :which-key "rename variable")
   ;; Others
@@ -722,3 +720,6 @@
   (when buffer-file-name (save-buffer)))
 (defadvice windmove-right (before other-window-now activate)
   (when buffer-file-name (save-buffer)))
+
+(define-key evil-normal-state-map (kbd "] c") 'git-gutter+-next-hunk)
+(define-key evil-normal-state-map (kbd "[ c") 'git-gutter+-previous-hunk)

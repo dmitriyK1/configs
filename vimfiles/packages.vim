@@ -364,8 +364,8 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 
   nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
   nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
-  nnoremap <silent> <M-.> :call WordNavigation(1)<CR>
-  nnoremap <silent> <M-,> :call WordNavigation(0)<CR>
+  " nnoremap <silent> <M-.> :call WordNavigation(1)<CR>
+  " nnoremap <silent> <M-,> :call WordNavigation(0)<CR>
 "}}}
 
 " create your own text objects (dependency)

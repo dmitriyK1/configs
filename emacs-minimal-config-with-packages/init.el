@@ -725,3 +725,5 @@
 (define-key evil-normal-state-map (kbd "[ c") 'git-gutter+-previous-hunk)
 (define-key evil-normal-state-map (kbd "] E") 'flycheck-next-error)
 (define-key evil-normal-state-map (kbd "[ E") 'flycheck-previous-error)
+
+(setq initial-scratch-message "")

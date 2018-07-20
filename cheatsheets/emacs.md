@@ -18,6 +18,7 @@ https://gist.githubusercontent.com/k2052/4089827/raw/31673d54850142806a0c309dd3a
 - C-l: center on current line
 - M-<: Move cursor to beginning of file
 - M->: Move cursor to end of file
+- M-r: Move to window top/center/bottom
 
 ## Editing
 

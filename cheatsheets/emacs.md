@@ -100,7 +100,7 @@ https://gist.githubusercontent.com/k2052/4089827/raw/31673d54850142806a0c309dd3a
 - M-x bookmark-save:
 - M-x bookmark-write:
 - M-x bookmark-load:
-- C-x r 1: list bookmarks
+- C-x r l: list bookmarks
   - d mark bookmark for deletion
   - r rename bookmark
   - s save all listed bookmarks
@@ -190,7 +190,7 @@ https://gist.githubusercontent.com/k2052/4089827/raw/31673d54850142806a0c309dd3a
 - C-x d: launch dired
 - C(large C not CRTL): copy
 - d: mark for erase
-- D: delete 
+- D: delete
 - f: open
 - g: reread directory structure
 - G: change permissions for group (chgrp)

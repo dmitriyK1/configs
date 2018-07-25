@@ -507,6 +507,8 @@ Plug 'ryanoasis/vim-devicons' "{{{
   " Force extra padding in NERDTree so that the filetype icons line up vertically
   " let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
+  let g:webdevicons_enable_nerdtree = 0
+
   if exists('g:loaded_webdevicons')
       call webdevicons#refresh()
   endif

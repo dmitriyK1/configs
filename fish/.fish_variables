@@ -4,7 +4,7 @@ export LESSOPEN='|pygmentize -g %s'
 export SHELL=/usr/local/bin/fish
 export EDITOR=/usr/local/bin/vim
 
-set --export NODE_ENV development
+# set --export NODE_ENV development
 
 set --export PATH /usr/local/sbin $PATH
 set --export PATH /opt/local/bin $PATH

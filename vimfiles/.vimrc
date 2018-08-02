@@ -1,3 +1,5 @@
+" TODO: try mapping localleader to <Space> and revert ',' to original
+
 " TODO: use sessions handling /w Startify
 
 " TODO: remove redundant keybindings

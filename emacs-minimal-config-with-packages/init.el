@@ -132,9 +132,11 @@
     (if (display-graphic-p)
         (progn
         ;; if graphic
-        (load-theme 'dracula t))
+        ;; (load-theme 'dracula t))
+        (load-theme 'cyberpunk t))
         ;; else
-        (load-theme 'doom-one t)
+        ;; (load-theme 'doom-one t)
+        (load-theme 'cyberpunk t)
     ))
 
  ;; Helm
@@ -333,6 +335,7 @@
   (setq select-enable-clipboard t ;; Allow pasting selection outside of Emacs
         mouse-yank-at-point t
         sentence-end-double-space nil
+        sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*"
         shift-select-mode nil
         transient-mark-mode 1
         kill-whole-line t
@@ -727,3 +730,17 @@
 (define-key evil-normal-state-map (kbd "[ E") 'flycheck-previous-error)
 
 (setq initial-scratch-message "")
+
+(setq inhibit-compacting-font-caches t) ; Don’t compact font caches during GC.
+
+(setq track-eol t)                      ; Keep cursor at end of lines. Require line-move-visual is nil.
+(setq line-move-visual nil)
+
+;; Move to the beginning/end of line or code
+(use-package mwim
+  :ensure t
+  :bind (("C-a" . mwim-beginning-of-code-or-line)
+         ("C-e" . mwim-end-of-code-or-line)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init.el ends here

@@ -179,4 +179,6 @@ alias totalfolderusage='du -sh'
 
 alias unset 'set --erase'
 
+alias rmr 'rm -rf'
+
 # vim: filetype=sh

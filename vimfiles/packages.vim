@@ -23,9 +23,9 @@ call plug#begin()
 " Colorschemes:
 " ================================================================================
 Plug 'ashfinal/vim-colors-violet'
-Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
+" Plug 'altercation/vim-colors-solarized'
 " Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }
 " Plug 'nightsense/office'
 " Plug 'nightsense/seagrey'

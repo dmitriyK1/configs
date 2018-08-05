@@ -34,7 +34,7 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 map <F2> :Vexplore<CR>
 
-call togglebg#map("<F12>")
+" call togglebg#map("<F12>")
 
 " --------------------------------------------------------------------------------
 " Ctrl mappings

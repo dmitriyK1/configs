@@ -164,8 +164,6 @@ Plug 'w0rp/ale' "{{{
   let g:ale_linters_explicit = 1
   let g:ale_set_highlights = 0
   " nmap <C-1> <Plug>ALEPrevious
-  nmap <silent> \n :ALENextWrap<CR>
-  nmap <silent> \p :ALEPreviousWrap<CR>
   nmap <silent> ]E :ALENextWrap<CR>
   nmap <silent> [E :ALEPreviousWrap<CR>
   " Write this in your vimrc file
@@ -983,6 +981,9 @@ Plug 'justinmk/vim-sneak' "{{{
   xmap F <Plug>Sneak_F
   omap f <Plug>Sneak_f
   omap F <Plug>Sneak_F
+  xmap \ <Plug>Sneak_,
+  omap \ <Plug>Sneak_,
+  nmap \ <Plug>Sneak_,
 " }}}
 
 " Extended session management for Vim (:mksession on steroids)

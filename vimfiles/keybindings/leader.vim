@@ -196,6 +196,3 @@ nnoremap <leader>. `.
   vnoremap <leader>" <esc>a"<esc>gvo<esc>i"<esc>gvo<esc>ll
   vnoremap <leader>' <esc>a'<esc>gvo<esc>i'<esc>gvo<esc>ll
 " }}}
-
-map \ss :e ~/style<CR>
-map \sq :e ~/buffer<CR>

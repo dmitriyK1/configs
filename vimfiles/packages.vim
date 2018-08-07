@@ -984,6 +984,9 @@ Plug 'justinmk/vim-sneak' "{{{
   xmap \ <Plug>Sneak_,
   omap \ <Plug>Sneak_,
   nmap \ <Plug>Sneak_,
+
+  autocmd VimEnter * nunmap s
+  autocmd VimEnter * nunmap S
 " }}}
 
 " Extended session management for Vim (:mksession on steroids)

@@ -28,11 +28,11 @@ fisher up
 fish_update_completions
 omf update
 
+echo 'checking Apple Updates'
+/usr/sbin/softwareupdate -ia
+
 echo 'updating npm'
 npm update npm -g # store modules in ~/.node_modules_global via `npm config set prefix=$HOME/.node_modules_global`
 sudo npm update -g
-
-echo 'checking Apple Updates'
-/usr/sbin/softwareupdate -ia
 
 exit 0

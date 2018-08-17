@@ -22,4 +22,12 @@ sudo npm i -g mongo-hacker --unsafe-perm
 sudo npm i -g clipboard-cli
 sudo npm i -g eslint_d
 sudo npm i -g tern
-sudo npm i -g ndb
+sudo npm i -g ndb --unsafe-perm
+
+echo "Installing brew packages"
+brew install ccat
+brew install thefuck
+brew install fzf
+# To install useful key bindings and fuzzy completion:
+# (brew --prefix)/opt/fzf/install
+/usr/local/opt/fzf/install

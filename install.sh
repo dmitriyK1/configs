@@ -25,6 +25,8 @@ sudo npm i -g tern
 sudo npm i -g ndb --unsafe-perm
 
 echo "Installing brew packages"
+brew install fish
+brew install legit
 brew install ccat
 brew install thefuck
 brew install fzf

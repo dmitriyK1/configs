@@ -1,4 +1,4 @@
-#!/usr/bin/env fish
+#!/bin/sh
 
 echo "Installing npm packages"
 sudo npm i -g npm-check-updates@latest
@@ -26,6 +26,7 @@ sudo npm i -g ndb --unsafe-perm
 
 echo "Installing brew packages"
 brew install fish
+brew install m-cli
 brew install legit
 brew install ccat
 brew install thefuck

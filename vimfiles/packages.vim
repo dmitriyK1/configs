@@ -658,7 +658,7 @@ Plug 'tommcdo/vim-exchange'
 
 " Git wrapper
 Plug 'tpope/vim-fugitive' "{{{
-  nnoremap <leader>ga :Git add %:p<CR><CR>
+  nnoremap <leader>ga :Git add %<CR><CR>
   nnoremap <leader>gs :Gstatus<CR>
   nnoremap <leader>gc :Gcommit -v -q<CR>
   nnoremap <leader>gC :Gcommit -v -q --no-verify<CR>

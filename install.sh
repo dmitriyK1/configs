@@ -32,6 +32,7 @@ brew install ccat
 brew install thefuck
 brew install fzf
 brew install fd
+brew install exa
 # To install useful key bindings and fuzzy completion:
 # (brew --prefix)/opt/fzf/install
 /usr/local/opt/fzf/install

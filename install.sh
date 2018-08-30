@@ -34,6 +34,7 @@ brew install fzf
 brew install fd
 brew install exa
 brew install tree
+brew install gron
 # To install useful key bindings and fuzzy completion:
 # (brew --prefix)/opt/fzf/install
 /usr/local/opt/fzf/install

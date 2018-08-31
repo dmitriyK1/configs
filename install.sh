@@ -25,6 +25,7 @@ sudo npm i -g tern
 sudo npm i -g ndb --unsafe-perm
 
 echo "Installing brew packages"
+brew install bat
 brew install fish
 brew install m-cli
 brew install legit

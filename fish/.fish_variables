@@ -30,7 +30,7 @@ set --export BAT_THEME 'TwoDark'
 set --export TERM xterm-256color
 
 # requires https://github.com/rkitover/vimpager#install
-set --export PAGER vimpager
+# set --export PAGER vimpager
 
 source $HOME/.fish_variables.local
 

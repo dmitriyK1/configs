@@ -73,7 +73,7 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 
 " S ================================================================================
 " nmap <silent> <leader>se :tabedit $MYVIMRC<CR>
-nmap <silent> <leader>se :e ~/vimfiles/.vimrc<CR>
+nmap <silent> <leader>se :e $MYVIMRC<CR>
 noremap <leader>ss :source $MYVIMRC<CR>
 "
 " Source current file

@@ -39,10 +39,16 @@
 # end
 
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+export LANG=en_US.UTF-8
+export LESS='-R'
+export LESSOPEN='|pygmentize -g %s'
+export SHELL=/usr/local/bin/fish
+export EDITOR=/usr/local/bin/vim
 
 # requires installing omf install bobthefish
-# set theme_color_scheme gruvbox
-set theme_color_scheme dracula
+set theme_color_scheme gruvbox
+# set theme_color_scheme dracula
+# set theme_color_scheme dark
 set -g theme_nerd_fonts yes
 set -g theme_display_docker_machine yes
 set -g fish_prompt_pwd_dir_length 0
@@ -52,10 +58,12 @@ source ~/fish/.fish_aliases
 source ~/fish/.fish_functions
 
 source (npx --shell-auto-fallback fish | psub)
+source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 source ~/.iterm2_shell_integration.(basename $SHELL)
 
 thefuck --alias | source
 caniuse --completion-fish | source
+# fish_logo
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`

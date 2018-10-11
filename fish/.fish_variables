@@ -33,6 +33,6 @@ set --export TERM xterm-256color
 # requires https://github.com/rkitover/vimpager#install
 # set --export PAGER vimpager
 
-source $HOME/.fish_variables.local
+[ -f $HOME/.fish_variables.local ]; and source $HOME/.fish_variables.local
 
 # vim: filetype=sh

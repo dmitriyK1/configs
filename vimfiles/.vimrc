@@ -1,4 +1,9 @@
 " TODO: try mapping localleader to <Space> and revert ',' to original
+" zM close everything
+" zR open everything
+" za toggle state of the current fold
+" zj jump to next fold
+" zk jump to previous fold
 
 " TODO: use sessions handling /w Startify
 

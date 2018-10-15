@@ -60,7 +60,7 @@ source ~/fish/.fish_functions
 source (npx --shell-auto-fallback fish | psub)
 
 # https://github.com/andsens/homeshick/wiki/Tutorials
-source "$HOME/.homesick/repos/homeshick/homeshick.fish"
+[ -f $HOME/.homesick/repos/homeshick/homeshick.fish ]; and source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
 source ~/.iterm2_shell_integration.(basename $SHELL)
 

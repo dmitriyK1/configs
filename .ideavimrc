@@ -94,9 +94,7 @@ map ]x j0ddk,,
 map [e :action MoveLineUp<CR>
 map ]e :action MoveLineDown<CR>
 
-" Press `f` to activate AceJump
-map f :action AceAction<CR>
-" Press `F` to activate Target Mode
-map F :action AceTargetAction<CR>
-" Press `g` to activate Line Mode
-" map g :action AceLineAction<CR>
+" map f :action AceAction<CR>
+" map ,l :action AceLineAction<CR>
+" map ,t :action AceTargetAction<CR>
+map ,d :action AceDeclarationAction<CR>

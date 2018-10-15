@@ -39,11 +39,6 @@
 # end
 
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
-export LANG=en_US.UTF-8
-export LESS='-R'
-export LESSOPEN='|pygmentize -g %s'
-export SHELL=/usr/local/bin/fish
-export EDITOR=/usr/local/bin/vim
 
 # requires installing omf install bobthefish
 set theme_color_scheme gruvbox
@@ -74,3 +69,5 @@ caniuse --completion-fish | source
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+
+[ -f $HOME/fish/config.local.fish ]; and source $HOME/fish/config.local.fish

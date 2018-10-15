@@ -142,3 +142,6 @@ node_modules
 
 update.bat
 update_packages.bat
+
+# Local configs
+config.local.fish

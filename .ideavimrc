@@ -12,6 +12,7 @@ set wrapscan
 set nonumber
 " set relativenumber
 set surround
+set vim-multiple-cursors
 nmap ,, :w<cr>
 nnoremap <space> :
 nnoremap <C-l> :nohlsearch<CR>

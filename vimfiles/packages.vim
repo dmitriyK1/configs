@@ -118,6 +118,9 @@ Plug 'dracula/vim'
 " ================================================================================
 " Colorschemes end
 " ================================================================================
+
+Plug 'craigemery/vim-autotag'
+
 " Function argument-like text object for Vim
 " daa
 " daA

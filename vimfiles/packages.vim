@@ -120,6 +120,11 @@ Plug 'dracula/vim'
 " ================================================================================
 
 Plug 'ludovicchabant/vim-gutentags'
+" Plug 'jsfaint/gen_tags.vim'
+
+" The missing preview window for vim
+" PreviewClose - CTRL+W z
+Plug 'skywind3000/vim-preview'
 
 " Function argument-like text object for Vim
 " daa

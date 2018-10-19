@@ -53,7 +53,8 @@ nnoremap <leader>O :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<
 " nnoremap <leader>m :mksession<CR>
 
 " P ================================================================================
-nnoremap <leader>P :set paste!<CR>
+" nnoremap <leader>P :set paste!<CR>
+nnoremap <leader>P :PreviewTag<CR>
 
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>pc :PlugClean<CR>

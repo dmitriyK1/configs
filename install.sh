@@ -36,6 +36,7 @@ brew install fd
 brew install exa
 brew install tree
 brew install gron
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 # To install useful key bindings and fuzzy completion:
 # (brew --prefix)/opt/fzf/install
 /usr/local/opt/fzf/install

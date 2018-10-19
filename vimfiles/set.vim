@@ -275,3 +275,5 @@ endif
 
 " maximize help window
 set helpheight=99999
+
+set tags=tags;$HOME

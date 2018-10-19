@@ -89,7 +89,8 @@ noremap <leader>so :so%<CR>
 " open packages config
 nnoremap <silent> <leader>sp :e ~/vimfiles/packages.vim<CR>
 " T ================================================================================
-map <silent> <leader>tc :tabclose<CR>
+" map <silent> <leader>tc :tabclose<CR>
+map <silent> <leader>t :pop<CR>
 
 map <silent> <leader>T :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 " U ================================================================================

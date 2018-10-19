@@ -1,0 +1,9 @@
+--recurse=yes
+--exclude=gulp
+--exclude=.git
+--exclude=package-lock.json
+--exclude=vendor/*
+--exclude=node_modules/*
+--exclude=db/*
+--exclude=log/*
+#--options=/Users/dmitriy/Downloads/ctags-patterns-for-javascript/.ctags

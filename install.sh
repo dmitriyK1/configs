@@ -28,6 +28,8 @@ echo "Installing brew packages"
 brew install bat
 brew install ffmpeg
 brew install libav --with-openssl
+brew install highlight
+brew install luarocks
 brew install fish
 brew install m-cli
 brew install legit

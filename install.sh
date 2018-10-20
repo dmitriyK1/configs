@@ -26,6 +26,8 @@ sudo npm i -g ndb --unsafe-perm
 
 echo "Installing brew packages"
 brew install bat
+brew install ffmpeg
+brew install libav --with-openssl
 brew install fish
 brew install m-cli
 brew install legit

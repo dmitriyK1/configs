@@ -23,6 +23,7 @@ sudo npm i -g clipboard-cli
 sudo npm i -g eslint_d
 sudo npm i -g tern
 sudo npm i -g ndb --unsafe-perm
+sudo npm i -g replace
 
 echo "Installing brew packages"
 brew install bat

@@ -37,6 +37,7 @@ brew install ccat
 brew install thefuck
 brew install fzf
 brew install fd
+brew install git-extras
 brew install exa
 brew install tree
 brew install gron

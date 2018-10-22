@@ -17,13 +17,13 @@ sudo npm i -g express-generator@latest
 sudo npm i -g dockly@latest
 sudo npm i -g yarn@latest
 sudo npm i -g gtop@latest
-sudo npm i -g cli-stopwatch
-sudo npm i -g mongo-hacker --unsafe-perm
-sudo npm i -g clipboard-cli
-sudo npm i -g eslint_d
-sudo npm i -g tern
-sudo npm i -g ndb --unsafe-perm
-sudo npm i -g replace
+sudo npm i -g cli-stopwatch@latest
+sudo npm i -g mongo-hacker@latest --unsafe-perm
+sudo npm i -g clipboard-cli@latest
+sudo npm i -g eslint_d@latest
+sudo npm i -g tern@latest
+sudo npm i -g ndb@latest --unsafe-perm
+sudo npm i -g replace@latest
 
 echo "Installing brew packages"
 brew install bat

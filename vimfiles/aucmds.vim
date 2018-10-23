@@ -115,6 +115,7 @@ augroup END
 " reload disk file changes
 " au CursorHold * checktime
 
+" From: https://github.com/blueyed/dotfiles/blob/master/vimrc
 " Follow symlinks when opening a file {{{
 " NOTE: this happens with directory symlinks anyway (due to Vim's chdir/getcwd
 "       magic when getting filenames).

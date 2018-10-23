@@ -7,7 +7,7 @@ echo 'start updating ...'
 # git pull
 
 echo 'synchronizing configs'
-cd ~/Development/configs
+cd ~/configs
 legit sync
 
 echo 'updating vim'

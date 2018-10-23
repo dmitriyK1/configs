@@ -99,3 +99,5 @@ map ]e :action MoveLineDown<CR>
 " map ,l :action AceLineAction<CR>
 " map ,t :action AceTargetAction<CR>
 map ,d :action AceDeclarationAction<CR>
+
+map ,k :action HighlightUsagesInFile<CR>

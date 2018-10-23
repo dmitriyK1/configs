@@ -680,7 +680,8 @@ Plug 'tpope/vim-fugitive' "{{{
   " nnoremap <leader>gt :Gcommit -v -q %:p<CR>
   nnoremap <leader>gd :Gdiff<CR>
   nnoremap <leader>gD :Git diff --staged<CR>
-  " nnoremap <leader>ge :Gedit<CR>
+  nnoremap <leader>ge :Gedit
+  nnoremap <leader>gv :Gvsplit
   " nnoremap <leader>gr :Gread<CR>
   nnoremap <leader>gre :Git reset %<CR>
   " nnoremap <leader>gw :Gwrite<CR><CR>

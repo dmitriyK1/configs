@@ -322,7 +322,7 @@ Plug 'osyo-manga/vim-anzu' "{{{
 Plug 'AndrewRadev/sideways.vim'
 Plug 'kana/vim-submode'
 Plug 'tek/vim-fieldtrip' "{{{
-  let g:fieldtrip_start_map="<leader>si"
+  let g:fieldtrip_start_map="<leader>sw"
 "}}}
 
 Plug 'haya14busa/is.vim' "{{{

@@ -43,6 +43,7 @@ brew install exa
 brew install tree
 brew install gron
 brew install wget
+brew install nano
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 # To install useful key bindings and fuzzy completion:

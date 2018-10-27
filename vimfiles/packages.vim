@@ -253,7 +253,7 @@ Plug 'rhysd/conflict-marker.vim' "{{{
 " Force linewise or characterwise paste, regardless of how it was yanked.
 " gcp - Paste characterwise (newline characters and indent are flattened to spaces) [count] times.
 " glp - Paste linewise (even if yanked text is not a complete line) [count] times.
-Plug 'vim-scripts/UnconditionalPaste'
+" Plug 'vim-scripts/UnconditionalPaste'
 
 " A Vim plugin for focussing on a selected region
 " <Leader>nr       - Open the current visual selection in a new narrowed window
@@ -319,47 +319,55 @@ Plug 'osyo-manga/vim-anzu' "{{{
   let g:anzu_enable_CursorMoved_AnzuUpdateSearchStatus = 1
 " }}}
 
+Plug 'haya14busa/is.vim'
+map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
+map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
+map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
+map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
+map n <Plug>(is-nohl)<Plug>(anzu-mode-n)
+map N <Plug>(is-nohl)<Plug>(anzu-mode-N)
+
 " incrementally highlights ALL pattern matches unlike default 'incsearch'
-Plug 'haya14busa/incsearch.vim' "{{{
-  let g:incsearch#auto_nohlsearch = 1
-  let g:incsearch#do_not_save_error_message_history = 1
-  let g:incsearch#separate_highlight = 1
-  " let g:incsearch#magic = '\v' " very magic
-
-  " search autocomplete
-  augroup incsearch-keymap
-      autocmd!
-      autocmd VimEnter * call s:incsearch_keymap()
-  augroup END
-  function! s:incsearch_keymap()
-      IncSearchNoreMap <Tab> <Over>(buffer-complete)
-      IncSearchNoreMap <S-Tab> <Over>(buffer-complete-prev)
-  endfunction
-
-  map /  <Plug>(incsearch-forward)
-  map ?  <Plug>(incsearch-backward)
-  map g/ <Plug>(incsearch-stay)
-
-  " map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
-  " map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
-  map n <Plug>(incsearch-nohl)<Plug>(anzu-mode-n)
-  map N <Plug>(incsearch-nohl)<Plug>(anzu-mode-N)
-
-  " map *  <Plug>(incsearch-nohl-*)
-  " map g* <Plug>(incsearch-nohl-g*)
-  " map #  <Plug>(incsearch-nohl-#)
-  " map g# <Plug>(incsearch-nohl-g#)
-
-  map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
-  map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
-  map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
-  map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
-
-  map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
-  map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
-  map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
-  map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
-"}}}
+" Plug 'haya14busa/incsearch.vim' "{{{
+"   let g:incsearch#auto_nohlsearch = 1
+"   let g:incsearch#do_not_save_error_message_history = 1
+"   let g:incsearch#separate_highlight = 1
+"   " let g:incsearch#magic = '\v' " very magic
+"
+"   " search autocomplete
+"   augroup incsearch-keymap
+"       autocmd!
+"       autocmd VimEnter * call s:incsearch_keymap()
+"   augroup END
+"   function! s:incsearch_keymap()
+"       IncSearchNoreMap <Tab> <Over>(buffer-complete)
+"       IncSearchNoreMap <S-Tab> <Over>(buffer-complete-prev)
+"   endfunction
+"
+"   map /  <Plug>(incsearch-forward)
+"   map ?  <Plug>(incsearch-backward)
+"   map g/ <Plug>(incsearch-stay)
+"
+"   " map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
+"   " map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
+"   map n <Plug>(incsearch-nohl)<Plug>(anzu-mode-n)
+"   map N <Plug>(incsearch-nohl)<Plug>(anzu-mode-N)
+"
+"   " map *  <Plug>(incsearch-nohl-*)
+"   " map g* <Plug>(incsearch-nohl-g*)
+"   " map #  <Plug>(incsearch-nohl-#)
+"   " map g# <Plug>(incsearch-nohl-g#)
+"
+"   map *   <Plug>(incsearch-nohl)<Plug>(asterisk-*)
+"   map g*  <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
+"   map #   <Plug>(incsearch-nohl)<Plug>(asterisk-#)
+"   map g#  <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
+"
+"   map z*  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+"   map gz* <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+"   map z#  <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+"   map gz# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+" "}}}
 
 " vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
@@ -700,6 +708,9 @@ Plug 'tpope/vim-fugitive' "{{{
 
 " git runtime files
 Plug 'tpope/vim-git'
+
+Plug 'dyng/ctrlsf.vim'
+map <C-S-s> :CtrlSF
 
 " asynchronous build and test dispatcher
 Plug 'tpope/vim-dispatch'

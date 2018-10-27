@@ -508,6 +508,7 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
   nnoremap <silent> <leader>b :CtrlPBuffer<cr>
   nnoremap <silent> <leader>l :CtrlPLine<cr>
   nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
+  nnoremap <silent> <C-q> :CtrlP .<cr>
 "}}}
 
 Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{

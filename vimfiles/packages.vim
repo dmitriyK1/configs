@@ -319,17 +319,25 @@ Plug 'osyo-manga/vim-anzu' "{{{
   let g:anzu_enable_CursorMoved_AnzuUpdateSearchStatus = 1
 " }}}
 
-Plug 'haya14busa/is.vim'
-" map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
-" map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
-" map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
-" map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
-map *  <Plug>(asterisk-*)<Plug>(is-nohl-1)
-map g* <Plug>(asterisk-g*)<Plug>(is-nohl-1)
-map #  <Plug>(asterisk-#)<Plug>(is-nohl-1)
-map g# <Plug>(asterisk-g#)<Plug>(is-nohl-1)
-map n <Plug>(is-nohl)<Plug>(anzu-mode-n)
-map N <Plug>(is-nohl)<Plug>(anzu-mode-N)
+Plug 'AndrewRadev/sideways.vim'
+Plug 'kana/vim-submode'
+Plug 'tek/vim-fieldtrip' "{{{
+  let g:fieldtrip_start_map="<leader>si"
+"}}}
+
+Plug 'haya14busa/is.vim' "{{{
+  " map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
+  " map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
+  " map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
+  " map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
+
+  map *  <Plug>(asterisk-*)<Plug>(is-nohl-1)
+  map g* <Plug>(asterisk-g*)<Plug>(is-nohl-1)
+  map #  <Plug>(asterisk-#)<Plug>(is-nohl-1)
+  map g# <Plug>(asterisk-g#)<Plug>(is-nohl-1)
+  map n <Plug>(is-nohl)<Plug>(anzu-mode-n)
+  map N <Plug>(is-nohl)<Plug>(anzu-mode-N)
+  "}}}
 
 " incrementally highlights ALL pattern matches unlike default 'incsearch'
 " Plug 'haya14busa/incsearch.vim' "{{{
@@ -713,8 +721,9 @@ Plug 'tpope/vim-fugitive' "{{{
 " git runtime files
 Plug 'tpope/vim-git'
 
-Plug 'dyng/ctrlsf.vim'
-map <C-S-s> :CtrlSF
+Plug 'dyng/ctrlsf.vim' "{{{
+  map <leader>sf :CtrlSF <Right>
+"}}}
 
 " asynchronous build and test dispatcher
 Plug 'tpope/vim-dispatch'
@@ -1004,7 +1013,7 @@ Plug 'tpope/vim-dispatch'
 " Plug 'spolu/dwm.vim'
 
 " Sneak is a minimalist, versatile motion to reach any location specified by two characters.
-Plug 'justinmk/vim-sneak' "{{{
+" Plug 'justinmk/vim-sneak' "{{{
   " nmap f <Plug>Sneak_f
   " nmap F <Plug>Sneak_F
   " xmap f <Plug>Sneak_f
@@ -1018,13 +1027,13 @@ Plug 'justinmk/vim-sneak' "{{{
   " autocmd VimEnter * nunmap s
   " autocmd VimEnter * nunmap S
 
-  nmap f <Plug>Sneak_s
-  nmap f <Plug>Sneak_s
-  nmap F <Plug>Sneak_S
-  xmap f <Plug>Sneak_s
-  xmap F <Plug>Sneak_S
-  omap f <Plug>Sneak_s
-  omap F <Plug>Sneak_S
+  " nmap f <Plug>Sneak_s
+  " nmap f <Plug>Sneak_s
+  " nmap F <Plug>Sneak_S
+  " xmap f <Plug>Sneak_s
+  " xmap F <Plug>Sneak_S
+  " omap f <Plug>Sneak_s
+  " omap F <Plug>Sneak_S
 " }}}
 
 " Extended session management for Vim (:mksession on steroids)

@@ -62,7 +62,7 @@ nnoremap <leader>pu :PlugUpdate<CR>
 
 " Q ================================================================================
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+map <leader>q :e ~/scratch/buffer<cr>
 
 " Easier formatting
 " nnoremap <silent> <leader>q gwip

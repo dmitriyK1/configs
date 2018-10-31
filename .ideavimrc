@@ -92,6 +92,9 @@ map ]<Space> o<Esc>k,,
 map [x k0dd,,
 map ]x j0ddk,,
 
+map [d k0dd,,
+map ]d j0ddk,,
+
 map [e :action MoveLineUp<CR>
 map ]e :action MoveLineDown<CR>
 

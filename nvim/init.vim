@@ -33,7 +33,10 @@ set ignorecase                                                                  
 set mouse=a                                                                     "Enable mouse usage
 set showmatch                                                                   "Highlight matching bracket
 set nostartofline                                                               "Jump to first non-blank character
-set timeoutlen=1000 ttimeoutlen=0                                               "Reduce Command timeout for faster escape and O
+"set timeoutlen=1000 ttimeoutlen=0                                               "Reduce Command timeout for faster escape and O
+set notimeout
+set ttimeout
+set ttimeoutlen=10
 set fileencoding=utf-8                                                          "Set utf-8 encoding on write
 set wrap                                                                        "Enable word wrap
 set linebreak                                                                   "Wrap lines at convenient points
@@ -134,6 +137,9 @@ nnoremap Y y$
 
 "Disable ex mode mapping
 map Q <Nop>
+
+map <leader>pi :PackagerInstall<CR>
+map <leader>pu :PackagerUpdate<CR>
 
 " ================ Plugins setups ======================== {{{
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup

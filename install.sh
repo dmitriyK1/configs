@@ -5,7 +5,6 @@ sudo npm i -g npm-check-updates@latest
 sudo npm i -g diff-so-fancy@latest
 sudo npm i -g nodemon@latest
 sudo npm i -g serve@latest
-sudo npm i -g git-recent@latest
 sudo npm i -g create-react-app@latest
 sudo npm i -g tldr@latest --unsafe-perm=true
 sudo npm i -g ntl@latest
@@ -41,6 +40,7 @@ brew install fd
 brew install git-extras
 brew install exa
 brew install tree
+brew install git-recent
 brew install gron
 brew install wget
 brew install nano

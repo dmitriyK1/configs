@@ -12,6 +12,7 @@ function! PackagerInit() abort
   call packager#add('junegunn/fzf.vim')
   call packager#add('Shougo/deoplete.nvim')
   call packager#add('autozimu/LanguageClient-neovim', { 'do': 'bash install.sh' })
+  call packager#add('mhinz/vim-startify')
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
@@ -143,3 +144,4 @@ map <leader>pu :PackagerUpdate<CR>
 
 " ================ Plugins setups ======================== {{{
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup
+let g:startify_custom_header = []

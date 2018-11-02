@@ -23,6 +23,7 @@ sudo npm i -g eslint_d@latest
 sudo npm i -g tern@latest
 sudo npm i -g ndb@latest --unsafe-perm
 sudo npm i -g replace@latest
+sudo npm i -g git-open
 
 echo "Installing brew packages"
 brew install bat

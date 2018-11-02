@@ -192,4 +192,6 @@ alias unset 'set --erase'
 
 alias rmr 'rm -rf'
 
+[ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
+
 # vim: filetype=sh

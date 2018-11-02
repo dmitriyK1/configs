@@ -34,6 +34,7 @@ brew install highlight
 brew install luarocks
 brew install fish
 brew install m-cli
+brew install neovim
 brew install legit
 brew install ccat
 brew install thefuck

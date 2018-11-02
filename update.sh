@@ -2,10 +2,6 @@
 
 echo 'start updating ...'
 
-# echo 'updating emacs config'
-# cd ~/.emacs.d/
-# git pull
-
 echo 'synchronizing configs'
 cd ~/configs
 legit sync

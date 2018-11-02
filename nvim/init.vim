@@ -8,11 +8,12 @@ function! PackagerInit() abort
   call packager#init()
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
   call packager#add('morhetz/gruvbox')
-  call packager#add('junegunn/fzf', { 'do': './install --all && ln -s $(pwd) ~/.fzf'})
+  call packager#add('dracula/vim')
   call packager#add('junegunn/fzf.vim')
   call packager#add('Shougo/deoplete.nvim')
-  call packager#add('autozimu/LanguageClient-neovim', { 'do': 'bash install.sh' })
+  call packager#add('tpope/vim-unimpaired')
   call packager#add('mhinz/vim-startify')
+  call packager#add('airblade/vim-gitgutter')
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
@@ -20,6 +21,11 @@ command! PackagerUpdate call PackagerInit() | call packager#update()
 command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
 
+" ================ Nvim-specific Config ==================== {{{
+let g:python_host_prog = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+" }}}
 " ================ General Config ==================== {{{
 set clipboard^=unnamed,unnamedplus                                              "Copy to system clipboard
 set termguicolors

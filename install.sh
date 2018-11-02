@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env fish
 
 echo "Installing npm packages"
 sudo npm i -g npm-check-updates@latest
@@ -23,7 +23,8 @@ sudo npm i -g eslint_d@latest
 sudo npm i -g tern@latest
 sudo npm i -g ndb@latest --unsafe-perm
 sudo npm i -g replace@latest
-sudo npm i -g git-open
+sudo npm i -g git-open@latest
+sudo npm i -g neovim@latest
 
 echo "Installing brew packages"
 brew install bat
@@ -50,3 +51,10 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 # To install useful key bindings and fuzzy completion:
 # (brew --prefix)/opt/fzf/install
 /usr/local/opt/fzf/install
+
+echo "Installing python packages"
+pip install --upgrade pip
+pip install neovim
+
+echo "Installing gems"
+gem install neovim

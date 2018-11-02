@@ -14,6 +14,8 @@ echo 'updating vim'
 vim +PlugUpgrade +PlugUpdate +qall
 
 echo 'updating doom emacs'
+cd ~/.emacs.d
+git pull
 doom -y upgrade
 doom -y update
 

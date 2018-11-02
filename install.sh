@@ -1,5 +1,6 @@
 #!/usr/bin/env fish
 
+# TODO: remove sudo
 echo "Installing npm packages"
 sudo npm i -g npm-check-updates@latest
 sudo npm i -g nodemon@latest

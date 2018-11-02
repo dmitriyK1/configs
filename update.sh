@@ -13,6 +13,11 @@ legit sync
 echo 'updating vim'
 vim +PlugUpgrade +PlugUpdate +qall
 
+echo 'updating neovim'
+cd ~/.config/nvim/pack/packager/opt/vim-packager
+git pull
+nvim +PackagerUpdate +qall
+
 echo 'updating doom emacs'
 cd ~/.emacs.d
 git pull

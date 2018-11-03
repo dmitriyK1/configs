@@ -20,6 +20,12 @@ git pull
 doom -y upgrade
 doom -y update
 
+echo 'updating python packages'
+pip2 install --upgrade pip
+pip2 install neovim --upgrade
+pip3 install --upgrade pip
+pip3 install neovim --upgrade
+
 echo 'updating homebrew'
 brew update
 brew upgrade

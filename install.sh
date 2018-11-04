@@ -41,6 +41,7 @@ brew install ccat
 brew install thefuck
 brew install fzf
 brew install fd
+brew install jq
 brew install git-extras
 brew install exa
 brew install tree

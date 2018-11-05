@@ -34,7 +34,7 @@ set history=500                                                                 
 set termguicolors
 set noshowmode                                                                  "Hide showmode
 set gdefault                                                                    "Set global flag for search and replace
-" set cursorline                                                                  "Highlight current line
+set cursorline                                                                  "Highlight current line
 set smartcase                                                                   "Smart case search if there is uppercase
 set ignorecase                                                                  "case insensitive search
 set mouse=a                                                                     "Enable mouse usage

@@ -14,6 +14,10 @@ function! PackagerInit() abort
   call packager#add('tpope/vim-unimpaired')
   call packager#add('mhinz/vim-startify')
   call packager#add('airblade/vim-gitgutter')
+  call packager#add( 'FelikZ/ctrlp-py-matcher')
+  call packager#add('ctrlpvim/ctrlp.vim' )
+  call packager#add( 'tomtom/tcomment_vim')
+  call packager#add('tpope/vim-repeat')
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
@@ -148,6 +152,27 @@ map Q <Nop>
 map <leader>pi :PackagerInstall<CR>
 map <leader>pu :PackagerUpdate<CR>
 
-" ================ Plugins setups ======================== {{{
+" ================ Plugins settings ======================== {{{
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup
 let g:startify_custom_header = []
+
+" CtrlP settings "{{{
+let g:ctrlp_extensions = ['undo', 'dir']
+let g:ctrlp_map = '<c-t>'
+let g:ctrlp_open_multiple_files = '1jr'
+let g:ctrlp_max_files = 0
+let g:ctrlp_lazy_update = 50
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+let g:ctrlp_match_window = 'bottom,order:btt,min:20,max:20,results:20'
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
+      \ 'file': '\.pyc$\|\.pyo$',
+      \ }
+let g:ctrlp_user_command = 'fd --type file --hidden --follow --exclude .git'
+
+nnoremap <silent> <leader>b :CtrlPBuffer<cr>
+nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
+nnoremap <silent> <C-q> :CtrlP .<cr>
+" }}}
+
+"}}} =======================================================

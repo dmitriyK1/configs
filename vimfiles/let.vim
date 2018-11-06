@@ -39,8 +39,12 @@ let g:netrw_liststyle=0
 let g:is_nvim=has('nvim')
 
 let g:oldcmdline = [ ]
-let mapleader=","
-let maplocalleader=","
+
+" let mapleader=","
+" let maplocalleader=","
+
+let mapleader=" "
+let maplocalleader=" "
 
 " for ToggleHiddenAll
 let g:hidden_all = 0

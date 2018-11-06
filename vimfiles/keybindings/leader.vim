@@ -132,19 +132,19 @@ nnor <leader>yn :let @*=expand("%")<CR>      " Mnemonic: yank File Name
 map <leader>; :%s:\v::cg<Left><Left><Left><Left>
 
 " clear hlsearch
-nmap <leader><space> :nohlsearch<cr>
+" nmap <leader><space> :nohlsearch<cr>
 
 " toggle hlsearch
 nnoremap <leader>/ :set invhlsearch<cr>
 
-noremap <leader>, :write<CR>
+noremap <leader><leader> :write<CR>
 
 " Split previously opened file in a split window
 nnoremap <leader>- :new<cr><C-w>j
 nnoremap <leader>\ :vnew<cr><C-w>l
 
 " Adjust viewports to the same size
-map <Leader>= <C-w>=
+map <leader>= <C-w>=
 
 " Cmdheight switching
 " nnoremap <leader>1 :set cmdheight=1<cr>

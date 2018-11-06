@@ -647,7 +647,7 @@ Plug 'tommcdo/vim-exchange'
 " cmdline-mode enhancement for Vim
 " Plug 'gelguy/Cmd2.vim' "{{{
 "   let g:Cmd2__complete_ignorecase = 1
-  nnoremap <Space> :
+  " nnoremap <Space> :
 "   cmap <F12> <Plug>(Cmd2Suggest)
 "   nmap / /<F12>
 "   nmap ? ?<F12>

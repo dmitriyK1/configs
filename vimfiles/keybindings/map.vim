@@ -162,7 +162,7 @@ nnoremap L $
 
 " -------------------Q--------------------
 " Formatting, TextMate-style
-nnoremap Q gqip
+" nnoremap Q gqip
 vnoremap Q gq
 
 " always use the command editing window
@@ -177,7 +177,8 @@ vnoremap Q gq
 " replace ex mode map and use it for repeating last executed macro
 " nnoremap Q @@
 
-nnoremap Q q:<Up>
+" nnoremap Q q:<Up>
+nnoremap Q :
 
 " -------------------Y---------------------
 " Yank from the cursor to the end of the line, to be consistent with C and D.

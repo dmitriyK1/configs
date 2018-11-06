@@ -1,3 +1,6 @@
+let mapleader=" "
+let maplocalleader=" "
+
 imap jj <Esc>
 imap JJ <Esc>
 imap оо <Esc>
@@ -13,8 +16,9 @@ set nonumber
 " set relativenumber
 set surround
 set multiple-cursors
-nmap ,, :w<cr>
-nnoremap <space> :
+nmap <leader><leader> :w<cr>
+" nnoremap <space> :
+nnoremap Q :
 nnoremap <C-l> :nohlsearch<CR>
 set clipboard=unnamed, unnamedplus
 set visualbell
@@ -33,41 +37,41 @@ nmap <M-;> mgA;<Esc>`g
 imap <M-;> <Esc>mgA;<Esc>`gi<Right>
 
 " Git
-map ,gf :action Git.Fetch<CR>
-map ,gpl :action Git.Pull<CR>
-map ,gpu :action Vcs.Push<CR>
-map ,gm :action Git.Merge<CR>
-map ,gd :action Compare.SameVersion<CR>
-map ,gc :action CheckinProject<CR>
-map ,gst :action Git.Stash<CR>
-map ,gust :action Git.Unstash<CR>
-map ,grb :action Git.Rebase<CR>
-map ,gre :action Git.Reset<CR>
-map ,grm :action Git.Configure.Remotes<CR>
-map ,gn :action Git.CreateNewBranch<CR><Esc>
-map ,gb :action Git.Branches<CR><Esc>
-map ,gl :action Vcs.Show.Log<CR>
-map ,ga :action Git.Add<CR>
+map <leader>gf :action Git.Fetch<CR>
+map <leader>gpl :action Git.Pull<CR>
+map <leader>gpu :action Vcs.Push<CR>
+map <leader>gm :action Git.Merge<CR>
+map <leader>gd :action Compare.SameVersion<CR>
+map <leader>gc :action CheckinProject<CR>
+map <leader>gst :action Git.Stash<CR>
+map <leader>gust :action Git.Unstash<CR>
+map <leader>grb :action Git.Rebase<CR>
+map <leader>gre :action Git.Reset<CR>
+map <leader>grm :action Git.Configure.Remotes<CR>
+map <leader>gn :action Git.CreateNewBranch<CR><Esc>
+map <leader>gb :action Git.Branches<CR><Esc>
+map <leader>gl :action Vcs.Show.Log<CR>
+map <leader>ga :action Git.Add<CR>
 
 " Refactorings
-map ,ri :action Inline<CR>
-map ,rr :action RenameElement<CR>
-map ,rv :action IntroduceVariable<CR>
-map ,rm :action Move<CR>
-map ,ro :action OptimizeImports<CR>
-map ,rs :action SurroundWith<CR>
-map ,re :action SurroundWithEmmet<CR>
+map <leader>ri :action Inline<CR>
+map <leader>rr :action RenameElement<CR>
+map <leader>rv :action IntroduceVariable<CR>
+map <leader>rm :action Move<CR>
+map <leader>ro :action OptimizeImports<CR>
+map <leader>rs :action SurroundWith<CR>
+map <leader>re :action SurroundWithEmmet<CR>
 
 " Goto
-map ,fa :action GotoAction<CR>
-map ,ff :action GotoFile<CR>
-map ,fs :action GotoSymbol<CR>
-map ,fu :action FindUsages<CR>
-map ,fp :action ManageRecentProjects<CR>
+map <leader>fa :action GotoAction<CR>
+map <leader>ff :action GotoFile<CR>
+map <leader>fs :action GotoSymbol<CR>
+map <leader>fu :action FindUsages<CR>
+map <leader>fp :action ManageRecentProjects<CR>
 
 " Plugins
-map ,pi :action WelcomeScreen.Plugins<CR>
-map ,pu :action CheckForUpdate<CR>
+map <leader>pi :action WelcomeScreen.Plugins<CR>
+map <leader>pu :action CheckForUpdate<CR>
 
 " StringManipulation
 map crs :action StringManipulation.ToSnakeCaseOrCamelCase<CR>
@@ -76,31 +80,31 @@ map crh :action StringManipulation.ToHyphenCaseOrCamelCase<CR>
 map crt :action StringManipulation.SwitchStyleAction<CR>
 
 " Close
-map ,cp :action CloseProject<CR>
+map <leader>cp :action CloseProject<CR>
 
 " tool windows
-map ,te :action ActivateEventLogToolWindow<CR>
-map ,tp :action ActivateProjectToolWindow<CR>
-map ,ts :action ActivateStructureToolWindow<CR>
-map ,tt :action ActivateTerminalToolWindow<CR>
-map ,to :action ActivateTODOToolWindow<CR>
-map ,tv :action ActivateVersionControlToolWindow<CR>
+map <leader>te :action ActivateEventLogToolWindow<CR>
+map <leader>tp :action ActivateProjectToolWindow<CR>
+map <leader>ts :action ActivateStructureToolWindow<CR>
+map <leader>tt :action ActivateTerminalToolWindow<CR>
+map <leader>to :action ActivateTODOToolWindow<CR>
+map <leader>tv :action ActivateVersionControlToolWindow<CR>
 
-map [<Space> O<Esc>j,,
-map ]<Space> o<Esc>k,,
+map [<Space> O<Esc>j<leader><leader>
+map ]<Space> o<Esc>k<leader><leader>
 
-map [x k0dd,,
-map ]x j0ddk,,
+map [x k0dd<leader><leader>
+map ]x j0ddk<leader><leader>
 
-map [d k0dd,,
-map ]d j0ddk,,
+map [d k0dd<leader><leader>
+map ]d j0ddk<leader><leader>
 
 map [e :action MoveLineUp<CR>
 map ]e :action MoveLineDown<CR>
 
 " map f :action AceAction<CR>
-" map ,l :action AceLineAction<CR>
-" map ,t :action AceTargetAction<CR>
-map ,d :action AceDeclarationAction<CR>
+" map <leader>l :action AceLineAction<CR>
+" map <leader>t :action AceTargetAction<CR>
+map <leader>d :action AceDeclarationAction<CR>
 
-map ,k :action HighlightUsagesInFile<CR>
+map <leader>k :action HighlightUsagesInFile<CR>

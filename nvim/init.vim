@@ -31,6 +31,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 " }}}
 " ================ General Config ==================== {{{
+let mapleader=" "
+let maplocalleader=" "
 set clipboard^=unnamed,unnamedplus                                              "Copy to system clipboard
 set termguicolors
 set title                                                                       "change the terminal's title
@@ -132,6 +134,7 @@ set sidescroll=5
 
 " }}}
 " ================ Custom mappings ======================== {{{
+nnoremap <C-l> :nohlsearch<CR>
 " Down is really the next line
 nnoremap j gj
 nnoremap k gk
@@ -140,14 +143,15 @@ nnoremap k gk
 inoremap jj <Esc>
 tnoremap <Leader>jj <C-\><C-n>
 
-map <Space> :
+" map <Space> :
+map Q :
 map <leader><leader> :w<CR>
 
 " Yank to the end of the line
 nnoremap Y y$
 
 "Disable ex mode mapping
-map Q <Nop>
+" map Q <Nop>
 
 map <leader>pi :PackagerInstall<CR>
 map <leader>pu :PackagerUpdate<CR>

@@ -27,6 +27,8 @@ alias ndd "npm dedupe"
 alias nls "npm ls"
 
 alias ys "yarn start"
+alias yt "yarn test"
+alias ya "yarn add"
 
 alias fi "find . -name"
 

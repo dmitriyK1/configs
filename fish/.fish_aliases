@@ -26,6 +26,7 @@ alias nup "npm upgrade"
 alias ndd "npm dedupe"
 alias nls "npm ls"
 
+alias y "yarn"
 alias ys "yarn start"
 alias yt "yarn test"
 alias ya "yarn add"

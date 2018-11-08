@@ -8,6 +8,7 @@ function! PackagerInit() abort
   call packager#init()
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
   call packager#add('morhetz/gruvbox')
+  call packager#add('sheerun/vim-polyglot')
   call packager#add('dracula/vim')
   call packager#add('junegunn/fzf.vim')
   call packager#add('Shougo/deoplete.nvim')
@@ -94,7 +95,8 @@ silent! colorscheme dracula
  set breakindent
  set smartindent
  set nofoldenable
- set colorcolumn=80
+"  set colorcolumn=80
+ set colorcolumn=0
  set foldmethod=syntax
 
 " }}}
@@ -154,6 +156,7 @@ nnoremap Y y$
 " map Q <Nop>
 
 map <leader>pi :PackagerInstall<CR>
+map <leader>pc :PackagerClean<CR>
 map <leader>pu :PackagerUpdate<CR>
 
 " ================ Plugins settings ======================== {{{
@@ -180,3 +183,8 @@ nnoremap <silent> <C-q> :CtrlP .<cr>
 " }}}
 
 "}}} =======================================================
+
+" Use local init.vim if available
+if filereadable(expand("~/init.vim.local"))
+  source ~/init.vim.local
+endif

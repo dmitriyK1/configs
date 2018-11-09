@@ -1,3 +1,5 @@
+# TODO: add symlinks for vim, nvim, fish
+
 help:
 	@echo "symlink"
 

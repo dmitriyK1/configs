@@ -112,4 +112,4 @@ function! MyFollowSymlink(...)
   endif
 endfunction
 
-map ,S :call MyFollowSymlink()<CR>
+map <leader>S :call MyFollowSymlink()<CR>

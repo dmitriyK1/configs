@@ -25,6 +25,7 @@ sudo npm i -g ndb@latest --unsafe-perm
 sudo npm i -g replace@latest
 sudo npm i -g git-open@latest
 sudo npm i -g neovim@latest
+npm install -g fx@latest
 
 echo "Installing brew packages"
 brew install bat

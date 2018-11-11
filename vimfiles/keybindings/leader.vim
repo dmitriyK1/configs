@@ -88,6 +88,8 @@ noremap <leader>so :so%<CR>
 
 " open packages config
 nnoremap <silent> <leader>sp :e ~/vimfiles/packages.vim<CR>
+
+map <leader>S :call MyFollowSymlink()<CR>
 " T ================================================================================
 " map <silent> <leader>tc :tabclose<CR>
 map <silent> <leader>t :pop<CR>

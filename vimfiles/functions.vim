@@ -111,5 +111,3 @@ function! MyFollowSymlink(...)
     echomsg 'Resolved symlink: =>' resolvedfile
   endif
 endfunction
-
-map <leader>S :call MyFollowSymlink()<CR>

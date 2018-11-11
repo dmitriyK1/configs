@@ -28,8 +28,11 @@ alias nls "npm ls"
 
 alias y "yarn"
 alias ys "yarn start"
+alias yb "yarn build"
 alias yt "yarn test"
 alias ya "yarn add"
+alias yr "yarn remove"
+alias yad "yarn add -D"
 
 alias fi "find . -name"
 

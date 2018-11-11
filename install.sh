@@ -55,6 +55,8 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 # (brew --prefix)/opt/fzf/install
 /usr/local/opt/fzf/install
 
+brew install zsh-autosuggestions
+
 echo "Installing python packages"
 pip install --upgrade pip
 pip install neovim

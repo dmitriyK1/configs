@@ -19,6 +19,11 @@ function! PackagerInit() abort
   call packager#add('ctrlpvim/ctrlp.vim' )
   call packager#add( 'tomtom/tcomment_vim')
   call packager#add('tpope/vim-repeat')
+  call packager#add('tpope/vim-endwise')
+  call packager#add('rstacruz/vim-closer')
+  call packager#add('andymass/vim-matchup')
+  call packager#add('mhinz/vim-sayonara')
+  call packager#add('tpope/vim-surround')
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
@@ -180,6 +185,7 @@ let g:ctrlp_user_command = 'fd --type file --hidden --follow --exclude .git'
 nnoremap <silent> <leader>b :CtrlPBuffer<cr>
 nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
 nnoremap <silent> <C-q> :CtrlP .<cr>
+nnoremap <leader>d :Sayonara<cr>
 " }}}
 
 "}}} =======================================================

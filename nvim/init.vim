@@ -10,7 +10,8 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.config/nvim/plugged')
+" location for plugins to be installed
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'

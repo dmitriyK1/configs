@@ -10,14 +10,14 @@
 " http://spf13.com/post/the-15-best-vim-plugins
 
 " vim-plug & plugins automatic installation
-" TODO: change install location to ~/.vim
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin()
+" location for plugins to be installed
+call plug#begin('~/.vim/plugged')
 
 " ================================================================================
 " Colorschemes:

@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+source osx.sh
+
 echo "Installing npm packages"
 npm i -g npm-check-updates@latest
 npm i -g nodemon@latest

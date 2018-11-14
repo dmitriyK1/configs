@@ -17,8 +17,11 @@ nvim +PackagerUpdate +qall
 echo 'updating doom emacs'
 cd ~/.emacs.d
 git pull
-[ -f doom ]; and doom -y upgrade
-[ -f doom ]; and doom -y update
+
+if type -q doom
+    doom -y upgrade
+    doom -y update
+end
 
 echo 'updating python packages'
 pip2 install --upgrade pip

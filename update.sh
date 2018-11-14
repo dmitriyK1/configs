@@ -19,6 +19,7 @@ git pull
 if type -q doom
     doom -y upgrade
     doom -y update
+    doom -y refresh
 end
 
 echo 'updating python packages'

@@ -1,30 +1,29 @@
 #!/usr/bin/env fish
 
-# TODO: remove sudo
 echo "Installing npm packages"
-sudo npm i -g npm-check-updates@latest
-sudo npm i -g nodemon@latest
-sudo npm i -g serve@latest
-sudo npm i -g create-react-app@latest
-sudo npm i -g tldr@latest --unsafe-perm=true
-sudo npm i -g ntl@latest
-sudo npm i -g caniuse-cli@latest
-sudo npm i -g fkill-cli@latest
-sudo npm i -g cz-conventional-changelog@latest
-sudo npm i -g npm-merge-driver@latest
-sudo npm i -g express-generator@latest
-sudo npm i -g dockly@latest
-sudo npm i -g yarn@latest
-sudo npm i -g gtop@latest
-sudo npm i -g cli-stopwatch@latest
-sudo npm i -g mongo-hacker@latest --unsafe-perm
-sudo npm i -g clipboard-cli@latest
-sudo npm i -g eslint_d@latest
-sudo npm i -g tern@latest
-sudo npm i -g ndb@latest --unsafe-perm
-sudo npm i -g replace@latest
-sudo npm i -g git-open@latest
-sudo npm i -g neovim@latest
+npm i -g npm-check-updates@latest
+npm i -g nodemon@latest
+npm i -g serve@latest
+npm i -g create-react-app@latest
+npm i -g tldr@latest --unsafe-perm=true
+npm i -g ntl@latest
+npm i -g caniuse-cli@latest
+npm i -g fkill-cli@latest
+npm i -g cz-conventional-changelog@latest
+npm i -g npm-merge-driver@latest
+npm i -g express-generator@latest
+npm i -g dockly@latest
+npm i -g yarn@latest
+npm i -g gtop@latest
+npm i -g cli-stopwatch@latest
+npm i -g mongo-hacker@latest --unsafe-perm
+npm i -g clipboard-cli@latest
+npm i -g eslint_d@latest
+npm i -g tern@latest
+npm i -g ndb@latest --unsafe-perm
+npm i -g replace@latest
+npm i -g git-open@latest
+npm i -g neovim@latest
 npm install -g fx@latest
 
 echo "Installing brew packages"

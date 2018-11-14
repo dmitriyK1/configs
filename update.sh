@@ -7,10 +7,10 @@ cd ~/configs
 legit sync
 
 echo 'updating vim'
-vim +PlugUpgrade +PlugUpdate +qall
+vim +PlugUpgrade +PlugUpdate +qall!
 
 echo 'updating neovim'
-nvim +PlugUpgrade +PlugUpdate +PlugClean +qall
+nvim +PlugUpgrade +PlugUpdate +PlugClean +qall!
 
 echo 'updating doom emacs'
 cd ~/.emacs.d

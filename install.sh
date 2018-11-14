@@ -24,7 +24,7 @@ npm i -g ndb@latest --unsafe-perm
 npm i -g replace@latest
 npm i -g git-open@latest
 npm i -g neovim@latest
-npm install -g fx@latest
+npm i -g fx@latest
 
 echo "Installing brew packages"
 brew install bat

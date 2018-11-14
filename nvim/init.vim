@@ -30,6 +30,7 @@ Plug 'rstacruz/vim-closer'
 Plug 'andymass/vim-matchup'
 Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 " ================ Nvim-specific Config ==================== {{{
@@ -57,6 +58,7 @@ set nostartofline                                                               
 set notimeout
 set ttimeout
 set ttimeoutlen=10
+set nojoinspaces        " Prevents inserting two spaces after punctuation on a join (J)
 set fileencoding=utf-8                                                          "Set utf-8 encoding on write
 set wrap                                                                        "Enable word wrap
 set linebreak                                                                   "Wrap lines at convenient points

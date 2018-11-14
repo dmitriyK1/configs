@@ -3,34 +3,34 @@ if &compatible
 endif
 
 " ================ Plugins ==================== {{{
-function! PackagerInit() abort
-  packadd vim-packager
-  call packager#init()
-  call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
-  call packager#add('morhetz/gruvbox')
-  call packager#add('sheerun/vim-polyglot')
-  call packager#add('dracula/vim')
-  call packager#add('junegunn/fzf.vim')
-  call packager#add('Shougo/deoplete.nvim')
-  call packager#add('tpope/vim-unimpaired')
-  call packager#add('mhinz/vim-startify')
-  call packager#add('airblade/vim-gitgutter')
-  call packager#add( 'FelikZ/ctrlp-py-matcher')
-  call packager#add('ctrlpvim/ctrlp.vim' )
-  call packager#add( 'tomtom/tcomment_vim')
-  call packager#add('tpope/vim-repeat')
-  call packager#add('tpope/vim-endwise')
-  call packager#add('rstacruz/vim-closer')
-  call packager#add('andymass/vim-matchup')
-  call packager#add('mhinz/vim-sayonara')
-  call packager#add('tpope/vim-surround')
-endfunction
+" install vim-plug automatically if missing
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-command! PackagerInstall call PackagerInit() | call packager#install()
-command! PackagerUpdate call PackagerInit() | call packager#update()
-command! PackagerClean call PackagerInit() | call packager#clean()
-command! PackagerStatus call PackagerInit() | call packager#status()
+call plug#begin('~/.config/nvim/plugged')
 
+Plug 'morhetz/gruvbox'
+Plug 'sheerun/vim-polyglot'
+Plug 'dracula/vim'
+Plug 'junegunn/fzf.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'tpope/vim-unimpaired'
+Plug 'mhinz/vim-startify'
+Plug 'airblade/vim-gitgutter'
+Plug  'FelikZ/ctrlp-py-matcher'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug  'tomtom/tcomment_vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-endwise'
+Plug 'rstacruz/vim-closer'
+Plug 'andymass/vim-matchup'
+Plug 'mhinz/vim-sayonara'
+Plug 'tpope/vim-surround'
+
+call plug#end()
 " ================ Nvim-specific Config ==================== {{{
 let g:python_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
@@ -160,9 +160,9 @@ nnoremap Y y$
 "Disable ex mode mapping
 " map Q <Nop>
 
-map <leader>pi :PackagerInstall<CR>
-map <leader>pc :PackagerClean<CR>
-map <leader>pu :PackagerUpdate<CR>
+map <leader>pi :PlugInstall<CR>
+map <leader>pc :PlugClean<CR>
+map <leader>pu :PlugUpdate<CR>
 
 " ================ Plugins settings ======================== {{{
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup

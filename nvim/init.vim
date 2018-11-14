@@ -17,7 +17,7 @@ Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
 Plug 'junegunn/fzf.vim'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-unimpaired'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
@@ -142,7 +142,7 @@ set sidescroll=5
 
 " }}}
 " ================ Custom mappings ======================== {{{
-nnoremap <C-l> :nohlsearch<CR>
+nnoremap <silent> <C-l> :nohlsearch<CR>
 " Down is really the next line
 nnoremap j gj
 nnoremap k gk

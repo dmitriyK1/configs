@@ -163,9 +163,9 @@ nnoremap Y y$
 "Disable ex mode mapping
 " map Q <Nop>
 
-map <leader>pi :PlugInstall<CR>
-map <leader>pc :PlugClean<CR>
-map <leader>pu :PlugUpdate<CR>
+nnoremap <leader>pi :PlugInstall<CR>
+nnoremap <leader>pc :PlugClean<CR>
+nnoremap <leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
 
 " ================ Plugins settings ======================== {{{
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup

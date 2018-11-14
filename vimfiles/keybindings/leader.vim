@@ -58,7 +58,7 @@ nnoremap <leader>P :PreviewTag<CR>
 
 nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>pc :PlugClean<CR>
-nnoremap <leader>pu :PlugUpdate<CR>
+nnoremap <leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
 
 " Q ================================================================================
 " Quickly open a buffer for scribble

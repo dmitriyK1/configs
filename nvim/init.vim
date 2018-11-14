@@ -53,6 +53,7 @@ set smartcase                                                                   
 set ignorecase                                                                  "case insensitive search
 set mouse=a                                                                     "Enable mouse usage
 set showmatch                                                                   "Highlight matching bracket
+set shell=/bin/sh                                                               "Set shell
 set nostartofline                                                               "Jump to first non-blank character
 "set timeoutlen=1000 ttimeoutlen=0                                               "Reduce Command timeout for faster escape and O
 set notimeout

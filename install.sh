@@ -36,6 +36,7 @@ brew install highlight
 brew install diff-so-fancy
 brew install luarocks
 brew install fish
+brew install eg-examples
 brew install m-cli
 brew install neovim
 brew install legit
@@ -49,6 +50,7 @@ brew install exa
 brew install tree
 brew install git-recent
 brew install gron
+brew install cheat
 brew install wget
 brew install nano
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo

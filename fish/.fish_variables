@@ -3,6 +3,7 @@ export LESS='-R'
 export LESSOPEN='|pygmentize -g %s'
 export SHELL=/usr/local/bin/fish
 export EDITOR=/usr/local/bin/vim
+export CHEATCOLORS=true
 
 # set --export NODE_ENV development
 

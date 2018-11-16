@@ -1,6 +1,7 @@
 package autojump
 package brew
 package config
+package cd
 package fish_logo
 package git-flow
 package grc

@@ -53,6 +53,7 @@ brew install git-recent
 brew install gron
 brew install cheat
 brew install wget
+brew install peco
 brew install nano
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags

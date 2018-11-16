@@ -39,6 +39,7 @@ brew install fish
 brew install eg-examples
 brew install m-cli
 brew install neovim
+brew install grc
 brew install legit
 brew install ccat
 brew install thefuck

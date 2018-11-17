@@ -15,7 +15,7 @@ npm i -g cz-conventional-changelog@latest
 npm i -g npm-merge-driver@latest
 npm i -g express-generator@latest
 npm i -g dockly@latest
-npm i -g yarn@latest
+# npm i -g yarn@latest
 npm i -g gtop@latest
 npm i -g cli-stopwatch@latest
 npm i -g mongo-hacker@latest --unsafe-perm
@@ -27,6 +27,8 @@ npm i -g replace@latest
 npm i -g git-open@latest
 npm i -g neovim@latest
 npm i -g fx@latest
+
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 
 echo "Installing brew packages"
 brew install bat

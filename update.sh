@@ -24,9 +24,9 @@ end
 
 echo 'updating python packages'
 pip2 install --upgrade pip
-pip2 install neovim --upgrade
+pip2 install neovim --upgrade --force
 pip3 install --upgrade pip
-pip3 install neovim --upgrade
+pip3 install neovim --upgrade --force
 
 echo 'updating homebrew'
 brew update

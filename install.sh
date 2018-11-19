@@ -68,6 +68,7 @@ brew install zsh-autosuggestions
 echo "Installing python packages"
 pip install --upgrade pip
 pip install neovim
+pip install bpython
 
 echo "Installing gems"
 gem install neovim

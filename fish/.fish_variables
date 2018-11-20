@@ -11,6 +11,7 @@ set --export PATH /usr/local/sbin $PATH
 set --export PATH /usr/local/bin $PATH
 set --export PATH /opt/local/bin $PATH
 set --export PATH $HOME/.node_modules_global/bin $PATH
+set --export PATH $HOME/.yarn/bin $PATH
 # set --export PATH $HOME/.git-semantic-commits $PATH
 # set --export PATH $HOME/.cargo/bin $PATH
 # set --export PATH $HOME/go/bin $PATH

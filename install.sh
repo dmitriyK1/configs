@@ -55,9 +55,24 @@ brew install git-recent
 brew install gron
 brew install cheat
 brew install wget
+brew install mas
 brew install peco
 brew install nano
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+brew cask install slack
+# brew cask install google-chrome
+# brew cask install firefox
+# brew cask install skype
+# brew cask install vlc
+# brew cask install the-unarchiver
+# brew cask install sublime-text
+# brew cask install docker
+# brew cask install kitematic
+# brew cask install vagrant
+# brew cask install virtualbox
+# brew cask install ngrok
+# brew cask install tunnelblick
+# brew cask install sequel-pro
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 # To install useful key bindings and fuzzy completion:
 # (brew --prefix)/opt/fzf/install
@@ -72,3 +87,7 @@ pip install bpython
 
 echo "Installing gems"
 gem install neovim
+
+echo "Installing AppStore applications"
+# Amphetamine
+mas install 937984704

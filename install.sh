@@ -53,6 +53,7 @@ brew install exa
 brew install tree
 brew install git-recent
 brew install gron
+brew install heroku/brew/heroku
 brew install cheat
 brew install wget
 brew install peco

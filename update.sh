@@ -45,5 +45,6 @@ echo 'checking Apple Updates'
 echo 'updating npm'
 npm update npm -g # store modules in ~/.node_modules_global via `npm config set prefix=$HOME/.node_modules_global`
 npm update -g
+bash 'npm-upgrade.sh'
 
 exit 0

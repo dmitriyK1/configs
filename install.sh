@@ -27,6 +27,7 @@ npm i -g replace@latest
 npm i -g git-open@latest
 npm i -g neovim@latest
 npm i -g fx@latest
+npm i -g git-iadd@latest
 
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 

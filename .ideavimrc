@@ -5,7 +5,9 @@ imap jj <Esc>
 imap JJ <Esc>
 imap оо <Esc>
 nmap vv ggVG
+nmap Y y$
 " nmap gc :close<cr>
+nmap <leader>o :close<cr>
 set ignorecase
 set smartcase
 set hlsearch

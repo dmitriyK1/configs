@@ -167,7 +167,7 @@ alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mvv='command mv'
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 
-alias numFiles='echo (command ls -1 | wc -l)'       # numFiles:     Count of non-hidden files in current dir
+alias numfiles='echo (command ls -1 | wc -l)'       # numfiles:     Count of non-hidden files in current dir
 
 alias emacs "/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias em='emacs'

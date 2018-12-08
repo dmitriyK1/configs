@@ -144,7 +144,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 # Increase magic mouse sensitivity
-defaults write -g com.apple.mouse.scaling 5.0
+defaults write -g com.apple.mouse.scaling 10.0
 ###############################################################################
 # Activity Monitor                                                            #
 ###############################################################################

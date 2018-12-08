@@ -178,7 +178,7 @@ set winminheight=0              " Windows can be 0 line high
 
 set scrolljump=0                " Lines to scroll when cursor leaves screen
 set foldenable                  " Auto fold code
-" set scrolloff=999               " Minimum lines to keep above and below cursor; 999 - keep centered
+set scrolloff=999               " Minimum lines to keep above and below cursor; 999 - keep centered
 
 set backupdir-=.
 set backupdir+=.

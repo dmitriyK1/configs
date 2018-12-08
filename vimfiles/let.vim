@@ -47,4 +47,4 @@ let mapleader=" "
 let maplocalleader=" "
 
 " for ToggleHiddenAll
-let g:hidden_all = 0
+let g:hidden_all = 1

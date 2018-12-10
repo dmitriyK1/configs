@@ -60,9 +60,6 @@ set titleold=""
 " set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,nbsp:. " Highlight problematic whitespace
 
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-
 " nnoremap / /\v
 " vnoremap / /\v
 set gdefault

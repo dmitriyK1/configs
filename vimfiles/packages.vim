@@ -924,12 +924,12 @@ Plug 'tpope/vim-dispatch'
 " Python plugins start
 " --------------------------------------------------------------------------------
 " Python code folding for Vim
-" Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
-  " let g:SimpylFold_docstring_preview=1
+Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
+  let g:SimpylFold_docstring_preview=1
 
   " ensure SimpylFold init properly
-  " autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
-  " autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+  autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+  autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 " }}}
 
 " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
@@ -943,9 +943,10 @@ Plug 'tpope/vim-dispatch'
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
-" Plug 'klen/python-mode', { 'for': 'python' } "{{{
+
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "{{{
   " in case of glitches
-  " au BufWriteCmd *.py write || :PymodeLint
+  au BufWriteCmd *.py write || :PymodeLint
 
   " NOTE: consider using
   " let g:pymode_rope = 0
@@ -953,7 +954,7 @@ Plug 'tpope/vim-dispatch'
 " }}}
 
 " This indentation script for python tries to match more closely what is suggested in PEP 8
-" Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
+Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 " --------------------------------------------------------------------------------
 " Python plugins end
 " --------------------------------------------------------------------------------

@@ -33,6 +33,10 @@ Plug 'andymass/vim-matchup'
 Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
+  let g:switch_mapping = ""
+  nnoremap <silent> g- :Switch<CR>
+"}}}
 
 call plug#end()
 " ================ Nvim-specific Config ==================== {{{
@@ -50,7 +54,7 @@ set history=500                                                                 
 set termguicolors
 set noshowmode                                                                  "Hide showmode
 set gdefault                                                                    "Set global flag for search and replace
-set cursorline                                                                  "Highlight current line
+set nocursorline                                                                "Highlight current line
 set smartcase                                                                   "Smart case search if there is uppercase
 set ignorecase                                                                  "case insensitive search
 set mouse=a                                                                     "Enable mouse usage

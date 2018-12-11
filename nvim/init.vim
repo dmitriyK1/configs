@@ -18,6 +18,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
@@ -169,7 +171,10 @@ nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>pc :PlugClean<CR>
 nnoremap <leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
 
+nnoremap <leader>se :e $MYVIMRC<CR>
+nnoremap <leader>ss :source $MYVIMRC<CR>
 " ================ Plugins settings ======================== {{{
+let g:jedi#completions_enabled = 0
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup
 let g:startify_custom_header = []
 

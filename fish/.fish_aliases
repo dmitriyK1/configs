@@ -207,6 +207,7 @@ alias unset 'set --erase'
 
 alias rmr 'rm -rf'
 alias ntla='ntl -A'
+alias yarn='env NPQ_PKG_MGR=yarn npq-hero'
 
 [ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
 

@@ -16,6 +16,7 @@ npm i -g npm-merge-driver@latest
 npm i -g express-generator@latest
 npm i -g dockly@latest
 # npm i -g yarn@latest
+npm i -g npq
 npm i -g gtop@latest
 npm i -g cli-stopwatch@latest
 npm i -g mongo-hacker@latest --unsafe-perm

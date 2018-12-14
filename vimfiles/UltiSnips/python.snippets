@@ -1,0 +1,16 @@
+snippet "([^\s].*)\.(print|pr|p)" "print (postfix)" r
+print(`!p snip.rv = match.group(1)`)$0
+endsnippet
+# ----------------------------------------
+snippet "([^\s].*)\.(id|i)" "id (postfix)" r
+id(`!p snip.rv = match.group(1)`)$0
+endsnippet
+# ----------------------------------------
+snippet "([^\s].*)\.(type|t)" "type (postfix)" r
+type(`!p snip.rv = match.group(1)`)$0
+endsnippet
+# ----------------------------------------
+snippet "([^\s].*)\.(return|rt|r)" "return (postfix)" r
+return `!p snip.rv = match.group(1)`$0
+endsnippet
+# ----------------------------------------

@@ -18,6 +18,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
@@ -31,6 +33,10 @@ Plug 'andymass/vim-matchup'
 Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
+  let g:switch_mapping = ""
+  nnoremap <silent> g- :Switch<CR>
+"}}}
 
 call plug#end()
 " ================ Nvim-specific Config ==================== {{{
@@ -48,7 +54,7 @@ set history=500                                                                 
 set termguicolors
 set noshowmode                                                                  "Hide showmode
 set gdefault                                                                    "Set global flag for search and replace
-set cursorline                                                                  "Highlight current line
+set nocursorline                                                                "Highlight current line
 set smartcase                                                                   "Smart case search if there is uppercase
 set ignorecase                                                                  "case insensitive search
 set mouse=a                                                                     "Enable mouse usage
@@ -169,7 +175,10 @@ nnoremap <leader>pi :PlugInstall<CR>
 nnoremap <leader>pc :PlugClean<CR>
 nnoremap <leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
 
+nnoremap <leader>se :e $MYVIMRC<CR>
+nnoremap <leader>ss :source $MYVIMRC<CR>
 " ================ Plugins settings ======================== {{{
+let g:jedi#completions_enabled = 0
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup
 let g:startify_custom_header = []
 

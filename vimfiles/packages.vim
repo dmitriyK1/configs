@@ -963,6 +963,8 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "{{{
   " https://github.com/davidhalter/jedi-vim
 " }}}
 
+" Plug 'davidhalter/jedi-vim'
+
 " This indentation script for python tries to match more closely what is suggested in PEP 8
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 " --------------------------------------------------------------------------------

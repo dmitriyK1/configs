@@ -119,6 +119,16 @@ Plug 'dracula/vim'
 " Colorschemes end
 " ================================================================================
 
+" Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ }
+"
+" let g:LanguageClient_serverCommands = {
+"     \ 'javascript': ['javascript-typescript-stdio'],
+"     \ }
+" nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+
 Plug 'ludovicchabant/vim-gutentags'
 " Plug 'jsfaint/gen_tags.vim'
 

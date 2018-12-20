@@ -25,6 +25,7 @@ nnoremap <C-l> :nohlsearch<CR>
 set clipboard=unnamed, unnamedplus
 set visualbell
 set nonumber
+set scrolloff=9999
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <A-f> <S-Right>

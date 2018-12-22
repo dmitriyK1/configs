@@ -14,3 +14,6 @@ snippet "([^\s].*)\.(return|rt|r)" "return (postfix)" r
 return `!p snip.rv = match.group(1)`$0
 endsnippet
 # ----------------------------------------
+snippet "([^\s].*)\.(vars|v)" "vars (postfix)" r
+vars(`!p snip.rv = match.group(1)`)$0
+endsnippet

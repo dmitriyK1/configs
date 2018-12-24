@@ -33,6 +33,7 @@ npm i -g git-iadd@latest
 
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+curl -L https://deno.land/x/install/install.py | python
 
 echo "Installing brew packages"
 brew install bat

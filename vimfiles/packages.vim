@@ -956,6 +956,8 @@ Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
 " ]M            Jump on next class or method (normal, visual, operator modes)
 
 " The interactive scratchpad for hackers.
+" Codi [filetype] activates Codi for the current buffer, using the provided filetype or the buffer's filetype.
+" Codi! deactivates Codi for the current buffer.
 Plug 'metakirby5/codi.vim'
 
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "{{{

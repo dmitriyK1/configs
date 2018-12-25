@@ -175,6 +175,7 @@ Plug 'w0rp/ale' "{{{
   \   'javascript': ['eslint'],
   \}
   let g:ale_linters = {
+  \   'python': ['flake8'],
   \   'javascript': ['eslint'],
   \}
   let g:ale_fix_on_save = 1
@@ -953,6 +954,9 @@ Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
+
+" The interactive scratchpad for hackers.
+Plug 'metakirby5/codi.vim'
 
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "{{{
   " in case of glitches

@@ -935,7 +935,7 @@ Plug 'tpope/vim-dispatch'
 " Python plugins start
 " --------------------------------------------------------------------------------
 " :Autoformat
-" requires `pip install --upgrade autopep8`
+" requires `pip install --upgrade autopep8` (supports formatting ranges - based on visual selection)
 Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
   " To disable the fallback to vim's indent file, set the following variable to be 0.
   let g:autoformat_autoindent = 0

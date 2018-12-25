@@ -934,6 +934,16 @@ Plug 'tpope/vim-dispatch'
 " --------------------------------------------------------------------------------
 " Python plugins start
 " --------------------------------------------------------------------------------
+" :Autoformat
+" requires `pip install --upgrade autopep8`
+Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
+  " To disable the fallback to vim's indent file, set the following variable to be 0.
+  let g:autoformat_autoindent = 0
+
+  " noremap <F3> :Autoformat<cr>
+  noremap <leader>A :Autoformat<CR>
+" }}}
+
 " Python code folding for Vim
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
   let g:SimpylFold_docstring_preview=1
@@ -1410,14 +1420,6 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
   " let g:user_emmet_leader_key = '<C-e>'
 
   " autocmd FileType html,css,scss,javascript,jsx EmmetInstall
-" }}}
-
-" :Autoformat
-" Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' } "{{{
-  " To disable the fallback to vim's indent file, set the following variable to be 0.
-  " let g:autoformat_autoindent = 0
-
-  " noremap <F3> :Autoformat<cr>
 " }}}
 
 " A Vim plugin for interacting with Heroku

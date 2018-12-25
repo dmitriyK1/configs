@@ -936,6 +936,7 @@ Plug 'tpope/vim-dispatch'
 " Python plugins start
 " --------------------------------------------------------------------------------
 " Vim plugin to sort python imports using https://github.com/timothycrosley/isort
+" <C-i> for visual selection
 Plug 'fisadev/vim-isort'
 
 " :Autoformat

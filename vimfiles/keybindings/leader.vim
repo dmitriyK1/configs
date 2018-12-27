@@ -131,7 +131,10 @@ nnor <leader>yn :let @*=expand("%")<CR>      " Mnemonic: yank File Name
 
 " SPECIAL CHARACTERS ===============================================================
 " find and replace with confirmation
-map <leader>; :%s:\v::cg<Left><Left><Left><Left>
+" map <leader>; :%s:\v::cg<Left><Left><Left><Left>
+
+" ex mode
+map <leader>; :
 
 " clear hlsearch
 " nmap <leader><space> :nohlsearch<cr>

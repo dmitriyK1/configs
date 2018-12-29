@@ -8,6 +8,7 @@ nmap vv ggVG
 nmap Y y$
 " nmap gc :close<cr>
 nmap <leader>o :close<cr>
+nmap <leader>; :
 set ignorecase
 set smartcase
 set hlsearch

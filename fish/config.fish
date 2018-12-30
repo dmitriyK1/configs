@@ -65,8 +65,8 @@ source (npx --shell-auto-fallback fish | psub)
 
 source ~/.iterm2_shell_integration.(basename $SHELL)
 
-thefuck --alias | source
-caniuse --completion-fish | source
+# thefuck --alias | source
+# caniuse --completion-fish | source
 # fish_logo
 
 # tabtab source for serverless package

@@ -43,7 +43,6 @@ brew install nnn # cli file manager
 brew install ffmpeg
 brew install libav --with-openssl
 brew install highlight
-brew install diff-so-fancy
 brew install luarocks
 brew install fish
 brew install eg-examples
@@ -56,10 +55,8 @@ brew install thefuck
 brew install fzf
 brew install fd
 brew install jq
-brew install git-extras
 brew install exa
 brew install tree
-brew install git-recent
 brew install gron
 brew install heroku/brew/heroku
 brew install cheat
@@ -88,6 +85,13 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 /usr/local/opt/fzf/install
 
 brew install zsh-autosuggestions
+
+# brew git tools start ##################################################################
+brew install git-fixup
+brew install git-recent
+brew install git-extras
+brew install diff-so-fancy
+
 brew tap alexdavid/homebrew-tap
 brew install git-branch-status
 
@@ -98,6 +102,7 @@ brew install git-when-merged
 brew install git-plus
 brew install git-imerge
 brew install grv
+# brew git tools end ##################################################################
 
 brew install go
 

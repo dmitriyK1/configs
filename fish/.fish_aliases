@@ -64,6 +64,7 @@ alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"
 alias gf "git fetch --prune"
 alias gfo "git follow" # requires https://github.com/nickolasburr/git-follow
 alias gs "git status"
+alias gS "git branch-status"
 alias gss "git status -sb"
 alias gsy "legit sync"
 alias gb "git branch"

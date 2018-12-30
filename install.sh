@@ -92,6 +92,8 @@ brew install git-branch-status
 brew install interactive-rebase-tool
 git config --global sequence.editor interactive-rebase-tool
 
+brew install git-plus
+
 brew install go
 
 echo "Installing python packages"

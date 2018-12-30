@@ -63,6 +63,7 @@ brew install wget
 brew install mas
 brew install peco
 brew install nano
+brew install gnu-tar # for doom-emacs
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew cask install slack
 # brew cask install google-chrome

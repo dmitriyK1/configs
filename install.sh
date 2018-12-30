@@ -84,6 +84,7 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 /usr/local/opt/fzf/install
 
 brew install zsh-autosuggestions
+brew install moreutils
 
 # brew git tools start ##################################################################
 brew install legit

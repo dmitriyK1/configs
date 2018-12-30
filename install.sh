@@ -36,6 +36,7 @@ npm i -g undollar@latest
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 curl -L https://deno.land/x/install/install.py | python
+curl -L https://get.oh-my.fish | fish
 
 echo "Installing brew packages"
 brew install bat

@@ -49,7 +49,6 @@ brew install eg-examples
 brew install m-cli
 brew install neovim
 brew install grc
-brew install legit
 brew install ccat
 brew install thefuck
 brew install fzf
@@ -87,6 +86,7 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install zsh-autosuggestions
 
 # brew git tools start ##################################################################
+brew install legit
 brew install git-fixup
 brew install git-recent
 brew install git-extras

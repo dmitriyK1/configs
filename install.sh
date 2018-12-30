@@ -31,6 +31,7 @@ npm i -g fx@latest
 npm i -g ipt
 npm i -g git-iadd@latest
 npm i -g recursive-blame@latest
+npm i -g undollar@latest
 
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash

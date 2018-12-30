@@ -86,6 +86,13 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 /usr/local/opt/fzf/install
 
 brew install zsh-autosuggestions
+brew tap alexdavid/homebrew-tap
+brew install git-branch-status
+
+brew install interactive-rebase-tool
+git config --global sequence.editor interactive-rebase-tool
+
+brew install go
 
 echo "Installing python packages"
 pip install --upgrade pip

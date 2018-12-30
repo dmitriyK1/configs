@@ -87,7 +87,6 @@ brew install zsh-autosuggestions
 
 # brew git tools start ##################################################################
 brew install legit
-brew install git-fixup
 brew install git-recent
 brew install git-extras
 brew install diff-so-fancy

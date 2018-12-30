@@ -218,7 +218,6 @@ alias pir='pip3 install -r requirements.txt'
 alias activate='. venv/bin/activate.fish'
 [ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
 
-# git fixup
 # git imerge
 # git when-merged <commit_hash>
 # git branch-status

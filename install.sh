@@ -39,6 +39,7 @@ curl -L https://deno.land/x/install/install.py | python
 
 echo "Installing brew packages"
 brew install bat
+brew install nnn # cli file manager
 brew install ffmpeg
 brew install libav --with-openssl
 brew install highlight

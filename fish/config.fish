@@ -38,12 +38,11 @@
 #     powerline-shell --shell bare $status
 # end
 
-###### DISABLED TO TRY USING OMF ONLY
-# if not functions -q fisher
-#   set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-#   curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-#   fish -c fisher
-# end
+if not functions -q fisher
+  set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+  fish -c fisher
+end
 
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 

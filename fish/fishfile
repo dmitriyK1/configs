@@ -6,3 +6,4 @@ brgmnn/fish-docker-compose
 barnybug/docker-fish-completion
 franciscolourenco/done
 oh-my-fish/plugin-grc
+oh-my-fish/plugin-node-binpath

@@ -1,13 +1,6 @@
-package autojump
 package brew
 package config
 package cd
-package fish_logo
-package git-flow
 package grc
 package node-binpath
-package spark
-package vcs
-package weather
-package wifi-password
 theme bobthefish

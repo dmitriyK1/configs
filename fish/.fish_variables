@@ -48,6 +48,7 @@ set -xg PYTHONDONTWRITEBYTECODE 1
 # https://github.com/jethrokuan/fzf options
 # set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_ENABLE_OPEN_PREVIEW 1
+# set -U FZF_COMPLETE 1 # Enable fzf for fish tab completion
 
 # requires https://github.com/rkitover/vimpager#install
 # set --export PAGER vimpager

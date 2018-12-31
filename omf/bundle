@@ -1,5 +1,4 @@
 package brew
-package grc
 package node-binpath
 theme bobthefish
 theme default

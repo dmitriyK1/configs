@@ -62,6 +62,7 @@ brew install heroku/brew/heroku
 brew install cheat
 brew install wget
 brew install mas
+brew install terminal-notifier # used for `fisher add franciscolourenco/done`
 brew install peco
 brew install nano
 brew install gnu-tar # for doom-emacs

@@ -36,6 +36,9 @@ set --export TERM xterm-256color
 # don't create .pyc or .pyo files on the import of source modules
 set -xg PYTHONDONTWRITEBYTECODE 1
 
+# disable legacy fzf keybindings
+set -U FZF_LEGACY_KEYBINDINGS 0
+
 # requires https://github.com/rkitover/vimpager#install
 # set --export PAGER vimpager
 

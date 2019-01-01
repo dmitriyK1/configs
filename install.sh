@@ -41,6 +41,7 @@ curl -L https://get.oh-my.fish | fish
 echo "Installing brew packages"
 brew install bat
 brew install nnn # cli file manager
+brew install mediainfo # nnn dependency
 brew install ffmpeg
 brew install libav --with-openssl
 brew install highlight

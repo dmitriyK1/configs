@@ -8,3 +8,4 @@ symlink:
 	ln -s ~/configs/omf ~/.config/omf
 	ln -s ~/configs/npm-upgrade.sh ~/npm-upgrade.sh
 	ln -s ~/configs/fish/fishfile ~/.config/fish/fishfile
+	ln -s ~/configs/fish/config.fish ~/.config/fish/config.fish

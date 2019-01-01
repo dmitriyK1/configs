@@ -116,6 +116,8 @@ pip install neovim
 pip install bpython
 pip install --upgrade autopep8
 pip install virtualfish
+python -m pip install pip_upgrade_outdated
+python3 -m pip install pip_upgrade_outdated
 
 echo "Installing gems"
 gem install neovim

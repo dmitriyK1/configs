@@ -80,3 +80,5 @@ source ~/.iterm2_shell_integration.(basename $SHELL)
 
 # activate https://github.com/adambrenecki/virtualfish
 eval (python3 -m virtualfish)
+
+status --is-interactive; and source (pyenv init -|psub)

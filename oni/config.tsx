@@ -9,7 +9,7 @@ export const activate = (oni: Oni.Plugin.Api) => {
     // Add input bindings here:
     //
     oni.input.bind("<c-enter>", () => console.log("Control+Enter was pressed"))
-    oni.input.bind("<c-cmd-g>", "vcs.sidebar.toggle")
+    oni.input.bind("<m-g>", "vcs.sidebar.toggle")
 
     //
     // Or remove the default bindings here by uncommenting the below line:
@@ -28,7 +28,7 @@ export const configuration = {
     "configuration.editor": "typescript",
     "editor.fullScreenOnStart": true,
 
-    "ui.colorscheme": "gruvbox",
+    "ui.colorscheme": "dracula",
 
     //"oni.useDefaultConfig": true,
     //"oni.bookmarks": ["~/Documents"],

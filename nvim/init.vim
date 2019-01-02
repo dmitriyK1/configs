@@ -162,6 +162,7 @@ inoremap jj <Esc>
 tnoremap <Leader>jj <C-\><C-n>
 
 " map <Space> :
+noremap <Leader>; :
 map Q :
 map <leader><leader> :w<CR>
 

@@ -117,6 +117,8 @@ pip install neovim
 pip install bpython
 pip install --upgrade autopep8
 pip install virtualfish
+pip3 install pipdeptree
+pip3 install flake8
 python -m pip install pip_upgrade_outdated
 python3 -m pip install pip_upgrade_outdated
 

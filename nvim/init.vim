@@ -30,6 +30,17 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'andymass/vim-matchup'
+Plug 'vasconcelloslf/vim-interestingwords' "{{{
+  let g:interestingWordsDefaultMappings = 0
+
+  " temporary hack
+  nnoremap µ <Plug>InterestingWords
+
+  nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
+  nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
+  " nnoremap <silent> <M-.> :call WordNavigation(1)<CR>
+  " nnoremap <silent> <M-,> :call WordNavigation(0)<CR>
+"}}}
 Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'

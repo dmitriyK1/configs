@@ -40,4 +40,5 @@ export const configuration = {
     "ui.animations.enabled": true,
     "ui.fontSmoothing": "auto",
     "experimental.vcs.sidebar": true,
+    "sidebar.default.open": false,
 }

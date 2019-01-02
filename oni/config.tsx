@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import * as Oni from "oni-api"
 
@@ -25,6 +24,7 @@ export const deactivate = (oni: Oni.Plugin.Api) => {
 export const configuration = {
     //add custom config here, such as
     "autoUpdate.enabled": true,
+    "configuration.editor": "typescript",
     "editor.fullScreenOnStart": true,
 
     "ui.colorscheme": "gruvbox",

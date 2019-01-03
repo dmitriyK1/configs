@@ -522,10 +522,6 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
   nnoremap <silent> <C-q> :CtrlP .<cr>
 "}}}
 
-" Plug 'wincent/command-t', {'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make' } "{{{
-"   nnoremap <C-t> :CommandT<CR>
-" "}}}
-
 Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
   " let g:ctrlp_cmdpalette_execute=1
   nmap <silent> <leader>P :CtrlPCmdPalette<CR>
@@ -747,6 +743,12 @@ Plug 'tpope/vim-dispatch'
 " ================================================================================
 " Unused:
 " ================================================================================
+" Plug 'wincent/command-t', {'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make' } "{{{
+"   let g:CommandTWildIgnore=&wildignore . ",*/bower_components". ",*/node_modules"
+"
+"   nnoremap <C-t> :CommandT<CR>
+" "}}}
+
 " USE :vimgrep <pattern> % / :CtrlPLine (,l) instead
 " Show all lines in the buffer containing word (grep buffer)
 " <Leader>oc   - Occur       Search current buffer

@@ -502,7 +502,7 @@ Plug 'tacahiroy/ctrlp-funky' "{{{
 " Fuzzy file, buffer, mru, tag, etc finder
 Plug 'ctrlpvim/ctrlp.vim' "{{{
   let g:ctrlp_extensions = ['filetype', 'funky', 'undo', 'dir']
-  let g:ctrlp_map = '<c-p>'
+  let g:ctrlp_map = '<c-t>'
   let g:ctrlp_open_multiple_files = '1jr'
   let g:ctrlp_max_files = 0
   let g:ctrlp_lazy_update = 50

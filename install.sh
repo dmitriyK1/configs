@@ -107,6 +107,7 @@ brew install git-when-merged
 brew install git-plus
 brew install git-imerge
 brew install grv
+brew install gibo # .gitignore generator
 # brew git tools end ##################################################################
 
 brew install go

@@ -746,7 +746,9 @@ Plug 'tpope/vim-dispatch'
 " Plug 'wincent/command-t', {'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make' } "{{{
 "   let g:CommandTWildIgnore=&wildignore . ",*/bower_components". ",*/node_modules"
 "
-"   nnoremap <C-t> :CommandT<CR>
+  " inoremap <C-t> <C-c>:CommandT<CR>
+  " vnoremap <C-t> <C-c>:CommandT<CR>
+  " nnoremap <C-t> :CommandT<CR>
 " "}}}
 
 " USE :vimgrep <pattern> % / :CtrlPLine (,l) instead

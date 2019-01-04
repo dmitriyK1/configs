@@ -75,6 +75,7 @@ brew cask install slack
 brew cask install insomnia # Cross-platform HTTP and GraphQL Client https://insomnia.rest
 brew cask install franz # messaging app http://meetfranz.com
 brew cask install station
+brew cask install charles
 # brew cask install google-chrome
 # brew cask install firefox
 # brew cask install skype

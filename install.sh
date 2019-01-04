@@ -67,6 +67,9 @@ brew install terminal-notifier # used for `fisher add franciscolourenco/done`
 brew install peco
 brew install nano
 brew install gnu-tar # for doom-emacs
+
+# cask install start ##################################################################
+brew tap caskroom/cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew cask install slack
 brew cask install insomnia # Cross-platform HTTP and GraphQL Client https://insomnia.rest
@@ -84,6 +87,8 @@ brew cask install franz # messaging app http://meetfranz.com
 # brew cask install ngrok
 # brew cask install tunnelblick
 # brew cask install sequel-pro
+# cask install end ##################################################################
+
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 # To install useful key bindings and fuzzy completion:
 # (brew --prefix)/opt/fzf/install

@@ -984,6 +984,9 @@ Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
 Plug 'metakirby5/codi.vim'
 
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "{{{
+  " enable python3-syntax checking
+  let g:pymode_python = 'python3'
+
   " in case of glitches
   au BufWriteCmd *.py write || :PymodeLint
 

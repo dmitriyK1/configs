@@ -4,3 +4,8 @@ au GUIEnter * simalt ~x
 colorscheme molokai
 
 call ToggleHiddenAll()
+
+if has('gui_macvim')
+  set fullscreen
+end
+

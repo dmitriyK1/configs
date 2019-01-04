@@ -74,6 +74,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize we
 brew cask install slack
 brew cask install insomnia # Cross-platform HTTP and GraphQL Client https://insomnia.rest
 brew cask install franz # messaging app http://meetfranz.com
+brew cask install station
 # brew cask install google-chrome
 # brew cask install firefox
 # brew cask install skype
@@ -102,6 +103,7 @@ brew install pipenv
 # brew git tools start ##################################################################
 brew install legit
 brew install git-recent
+brew install git-fresh
 brew install git-extras
 brew install diff-so-fancy
 

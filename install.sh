@@ -107,6 +107,7 @@ brew install git-recent
 brew install git-fresh
 brew install git-extras
 brew install diff-so-fancy
+brew install git-town # Generic, high-level Git workflow support
 
 brew tap alexdavid/homebrew-tap
 brew install git-branch-status

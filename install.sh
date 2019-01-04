@@ -91,6 +91,7 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install zsh-autosuggestions
 brew install moreutils
 brew install pyenv # python version manager https://github.com/pyenv/pyenv
+brew install pipenv
 
 # brew git tools start ##################################################################
 brew install legit

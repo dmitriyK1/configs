@@ -28,6 +28,7 @@ composer.phar
 *.exe
 *.o
 *.so
+*.pyo
 
 # Temporary files #
 ###################

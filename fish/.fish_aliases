@@ -216,6 +216,7 @@ alias npm='npq-hero'
 alias p3='python3'
 alias pi='pip3 install'
 alias pir='pip3 install -r requirements.txt'
+alias pfr='pip3 freeze > requirements.txt'
 alias activate='. venv/bin/activate.fish'
 [ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
 

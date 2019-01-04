@@ -30,7 +30,8 @@ function! ToggleHiddenAll()
         let g:hidden_all = 1
         set noshowmode
         set noruler
-        set laststatus=0
+        " set laststatus=0
+        set laststatus=1
         set noshowcmd
     else
         let g:hidden_all = 0

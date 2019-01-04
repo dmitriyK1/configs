@@ -84,6 +84,10 @@ snippet "([^\s].*)\.warn" "console.warn (postfix)" r
 console.warn(`!p snip.rv = match.group(1)`);$0
 endsnippet
 # ----------------------------------------
+snippet "([^\s].*)\.(dir|d)" "console.dir (postfix)" r
+console.dir(`!p snip.rv = match.group(1)`);$0
+endsnippet
+# ----------------------------------------
 snippet ed "export (default)"
 export default $0
 endsnippet

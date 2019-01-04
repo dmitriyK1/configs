@@ -2,4 +2,8 @@ snippet "([^\s].*)\.(log|lg|l)" "console.log (postfix)" r
 console.log(`!p snip.rv = match.group(1)`);$0
 endsnippet
 # ----------------------------------------
+snippet "([^\s].*)\.(dir|d)" "console.dir (postfix)" r
+console.dir(`!p snip.rv = match.group(1)`);$0
+endsnippet
+# ----------------------------------------
 

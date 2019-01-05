@@ -31,6 +31,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'romainl/vim-cool'
+Plug 'BobWhitelock/HiCursorWords'
+Plug 'junegunn/vim-peekaboo' "{{{
+  let g:peekaboo_ins_prefix = '<c-x>'
+" }}}
 Plug 'itchyny/lightline.vim' "{{{
   let g:lightline = {
         \ 'colorscheme': 'Dracula',

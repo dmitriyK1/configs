@@ -66,13 +66,10 @@ Plug 'andymass/vim-matchup'
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
   let g:interestingWordsDefaultMappings = 0
 "}}}
-
 Plug 'moll/vim-bbye'
-
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
   let g:sayonara_confirm_quit = 1
 " }}}
-
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{

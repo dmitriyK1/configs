@@ -130,8 +130,12 @@ Plug 'dracula/vim'
 "     \ }
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
-Plug 'ludovicchabant/vim-gutentags'
-let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
+" Disables search highlighting when you are done searching and re-enables it when you search again.
+Plug 'romainl/vim-cool'
+
+Plug 'ludovicchabant/vim-gutentags' "{{{
+  let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
+"}}}
 
 " Plug 'jsfaint/gen_tags.vim'
 

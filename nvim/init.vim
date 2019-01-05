@@ -31,6 +31,11 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'romainl/vim-cool'
+Plug 'itchyny/lightline.vim' "{{{
+  let g:lightline = {
+        \ 'colorscheme': 'Dracula',
+        \ }
+" }}}
 Plug 'Lokaltog/neoranger' "{{{
   " Open ranger at current file with "-"
   nnoremap <silent> - :RangerCurrentFile<CR>

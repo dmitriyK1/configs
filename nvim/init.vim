@@ -32,6 +32,9 @@ Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'romainl/vim-cool'
 Plug 'BobWhitelock/HiCursorWords'
+Plug 'alvan/vim-closetag' "{{{
+  let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.ts,*.tsx,*.html.erb,*.md'
+"}}}
 Plug 'junegunn/vim-peekaboo' "{{{
   let g:peekaboo_ins_prefix = '<c-x>'
 " }}}

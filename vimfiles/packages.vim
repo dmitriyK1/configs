@@ -130,6 +130,9 @@ Plug 'dracula/vim'
 "     \ }
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
+" wisely add "end" in ruby, endfunction/endif/more in vim script, etc http://www.vim.org/scripts/script.php…
+Plug 'tpope/vim-endwise'
+
 " Disables search highlighting when you are done searching and re-enables it when you search again.
 Plug 'romainl/vim-cool'
 

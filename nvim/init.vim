@@ -19,6 +19,7 @@ Plug 'dracula/vim'
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'machakann/vim-highlightedyank'
 Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'mhinz/vim-startify'

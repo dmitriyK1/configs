@@ -130,6 +130,9 @@ Plug 'dracula/vim'
 "     \ }
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
+" Make the yanked region apparent!
+Plug 'machakann/vim-highlightedyank'
+
 " Plugins from https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
 Plug 'BobWhitelock/HiCursorWords' " Highlight occurrences of word under cursor.
 Plug 'ap/vim-css-color' " Highlight background of CSS colors.
@@ -724,6 +727,12 @@ Plug 'tommcdo/vim-exchange'
     " let g:gitgutter_sign_modified_removed = '~_'
   " }}}
 
+" Ease your git worflow within vim
+Plug 'jreybert/vimagit' "{{{
+  let g:magit_default_fold_level = 2
+  let g:magit_refresh_gitgutter = 1
+" }}}
+
 " Git wrapper
 Plug 'tpope/vim-fugitive' "{{{
   nnoremap <leader>ga :Git add %<CR><CR>
@@ -1175,12 +1184,6 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 
 " Vim bundle for http://styled-components.com based javascript files.
 " Plug 'styled-components/vim-styled-components'
-
-" Ease your git worflow within vim
-" Plug 'jreybert/vimagit' "{{{
-  " let g:magit_default_fold_level = 2
-  " let g:magit_refresh_gitgutter = 1
-" }}}
 
 " A Vim plugin for managing three-way merges
 " Plug 'sjl/splice.vim'

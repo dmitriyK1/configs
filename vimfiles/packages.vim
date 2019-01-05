@@ -130,6 +130,21 @@ Plug 'dracula/vim'
 "     \ }
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
+" Plugins from https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
+Plug 'BobWhitelock/HiCursorWords' " Highlight occurrences of word under cursor.
+Plug 'ap/vim-css-color' " Highlight background of CSS colors.
+Plug 'kreskij/Repeatable.vim', { 'on': 'Repeatable' }
+
+" Auto close (X)HTML tags
+Plug 'alvan/vim-closetag' "{{{
+  let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.ts,*.tsx,*.html.erb,*.md'
+"}}}
+
+" Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
+Plug 'junegunn/vim-peekaboo' "{{{
+  let g:peekaboo_ins_prefix = '<c-x>'
+" }}}
+
 " Disables search highlighting when you are done searching and re-enables it when you search again.
 Plug 'romainl/vim-cool'
 
@@ -1174,11 +1189,6 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 " Plug 'PeterRincker/vim-argumentative' "{{{
   " nmap <; <Plug>Argumentative_MoveLeft
   " nmap >; <Plug>Argumentative_MoveRight
-" }}}
-
-" Peekaboo extends " and @ in normal mode and <CTRL-R> in insert mode so you can see the contents of the registers
-" Plug 'junegunn/vim-peekaboo' "{{{
-  " let g:peekaboo_ins_prefix = '<c-x>'
 " }}}
 
 " lean & mean status/tabline for vim that's light as air

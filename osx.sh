@@ -272,3 +272,6 @@ killall mds > /dev/null 2>&1
 sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch
 sudo mdutil -E / > /dev/null
+
+# update locate db
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist

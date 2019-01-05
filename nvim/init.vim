@@ -1,3 +1,5 @@
+" TODO: lazy-load what possible
+
 if &compatible
   set nocompatible
 endif

@@ -1,3 +1,5 @@
+" TODO: lazy-load what possible
+
 " Lazy-loading example for filetypes:
 " autocmd BufNewFile,BufRead *.gpg setf gpg
 " Plug 'jamessan/vim-gnupg', { 'for': 'gpg' }

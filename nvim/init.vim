@@ -39,16 +39,11 @@ Plug 'ntpeters/vim-better-whitespace' "{{{
 "}}}
 " MixedCase (crm), camelCase (crc), snake_case (crs), and UPPER_CASE (cru)
 Plug 'tpope/vim-abolish'
-Plug 'rhysd/conflict-marker.vim' "{{{
-  nmap <buffer><Up> <Plug>(conflict-marker-prev-hunk)
-  nmap <buffer><Down> <Plug>(conflict-marker-next-hunk)
-"}}}
+Plug 'rhysd/conflict-marker.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'valloric/MatchTagAlways'
 Plug 'djoshea/vim-autoread'
-Plug 'osyo-manga/vim-over' "{{{
-  map <silent> <leader>% :OverCommandLine<CR>%s/
-" }}}
+Plug 'osyo-manga/vim-over'
 Plug 'alvan/vim-closetag' "{{{
   let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.ts,*.tsx,*.html.erb,*.md'
 "}}}
@@ -274,6 +269,15 @@ nnoremap <leader>d :Bdelete<CR>
   autocmd VimEnter * xunmap ]x
   autocmd VimEnter * xunmap [x
 " }}}
+
+" vim-over settings {{{
+  map <silent> <leader>% :OverCommandLine<CR>%s/
+" }}}
+
+" conflict-marker settings {{{
+  nmap <buffer><Up> <Plug>(conflict-marker-prev-hunk)
+  nmap <buffer><Down> <Plug>(conflict-marker-next-hunk)
+"}}}
 "}}} =======================================================
 
 " Use local init.vim if available

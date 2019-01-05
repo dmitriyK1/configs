@@ -417,11 +417,11 @@ Plug 'haya14busa/is.vim' "{{{
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
   let g:interestingWordsDefaultMappings = 0
 
-  " temporary hack
-  nnoremap µ <Plug>InterestingWords
-
   nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
   nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
+
+  " hack to allow word navigation (triggers navigation between search results otherwise)
+  nnoremap µ <Plug>InterestingWords
 
   nnoremap <silent> <M-p> :call WordNavigation(0)<CR>
   nnoremap <silent> <M-n> :call WordNavigation(1)<CR>

@@ -95,8 +95,8 @@ imap <A-l> <Right>
 imap <A-i> <Home>
 imap <A-a> <End>
 
-nnoremap <silent> <A-n> :bn<CR>
-nnoremap <silent> <A-p> :bp<CR>
+" nnoremap <silent> <A-n> :bn<CR>
+" nnoremap <silent> <A-p> :bp<CR>
 " --------------------------------------------------------------------------------
 " Letter mappings
 " --------------------------------------------------------------------------------

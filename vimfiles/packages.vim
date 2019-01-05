@@ -420,11 +420,11 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
   " temporary hack
   nnoremap µ <Plug>InterestingWords
 
-  nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
-  nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
+  nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
+  nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
 
-  " nnoremap <silent> <leader>1 :call WordNavigation('forward')<cr>
-  " nnoremap <silent> <leader>2 :call WordNavigation('backward')<cr>
+  nnoremap <silent> <M-p> :call WordNavigation(0)<CR>
+  nnoremap <silent> <M-n> :call WordNavigation(1)<CR>
 "}}}
 
 " create your own text objects (dependency)

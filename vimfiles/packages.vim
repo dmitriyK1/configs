@@ -728,6 +728,7 @@ Plug 'tommcdo/vim-exchange'
   " }}}
 
 " Ease your git worflow within vim
+" <leader>M Open Magit buffer
 Plug 'jreybert/vimagit' "{{{
   let g:magit_default_fold_level = 2
   let g:magit_refresh_gitgutter = 1

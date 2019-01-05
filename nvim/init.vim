@@ -32,6 +32,23 @@ Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'romainl/vim-cool'
 Plug 'BobWhitelock/HiCursorWords'
+Plug 'kana/vim-textobj-user'
+Plug 'glts/vim-textobj-comment'
+Plug 'ntpeters/vim-better-whitespace' "{{{
+  let g:strip_whitespace_on_save = 1
+"}}}
+" MixedCase (crm), camelCase (crc), snake_case (crs), and UPPER_CASE (cru)
+Plug 'tpope/vim-abolish'
+Plug 'rhysd/conflict-marker.vim' "{{{
+  nmap <buffer><Up> <Plug>(conflict-marker-prev-hunk)
+  nmap <buffer><Down> <Plug>(conflict-marker-next-hunk)
+"}}}
+Plug 'editorconfig/editorconfig-vim'
+Plug 'valloric/MatchTagAlways'
+Plug 'djoshea/vim-autoread'
+Plug 'osyo-manga/vim-over' "{{{
+  map <silent> <leader>% :OverCommandLine<CR>%s/
+" }}}
 Plug 'alvan/vim-closetag' "{{{
   let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.ts,*.tsx,*.html.erb,*.md'
 "}}}
@@ -208,39 +225,55 @@ nnoremap <leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
 
 nnoremap <leader>se :e $MYVIMRC<CR>
 nnoremap <leader>ss :source $MYVIMRC<CR>
+
+" nnoremap <leader>, :bp<CR>
+" nnoremap <leader>. :bp<CR>
+nnoremap <M-,> :bp<CR>
+nnoremap <M-.> :bp<CR>
 " ================ Plugins settings ======================== {{{
 let g:jedi#completions_enabled = 0
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup
 let g:startify_custom_header = []
 
 " CtrlP settings "{{{
-let g:ctrlp_extensions = ['undo', 'dir']
-let g:ctrlp_map = '<c-t>'
-let g:ctrlp_open_multiple_files = '1jr'
-let g:ctrlp_max_files = 0
-let g:ctrlp_lazy_update = 50
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:ctrlp_match_window = 'bottom,order:btt,min:20,max:20,results:20'
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
-      \ 'file': '\.pyc$\|\.pyo$',
-      \ }
-let g:ctrlp_user_command = 'fd --type file --hidden --follow --exclude .git'
+  let g:ctrlp_extensions = ['undo', 'dir']
+  let g:ctrlp_map = '<c-t>'
+  let g:ctrlp_open_multiple_files = '1jr'
+  let g:ctrlp_max_files = 0
+  let g:ctrlp_lazy_update = 50
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+  let g:ctrlp_match_window = 'bottom,order:btt,min:20,max:20,results:20'
+  let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
+        \ 'file': '\.pyc$\|\.pyo$',
+        \ }
+  let g:ctrlp_user_command = 'fd --type file --hidden --follow --exclude .git'
 
-nnoremap <silent> <leader>b :CtrlPBuffer<CR>
-nnoremap <silent> <leader>r :CtrlPMRUFiles<CR>
-nnoremap <silent> <C-q> :CtrlP .<CR>
+  nnoremap <silent> <leader>b :CtrlPBuffer<CR>
+  nnoremap <silent> <leader>r :CtrlPMRUFiles<CR>
+  nnoremap <silent> <C-q> :CtrlP .<CR>
+" }}}
+
 nnoremap <leader>c :Sayonara<CR>
 nnoremap <leader>d :Bdelete<CR>
 
-" hack to allow word navigation (triggers navigation between search results otherwise)
-nnoremap µ <Plug>InterestingWords
-nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
-nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
-nnoremap <silent> <M-p> :call WordNavigation(0)<CR>
-nnoremap <silent> <M-n> :call WordNavigation(1)<CR>
+" InterestingWords settings "{{{
+  " hack to allow word navigation (triggers navigation between search results otherwise)
+  nnoremap µ <Plug>InterestingWords
+  nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
+  nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
+  nnoremap <silent> <M-p> :call WordNavigation(0)<CR>
+  nnoremap <silent> <M-n> :call WordNavigation(1)<CR>
 " }}}
 
+" unimpaired settings "{{{
+  autocmd VimEnter * nunmap ]x
+  autocmd VimEnter * nunmap ]xx
+  autocmd VimEnter * nunmap [x
+  autocmd VimEnter * nunmap [xx
+  autocmd VimEnter * xunmap ]x
+  autocmd VimEnter * xunmap [x
+" }}}
 "}}} =======================================================
 
 " Use local init.vim if available

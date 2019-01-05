@@ -29,6 +29,14 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
+Plug 'romainl/vim-cool'
+Plug 'Lokaltog/neoranger' "{{{
+  " Open ranger at current file with "-"
+  nnoremap <silent> - :RangerCurrentFile<CR>
+
+  " Open ranger in current working directory
+  nnoremap <silent> <leader>- :Ranger<CR>
+"}}}
 Plug 'andymass/vim-matchup'
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
   let g:interestingWordsDefaultMappings = 0

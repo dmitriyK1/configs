@@ -1,6 +1,6 @@
 if has("unix")
   " Do Linux stuff here
-  let g:os    = "unix"
+  let g:os = "unix"
   set shell=/bin/bash
 
   if has("mac") || has("macunix")
@@ -15,7 +15,7 @@ if has("unix")
     set nolazyredraw
   endif
 elseif has("win32") || has("win16") || has("win64")
-  let g:os    = "windows"
+  let g:os = "windows"
   " Do Windows stuff here
   if has("win32unix")
     " Cygwin
@@ -49,6 +49,7 @@ if has("gui_running")
   elseif has('gui_macvim')
     set guifont=Monaco:h14     " OSX.
     set macligatures
+    set fullscreen
   else
     set guifont=Monospace\ 12  " Linux.
 

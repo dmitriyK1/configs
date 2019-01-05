@@ -158,7 +158,7 @@ alias bs "brew search"
 alias bif "brew info"
 # alias p "percol" # brew install percol
 alias p "peco" # brew install peco
-alias ss "source ~/.config/fish/config.fish"
+alias ss "reload"
 alias se "vim ~/.config/fish/config.fish"
 alias sea "vim ~/fish/.fish_aliases"
 alias sef "vim ~/fish/.fish_functions"

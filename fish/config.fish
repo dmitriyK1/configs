@@ -55,8 +55,8 @@ set -g theme_display_docker_machine yes
 set -g fish_prompt_pwd_dir_length 0
 
 source ~/fish/.fish_variables
-source ~/fish/.fish_aliases
 source ~/fish/.fish_functions
+source ~/fish/.fish_aliases
 
 source (npx --shell-auto-fallback fish | psub)
 

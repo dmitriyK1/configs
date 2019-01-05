@@ -39,6 +39,7 @@ echo 'updating homebrew'
 brew update
 brew upgrade
 brew cleanup
+brew cask upgrade
 
 echo 'updating fish shell'
 fisher

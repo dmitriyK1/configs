@@ -42,15 +42,23 @@ Plug 'andymass/vim-matchup'
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
   let g:interestingWordsDefaultMappings = 0
 
-  " temporary hack
+  " hack to allow word navigation (triggers navigation between search results otherwise)
   nnoremap µ <Plug>InterestingWords
 
-  nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
-  nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
-  " nnoremap <silent> <M-.> :call WordNavigation(1)<CR>
-  " nnoremap <silent> <M-,> :call WordNavigation(0)<CR>
+  nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
+  nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
+
+  nnoremap <silent> <M-p> :call WordNavigation(0)<CR>
+  nnoremap <silent> <M-n> :call WordNavigation(1)<CR>
 "}}}
-Plug 'mhinz/vim-sayonara'
+
+Plug 'moll/vim-bbye'
+
+Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
+  let g:sayonara_confirm_quit = 1
+  " map <silent> <leader>c :Sayonara<CR>
+" }}}
+
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
@@ -217,10 +225,11 @@ let g:ctrlp_custom_ignore = {
       \ }
 let g:ctrlp_user_command = 'fd --type file --hidden --follow --exclude .git'
 
-nnoremap <silent> <leader>b :CtrlPBuffer<cr>
-nnoremap <silent> <leader>r :CtrlPMRUFiles<cr>
-nnoremap <silent> <C-q> :CtrlP .<cr>
-nnoremap <leader>d :Sayonara<cr>
+nnoremap <silent> <leader>b :CtrlPBuffer<CR>
+nnoremap <silent> <leader>r :CtrlPMRUFiles<CR>
+nnoremap <silent> <C-q> :CtrlP .<CR>
+nnoremap <leader>c :Sayonara<CR>
+nnoremap <leader>d :Bdelete<CR>
 " }}}
 
 "}}} =======================================================

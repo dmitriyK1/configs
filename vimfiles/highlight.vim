@@ -3,7 +3,8 @@
 
 " highlight Conceal guibg=NONE guifg=red
 
-" make background transparent
+" transparent terminal background
+" never move above `colorscheme` option
 " hi Normal guibg=NONE ctermbg=NONE
 hi Normal ctermbg=NONE
 

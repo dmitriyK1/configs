@@ -276,9 +276,23 @@ nnoremap <leader>d :Bdelete<CR>
   nmap <buffer><Up> <Plug>(conflict-marker-prev-hunk)
   nmap <buffer><Down> <Plug>(conflict-marker-next-hunk)
 "}}}
+"
+
+" Highlighted yank {{{
+  " let g:highlightedyank_highlight_duration = 300
+" }}}
 "}}} =======================================================
 
 " Use local init.vim if available
 if filereadable(expand("~/init.vim.local"))
   source ~/init.vim.local
 endif
+
+" highlight settings =======================================================
+" transparent terminal background
+" never move above `colorscheme` option
+hi Normal guibg=NONE ctermbg=NONE
+
+" fix jsx highlighting of end xml tags
+hi link xmlEndTag xmlTag
+" ==========================================================================

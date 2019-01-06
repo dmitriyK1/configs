@@ -46,7 +46,8 @@ augroup END
 " return to command mode when focus is lost
 " au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
 
-au filetype help set nonumber
+au FileType help set nonumber
+au FileType help nmap <buffer> q :q<CR>
 
 " Line Return {{{
   " Make sure Vim returns to the same line when you reopen a file.

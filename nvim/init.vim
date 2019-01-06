@@ -134,6 +134,7 @@ set completeopt-=preview                                                        
 filetype plugin indent on
 syntax on
 silent! colorscheme dracula
+set helpheight=99999 " maximize help window
 
 " }}}
 " ================ Turn Off Swap Files ============== {{{
@@ -162,6 +163,7 @@ augroup vimrc
   autocmd InsertEnter * set nocul                                             "Remove cursorline highlight
   autocmd InsertLeave * set cul                                               "Add cursorline highlight in normal mode
   autocmd FocusGained,BufEnter * checktime                                    "Refresh file when vim gets focus
+  autocmd FileType help nmap <buffer> q :q<CR>
 augroup END
 
 " }}}
@@ -288,11 +290,11 @@ if filereadable(expand("~/init.vim.local"))
   source ~/init.vim.local
 endif
 
-" highlight settings =======================================================
+" highlight settings =======================================
 " transparent terminal background
 " never move above `colorscheme` option
 hi Normal guibg=NONE ctermbg=NONE
 
 " fix jsx highlighting of end xml tags
 hi link xmlEndTag xmlTag
-" ==========================================================================
+" ==========================================================

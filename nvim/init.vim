@@ -45,7 +45,6 @@ Plug 'rhysd/conflict-marker.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'valloric/MatchTagAlways'
 Plug 'djoshea/vim-autoread'
-Plug 'osyo-manga/vim-over'
 Plug 'alvan/vim-closetag' "{{{
   let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.ts,*.tsx,*.html.erb,*.md'
 "}}}

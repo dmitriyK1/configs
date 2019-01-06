@@ -57,4 +57,6 @@ set -U FZF_ENABLE_OPEN_PREVIEW 1
 # [ -f $HOME/.emacs.d/bin ]; and set --export PATH $HOME/.emacs.d/bin $PATH
 [ -f $HOME/.fish_variables.local ]; and source $HOME/.fish_variables.local
 
+set -gx LPS_DEFAULT_USERNAME 'dimaroxx@gmail.com'
+
 # vim: filetype=sh

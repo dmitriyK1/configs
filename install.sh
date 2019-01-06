@@ -123,6 +123,7 @@ brew install gibo # .gitignore generator
 # brew git tools end ##################################################################
 
 brew install go
+brew install lastpass-cli --with-pinentry
 
 echo "Installing python packages"
 pip install --upgrade pip

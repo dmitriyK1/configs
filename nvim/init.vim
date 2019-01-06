@@ -283,6 +283,10 @@ nnoremap <leader>d :Bdelete<CR>
 " Highlighted yank {{{
   " let g:highlightedyank_highlight_duration = 300
 " }}}
+
+" vim-gitgutter "{{{
+  nmap <silent> <C-g> :GitGutterToggle<CR>
+" }}}
 "}}} =======================================================
 
 " Use local init.vim if available

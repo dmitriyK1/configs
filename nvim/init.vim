@@ -269,7 +269,7 @@ nnoremap <leader>d :Bdelete<CR>
 " }}}
 
 " vim-over settings {{{
-  map <silent> <leader>% :OverCommandLine<CR>%s/
+  map <silent> <leader>% :%s/
 " }}}
 
 " conflict-marker settings {{{

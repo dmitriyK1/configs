@@ -67,6 +67,7 @@
 	st = status
 	ci = commit
 	br = branch
+	unpushed = log @{u}.. # Show which commits have not been pushed to the tracking branch and are safe to amend/rebase.
     s=status
     d=diff
     dw=diff --color-words

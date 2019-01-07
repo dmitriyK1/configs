@@ -24,6 +24,9 @@ set --export PATH $HOME/.yarn/bin $PATH
 set --export PATH $HOME/go/bin $PATH
 set --export PATH $GEM_HOME/bin $PATH
 
+# requires `git clone https://github.com/unixorn/git-extra-commands.git`
+set --export PATH $HOME/Development/git-extra-commands/bin $PATH
+
 # for pj fisherman plugin
 set -U PROJECT_PATHS ~/Development
 

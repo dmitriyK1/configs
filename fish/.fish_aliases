@@ -211,8 +211,8 @@ alias unset 'set --erase'
 
 alias rmr 'rm -rf'
 alias ntla='ntl -A'
-alias yarn='env NPQ_PKG_MGR=yarn npq-hero'
-alias npm='npq-hero'
+# alias yarn='env NPQ_PKG_MGR=yarn npq-hero'
+# alias npm='npq-hero'
 
 alias p3='python3'
 alias pi='pip3 install'

@@ -56,7 +56,7 @@ snippet in "named import"
 import { $1 } from "$2";$0
 endsnippet
 # ----------------------------------------
-snippet "([^\s].*)\.(return|ret)" "Return (postfix)" r
+snippet "([^\s].*)\.(return|ret|rt)" "Return (postfix)" r
 return `!p snip.rv = match.group(1)`;$0
 endsnippet
 # ----------------------------------------

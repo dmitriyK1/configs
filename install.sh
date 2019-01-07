@@ -67,6 +67,7 @@ brew install terminal-notifier # used for `fisher add franciscolourenco/done`
 brew install peco
 brew install nano
 brew install gnu-tar # for doom-emacs
+brew install httpie # http client
 
 # cask install start ##################################################################
 brew tap caskroom/cask

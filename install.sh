@@ -133,6 +133,7 @@ pip install neovim
 pip install bpython
 pip install --upgrade autopep8
 pip install virtualfish
+pip install mu-repo # handle multiple repositories
 pip3 install pipdeptree
 pip3 install flake8
 python -m pip install pip_upgrade_outdated

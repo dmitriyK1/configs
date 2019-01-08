@@ -132,6 +132,9 @@ Plug 'dracula/vim'
 "     \ }
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
+" gitk for Vim
+Plug 'gregsexton/gitv'
+
 " Make the yanked region apparent!
 Plug 'machakann/vim-highlightedyank'
 

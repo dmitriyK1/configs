@@ -1,4 +1,5 @@
-source packages.vim
+" TODO: try use relative path
+source $HOME/configs/nvim/packages.vim
 
 " ================ Nvim-specific Config ==================== {{{
 let g:python_host_prog = '/usr/local/bin/python2'

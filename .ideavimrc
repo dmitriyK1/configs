@@ -1,3 +1,5 @@
+" list of all actions - :actionlist
+
 let mapleader=" "
 let maplocalleader=" "
 
@@ -112,3 +114,13 @@ map ]e :action MoveLineDown<CR>
 map <leader>d :action AceDeclarationAction<CR>
 
 map <leader>k :action HighlightUsagesInFile<CR>
+
+map <leader>se :e ~/.ideavimrc<CR>
+map <leader>ss :source ~/.ideavimrc<CR>
+
+map <leader>- :action VimWindowSplitHorizontal<CR>
+map <leader>\ :action VimWindowSplitVertical<CR>
+
+map cru gUiw
+map crl guiw
+" map crt g~iw

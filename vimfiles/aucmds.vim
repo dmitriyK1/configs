@@ -93,7 +93,7 @@ autocmd Colorscheme * highlight FoldColumn guifg=bg guibg=bg
 " https://github.com/tpope/vim-fugitive
 autocmd QuickFixCmdPost *grep* cwindow
 
-" NOTE: will break session plugins (better to use keybinding to change to current directory)
+" NOTE: will break session plugins
 " cnoremap cd. lcd %:p:h
 " nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 autocmd BufEnter * silent! lcd %:p:h

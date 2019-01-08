@@ -274,3 +274,5 @@ endif
 set helpheight=99999
 
 set tags=tags;$HOME
+
+execute "set titleold=" . hostname()

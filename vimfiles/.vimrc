@@ -79,16 +79,7 @@
 " https://github.com/saaguero/dotvim/blob/master/.vimrc
 " https://github.com/skwp/dotfiles/tree/master/vim/settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-filetype plugin indent on
-syntax on
-
-runtime macros/matchit.vim
-
-if filereadable(expand("~/.vimrc.before.local"))
-  source ~/.vimrc.before.local
-endif
-
+source ~/vimfiles/initial.vim
 source ~/vimfiles/let.vim
 source ~/vimfiles/set.vim
 source ~/vimfiles/packages.vim
@@ -98,15 +89,4 @@ source ~/vimfiles/keybindings/map.vim
 source ~/vimfiles/keybindings/leader.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/highlight.vim
-
-execute "set titleold=" . hostname()
-
-nohlsearch   " When sourcing this file, do not immediately turn on highlighting
-
-if filereadable(expand("~/.vimrc.after.local"))
-  source ~/.vimrc.after.local
-endif
-
-call ctrlp_bdelete#init()
-
-set secure
+source ~/vimfiles/final.vim

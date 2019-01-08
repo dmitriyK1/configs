@@ -51,9 +51,17 @@ Plug 'alvan/vim-closetag' "{{{
 Plug 'junegunn/vim-peekaboo' "{{{
   let g:peekaboo_ins_prefix = '<c-x>'
 " }}}
+Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim' "{{{
   let g:lightline = {
         \ 'colorscheme': 'Dracula',
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ],
+        \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+        \ },
+        \ 'component_function': {
+        \   'gitbranch': 'fugitive#head'
+        \ },
         \ }
 " }}}
 Plug 'Lokaltog/neoranger' "{{{

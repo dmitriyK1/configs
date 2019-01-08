@@ -163,7 +163,8 @@ augroup vimrc
   autocmd InsertEnter * set nocul                                             "Remove cursorline highlight
   autocmd InsertLeave * set cul                                               "Add cursorline highlight in normal mode
   autocmd FocusGained,BufEnter * checktime                                    "Refresh file when vim gets focus
-  autocmd FileType help nmap <buffer> q :q<CR>
+  autocmd FileType help nmap <buffer> q :q<CR>                                "Bind `q` to exit in a help buffer
+  autocmd BufEnter * silent! lcd %:p:h                                        "Set the current directory for the current window.  The current directory for other windows or tabs is not changed.
 augroup END
 
 " }}}

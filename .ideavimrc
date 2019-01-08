@@ -124,3 +124,6 @@ map <leader>\ :action VimWindowSplitVertical<CR>
 map cru gUiw
 map crl guiw
 " map crt g~iw
+
+" Comment the current inner paragraph
+map <C-->p vip :action CommentByLineComment<CR>:action VimVisualExitMode<CR>

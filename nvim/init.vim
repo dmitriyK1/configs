@@ -222,10 +222,10 @@ nnoremap <leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
 nnoremap <leader>se :e $MYVIMRC<CR>
 nnoremap <leader>ss :source $MYVIMRC<CR>
 
-" nnoremap <leader>, :bp<CR>
-" nnoremap <leader>. :bp<CR>
-nnoremap <M-,> :bp<CR>
-nnoremap <M-.> :bp<CR>
+" nnoremap <silent> <leader>, :bp<CR>
+" nnoremap <silent> <leader>. :bp<CR>
+nnoremap <silent> <M-,> :bp<CR>
+nnoremap <silent> <M-.> :bp<CR>
 " ================ Plugins settings ======================== {{{
 let g:jedi#completions_enabled = 0
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup

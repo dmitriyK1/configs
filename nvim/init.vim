@@ -226,6 +226,10 @@ nnoremap <leader>ss :source $MYVIMRC<CR>
 " nnoremap <silent> <leader>. :bp<CR>
 nnoremap <silent> <M-,> :bp<CR>
 nnoremap <silent> <M-.> :bp<CR>
+
+" Split previously opened file in a split window
+nnoremap <leader>- :new<cr><C-w>j
+nnoremap <leader>\ :vnew<cr><C-w>l
 " ================ Plugins settings ======================== {{{
 let g:jedi#completions_enabled = 0
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup

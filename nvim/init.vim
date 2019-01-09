@@ -214,6 +214,25 @@ nnoremap <leader>d :Bdelete<CR>
 " vim-gitgutter "{{{
   nmap <silent> <C-g> :GitGutterToggle<CR>
 " }}}
+
+" fugitive {{{
+  nnoremap <leader>ga :Git add %<CR><CR>
+  nnoremap <leader>gs :Gstatus<CR>
+  nnoremap <leader>gc :Gcommit -v -q<CR>
+  nnoremap <leader>gC :Gcommit -v -q --no-verify<CR>
+  nnoremap <leader>go :Git checkout %<CR>
+  nnoremap <leader>gd :Gdiff<CR>
+  nnoremap <leader>gD :Git diff --staged<CR>
+  nnoremap <leader>ge :Gedit <Right>
+  nnoremap <leader>gv :Gvsplit <Right>
+  nnoremap <leader>gre :Git reset %<CR>
+  nnoremap <leader>gl :Git log -p --stat --no-merges<CR>
+  nnoremap <leader>gh :Git show<CR>
+  nnoremap <leader>gw :Git show<CR>
+  nnoremap <leader>gps :Dispatch! git push<CR>
+  nnoremap <leader>gpS :Dispatch! git push --no-verify<CR>
+  nnoremap <leader>gpl :Dispatch! git pull<CR>
+" }}}
 "}}} =======================================================
 
 " Use local init.vim if available

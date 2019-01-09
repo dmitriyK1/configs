@@ -184,6 +184,7 @@ alias cal='cal | grep --color -EC6 "\b"(date +%e | sed "s/ //g")'
 
 alias rg="rg -i --color=always --glob='!flow-typed/*'"
 alias rgf="rg -i --color=always --glob='!flow-typed/*' -F"
+alias rgw="rg -i --color=always --glob='!flow-typed/*' -w"
 
 alias rr="ranger"
 

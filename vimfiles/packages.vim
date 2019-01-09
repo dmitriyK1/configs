@@ -24,10 +24,10 @@ call plug#begin('~/.vim/plugged')
 " ================================================================================
 " Colorschemes:
 " ================================================================================
-Plug 'liuchengxu/space-vim-dark'
 Plug 'ashfinal/vim-colors-violet'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
+" Plug 'liuchengxu/space-vim-dark'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }
 " Plug 'nightsense/office'

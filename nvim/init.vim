@@ -143,6 +143,7 @@ nnoremap <leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
 
 nnoremap <leader>se :e $MYVIMRC<CR>
 nnoremap <leader>ss :source $MYVIMRC<CR>
+nnoremap <leader>sp :e $HOME/configs/nvim/packages.vim<CR>
 
 " nnoremap <silent> <leader>, :bp<CR>
 " nnoremap <silent> <leader>. :bp<CR>

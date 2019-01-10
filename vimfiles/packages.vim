@@ -516,6 +516,9 @@ Plug 'airblade/vim-matchquote'
 " A vim script to provide CamelCase motion through words
 Plug 'bkad/CamelCaseMotion'
 
+" flatfoot.vim: experimental enhancement of "f" and "t" keys
+Plug 'tpope/vim-flatfoot'
+
 " CtrlP plugin: Filetype finder and setter
 Plug 'endel/ctrlp-filetype.vim' "{{{
   silent! nnoremap <unique> <silent> <Leader>F :CtrlPFiletype<CR>

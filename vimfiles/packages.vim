@@ -565,6 +565,9 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
   nnoremap <silent> <C-q> :CtrlP .<cr>
 "}}}
 
+" NOTE: Broken
+" Plug 'jasoncodes/ctrlp-modified.vim'
+
 Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
   " let g:ctrlp_cmdpalette_execute=1
   nmap <silent> <leader>P :CtrlPCmdPalette<CR>

@@ -515,10 +515,8 @@ Plug 'airblade/vim-matchquote'
 
 " A vim script to provide CamelCase motion through words
 Plug 'bkad/CamelCaseMotion'
-map <silent> 2 <Plug>CamelCaseMotion_w
-map <silent> 1 <Plug>CamelCaseMotion_b
-sunmap 1
-sunmap 2
+map <silent> <leader>2 <Plug>CamelCaseMotion_w
+map <silent> <leader>1 <Plug>CamelCaseMotion_b
 
 " CtrlP plugin: Filetype finder and setter
 Plug 'endel/ctrlp-filetype.vim' "{{{

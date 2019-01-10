@@ -517,6 +517,8 @@ Plug 'airblade/vim-matchquote'
 Plug 'bkad/CamelCaseMotion'
 map <silent> 2 <Plug>CamelCaseMotion_w
 map <silent> 1 <Plug>CamelCaseMotion_b
+sunmap 1
+sunmap 2
 
 " CtrlP plugin: Filetype finder and setter
 Plug 'endel/ctrlp-filetype.vim' "{{{

@@ -510,6 +510,9 @@ Plug 'tpope/vim-rsi'
 " vim match-up: even better % navigate and highlight matching words modern matchit and matchparen replacement
 Plug 'andymass/vim-matchup'
 
+" A Vim plugin to provide %-style motion for single / double quotation marks, backticks and pipe
+Plug 'airblade/vim-matchquote'
+
 " CtrlP plugin: Filetype finder and setter
 Plug 'endel/ctrlp-filetype.vim' "{{{
   silent! nnoremap <unique> <silent> <Leader>F :CtrlPFiletype<CR>

@@ -510,9 +510,6 @@ Plug 'tpope/vim-rsi'
 " vim match-up: even better % navigate and highlight matching words modern matchit and matchparen replacement
 Plug 'andymass/vim-matchup'
 
-" A Vim plugin to provide %-style motion for single / double quotation marks, backticks and pipe
-Plug 'airblade/vim-matchquote'
-
 " A vim script to provide CamelCase motion through words
 Plug 'bkad/CamelCaseMotion'
 map <silent> <leader>2 <Plug>CamelCaseMotion_w
@@ -794,6 +791,10 @@ Plug 'tpope/vim-dispatch'
 " ================================================================================
 " Unused:
 " ================================================================================
+" BREAKS BRACES % NAVIGATION
+" A Vim plugin to provide %-style motion for single / double quotation marks, backticks and pipe
+" Plug 'airblade/vim-matchquote'
+
 " CONFLICTS WITH TAB COMPLETION
 " wisely add "end" in ruby, endfunction/endif/more in vim script, etc http://www.vim.org/scripts/script.php…
 " Plug 'tpope/vim-endwise'

@@ -249,8 +249,8 @@ endfunction
 " vmap <Up> [egv
 " vmap <Down> ]egv
 
-nnoremap <Left> :bp<CR>
-nnoremap <Right> :bn<CR>
+nnoremap <silent> <Left> :bp<CR>
+nnoremap <silent> <Right> :bn<CR>
 
 map ]d jddk
 map [d kdd

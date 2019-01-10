@@ -507,6 +507,9 @@ Plug 'tpope/vim-sleuth'
 " readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
 
+" vim match-up: even better % navigate and highlight matching words modern matchit and matchparen replacement
+Plug 'andymass/vim-matchup'
+
 " CtrlP plugin: Filetype finder and setter
 Plug 'endel/ctrlp-filetype.vim' "{{{
   silent! nnoremap <unique> <silent> <Leader>F :CtrlPFiletype<CR>

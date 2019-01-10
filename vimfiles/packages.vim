@@ -513,6 +513,9 @@ Plug 'andymass/vim-matchup'
 " A Vim plugin to provide %-style motion for single / double quotation marks, backticks and pipe
 Plug 'airblade/vim-matchquote'
 
+" A vim script to provide CamelCase motion through words
+Plug 'bkad/CamelCaseMotion'
+
 " CtrlP plugin: Filetype finder and setter
 Plug 'endel/ctrlp-filetype.vim' "{{{
   silent! nnoremap <unique> <silent> <Leader>F :CtrlPFiletype<CR>
@@ -990,6 +993,9 @@ Plug 'tpope/vim-dispatch'
 " --------------------------------------------------------------------------------
 " Python plugins start
 " --------------------------------------------------------------------------------
+" A Vim plugin that provides text objects and motions for Python classes, methods, functions, and doc strings
+Plug 'jeetsukumaran/vim-pythonsense'
+
 " Vim plugin to sort python imports using https://github.com/timothycrosley/isort
 " <C-i> for visual selection
 Plug 'fisadev/vim-isort'

@@ -1,9 +1,8 @@
 " Make the yanked region apparent!
 Plug 'machakann/vim-highlightedyank'
 
-" Breaks vim-repeat
-" " Plugins from https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
-" Plug 'BobWhitelock/HiCursorWords' " Highlight occurrences of word under cursor.
+" Vim plugin for selectively illuminating other uses of the current word under the cursor
+Plug 'RRethy/vim-illuminate'
 
 Plug 'ap/vim-css-color' " Highlight background of CSS colors.
 

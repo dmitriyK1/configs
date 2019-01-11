@@ -1,3 +1,7 @@
+" Breaks vim-repeat
+" " Plugins from https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
+" Plug 'BobWhitelock/HiCursorWords' " Highlight occurrences of word under cursor.
+
 " cmdline-mode enhancement for Vim
 " Plug 'gelguy/Cmd2.vim' "{{{
 "   let g:Cmd2__complete_ignorecase = 1

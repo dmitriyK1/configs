@@ -71,7 +71,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Good configs list
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  https://github.com/bling/dotvim/blob/master/vimrc
+" https://github.com/bling/dotvim/blob/master/vimrc
 " https://github.com/kana/config/blob/master/vim/personal/dot.vimrc
 " https://github.com/blueyed/dotfiles/blob/master/vimrc
 " https://github.com/tpope/tpope/blob/master/.vimrc

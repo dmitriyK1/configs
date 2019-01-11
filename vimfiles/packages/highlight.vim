@@ -2,7 +2,13 @@
 Plug 'machakann/vim-highlightedyank'
 
 " Vim plugin for selectively illuminating other uses of the current word under the cursor
-Plug 'RRethy/vim-illuminate'
+Plug 'RRethy/vim-illuminate' "{{{
+ " Don't highlight word under cursor (default: 1)
+" let g:Illuminate_highlightUnderCursor = 0
+
+  " disable for specified filetypes
+  let g:Illuminate_ftblacklist = ['nerdtree']
+"}}}
 
 Plug 'ap/vim-css-color' " Highlight background of CSS colors.
 

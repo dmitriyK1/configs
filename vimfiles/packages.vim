@@ -141,7 +141,6 @@ Plug 'machakann/vim-highlightedyank'
 " Plugins from https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
 Plug 'BobWhitelock/HiCursorWords' " Highlight occurrences of word under cursor.
 Plug 'ap/vim-css-color' " Highlight background of CSS colors.
-Plug 'kreskij/Repeatable.vim', { 'on': 'Repeatable' }
 
 " Auto close (X)HTML tags
 Plug 'alvan/vim-closetag' "{{{

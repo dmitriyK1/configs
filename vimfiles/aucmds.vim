@@ -117,6 +117,7 @@ augroup END
 " au CursorHold * checktime
 
 " create non-existent parent dirs on save
+" https://stackoverflow.com/questions/4292733/vim-creating-parent-directories-on-save
 function! s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
         let dir=fnamemodify(a:file, ':h')

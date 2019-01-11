@@ -37,4 +37,6 @@ Plug 'francoiscabrol/ranger.vim' "{{{
 
 " The BClose Vim plugin for deleting a buffer without closing the window
 " (ranger.vim dependency to close buffer while opening directory in ranger)
-Plug 'rbgrouleff/bclose.vim'
+Plug 'rbgrouleff/bclose.vim' "{{{
+  let g:bclose_no_plugin_maps = 1
+"}}}

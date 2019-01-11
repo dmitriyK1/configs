@@ -88,3 +88,12 @@ Plug 'tpope/vim-git'
 
 " gitk for Vim
 Plug 'gregsexton/gitv'
+
+" asynchronous build and test dispatcher
+" (used for fugitive :Dispatch)
+Plug 'tpope/vim-dispatch'
+
+" Git branch searching using CtrlP.vim
+Plug 'imkmf/ctrlp-branches' "{{{
+  nmap <silent> <leader>gb :CtrlPBranches<CR>
+"}}}

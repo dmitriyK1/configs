@@ -15,3 +15,7 @@ Plug 'konfekt/fastfold'
 " <Leader>iz   fold away lines that do match the last search pattern (inverse folding).
 " <Leader>Z    restore the previous fold settings
 Plug 'vim-scripts/searchfold.vim'
+
+" A Vim plugin for focussing on a selected region
+" <Leader>nr - Open the current visual selection in a new narrowed window
+Plug 'chrisbra/NrrwRgn'

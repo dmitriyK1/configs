@@ -1,3 +1,14 @@
+" cmdline-mode enhancement for Vim
+" Plug 'gelguy/Cmd2.vim' "{{{
+"   let g:Cmd2__complete_ignorecase = 1
+  " nnoremap <Space> :
+"   cmap <F12> <Plug>(Cmd2Suggest)
+"   nmap / /<F12>
+"   nmap ? ?<F12>
+"   nmap : :<F12>
+"   nmap <Space> :<F12>
+" }}}
+
 " BREAKS BRACES % NAVIGATION
 " A Vim plugin to provide %-style motion for single / double quotation marks, backticks and pipe
 " Plug 'airblade/vim-matchquote'

@@ -17,9 +17,11 @@ cnoremap jj <C-c>
 
 " cnoremap <C-g>  <C-c>
 " Shortcuts
+
 " Change Working Directory to that of the current file
-cmap cwd lcd %:p:h
-cmap cd. lcd %:p:h
+" cmap cwd lcd %:p:h
+" cmap cd. lcd %:p:h
+
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
@@ -59,13 +61,13 @@ nnoremap <C-l> <C-w>l
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
+" DOESN'T WORK ON OSX
 "Bubble single lines
-nmap <C-Up> ddkP
-nmap <C-Down> ddp
-
+" nmap <C-Up> ddkP
+" nmap <C-Down> ddp
 "Bubble multiple lines
-vmap <C-Up> xkP`[V`]
-vmap <C-Down> xp`[V`]
+" vmap <C-Up> xkP`[V`]
+" vmap <C-Down> xp`[V`]
 
 " keep screen centered on jumps
 nnoremap <c-o> <c-o>zz

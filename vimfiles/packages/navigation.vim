@@ -27,3 +27,9 @@ Plug 'tacahiroy/ctrlp-funky' "{{{
 
 " readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
+
+" Ranger integration in vim and neovim
+Plug 'francoiscabrol/ranger.vim' "{{{
+  let g:ranger_map_keys = 0
+  nnoremap - :RangerCurrentFile<CR>
+" }}}

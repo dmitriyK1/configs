@@ -24,3 +24,6 @@ Plug 'tacahiroy/ctrlp-funky' "{{{
   " narrow the list down with a word under cursor
   nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 " }}}
+
+" readline mappings in insert/command line mode
+Plug 'tpope/vim-rsi'

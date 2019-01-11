@@ -142,6 +142,7 @@ nnoremap <leader>pc :PlugClean<CR>
 nnoremap <leader>pu :PlugUpgrade<CR>:PlugUpdate<CR>
 
 nnoremap <leader>se :e $MYVIMRC<CR>
+nnoremap <leader>sl :e $HOME/init.local.vim<CR>
 nnoremap <leader>ss :source $MYVIMRC<CR>
 nnoremap <leader>sp :e $HOME/configs/nvim/packages.vim<CR>
 
@@ -237,8 +238,8 @@ nnoremap <leader>d :Bdelete<CR>
 "}}} =======================================================
 
 " Use local init.vim if available
-if filereadable(expand("~/init.vim.local"))
-  source ~/init.vim.local
+if filereadable(expand("~/init.local.vim"))
+  source ~/init.local.vim
 endif
 
 " highlight settings =======================================

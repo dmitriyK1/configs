@@ -33,7 +33,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'rstacruz/vim-closer'
 Plug 'romainl/vim-cool'
-Plug 'BobWhitelock/HiCursorWords'
+Plug 'RRethy/vim-illuminate' "{{{
+ " Don't highlight word under cursor (default: 1)
+" let g:Illuminate_highlightUnderCursor = 0
+"}}}
 Plug 'kana/vim-textobj-user'
 Plug 'glts/vim-textobj-comment'
 Plug 'ntpeters/vim-better-whitespace' "{{{

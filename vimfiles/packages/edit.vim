@@ -1,3 +1,5 @@
+Plug 'pbrisbin/vim-mkdir'
+
 " autodetect tabs/spaces of buffer
 Plug 'tpope/vim-sleuth'
 

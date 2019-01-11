@@ -15,4 +15,9 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+" NOTE: must be here because causes errors if loaded earlier
+" set split separators characters
+" set fillchars=stl:―,stlnc:—,vert:│,fold:۰,diff:·
+set fillchars=vert:│
+
 set secure

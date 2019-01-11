@@ -32,4 +32,9 @@ Plug 'tpope/vim-rsi'
 Plug 'francoiscabrol/ranger.vim' "{{{
   let g:ranger_map_keys = 0
   nnoremap - :Ranger<CR>
+  let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 " }}}
+
+" The BClose Vim plugin for deleting a buffer without closing the window
+" (ranger.vim dependency to close buffer while opening directory in ranger)
+Plug 'rbgrouleff/bclose.vim'

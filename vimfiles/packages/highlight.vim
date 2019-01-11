@@ -1,8 +1,10 @@
 " Make the yanked region apparent!
 Plug 'machakann/vim-highlightedyank'
 
-" Plugins from https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
-Plug 'BobWhitelock/HiCursorWords' " Highlight occurrences of word under cursor.
+" Breaks vim-repeat
+" " Plugins from https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
+" Plug 'BobWhitelock/HiCursorWords' " Highlight occurrences of word under cursor.
+
 Plug 'ap/vim-css-color' " Highlight background of CSS colors.
 
 " Disables search highlighting when you are done searching and re-enables it when you search again.

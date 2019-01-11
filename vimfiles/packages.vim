@@ -27,8 +27,7 @@ source ~/vimfiles/packages/autocomplete.vim
 source ~/vimfiles/packages/buffer.vim
 source ~/vimfiles/packages/code_analysis.vim
 source ~/vimfiles/packages/colorschemes.vim
-source ~/vimfiles/packages/cosmetics.vim
-source ~/vimfiles/packages/edit.vim
+source ~/vimfiles/packages/editor.vim
 source ~/vimfiles/packages/folds.vim
 source ~/vimfiles/packages/git.vim
 source ~/vimfiles/packages/highlight.vim

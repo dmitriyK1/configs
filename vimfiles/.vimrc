@@ -90,3 +90,5 @@ source ~/vimfiles/keybindings/leader.vim
 source ~/vimfiles/conditionals.vim
 source ~/vimfiles/highlight.vim
 source ~/vimfiles/final.vim
+
+" TODO use common packages for vim & nvim to avoid syncing configs

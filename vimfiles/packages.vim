@@ -39,5 +39,6 @@ source ~/vimfiles/packages/search.vim
 source ~/vimfiles/packages/snippets.vim
 source ~/vimfiles/packages/string_manipulation.vim
 source ~/vimfiles/packages/textobjects.vim
+source ~/vimfiles/packages/try.vim
 
 call plug#end()

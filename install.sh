@@ -71,6 +71,7 @@ brew install peco
 brew install nano
 brew install gnu-tar # for doom-emacs
 brew install httpie # http client
+# brew install mitmproxy
 
 # cask install start ##################################################################
 brew tap caskroom/cask

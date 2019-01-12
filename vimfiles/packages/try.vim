@@ -1,3 +1,9 @@
+" <C-W>gr - resize split to visual selection (similar to :VSResize)
+" <C-W>gss - split out visual selection (similar to :VSSplit)
+" <C-W>gsa - split out visual selection above (similar to :VSSplitAbove)
+" <C-W>gsb - split out visual selection below (similar to :VSSplitBelow)
+" vip<C-W>gss
+" <C-W>gssip
 Plug 'bobwhitelock/visual-split.vim'
 
 " Plug 'RRethy/vim-tranquille'

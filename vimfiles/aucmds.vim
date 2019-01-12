@@ -115,3 +115,5 @@ augroup END
 
 " reload disk file changes
 " au CursorHold * checktime
+
+autocmd BufEnter * call SetTerminalTitle()

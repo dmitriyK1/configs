@@ -242,6 +242,9 @@ endfunction
 " nnoremap <tab> %
 " vnoremap <tab> %
 
+nnoremap <silent> <Tab> :bnext<CR>
+nnoremap <silent> <S-Tab> :bprevious<CR>
+
 " nmap <Left> <<
 " nmap <Right> >>
 " vnoremap <Left> <gv

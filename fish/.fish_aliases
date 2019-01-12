@@ -222,6 +222,8 @@ alias pfr='pip3 freeze > requirements.txt'
 alias activate='. venv/bin/activate.fish'
 [ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
 
+alias sc="pushd .; cd ~/configs; legit sync; popd"
+
 # git imerge
 # git when-merged <commit_hash>
 # git branch-status

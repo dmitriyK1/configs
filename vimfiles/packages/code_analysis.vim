@@ -8,8 +8,9 @@
 "     \ }
 " nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 
-Plug 'ludovicchabant/vim-gutentags' "{{{
-  let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
+" DOESN'T WORK AT THE MOMENT
+" Plug 'ludovicchabant/vim-gutentags' "{{{
+"   let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
 "}}}
 
 " Plug 'jsfaint/gen_tags.vim'

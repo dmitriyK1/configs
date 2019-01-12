@@ -47,14 +47,28 @@ Plug 'SirVer/ultisnips' " {{{
   map <leader>ee :UltiSnipsEdit<CR>
 " }}}
 
+" ================================================================================
+" Dark powered asynchronous completion framework for neovim/Vim8
 Plug 'Shougo/deoplete.nvim' "{{{
   let g:deoplete#enable_at_startup = 1
 "}}}
 
+" deoplete.nvim source for javascript
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+" deoplete.nvim source for Python
+Plug 'zchee/deoplete-jedi'
+
 " deoplete dependency
 Plug 'roxma/nvim-yarp'
+
 " deoplete dependency
 Plug 'roxma/vim-hug-neovim-rpc'
+
+ " You will also need the following for function argument completion:
+" Plug 'Shougo/neosnippet'
+" Plug 'Shougo/neosnippet-snippets'
+" ================================================================================
 
 " Plug 'maralla/completor.vim'
 " let g:completor_node_binary = '/usr/local/bin/node'

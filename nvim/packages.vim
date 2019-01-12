@@ -20,6 +20,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-jedi'
 Plug 'machakann/vim-highlightedyank'
 Plug 'davidhalter/jedi-vim'

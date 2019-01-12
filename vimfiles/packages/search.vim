@@ -26,6 +26,7 @@ Plug 'osyo-manga/vim-anzu' "{{{
 " }}}
 
 Plug 'haya14busa/is.vim' "{{{
+  " star (*) without cursor move:
   " map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
   " map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
   " map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)

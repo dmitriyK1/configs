@@ -22,7 +22,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " ================================================================================
-source ~/vimfiles/packages/autoclosers.vim
 source ~/vimfiles/packages/autocomplete.vim
 source ~/vimfiles/packages/buffer.vim
 source ~/vimfiles/packages/code_analysis.vim

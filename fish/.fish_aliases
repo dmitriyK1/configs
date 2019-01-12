@@ -164,6 +164,7 @@ alias se "vim ~/.config/fish/config.fish"
 alias sea "vim ~/fish/.fish_aliases"
 alias sef "vim ~/fish/.fish_functions"
 alias sev "vim ~/fish/.fish_variables"
+alias sc="pushd .; cd ~/configs; legit sync; popd"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
@@ -221,8 +222,6 @@ alias pir='pip3 install -r requirements.txt'
 alias pfr='pip3 freeze > requirements.txt'
 alias activate='. venv/bin/activate.fish'
 [ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
-
-alias sc="pushd .; cd ~/configs; legit sync; popd"
 
 # git imerge
 # git when-merged <commit_hash>

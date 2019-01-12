@@ -46,3 +46,20 @@ Plug 'SirVer/ultisnips' " {{{
 
   map <leader>ee :UltiSnipsEdit<CR>
 " }}}
+
+Plug 'Shougo/deoplete.nvim' "{{{
+  let g:deoplete#enable_at_startup = 1
+"}}}
+
+" deoplete dependency
+Plug 'roxma/nvim-yarp'
+" deoplete dependency
+Plug 'roxma/vim-hug-neovim-rpc'
+
+" Plug 'maralla/completor.vim'
+" let g:completor_node_binary = '/usr/local/bin/node'
+
+" Plug 'prabirshrestha/asyncomplete.vim'
+" let g:asyncomplete_remove_duplicates = 1
+" let g:asyncomplete_smart_completion = 1
+" let g:asyncomplete_auto_popup = 1

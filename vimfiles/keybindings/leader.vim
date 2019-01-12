@@ -111,10 +111,10 @@ nnoremap <leader>v V`]
 
 " W ================================================================================
 " Strip all trailing whitespace from a file, using ,W
-nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
+" nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 
 " Clean trailing whitespace
-nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+" nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
 " nmap <leader>w :setlocal wrap!<CR>:setlocal wrap?<CR>
 

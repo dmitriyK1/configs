@@ -70,8 +70,8 @@ Plug 'terryma/vim-multiple-cursors' "{{{
 
 " colon and semicolon insertion plugin
 Plug 'lfilho/cosco.vim' "{{{
-  autocmd FileType javascript,typescript,css,sh nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
-  autocmd FileType javascript,typescript,css,sh inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
+  autocmd FileType javascript,typescript,json,css,sh nnoremap <silent> <C-s> :call cosco#commaOrSemiColon()<CR>
+  autocmd FileType javascript,typescript,json,css,sh inoremap <silent> <C-s> <c-o>:call cosco#commaOrSemiColon()<CR>
 " }}}
 
 " quoting/parenthesizing made simple

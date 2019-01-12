@@ -35,7 +35,7 @@ source ~/vimfiles/packages/paste.vim
 source ~/vimfiles/packages/preview.vim
 source ~/vimfiles/packages/python.vim
 source ~/vimfiles/packages/search.vim
-source ~/vimfiles/packages/string_manipulation.vim
+source ~/vimfiles/packages/text_manipulation.vim
 source ~/vimfiles/packages/textobjects.vim
 source ~/vimfiles/packages/try.vim
 

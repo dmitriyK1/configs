@@ -116,7 +116,7 @@ nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
 " Clean trailing whitespace
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
-nmap <leader>w :setlocal wrap!<CR>:setlocal wrap?<CR>
+" nmap <leader>w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
 " X ================================================================================
 nnoremap <leader>x :Vex<cr>

@@ -28,7 +28,8 @@ Plug 'tacahiroy/ctrlp-funky' "{{{
 " readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
 
-Plug 'tpope/vim-vinegar'
+" Directory viewer for Vim
+Plug 'justinmk/vim-dirvish'
 
 " Ranger integration in vim and neovim
 " Plug 'francoiscabrol/ranger.vim' "{{{

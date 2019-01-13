@@ -29,7 +29,11 @@ Plug 'tacahiroy/ctrlp-funky' "{{{
 Plug 'tpope/vim-rsi'
 
 " Directory viewer for Vim
+" nmap - <Plug>(dirvish_up)
 Plug 'justinmk/vim-dirvish'
+
+" DOESN'T WORK
+" Plug 'kristijanhusak/vim-dirvish-git'
 
 " Ranger integration in vim and neovim
 " Plug 'francoiscabrol/ranger.vim' "{{{

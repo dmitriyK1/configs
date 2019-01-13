@@ -28,15 +28,16 @@ Plug 'tacahiroy/ctrlp-funky' "{{{
 " readline mappings in insert/command line mode
 Plug 'tpope/vim-rsi'
 
+Plug 'tpope/vim-vinegar'
+
 " Ranger integration in vim and neovim
-Plug 'francoiscabrol/ranger.vim' "{{{
-  let g:ranger_map_keys = 0
-  nnoremap - :Ranger<CR>
-  let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
+" Plug 'francoiscabrol/ranger.vim' "{{{
+  " let g:ranger_map_keys = 0
+  " let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 " }}}
 
 " The BClose Vim plugin for deleting a buffer without closing the window
 " (ranger.vim dependency to close buffer while opening directory in ranger)
-Plug 'rbgrouleff/bclose.vim' "{{{
-  let g:bclose_no_plugin_maps = 1
+" Plug 'rbgrouleff/bclose.vim' "{{{
+  " let g:bclose_no_plugin_maps = 1
 "}}}

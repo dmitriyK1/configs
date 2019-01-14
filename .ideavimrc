@@ -127,3 +127,9 @@ map crl guiw
 
 " Comment the current inner paragraph
 map <C-->p vip :action CommentByLineComment<CR>:action VimVisualExitMode<CR>
+
+imap <c-a> <c-o>^
+imap <c-e> <c-o>$<Right>
+
+nmap ]c :action VcsShowNextChangeMarker<CR>
+nmap [c :action VcsShowPrevChangeMarker<CR>

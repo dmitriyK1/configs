@@ -89,6 +89,10 @@ augroup vimrc
   autocmd BufEnter * silent! lcd %:p:h                                        "Set the current directory for the current window.  The current directory for other windows or tabs is not changed.
 augroup END
 
+" Autosave {{{
+  autocmd FocusLost,BufLeave * silent! wall
+" }}}
+
 " }}}
 " ================ Completion ======================= {{{
 set wildmode=list:full

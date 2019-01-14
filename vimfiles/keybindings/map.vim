@@ -213,7 +213,7 @@ noremap & :%sgc<cr>
 nnoremap } }zz
 
 " repeat last colon command
-" nmap \\ @:
+nmap \\ @:
 
 " Allow using the repeat operator with a visual selection (!)
 " http://stackoverflow.com/a/8064607/127816

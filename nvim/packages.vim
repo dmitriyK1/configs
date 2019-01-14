@@ -68,13 +68,14 @@ Plug 'itchyny/lightline.vim' "{{{
         \ },
         \ }
 " }}}
-Plug 'Lokaltog/neoranger' "{{{
+" Plug 'Lokaltog/neoranger' "{{{
   " Open ranger at current file with "-"
-  nnoremap <silent> - :RangerCurrentFile<CR>
+  " nnoremap <silent> - :RangerCurrentFile<CR>
 
   " Open ranger in current working directory
-  nnoremap <silent> <leader>- :Ranger<CR>
+  " nnoremap <silent> <leader>- :Ranger<CR>
 "}}}
+Plug 'justinmk/vim-dirvish'
 Plug 'andymass/vim-matchup'
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
   let g:interestingWordsDefaultMappings = 0

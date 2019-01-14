@@ -58,8 +58,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
+nmap <silent> <C-n> :bnext<CR>
+nmap <silent> <C-p> :bprev<CR>
 
 " DOESN'T WORK ON OSX
 "Bubble single lines
@@ -242,8 +242,11 @@ endfunction
 " nnoremap <tab> %
 " vnoremap <tab> %
 
-nnoremap <silent> <Tab> :bnext<CR>
-nnoremap <silent> <S-Tab> :bprevious<CR>
+nnoremap <silent> <Tab> :bn<CR>
+nnoremap <silent> <S-Tab> :bp<CR>
+
+nnoremap <silent> <Left> :bp<CR>
+nnoremap <silent> <Right> :bn<CR>
 
 " nmap <Left> <<
 " nmap <Right> >>
@@ -253,9 +256,6 @@ nnoremap <silent> <S-Tab> :bprevious<CR>
 " nmap <Down> ]e
 " vmap <Up> [egv
 " vmap <Down> ]egv
-
-nnoremap <silent> <Left> :bp<CR>
-nnoremap <silent> <Right> :bn<CR>
 
 map ]d jddk
 map [d kdd

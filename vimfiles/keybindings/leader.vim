@@ -45,6 +45,9 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 " Get to home dir easier
 nmap <leader>h :cd ~/ <CR>
 
+" G ================================================================================
+nnoremap <silent> <leader>gf :GitGutterFold<CR>
+
 " L ================================================================================
 " Toggle scrollbar
 nnoremap <leader>O :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>

@@ -33,3 +33,6 @@ Plug 'ryanoasis/vim-devicons' "{{{
       call webdevicons#refresh()
   endif
 " }}}
+
+" Enhanced terminal integration for Vim
+Plug 'wincent/terminus'

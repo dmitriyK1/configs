@@ -7,9 +7,6 @@ Plug 'tpope/vim-sleuth'
 " EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
 
-" Have Vim automatically reload a file that has changed externally
-Plug 'djoshea/vim-autoread'
-
 " Edit large files quickly: its just an autocmd that disables certain features of vim in the interests of speed
 Plug 'vim-scripts/LargeFile'
 
@@ -36,3 +33,6 @@ Plug 'ryanoasis/vim-devicons' "{{{
 
 " Enhanced terminal integration for Vim
 Plug 'wincent/terminus'
+
+" Have Vim automatically reload a file that has changed externally
+" Plug 'djoshea/vim-autoread'

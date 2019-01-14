@@ -90,12 +90,12 @@ inoremap <c-k> <c-o>D
 " --------------------------------------------------------------------------------
 cmap <M-D> <Esc>d
 
-imap <A-j> <Down>
-imap <A-k> <Up>
-imap <A-h> <Left>
-imap <A-l> <Right>
-imap <A-i> <Home>
-imap <A-a> <End>
+" imap <A-j> <Down>
+" imap <A-k> <Up>
+" imap <A-h> <Left>
+" imap <A-l> <Right>
+" imap <A-i> <Home>
+" imap <A-a> <End>
 
 " nnoremap <silent> <A-n> :bn<CR>
 " nnoremap <silent> <A-p> :bp<CR>

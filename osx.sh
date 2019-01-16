@@ -275,3 +275,9 @@ sudo mdutil -E / > /dev/null
 
 # update locate db
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+###############################################################################
+# Disable showing mail attachements inline
+# must enable Full Disk Access for iterm in System Preferences > Security to work (can be deauthorized after running command)
+# https://apple.stackexchange.com/questions/343343/how-can-i-disable-inline-attachment-previews-i-e-view-as-icon-by-default-in-m
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes

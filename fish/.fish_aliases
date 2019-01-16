@@ -131,7 +131,7 @@ alias gsw "git switch"
 alias gcp "git cherry-pick"
 alias gcf "git commit --no-verify -m"
 alias gpf "git push --no-verify"
-alias gpu "git publish"
+# alias gpu "git publish"
 # alias gpu "git push origin (git rev-parse --abbrev-ref HEAD) -u"
 alias gtg "git tag"
 # alias h "how2 -l javascript "
@@ -222,6 +222,8 @@ alias pir='pip3 install -r requirements.txt'
 alias pfr='pip3 freeze > requirements.txt'
 alias activate='. venv/bin/activate.fish'
 [ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
+
+alias gpu="legit publish"
 
 # git imerge
 # git when-merged <commit_hash>

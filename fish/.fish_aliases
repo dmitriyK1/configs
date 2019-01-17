@@ -120,7 +120,8 @@ alias grb "git rebase -i"
 alias gri "git rebase -i"
 alias grs "git reset"
 alias gps "git push -u"
-alias gpl "echo '\"git pull --ff-only\"'; git pull --ff-only" # to avoid creating merge commits
+# alias gpl "echo '\"git pull --ff-only\"'; git pull --ff-only" # to avoid creating merge commits
+alias gpl "git pull"
 alias gplm "git pull origin master"
 alias gpld "git pull origin develop"
 alias gplD "git pull origin dev"

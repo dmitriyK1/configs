@@ -29,6 +29,9 @@ Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'imkmf/ctrlp-branches' "{{{
+  nmap <silent> <leader>gb :CtrlPBranches<CR>
+"}}}
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'

@@ -7,14 +7,6 @@ Plug 'ervandew/supertab' " {{{
   let g:SuperTabLongestEnhanced = 1
 " }}}
 
-" autocomplete plugin - autoopen popup when 2 letters typed
-Plug 'exvim/ex-autocomplpop' "{{{
-  " prevents adding new line when choosing item from autocomplete dropdown
-  inoremap <expr> <CR> pumvisible()
-        \ ? "\<C-y>"
-        \ : "\<C-g>u\<CR>"
-" }}}
-
 " Auto close (X)HTML tags
 Plug 'alvan/vim-closetag' "{{{
   let g:closetag_filenames = '*.html,*.xhtml,*.xml,*.js,*.jsx,*.ts,*.tsx,*.html.erb,*.md'

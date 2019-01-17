@@ -1,3 +1,6 @@
+" autocomplete plugin - autoopen popup when 2 letters typed
+" Plug 'exvim/ex-autocomplpop'
+
 " Breaks vim-repeat
 " " Plugins from https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
 " Plug 'BobWhitelock/HiCursorWords' " Highlight occurrences of word under cursor.

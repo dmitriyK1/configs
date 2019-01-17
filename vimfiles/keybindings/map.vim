@@ -259,3 +259,8 @@ nnoremap <silent> <Right> :bn<CR>
 
 map ]d jddk
 map [d kdd
+
+" prevents adding new line when choosing item from autocomplete dropdown
+inoremap <expr> <CR> pumvisible()
+      \ ? "\<C-y>"
+      \ : "\<C-g>u\<CR>"

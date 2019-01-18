@@ -4,6 +4,17 @@
 " viF to visually select a function without leading or trailing blank lines
 Plug 'kana/vim-textobj-function'
 
+Plug 'AndrewRadev/dsf.vim' "{{{
+  let g:dsf_no_mappings = 1
+  nmap dsf <Plug>DsfDelete
+  nmap csf <Plug>DsfChange
+
+  " omap af <Plug>DsfTextObjectA
+  " xmap af <Plug>DsfTextObjectA
+  " omap if <Plug>DsfTextObjectI
+  " xmap if <Plug>DsfTextObjectI
+" }}}
+
 " heuristic syntax-based text-object for function
 " requires kana/vim-textobj-function 0.1.0 or later
 Plug 'haya14busa/vim-textobj-function-syntax'

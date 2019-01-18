@@ -264,3 +264,8 @@ map [d kdd
 inoremap <expr> <CR> pumvisible()
       \ ? "\<C-y>"
       \ : "\<C-g>u\<CR>"
+
+" https://github.com/BobWhitelock/dotfiles/blob/master/vimrc
+" Tab/shift-tab to indent/unindent in visual mode.
+" xnoremap <Tab> >gv
+" xnoremap <S-Tab> <gv

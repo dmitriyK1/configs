@@ -24,6 +24,8 @@ Plug 'airblade/vim-gitgutter' "{{{
   " let g:gitgutter_highlight_lines = 1
 
   nmap <silent> <C-g> :GitGutterToggle<CR>
+  xmap ih <Plug>GitGutterTextObjectInnerVisual
+  xmap ah <Plug>GitGutterTextObjectOuterVisual
 
   " double git gutter symbols for better visibility
   let g:gitgutter_sign_added = '✚✚'

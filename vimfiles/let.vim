@@ -50,7 +50,8 @@ let maplocalleader=" "
 let g:hidden_all = 1
 
 " Disable some built in plugins.
-" As dicussed in https://www.reddit.com/r/vim/comments/7anxss.
+" As dicussed in https://www.reddit.com/r/vim/comments/7anxss
+" https://github.com/rbtnn/vim-gloaded
 let g:loaded_getscript         = 1 "$VIMRUNTIME/autoload/getscript.vim
 let g:loaded_getscriptPlugin   = 1 "$VIMRUNTIME/plugin/getscriptPlugin.vim
 let g:loaded_vimball           = 1 "$VIMRUNTIME/autoload/vimball.vim

@@ -8,3 +8,9 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 " gcp - Paste characterwise (newline characters and indent are flattened to spaces) [count] times.
 " glp - Paste linewise (even if yanked text is not a complete line) [count] times.
 " Plug 'vim-scripts/UnconditionalPaste'
+
+" Pasting in Vim with indentation adjusted to destination context
+Plug 'sickill/vim-pasta'
+
+" Automatically adjust number of blank lines when pasting
+Plug 'AndrewRadev/whitespaste.vim'

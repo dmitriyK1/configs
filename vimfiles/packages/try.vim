@@ -62,3 +62,7 @@ nmap <leader>sc <Plug>(Scalpel)
 " :Show \v(public|private|protected)
 " :ShowAll
 Plug 'ctechols/vim-HideShow'
+
+" Delete a wrapping if-clause, try-catch block, etc. and shift left
+" dh operator
+Plug 'AndrewRadev/deleft.vim'

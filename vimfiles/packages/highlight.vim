@@ -38,7 +38,13 @@ Plug 'vasconcelloslf/vim-interestingwords' "{{{
 "}}}
 
 " vim match-up: even better % navigate and highlight matching words modern matchit and matchparen replacement
-Plug 'andymass/vim-matchup'
+" i% the inside of an any block
+" a% an any block.
+Plug 'andymass/vim-matchup' "{{{
+  let g:matchup_matchparen_status_offscreen = 1 " show opening/closing in status line
+  let g:matchup_matchparen_deferred = 1
+  let g:matchup_matchparen_hi_surround_always = 1
+"}}}
 
 " jsx syntax highlight
 Plug 'MaxMEllon/vim-jsx-pretty' "{{{

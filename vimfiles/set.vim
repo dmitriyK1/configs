@@ -276,3 +276,7 @@ set helpheight=99999
 set tags=tags;$HOME
 
 execute "set titleold=" . hostname()
+
+" Do not treat `#` as part of a file name so can e.g. use `gF` while cursor in
+" `foo.md#5` to jump to line 5 of `foo.md`.
+set isfname-=#

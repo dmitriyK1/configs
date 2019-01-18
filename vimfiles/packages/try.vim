@@ -4,7 +4,7 @@
 " <C-W>gsb - split out visual selection below (similar to :VSSplitBelow)
 " vip<C-W>gss
 " <C-W>gssip
-Plug 'bobwhitelock/visual-split.vim'
+Plug 'wellle/visual-split.vim'
 
 " Plug 'RRethy/vim-tranquille'
 " Plug 'svermeulen/vim-easyclip'
@@ -31,3 +31,29 @@ Plug 'bobwhitelock/visual-split.vim'
 " \ 'iw' : 'i<M-w>',
 " \ '<C-R><C-W>' : '<C-R><M-w>'
 " \ }
+
+" Vim plugin: Define your own operator easily
+" For custom operators, needed for all vim-operator plugins.
+Plug 'kana/vim-operator-user'
+
+" Vim operator to search using Ag/Ack/CtrlSF/Ggrep/etc.
+Plug 'rgrinberg/vim-operator-gsearch'
+map g/ <Plug>(operator-ctrlsf)
+
+" Vim plugin: Operator to replace text with register content
+Plug 'kana/vim-operator-replace'
+map gr <Plug>(operator-replace)
+
+" BUGGY
+" Plug 'rhysd/vim-textobj-anyblock'
+
+" Fast within-file word replacement for Vim
+Plug 'wincent/scalpel'
+let g:ScalpelMap=0
+vmap <leader>sc <Plug>(ScalpelVisual)
+nmap <leader>sc <Plug>(Scalpel)
+
+" Interactive, regex-based folding
+" :Show \v(public|private|protected)
+" :ShowAll
+Plug 'ctechols/vim-HideShow'

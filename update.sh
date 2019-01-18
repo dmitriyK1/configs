@@ -53,6 +53,7 @@ echo 'checking Apple Updates'
 echo 'updating npm'
 command npm install npm -g # store modules in ~/.node_modules_global via `npm config set prefix=$HOME/.node_modules_global`
 source $HOME/npm-upgrade.sh
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 yarn global upgrade
 
 exit 0

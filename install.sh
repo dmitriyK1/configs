@@ -44,6 +44,7 @@ echo "Installing brew packages"
 brew install bat
 brew install glances
 brew install cmus
+brew install --with-default-names gnu-sed # dependency of https://github.com/oh-my-fish/theme-budspencer
 brew install nnn # cli file manager
 brew install mediainfo # nnn dependency
 brew install ffmpeg

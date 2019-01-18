@@ -283,3 +283,15 @@ nnoremap <leader>g, mzA,<esc>`z
 
 " Remove last char on line.
 nnoremap g<Backspace> mzA<Backspace><Esc>`z
+
+" Split line in different places.
+" Repeatable nnoremap gs( f(a<CR><Esc>
+" Repeatable nnoremap gs) f)i<CR><Esc>
+" Repeatable nnoremap gs{ f{a<CR><Esc>
+" Repeatable nnoremap gs} f}i<CR><Esc>
+" Repeatable nnoremap gs[ f[a<CR><Esc>
+" Repeatable nnoremap gs] f]i<CR><Esc>
+" Repeatable nnoremap gs, f,a<CR><Esc>
+" Repeatable nnoremap gs. f.i<CR><Esc>
+" Repeatable nnoremap gss i<CR><Esc>
+" Repeatable nnoremap gs<space> hf<space>xi<CR><Esc>

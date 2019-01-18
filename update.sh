@@ -38,8 +38,8 @@ python3 -m pip_upgrade_outdated --verbose
 echo 'updating homebrew'
 brew update
 brew upgrade
-brew cleanup
 brew cask upgrade
+brew cleanup
 
 echo 'updating fish shell'
 fisher

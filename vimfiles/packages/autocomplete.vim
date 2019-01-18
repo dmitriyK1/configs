@@ -39,6 +39,8 @@ Plug 'SirVer/ultisnips' " {{{
   map <leader>ee :UltiSnipsEdit<CR>
 " }}}
 
+Plug 'honza/vim-snippets'
+
 " ================================================================================
 " Dark powered asynchronous completion framework for neovim/Vim8
 Plug 'Shougo/deoplete.nvim' "{{{

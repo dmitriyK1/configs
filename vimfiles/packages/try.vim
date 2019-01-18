@@ -6,7 +6,7 @@
 " <C-W>gssip
 Plug 'wellle/visual-split.vim' "{{{
 " Resize to/split out visual selection.
-  xnoremap <silent> gV :VSResize<CR>
+  " xnoremap <silent> gV :VSResize<CR>
   xnoremap <silent> gA :VSSplitAbove<CR>
   xnoremap <silent> gB :VSSplitBelow<CR>
 "}}}

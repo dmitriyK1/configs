@@ -50,5 +50,5 @@ Plug 'wincent/terminus'
   " SudoWrite: Write a privileged file with sudo.
   " SudoEdit: Edit a privileged file with sudo.
 Plug 'tpope/vim-eunuch' "{{{
-   nnoremap <leader>rr :Rename <C-R>=expand('%:t')<CR>
+   nnoremap <leader>R :Rename <C-R>=expand('%:t')<CR>
 "}}}

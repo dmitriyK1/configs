@@ -269,3 +269,17 @@ inoremap <expr> <CR> pumvisible()
 " Tab/shift-tab to indent/unindent in visual mode.
 " xnoremap <Tab> >gv
 " xnoremap <S-Tab> <gv
+
+" Join current line with line above; also do not move cursor as with J above.
+" nnoremap K mzkJ`z
+
+" Quick appending of commonly appended chars.
+nnoremap <leader>g. mzA.<esc>`z
+nnoremap <leader>g; mzA;<esc>`z
+nnoremap <leader>g, mzA,<esc>`z
+" Repeatable nnoremap <leader>g. mzA.<esc>`z
+" Repeatable nnoremap <leader>g; mzA;<esc>`z
+" Repeatable nnoremap <leader>g, mzA,<esc>`z
+
+" Remove last char on line.
+nnoremap g<Backspace> mzA<Backspace><Esc>`z

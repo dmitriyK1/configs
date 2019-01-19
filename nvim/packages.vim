@@ -20,6 +20,7 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
@@ -37,7 +38,8 @@ Plug 'imkmf/ctrlp-branches' "{{{
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
-Plug 'rstacruz/vim-closer'
+" Plug 'rstacruz/vim-closer'
+Plug 'jiangmiao/auto-pairs'
 Plug 'romainl/vim-cool'
 Plug 'RRethy/vim-illuminate' "{{{
  " Don't highlight word under cursor (default: 1)

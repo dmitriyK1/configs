@@ -144,7 +144,7 @@ map <leader>; :
 " nmap <leader><space> :nohlsearch<cr>
 
 " toggle hlsearch
-nnoremap <leader>/ :set invhlsearch<cr>
+" nnoremap <leader>/ :set invhlsearch<cr>
 
 noremap <leader><leader> :write<CR>
 

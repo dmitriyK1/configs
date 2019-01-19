@@ -1,3 +1,8 @@
+" http://vim.wikia.com/wiki/Moving_through_camel_case_words
+" A challenger appears: https://github.com/chaoren/vim-wordmotion. Fewer bugs and better tested than camelcasemotion.
+" A vim script to provide CamelCase motion through words
+" Plug 'bkad/CamelCaseMotion'
+
 " autocomplete plugin - autoopen popup when 2 letters typed
 " Plug 'exvim/ex-autocomplpop'
 

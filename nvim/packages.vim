@@ -15,6 +15,7 @@ endif
 " location for plugins to be installed
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'chaoren/vim-wordmotion'
 Plug 'junegunn/vim-after-object'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'

@@ -1,7 +1,7 @@
-" A vim script to provide CamelCase motion through words
-Plug 'bkad/CamelCaseMotion'
-map <silent> <leader>2 <Plug>CamelCaseMotion_w
-map <silent> <leader>1 <Plug>CamelCaseMotion_b
+" CamelCase motion
+Plug 'chaoren/vim-wordmotion' " {{{
+  let g:wordmotion_prefix = '\'
+"}}}
 
 Plug 'easymotion/vim-easymotion' "{{{
   map = <Plug>(easymotion-prefix)

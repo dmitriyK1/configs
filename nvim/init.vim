@@ -262,6 +262,7 @@ nnoremap <leader>d :Bdelete<CR>
   " Replace the default dictionary completion with fzf-based fuzzy completion
   inoremap <expr> <c-x><c-k> fzf#vim#complete('cat /usr/share/dict/words')
 
+  " https://jesseleite.com/posts/2/its-dangerous-to-vim-alone-take-fzf
   nnoremap \f :GFiles<CR>
   nnoremap \F :Files<CR>
   nnoremap \b :Buffers<CR>

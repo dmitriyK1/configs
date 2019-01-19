@@ -93,6 +93,7 @@ augroup END
   autocmd FocusLost,BufLeave * silent! wall
 " }}}
 
+autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
 " }}}
 " ================ Completion ======================= {{{
 set wildmode=list:full

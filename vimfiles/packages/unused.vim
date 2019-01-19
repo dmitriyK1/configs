@@ -1,3 +1,10 @@
+" UNUSED: vim-wordmotion has these keybindings
+" A text object to turn foo_bar_baz into foo_baz *and* quuxSpamEggs into quuxEggs *and* shine your shoes
+" iv
+" av
+" requires kana/vim-textobj-user
+" Plug 'Julian/vim-textobj-variable-segment'
+
 " http://vim.wikia.com/wiki/Moving_through_camel_case_words
 " A challenger appears: https://github.com/chaoren/vim-wordmotion. Fewer bugs and better tested than camelcasemotion.
 " A vim script to provide CamelCase motion through words

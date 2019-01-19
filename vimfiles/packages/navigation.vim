@@ -1,6 +1,6 @@
 " CamelCase motion
 Plug 'chaoren/vim-wordmotion' " {{{
-  let g:wordmotion_prefix = '\'
+  " let g:wordmotion_prefix = '\'
 "}}}
 
 Plug 'easymotion/vim-easymotion' "{{{

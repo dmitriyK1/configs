@@ -31,12 +31,6 @@ Plug 'AndrewRadev/dsf.vim' "{{{
 " requires kana/vim-textobj-function 0.1.0 or later
 Plug 'haya14busa/vim-textobj-function-syntax'
 
-" A text object to turn foo_bar_baz into foo_baz *and* quuxSpamEggs into quuxEggs *and* shine your shoes
-" iv
-" av
-" requires kana/vim-textobj-user
-Plug 'Julian/vim-textobj-variable-segment'
-
 " ae targets the entire content of the current buffer.
 " ie is similar to ae, but ie does not include leading and trailing empty lines.
 Plug 'kana/vim-textobj-entire'

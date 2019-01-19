@@ -13,7 +13,6 @@ set clipboard^=unnamed,unnamedplus                                              
 set termguicolors
 set title                                                                       "change the terminal's title
 set history=500                                                                 "Store lots of :cmdline history
-set termguicolors
 set noshowmode                                                                  "Hide showmode
 set gdefault                                                                    "Set global flag for search and replace
 set nocursorline                                                                "Highlight current line
@@ -152,8 +151,8 @@ nnoremap <leader>sp :e $HOME/configs/nvim/packages.vim<CR>
 
 " nnoremap <silent> <leader>, :bp<CR>
 " nnoremap <silent> <leader>. :bp<CR>
-nnoremap <silent> <M-,> :bp<CR>
-nnoremap <silent> <M-.> :bp<CR>
+" nnoremap <silent> <M-,> :bp<CR>
+" nnoremap <silent> <M-.> :bp<CR>
 
 " Split previously opened file in a split window
 nnoremap <leader>- :new<cr><C-w>j
@@ -239,6 +238,10 @@ nnoremap <leader>d :Bdelete<CR>
   nnoremap <leader>gpS :Dispatch! git push --no-verify<CR>
   nnoremap <leader>gpl :Dispatch! git pull<CR>
 " }}}
+
+map <leader>/ <Plug>(incsearch-fuzzy-/)
+map <leader>? <Plug>(incsearch-fuzzy-?)
+map <leader>g/ <Plug>(incsearch-fuzzy-stay)
 "}}} =======================================================
 
 " Use local init.vim if available

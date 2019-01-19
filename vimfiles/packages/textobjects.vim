@@ -1,3 +1,15 @@
+" # va=  visual after =
+" # ca=  change after =
+" # da=  delete after =
+" # ya=  yank after =
+" Target text *after* the designated characters
+Plug 'junegunn/vim-after-object' "{{{
+  autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
+
+  " ]= and [= instead of a= and aa=
+  " autocmd VimEnter * call after_object#enable([']', '['], '=', ':')
+"}}}
+
 " daf to Delete A Function
 " vif to Visually select the code Inside a Function
 " yaF to Yank A Function with leading or trailing blank lines

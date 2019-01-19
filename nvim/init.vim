@@ -10,6 +10,7 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 let mapleader=" "
 let maplocalleader=" "
 set clipboard^=unnamed,unnamedplus                                              "Copy to system clipboard
+set hlsearch
 set termguicolors
 set title                                                                       "change the terminal's title
 set history=500                                                                 "Store lots of :cmdline history
@@ -242,6 +243,12 @@ nnoremap <leader>d :Bdelete<CR>
 map <leader>/ <Plug>(incsearch-fuzzy-/)
 map <leader>? <Plug>(incsearch-fuzzy-?)
 map <leader>g/ <Plug>(incsearch-fuzzy-stay)
+
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
 "}}} =======================================================
 
 " Use local init.vim if available

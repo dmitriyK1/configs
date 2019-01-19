@@ -10,7 +10,7 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 let mapleader=" "
 let maplocalleader=" "
 set clipboard^=unnamed,unnamedplus                                              "Copy to system clipboard
-set hlsearch
+" set hlsearch
 set termguicolors
 set title                                                                       "change the terminal's title
 set history=500                                                                 "Store lots of :cmdline history
@@ -253,22 +253,33 @@ nnoremap <leader>d :Bdelete<CR>
 "}}}
 
 " fzf {{{
-  " Mapping selecting mappings
-  nmap <leader><tab> <plug>(fzf-maps-n)
-  xmap <leader><tab> <plug>(fzf-maps-x)
-  omap <leader><tab> <plug>(fzf-maps-o)
-
   " Insert mode completion
   " imap <c-x><c-k> <plug>(fzf-complete-word)
   imap <c-x><c-f> <plug>(fzf-complete-path)
   imap <c-x><c-j> <plug>(fzf-complete-file-ag)
   imap <c-x><c-l> <plug>(fzf-complete-line)
 
-  " Advanced customization using autoload functions
-  " inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
-
   " Replace the default dictionary completion with fzf-based fuzzy completion
   inoremap <expr> <c-x><c-k> fzf#vim#complete('cat /usr/share/dict/words')
+
+  nnoremap \f :GFiles<CR>
+  nnoremap \F :Files<CR>
+  nnoremap \b :Buffers<CR>
+  nnoremap \h :History<CR>
+  nnoremap \t :BTags<CR>
+  nnoremap \T :Tags<CR>
+  nnoremap \l :BLines<CR>
+  nnoremap \L :Lines<CR>
+  nnoremap \' :Marks<CR>
+  nnoremap \a :Ag<Space>
+  nnoremap \H :Helptags!<CR>
+  nnoremap \C :Commands<CR>
+  nnoremap \: :History:<CR>
+  nnoremap \/ :History/<CR>
+  nnoremap \M :Maps<CR>
+  nnoremap \s :Filetypes<CR>
+
+  nnoremap <leader><Tab> :Buffers<CR>
 "}}}
 "}}} =======================================================
 

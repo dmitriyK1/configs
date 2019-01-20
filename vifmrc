@@ -481,4 +481,4 @@ fileview *[^/] pygmentize -f terminal256 -O style=dracula -g
 " fileview *[^/] pygmentize -f terminal256 -O style=gruvbox -g
 
 command! fzfcd :execute 'cd' "'".term('fd --type directory --hidden --follow --color=always | fzf 2> /dev/tty')."'"
-nnoremap ff :fzfcd<cr>
+nnoremap <c-t> :fzfcd<cr>

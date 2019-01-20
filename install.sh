@@ -43,6 +43,7 @@ curl -L https://get.oh-my.fish | fish
 echo "Installing brew packages"
 brew install trash
 brew install bat
+# brew install fdclone # file manager
 brew install yank # copy to clipboard
 brew install lnav # log files viewer
 

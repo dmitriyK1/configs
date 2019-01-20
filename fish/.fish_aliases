@@ -156,6 +156,7 @@ alias ms "m sleep"
 alias ml "m lock"
 alias bi "brew install"
 alias bu "brew uninstall"
+alias br "brew reinstall"
 alias bs "brew search"
 alias bif "brew info"
 # alias p "percol" # brew install percol

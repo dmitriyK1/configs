@@ -41,6 +41,7 @@ curl -L https://deno.land/x/install/install.py | python
 curl -L https://get.oh-my.fish | fish
 
 echo "Installing brew packages"
+brew install trash
 brew install bat
 brew install glances
 brew install cmus

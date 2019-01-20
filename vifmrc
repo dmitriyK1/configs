@@ -482,7 +482,5 @@ fileview *[^/] pygmentize -f terminal256 -O style=dracula -g
 " requires https://github.com/daveyarwood/gruvbox-pygments
 " fileview *[^/] pygmentize -f terminal256 -O style=gruvbox -g
 
-" TODO add:
-" --exclude "{.DS_Store,.git,node_modules,flow-typed}"'
 command! fzfcd :execute 'cd' "'".term('fd --type directory --hidden --follow --color=always | fzf 2> /dev/tty')."'"
 nnoremap ff :fzfcd<cr>

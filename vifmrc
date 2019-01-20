@@ -452,8 +452,6 @@ nnoremap <f8> :delete<cr>
 
 set cpoptions=fs
 
-map ,se :!start gvim $HOME/AppData/Roaming/Vifm/vifmrc<cr>
-
 " file types
 set classify=' :dir:/, :exe:, :reg:, :link:'
 " various file names

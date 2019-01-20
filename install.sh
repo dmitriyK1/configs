@@ -43,7 +43,12 @@ curl -L https://get.oh-my.fish | fish
 echo "Installing brew packages"
 brew install trash
 brew install bat
-brew install yank
+brew install yank # copy to clipboard
+brew install lnav # log files viewer
+
+brew tap iveney/mocha
+brew install realpath # get full file path
+
 brew install glances
 brew install cmus
 brew install --with-default-names gnu-sed # dependency of https://github.com/oh-my-fish/theme-budspencer

@@ -1,6 +1,7 @@
 Plug 'ashfinal/vim-colors-violet'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
+" Plug 'vim-scripts/chlordane.vim'
 " Plug 'liuchengxu/space-vim-dark'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'daylerees/colour-schemes', { 'rtp': 'vim/' }

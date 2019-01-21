@@ -151,6 +151,7 @@ alias v "vim"
 alias vi "vim"
 alias nv "env ESCDELAY=0 nvim" # ESCDELAY to remove delay in fzf (when closing popup) https://github.com/junegunn/fzf.vim/issues/248
 # alias vf "vifm ."
+alias vv "vifm ."
 alias mi "micro"
 alias ms "m sleep"
 alias ml "m lock"

@@ -46,10 +46,6 @@ brew install bat
 # brew install fdclone # file manager
 brew install yank # copy to clipboard
 brew install lnav # log files viewer
-
-brew tap iveney/mocha
-brew install realpath # get full file path
-
 brew install glances
 brew install cmus
 brew install --with-default-names gnu-sed # dependency of https://github.com/oh-my-fish/theme-budspencer
@@ -113,6 +109,7 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 /usr/local/opt/fzf/install
 
 brew install zsh-autosuggestions
+brew install coreutils # includes `realpath` utility
 brew install moreutils
 brew install pyenv # python version manager https://github.com/pyenv/pyenv
 brew install pipenv

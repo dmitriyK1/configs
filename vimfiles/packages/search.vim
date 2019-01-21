@@ -25,6 +25,12 @@ Plug 'osyo-manga/vim-anzu' "{{{
   let g:anzu_enable_CursorMoved_AnzuUpdateSearchStatus = 1
 " }}}
 
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-fuzzy.vim'
+map <leader>/ <Plug>(incsearch-fuzzy-/)
+map <leader>? <Plug>(incsearch-fuzzy-?)
+map <leader>g/ <Plug>(incsearch-fuzzy-stay)
+
 Plug 'haya14busa/is.vim' "{{{
   " star (*) without cursor move:
   " map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)

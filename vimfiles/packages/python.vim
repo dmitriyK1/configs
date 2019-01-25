@@ -41,7 +41,7 @@ Plug 'tmhedberg/SimpylFold', { 'for': 'python' } "{{{
 " Codi! deactivates Codi for the current buffer.
 Plug 'metakirby5/codi.vim'
 
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' } "{{{
+Plug 'python-mode/python-mode', { 'branch': 'develop' } "{{{
   " enable python3-syntax checking
   let g:pymode_python = 'python3'
 

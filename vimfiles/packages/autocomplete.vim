@@ -59,6 +59,8 @@ Plug 'roxma/nvim-yarp'
 " deoplete dependency
 Plug 'roxma/vim-hug-neovim-rpc'
 
+" Plug "lighttiger2505/deoplete-vim-lsp"
+
  " You will also need the following for function argument completion:
 " Plug 'Shougo/neosnippet'
 " Plug 'Shougo/neosnippet-snippets'

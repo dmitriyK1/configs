@@ -35,7 +35,6 @@ npm i -g recursive-blame@latest
 npm i -g undollar@latest
 # npm i -g yarn-deduplicate
 
-curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 curl -L https://deno.land/x/install/install.py | python
 curl -L https://get.oh-my.fish | fish
@@ -75,6 +74,7 @@ brew install mas
 brew install terminal-notifier # used for `fisher add franciscolourenco/done`
 brew install peco
 brew install nano
+brew install yarn
 brew install gnu-tar # for doom-emacs
 brew install httpie # http client
 # brew install mitmproxy

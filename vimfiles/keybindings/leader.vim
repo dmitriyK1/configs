@@ -110,8 +110,7 @@ vnoremap <silent> <leader>U :sort! u<cr>
 
 " V ================================================================================
 " select last pasted text
-nnoremap <leader>v V`]
-
+" nnoremap <leader>v V`]
 " W ================================================================================
 " Strip all trailing whitespace from a file, using ,W
 " nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>

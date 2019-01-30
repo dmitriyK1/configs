@@ -129,6 +129,9 @@ nnoremap J mzJ`z
 " ------------------I----------------------
 
 " ------------------G----------------------
+" select last pasted text
+nnoremap gp `[v`]
+
 " highlight last inserted text
 nnoremap gV `[v`]
 map gi gi<Esc>

@@ -130,7 +130,7 @@ nnoremap J mzJ`z
 
 " ------------------G----------------------
 " select last pasted text
-nnoremap gp `[v`]
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " highlight last inserted text
 nnoremap gV `[v`]

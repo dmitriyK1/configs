@@ -282,6 +282,16 @@ nnoremap <leader>d :Bdelete<CR>
   nnoremap \s :Filetypes<CR>
 
   nnoremap <leader><Tab> :Buffers<CR>
+
+  " Open files in horizontal split
+  nnoremap <silent> <leader>S :call fzf#run({
+  \   'down': '40%',
+  \   'sink': 'botright split' })<CR>
+
+  " Open files in vertical horizontal split
+  nnoremap <silent> <leader>v :call fzf#run({
+  \   'right': winwidth('.') / 2,
+  \   'sink':  'vertical botright split' })<CR>
 "}}}
 "}}} =======================================================
 

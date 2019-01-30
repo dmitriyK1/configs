@@ -113,6 +113,7 @@ brew install coreutils # includes `realpath` utility
 brew install moreutils
 brew install pyenv # python version manager https://github.com/pyenv/pyenv
 brew install pipenv
+brew install boost-python # for ctrlp cpsm
 
 # brew git tools start ##################################################################
 brew install legit

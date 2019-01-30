@@ -65,4 +65,7 @@ Plug 'd11wtq/ctrlp_bdelete.vim'
 Plug 'mhinz/vim-startify' "{{{
   let g:startify_custom_header = []
   let g:startify_change_to_vcs_root = 1 " Change to VCS root on file load.
+
+  let g:startify_session_autoload = 1 " load session file if it exists in a dir where Vim started
+  let g:startify_session_persistence = 1 " automatically save session on exit
 " }}}

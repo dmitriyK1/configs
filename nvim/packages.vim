@@ -23,7 +23,10 @@ Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
 Plug '/usr/local/opt/fzf'
+
+" :Helptags - fuzzy search through help
 Plug 'junegunn/fzf.vim'
+
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-jedi'

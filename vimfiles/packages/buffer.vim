@@ -29,6 +29,8 @@ Plug 'nixprime/cpsm'
 "}}}
 
 " Fuzzy file, buffer, mru, tag, etc finder
+" <c-v> - open file in vertical split
+" <c-x> - open file in horizontal split
 Plug 'ctrlpvim/ctrlp.vim' "{{{
   let g:ctrlp_extensions = ['filetype', 'funky', 'undo', 'dir']
   let g:ctrlp_map = '<c-t>'

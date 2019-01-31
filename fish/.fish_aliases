@@ -151,6 +151,7 @@ alias cdr "cd (git rev-parse --show-toplevel)"
 alias nano="env LC_ALL=ru_RU.UTF-8 nano"
 alias vim "/usr/local/bin/vim"
 alias v "vim"
+alias v. "vim ."
 alias vi "vim"
 alias nv "env ESCDELAY=0 nvim" # ESCDELAY to remove delay in fzf (when closing popup) https://github.com/junegunn/fzf.vim/issues/248
 # alias vf "vifm ."

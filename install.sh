@@ -77,6 +77,7 @@ brew install nano
 brew install yarn
 brew install gnu-tar # for doom-emacs
 brew install httpie # http client
+brew install colordiff # diff tool with syntax highlight `colordiff a.js b.js --side-by-side`
 # brew install mitmproxy
 
 # cask install start ##################################################################

@@ -89,6 +89,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize we
 brew cask install slack
 brew cask install insomnia # Cross-platform HTTP and GraphQL Client https://insomnia.rest
 brew cask install franz # messaging app http://meetfranz.com
+brew cask install alfred
 brew cask install station
 brew cask install charles
 brew cask install mongodb-compass

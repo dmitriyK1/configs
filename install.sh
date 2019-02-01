@@ -75,6 +75,8 @@ brew install terminal-notifier # used for `fisher add franciscolourenco/done`
 brew install peco
 brew install nano
 brew install yarn
+brew install prettyping
+brew install ncdu # disk usage
 brew install gnu-tar # for doom-emacs
 brew install httpie # http client
 brew install colordiff # diff tool with syntax highlight `colordiff a.js b.js --side-by-side`

@@ -235,6 +235,7 @@ alias gpu="legit publish"
 # fuzzy select and jump into folder
 alias jf="cd (cat ~/Library/autojump/autojump.txt | sort -nr | awk '{print \$2}' | fzf +s)"
 alias diff="colordiff"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 
 # git imerge
 # git when-merged <commit_hash>

@@ -40,6 +40,10 @@ set --export FZF_DEFAULT_COMMAND 'fd --type file --hidden --follow --color=alway
 set --export FZF_ALT_C_COMMAND 'fd --type directory --hidden --follow --color=always --exclude "{.DS_Store,.git,node_modules,flow-typed}"'
 set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set --export FZF_DEFAULT_OPTS '--ansi'
+
+# add support for ctrl+o to open selected file in Sublime text
+# export FZF_DEFAULT_OPTS="--ansi --bind='ctrl-o:execute(subl {})+abort'"
+
 # NOTE: disable '--ansi' and '--color=always' to speedup
 set --export BAT_THEME 'TwoDark'
 

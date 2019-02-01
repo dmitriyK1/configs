@@ -76,6 +76,7 @@ brew install peco
 brew install nano
 brew install yarn
 brew install prettyping
+brew install htop
 brew install ncdu # disk usage
 brew install gnu-tar # for doom-emacs
 brew install httpie # http client

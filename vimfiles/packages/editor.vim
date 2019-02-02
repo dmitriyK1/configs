@@ -33,8 +33,9 @@ Plug 'ryanoasis/vim-devicons' "{{{
 
 " Enhanced terminal integration for Vim
 Plug 'wincent/terminus' "{{{
-  let g:TerminusNormalCursorShape=2 " underline
-  let g:TerminusInsertCursorShape=1 " vertical bar
+  let g:TerminusNormalCursorShape=2  " underline
+  let g:TerminusInsertCursorShape=1  " vertical bar
+  let g:TerminusReplaceCursorShape=0 " block
 "}}}
 
 " Have Vim automatically reload a file that has changed externally

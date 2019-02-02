@@ -6,6 +6,9 @@ echo 'synchronizing configs'
 cd ~/configs
 legit sync
 
+echo 'purging autojump database from non-existing paths'
+autojump --purge
+
 echo 'updating vim'
 vim +PlugUpgrade +PlugUpdate +qall!
 

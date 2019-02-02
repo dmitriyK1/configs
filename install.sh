@@ -163,6 +163,7 @@ python3 -m pip install pip_upgrade_outdated
 
 echo "Installing gems"
 gem install neovim
+gem install colorls
 
 echo "Installing AppStore applications"
 # Amphetamine

@@ -30,10 +30,6 @@ set --export PATH $HOME/Development/git-extra-commands/bin $PATH
 # for pj fisherman plugin
 set -U PROJECT_PATHS ~/Development
 
-# set additional auto-pairs
-# requires `fisher add laughedelic/pisces`
-set -U pisces_pairs $pisces_pairs '<,>' '`,`' '«,»'
-
 set EDITOR vim
 # set VISUAL mvim
 

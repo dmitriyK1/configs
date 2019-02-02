@@ -38,6 +38,7 @@ npm i -g undollar@latest
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 curl -L https://deno.land/x/install/install.py | python
 curl -L https://get.oh-my.fish | fish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
 echo "Installing brew packages"
 brew install trash
@@ -168,3 +169,8 @@ gem install colorls
 echo "Installing AppStore applications"
 # Amphetamine
 mas install 937984704
+
+# set additional auto-pairs
+# requires `fisher add laughedelic/pisces`
+# set -U pisces_pairs $pisces_pairs '<,>' '`,`' '«,»'
+set -U pisces_pairs $pisces_pairs '`,`'

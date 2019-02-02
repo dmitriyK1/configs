@@ -12,6 +12,27 @@
                 },
                 "rules": [
                     {
+                        "description": "Change left_control to caps_lock.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "caps_lock"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change fn + I/J/K/L to Arrow Keys",
                         "manipulators": [
                             {

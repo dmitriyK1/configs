@@ -1,0 +1,15 @@
+{
+  "shell": "bash",
+  "cwd": "/Users/dimaroxx/Library/Application Support/eDEX-UI",
+  "keyboard": "en-US",
+  "theme": "matrix-notype",
+  "audio": true,
+  "extraAudio": false,
+  "pingAddr": "1.1.1.1",
+  "port": 3000,
+  "nointro": true,
+  "allowWindowed": false,
+  "excludeSelfFromToplist": true,
+  "experimentalGlobeFeatures": true,
+  "experimentalFeatures": true
+}

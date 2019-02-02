@@ -32,7 +32,10 @@ Plug 'ryanoasis/vim-devicons' "{{{
 " }}}
 
 " Enhanced terminal integration for Vim
-Plug 'wincent/terminus'
+Plug 'wincent/terminus' "{{{
+  let g:TerminusNormalCursorShape=2 " underline
+  let g:TerminusInsertCursorShape=1 " vertical bar
+"}}}
 
 " Have Vim automatically reload a file that has changed externally
 " Plug 'djoshea/vim-autoread'

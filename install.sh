@@ -40,6 +40,10 @@ curl -L https://deno.land/x/install/install.py | python
 curl -L https://get.oh-my.fish | fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
+# set fish shell as default
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
+
 echo "Installing brew packages"
 brew install trash
 brew install bat

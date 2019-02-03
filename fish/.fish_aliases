@@ -62,6 +62,7 @@ alias gma="git merge --abort"
 alias gcl="git clone"
 alias gcln="git clean -df"
 alias gca="git commit --amend"
+alias gac="git add -u; git commit -m"
 alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"
 alias gf "git fetch --prune"
 alias gfo "git follow" # requires https://github.com/nickolasburr/git-follow

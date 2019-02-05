@@ -21,6 +21,11 @@ Plug 'valloric/MatchTagAlways'
 " Better whitespace highlighting for Vim
 Plug 'ntpeters/vim-better-whitespace' "{{{
   let g:strip_whitespace_on_save = 1
+  let g:strip_whitespace_confirm = 0
+  let g:better_whitespace_verbosity = 1
+
+  nnoremap ]w :NextTrailingWhitespace<CR>
+  nnoremap [w :PrevTrailingWhitespace<CR>
 "}}}
 
 " vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer

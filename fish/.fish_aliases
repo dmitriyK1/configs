@@ -242,6 +242,16 @@ alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="sudo htop" # alias top and fix high sierra bug
 
+# --------------------------------------------------------------------------------
+# DOCKER ALIASES START
+# --------------------------------------------------------------------------------
+alias docker-clean-unused='docker system prune --all --force --volumes'
+
+alias docker-clean-all='docker stop (docker container ls -a -q) && docker system prune -a -f --volumes'
+# --------------------------------------------------------------------------------
+# DOCKER ALIASES END
+# --------------------------------------------------------------------------------
+
 # git imerge
 # git when-merged <commit_hash>
 # git branch-status

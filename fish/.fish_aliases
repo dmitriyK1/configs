@@ -248,6 +248,8 @@ alias top="sudo htop" # alias top and fix high sierra bug
 alias docker-clean-unused='docker system prune --all --force --volumes'
 
 alias docker-clean-all='docker stop (docker container ls -a -q) && docker system prune -a -f --volumes'
+
+alias docker-clean-containers='docker container stop (docker container ls -a -q) && docker container rm (docker container ls -a -q)'
 # --------------------------------------------------------------------------------
 # DOCKER ALIASES END
 # --------------------------------------------------------------------------------

@@ -177,6 +177,7 @@ alias sc="pushd .; cd ~/configs; legit sync; popd"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias cpr='cp -ivR'
 alias cpp='command cp'
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mvv='command mv'

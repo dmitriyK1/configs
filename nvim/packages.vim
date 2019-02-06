@@ -70,7 +70,7 @@ Plug 'junegunn/vim-peekaboo' "{{{
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim' "{{{
   let g:lightline = {
-        \ 'colorscheme': 'Dracula',
+        \ 'colorscheme': 'dracula',
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ],
         \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

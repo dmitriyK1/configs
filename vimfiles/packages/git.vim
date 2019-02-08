@@ -99,3 +99,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'imkmf/ctrlp-branches' "{{{
   nmap <silent> <leader>gb :CtrlPBranches<CR>
 "}}}
+
+" A Vim plugin for more pleasant editing on commit messages
+Plug 'rhysd/committia.vim'

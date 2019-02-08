@@ -35,8 +35,9 @@ npm i -g recursive-blame@latest
 npm i -g undollar@latest
 # npm i -g yarn-deduplicate
 
+curl -sSLf https://get.notionjs.com | bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-curl -L https://deno.land/x/install/install.py | python
+# curl -L https://deno.land/x/install/install.py | python
 curl -L https://get.oh-my.fish | fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 

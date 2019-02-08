@@ -15,6 +15,15 @@ endif
 " location for plugins to be installed
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Utilites around neovim's `:terminal`
+" :Term Opens a new terminal buffer using :new (splits horizontally)
+" :VTerm Opens a new terminal buffer using :vnew (splits vertically)
+" :TTerm Opens a new terminal buffer using :tabnew (new tab)
+Plug 'vimlab/split-term.vim' "{{{
+  let g:split_term_default_shell = "fish"
+  let g:split_term_vertical = 1 " force the :Term command to always use a vertical buffer (using :vnew)
+"}}}
+
 Plug 'chaoren/vim-wordmotion'
 Plug 'junegunn/vim-after-object'
 Plug 'haya14busa/incsearch.vim'

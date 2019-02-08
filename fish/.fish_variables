@@ -16,6 +16,12 @@ export GEM_HOME=$HOME/.gem_home
 #   /usr/sbin
 #   /sbin
 
+# nodejs per-project version manager
+# https://github.com/notion-cli/notion
+set --export NOTION_HOME $HOME/.notion
+set --export PATH $NOTION_HOME/bin $PATH
+set --export PATH $NOTION_HOME $PATH
+
 set --export PATH /opt/local/bin $PATH
 set --export PATH $HOME/.node_modules_global/bin $PATH
 set --export PATH $HOME/.yarn/bin $PATH

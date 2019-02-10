@@ -1,4 +1,3 @@
-" TODO: try use relative path
 source $HOME/configs/nvim/packages.vim
 
 " ================ Nvim-specific Config ==================== {{{

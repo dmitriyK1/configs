@@ -1,3 +1,10 @@
+" JSON manipulation and pretty printing
+" aj provides a text object for the outermost JSON object, array, string, number, or keyword.
+" gqaj "pretty prints" (wraps/indents/sorts keys/otherwise cleans up) the JSON construct under the cursor.
+" gwaj takes the JSON object on the clipboard and extends it into the JSON object under the cursor.
+" There are also ij variants that target innermost rather than outermost JSON construct.
+Plug 'tpope/vim-jdaddy'
+
 " # va=  visual after =
 " # ca=  change after =
 " # da=  delete after =

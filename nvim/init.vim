@@ -159,6 +159,9 @@ nnoremap <leader>sp :e $HOME/configs/nvim/packages.vim<CR>
 " Split previously opened file in a split window
 nnoremap <leader>- :new<cr><C-w>j
 nnoremap <leader>\ :vnew<cr><C-w>l
+
+nnoremap <silent> <Tab> :bn<CR>
+nnoremap <silent> <S-Tab> :bp<CR>
 " ================ Plugins settings ======================== {{{
 let g:jedi#completions_enabled = 0
 let g:deoplete#enable_at_startup = 1                                            "Enable deoplete on startup

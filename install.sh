@@ -83,6 +83,7 @@ brew install nano
 brew install yarn
 brew install prettyping
 brew install htop
+# brew tap cjbassi/gotop; brew install gotop
 brew install psgrep
 brew install iftop  # network monitoring tool
 brew install ncdu # disk usage

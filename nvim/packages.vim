@@ -2,6 +2,10 @@ if &compatible
   set nocompatible
 endif
 
+function! LightLineFilename()
+  return expand('%:p')
+endfunction
+
 " TODO: lazy-load what possible
 
 " ================ Plugins ==================== {{{
@@ -81,11 +85,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim' "{{{
   let g:lightline = {
         \ 'colorscheme': 'dracula',
+        \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+        \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ],
         \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
         \ },
         \ 'component_function': {
+        \   'filename': 'LightLineFilename',
         \   'gitbranch': 'fugitive#head'
         \ },
         \ }

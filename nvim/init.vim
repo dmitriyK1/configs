@@ -220,6 +220,7 @@ nnoremap <leader>d :Bdelete<CR>
 
 " vim-gitgutter "{{{
   nmap <silent> <C-g> :GitGutterToggle<CR>
+  nnoremap <silent> <leader>gf :GitGutterFold<CR>
 " }}}
 
 " fugitive {{{
@@ -293,6 +294,13 @@ nnoremap <leader>d :Bdelete<CR>
   \   'right': winwidth('.') / 2,
   \   'sink':  'vertical botright split' })<CR>
 "}}}
+
+" lightline-bufferline {{{
+  let g:lightline#bufferline#unnamed = '[No Name]'
+  let g:lightline.tabline            = {'left': [['buffers']], 'right': [['close']]}
+  let g:lightline.component_expand   = {'buffers': 'lightline#bufferline#buffers'}
+  let g:lightline.component_type     = {'buffers': 'tabsel'}
+" }}}
 "}}} =======================================================
 
 " Use local init.vim if available

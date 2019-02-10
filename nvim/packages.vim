@@ -89,6 +89,7 @@ Plug 'itchyny/lightline.vim' "{{{
         \ },
         \ }
 " }}}
+Plug 'mengelbrecht/lightline-bufferline'
 " Plug 'Lokaltog/neoranger' "{{{
   " Open ranger at current file with "-"
   " nnoremap <silent> - :RangerCurrentFile<CR>

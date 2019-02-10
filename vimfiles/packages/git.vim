@@ -24,6 +24,7 @@ Plug 'airblade/vim-gitgutter' "{{{
   " let g:gitgutter_highlight_lines = 1
 
   nmap <silent> <C-g> :GitGutterToggle<CR>
+  nnoremap <silent> <leader>gf :GitGutterFold<CR>
   xmap ih <Plug>GitGutterTextObjectInnerVisual
   xmap ah <Plug>GitGutterTextObjectOuterVisual
 

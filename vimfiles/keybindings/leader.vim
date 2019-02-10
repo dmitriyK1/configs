@@ -46,7 +46,6 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 nmap <leader>h :cd ~/ <CR>
 
 " G ================================================================================
-nnoremap <silent> <leader>gf :GitGutterFold<CR>
 
 " L ================================================================================
 " Toggle scrollbar

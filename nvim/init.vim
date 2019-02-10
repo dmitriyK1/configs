@@ -1,4 +1,4 @@
-source $HOME/configs/nvim/packages.vim
+source ~/nvim/packages.vim
 
 " ================ Nvim-specific Config ==================== {{{
 let g:python_host_prog = '/usr/local/bin/python2'

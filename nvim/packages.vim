@@ -24,6 +24,7 @@ Plug 'vimlab/split-term.vim' "{{{
   let g:split_term_vertical = 1 " force the :Term command to always use a vertical buffer (using :vnew)
 "}}}
 
+Plug 'ryanoasis/vim-devicons'
 Plug 'chaoren/vim-wordmotion'
 Plug 'junegunn/vim-after-object'
 Plug 'haya14busa/incsearch.vim'

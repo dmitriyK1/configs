@@ -256,6 +256,11 @@ alias docker-clean-containers='docker container stop (docker container ls -a -q)
 # DOCKER ALIASES END
 # --------------------------------------------------------------------------------
 
+alias bsl="brew services list"
+alias bss="brew services start"
+alias bst="brew services stop"
+alias bsr="brew services run"
+
 # git imerge
 # git when-merged <commit_hash>
 # git branch-status

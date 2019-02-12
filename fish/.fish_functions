@@ -177,7 +177,7 @@ end
 
 # count file occurences of a specified pattern
 function rgc
-  echo Count: (rgn $argv[1] | wc -l | string trim)
+  echo File occurences: (rgn $argv[1] | wc -l | string trim)
 end
 
 # vim: filetype=sh

@@ -263,6 +263,7 @@ alias bsl="brew services list"
 alias bss="brew services start"
 alias bst="brew services stop"
 alias bsr="brew services run"
+alias bsre="brew services restart"
 
 # git imerge
 # git when-merged <commit_hash>

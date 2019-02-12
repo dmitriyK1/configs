@@ -145,7 +145,7 @@ update.bat
 update_packages.bat
 
 # Local configs
-config.local.fish
+# config.local.fish
 
 .editorconfig
 venv

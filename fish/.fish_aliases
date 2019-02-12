@@ -171,6 +171,7 @@ alias bif "brew info"
 alias p "peco" # brew install peco
 alias ss "reload"
 alias se "vim ~/.config/fish/config.fish"
+alias sl "vim ~/config.local.fish"
 alias sea "vim ~/fish/.fish_aliases"
 alias sef "vim ~/fish/.fish_functions"
 alias sev "vim ~/fish/.fish_variables"

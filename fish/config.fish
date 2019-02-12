@@ -76,7 +76,7 @@ source ~/.iterm2_shell_integration.(basename $SHELL)
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
 
-[ -f $HOME/fish/config.local.fish ]; and source $HOME/fish/config.local.fish
+[ -f $HOME/config.local.fish ]; and source $HOME/config.local.fish
 
 # activate https://github.com/adambrenecki/virtualfish
 eval (python3 -m virtualfish)

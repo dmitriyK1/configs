@@ -55,6 +55,9 @@ Plug 'MaxMEllon/vim-jsx-pretty' "{{{
   let g:vim_jsx_pretty_colorful_config = 1
 " }}}
 
+" A Filetype plugin for csv files
+Plug 'chrisbra/csv.vim'
+
 " language pack
 " :CoffeeMake \ :make
 " :CoffeeWatch [vert[ical]] [WINDOW-SIZE]

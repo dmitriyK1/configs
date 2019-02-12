@@ -83,10 +83,10 @@ Plug 'dracula/vim'
 " Plug 'oguzbilgic/sexy-railscasts-theme'
 " Plug 'juanedi/predawn.vim'
 " Plug 'jdkanani/vim-material-theme'
-Plug 'ajh17/Spacegray.vim' "{{{
-    let g:spacegray_low_contrast = 1
-    let g:spacegray_use_italics = 1
-"}}}
+" Plug 'ajh17/Spacegray.vim' "{{{
+"     let g:spacegray_low_contrast = 1
+"     let g:spacegray_use_italics = 1
+" "}}}
 " Plug 'shaond/vim-guru'
 " Plug 'vim-scripts/obsidian2.vim'
 " Plug 'gosukiwi/vim-atom-dark'

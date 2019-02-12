@@ -134,6 +134,4 @@ imap <c-e> <c-o>$<Right>
 nmap ]c :action VcsShowNextChangeMarker<CR>
 nmap [c :action VcsShowPrevChangeMarker<CR>
 
-if filereadable(expand("~/.ideavimrc.local"))
-  source ~/.ideavimrc.local
-endif
+source ~/.ideavimrc.local

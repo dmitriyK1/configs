@@ -8,6 +8,9 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " ================ General Config ==================== {{{
 let mapleader=" "
 let maplocalleader=" "
+set guicursor=n-c:hor20,v-r-cr:block,i-ci-ve:ver25,o:hor50                     "set cursor shape
+  \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+  \,sm:block-blinkwait175-blinkoff150-blinkon175
 set clipboard^=unnamed,unnamedplus                                              "Copy to system clipboard
 " set hlsearch
 set termguicolors
@@ -93,6 +96,10 @@ augroup END
 " }}}
 
 autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
+
+" recall last file position {{{
+  autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+" }}}
 " }}}
 " ================ Completion ======================= {{{
 set wildmode=list:full
@@ -341,9 +348,3 @@ hi Normal guibg=NONE ctermbg=NONE
 " fix jsx highlighting of end xml tags
 hi link xmlEndTag xmlTag
 " ==========================================================
-" insert mode - line
-let &t_SI .= "\<Esc>[5 q"
-"replace mode - underline
-let &t_SR .= "\<Esc>[4 q"
-"common - block
-let &t_EI .= "\<Esc>[3 q"

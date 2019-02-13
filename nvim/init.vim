@@ -322,6 +322,9 @@ nnoremap <leader>d :Bdelete<CR>
   \ 0: '0 ', 1: '1 ', 2: '2 ', 3: '3 ', 4: '4 ',
   \ 5: '5 ', 6: '6 ', 7: '7 ', 8: '8 ', 9: '9 '}
 
+  " show file name without a path
+  let g:lightline#bufferline#filename_modifier = ':t'
+
   nmap <Leader>1 <Plug>lightline#bufferline#go(1)
   nmap <Leader>2 <Plug>lightline#bufferline#go(2)
   nmap <Leader>3 <Plug>lightline#bufferline#go(3)

@@ -341,3 +341,9 @@ hi Normal guibg=NONE ctermbg=NONE
 " fix jsx highlighting of end xml tags
 hi link xmlEndTag xmlTag
 " ==========================================================
+" insert mode - line
+let &t_SI .= "\<Esc>[5 q"
+"replace mode - underline
+let &t_SR .= "\<Esc>[4 q"
+"common - block
+let &t_EI .= "\<Esc>[3 q"

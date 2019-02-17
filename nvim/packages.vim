@@ -121,4 +121,6 @@ Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
   nnoremap <silent> g- :Switch<CR>
 "}}}
 
+Plug 'vim-scripts/CursorLineCurrentWindow'
+
 call plug#end()

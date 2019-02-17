@@ -1,3 +1,6 @@
+" Only highlight the screen line of the cursor in the currently active window.
+Plug 'vim-scripts/CursorLineCurrentWindow'
+
 " Automatically create any non-existent directories before writing the buffer.
 Plug 'pbrisbin/vim-mkdir'
 

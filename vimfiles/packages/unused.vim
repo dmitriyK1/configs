@@ -469,9 +469,6 @@
 "   let g:DeleteTrailingWhitespace_Action = 'delete'
 " }}}
 
-" Only highlight the screen line of the cursor in the currently active window.
-" Plug 'vim-scripts/CursorLineCurrentWindow'
-
 " Fast and Easy Find and Replace Across Multiple Files
 " Plug 'dkprice/vim-easygrep'
 

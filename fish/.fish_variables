@@ -6,6 +6,8 @@ export EDITOR=/usr/local/bin/vim
 export CHEATCOLORS=true
 export GEM_HOME=$HOME/.gem_home
 
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
 # set --export NODE_ENV development
 
 # These paths are set with this omf plugin https://github.com/oh-my-fish/plugin-brew

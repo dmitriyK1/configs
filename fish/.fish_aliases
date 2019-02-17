@@ -265,7 +265,7 @@ alias bst="brew services stop"
 alias bsr="brew services run"
 alias bsre="brew services restart"
 
-alias youtube-dl-channel="youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v"
+alias youtube-dl-channel='youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v'
 
 # git imerge
 # git when-merged <commit_hash>

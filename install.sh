@@ -47,6 +47,7 @@ chsh -s /usr/local/bin/fish
 
 echo "Installing brew packages"
 brew install trash
+brew install watch # watch command output
 brew install bat
 # brew install fdclone # file manager
 brew install yank # copy to clipboard

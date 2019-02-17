@@ -58,8 +58,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nmap <silent> <C-n> :bnext<CR>
-nmap <silent> <C-p> :bprev<CR>
+" nmap <silent> <C-n> :bnext<CR>
+" nmap <silent> <C-p> :bprev<CR>
 
 " DOESN'T WORK ON OSX
 "Bubble single lines

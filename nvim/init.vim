@@ -128,7 +128,12 @@ set sidescroll=5
 
 " }}}
 " ================ Custom mappings ======================== {{{
-nnoremap <silent> <C-l> :nohlsearch<CR>
+" Easy window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Down is really the next line
 nnoremap j gj
 nnoremap k gk

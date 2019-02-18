@@ -184,4 +184,8 @@ function rgc
   echo File occurences: (rgn $argv[1] | wc -l | string trim)
 end
 
+function gd
+  git diff --color $argv | diff-so-fancy | less --tabs=4 -RFXi --pattern '^(Date|added|deleted|modified): '
+end
+
 # vim: filetype=sh

@@ -113,7 +113,7 @@ alias gden "git diff develop HEAD --name-only"
 alias gdm "git diff master HEAD"
 # from https://stackoverflow.com/questions/4944376/how-to-check-real-git-diff-before-merging-from-remote-branch
 alias gdr "git fetch; git diff ...origin/master"
-alias gdrm "gdr"
+alias gdrm "git fetch; git diff ...origin/(git branch | grep \* | cut -d ' ' -f2)"
 alias gdrd "git fetch; git diff ...origin/develop"
 alias ga "git add"
 alias ga.="ga ."
@@ -266,8 +266,6 @@ alias bsr="brew services run"
 alias bsre="brew services restart"
 
 alias youtube-dl-channel='youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v --download-archive .downloadslist'
-
-# alias killbyport "kill -9"
 
 # git imerge
 # git when-merged <commit_hash>

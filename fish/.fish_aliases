@@ -134,7 +134,6 @@ alias gplD "git pull origin dev"
 alias gsh "git show"
 alias gshn "git show --name-only"
 alias grev "git remote -vv"
-alias gsw "git switch"
 alias gcp "git cherry-pick"
 alias gcf "git commit --no-verify -m"
 alias gpf "git push --no-verify"
@@ -237,6 +236,7 @@ alias activate='. venv/bin/activate.fish'
 [ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
 
 alias gpu="legit publish"
+alias gsw="legit switch"
 
 # fuzzy select and jump into folder
 alias jf="cd (cat ~/Library/autojump/autojump.txt | sort -nr | awk '{print \$2}' | fzf +s)"
@@ -266,6 +266,8 @@ alias bsr="brew services run"
 alias bsre="brew services restart"
 
 alias youtube-dl-channel='youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v --download-archive .downloadslist'
+
+# alias killbyport "kill -9"
 
 # git imerge
 # git when-merged <commit_hash>

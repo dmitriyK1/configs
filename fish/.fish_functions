@@ -70,7 +70,11 @@ end
 
 function findbyport
   # sudo lsof -i :$argv
-  lsof -i :$argv
+  lsof -i :$argv | grep \* | cut -d ' ' -f5
+end
+
+function killbyport
+  kill -9 (findbyport $argv)
 end
 
 # https://github.com/SidOfc/dotfiles/tree/master/.config/fish/functions

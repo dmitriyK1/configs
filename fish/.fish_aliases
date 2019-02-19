@@ -249,6 +249,11 @@ alias top="sudo htop" # alias top and fix high sierra bug
 # --------------------------------------------------------------------------------
 # DOCKER ALIASES START
 # --------------------------------------------------------------------------------
+alias dps "docker ps"
+alias dlg "docker logs"
+alias dlgf "docker logs --follow"
+alias dka "docker kill (docker ps -q)"
+
 alias docker-clean-unused='docker system prune --all --force --volumes'
 
 alias docker-clean-all='docker stop (docker container ls -a -q) && docker system prune -a -f --volumes'

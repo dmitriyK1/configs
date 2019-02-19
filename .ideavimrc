@@ -117,6 +117,7 @@ map <leader>k :action HighlightUsagesInFile<CR>
 
 map <leader>se :e ~/.ideavimrc<CR>
 map <leader>ss :source ~/.ideavimrc<CR>
+map <leader>sl :e ~/.ideavimrc.local<CR>
 
 map <leader>- :action VimWindowSplitHorizontal<CR>
 map <leader>\ :action VimWindowSplitVertical<CR>

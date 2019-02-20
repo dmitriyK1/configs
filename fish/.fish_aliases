@@ -111,8 +111,8 @@ alias gDen "git diff dev HEAD --name-only"
 alias gden "git diff develop HEAD --name-only"
 alias gdm "git diff master HEAD"
 # from https://stackoverflow.com/questions/4944376/how-to-check-real-git-diff-before-merging-from-remote-branch
-alias gdr "git fetch; git diff ...origin/master"
-alias gdrm "git fetch; git diff ...origin/(git branch | grep \* | cut -d ' ' -f2)"
+alias gdr "git fetch; git diff ...origin/(git branch | grep \* | cut -d ' ' -f2)" # compare with a same remote branch
+alias gdrm "git fetch; git diff ...origin/master"
 alias gdrd "git fetch; git diff ...origin/develop"
 alias ga "git add"
 alias ga.="ga ."

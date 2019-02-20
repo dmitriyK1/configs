@@ -188,4 +188,9 @@ function gd
   git diff --color $argv | diff-so-fancy | less --tabs=4 -RFXi --pattern '^(Date|added|deleted|modified): '
 end
 
+# compare current branch with a specified remote branch
+function gdrb
+  git fetch; git diff ...origin/$argv
+end
+
 # vim: filetype=sh

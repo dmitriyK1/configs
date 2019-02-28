@@ -135,4 +135,6 @@ imap <c-e> <c-o>$<Right>
 nmap ]c :action VcsShowNextChangeMarker<CR>
 nmap [c :action VcsShowPrevChangeMarker<CR>
 
+nmap dae ggVGd
+
 source ~/.ideavimrc.local

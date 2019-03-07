@@ -97,6 +97,7 @@ brew install colordiff # diff tool with syntax highlight `colordiff a.js b.js --
 brew tap caskroom/cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew cask install slack
+brew cask install commander-one
 brew cask install insomnia # Cross-platform HTTP and GraphQL Client https://insomnia.rest
 brew cask install franz # messaging app http://meetfranz.com
 brew cask install alfred

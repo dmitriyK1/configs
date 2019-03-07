@@ -235,6 +235,7 @@ alias activate='. venv/bin/activate.fish'
 [ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
 
 alias gpu="legit publish"
+alias gup="legit unpublish"
 alias gsw="legit switch"
 
 # fuzzy select and jump into folder

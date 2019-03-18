@@ -137,4 +137,7 @@ nmap [c :action VcsShowPrevChangeMarker<CR>
 
 nmap dae ggVGd
 
+nmap g- ciwtrue<Esc>
+nmap g= ciwfalse<Esc>
+
 source ~/.ideavimrc.local

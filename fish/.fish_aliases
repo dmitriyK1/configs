@@ -270,6 +270,15 @@ alias bst="brew services stop"
 alias bsr="brew services run"
 alias bsre="brew services restart"
 
+# --------------------------------------------------------------------------------
+# HEROKU ALIASES START
+# --------------------------------------------------------------------------------
+alias ha="heroku run bash" # connect to heroku app
+alias hd="heroku ps:exec" # connect to running dyno
+# --------------------------------------------------------------------------------
+# HEROKU ALIASES END
+# --------------------------------------------------------------------------------
+
 alias youtube-dl-channel='youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v --download-archive .downloadslist'
 
 # git imerge

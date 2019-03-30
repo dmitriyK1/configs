@@ -1,9 +1,10 @@
 " A Vim plugin that provides text objects and motions for Python classes, methods, functions, and doc strings
 Plug 'jeetsukumaran/vim-pythonsense'
 
+" TODO: enable once plugin is fixed
 " Vim plugin to sort python imports using https://github.com/timothycrosley/isort
 " <C-i> for visual selection
-Plug 'fisadev/vim-isort'
+" Plug 'fisadev/vim-isort'
 
 " :Autoformat
 " requires `pip install --upgrade autopep8` (supports formatting ranges - based on visual selection)

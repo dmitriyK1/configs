@@ -110,7 +110,7 @@ map ]e :action MoveLineDown<CR>
 
 " map f :action AceAction<CR>
 " map <leader>l :action AceLineAction<CR>
-" map <leader>t :action AceTargetAction<CR>
+map <leader>a :action AceTargetAction<CR>
 map <leader>d :action AceDeclarationAction<CR>
 
 map <leader>k :action HighlightUsagesInFile<CR>

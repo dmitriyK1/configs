@@ -275,6 +275,7 @@ alias bsre="brew services restart"
 # --------------------------------------------------------------------------------
 alias ha="heroku run bash" # connect to heroku app
 alias hd="heroku ps:exec" # connect to running dyno
+alias hl="heroku logs --tail"
 # --------------------------------------------------------------------------------
 # HEROKU ALIASES END
 # --------------------------------------------------------------------------------

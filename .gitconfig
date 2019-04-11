@@ -72,7 +72,7 @@
     d=diff
     dw=diff --color-words
     dc=diff --cached
-    recommit=commit --amend --reuse-message=HEAD
+    recommit=commit --amend --no-edit
     l=log --decorate=full
     g=grep
     ack="grep --break --heading -A3 -B3"

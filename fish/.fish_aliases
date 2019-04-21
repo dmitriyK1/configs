@@ -57,6 +57,7 @@ alias gll="git log --oneline --decorate --no-merges"
 alias glp="git log -p --stat --no-merges"
 alias gls="git log -S"
 alias gma="git merge --abort"
+alias gmr="git merge"
 # gitu - from .fish_functions
 # glf  - from .fish_functions
 alias gcl="git clone"

@@ -59,3 +59,8 @@ Plug 'wincent/terminus' "{{{
 Plug 'tpope/vim-eunuch' "{{{
    nnoremap <leader>R :Rename <C-R>=expand('%:t')<CR>
 "}}}
+
+" Make Vim persist editing state without fuss
+Plug 'zhimsel/vim-stay' "{{{
+  set viewoptions=cursor,folds,slash,unix
+"}}}

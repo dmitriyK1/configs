@@ -29,6 +29,7 @@ Plug 'vimlab/split-term.vim' "{{{
 "}}}
 
 Plug 'ryanoasis/vim-devicons'
+Plug 'rhysd/clever-f.vim'
 Plug 'chaoren/vim-wordmotion'
 Plug 'junegunn/vim-after-object'
 Plug 'haya14busa/incsearch.vim'
@@ -84,7 +85,7 @@ Plug 'junegunn/vim-peekaboo' "{{{
 Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim' "{{{
   let g:lightline = {
-        \ 'colorscheme': 'dracula',
+        \ 'colorscheme': 'gruvbox',
         \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
         \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
         \ 'active': {

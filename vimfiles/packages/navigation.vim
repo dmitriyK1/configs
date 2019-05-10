@@ -3,6 +3,9 @@ Plug 'chaoren/vim-wordmotion' " {{{
   " let g:wordmotion_prefix = '\'
 "}}}
 
+" Extended f, F, t and T key mappings for Vim
+Plug 'rhysd/clever-f.vim'
+
 Plug 'easymotion/vim-easymotion' "{{{
   map = <Plug>(easymotion-prefix)
   map <M-f> =f

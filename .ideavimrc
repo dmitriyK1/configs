@@ -140,4 +140,7 @@ nmap dae ggVGd
 nmap g- ciwtrue<Esc>
 nmap g= ciwfalse<Esc>
 
+" delete current line from beginning
+nmap dal 0dd
+
 source ~/.ideavimrc.local

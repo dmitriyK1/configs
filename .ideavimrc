@@ -143,4 +143,9 @@ nmap g= ciwfalse<Esc>
 " delete current line from beginning
 nmap dal 0dd
 
+nmap ]> j0>>k_
+nmap ]< j0<<k_
+nmap [> k0>>j_
+nmap [< k0<<j_
+
 source ~/.ideavimrc.local

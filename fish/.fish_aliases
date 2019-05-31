@@ -285,6 +285,8 @@ alias hl="heroku logs --tail"
 
 alias youtube-dl-channel='youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v --download-archive .downloadslist'
 
+alias o.='open .'
+
 # git imerge
 # git when-merged <commit_hash>
 # git branch-status

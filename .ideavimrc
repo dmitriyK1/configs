@@ -29,6 +29,7 @@ set clipboard=unnamed, unnamedplus
 set visualbell
 set nonumber
 set scrolloff=9999
+set smartjoin # to perform a join via the IDE
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <A-f> <S-Right>

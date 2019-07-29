@@ -1,6 +1,7 @@
 Plug 'ashfinal/vim-colors-violet'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
+Plug 'flrnprz/candid.vim'
 " Plug 'nightsense/stellarized'
 " Plug 'nightsense/strawberry'
 " Plug 'nightsense/cosmic_latte'

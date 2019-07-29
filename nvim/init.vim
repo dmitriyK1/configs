@@ -57,7 +57,7 @@ set completeopt-=preview                                                        
 
 filetype plugin indent on
 syntax on
-silent! colorscheme dracula
+" silent! colorscheme dracula
 set helpheight=99999 " maximize help window
 
 " }}}
@@ -355,4 +355,6 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " fix jsx highlighting of end xml tags
 hi link xmlEndTag xmlTag
+
+set background=dark
 " ==========================================================

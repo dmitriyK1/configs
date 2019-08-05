@@ -64,3 +64,6 @@ Plug 'tpope/vim-eunuch' "{{{
 Plug 'zhimsel/vim-stay' "{{{
   set viewoptions=cursor,folds,slash,unix
 "}}}
+
+" An eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting!
+Plug 'TaDaa/vimade'

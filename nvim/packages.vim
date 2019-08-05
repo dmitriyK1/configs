@@ -125,4 +125,7 @@ Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
 
 Plug 'vim-scripts/CursorLineCurrentWindow'
 
+" An eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting!
+Plug 'TaDaa/vimade'
+
 call plug#end()

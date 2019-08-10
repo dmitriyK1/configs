@@ -84,6 +84,7 @@ Plug 'junegunn/vim-peekaboo' "{{{
   let g:peekaboo_ins_prefix = '<c-x>'
 " }}}
 Plug 'tpope/vim-fugitive'
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'itchyny/lightline.vim' "{{{
   let g:lightline = {
         \ 'colorscheme': 'gruvbox',

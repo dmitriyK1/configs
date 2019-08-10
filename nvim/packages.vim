@@ -37,7 +37,7 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'morhetz/gruvbox'
 Plug 'flrnprz/candid.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug '/usr/local/opt/fzf'
 
 " :Helptags - fuzzy search through help

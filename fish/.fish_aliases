@@ -257,6 +257,7 @@ alias dps "docker ps"
 alias dlg "docker logs"
 alias dlgf "docker logs --follow"
 alias dka "docker kill (docker ps -q)"
+alias dr "docker restart"
 
 alias docker-clean-unused='docker system prune --all --force --volumes'
 

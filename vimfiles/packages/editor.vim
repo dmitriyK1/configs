@@ -67,3 +67,6 @@ Plug 'zhimsel/vim-stay' "{{{
 
 " An eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting!
 Plug 'TaDaa/vimade'
+
+" Highlight npm-debug.log and .npmrc for human readability
+Plug 'rhysd/npm-filetypes.vim'

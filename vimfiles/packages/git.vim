@@ -103,3 +103,7 @@ Plug 'imkmf/ctrlp-branches' "{{{
 
 " A Vim plugin for more pleasant editing on commit messages
 Plug 'rhysd/committia.vim'
+
+" Vim and Neovim plugin to reveal the commit messages under the cursor
+" <Leader>gm
+Plug 'rhysd/git-messenger.vim'

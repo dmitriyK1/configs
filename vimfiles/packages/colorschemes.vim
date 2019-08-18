@@ -2,6 +2,13 @@ Plug 'ashfinal/vim-colors-violet'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'flrnprz/candid.vim'
+
+Plug 'lucasprag/simpleblack'
+Plug 'jaredgorski/SpaceCamp'
+Plug 'owickstrom/vim-colors-paramount'
+Plug 'rakr/vim-two-firewatch'
+Plug 'tyrannicaltoucan/vim-quantum'
+
 " Plug 'nightsense/stellarized'
 " Plug 'nightsense/strawberry'
 " Plug 'nightsense/cosmic_latte'

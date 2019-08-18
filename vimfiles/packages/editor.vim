@@ -70,3 +70,6 @@ Plug 'TaDaa/vimade'
 
 " Highlight npm-debug.log and .npmrc for human readability
 Plug 'rhysd/npm-filetypes.vim'
+
+" Another elegant statusline for vim
+Plug 'liuchengxu/eleline.vim'

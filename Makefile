@@ -1,4 +1,5 @@
 # TODO: add symlinks for vim, fish
+# good example: https://github.com/jackfranklin/dotfiles/blob/master/Makefile
 
 help:
 	@echo "symlink"; echo "install_brews"
@@ -16,3 +17,7 @@ install_brews:
 	brew tap Homebrew/bundle
 	brew tap caskroom/versions
 	brew bundle
+
+python_modules:
+	pip3 install neovim
+	pip3 install neovim-remote

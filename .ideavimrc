@@ -150,5 +150,7 @@ nmap ]< j0<<k_
 nmap [> k0>>j_
 nmap [< k0<<j_
 
+set clipboard+=ideaput
+set ideajoin
+
 source ~/.ideavimrc.local
-# set clipboard+=ideaput

@@ -29,8 +29,6 @@ set clipboard=unnamed, unnamedplus
 set visualbell
 set nonumber
 set scrolloff=9999
-set smartjoin # to perform a join via the IDE
-set ideajoin
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <A-f> <S-Right>
@@ -151,6 +149,7 @@ nmap [> k0>>j_
 nmap [< k0<<j_
 
 set clipboard+=ideaput
+set smartjoin " to perform a join via the IDE (deprecated?)
 set ideajoin
 
 source ~/.ideavimrc.local

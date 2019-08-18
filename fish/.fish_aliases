@@ -200,6 +200,7 @@ alias rg="rg -i --color=always --glob='!flow-typed/*'"
 alias rgf="rg -F"
 alias rgw="rg -w"
 alias rgn="rg -l"
+alias rgh="rg --hidden"
 
 alias rr="ranger"
 

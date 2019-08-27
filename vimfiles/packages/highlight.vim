@@ -18,15 +18,6 @@ Plug 'romainl/vim-cool'
 " A Vim plugin that always highlights the enclosing html/xml tags
 Plug 'valloric/MatchTagAlways'
 
-" Better whitespace highlighting for Vim
-Plug 'ntpeters/vim-better-whitespace' "{{{
-  let g:strip_whitespace_on_save = 1
-  let g:strip_whitespace_confirm = 0
-
-  nnoremap ]w :NextTrailingWhitespace<CR>
-  nnoremap [w :PrevTrailingWhitespace<CR>
-"}}}
-
 " vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
 Plug 'vasconcelloslf/vim-interestingwords' "{{{
   let g:interestingWordsDefaultMappings = 0

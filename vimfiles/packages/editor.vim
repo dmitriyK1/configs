@@ -82,3 +82,6 @@ Plug 'ntpeters/vim-better-whitespace' "{{{
   nnoremap ]w :NextTrailingWhitespace<CR>
   nnoremap [w :PrevTrailingWhitespace<CR>
 "}}}
+
+" Toggles between hybrid and absolute line numbers automatically
+Plug 'jeffkreeftmeijer/vim-numbertoggle'

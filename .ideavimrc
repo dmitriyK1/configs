@@ -1,4 +1,5 @@
 " list of all actions - :actionlist
+" example config https://github.com/amzyang/dotfiles/blob/master/.ideavimrc
 
 let mapleader=" "
 let maplocalleader=" "
@@ -19,12 +20,10 @@ set incsearch
 set wrapscan
 set nonumber
 " set relativenumber
-set surround
-set multiple-cursors
 nmap <leader><leader> :w<cr>
 " nnoremap <space> :
 nnoremap Q :
-nnoremap <C-l> :nohlsearch<CR>
+nnoremap <silent> <C-l> :nohlsearch<CR>
 set clipboard=unnamed, unnamedplus
 set visualbell
 set nonumber
@@ -126,9 +125,6 @@ map cru gUiw
 map crl guiw
 " map crt g~iw
 
-" Comment the current inner paragraph
-map <C-->p vip :action CommentByLineComment<CR>:action VimVisualExitMode<CR>
-
 imap <c-a> <c-o>^
 imap <c-e> <c-o>$<Right>
 
@@ -148,8 +144,27 @@ nmap ]< j0<<k_
 nmap [> k0>>j_
 nmap [< k0<<j_
 
+" enable plugins
+" https://github.com/tpope/vim-surround/blob/master/doc/surround.txt#L138
+" If f, F, or <C-F> is used, Vim prompts for a function name to insert.
+set surround
+set multiple-cursors
+set commentary " gcc gcip
+
+" set idea-specific settings
 set clipboard+=ideaput
 set smartjoin " to perform a join via the IDE (deprecated?)
 set ideajoin
+set ideamarks " :delmark A
+
+" set keep-english-in-normal
+
+nmap <C-n> :action GotoNextError<CR>
+nmap <C-p> :action GotoPreviousError<CR>
+
+imap <C-p> <ESC>:action HippieCompletion<CR>a
+imap <C-n> <ESC>:action HippieBackwardCompletion<CR>a
+
+imap <C-d> <C-o>x
 
 source ~/.ideavimrc.local

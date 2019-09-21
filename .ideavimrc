@@ -118,8 +118,8 @@ map <leader>se :e ~/.ideavimrc<CR>
 map <leader>ss :source ~/.ideavimrc<CR>
 map <leader>sl :e ~/.ideavimrc.local<CR>
 
-map <leader>- :action VimWindowSplitHorizontal<CR>
-map <leader>\ :action VimWindowSplitVertical<CR>
+map <leader>- :action SplitHorizontally<CR>
+map <leader>\ :action SplitVertically<CR>
 
 map cru gUiw
 map crl guiw

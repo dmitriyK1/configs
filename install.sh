@@ -5,6 +5,7 @@ source osx.sh
 echo "Installing npm packages"
 npm i -g npm-check-updates@latest
 npm i -g nodemon@latest
+npm i -g npkill@latest
 npm i -g serve@latest
 npm i -g create-react-app@latest
 npm i -g tldr@latest --unsafe-perm=true

@@ -48,6 +48,7 @@ alias gt "git checkout -"
 alias gtl "gt; gpl"
 alias gre "git reset"
 alias gre. "git reset ."
+alias grE 'git reset --hard "@{u}"'
 alias grch "git reset .; git checkout ."
 alias gi "git init"
 alias gia "git iadd"

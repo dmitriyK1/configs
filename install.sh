@@ -134,6 +134,10 @@ brew install pipenv
 brew install boost-python # for ctrlp cpsm
 
 # brew git tools start ##################################################################
+brew tap dandavison/delta https://github.com/dandavison/delta
+brew install dandavison/delta/git-delta
+git config --global core.pager "delta --dark"  # --light for light terminal backgrounds
+
 brew install legit
 brew install git-recent
 brew install git-fresh

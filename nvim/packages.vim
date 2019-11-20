@@ -129,4 +129,7 @@ Plug 'vim-scripts/CursorLineCurrentWindow'
 " An eye friendly plugin that fades your inactive buffers and preserves your syntax highlighting!
 Plug 'TaDaa/vimade'
 
+" Smooth scrolling for Vim done right
+Plug 'psliwka/vim-smoothie'
+
 call plug#end()

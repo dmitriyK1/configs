@@ -44,6 +44,9 @@ Plug 'justinmk/vim-dirvish' "{{{
   command! -nargs=? -complete=dir Vexplore leftabove vsplit | silent Dirvish <args>
 "}}}
 
+" Smooth scrolling for Vim done right
+Plug 'psliwka/vim-smoothie'
+
 " DOESN'T WORK
 " Plug 'kristijanhusak/vim-dirvish-git'
 

@@ -1,6 +1,8 @@
 " list of all actions - :actionlist
 " example config https://github.com/amzyang/dotfiles/blob/master/.ideavimrc
 
+" Manipulate case: guu, gUU, g~~
+
 let mapleader=" "
 let maplocalleader=" "
 
@@ -150,6 +152,7 @@ nmap [< k0<<j_
 set surround
 set multiple-cursors
 set commentary " gcc gcip
+set easymotion
 
 " set idea-specific settings
 set clipboard+=ideaput

@@ -23,11 +23,10 @@ set wrapscan
 set nonumber
 " set relativenumber
 nmap <leader><leader> :w<cr>
-nmap <C-s> <leader><leader> :w<cr>
 " nnoremap <space> :
 nnoremap Q :
 nnoremap <silent> <C-l> :nohlsearch<CR>
-set clipboard=unnamed, unnamedplus
+set clipboard=unnamed,unnamedplus
 set visualbell
 set nonumber
 set scrolloff=9999

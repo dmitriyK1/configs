@@ -65,7 +65,7 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,nbsp:. " Highlight probl
 set gdefault
 
 " set formatoptions=qrn1
-set formatoptions+=cqron1                   " Some useful formatting options
+" set formatoptions+=cqron1                   " Some useful formatting options
 
 set shiftwidth=4
 set shiftround

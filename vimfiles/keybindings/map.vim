@@ -298,3 +298,9 @@ nnoremap g<Backspace> mzA<Backspace><Esc>`z
 " Repeatable nnoremap gs. f.i<CR><Esc>
 " Repeatable nnoremap gss i<CR><Esc>
 " Repeatable nnoremap gs<space> hf<space>xi<CR><Esc>
+
+" Manipulate indent of previous/next lines (without moving cursor)
+nmap ]> j0>>k_
+nmap ]< j0<<k_
+nmap [> k0>>j_
+nmap [< k0<<j_

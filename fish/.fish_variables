@@ -20,9 +20,9 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 # nodejs per-project version manager
 # https://github.com/notion-cli/notion
-set --export NOTION_HOME $HOME/.notion
-set --export PATH $NOTION_HOME/bin $PATH
-set --export PATH $NOTION_HOME $PATH
+# set --export NOTION_HOME $HOME/.notion
+# set --export PATH $NOTION_HOME/bin $PATH
+# set --export PATH $NOTION_HOME $PATH
 
 set --export PATH /opt/local/bin $PATH
 set --export PATH $HOME/.node_modules_global/bin $PATH

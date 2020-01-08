@@ -47,6 +47,8 @@ echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
 echo "Installing brew packages"
+brew install rga # ripgrep-all
+brew install pandoc poppler tesseract ffmpeg # ripgrep-all dependencies
 brew install trash
 brew install watch # watch command output
 brew install bat

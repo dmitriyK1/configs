@@ -201,7 +201,8 @@ alias fp='ls | fpp'
 
 alias cal='cal | grep --color -EC6 "\b"(date +%e | sed "s/ //g")'
 
-alias rg="rg -i --color=always --glob='!flow-typed/*'"
+alias rg="rg -i --color=always --glob='!flow-typed/*' --hidden"
+alias rga="rga --hidden"
 alias rgf="rg -F"
 alias rgw="rg -w"
 alias rgn="rg -l"

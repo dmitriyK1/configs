@@ -108,6 +108,7 @@ brew cask install station
 brew cask install charles
 brew cask install mongodb-compass
 brew cask install edex-ui
+brew cask install battery-guardian
 # brew cask install google-chrome
 # brew cask install firefox
 # brew cask install skype

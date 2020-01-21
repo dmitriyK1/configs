@@ -4,7 +4,10 @@ Plug 'chaoren/vim-wordmotion' " {{{
 "}}}
 
 " Extended f, F, t and T key mappings for Vim
-Plug 'rhysd/clever-f.vim'
+Plug 'rhysd/clever-f.vim' "{{{
+  map ; <Plug>(clever-f-repeat-forward)
+  map , <Plug>(clever-f-repeat-back)
+"}}}
 
 Plug 'easymotion/vim-easymotion' "{{{
   map = <Plug>(easymotion-prefix)

@@ -10,6 +10,8 @@ Plug 'rhysd/clever-f.vim' "{{{
 "}}}
 
 Plug 'easymotion/vim-easymotion' "{{{
+  let g:EasyMotion_smartcase = 1
+  let g:EasyMotion_enter_jump_first = 1
   map = <Plug>(easymotion-prefix)
   map <M-f> =f
   map <M-b> =F

@@ -92,4 +92,3 @@ source ~/vimfiles/highlight.vim
 source ~/vimfiles/final.vim
 
 " TODO remove keybindings that available in unimpaired / rarely used
-" TODO use common packages for vim & nvim to avoid syncing configs

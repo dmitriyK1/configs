@@ -105,7 +105,7 @@ set completeopt=menu
 
 set complete=.,w,b,u
 
-set wrapscan
+set nowrapscan
 set cmdheight=1
 
 "set laststatus=2

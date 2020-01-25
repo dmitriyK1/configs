@@ -58,7 +58,7 @@ alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%
 alias gll="git log --oneline --decorate --no-merges"
 alias glp="git log -p --stat --no-merges"
 alias gls="git log -S"
-alias glr="git log ...origin/(git branch | grep \* | cut -d ' ' -f2)" # compare commit on remote branch
+alias glr="gf; git log ...origin/(git branch | grep \* | cut -d ' ' -f2)" # compare commit on remote branch
 alias gma="git merge --abort"
 alias gmr="git merge"
 # gitu - from .fish_functions
@@ -68,7 +68,7 @@ alias gcln="git clean -df"
 alias gca="git commit --amend"
 alias gac="git add -u; git commit -m"
 alias grepall="git branch -a | tr -d \* | sed '/->/d' | xargs git grep"
-alias gf "git fetch --prune"
+alias gf "git fetch --all --prune --quiet"
 alias gfo "git follow" # requires https://github.com/nickolasburr/git-follow
 alias gs "git status"
 alias gS "git branch-status"
@@ -118,9 +118,9 @@ alias gDen "git diff dev HEAD --name-only"
 alias gden "git diff develop HEAD --name-only"
 alias gdm "git diff master HEAD"
 # from https://stackoverflow.com/questions/4944376/how-to-check-real-git-diff-before-merging-from-remote-branch
-alias gdr "git fetch; git diff ...origin/(git branch | grep \* | cut -d ' ' -f2)" # compare with a same remote branch
-alias gdrm "git fetch; git diff ...origin/master"
-alias gdrd "git fetch; git diff ...origin/develop"
+alias gdr "gf; git diff ...origin/(git branch | grep \* | cut -d ' ' -f2)" # compare with a same remote branch
+alias gdrm "gf; git diff ...origin/master"
+alias gdrd "gf; git diff ...origin/develop"
 alias ga "git add"
 alias ga.="ga ."
 alias gaa="ga ."

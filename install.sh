@@ -118,7 +118,7 @@ brew cask install battery-guardian
 # brew cask install docker
 brew cask install kitematic
 # brew cask install vagrant
-# brew cask install virtualbox
+brew cask install virtualbox
 # brew cask install ngrok
 # brew cask install tunnelblick
 # brew cask install sequel-pro

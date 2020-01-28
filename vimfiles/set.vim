@@ -105,7 +105,7 @@ set completeopt=menu
 
 set complete=.,w,b,u
 
-set nowrapscan
+set wrapscan " enabled to prevent missing occurences higher than current cursor line
 set cmdheight=1
 
 "set laststatus=2

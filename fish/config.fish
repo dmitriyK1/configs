@@ -53,6 +53,8 @@ set theme_color_scheme gruvbox
 set -g theme_nerd_fonts yes
 set -g theme_display_docker_machine yes
 set -g fish_prompt_pwd_dir_length 0
+set -g theme_display_nvm yes
+set -g theme_display_jobs_verbose yes
 
 source ~/fish/.fish_variables
 source ~/fish/.fish_functions

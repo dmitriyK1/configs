@@ -104,7 +104,6 @@ function! MyFollowSymlink(...)
   let &shm=sshm
 
   unlet! b:git_dir
-  call fugitive#detect(resolvedfile)
 
   if &modifiable
     " Only display a note when editing a file, especially not for `:help`.

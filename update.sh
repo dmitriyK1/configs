@@ -58,6 +58,7 @@ command npm install npm -g # store modules in ~/.node_modules_global via `npm co
 source $HOME/npm-upgrade.sh
 
 echo 'updating yarn'
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 yarn global upgrade
 
 echo 'updating rustup'

@@ -19,11 +19,11 @@ nvim +PlugUpgrade +PlugUpdate +PlugClean +qall!
 # cd ~/.emacs.d
 # git pull
 
-# if type -q doom
-#     doom -y upgrade
-#     doom -y update
-#     doom -y refresh
-# end
+if type -q doom
+    doom purge
+    doom clean
+    doom -y upgrade
+end
 
 echo 'updating python packages'
 pip2 install --upgrade pip

@@ -45,7 +45,7 @@ brew cask upgrade
 brew cleanup
 
 echo 'updating fish shell'
-fisher
+fisher # Run `fisher` to update everything that is currently installed. There is no dedicated update command.
 fisher self-update
 fish_update_completions
 omf update

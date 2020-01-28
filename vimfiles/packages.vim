@@ -39,4 +39,6 @@ source ~/vimfiles/packages/text_manipulation.vim
 source ~/vimfiles/packages/text_objects.vim
 source ~/vimfiles/packages/try.vim
 
+" Plug 'dstein64/vim-startuptime'
+
 call plug#end()

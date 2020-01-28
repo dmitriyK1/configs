@@ -10,6 +10,9 @@ nnoremap <leader>C :let &scrolloff=999-&scrolloff+3<cr>
 " compare open splits
 nmap <silent> <leader>D :windo diffthis<CR>
 
+" close buffer (preserving splits layout)
+nmap <leader>d :ene<CR>:bw #<CR>
+
 " E ================================================================================
 " Some helpers to edit mode
 " http://vimcasts.org/e/14

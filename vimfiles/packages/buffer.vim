@@ -9,7 +9,6 @@
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' } "{{{
   let g:sayonara_confirm_quit = 1
   map <silent> <leader>c :Sayonara<CR>
-  map <silent> <leader>d :Sayonara<CR>
 " }}}
 
 " CtrlP plugin: Filetype finder and setter

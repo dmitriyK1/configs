@@ -60,4 +60,7 @@ source $HOME/npm-upgrade.sh
 echo 'updating yarn'
 yarn global upgrade
 
+echo 'updating rustup'
+rustup update
+
 exit 0

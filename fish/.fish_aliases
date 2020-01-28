@@ -94,7 +94,7 @@ alias gstpu "git stash push"
 # https://rubygems.org/gems/git-blame-color/versions/0.1.0
 
 alias gbl "git-blame-color"
-alias gc "git commit -mv"
+alias gc "git commit -v -m"
 alias gcz "git cz"
 alias gco "git checkout"
 alias gch "git checkout"

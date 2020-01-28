@@ -46,7 +46,7 @@ end
 
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
-# requires installing omf install bobthefish
+# requires `omf install bobthefish`
 set theme_color_scheme gruvbox
 # set theme_color_scheme dracula
 # set theme_color_scheme dark

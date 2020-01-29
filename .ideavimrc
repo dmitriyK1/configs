@@ -112,7 +112,7 @@ map ]d j0ddk<leader><leader>
 map [e :action MoveLineUp<CR>
 map ]e :action MoveLineDown<CR>
 
-" map <leader>l :action AceLineAction<CR>
+map <leader>L :action AceLineAction<CR>
 map <leader>a :action AceTargetAction<CR>
 map <leader>d :action AceDeclarationAction<CR>
 map <leader>W :action AceWordAction<CR>

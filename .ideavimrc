@@ -115,6 +115,9 @@ map ]e :action MoveLineDown<CR>
 " map <leader>l :action AceLineAction<CR>
 map <leader>a :action AceTargetAction<CR>
 map <leader>d :action AceDeclarationAction<CR>
+map <leader>W :action AceWordAction<CR>
+map <leader>w :action AceWordForwardAction<CR>
+map <leader>b :action AceWordBackwardsAction<CR>
 nmap = :action AceAction<CR>
 nmap <M-;> :action AceAction<CR>
 imap <M-;> <Esc>:action AceAction<CR>i

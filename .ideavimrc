@@ -40,8 +40,11 @@ nmap dJ dG
 nmap dK dgg
 nmap vJ vG
 nmap vK vgg
-nmap <M-;> mgA;<Esc>`g
-imap <M-;> <Esc>mgA;<Esc>`gi<Right>
+nmap <C-;> mgA;<Esc>`g
+imap <C-;> <Esc>mgA;<Esc>`gi<Right>
+
+nmap <C-,> mgA,<Esc>`g
+imap <C-,> <Esc>mgA,<Esc>`gi<Right>
 
 " Git
 map <leader>gf :action Git.Fetch<CR>

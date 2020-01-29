@@ -112,10 +112,12 @@ map ]d j0ddk<leader><leader>
 map [e :action MoveLineUp<CR>
 map ]e :action MoveLineDown<CR>
 
-" map f :action AceAction<CR>
 " map <leader>l :action AceLineAction<CR>
 map <leader>a :action AceTargetAction<CR>
 map <leader>d :action AceDeclarationAction<CR>
+nmap = :action AceAction<CR>
+nmap <M-;> :action AceAction<CR>
+imap <M-;> <Esc>:action AceAction<CR>i
 
 map <leader>k :action HighlightUsagesInFile<CR>
 

@@ -42,9 +42,15 @@ nmap vJ vG
 nmap vK vgg
 nmap <C-;> mgA;<Esc>`g
 imap <C-;> <Esc>mgA;<Esc>`gi<Right>
+nmap <C-s> mgA;<Esc>`g
+imap <C-s> <Esc>mgA;<Esc>`gi<Right>
 
 nmap <C-,> mgA,<Esc>`g
 imap <C-,> <Esc>mgA,<Esc>`gi<Right>
+nmap <C-c> mgA,<Esc>`g
+imap <C-c> <Esc>mgA,<Esc>`gi<Right>
+
+map <C-.> :action EditorCompleteStatement<CR>
 
 " Git
 map <leader>gf :action Git.Fetch<CR>

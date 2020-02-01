@@ -74,6 +74,7 @@ brew install thefuck
 brew install fzf
 brew install fd
 brew install jq
+brew install jo
 brew install exa
 brew install tree
 brew install gron

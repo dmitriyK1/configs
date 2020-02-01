@@ -50,7 +50,7 @@ imap <C-,> <Esc>mgA,<Esc>`gi<Right>
 nmap <C-c> mgA,<Esc>`g
 imap <C-c> <Esc>mgA,<Esc>`gi<Right>
 
-map <C-.> :action EditorCompleteStatement<CR>
+nmap <C-.> :action EditorCompleteStatement<CR>
 
 " Git
 map <leader>gf :action Git.Fetch<CR>

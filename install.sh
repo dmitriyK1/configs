@@ -73,11 +73,14 @@ brew install ccat
 brew install thefuck
 brew install fzf
 brew install fd
-brew install jq
-brew install jo
+
+# JSON tools
+brew install jq # Command-line JSON processor
+brew install jo # JSON output from a shell
+brew install gron # Make JSON greppable!
+
 brew install exa
 brew install tree
-brew install gron
 brew install heroku/brew/heroku
 brew install cheat
 brew install wget

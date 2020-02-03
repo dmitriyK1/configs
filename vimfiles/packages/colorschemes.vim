@@ -9,6 +9,7 @@ Plug 'owickstrom/vim-colors-paramount'
 Plug 'rakr/vim-two-firewatch'
 Plug 'tyrannicaltoucan/vim-quantum'
 
+" Plug 'sainnhe/vim-color-forest-night'
 " Plug 'nightsense/stellarized'
 " Plug 'nightsense/strawberry'
 " Plug 'nightsense/cosmic_latte'

@@ -177,6 +177,7 @@ pip install virtualfish
 pip install mu-repo # handle multiple repositories
 pip install git-sweep
 pip3 install pipdeptree
+pip3 install tmuxp # tmux session manager
 pip3 install flake8
 pip3 install pinggraph # gping
 python -m pip install pip_upgrade_outdated

@@ -1,5 +1,4 @@
 # Everything after a `#` symbol will be ignored
-
 danhper/fish-fastdir
 decors/fish-colored-man
 jethrokuan/fzf
@@ -15,5 +14,4 @@ oh-my-fish/plugin-pj
 # shinriyo/breeze
 FabioAntunes/fish-nvm
 laughedelic/pisces
-
 # vim: filetype=sh

@@ -20,9 +20,9 @@ nvim +PlugUpgrade +PlugUpdate +PlugClean +qall!
 # git pull
 
 if type -q doom
-    doom purge
-    doom clean
-    doom -y upgrade
+  doom purge
+  doom clean
+  doom -y upgrade
 end
 
 echo 'updating python packages'
@@ -62,6 +62,8 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 yarn global upgrade
 
 echo 'updating rustup'
-rustup update
+if type -q rustup
+  rustup update
+end
 
 exit 0

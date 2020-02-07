@@ -8,6 +8,7 @@ Plug 'jaredgorski/SpaceCamp'
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'rakr/vim-two-firewatch'
 Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'doums/darcula'
 
 " Plug 'sainnhe/vim-color-forest-night'
 " Plug 'nightsense/stellarized'

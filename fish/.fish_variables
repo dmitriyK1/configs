@@ -53,6 +53,9 @@ set --export FZF_DEFAULT_OPTS '--ansi'
 # add support for ctrl+o to open selected file in Sublime text
 # export FZF_DEFAULT_OPTS="--ansi --bind='ctrl-o:execute(subl {})+abort'"
 
+# TODO alias to ctrl+o
+# fzf --preview '/usr/local/bin/bat {} --color=always'
+
 # NOTE: disable '--ansi' and '--color=always' to speedup
 set --export BAT_THEME 'TwoDark'
 

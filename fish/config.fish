@@ -86,3 +86,5 @@ source ~/.iterm2_shell_integration.(basename $SHELL)
 eval (python3 -m virtualfish)
 
 status --is-interactive; and source (pyenv init -|psub)
+
+# starship init fish | source

@@ -100,6 +100,8 @@ brew install httpie # http client
 brew install colordiff # diff tool with syntax highlight `colordiff a.js b.js --side-by-side`
 # brew install mitmproxy
 brew install neomutt
+brew install broot
+brew install lsd
 
 # cask install start ##################################################################
 brew tap caskroom/cask

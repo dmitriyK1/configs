@@ -102,6 +102,7 @@ brew install colordiff # diff tool with syntax highlight `colordiff a.js b.js --
 brew install neomutt
 brew install broot
 brew install lsd
+brew install fzy
 
 # cask install start ##################################################################
 brew tap caskroom/cask

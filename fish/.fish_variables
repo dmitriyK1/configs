@@ -50,6 +50,8 @@ set --export FZF_ALT_C_COMMAND 'fd --type directory --hidden --follow --color=al
 set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set --export FZF_DEFAULT_OPTS '--ansi'
 
+set --export ENHANCD_FILTER 'fzy:fzf:peco'
+
 # add support for ctrl+o to open selected file in Sublime text
 # export FZF_DEFAULT_OPTS="--ansi --bind='ctrl-o:execute(subl {})+abort'"
 

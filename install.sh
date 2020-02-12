@@ -73,6 +73,7 @@ brew install ccat
 brew install thefuck
 brew install fzf
 brew install fd
+brew install awk
 
 # JSON tools
 brew install jq # Command-line JSON processor

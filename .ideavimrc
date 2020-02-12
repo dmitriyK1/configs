@@ -53,6 +53,7 @@ imap <C-c> <Esc>mgA,<Esc>`gi<Right>
 nmap <C-.> :action EditorCompleteStatement<CR>
 
 " Git
+map <leader>G :action Vcs.Operations.Popup<CR>
 map <leader>gf :action Git.Fetch<CR>
 map <leader>gpl :action Git.Pull<CR>
 map <leader>gpu :action Vcs.Push<CR>
@@ -183,5 +184,8 @@ imap <C-p> <ESC>:action HippieCompletion<CR>a
 imap <C-n> <ESC>:action HippieBackwardCompletion<CR>a
 
 imap <C-d> <C-o>x
+
+nmap <leader>hp :action VcsShowCurrentChangeMarker<CR>
+nmap <leader>hu :action Vcs.RollbackChangedLines<CR>
 
 source ~/.ideavimrc.local

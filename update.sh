@@ -66,4 +66,7 @@ if type -q rustup
   rustup update
 end
 
+echo 'updating hosts'
+python3 ~/Development/hosts/updateHostsFile.py --auto --minimise --backup --replace
+
 exit 0

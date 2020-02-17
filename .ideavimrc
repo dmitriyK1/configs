@@ -53,94 +53,95 @@ imap <C-c> <Esc>mgA,<Esc>`gi<Right>
 nmap <C-.> :action EditorCompleteStatement<CR>
 
 " Git
-map <leader>G :action Vcs.Operations.Popup<CR>
-map <leader>gf :action Git.Fetch<CR>
-map <leader>gpl :action Git.Pull<CR>
-map <leader>gpu :action Vcs.Push<CR>
-map <leader>gm :action Git.Merge<CR>
-map <leader>gd :action Compare.SameVersion<CR>
-map <leader>gc :action CheckinProject<CR>
-map <leader>gst :action Git.Stash<CR>
-map <leader>gust :action Git.Unstash<CR>
-map <leader>grb :action Git.Rebase<CR>
-map <leader>gre :action Git.Reset<CR>
-map <leader>grm :action Git.Configure.Remotes<CR>
-map <leader>gn :action Git.CreateNewBranch<CR><Esc>
-map <leader>gb :action Git.Branches<CR><Esc>
-map <leader>gl :action Vcs.Show.Log<CR>
-map <leader>ga :action Git.Add<CR>
+nmap <leader>G :action Vcs.Operations.Popup<CR>
+nmap <leader>gf :action Git.Fetch<CR>
+nmap <leader>gpl :action Git.Pull<CR>
+nmap <leader>gpu :action Vcs.Push<CR>
+nmap <leader>gm :action Git.Merge<CR>
+nmap <leader>gd :action Compare.SameVersion<CR>
+nmap <leader>gc :action CheckinProject<CR>
+nmap <leader>gst :action Git.Stash<CR>
+nmap <leader>gust :action Git.Unstash<CR>
+nmap <leader>grb :action Git.Rebase<CR>
+nmap <leader>gre :action Git.Reset<CR>
+nmap <leader>grm :action Git.Configure.Remotes<CR>
+nmap <leader>gn :action Git.CreateNewBranch<CR><Esc>
+nmap <leader>gb :action Git.Branches<CR><Esc>
+nmap <leader>gl :action Vcs.Show.Log<CR>
+nmap <leader>ga :action Git.Add<CR>
 
 " Refactorings
-map <leader>ri :action Inline<CR>
-map <leader>rr :action RenameElement<CR>
-map <leader>rv :action IntroduceVariable<CR>
-map <leader>rm :action Move<CR>
-map <leader>ro :action OptimizeImports<CR>
-map <leader>rs :action SurroundWith<CR>
-map <leader>re :action SurroundWithEmmet<CR>
+nmap <leader>ri :action Inline<CR>
+nmap <leader>rr :action RenameElement<CR>
+nmap <leader>rv :action IntroduceVariable<CR>
+nmap <leader>rm :action Move<CR>
+nmap <leader>ro :action OptimizeImports<CR>
+nmap <leader>rs :action SurroundWith<CR>
+nmap <leader>re :action SurroundWithEmmet<CR>
 
 " Goto
-map <leader>fa :action GotoAction<CR>
-map <leader>ff :action GotoFile<CR>
-map <leader>fs :action GotoSymbol<CR>
-map <leader>fu :action FindUsages<CR>
-map <leader>fp :action ManageRecentProjects<CR>
+nmap <leader>fa :action GotoAction<CR>
+nmap <leader>ff :action GotoFile<CR>
+nmap <leader>fs :action GotoSymbol<CR>
+nmap <leader>fu :action FindUsages<CR>
+nmap <leader>fp :action ManageRecentProjects<CR>
 
 " Plugins
-map <leader>pi :action WelcomeScreen.Plugins<CR>
-map <leader>pu :action CheckForUpdate<CR>
+nmap <leader>pi :action WelcomeScreen.Plugins<CR>
+nmap <leader>pu :action CheckForUpdate<CR>
 
 " StringManipulation
-map crs :action StringManipulation.ToSnakeCaseOrCamelCase<CR>
-map crp :action StringManipulation.ToPascalCaseOrCamelCase<CR>
-map crh :action StringManipulation.ToHyphenCaseOrCamelCase<CR>
-map crt :action StringManipulation.SwitchStyleAction<CR>
+nmap crs :action StringManipulation.ToSnakeCaseOrCamelCase<CR>
+nmap crp :action StringManipulation.ToPascalCaseOrCamelCase<CR>
+nmap crh :action StringManipulation.ToHyphenCaseOrCamelCase<CR>
+nmap crt :action StringManipulation.SwitchStyleAction<CR>
+
+nmap cru gUiw
+nmap crl guiw
+" map crt g~iw
 
 " Close
-map <leader>cp :action CloseProject<CR>
+nmap <leader>cp :action CloseProject<CR>
 
 " tool windows
-map <leader>te :action ActivateEventLogToolWindow<CR>
-map <leader>tp :action ActivateProjectToolWindow<CR>
-map <leader>ts :action ActivateStructureToolWindow<CR>
-map <leader>tt :action ActivateTerminalToolWindow<CR>
-map <leader>to :action ActivateTODOToolWindow<CR>
-map <leader>tv :action ActivateVersionControlToolWindow<CR>
+nmap <leader>te :action ActivateEventLogToolWindow<CR>
+nmap <leader>tp :action ActivateProjectToolWindow<CR>
+nmap <leader>ts :action ActivateStructureToolWindow<CR>
+nmap <leader>tt :action ActivateTerminalToolWindow<CR>
+nmap <leader>to :action ActivateTODOToolWindow<CR>
+nmap <leader>tv :action ActivateVersionControlToolWindow<CR>
+nmap <leader>th :action ToggleInlayHintsGloballyAction<CR>
 
-map [<Space> O<Esc>j<leader><leader>
-map ]<Space> o<Esc>k<leader><leader>
+nmap [<Space> O<Esc>j<leader><leader>
+nmap ]<Space> o<Esc>k<leader><leader>
 
-map [x k0dd<leader><leader>
-map ]x j0ddk<leader><leader>
+nmap [x k0dd<leader><leader>
+nmap ]x j0ddk<leader><leader>
 
-map [d k0dd<leader><leader>
-map ]d j0ddk<leader><leader>
+nmap [d k0dd<leader><leader>
+nmap ]d j0ddk<leader><leader>
 
-map [e :action MoveLineUp<CR>
-map ]e :action MoveLineDown<CR>
+nmap [e :action MoveLineUp<CR>
+nmap ]e :action MoveLineDown<CR>
 
-map <leader>L :action AceLineAction<CR>
-map <leader>a :action AceTargetAction<CR>
-map <leader>d :action AceDeclarationAction<CR>
-map <leader>W :action AceWordAction<CR>
-map <leader>w :action AceWordForwardAction<CR>
-map <leader>b :action AceWordBackwardsAction<CR>
+nmap <leader>L :action AceLineAction<CR>
+nmap <leader>a :action AceTargetAction<CR>
+nmap <leader>d :action AceDeclarationAction<CR>
+nmap <leader>W :action AceWordAction<CR>
+nmap <leader>w :action AceWordForwardAction<CR>
+nmap <leader>b :action AceWordBackwardsAction<CR>
 nmap = :action AceAction<CR>
 nmap <M-;> :action AceAction<CR>
 imap <M-;> <Esc>:action AceAction<CR>i
 
-map <leader>k :action HighlightUsagesInFile<CR>
+nmap <leader>k :action HighlightUsagesInFile<CR>
 
-map <leader>se :e ~/.ideavimrc<CR>
-map <leader>ss :source ~/.ideavimrc<CR>
-map <leader>sl :e ~/.ideavimrc.local<CR>
+nmap <leader>se :e ~/.ideavimrc<CR>
+nmap <leader>ss :source ~/.ideavimrc<CR>
+nmap <leader>sl :e ~/.ideavimrc.local<CR>
 
-map <leader>- :action SplitHorizontally<CR>
-map <leader>\ :action SplitVertically<CR>
-
-map cru gUiw
-map crl guiw
-" map crt g~iw
+nmap <leader>- :action SplitHorizontally<CR>
+nmap <leader>\ :action SplitVertically<CR>
 
 imap <c-a> <c-o>^
 imap <c-e> <c-o>$<Right>

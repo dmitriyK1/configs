@@ -187,5 +187,7 @@ imap <C-d> <C-o>x
 
 nmap <leader>hp :action VcsShowCurrentChangeMarker<CR>
 nmap <leader>hu :action Vcs.RollbackChangedLines<CR>
+nmap <C-i> :action Back<CR>
+nmap <C-o> :action Forward<CR>
 
 source ~/.ideavimrc.local

@@ -57,6 +57,7 @@ set -g theme_display_nvm yes
 set -g theme_display_jobs_verbose yes
 set -g theme_show_exit_status yes
 set -g theme_date_format "+%a %d-%m-%Y [%H:%M]"
+# set -g fish_hybrid_key_bindings
 
 source ~/fish/.fish_variables
 source ~/fish/.fish_functions

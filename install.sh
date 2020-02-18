@@ -108,6 +108,8 @@ brew install lsd
 brew install fzy
 
 # cask install start ##################################################################
+brew tap homebrew/cask-fonts
+brew cask install font-firacode-nerd-font
 brew tap caskroom/cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew cask install slack

@@ -199,6 +199,9 @@ nnoremap Y y$
 " nnoremap Vab vabV
 " nnoremap VaB vaBV
 
+" select a whole buffer
+nmap vv ggVG
+
 " -------------------Z--------------------
 " Easier horizontal scrolling
 map zl zL

@@ -191,4 +191,7 @@ nmap <leader>hu :action Vcs.RollbackChangedLines<CR>
 nmap <C-i> :action Forward<CR>
 nmap <C-o> :action Back<CR>
 
+nmap <C-w>t :action ChangeSplitOrientation<CR>
+nmap <leader>= :action ChangeSplitOrientation<CR>
+
 source ~/.ideavimrc.local

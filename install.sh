@@ -50,6 +50,8 @@ echo "Installing brew packages"
 brew install rga # ripgrep-all
 brew install pandoc poppler tesseract ffmpeg # ripgrep-all dependencies
 brew install trash
+brew install bandcamp-dl
+brew install youtube-dl
 brew install watch # watch command output
 brew install bat
 # brew install fdclone # file manager

@@ -212,7 +212,7 @@ alias rgh="rg --hidden"
 alias rr="ranger"
 
 alias ls='exa -lha --icons --git --group-directories-first'
-alias ll='ls'
+alias ll='lsd -lA -F --group-dirs=first'
 alias lc='colorls --gs -la'
 
 alias tree='tree -a'

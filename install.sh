@@ -3,6 +3,7 @@
 source osx.sh
 
 echo "Installing npm packages"
+npm i -g dependency-check@latest
 npm i -g npm-check-updates@latest
 npm i -g nodemon@latest
 npm i -g npkill@latest

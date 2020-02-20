@@ -182,7 +182,7 @@ alias sea "vim ~/fish/.fish_aliases"
 alias seal "vim ~/.fish_aliases.local"
 alias sef "vim ~/fish/.fish_functions"
 alias sev "vim ~/fish/.fish_variables"
-alias sc="pushd .; cd ~/configs; legit sync; popd; reload"
+alias sc="pushd .; cd ~/configs; gdr; legit sync; popd; reload"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation

@@ -164,6 +164,9 @@ brew install git-extras
 brew install diff-so-fancy
 brew install git-town # Generic, high-level Git workflow support
 
+brew tap isacikgoz/taps
+brew install gitbatch
+
 brew tap alexdavid/homebrew-tap
 brew install git-branch-status
 

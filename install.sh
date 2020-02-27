@@ -175,7 +175,7 @@ brew install interactive-rebase-tool
 git config --global sequence.editor interactive-rebase-tool
 
 brew install git-when-merged
-brew install git-plus
+brew install git-plus # has commands to work over multiple repos; more here https://myrepos.branchable.com/
 brew install git-imerge
 brew install grv
 brew install gibo # .gitignore generator

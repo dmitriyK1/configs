@@ -70,4 +70,7 @@ echo 'updating hosts'
 python3 ~/Development/hosts/updateHostsFile.py --auto --minimise --backup --replace
 sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 
+# echo 'updating node'
+# nvm install node --reinstall-packages-from=node
+
 exit 0

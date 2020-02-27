@@ -53,6 +53,9 @@ omf update
 echo 'checking Apple Updates'
 /usr/sbin/softwareupdate -ia
 
+echo 'updating node'
+nvm install node --reinstall-packages-from=node
+
 echo 'updating npm'
 command npm install npm -g # store modules in ~/.node_modules_global via `npm config set prefix=$HOME/.node_modules_global`
 source $HOME/npm-upgrade.sh
@@ -69,8 +72,5 @@ end
 echo 'updating hosts'
 python3 ~/Development/hosts/updateHostsFile.py --auto --minimise --backup --replace
 sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
-
-# echo 'updating node'
-# nvm install node --reinstall-packages-from=node
 
 exit 0

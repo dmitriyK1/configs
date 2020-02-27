@@ -116,6 +116,7 @@ brew tap caskroom/cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package quicklookase qlvideo
 brew cask install slack
 brew cask install rectangle
+brew cask install bitbar
 brew cask install commander-one
 brew cask install insomnia # Cross-platform HTTP and GraphQL Client https://insomnia.rest
 brew cask install franz # messaging app http://meetfranz.com

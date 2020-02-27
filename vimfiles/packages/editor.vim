@@ -85,3 +85,9 @@ Plug 'ntpeters/vim-better-whitespace' "{{{
 
 " Toggles between hybrid and absolute line numbers automatically
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
+" A Vim Window Animation Library (lens.vim optional dependency)
+Plug 'camspiers/animate.vim'
+
+" A Vim Automatic Window Resizing Plugin
+Plug 'camspiers/lens.vim'

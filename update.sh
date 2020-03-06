@@ -69,8 +69,8 @@ if type -q rustup
   rustup update
 end
 
-echo 'updating hosts'
-python3 ~/Development/hosts/updateHostsFile.py --auto --minimise --backup --replace
-sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+# echo 'updating hosts'
+# python3 ~/Development/hosts/updateHostsFile.py --auto --minimise --backup --replace
+# sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 
 exit 0

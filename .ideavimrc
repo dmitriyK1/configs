@@ -194,4 +194,7 @@ nmap <C-o> :action Back<CR>
 nmap <C-w>t :action ChangeSplitOrientation<CR>
 nmap <leader>= :action ChangeSplitOrientation<CR>
 
+nmap yon :set number!<CR>
+nmap yor :set relativenumber!<CR>
+
 source ~/.ideavimrc.local

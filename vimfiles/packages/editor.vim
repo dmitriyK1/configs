@@ -91,3 +91,9 @@ Plug 'camspiers/animate.vim'
 
 " A Vim Automatic Window Resizing Plugin
 Plug 'camspiers/lens.vim'
+
+" Land on window you chose like tmux's 'display-pane'
+Plug 't9md/vim-choosewin' "{{{
+  let g:choosewin_overlay_enable = 1
+  nmap  <C-w>-  <Plug>(choosewin)
+"}}}

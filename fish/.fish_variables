@@ -26,6 +26,7 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 set --export PATH /opt/local/bin $PATH
 set --export PATH $HOME/.node_modules_global/bin $PATH
+set --export PATH $HOME/.nimble/bin $PATH
 set --export PATH $HOME/.yarn/bin $PATH
 # set --export PATH $HOME/.git-semantic-commits $PATH
 set --export PATH $HOME/.cargo/bin $PATH

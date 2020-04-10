@@ -38,6 +38,7 @@
 #     powerline-shell --shell bare $status
 # end
 
+# fisher automatic install
 if not functions -q fisher
   set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
   curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
@@ -63,12 +64,12 @@ source ~/fish/.fish_variables
 source ~/fish/.fish_functions
 source ~/fish/.fish_aliases
 
-source (npx --shell-auto-fallback fish | psub)
+# source (npx --shell-auto-fallback fish | psub)
 
 # https://github.com/andsens/homeshick/wiki/Tutorials
-[ -f $HOME/.homesick/repos/homeshick/homeshick.fish ]; and source "$HOME/.homesick/repos/homeshick/homeshick.fish"
+# [ -f $HOME/.homesick/repos/homeshick/homeshick.fish ]; and source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
-source ~/.iterm2_shell_integration.(basename $SHELL)
+# source ~/.iterm2_shell_integration.(basename $SHELL)
 
 # thefuck --alias | source
 # caniuse --completion-fish | source
@@ -76,16 +77,16 @@ source ~/.iterm2_shell_integration.(basename $SHELL)
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+# [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
 
 [ -f $HOME/config.local.fish ]; and source $HOME/config.local.fish
 
 # activate https://github.com/adambrenecki/virtualfish
-eval (python3 -m virtualfish)
+# eval (python3 -m virtualfish)
 
-status --is-interactive; and source (pyenv init -|psub)
+# status --is-interactive; and source (pyenv init -|psub)
 
 # starship init fish | source

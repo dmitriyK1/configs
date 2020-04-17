@@ -169,6 +169,9 @@ set surround
 set multiple-cursors
 set commentary " gcc gcip
 set easymotion
+set argtextobj
+set textobj-entire
+set ReplaceWithRegister
 
 " set idea-specific settings
 set clipboard+=ideaput

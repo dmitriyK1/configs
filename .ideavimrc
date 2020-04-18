@@ -200,4 +200,6 @@ nmap <leader>= :action ChangeSplitOrientation<CR>
 nmap yon :set number!<CR>
 nmap yor :set relativenumber!<CR>
 
+nmap <leader>q :action NewScratchBuffer<CR>
+
 source ~/.ideavimrc.local

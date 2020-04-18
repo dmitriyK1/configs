@@ -178,6 +178,7 @@ set clipboard+=ideaput
 set smartjoin " to perform a join via the IDE (deprecated?)
 set ideajoin
 set ideamarks " :delmark A
+set ideastatusicon=gray
 
 " set keep-english-in-normal
 

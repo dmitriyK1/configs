@@ -97,3 +97,6 @@ Plug 't9md/vim-choosewin' "{{{
   let g:choosewin_overlay_enable = 1
   nmap  <C-w>-  <Plug>(choosewin)
 "}}}
+
+" Intelligently reopen files at your last edit position in Vim
+" Plug 'farmergreg/vim-lastplace'

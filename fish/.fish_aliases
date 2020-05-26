@@ -203,7 +203,7 @@ alias fp='ls | fpp'
 
 alias cal='cal | grep --color -EC6 "\b"(date +%e | sed "s/ //g")'
 
-alias rg="rg -i --color=always --glob='!flow-typed/*' --hidden --smart-case"
+alias rg="rg -i --color=always --hidden --smart-case"
 alias rga="rga --hidden"
 alias rgf="rg -F"
 alias rgw="rg -w"
@@ -253,7 +253,7 @@ alias gsw="legit switch"
 # fuzzy select and jump into folder
 alias jf="cd (cat ~/Library/autojump/autojump.txt | sort -nr | awk '{print \$2}' | fzf +s)"
 alias diff="colordiff"
-alias ncdu="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias ncdu="ncdu --color dark -x --exclude .git --exclude node_modules"
 alias du="ncdu"
 alias cat='bat'
 alias ping='prettyping --nolegend'

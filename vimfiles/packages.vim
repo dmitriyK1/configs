@@ -33,7 +33,7 @@ source ~/vimfiles/packages/highlight.vim
 source ~/vimfiles/packages/navigation.vim
 source ~/vimfiles/packages/paste.vim
 source ~/vimfiles/packages/preview.vim
-source ~/vimfiles/packages/python.vim
+" source ~/vimfiles/packages/python.vim
 source ~/vimfiles/packages/search.vim
 source ~/vimfiles/packages/text_manipulation.vim
 source ~/vimfiles/packages/text_objects.vim

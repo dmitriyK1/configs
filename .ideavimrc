@@ -172,6 +172,8 @@ set easymotion
 set argtextobj
 set textobj-entire
 set ReplaceWithRegister
+set highlightedyank
+let g:highlightedyank_highlight_duration = "1000"
 
 " set idea-specific settings
 set clipboard+=ideaput

@@ -57,16 +57,20 @@ Plug 'AndrewRadev/switch.vim', { 'on': 'Switch' } "{{{
   nnoremap <silent> g- :Switch<CR>
 "}}}
 
+" DEPRECATED
 " Sublime Text style multiple selections for Vim
-Plug 'terryma/vim-multiple-cursors' "{{{
-  let g:multi_cursor_use_default_mapping=0
-  let g:multi_cursor_exit_from_insert_mode=0
-  " let g:multi_cursor_quit_key='<Esc>'
-  let g:multi_cursor_quit_key='<C-c>'
-  let g:multi_cursor_next_key='<C-d>'
-
-  nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
+" Plug 'terryma/vim-multiple-cursors' "{{{
+  " let g:multi_cursor_use_default_mapping=0
+  " let g:multi_cursor_exit_from_insert_mode=0
+  " " let g:multi_cursor_quit_key='<Esc>'
+  " let g:multi_cursor_quit_key='<C-c>'
+  " let g:multi_cursor_next_key='<C-d>'
+  "
+  " nnoremap <silent> <C-c> :call multiple_cursors#quit()<CR>
 " }}}
+
+" Multiple cursors plugin for vim/neovim
+Plug 'mg979/vim-visual-multi'
 
 " colon and semicolon insertion plugin
 Plug 'lfilho/cosco.vim' "{{{

@@ -172,6 +172,7 @@ set easymotion
 set argtextobj
 set textobj-entire
 set ReplaceWithRegister
+set exchange
 set highlightedyank
 let g:highlightedyank_highlight_duration = "1000"
 

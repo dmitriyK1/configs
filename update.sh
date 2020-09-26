@@ -41,7 +41,7 @@ python3 -m pip_upgrade_outdated --verbose
 echo 'updating homebrew'
 brew update
 brew upgrade
-brew cask upgrade --greedy
+brew upgrade --cask --greedy
 brew cleanup
 
 echo 'updating fish shell'

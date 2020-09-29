@@ -110,3 +110,7 @@ Plug 'rhysd/committia.vim'
 " Vim and Neovim plugin to reveal the commit messages under the cursor
 " <Leader>gm
 Plug 'rhysd/git-messenger.vim'
+
+" Git support for dirvish.vim
+" ]f - jump to next "git" file [f - jump to previous "git" file
+Plug 'kristijanhusak/vim-dirvish-git'

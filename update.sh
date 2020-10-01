@@ -52,7 +52,7 @@ fish_update_completions
 omf update
 
 echo 'checking Apple Updates'
-/usr/sbin/softwareupdate -ia --force
+/usr/sbin/softwareupdate --all --install --force
 
 echo 'updating node'
 nvm install node --reinstall-packages-from=node

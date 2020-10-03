@@ -11,6 +11,7 @@ autojump --purge
 
 echo 'updating vim'
 vim +PlugUpgrade +PlugUpdate +qall!
+~/.vim/plugged/cpsm/install.sh
 
 echo 'updating neovim'
 nvim +PlugUpgrade +PlugUpdate +PlugClean +qall!
@@ -51,7 +52,7 @@ fish_update_completions
 omf update
 
 echo 'checking Apple Updates'
-/usr/sbin/softwareupdate -ia
+/usr/sbin/softwareupdate --all --install --force
 
 echo 'updating node'
 nvm install node --reinstall-packages-from=node

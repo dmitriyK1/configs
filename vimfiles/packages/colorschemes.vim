@@ -10,6 +10,7 @@ Plug 'rakr/vim-two-firewatch'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'doums/darcula'
 Plug 'wadackel/vim-dogrun'
+Plug 'sainnhe/edge'
 
 " Plug 'sainnhe/vim-color-forest-night'
 " Plug 'nightsense/stellarized'

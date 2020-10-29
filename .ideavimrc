@@ -171,8 +171,8 @@ set commentary " gcc gcip
 set easymotion
 set argtextobj
 set textobj-entire
-set ReplaceWithRegister
 set exchange
+set ReplaceWithRegister
 set highlightedyank
 let g:highlightedyank_highlight_duration = "1000"
 
@@ -206,5 +206,10 @@ nmap yon :set number!<CR>
 nmap yor :set relativenumber!<CR>
 
 nmap <leader>q :action NewScratchBuffer<CR>
+
+map <C-K> <Action>(CommentByLineComment)
+
+" disable ideavim in dialog windows
+" set ideaenabledbufs=
 
 source ~/.ideavimrc.local

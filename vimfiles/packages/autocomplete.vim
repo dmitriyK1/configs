@@ -43,6 +43,7 @@ Plug 'honza/vim-snippets'
 
 " ================================================================================
 " Dark powered asynchronous completion framework for neovim/Vim8
+" `pip3 install pynvim`
 Plug 'Shougo/deoplete.nvim' "{{{
   let g:deoplete#enable_at_startup = 1
 "}}}

@@ -27,6 +27,7 @@ alias ndd "npm dedupe"
 alias nls "npm ls"
 
 alias y "yarn"
+alias yas "yarn; yarn start"
 alias ys "yarn start"
 alias yb "yarn build"
 alias yt "yarn test"

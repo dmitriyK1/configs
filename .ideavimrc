@@ -209,6 +209,8 @@ nmap <leader>q :action NewScratchBuffer<CR>
 
 map <C-K> <Action>(CommentByLineComment)
 
+nmap <leader>yr <Action>(CopyReference)
+
 " disable ideavim in dialog windows
 " set ideaenabledbufs=
 

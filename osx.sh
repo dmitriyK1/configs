@@ -284,3 +284,6 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
 
 # Show hidden files
 defaults write com.apple.finder AppleShowAllFiles YES
+
+# Disable sleep by pressing power button
+defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool no

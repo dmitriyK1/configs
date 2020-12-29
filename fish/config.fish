@@ -90,3 +90,7 @@ source ~/fish/.fish_aliases
 # status --is-interactive; and source (pyenv init -|psub)
 
 # starship init fish | source
+
+# You must call it on initialization or listening to directory switching won't work
+# https://github.com/nvm-sh/nvm#deeper-shell-integration
+load_nvm

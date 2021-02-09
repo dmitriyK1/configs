@@ -172,6 +172,9 @@ set easymotion
 set argtextobj
 set textobj-entire
 set exchange
+" :NERDTree, :NERDTreeFocus, :NERDTreeToggle, :NERDTreeFind
+" j, k, o, t, s, x, p, K, r
+set NERDTree
 set ReplaceWithRegister
 set highlightedyank
 let g:highlightedyank_highlight_duration = "1000"
@@ -184,6 +187,8 @@ set ideamarks " :delmark A
 set ideastatusicon=gray
 
 " set keep-english-in-normal
+
+nmap <leader>n :NERDTree<CR>
 
 nmap <C-n> :action GotoNextError<CR>
 nmap <C-p> :action GotoPreviousError<CR>

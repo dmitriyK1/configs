@@ -76,3 +76,6 @@ Plug 'sheerun/vim-polyglot' "{{{
   " let g:javascript_conceal_prototype      = "#"
   " let g:javascript_conceal_infinity       = "∞"
 " }}}
+
+" Semantic Highlighting for Vim
+" Plug 'jaxbot/semantic-highlight.vim'

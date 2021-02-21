@@ -52,6 +52,14 @@ Plug 'justinmk/vim-dirvish' "{{{
 " Smooth scrolling for Vim done right
 Plug 'psliwka/vim-smoothie'
 
+"A lightweight Vim/Neovim plugin to display buffers and tabs in the tabline
+Plug 'pacha/vem-tabline' "{{{
+  let g:vem_tabline_show=2
+" }}}
+
+" Lightning fast left-right movement in Vim
+" Plug 'unblevable/quick-scope'
+
 " DOESN'T WORK
 " Plug 'kristijanhusak/vim-dirvish-git'
 

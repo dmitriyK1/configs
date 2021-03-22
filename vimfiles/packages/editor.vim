@@ -98,5 +98,8 @@ Plug 't9md/vim-choosewin' "{{{
   nmap  <C-w>-  <Plug>(choosewin)
 "}}}
 
+" Change an HTML(ish) opening tag and take the closing one along as well
+Plug 'AndrewRadev/tagalong.vim'
+
 " Intelligently reopen files at your last edit position in Vim
 " Plug 'farmergreg/vim-lastplace'

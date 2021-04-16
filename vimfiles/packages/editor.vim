@@ -101,5 +101,8 @@ Plug 't9md/vim-choosewin' "{{{
 " Change an HTML(ish) opening tag and take the closing one along as well
 Plug 'AndrewRadev/tagalong.vim'
 
+" very simple vim plugin for easy resizing of your vim windows
+Plug 'simeji/winresizer'
+
 " Intelligently reopen files at your last edit position in Vim
 " Plug 'farmergreg/vim-lastplace'

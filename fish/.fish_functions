@@ -219,4 +219,8 @@ function load_nvm --on-variable="PWD"
   end
 end
 
+function commit_count
+  git rev-list --count HEAD
+end
+
 # vim: filetype=sh

@@ -223,4 +223,8 @@ function commit_count
   git rev-list --count HEAD
 end
 
+function count_commits
+  commit_count
+end
+
 # vim: filetype=sh

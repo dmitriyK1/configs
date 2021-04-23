@@ -178,6 +178,7 @@ set NERDTree
 set ReplaceWithRegister
 set highlightedyank
 let g:highlightedyank_highlight_duration = "1000"
+set vim-paragraph-motion
 
 " set idea-specific settings
 set clipboard+=ideaput

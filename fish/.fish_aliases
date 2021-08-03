@@ -54,6 +54,8 @@ alias grE 'git reset --hard "@{u}"'
 alias grch "git reset .; git checkout ."
 alias gi "git init"
 alias gia "git iadd"
+alias gis "git ishow"
+alias gish "git ishow"
 alias gai "git iadd"
 alias rb "recursive-blame"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"

@@ -32,6 +32,7 @@ npm i -g neovim@latest
 npm i -g fx@latest
 npm i -g ipt
 npm i -g git-iadd@latest
+npm i -g git-ishow@latest
 npm i -g git-also@latest
 npm i -g recursive-blame@latest
 npm i -g undollar@latest

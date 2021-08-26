@@ -172,6 +172,7 @@ set easymotion
 set argtextobj
 set textobj-entire
 set exchange
+set sneak
 " :NERDTree, :NERDTreeFocus, :NERDTreeToggle, :NERDTreeFind
 " j, k, o, t, s, x, p, K, r
 set NERDTree
@@ -213,11 +214,13 @@ nmap yor :set relativenumber!<CR>
 
 nmap <leader>q :action NewScratchBuffer<CR>
 
-map <C-K> <Action>(CommentByLineComment)
+" map <C-K> <Action>(CommentByLineComment)
 
 nmap <leader>yr <Action>(CopyReference)
 
 " disable ideavim in dialog windows
 " set ideaenabledbufs=
+
+nmap <leader>S :action Scratch.ShowFilesPopup<CR>
 
 source ~/.ideavimrc.local

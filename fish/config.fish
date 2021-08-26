@@ -47,6 +47,7 @@ end
 
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
+set fish_prompt_pwd_dir_length 1
 # requires `omf install bobthefish`
 set theme_color_scheme gruvbox
 # set theme_color_scheme dracula

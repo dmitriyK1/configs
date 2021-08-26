@@ -12,6 +12,7 @@ npm i -g create-react-app@latest
 npm i -g tldr@latest --unsafe-perm=true
 npm i -g ntl@latest
 npm i -g caniuse-cli@latest
+npm i -g find-up-cli
 npm i -g fkill-cli@latest
 npm i -g cz-conventional-changelog@latest
 npm i -g npm-merge-driver@latest

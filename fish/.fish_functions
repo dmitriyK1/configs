@@ -227,4 +227,12 @@ function count_commits
   commit-count
 end
 
+function diff_commits
+  if test $argv[1]
+    git log --left-right --graph --cherry-pick --oneline (git rev-parse --abbrev-ref HEAD)...$argv[1]
+  else
+    echo "Branch name is required"
+  end
+end
+
 # vim: filetype=sh

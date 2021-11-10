@@ -8,6 +8,7 @@ let maplocalleader=" "
 
 imap jj <Esc>
 imap JJ <Esc>
+imap kk <Esc>
 imap оо <Esc>
 nmap vv ggVG
 nmap Y y$

@@ -196,8 +196,8 @@ nmap <leader>n :NERDTree<CR>
 nmap <C-n> :action GotoNextError<CR>
 nmap <C-p> :action GotoPreviousError<CR>
 
-imap <C-p> <ESC>:action HippieCompletion<CR>a
-imap <C-n> <ESC>:action HippieBackwardCompletion<CR>a
+imap <C-p> <C-o>:action HippieCompletion<CR>
+imap <C-n> <C-o>:action HippieBackwardCompletion<CR>
 
 imap <C-d> <C-o>x
 

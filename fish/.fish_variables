@@ -24,6 +24,7 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 # set --export PATH $NOTION_HOME/bin $PATH
 # set --export PATH $NOTION_HOME $PATH
 
+set --export PATH $HOME/.local/bin $PATH
 set --export PATH /opt/local/bin $PATH
 set --export PATH $HOME/.node_modules_global/bin $PATH
 set --export PATH $HOME/.nimble/bin $PATH

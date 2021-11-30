@@ -210,6 +210,8 @@ nmap <C-w>t :action ChangeSplitOrientation<CR>
 nmap <C-w>= :action ChangeSplitOrientation<CR>
 nmap <leader>= :action ChangeSplitOrientation<CR>
 
+nmap <leader>j :action AceLineStartsAction<CR>
+
 nmap yon :set number!<CR>
 nmap yor :set relativenumber!<CR>
 

@@ -50,6 +50,8 @@ nmap <C-,> mgA,<Esc>`g
 imap <C-,> <Esc>mgA,<Esc>`gi<Right>
 nmap <C-c> mgA,<Esc>`g
 imap <C-c> <Esc>mgA,<Esc>`gi<Right>
+nmap <C-]> mgA}<Esc>`g
+imap <C-]> <Esc>mgA}<Esc>`gi<Right>
 
 nmap <C-.> :action EditorCompleteStatement<CR>
 

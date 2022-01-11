@@ -229,6 +229,6 @@ nmap <leader>yr <Action>(CopyReference)
 nmap <leader>S :action Scratch.ShowFilesPopup<CR>
 
 nmap <leader>siB viB:sort<CR>
-nmap <leader>sib vib:sort<CR>
+nmap <leader>sib vi[:sort<CR>
 
 source ~/.ideavimrc.local

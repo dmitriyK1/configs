@@ -47,6 +47,8 @@ end
 
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
+set theme_display_node yes
+# set -g theme_display_nvm yes
 set fish_prompt_pwd_dir_length 1
 # requires `omf install bobthefish`
 set theme_color_scheme gruvbox
@@ -55,7 +57,6 @@ set theme_color_scheme gruvbox
 set -g theme_nerd_fonts yes
 # set -g theme_display_docker_machine yes
 set -g fish_prompt_pwd_dir_length 0
-set -g theme_display_nvm yes
 set -g theme_display_jobs_verbose yes
 set -g theme_show_exit_status yes
 set -g theme_date_format "+%a %d-%m-%Y [%H:%M]"

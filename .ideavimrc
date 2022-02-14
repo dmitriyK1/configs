@@ -230,5 +230,8 @@ nmap <leader>S :action Scratch.ShowFilesPopup<CR>
 
 nmap <leader>siB viB:sort<CR>
 nmap <leader>sib vi[:sort<CR>
+nmap <leader>sib vib:sort<CR>
+
+nmap gp :action PinActiveTabToggle<CR>
 
 source ~/.ideavimrc.local

@@ -127,6 +127,7 @@ nmap ]d j0ddk<leader><leader>
 nmap [e :action MoveLineUp<CR>
 nmap ]e :action MoveLineDown<CR>
 
+nmap <leader>j :action AceLineStartsAction<CR>
 nmap <leader>L :action AceLineAction<CR>
 nmap <leader>a :action AceTargetAction<CR>
 nmap <leader>d :action AceDeclarationAction<CR>
@@ -211,8 +212,6 @@ nmap <C-o> :action Back<CR>
 nmap <C-w>t :action ChangeSplitOrientation<CR>
 nmap <C-w>= :action ChangeSplitOrientation<CR>
 nmap <leader>= :action ChangeSplitOrientation<CR>
-
-nmap <leader>j :action AceLineStartsAction<CR>
 
 nmap yon :set number!<CR>
 nmap yor :set relativenumber!<CR>

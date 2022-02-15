@@ -12,8 +12,11 @@ set nostartofline " Don't reset cursor to start of line when moving around
 " These commands open folds
 set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 
-" Add ignorance of whitespace to diff
-set diffopt+=iwhite
+if &diff
+    set diffopt-=internal
+    " Add ignorance of whitespace to diff
+    set diffopt+=iwhite
+endif
 
 set grepprg=grep\ -nH\ $*                   " Make grep always print the file name.
 set fileformats=unix,mac,dos                " Allows automatic line-end detection.

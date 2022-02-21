@@ -115,17 +115,11 @@ nmap <leader>to :action ActivateTODOToolWindow<CR>
 nmap <leader>tv :action ActivateVersionControlToolWindow<CR>
 nmap <leader>th :action ToggleInlayHintsGloballyAction<CR>
 
-nmap [<Space> O<Esc>j<leader><leader>
-nmap ]<Space> o<Esc>k<leader><leader>
-
 nmap [x k0dd<leader><leader>
 nmap ]x j0ddk<leader><leader>
 
 nmap [d k0dd<leader><leader>
 nmap ]d j0ddk<leader><leader>
-
-nmap [e :action MoveLineUp<CR>
-nmap ]e :action MoveLineDown<CR>
 
 nmap <leader>j :action AceLineStartsAction<CR>
 nmap <leader>L :action AceLineAction<CR>
@@ -150,8 +144,26 @@ nmap <leader>\ :action SplitVertically<CR>
 imap <c-a> <c-o>^
 imap <c-e> <c-o>$<Right>
 
+" unimpaired mappings - from https://github.com/saaguero/ideavimrc/blob/master/.ideavimrc
+nmap [<Space> O<Esc>j<leader><leader>
+nmap ]<Space> o<Esc>k<leader><leader>
+nnoremap [[ :action MethodUp<cr>
+nnoremap ]] :action MethodDown<cr>
 nmap ]c :action VcsShowNextChangeMarker<CR>
 nmap [c :action VcsShowPrevChangeMarker<CR>
+
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+
+" Moving lines
+nmap [e :action MoveLineUp<CR>
+nmap ]e :action MoveLineDown<CR>
+
+" Moving statements
+nmap [s :action MoveStatementUp<cr>
+nmap ]s :action MoveStatementDown<cr>
+
+nmap <leader>e :action JumpToLastChange<cr>
 
 nmap dae ggVGd
 
@@ -191,8 +203,9 @@ set smartjoin " to perform a join via the IDE (deprecated?)
 set ideajoin
 set ideamarks " :delmark A
 set ideastatusicon=gray
+set idearefactormode=keep
 
-" set keep-english-in-normal
+set keep-english-in-normal
 
 nmap <leader>n :NERDTree<CR>
 
@@ -206,8 +219,8 @@ imap <C-d> <C-o>x
 
 nmap <leader>hp :action VcsShowCurrentChangeMarker<CR>
 nmap <leader>hu :action Vcs.RollbackChangedLines<CR>
-nmap <C-i> :action Forward<CR>
-nmap <C-o> :action Back<CR>
+"nmap <C-i> :action Forward<CR>
+"nmap <C-o> :action Back<CR>
 
 nmap <C-w>t :action ChangeSplitOrientation<CR>
 nmap <C-w>= :action ChangeSplitOrientation<CR>
@@ -232,5 +245,11 @@ nmap <leader>sib vi[:sort<CR>
 nmap <leader>sib vib:sort<CR>
 
 nmap gp :action PinActiveTabToggle<CR>
+
+" Closing tabs
+nmap <leader>x :action CloseContent<cr>
+nmap <leader>X :action ReopenClosedTab<cr>
+
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 
 source ~/.ideavimrc.local

@@ -1,5 +1,6 @@
 " unified vim/nvim config example
 " https://github.com/threkk/dotfiles/tree/master/dotfiles/config/nvim
+" https://threkk.medium.com/how-to-have-a-neovim-configuration-compatible-with-vim-b5a46723145e
 
 source ~/nvim/packages.vim
 

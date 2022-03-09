@@ -42,23 +42,27 @@ Plug 'SirVer/ultisnips' " {{{
 Plug 'honza/vim-snippets'
 
 " ================================================================================
+" Dark deno-powered completion framework for neovim/Vim8
+" Plug 'Shougo/ddc.vim'
+" Plug 'vim-denops/denops.vim'
+
 " Dark powered asynchronous completion framework for neovim/Vim8
 " `pip3 install pynvim`
-Plug 'Shougo/deoplete.nvim' "{{{
-  let g:deoplete#enable_at_startup = 1
+" Plug 'Shougo/deoplete.nvim' "{{{
+"   let g:deoplete#enable_at_startup = 1
 "}}}
 
 " deoplete.nvim source for javascript
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 " deoplete.nvim source for Python
-Plug 'zchee/deoplete-jedi'
+" Plug 'zchee/deoplete-jedi'
 
 " deoplete dependency
-Plug 'roxma/nvim-yarp'
+" Plug 'roxma/nvim-yarp'
 
 " deoplete dependency
-Plug 'roxma/vim-hug-neovim-rpc'
+" Plug 'roxma/vim-hug-neovim-rpc'
 
 " Plug "lighttiger2505/deoplete-vim-lsp"
 

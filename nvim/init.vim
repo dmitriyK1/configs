@@ -1,3 +1,6 @@
+" unified vim/nvim config example
+" https://github.com/threkk/dotfiles/tree/master/dotfiles/config/nvim
+
 source ~/nvim/packages.vim
 
 " ================ Nvim-specific Config ==================== {{{

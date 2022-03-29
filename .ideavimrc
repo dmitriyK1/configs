@@ -80,12 +80,15 @@ nmap <leader>rv :action IntroduceVariable<CR>
 nmap <leader>rm :action Move<CR>
 nmap <leader>ro :action OptimizeImports<CR>
 nmap <leader>rs :action SurroundWith<CR>
+vmap <leader>rs :action SurroundWith<CR>
 nmap <leader>re :action SurroundWithEmmet<CR>
+vmap <leader>re :action SurroundWithEmmet<CR>
 
 " Goto
 nmap <leader>fa :action GotoAction<CR>
 nmap <leader>ff :action GotoFile<CR>
 nmap <leader>fs :action GotoSymbol<CR>
+nmap <leader>ft :action StructuralSearchPlugin.StructuralSearchAction<CR>
 nmap <leader>fu :action FindUsages<CR>
 nmap <leader>fp :action ManageRecentProjects<CR>
 

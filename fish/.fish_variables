@@ -33,7 +33,7 @@ set --export PATH $HOME/.yarn/bin $PATH
 set --export PATH $HOME/.cargo/bin $PATH
 set --export PATH $HOME/go/bin $PATH
 set --export PATH $GEM_HOME/bin $PATH
-set --export PATH ~/Library/Python/3.7/bin $PATH # path for packages installed with --user flag
+set --export PATH /usr/local/Cellar/python@3.9/3.9.10/bin $PATH # path for packages installed with --user flag
 
 # requires `git clone https://github.com/unixorn/git-extra-commands.git ~/Development/git-extra-commands`
 set --export PATH $HOME/Development/git-extra-commands/bin $PATH

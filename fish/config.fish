@@ -72,6 +72,7 @@ source ~/fish/.fish_aliases
 # [ -f $HOME/.homesick/repos/homeshick/homeshick.fish ]; and source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
 # source ~/.iterm2_shell_integration.(basename $SHELL)
+source ~/.iterm2_shell_integration.fish
 
 # thefuck --alias | source
 # caniuse --completion-fish | source

@@ -91,6 +91,7 @@ nmap <leader>fs :action GotoSymbol<CR>
 nmap <leader>ft :action StructuralSearchPlugin.StructuralSearchAction<CR>
 nmap <leader>fu :action FindUsages<CR>
 nmap <leader>fp :action ManageRecentProjects<CR>
+nmap <leader>fh :action Vcs.ShowTabbedFileHistory<CR>
 
 " Plugins
 nmap <leader>pi :action WelcomeScreen.Plugins<CR>
@@ -250,8 +251,8 @@ nmap <leader>sib vib:sort<CR>
 nmap gp :action PinActiveTabToggle<CR>
 
 " Closing tabs
-nmap <leader>x :action CloseContent<cr>
-nmap <leader>X :action ReopenClosedTab<cr>
+nmap <leader>x :action CloseContent<CR>
+nmap <leader>X :action ReopenClosedTab<CR>
 
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 

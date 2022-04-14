@@ -77,6 +77,7 @@ nmap <leader>ga :action Git.Add<CR>
 nmap <leader>ri :action Inline<CR>
 nmap <leader>rr :action RenameElement<CR>
 nmap <leader>rv :action IntroduceVariable<CR>
+nmap <leader>rc :action IntroduceConstant<CR>
 nmap <leader>rm :action Move<CR>
 nmap <leader>ro :action OptimizeImports<CR>
 nmap <leader>rs :action SurroundWith<CR>

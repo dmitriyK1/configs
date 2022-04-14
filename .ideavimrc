@@ -12,7 +12,6 @@ imap kk <Esc>
 imap оо <Esc>
 nmap vv ggVG
 nmap Y y$
-" nmap gc :close<cr>
 nmap <leader>o :close<cr>
 nmap <leader>; :
 set ignorecase
@@ -172,8 +171,13 @@ nmap <leader>e :action JumpToLastChange<cr>
 
 nmap dae ggVGd
 
+nmap gh :action QuickJavaDoc<CR>
+" Reselect pasted text
+nnoremap gp `[v`]
+" nmap gp :action PinActiveTabToggle<CR>
 nmap g- ciwtrue<Esc>
 nmap g= ciwfalse<Esc>
+" nmap gc :close<cr>
 
 " delete current line from beginning
 nmap dal 0dd
@@ -248,8 +252,6 @@ nmap <leader>S :action Scratch.ShowFilesPopup<CR>
 nmap <leader>siB viB:sort<CR>
 nmap <leader>sib vi[:sort<CR>
 nmap <leader>sib vib:sort<CR>
-
-nmap gp :action PinActiveTabToggle<CR>
 
 " Closing tabs
 nmap <leader>x :action CloseContent<CR>

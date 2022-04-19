@@ -23,7 +23,7 @@ set wrapscan
 set nonumber
 " set relativenumber
 " nmap <leader><leader> :w<cr>
-nmap <leader><leader> :action ShowIntentionActions<CR>
+nmap <leader><leader> <Action>(ShowIntentionActions)
 " nnoremap <space> :
 nnoremap Q :
 nnoremap <silent> <C-l> :nohlsearch<CR>
@@ -120,11 +120,11 @@ nmap <leader>to :action ActivateTODOToolWindow<CR>
 nmap <leader>tv :action ActivateVersionControlToolWindow<CR>
 nmap <leader>th :action ToggleInlayHintsGloballyAction<CR>
 
-nmap [x k0dd<leader><leader>
-nmap ]x j0ddk<leader><leader>
+nmap [x k0dd<Action>(SaveAll)
+nmap ]x j0ddk<Action>(SaveAll)
 
-nmap [d k0dd<leader><leader>
-nmap ]d j0ddk<leader><leader>
+nmap [d k0dd<Action>(SaveAll)
+nmap ]d j0ddk<Action>(SaveAll)
 
 nmap <leader>j :action AceLineStartsAction<CR>
 nmap <leader>L :action AceLineAction<CR>
@@ -150,8 +150,8 @@ imap <c-a> <c-o>^
 imap <c-e> <c-o>$<Right>
 
 " unimpaired mappings - from https://github.com/saaguero/ideavimrc/blob/master/.ideavimrc
-nmap [<Space> O<Esc>j<leader><leader>
-nmap ]<Space> o<Esc>k<leader><leader>
+nmap [<Space> O<Esc>j<Action>(SaveAll)
+nmap ]<Space> o<Esc>k<Action>(SaveAll)
 nnoremap [[ :action MethodUp<cr>
 nnoremap ]] :action MethodDown<cr>
 nmap ]c :action VcsShowNextChangeMarker<CR>
@@ -242,6 +242,7 @@ nmap yor :set relativenumber!<CR>
 nmap <leader>q :action NewScratchBuffer<CR>
 
 " map <C-K> <Action>(CommentByLineComment)
+nmap <C-K> <Action>(CommentByBlockComment)
 
 nmap <leader>yr <Action>(CopyReference)
 

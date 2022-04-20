@@ -104,5 +104,8 @@ Plug 'AndrewRadev/tagalong.vim'
 " very simple vim plugin for easy resizing of your vim windows
 Plug 'simeji/winresizer'
 
+" Text-based scrollbar for Vim
+Plug 'obcat/vim-sclow'
+
 " Intelligently reopen files at your last edit position in Vim
 " Plug 'farmergreg/vim-lastplace'

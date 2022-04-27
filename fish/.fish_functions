@@ -235,4 +235,17 @@ function diff_commits
   end
 end
 
+function build_status
+  if test $argv[1]
+    set projectname $argv[1]
+  else
+    set projectname "lwa-ui-dev-build"
+  end
+
+  echo $projectname
+
+  set id $(aws codebuild list-builds-for-project --project-name $projectname | jq -r '.ids[0]')
+  aws codebuild batch-get-builds --ids "$id" | jq '.builds[].phases[] | select (.phaseType=="BUILD") | .phaseStatus'
+end
+
 # vim: filetype=sh

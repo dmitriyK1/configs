@@ -245,6 +245,7 @@ nmap <leader>q :action NewScratchBuffer<CR>
 
 " map <C-K> <Action>(CommentByLineComment)
 nmap <C-K> <Action>(CommentByBlockComment)
+vmap <C-K> <Action>(CommentByBlockComment)
 
 nmap <leader>yr <Action>(CopyReference)
 

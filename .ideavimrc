@@ -72,6 +72,8 @@ nmap <leader>gn :action Git.CreateNewBranch<CR><Esc>
 nmap <leader>gb :action Git.Branches<CR><Esc>
 nmap <leader>gl :action Vcs.Show.Log<CR>
 nmap <leader>ga :action Git.Add<CR>
+nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+vmap <leader>gh <Action>(Vcs.ShowHistoryForBlock)
 
 " Refactorings
 nmap <leader>ri :action Inline<CR>
@@ -92,7 +94,6 @@ nmap <leader>fs :action GotoSymbol<CR>
 nmap <leader>ft :action StructuralSearchPlugin.StructuralSearchAction<CR>
 nmap <leader>fu :action FindUsages<CR>
 nmap <leader>fp :action ManageRecentProjects<CR>
-nmap <leader>fh :action Vcs.ShowTabbedFileHistory<CR>
 
 " Plugins
 nmap <leader>pi :action WelcomeScreen.Plugins<CR>
@@ -140,7 +141,8 @@ imap <M-;> <Esc>:action AceAction<CR>i
 nmap <leader>k :action HighlightUsagesInFile<CR>
 
 nmap <leader>se :e ~/.ideavimrc<CR>
-nmap <leader>ss :source ~/.ideavimrc<CR>
+"nmap <leader>ss :source ~/.ideavimrc<CR>
+nmap <leader>ss <Action>(IdeaVim.ReloadVimRc.reload)
 nmap <leader>sl :e ~/.ideavimrc.local<CR>
 
 nmap <leader>- :action SplitHorizontally<CR>

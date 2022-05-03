@@ -263,6 +263,6 @@ nmap <leader>x :action CloseContent<CR>
 nmap <leader>X :action ReopenClosedTab<CR>
 
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
-nnoremap <c-x> :action HideAllWindows<CR>
+" nnoremap <c-x> :action HideAllWindows<CR>
 
 source ~/.ideavimrc.local

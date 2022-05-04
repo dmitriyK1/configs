@@ -77,6 +77,7 @@ vmap <leader>gh <Action>(Vcs.ShowHistoryForBlock)
 
 " Refactorings
 nmap <leader>ri :action Inline<CR>
+nmap <M-r> <Action>(RenameElement)
 nmap <leader>rr :action RenameElement<CR>
 nmap <leader>rv :action IntroduceVariable<CR>
 nmap <leader>rc :action IntroduceConstant<CR>

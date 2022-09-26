@@ -24,6 +24,12 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 # set --export PATH $NOTION_HOME/bin $PATH
 # set --export PATH $NOTION_HOME $PATH
 
+set --export XDG_RUNTIME_DIR /run/user/$UID
+set --export XDG_DATA_HOME $HOME/.local/share
+set --export XDG_CONFIG_HOME $HOME/.config
+set --export XDG_STATE_HOME $HOME/.local/state
+set --export XDG_CACHE_HOME $HOME/.cache
+
 set --export PATH $HOME/.local/bin $PATH
 set --export PATH /opt/local/bin $PATH
 set --export PATH $HOME/.node_modules_global/bin $PATH

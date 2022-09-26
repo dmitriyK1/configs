@@ -182,6 +182,8 @@ nnoremap gp `[v`]
 nmap g- ciwtrue<Esc>
 nmap g= ciwfalse<Esc>
 " nmap gc :close<cr>
+" Paste from non-volatile (not affected by dd) yank buffer
+nnoremap yp "0p
 
 " delete current line from beginning
 nmap dal 0dd

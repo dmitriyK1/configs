@@ -2,6 +2,8 @@
 " https://github.com/threkk/dotfiles/tree/master/dotfiles/config/nvim
 " https://threkk.medium.com/how-to-have-a-neovim-configuration-compatible-with-vim-b5a46723145e
 
+set viminfo='100,n$HOME/.vim/files/info/viminfo
+
 source ~/nvim/packages.vim
 
 " ================ Nvim-specific Config ==================== {{{

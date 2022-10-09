@@ -23,7 +23,7 @@ nvim +PlugUpgrade +PlugUpdate +PlugClean +qall!
 if type -q doom
   doom purge
   doom clean
-  doom -y upgrade
+  doom --force upgrade
 end
 
 echo 'updating python packages'

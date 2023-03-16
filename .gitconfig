@@ -294,6 +294,7 @@
 [push]
 	# default = simple
 	default = current
+	autoSetupRemote = true
 
 [clean]
     requireForce = false

@@ -147,7 +147,7 @@ alias gpl "git pull"
 alias gplm "git pull origin master"
 alias gpld "git pull origin develop"
 alias gplD "git pull origin dev"
-alias gsh "git show --stat"
+alias gsh "git show"
 alias gshn "git show --name-only"
 alias gshf "gshn"
 alias grev "git remote -vv"
@@ -198,14 +198,14 @@ alias sev "vim ~/fish/.fish_variables"
 alias sc="pushd .; cd ~/configs; gdr; legit sync; popd; reload"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 
-alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias cp='cp -iv' # Preferred 'cp' implementation
 alias cpr='cp -ivR'
 alias cpp='command cp'
-alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mv='mv -iv' # Preferred 'mv' implementation
 alias mvv='command mv'
-alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias mkdir='mkdir -pv' # Preferred 'mkdir' implementation
 
-alias numfiles='echo (command ls -1 | wc -l)'       # numfiles:     Count of non-hidden files in current dir
+alias numfiles='echo (command ls -1 | wc -l)' # numfiles:     Count of non-hidden files in current dir
 alias count_files='numfiles'
 
 alias emacs "/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
@@ -232,7 +232,7 @@ alias lc='colorls --gs -la'
 alias tree='tree -a'
 
 # alias tm='tmux new-session -A -s main'
-alias tm='tmux -CC' # start iterm tmux mode
+alias tm='tmux -CC'         # start iterm tmux mode
 alias tma='tmux -CC attach' # attach to existing tmux session
 
 # requires https://github.com/rkitover/vimpager#install
@@ -257,7 +257,8 @@ alias pi='pip3 install'
 alias pir='pip3 install -r requirements.txt'
 alias pfr='pip3 freeze > requirements.txt'
 alias activate='. venv/bin/activate.fish'
-[ -f $HOME/.fish_aliases.local ]; and source $HOME/.fish_aliases.local
+[ -f $HOME/.fish_aliases.local ]
+and source $HOME/.fish_aliases.local
 
 alias gpu="legit publish"
 alias gup="legit unpublish"
@@ -310,7 +311,7 @@ alias bsre="brew services restart"
 # HEROKU ALIASES START
 # --------------------------------------------------------------------------------
 alias ha="heroku run bash" # connect to heroku app
-alias hd="heroku ps:exec" # connect to running dyno
+alias hd="heroku ps:exec"  # connect to running dyno
 alias hl="heroku logs --tail"
 # --------------------------------------------------------------------------------
 # HEROKU ALIASES END

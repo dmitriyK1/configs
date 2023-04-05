@@ -136,8 +136,8 @@ nmap <leader>W :action AceWordAction<CR>
 nmap <leader>w :action AceWordForwardAction<CR>
 nmap <leader>b :action AceWordBackwardsAction<CR>
 nmap = :action AceAction<CR>
-nmap <M-;> :action AceAction<CR>
-imap <M-;> <Esc>:action AceAction<CR>i
+nmap <D-;> :action AceAction<CR>
+imap <D-;> <Esc>:action AceAction<CR>i
 
 nmap <leader>k :action HighlightUsagesInFile<CR>
 

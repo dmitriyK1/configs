@@ -50,8 +50,9 @@ echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
 echo "Installing brew packages"
-brew tap sambadevi/powerlevel9k; brew install powerlevel9k
-brew install rga # ripgrep-all
+brew tap sambadevi/powerlevel9k
+brew install powerlevel9k
+brew install rga                             # ripgrep-all
 brew install pandoc poppler tesseract ffmpeg # ripgrep-all dependencies
 brew install trash
 brew install bandcamp-dl
@@ -64,8 +65,8 @@ brew install lnav # log files viewer
 brew install glances
 brew install cmus
 brew install --with-default-names gnu-sed # dependency of https://github.com/oh-my-fish/theme-budspencer
-brew install nnn # cli file manager
-brew install mediainfo # nnn dependency
+brew install nnn                          # cli file manager
+brew install mediainfo                    # nnn dependency
 brew install ffmpeg
 brew install libav --with-openssl
 brew install highlight
@@ -80,10 +81,11 @@ brew install thefuck
 brew install fzf
 brew install fd
 brew install awk
+brew install gpg
 
 # JSON tools
-brew install jq # Command-line JSON processor
-brew install jo # JSON output from a shell
+brew install jq   # Command-line JSON processor
+brew install jo   # JSON output from a shell
 brew install gron # Make JSON greppable!
 
 brew install exa
@@ -100,10 +102,10 @@ brew install prettyping
 brew install htop
 # brew tap cjbassi/gotop; brew install gotop
 brew install psgrep
-brew install iftop  # network monitoring tool
-brew install ncdu # disk usage
-brew install gnu-tar # for doom-emacs
-brew install httpie # http client
+brew install iftop     # network monitoring tool
+brew install ncdu      # disk usage
+brew install gnu-tar   # for doom-emacs
+brew install httpie    # http client
 brew install colordiff # diff tool with syntax highlight `colordiff a.js b.js --side-by-side`
 # brew install mitmproxy
 brew install neomutt
@@ -121,7 +123,7 @@ brew cask install rectangle
 brew cask install bitbar
 brew cask install commander-one
 brew cask install insomnia # Cross-platform HTTP and GraphQL Client https://insomnia.rest
-brew cask install franz # messaging app http://meetfranz.com
+brew cask install franz    # messaging app http://meetfranz.com
 brew cask install alfred
 brew cask install station
 brew cask install charles
@@ -157,7 +159,7 @@ brew install boost-python # for ctrlp cpsm
 
 # brew git tools start ##################################################################
 brew install git-delta
-git config --global core.pager "delta --dark"  # --light for light terminal backgrounds
+git config --global core.pager "delta --dark" # --light for light terminal backgrounds
 
 brew install legit
 brew install git-recent

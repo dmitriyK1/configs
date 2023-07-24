@@ -65,6 +65,7 @@ alias glp="git log -p --stat --no-merges"
 alias gls="git log -S"
 alias glr="gf; git log ...origin/(git branch | grep \* | cut -d ' ' -f2)" # compare commit on remote branch
 alias gma="git merge --abort"
+alias gmra="gma"
 alias gmr="git merge"
 # gitu - from .fish_functions
 # glf  - from .fish_functions

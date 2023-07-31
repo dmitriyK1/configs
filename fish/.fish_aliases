@@ -167,6 +167,13 @@ alias gtg "git tag"
 alias norg="gron --ungron"
 alias ungron="gron --ungron"
 
+alias df="duf"
+alias ping="gping"
+alias top="bpytop"
+alias dig="dog"
+alias ps="procs"
+# alias du="dua"
+
 alias cd- "cd -"
 alias cdt "cd -"
 alias cdd "cd -"
@@ -274,7 +281,7 @@ alias du="ncdu"
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias top="sudo htop" # alias top and fix high sierra bug
+# alias top="sudo htop" # alias top and fix high sierra bug
 
 # --------------------------------------------------------------------------------
 # DOCKER ALIASES START

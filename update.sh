@@ -64,9 +64,15 @@ echo 'updating yarn'
 curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 yarn global upgrade
 
-echo 'updating rustup'
 if type -q rustup
+  echo 'updating rustup'
   rustup update
+end
+
+if type -q port
+  echo 'updating macports'
+  sudo port selfupdate
+  sudo port upgrade outdated
 end
 
 # echo 'updating hosts'

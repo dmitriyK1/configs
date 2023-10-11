@@ -268,6 +268,17 @@ nmap <leader>X :action ReopenClosedTab<CR>
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 " nnoremap <c-x> :action HideAllWindows<CR>
 
+" have x (removes single character) not go into the default registry
+nnoremap x "_x
+" Make X an operator that removes without placing text in the default registry
+nmap X "_d
+nmap XX "_dd
+vmap X "_d
+vmap x "_d
+" don't yank to default register when changing something
+nnoremap c "xc
+xnoremap c "xc
+
 nnoremap gf :action ShowIntentionActions<CR>
 
 source ~/.ideavimrc.local

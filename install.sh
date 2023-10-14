@@ -50,6 +50,7 @@ echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
 echo "Installing brew packages"
+brew install less
 brew tap sambadevi/powerlevel9k
 brew install powerlevel9k
 brew install rga                             # ripgrep-all

@@ -194,6 +194,11 @@ function gdrb
   git fetch; git diff ...origin/$argv
 end
 
+# compare logs of a current branch with a specified remote branch
+function glrb
+  git fetch; git log ...origin/$argv
+end
+
 function mkcd
   mkdir -pv $argv; cd $argv
 end

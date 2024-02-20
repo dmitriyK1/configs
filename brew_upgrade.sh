@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
 begin
+    sudo --validate
     brew update
     brew upgrade --greedy
     brew upgrade --cask --greedy

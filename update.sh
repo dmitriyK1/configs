@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
 echo 'start updating ...'
+sudo --validate
 
 echo 'synchronizing configs'
 cd ~/configs

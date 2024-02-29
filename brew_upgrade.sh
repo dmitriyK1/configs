@@ -1,20 +1,20 @@
 #!/usr/bin/env fish
 
+function colorize_text
+    echo ""
+    echo -e "\e[1;32m$argv\e[0m"
+end
+
 begin
     sudo --validate
-    echo ""
-    echo ">>> brew update"
+    colorize_text ">>> brew update"
     brew update
-    echo ""
-    echo ">>> brew upgate --greedy"
+    colorize_text ">>> brew upgrade --greedy"
     brew upgrade --greedy
-    echo ""
-    echo ">>> brew upgrade --cask --greedy"
+    colorize_text ">>> brew upgrade --cask --greedy"
     brew upgrade --cask --greedy
-    echo ""
-    echo ">>> brew cleanup"
+    colorize_text ">>> brew cleanup"
     brew cleanup
-    echo ""
-    echo ">>> brew tap --repair"
+    colorize_text ">>> brew tap --repair"
     brew tap --repair
 end | tee brew.log

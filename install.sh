@@ -85,6 +85,7 @@ brew install awk
 brew install gpg
 brew install atuin   # shell history
 brew install chezmoi # config files manager
+brew install lazygit # git cli tool / lazy nvim dependency
 
 # JSON tools
 brew install jq   # Command-line JSON processor

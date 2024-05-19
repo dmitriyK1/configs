@@ -83,6 +83,7 @@ brew install fzf
 brew install fd
 brew install awk
 brew install gpg
+brew install atuin # shell history
 
 # JSON tools
 brew install jq   # Command-line JSON processor

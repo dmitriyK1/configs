@@ -89,7 +89,7 @@ brew install jq   # Command-line JSON processor
 brew install jo   # JSON output from a shell
 brew install gron # Make JSON greppable!
 
-brew install exa
+brew install eza
 brew install tree
 brew install heroku/brew/heroku
 brew install cheat

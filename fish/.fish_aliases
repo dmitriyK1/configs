@@ -234,7 +234,7 @@ alias rgh="rg --hidden"
 
 alias rr="ranger"
 
-alias ls='exa -lha --icons --git --group-directories-first'
+alias ls='eza -lha --icons --git --group-directories-first'
 alias ll='lsd -lA -F --group-dirs=first'
 alias lc='colorls --gs -la'
 

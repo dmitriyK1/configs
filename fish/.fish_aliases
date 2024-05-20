@@ -272,6 +272,7 @@ and source $HOME/.fish_aliases.local
 alias gpu="legit publish"
 alias gup="legit unpublish"
 alias gsw="legit switch"
+alias lg="lazygit"
 
 # fuzzy select and jump into folder
 alias jf="cd (cat ~/Library/autojump/autojump.txt | sort -nr | awk '{print \$2}' | fzf +s)"

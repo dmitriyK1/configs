@@ -20,7 +20,8 @@
 
 [core]
     excludesfile = ~/.gitignore
-    pager = diff-so-fancy | less --tabs=4 -RFXi
+    pager = delta
+    # pager = diff-so-fancy | less --tabs=4 -RFXi
     # pager = diff-so-fancy | less --tabs=4 -RFXi --pattern '^(Date|added|deleted|modified): '
     editor = vim +0 -f
 	# autocrlf = true
@@ -290,6 +291,7 @@
     tool = p4merge
     log = true
     ff = false
+    conflictstyle = diff3
 
 [push]
 	# default = simple
@@ -310,16 +312,22 @@
 
 [url "https://gist.github.com/"]
     insteadOf = gist:
+
 [mergetool]
 	keepBackup = false
+
 #[credential]
 #      helper = wincred
+#
 [branch]
 	autosetuprebase = always
+
 [status]
 	submoduleSummary = true
+
 [pull]
 	rebase = true
+
 [color]
 	diff = always
 	status = always
@@ -330,17 +338,23 @@
 	grep = always
 	decorate = always
 	showbranch = always
+
 [alias]
   showtool = "!f() { git difftool $1^ $1; }; f"
   added = difftool --cached
+
 [diff]
   context = 10
   tool = icdiff
+  colorMoved = default
+
 [difftool]
   prompt = false
+
 [difftool "icdiff"]
   # cmd = icdiff --line-numbers $LOCAL $REMOTE
   cmd = icdiff --head=5000 --line-numbers -L $BASE -L $REMOTE $LOCAL $REMOTE
+
 [pager]
   difftool = true
 
@@ -351,3 +365,9 @@
 
 [commit]
   verbose = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true    # use n and N to move between diff sections

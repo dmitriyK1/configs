@@ -54,10 +54,10 @@ alias gre. "git reset ."
 alias grE 'git reset --hard "@{u}"'
 alias grch "git reset .; git checkout ."
 alias gi "git init"
-alias gia "git iadd"
+alias gia "git-iadd"
 alias gis "git ishow"
 alias gish "git ishow"
-alias gai "git iadd"
+alias gai "git-iadd"
 alias rb "recursive-blame"
 alias gl="git log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges"
 alias gll="git log --oneline --decorate --no-merges"
@@ -179,7 +179,7 @@ alias cdt "cd -"
 alias cdd "cd -"
 alias cdr "cd (git rev-parse --show-toplevel)"
 alias nano="env LC_ALL=ru_RU.UTF-8 nano"
-alias vim "/usr/local/bin/vim"
+# alias vim "/usr/local/bin/vim"
 alias v "vim"
 alias v. "vim ."
 alias vi "vim"
@@ -198,12 +198,12 @@ alias bif "brew info"
 # alias p "percol" # brew install percol
 alias p "peco" # brew install peco
 alias ss "reload"
-alias se "vim ~/.config/fish/config.fish"
-alias sl "vim ~/config.local.fish"
-alias sea "vim ~/fish/.fish_aliases"
-alias seal "vim ~/.fish_aliases.local"
-alias sef "vim ~/fish/.fish_functions"
-alias sev "vim ~/fish/.fish_variables"
+alias se "nvim ~/.config/fish/config.fish"
+alias sl "nvim ~/config.local.fish"
+alias sea "nvim ~/fish/.fish_aliases"
+alias seal "nvim ~/.fish_aliases.local"
+alias sef "nvim ~/fish/.fish_functions"
+alias sev "nvim ~/fish/.fish_variables"
 alias sc="pushd .; cd ~/configs; gdr; legit sync; popd; reload"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 
@@ -234,7 +234,7 @@ alias rgh="rg --hidden"
 
 alias rr="ranger"
 
-alias ls='eza -lha --icons --git --group-directories-first'
+alias ls='eza -lha --color=always --icons --git --group-directories-first'
 alias ll='lsd -lA -F --group-dirs=first'
 alias lc='colorls --gs -la'
 
@@ -273,10 +273,11 @@ alias gpu="legit publish"
 alias gup="legit unpublish"
 alias gsw="legit switch"
 alias lg="lazygit"
+alias git-iadd "git status -s | sed s/^...// | ipt -m -M 'Select files to add:' | xargs git add"
 
 # fuzzy select and jump into folder
 alias jf="cd (cat ~/Library/autojump/autojump.txt | sort -nr | awk '{print \$2}' | fzf +s)"
-alias diff="colordiff"
+alias diff="delta"
 alias ncdu="ncdu --color dark -x --exclude .git --exclude node_modules"
 alias du="ncdu"
 alias cat='bat'

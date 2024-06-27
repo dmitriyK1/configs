@@ -142,8 +142,8 @@ imap <D-;> <Esc>:action AceAction<CR>i
 nmap <leader>k :action HighlightUsagesInFile<CR>
 
 nmap <leader>se :e ~/.ideavimrc<CR>
-nmap <leader>ss :source ~/.ideavimrc<CR>
-"nmap <leader>ss <Action>(IdeaVim.ReloadVimRc.reload)
+"nmap <leader>ss :source ~/.ideavimrc<CR>
+nmap <leader>ss <Action>(IdeaVim.ReloadVimRc.reload)
 nmap <leader>sl :e ~/.ideavimrc.local<CR>
 
 nmap <leader>- :action SplitHorizontally<CR>
@@ -211,6 +211,11 @@ set NERDTree
 set ReplaceWithRegister
 set highlightedyank
 let g:highlightedyank_highlight_duration = "1000"
+set vim-paragraph-motion
+set which-key
+let g:WhichKey_ShowVimActions = "true"
+set notimeout
+"set timeoutlen=5000
 set vim-paragraph-motion
 
 " set idea-specific settings
@@ -281,5 +286,8 @@ nnoremap x "_x
 " don't yank to default register when changing something
 nnoremap c "xc
 xnoremap c "xc
+
+map <C-g> <Plug>NextOccurrence
+nmap <leader>l <Action>(ClearAllNotifications)
 
 source ~/.ideavimrc.local

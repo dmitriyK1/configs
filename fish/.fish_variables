@@ -56,7 +56,7 @@ set EDITOR vim
 set --export FZF_DEFAULT_COMMAND 'fd --type file --hidden --follow --color=always --exclude "{.DS_Store,.git,node_modules,flow-typed}"'
 set --export FZF_ALT_C_COMMAND 'fd --type directory --hidden --follow --color=always --exclude "{.DS_Store,.git,node_modules,flow-typed}"'
 set --export FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
-set --export FZF_DEFAULT_OPTS '--ansi'
+set --export FZF_DEFAULT_OPTS '--ansi --highlight-line'
 set --export LESSKEY '~/.lesskey'
 set --export LESS '-w --incsearch --quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 set --export BAT_PAGER "less"
@@ -87,7 +87,8 @@ set -U FZF_ENABLE_OPEN_PREVIEW 1 # available via <Ctrl-g>
 # set --export PAGER vimpager
 
 # [ -f $HOME/.emacs.d/bin ]; and set --export PATH $HOME/.emacs.d/bin $PATH
-[ -f $HOME/.fish_variables.local ]; and source $HOME/.fish_variables.local
+[ -f $HOME/.fish_variables.local ]
+and source $HOME/.fish_variables.local
 
 set -gx LPS_DEFAULT_USERNAME 'dimaroxx@gmail.com'
 

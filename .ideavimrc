@@ -288,6 +288,9 @@ nnoremap c "xc
 xnoremap c "xc
 
 map <C-g> <Plug>NextOccurrence
+map gb <Action>(SelectNextOccurrence)
 nmap <leader>l <Action>(ClearAllNotifications)
+" Expanding selection (from https://github.com/VSCodeVim/Vim/blob/master/README.md#-vscodevim-tricks):
+vmap af <Action>(EditorSelectWord)
 
 source ~/.ideavimrc.local

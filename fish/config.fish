@@ -40,9 +40,9 @@
 
 # fisher automatic install
 if not functions -q fisher
-  set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-  fish -c fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
 end
 
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
@@ -87,6 +87,21 @@ source ~/.iterm2_shell_integration.fish
 
 [ -f $HOME/config.local.fish ]; and source $HOME/config.local.fish
 
+if status --is-interactive
+    atuin init fish | source
+
+    zoxide init fish | source
+
+    function fish_user_key_bindings
+        bind \cr _atuin_search
+    end
+
+    function tere
+        set --local result (command tere $argv)
+        [ -n "$result" ] && cd -- "$result"
+    end
+end
+
 # activate https://github.com/adambrenecki/virtualfish
 # eval (python3 -m virtualfish)
 
@@ -96,4 +111,4 @@ source ~/.iterm2_shell_integration.fish
 
 # You must call it on initialization or listening to directory switching won't work
 # https://github.com/nvm-sh/nvm#deeper-shell-integration
-load_nvm
+# load_nvm

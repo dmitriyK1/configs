@@ -2,7 +2,7 @@ export LANG=en_US.UTF-8
 export LESS='-R'
 export LESSOPEN='|pygmentize -g %s'
 export SHELL=/usr/local/bin/fish
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/local/bin/nvim
 export CHEATCOLORS=true
 export GEM_HOME=$HOME/.gem_home
 
@@ -47,7 +47,7 @@ set --export PATH $HOME/Development/git-extra-commands/bin $PATH
 # for pj fisherman plugin
 set -U PROJECT_PATHS ~/Development
 
-set EDITOR vim
+set EDITOR nvim
 # set VISUAL mvim
 
 # Use fd to list filenames for fzf

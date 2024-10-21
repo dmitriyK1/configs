@@ -20,7 +20,8 @@ set hlsearch
 set showmode
 set incsearch
 set wrapscan
-set nonumber
+set number
+"set nonumber
 " set relativenumber
 " nmap <leader><leader> :w<cr>
 nmap <leader><leader> <Action>(ShowIntentionActions)
@@ -29,7 +30,6 @@ nnoremap Q :
 nnoremap <silent> <C-l> :nohlsearch<CR>
 set clipboard=unnamed,unnamedplus
 set visualbell
-set nonumber
 set scrolloff=9999
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
@@ -176,6 +176,7 @@ nmap <leader>e :action JumpToLastChange<cr>
 nmap dae ggVGd
 
 nnoremap gf :action ShowIntentionActions<CR>
+" Also could just use 'K'
 nmap gh :action QuickJavaDoc<CR>
 " Reselect pasted text
 nnoremap gp `[v`]
@@ -247,10 +248,21 @@ nmap <C-w>t :action ChangeSplitOrientation<CR>
 nmap <C-w>= :action ChangeSplitOrientation<CR>
 nmap <leader>= :action ChangeSplitOrientation<CR>
 
-nmap yon :set number!<CR>
-nmap yor :set relativenumber!<CR>
+nmap yon :set number!<CR>:echo "Toggled number"<CR>
+nmap yor :set relativenumber!<CR>:echo "Toggled relativenumber"<CR>
+
+function! ToggleScrolloff()
+    let &scrolloff = (&scrolloff == 0 ? 9999 : 0)
+    echo (&scrolloff == 0 ? "Disabled scrolloff" : "Enabled scrolloff")
+endfunction
+
+command! ToggleScrolloff call ToggleScrolloff()
+nnoremap yos :ToggleScrolloff<CR>
 
 nmap <leader>q :action NewScratchBuffer<CR>
+
+" search for a visually selected text directly
+vnoremap f y/<C-R>0<CR>
 
 " map <C-K> <Action>(CommentByLineComment)
 nmap <C-K> <Action>(CommentByBlockComment)

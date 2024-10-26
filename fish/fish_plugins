@@ -1,5 +1,4 @@
 barnybug/docker-fish-completion
-brgmnn/fish-docker-compose
 danhper/fish-fastdir
 decors/fish-colored-man
 franciscolourenco/done
@@ -9,8 +8,8 @@ jorgebucaran/autopair.fish
 markcial/upto
 oh-my-fish/plugin-node-binpath
 oh-my-fish/plugin-pj
-FabioAntunes/fish-nvm
 edc/bass
 paysonwallach/fish-you-should-use
 lengyijun/fc-fish
 brewingweasel/fishbang
+fabioantunes/fish-nvm

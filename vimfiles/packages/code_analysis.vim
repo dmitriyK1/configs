@@ -16,20 +16,20 @@
 " Plug 'jsfaint/gen_tags.vim'
 
 " Asynchronous Lint Engine
-Plug 'w0rp/ale' "{{{
-  let g:ale_fixers = {
-  \   'javascript': ['eslint'],
-  \}
-  let g:ale_linters = {
-  \   'python': ['flake8'],
-  \   'javascript': ['eslint'],
-  \}
-  let g:ale_fix_on_save = 1
-  let g:ale_linters_explicit = 1
-  let g:ale_set_highlights = 0
-  " nmap <C-1> <Plug>ALEPrevious
-  nmap <silent> ]E :ALENextWrap<CR>
-  nmap <silent> [E :ALEPreviousWrap<CR>
+" Plug 'w0rp/ale' "{{{
+"   let g:ale_fixers = {
+"   \   'javascript': ['eslint'],
+"   \}
+"   let g:ale_linters = {
+"   \   'python': ['flake8'],
+"   \   'javascript': ['eslint'],
+"   \}
+"   let g:ale_fix_on_save = 1
+"   let g:ale_linters_explicit = 1
+"   let g:ale_set_highlights = 0
+"   " nmap <C-1> <Plug>ALEPrevious
+"   nmap <silent> ]E :ALENextWrap<CR>
+"   nmap <silent> [E :ALEPreviousWrap<CR>
   " Write this in your vimrc file
   " let g:ale_set_loclist = 0
   " let g:ale_set_quickfix = 1

@@ -27,19 +27,19 @@ Plug 'jiangmiao/auto-pairs' " {{{
 " }}}
 
 " snippets support
-Plug 'SirVer/ultisnips' " {{{
-  let g:UltiSnipsSnippetsDir = "~/vimfiles/UltiSnips"
-  let g:UltiSnipsExpandTrigger = "<tab>"
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" Plug 'SirVer/ultisnips' " {{{
+  " let g:UltiSnipsSnippetsDir = "~/vimfiles/UltiSnips"
+  " let g:UltiSnipsExpandTrigger = "<tab>"
+  " let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  " let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
   " new snippet template
-  let@s="o40i-I# osnippetoendsnippetkkA  "
+  " let@s="o40i-I# osnippeto\endsnippetkkA  "
 
-  map <leader>ee :UltiSnipsEdit<CR>
+  " map <leader>ee :UltiSnipsEdit<CR>
 " }}}
 
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " ================================================================================
 " Dark deno-powered completion framework for neovim/Vim8

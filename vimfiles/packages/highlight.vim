@@ -16,7 +16,7 @@ Plug 'ap/vim-css-color' " Highlight background of CSS colors.
 Plug 'romainl/vim-cool'
 
 " A Vim plugin that always highlights the enclosing html/xml tags
-Plug 'valloric/MatchTagAlways'
+" Plug 'valloric/MatchTagAlways'
 
 " vim-interestingwords allows you to highlight and navigate through (multiple) different words in a buffer
 Plug 'vasconcelloslf/vim-interestingwords' "{{{

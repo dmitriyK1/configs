@@ -63,9 +63,6 @@ set --export LESS '-w --incsearch --quit-if-one-screen --ignore-case --status-co
 set --export BAT_PAGER "less"
 set --export ENHANCD_FILTER 'fzy:fzf:peco'
 
-# add support for ctrl+o to open selected file in Sublime text
-# export FZF_DEFAULT_OPTS="--ansi --bind='ctrl-o:execute(subl {})+abort'"
-
 # TODO alias to ctrl+o
 # fzf --preview '/usr/local/bin/bat {} --color=always'
 

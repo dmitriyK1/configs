@@ -200,10 +200,11 @@ alias p "peco" # brew install peco
 alias ss "reload"
 alias se "nvim ~/.config/fish/config.fish"
 alias sl "nvim ~/config.local.fish"
-alias sea "nvim ~/fish/.fish_aliases"
-alias seal "nvim ~/.fish_aliases.local"
-alias sef "nvim ~/fish/.fish_functions"
-alias sev "nvim ~/fish/.fish_variables"
+alias sea "nvim ~/.config/fish/.fish_aliases"
+alias seal "nvim ~/.config/fish/.fish_aliases.local"
+alias seav "nvim ~/.config/fish/.fish_aliases.local"
+alias sef "nvim ~/.config/fish/.fish_functions"
+alias sev "nvim ~/.config/fish/.fish_variables"
 alias sc="pushd .; cd ~/configs; gdr; legit sync; popd; reload"
 alias vless='/usr/share/vim/vim74/macros/less.sh'
 

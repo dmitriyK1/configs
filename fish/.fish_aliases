@@ -169,7 +169,7 @@ alias ungron="gron --ungron"
 
 alias df="duf"
 alias ping="gping"
-alias top="bpytop"
+alias top="btop"
 alias dig="dog"
 alias ps="procs"
 # alias du="dua"
@@ -233,7 +233,6 @@ alias rgn="rg -l"
 alias rgh="rg --hidden"
 
 alias rr="ranger"
-alias yy="yazi"
 
 alias ls='eza -lha --color=always --icons --git --group-directories-first'
 alias ll='lsd -lA -F --group-dirs=first'

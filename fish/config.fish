@@ -62,9 +62,9 @@ set -g theme_show_exit_status yes
 set -g theme_date_format "+%a %d-%m-%Y [%H:%M]"
 # set -g fish_hybrid_key_bindings
 
-source ~/fish/.fish_variables
-source ~/fish/.fish_functions
-source ~/fish/.fish_aliases
+source ~/.config/fish/.fish_variables
+source ~/.config/fish/.fish_functions
+source ~/.config/fish/.fish_aliases
 
 # source (npx --shell-auto-fallback fish | psub)
 

@@ -220,3 +220,5 @@ mas install 937984704
 # requires `fisher add laughedelic/pisces`
 # set -U pisces_pairs $pisces_pairs '<,>' '`,`' '«,»'
 set -U pisces_pairs $pisces_pairs '`,`'
+
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist

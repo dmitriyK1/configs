@@ -221,4 +221,5 @@ mas install 937984704
 # set -U pisces_pairs $pisces_pairs '<,>' '`,`' '«,»'
 set -U pisces_pairs $pisces_pairs '`,`'
 
+# prevent iTunes autostart
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist

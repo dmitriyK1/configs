@@ -8,9 +8,9 @@ end
 colorize_text '>>> start updating ...'
 sudo --validate
 
-colorize_text '>>> synchronizing configs'
-cd ~/configs
-legit sync
+#colorize_text '>>> synchronizing configs'
+#cd ~/configs
+#legit sync
 
 colorize_text '>>> purging autojump database from non-existing paths'
 autojump --purge
@@ -20,16 +20,17 @@ vim +PlugUpgrade +PlugUpdate +qall!
 ~/.vim/plugged/cpsm/install.sh
 
 colorize_text '>>> updating neovim'
-nvim +PlugUpgrade +PlugUpdate +PlugClean +qall!
+nvim --headless "+Lazy! sync" +qa
+# nvim +PlugUpgrade +PlugUpdate +PlugClean +qall!
 
 # echo 'updating doom emacs'
 # cd ~/.emacs.d
 # git pull
 
 if type -q doom
-  doom purge
-  doom clean
-  doom --force upgrade
+    doom purge
+    doom clean
+    doom --force upgrade
 end
 
 colorize_text '>>> updating python packages'
@@ -68,15 +69,15 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 yarn global upgrade
 
 if type -q rustup
-  colorize_text '>>> updating rustup'
-  rustup update
+    colorize_text '>>> updating rustup'
+    rustup update
 end
 
 if type -q port
-  colorize_text '>>> updating macports'
-  sudo port selfupdate
-  sudo port -d sync
-  sudo port -R -N -c upgrade outdated
+    colorize_text '>>> updating macports'
+    sudo port selfupdate
+    sudo port -d sync
+    sudo port -R -N -c upgrade outdated
 end
 
 # echo 'updating hosts'
@@ -84,3 +85,5 @@ end
 # sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 
 exit 0
+
+# vim: filetype=fish
